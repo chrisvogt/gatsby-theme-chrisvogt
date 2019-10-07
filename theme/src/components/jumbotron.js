@@ -1,23 +1,29 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 
-const Jumbotron =  ({ children }) => (
-  <Styled.div sx={ {
-    h1: {
-      fontSize: 5,
-      variant: 'text.heading'
-    },
-    display: 'flex',
-    py: 5,
-    px: 3,
-    alignItems: 'center',
-    backgroundColor: 'primary',
-    minHeight: '15em',
-    width: '100%',
-    variant: 'styles.header'
-  } }>
-    {children}
+import SwoopBottom from "./artwork/swoop-bottom"
+
+const Jumbotron = ({ children }) => (
+  <Styled.div
+    sx={{
+      alignItems: "center",
+      backgroundColor: "primary",
+      backgroundImage: "url(/images/trianglify.svg)",
+      backgroundPosition: "top",
+      backgroundSize: "cover",
+      width: "100%"
+    }}
+  >
+    <div
+      sx={{
+        color: "white",
+        py: 4
+      }}
+    >
+      {children}
+    </div>
+    <SwoopBottom />
   </Styled.div>
 )
 
