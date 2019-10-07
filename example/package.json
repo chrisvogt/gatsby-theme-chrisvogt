@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "example",
+  "version": "1.0.0",
+  "license": "GPL",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.15.29",
+    "gatsby-theme-personal-sphere": "*",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}

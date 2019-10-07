@@ -1,0 +1,48 @@
+import { useStaticQuery, graphql } from "gatsby"
+import get from "lodash/get"
+
+const selectPayload = data => {
+  const payload = get(data, 'allDataJson.edges[0].node.payload', {});
+  return payload
+}
+
+const useSiteMetadata = () => {
+  const response = useStaticQuery(
+    graphql`
+      query MyQuery {
+        allDataJson(filter: { key: { eq: "navigation" } }) {
+          edges {
+            node {
+              payload {
+                footer {
+                  text
+                  title
+                  path
+                }
+                header {
+                  left {
+                    class
+                    path
+                    slug
+                    text
+                    title
+                  }
+                  right {
+                    path
+                    text
+                    title
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const payload = selectPayload(response)
+  return payload
+}
+
+export default useSiteMetadata

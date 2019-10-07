@@ -1,0 +1,53 @@
+{
+	"key": "navigation",
+	"payload": {
+		"header": {
+			"left": [
+				{
+					"path": "/#projects",
+					"slug": "projects",
+					"text": "Projects",
+					"title": "Projects"
+				},
+				{
+					"path": "/#blog",
+					"slug": "blog",
+					"text": "Blog",
+					"title": "Blog Posts"
+				},
+				{
+					"path": "/#ig--feed",
+					"slug": "photos",
+					"text": "Photos",
+					"title": "Photos"
+				},
+				{
+					"class": "hidden",
+					"path": "/#recently-read",
+					"slug": "recently-read",
+					"text": "Recently Read",
+					"title": "Recently read books"
+				}
+			],
+			"right": [
+				{
+					"path": "https://stats.chrisvogt.me",
+					"text": "Stats",
+					"title": "Coding stats — last 30 days"
+				}
+			]
+		},
+		"footer": [
+			{
+				"path": "https://stats.chrisvogt.me",
+				"title": "Chris Vogt's open source stats",
+				"text": "Stats"
+			},
+			{
+				"path": "https://resume.chrisvogt.me",
+				"title": "Chris Vogt on StackOverflow",
+				"text": "<i class='fab fa-stack-overflow' aria-hidden='true'></i> Developer Story"
+			}
+		]
+	}
+}
