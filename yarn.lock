@@ -789,7 +789,7 @@
     "@emotion/utils" "0.11.2"
     "@emotion/weak-memoize" "0.2.4"
 
-"@emotion/core@^10.0.21":
+"@emotion/core@^10.0.10", "@emotion/core@^10.0.21":
   version "10.0.21"
   resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.21.tgz#2e8398d2b92fd90d4ed6ac4d0b66214971de3458"
   integrity sha512-U9zbc7ovZ2ceIwbLXYZPJy6wPgnOdTNT4jENZ31ee6v2lojetV5bTbCVk6ciT8G3wQRyVaTTfUCH9WCrMzpRIw==
@@ -1120,6 +1120,18 @@
     "@theme-ui/preset-system" "^0.2.40"
     "@theme-ui/preset-tailwind" "^0.2.42"
     "@theme-ui/preset-tosh" "^0.2.40"
+
+"@theme-ui/style-guide@^0.2.43":
+  version "0.2.43"
+  resolved "https://registry.yarnpkg.com/@theme-ui/style-guide/-/style-guide-0.2.43.tgz#d0a9329046f1c74ab373c40855a68dc93583ce0a"
+  integrity sha512-uy63Iu5QoICblYttKloe0tQhd8gBtWwSEDwGwSJeOpm+1YvIrag9645mFD+IUbgdGqBSR+H+O520qKbsn+DAnA==
+  dependencies:
+    "@emotion/core" "^10.0.10"
+    "@theme-ui/presets" "^0.2.42"
+    color "^3.1.2"
+    lodash.get "^4.4.2"
+    react "^16.8.6"
+    theme-ui "^0.2.43"
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -2682,7 +2694,7 @@ color-string@^1.5.2:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^3.0.0:
+color@^3.0.0, color@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/color/-/color-3.1.2.tgz#68148e7f85d41ad7649c5fa8c8106f098d229e10"
   integrity sha512-vXTJhHebByxZn3lDvDJYw4lR5+uB3vuoHsuYA5AKuxRVn5wzzIfQKGLBmgdVRHKTJYeK5rvJcHnrd0Li49CFpg==
@@ -4757,6 +4769,14 @@ gatsby-telemetry@^1.1.29:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
+gatsby-theme-style-guide@^0.2.43:
+  version "0.2.43"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-style-guide/-/gatsby-theme-style-guide-0.2.43.tgz#595ca24e75394399d67e230a54ca7da7c4e1e850"
+  integrity sha512-oz9F4W7YqKlkxYFpCM6zAVib2FaOQJMgm/S9cQc5OdkAthPhRfb41xM8NUM9tmViy49Pc8GVQu5sh8GDQqjoUg==
+  dependencies:
+    "@theme-ui/style-guide" "^0.2.43"
+    theme-ui "^0.2.43"
+
 gatsby-transformer-json@^2.2.12:
   version "2.2.12"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.2.12.tgz#6f714f1101fc4384062d93711a0586a4cb573d75"
@@ -6507,6 +6527,11 @@ lodash.foreach@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
   integrity sha1-Gmo16s5AEoDH8G3d7DUWWrJ+PlM=
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.map@^4.6.0:
   version "4.6.0"
@@ -8662,7 +8687,7 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
-react@^16.10.2:
+react@^16.10.2, react@^16.8.6:
   version "16.10.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"
   integrity sha512-MFVIq0DpIhrHFyqLU0S3+4dIcBhhOvBE8bJ/5kHPVOVaGdo0KuiQzpcjCPsf585WvhypqtrMILyoE2th6dT+Lw==
@@ -9095,6 +9120,11 @@ rxjs@^6.4.0:
   integrity sha512-wuYsAYYFdWTAnAaPoKGNhfpWwKZbJW+HgAJ+mImp+Epl7BG8oNWBCTyRM8gba9k4lk8BgWdoYm21Mo/RYhhbgA==
   dependencies:
     tslib "^1.9.0"
+
+s-ago@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/s-ago/-/s-ago-2.1.0.tgz#70ac180803cbb6af22480caa379215d6abb6b50e"
+  integrity sha512-7leN5IaS79lNyO3s47NHQfMBgYLjx0IEWipN1VSf5uX7Jp1N8sX/2TrNJX30MPM63admF10hQOZFCzej8O4t3g==
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"

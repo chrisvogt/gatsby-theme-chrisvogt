@@ -1,9 +1,16 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Styled } from 'theme-ui'
 
 export default () => (
   <div>
-    <Styled.h3>Pinned Repositories</Styled.h3>
-    <Styled.p>Placeholder text.</Styled.p>
+    <Styled.h3
+      sx={{
+        color: 'white',
+        marginBottom: '1rem'
+      }}
+    >
+      Last Commit
+    </Styled.h3>
+    <span>Placeholder text.</span>
   </div>
 )

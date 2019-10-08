@@ -1,12 +1,12 @@
-import { useStaticQuery, graphql } from "gatsby"
-import get from "lodash/get"
+import { useStaticQuery, graphql } from 'gatsby'
+import get from 'lodash/get'
 
 const selectPayload = data => {
-  const payload = get(data, 'allDataJson.edges[0].node.payload', {});
+  const payload = get(data, 'allDataJson.edges[0].node.payload', {})
   return payload
 }
 
-const useSiteMetadata = () => {
+const useNavigationData = () => {
   const response = useStaticQuery(
     graphql`
       query MyQuery {
@@ -45,4 +45,4 @@ const useSiteMetadata = () => {
   return payload
 }
 
-export default useSiteMetadata
+export default useNavigationData

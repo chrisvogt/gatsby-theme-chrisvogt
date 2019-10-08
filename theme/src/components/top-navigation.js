@@ -1,25 +1,36 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
+import { Link } from 'gatsby'
+
+import { getTitle } from '../selectors/metadata'
 import useNavigationData from '../hooks/use-navigation-data'
+import useSiteMetadata from '../hooks/use-site-metadata'
+
+import Container from './container'
 
 export default () => {
-  const { header: { left } = {} } = useNavigationData();
+  const { header: { left } = {} } = useNavigationData()
+  const metadata = useSiteMetadata()
+  const title = getTitle(metadata)
+
   return (
     <Styled.div
       sx={{
         backgroundColor: 'white',
-        py: 2
+        py: 2,
+        px: 3
       }}
     >
-      <Styled.a>
-        TEXT_BRAND
-      </Styled.a>
-      
-      { left && left.map(item => (
-        <Styled.a key={item.slug}>
-          {item.text}{' '}
-        </Styled.a>
-      ) ) }
-    </Styled.div> 
+      <Container>
+        <Link href="/">
+          <Styled.a sx={{ fontWeight: 'bold', marginRight: 3 }}>
+            {title}
+          </Styled.a>
+        </Link>
+
+        {left &&
+          left.map(item => <Styled.a key={item.slug}>{item.text} </Styled.a>)}
+      </Container>
+    </Styled.div>
   )
 }
