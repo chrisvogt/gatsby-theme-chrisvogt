@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "result": {
+    "metas": [
+      {
+        "key": "socialProfilesOrder",
+        "orderBy": "slug",
+        "order": [
+          "twitter",
+          "linkedin",
+          "github",
+          "stack-overflow",
+          "instagram",
+          "behance",
+          "dribbble"
+        ]
+      }
+    ]
+  }
+}

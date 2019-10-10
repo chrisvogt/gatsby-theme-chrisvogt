@@ -61,7 +61,7 @@ const RepositoryCard = ({
 
         {lastUpdated && (
           <small sx={{ pt: 2, pb: 1 }}>
-            Last updated {ago(new Date(lastUpdated))}
+            Updated {ago(new Date(lastUpdated))}
           </small>
         )}
 
@@ -73,8 +73,7 @@ const RepositoryCard = ({
               alignItems: 'flex-end',
               display: 'flex',
               height: '100%',
-              justifyContent: 'flex-end',
-              pt: 1
+              justifyContent: 'flex-end'
             }}
           >
             <Styled.a

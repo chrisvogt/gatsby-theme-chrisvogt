@@ -8,7 +8,7 @@ const Container = ({ background, children }) => (
       ...(background ? { background } : {}),
       maxWidth: '1200px',
       margin: '0 auto',
-      width: '100%'
+      padding: 3
     }}
   >
     {children}

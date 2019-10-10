@@ -1,0 +1,96 @@
+{
+  "pinnedRepositories": [
+    {
+      "createdAt": "2015-09-26T23:17:36Z",
+      "description": "Code and photography focused Jekyll blog backed by a Personal API.",
+      "descriptionHTML": "<div>Code and photography focused Jekyll blog backed by a Personal API.</div>",
+      "diskUsage": 14018,
+      "hasIssuesEnabled": true,
+      "hasWikiEnabled": false,
+      "homepageUrl": "https://www.chrisvogt.me",
+      "licenseInfo": {
+        "name": "MIT License",
+        "nickname": null,
+        "key": "mit",
+        "url": "http://choosealicense.com/licenses/mit/"
+      },
+      "name": "blog",
+      "nameWithOwner": "personal-site/blog",
+      "openGraphImageUrl": "https://avatars2.githubusercontent.com/u/47586637?s=400&v=4",
+      "primaryLanguage": { "color": "#e34c26", "name": "HTML" },
+      "updatedAt": "2019-09-26T04:42:18Z",
+      "pushedAt": "2019-09-26T04:42:34Z",
+      "url": "https://github.com/personal-site/blog",
+      "usesCustomOpenGraphImage": false
+    },
+    {
+      "createdAt": "2018-08-12T21:59:08Z",
+      "description": "A personal API for storing and serving personal data and metrics collected from various online platforms.",
+      "descriptionHTML": "<div>A personal API for storing and serving personal data and metrics collected from various online platforms.</div>",
+      "diskUsage": 155,
+      "hasIssuesEnabled": true,
+      "hasWikiEnabled": false,
+      "homepageUrl": "",
+      "licenseInfo": {
+        "name": "MIT License",
+        "nickname": null,
+        "key": "mit",
+        "url": "http://choosealicense.com/licenses/mit/"
+      },
+      "name": "core",
+      "nameWithOwner": "personal-api/core",
+      "openGraphImageUrl": "https://avatars1.githubusercontent.com/u/42729416?s=400&v=4",
+      "primaryLanguage": { "color": "#f1e05a", "name": "JavaScript" },
+      "updatedAt": "2019-05-25T17:42:38Z",
+      "pushedAt": "2019-05-25T17:43:29Z",
+      "url": "https://github.com/personal-api/core",
+      "usesCustomOpenGraphImage": false
+    },
+    {
+      "createdAt": "2018-10-17T03:27:18Z",
+      "description": "Slack bot that announces upcoming catered meals and supports ZeroCater.",
+      "descriptionHTML": "<div>Slack bot that announces upcoming catered meals and supports ZeroCater.</div>",
+      "diskUsage": 1061,
+      "hasIssuesEnabled": true,
+      "hasWikiEnabled": true,
+      "homepageUrl": "",
+      "licenseInfo": {
+        "name": "MIT License",
+        "nickname": null,
+        "key": "mit",
+        "url": "http://choosealicense.com/licenses/mit/"
+      },
+      "name": "slack-bot",
+      "nameWithOwner": "lunchly/slack-bot",
+      "openGraphImageUrl": "https://avatars3.githubusercontent.com/u/43972259?s=400&v=4",
+      "primaryLanguage": { "color": "#f1e05a", "name": "JavaScript" },
+      "updatedAt": "2019-08-21T01:53:12Z",
+      "pushedAt": "2019-08-21T01:53:57Z",
+      "url": "https://github.com/lunchly/slack-bot",
+      "usesCustomOpenGraphImage": false
+    },
+    {
+      "createdAt": "2018-10-08T21:12:28Z",
+      "description": "Lunchly datasource for ZeroCater.",
+      "descriptionHTML": "<div>Lunchly datasource for ZeroCater.</div>",
+      "diskUsage": 75,
+      "hasIssuesEnabled": true,
+      "hasWikiEnabled": false,
+      "homepageUrl": "https://www.npmjs.com/package/@lunchly/service-zerocater",
+      "licenseInfo": {
+        "name": "MIT License",
+        "nickname": null,
+        "key": "mit",
+        "url": "http://choosealicense.com/licenses/mit/"
+      },
+      "name": "service-zerocater",
+      "nameWithOwner": "lunchly/service-zerocater",
+      "openGraphImageUrl": "https://avatars3.githubusercontent.com/u/43972259?s=400&v=4",
+      "primaryLanguage": { "color": "#f1e05a", "name": "JavaScript" },
+      "updatedAt": "2019-03-28T08:26:47Z",
+      "pushedAt": "2019-03-25T18:31:55Z",
+      "url": "https://github.com/lunchly/service-zerocater",
+      "usesCustomOpenGraphImage": false
+    }
+  ]
+}

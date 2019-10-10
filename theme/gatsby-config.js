@@ -31,6 +31,17 @@ module.exports = options => {
       'gatsby-plugin-emotion',
       'gatsby-transformer-json',
       {
+        resolve: `gatsby-plugin-prefetch-google-fonts`,
+        options: {
+          fonts: [
+            {
+              family: `Domine`,
+              variants: [`400`, `700`]
+            }
+          ]
+        }
+      },
+      {
         resolve: 'gatsby-source-filesystem',
         options: {
           path: path.join(__dirname, 'src/data')

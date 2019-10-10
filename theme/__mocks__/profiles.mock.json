@@ -1,0 +1,85 @@
+{
+  "status": "ok",
+  "result": {
+    "profiles": [
+      {
+        "icon": {
+          "name": "tack-overflow",
+          "class": "fab fa-stack-overflow",
+          "reactIcon": "stack-overflow",
+          "set": "fab"
+        },
+        "slug": "stack-overflow",
+        "href": "http://stackoverflow.com/users/1391826/chris-vogt?tab=profile",
+        "displayName": "StackOverflow"
+      },
+      {
+        "displayName": "Dribbble",
+        "icon": {
+          "class": "fab fa-dribbble",
+          "reactIcon": "dribbble",
+          "set": "fab",
+          "name": "dribbble"
+        },
+        "slug": "dribbble",
+        "href": "https://dribbble.com/chrisvogt"
+      },
+      {
+        "href": "https://www.linkedin.com/in/cjvogt",
+        "displayName": "LinkedIn",
+        "icon": {
+          "class": "fab fa-linkedin",
+          "reactIcon": "linkedin-in",
+          "set": "fab",
+          "name": "linkedin"
+        },
+        "slug": "linkedin"
+      },
+      {
+        "icon": {
+          "set": "fab",
+          "name": "twitter",
+          "class": "fab fa-twitter",
+          "reactIcon": "twitter"
+        },
+        "slug": "twitter",
+        "href": "https://twitter.com/c1v0",
+        "displayName": "Twitter"
+      },
+      {
+        "displayName": "Behance",
+        "icon": {
+          "name": "behance",
+          "class": "fab fa-behance",
+          "reactIcon": "behance",
+          "set": "fab"
+        },
+        "behance": "https://www.behance.net/chrisvogt",
+        "slug": "behance",
+        "href": "https://www.behance.net/chrisvogt"
+      },
+      {
+        "icon": {
+          "name": "instagram",
+          "class": "fab fa-instagram",
+          "reactIcon": "instagram",
+          "set": "fab"
+        },
+        "slug": "instagram",
+        "href": "https://instagram.com/c1v0",
+        "displayName": "Instagram"
+      },
+      {
+        "href": "https://github.com/chrisvogt",
+        "displayName": "GitHub",
+        "icon": {
+          "name": "github",
+          "class": "fab fa-github",
+          "reactIcon": "github",
+          "set": "fab"
+        },
+        "slug": "github"
+      }
+    ]
+  }
+}

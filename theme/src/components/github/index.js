@@ -17,11 +17,9 @@ export default () => (
     <Container>
       <div
         sx={{
-          display: ['block', 'grid'],
+          display: ['grid'],
           gridGap: 4,
-          gridTemplateColumns: ['auto', '1fr 70%'],
-          py: 4,
-          px: 3
+          gridTemplateColumns: ['auto', '1fr 70%']
         }}
       >
         <LatestCommit />

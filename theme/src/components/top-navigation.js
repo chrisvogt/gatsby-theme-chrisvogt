@@ -22,10 +22,14 @@ export default () => {
       }}
     >
       <Container>
-        <Link href="/">
-          <Styled.a sx={{ fontWeight: 'bold', marginRight: 3 }}>
-            {title}
-          </Styled.a>
+        <Link
+          to="/"
+          sx={{
+            fontWeight: 'bold',
+            marginRight: 3
+          }}
+        >
+          {title}
         </Link>
 
         {left &&

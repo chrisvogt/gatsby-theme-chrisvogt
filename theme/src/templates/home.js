@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 
-import Panel from '../components/panel'
 import GitHub from '../components/github'
+import Instagram from '../components/instagram'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
+import Panel from '../components/panel'
+import Posts from '../components/posts'
 
 export default () => (
   <Layout>
@@ -43,14 +45,10 @@ export default () => (
             textAlign: ['center', 'left']
           }}
         >
-          <Styled.h1
-            sx={{
-              fontFamily: 2
-            }}
-          >
-            Home Page
-          </Styled.h1>
-          <Styled.h4>Cool subheader about site</Styled.h4>
+          <Styled.h1 sx={{ mb: 0 }}>Chris Vogt</Styled.h1>
+          <Styled.h4 sx={{ py: 0, my: 0, fontSize: 3 }}>
+            Software Engineer in San Francisco
+          </Styled.h4>
         </div>
       </div>
     </Jumbotron>
@@ -58,12 +56,16 @@ export default () => (
     <Panel />
 
     <GitHub />
+
     <div
       sx={{
-        minHeight: '500px'
+        minHeight: '500px',
+        py: 3
       }}
     >
-      Test
+      <Posts />
+
+      <Instagram />
     </div>
   </Layout>
 )

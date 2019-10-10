@@ -1,0 +1,138 @@
+[
+  {
+    "authors": ["Sylvain Neuvel"],
+    "categories": ["Fiction"],
+    "infoLink": "https://play.google.com/store/books/details?id=TgUZDAAAQBAJ&source=gbs_api",
+    "pageCount": 320,
+    "previewLink": "http://books.google.com/books?id=TgUZDAAAQBAJ&printsec=frontcover&dq=isbn:9781101886731&hl=&cd=1&source=gbs_api",
+    "rating": "4",
+    "smallThumbnail": "https://books.google.com/books/content?id=TgUZDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "subtitle": "Book 2 of The Themis Files",
+    "thumbnail": "https://books.google.com/books/content?id=TgUZDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "Waking Gods"
+  },
+  {
+    "authors": ["Sylvain Neuvel"],
+    "categories": ["Fiction"],
+    "infoLink": "https://books.google.com/books?id=cxTUCwAAQBAJ&dq=isbn:9781101886694&hl=&source=gbs_api",
+    "pageCount": 304,
+    "previewLink": "http://books.google.com/books?id=cxTUCwAAQBAJ&printsec=frontcover&dq=isbn:9781101886694&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=cxTUCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=cxTUCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "Sleeping Giants"
+  },
+  {
+    "authors": ["Neal Stephenson"],
+    "categories": [],
+    "infoLink": "https://books.google.com/books?id=1rTywQEACAAJ&dq=isbn:9781596069190&hl=&source=gbs_api",
+    "pageCount": 104,
+    "previewLink": "http://books.google.com/books?id=1rTywQEACAAJ&dq=isbn:9781596069190&hl=&cd=1&source=gbs_api",
+    "rating": "3",
+    "smallThumbnail": "https://books.google.com/books/content?id=1rTywQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=1rTywQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "title": "Atmosphra Incognita"
+  },
+  {
+    "authors": ["Armistead Maupin"],
+    "categories": ["Fiction"],
+    "infoLink": "https://books.google.com/books?id=Sn8MP--RfwcC&dq=isbn:9780060929381&hl=&source=gbs_api",
+    "pageCount": 352,
+    "previewLink": "http://books.google.com/books?id=Sn8MP--RfwcC&printsec=frontcover&dq=isbn:9780060929381&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=Sn8MP--RfwcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=Sn8MP--RfwcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "More Tales of the City"
+  },
+  {
+    "authors": ["Neal Stephenson"],
+    "categories": ["Fiction"],
+    "infoLink": "https://books.google.com/books?id=yDnVuwEACAAJ&dq=isbn:9780062458711&hl=&source=gbs_api",
+    "pageCount": 896,
+    "previewLink": "http://books.google.com/books?id=yDnVuwEACAAJ&dq=isbn:9780062458711&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=yDnVuwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+    "subtitle": "A Novel",
+    "thumbnail": "https://books.google.com/books/content?id=yDnVuwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "title": "Fall; or, Dodge in Hell"
+  },
+  {
+    "authors": ["Elie Wiesel"],
+    "categories": ["Biography & Autobiography"],
+    "infoLink": "https://books.google.com/books?id=qnNzxwEACAAJ&dq=isbn:9780374500016&hl=&source=gbs_api",
+    "pageCount": 116,
+    "previewLink": "http://books.google.com/books?id=qnNzxwEACAAJ&dq=isbn:9780374500016&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=qnNzxwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=qnNzxwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "title": "Night"
+  },
+  {
+    "authors": ["Rebecca Skloot"],
+    "categories": ["Biography & Autobiography"],
+    "infoLink": "https://books.google.com/books?id=PJOLDQAAQBAJ&dq=isbn:9781400052172&hl=&source=gbs_api",
+    "pageCount": 369,
+    "previewLink": "http://books.google.com/books?id=PJOLDQAAQBAJ&printsec=frontcover&dq=isbn:9781400052172&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=PJOLDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=PJOLDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "The Immortal Life of Henrietta Lacks"
+  },
+  {
+    "authors": ["John Stuart Mill"],
+    "categories": ["Philosophy"],
+    "infoLink": "https://books.google.com/books?id=B9l7EAnHm0YC&dq=isbn:9781551113548&hl=&source=gbs_api",
+    "pageCount": 126,
+    "previewLink": "http://books.google.com/books?id=B9l7EAnHm0YC&printsec=frontcover&dq=isbn:9781551113548&hl=&cd=1&source=gbs_api",
+    "rating": "1",
+    "smallThumbnail": "https://books.google.com/books/content?id=B9l7EAnHm0YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=B9l7EAnHm0YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "The Subjection of Women"
+  },
+  {
+    "authors": ["Neil Gaiman"],
+    "categories": ["Fiction"],
+    "infoLink": "https://books.google.com/books?id=NQ_cSYevzAEC&dq=isbn:9780061142024&hl=&source=gbs_api",
+    "pageCount": 288,
+    "previewLink": "http://books.google.com/books?id=NQ_cSYevzAEC&printsec=frontcover&dq=isbn:9780061142024&hl=&cd=1&source=gbs_api",
+    "rating": "4",
+    "smallThumbnail": "https://books.google.com/books/content?id=NQ_cSYevzAEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=NQ_cSYevzAEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "Stardust"
+  },
+  {
+    "authors": ["Kate Moore"],
+    "categories": ["Health & Fitness"],
+    "infoLink": "https://books.google.com/books?id=tT8AvgAACAAJ&dq=isbn:9781492649359&hl=&source=gbs_api",
+    "pageCount": 480,
+    "previewLink": "http://books.google.com/books?id=tT8AvgAACAAJ&dq=isbn:9781492649359&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=tT8AvgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+    "subtitle": "The Dark Story of America's Shining Women",
+    "thumbnail": "https://books.google.com/books/content?id=tT8AvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "title": "The Radium Girls"
+  },
+  {
+    "authors": ["Damian Dibben"],
+    "categories": ["Fiction"],
+    "infoLink": "https://books.google.com/books?id=2NZstAEACAAJ&dq=isbn:9781335580290&hl=&source=gbs_api",
+    "pageCount": 336,
+    "previewLink": "http://books.google.com/books?id=2NZstAEACAAJ&dq=isbn:9781335580290&hl=&cd=1&source=gbs_api",
+    "rating": "5",
+    "smallThumbnail": "https://books.google.com/books/content?id=2NZstAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+    "thumbnail": "https://books.google.com/books/content?id=2NZstAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "title": "Tomorrow"
+  },
+  {
+    "authors": ["Cherie Priest"],
+    "categories": ["Fiction"],
+    "infoLink": "https://play.google.com/store/books/details?id=9YFLgZeRst4C&source=gbs_api",
+    "pageCount": 352,
+    "previewLink": "http://books.google.com/books?id=9YFLgZeRst4C&printsec=frontcover&dq=isbn:9781429981828&hl=&cd=1&source=gbs_api",
+    "rating": "4",
+    "smallThumbnail": "https://books.google.com/books/content?id=9YFLgZeRst4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+    "subtitle": "A Novel of the Clockwork Century",
+    "thumbnail": "https://books.google.com/books/content?id=9YFLgZeRst4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "title": "Ganymede"
+  }
+]
