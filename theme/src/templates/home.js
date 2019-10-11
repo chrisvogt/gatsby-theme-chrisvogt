@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 
+import Footer from '../components/footer'
 import GitHub from '../components/github'
 import Instagram from '../components/instagram'
 import Jumbotron from '../components/jumbotron'
@@ -67,5 +68,7 @@ export default () => (
 
       <Instagram />
     </div>
+
+    <Footer />
   </Layout>
 )

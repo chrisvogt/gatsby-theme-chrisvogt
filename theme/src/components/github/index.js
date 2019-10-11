@@ -9,6 +9,7 @@ import SwoopTop from '../artwork/swoop-top'
 
 export default () => (
   <Styled.div
+    id="github"
     sx={{
       backgroundColor: '#1E90FF'
     }}
