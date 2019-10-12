@@ -6,9 +6,9 @@ export default async () => {
       'https://metrics.chrisvogt.me/api/pinned-repositories'
     )
     return pinnedRepositories
-  } catch (err) {
+  } catch (error) {
     return {
-      err
+      error
     }
   }
 }

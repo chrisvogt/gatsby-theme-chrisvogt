@@ -1,24 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { useEffect, useState } from 'react'
 
-import Container from './container'
-import getInstagramPosts from '../api/personal-api/getInstagramPosts'
-// import useSiteMetadata from '../hooks/use-site-metadata'
+import Container from '../container'
+import useInstagramPosts from '../../hooks/use-instagram-posts'
 
 export default () => {
-  // const metadata = useSiteMetadata()
-
-  const [posts, setPosts] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    ;(async () => {
-      const posts = await getInstagramPosts()
-      setPosts(posts)
-      setIsLoading(false)
-    })()
-  }, [])
+  const { isLoading, posts } = useInstagramPosts()
 
   return (
     <Container

@@ -6,9 +6,9 @@ export default async () => {
       'https://api.chrisvogt.me/instagram'
     )
     return photos
-  } catch (err) {
+  } catch (error) {
     return {
-      err
+      error
     }
   }
 }

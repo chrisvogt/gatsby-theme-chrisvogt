@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { Global } from "@emotion/core"
-import { jsx, Styled } from "theme-ui"
+import { Global } from '@emotion/core'
+import { jsx, Styled } from 'theme-ui'
 
-import SEO from "./seo"
+import SEO from './seo'
 import TopNavigation from './top-navigation'
 
 export default ({ children, ...props }) => (
@@ -18,7 +18,7 @@ export default ({ children, ...props }) => (
           WebkitFontSmoothing: `antialiased`,
           MozOsxFontSmoothing: `grayscale`
         },
-        "::selection": {
+        '::selection': {
           backgroundColor: `primary`,
           color: `white`
         }

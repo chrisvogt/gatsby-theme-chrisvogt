@@ -3,7 +3,7 @@ import { jsx, Styled } from 'theme-ui'
 
 import Footer from '../components/footer'
 import GitHub from '../components/github'
-import Instagram from '../components/instagram'
+import Instagram from '../components/widgets/instagram'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Panel from '../components/panel'

@@ -21,9 +21,9 @@ export default async () => {
 
     const profiles = getProfiles(profilePromises)
     return profiles
-  } catch (err) {
+  } catch (error) {
     return {
-      err
+      error
     }
   }
 }

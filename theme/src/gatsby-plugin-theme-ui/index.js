@@ -28,6 +28,11 @@ export default {
     h4: {
       ...tailwind.styles.h4,
       ...setThinFontWeight
+    },
+    text: {
+      inverse: {
+        color: tailwind.colors.muted
+      }
     }
   }
 }

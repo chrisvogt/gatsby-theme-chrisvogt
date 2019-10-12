@@ -1,39 +1,33 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import Container from './container'
-import getSocialProfiles from '../api/personal-api/getSocialProfiles'
-// import useSiteMetadata from '../hooks/use-site-metadata'
+import useSocialProfiles from '../hooks/use-social-profiles'
 
 export default () => {
-  // const metadata = useSiteMetadata()
-
-  const [profiles, setProfiles] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    ;(async () => {
-      const profiles = await getSocialProfiles()
-      setProfiles(profiles)
-      setIsLoading(false)
-    })()
-  }, [])
-
-  if (!isLoading) {
-    console.log(profiles)
-  }
+  const { isLoading, profiles } = useSocialProfiles()
 
   return (
-    <Container
-      background="#f8f9fa"
+    <div
       sx={{
-        mb: 3
+        display: 'flex',
+        justifyContent: 'space-around'
       }}
     >
-      <FontAwesomeIcon icon={faGithub} />
-    </Container>
+      {!isLoading &&
+        profiles.map(({ IconComponent, profile }) => {
+          const { displayName = '', href, slug } = profile
+          return (
+            <a key={slug} href={href} title={displayName}>
+              <FontAwesomeIcon
+                color="green"
+                icon={IconComponent}
+                size="4x"
+                inverse
+              />
+            </a>
+          )
+        })}
+    </div>
   )
 }
