@@ -6,13 +6,13 @@ import SEO from './seo'
 import TopNavigation from './top-navigation'
 
 export default ({ children, ...props }) => (
-  <Styled.root data-testid="theme-root">
+  <Styled.root data-testid='theme-root'>
     <Global
       styles={{
         body: {
           margin: 0,
           padding: 0,
-          height: '100%',
+          height: `100%`,
           boxSizing: `border-box`,
           textRendering: `optimizeLegibility`,
           WebkitFontSmoothing: `antialiased`,
@@ -20,7 +20,10 @@ export default ({ children, ...props }) => (
         },
         '::selection': {
           backgroundColor: `primary`,
-          color: `white`
+          color: `background`
+        },
+        a: {
+          transition: `all 0.3s ease-in-out`
         }
       }}
     />

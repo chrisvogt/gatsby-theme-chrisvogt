@@ -1,7 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
-
-import Container from './container'
+import { jsx, Container, Styled } from 'theme-ui'
 
 const mockPosts = [
   {
@@ -23,12 +21,16 @@ Lorum ipsum dolor sit amet. Lingus dingus herple derple moop mc-meep, and then s
 ]
 
 export default () => (
-  <Container background="#f8f9fa">
+  <Container
+    sx={{
+      backgroundColor: `#f8f9fa`
+    }}
+  >
     <h3
       sx={{
-        backgroundColor: 'white',
+        backgroundColor: `white`,
         mt: 0,
-        mb: 3,
+        mb: 4,
         padding: 3
       }}
     >
@@ -36,24 +38,24 @@ export default () => (
     </h3>
     <Styled.div
       sx={{
-        display: 'grid',
-        gridAutoRows: '1fr',
-        gridGap: '1rem',
-        gridTemplateColumns: ['', '', 'repeat(2, 1fr)']
+        display: `grid`,
+        gridAutoRows: `1fr`,
+        gridGap: 4,
+        gridTemplateColumns: [``, ``, `repeat(2, 1fr)`]
       }}
     >
       {mockPosts.map((post, index) => (
         <div
           key={post.slug}
           sx={{
-            backgroundColor: 'white',
+            backgroundColor: `white`,
             padding: 3
           }}
         >
-          <span>{post.title}</span>
+          <Styled.h5>{post.title}</Styled.h5>
           <span>{post.createdAt}</span>
           <p>{post.excerpt}</p>
-          <a href="/">View post</a>
+          <a href='/'>View post</a>
         </div>
       ))}
     </Styled.div>

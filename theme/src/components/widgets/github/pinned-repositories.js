@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { jsx, Styled } from 'theme-ui'
 
-import getRepositories from '../../api/github/get-repositories'
+import getRepositories from '../../../api/github/get-repositories'
 import RepositoryCard from './repository-card'
 
 export default () => {

@@ -8,6 +8,7 @@ const useSiteMetadata = () => {
           siteMetadata {
             baseURL
             description
+            headline
             imageURL
             social {
               github {
@@ -17,6 +18,7 @@ const useSiteMetadata = () => {
                 username
               }
             }
+            subhead
             title
             titleTemplate
           }

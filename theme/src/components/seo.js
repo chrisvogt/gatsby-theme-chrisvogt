@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
+import { useThemeUI } from 'theme-ui'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 
@@ -12,6 +13,7 @@ import {
 
 const SEO = ({ title, description, image: imageURL, pathname, article }) => {
   const metadata = useSiteMetadata()
+  const { theme } = useThemeUI()
 
   const baseURL = getBaseURL(metadata)
   const titleTemplate = getTitleTemplate(metadata)
@@ -20,31 +22,27 @@ const SEO = ({ title, description, image: imageURL, pathname, article }) => {
   const fullPathURL = baseURL ? `${baseURL}${pathname}` : '/'
 
   return (
-    <>
-      <Helmet title={title} titleTemplate={titleTemplate}>
-        <meta name="description" content={description} />
-        <meta name="image" content={imageURL} />
+    <Helmet title={title} titleTemplate={titleTemplate}>
+      <meta name='description' content={description} />
+      <meta name='image' content={imageURL} />
 
-        <meta property="og:url" content={fullPathURL} />
+      <meta name='theme-color' content={theme.colors.background} />
 
-        {article && <meta property="og:type" content="article" />}
+      <meta property='og:url' content={fullPathURL} />
 
-        {title && <meta property="og:title" content={title} />}
-        {description && (
-          <meta property="og:description" content={description} />
-        )}
-        {imageURL && <meta property="og:image" content={imageURL} />}
-        <meta name="twitter:card" content="summary_large_image" />
-        {twitterUsername && (
-          <meta name="twitter:creator" content={twitterUsername} />
-        )}
-        {title && <meta name="twitter:title" content={title} />}
-        {imageURL && <meta name="twitter:image" content={imageURL} />}
-        {description && (
-          <meta name="twitter:description" content={description} />
-        )}
-      </Helmet>
-    </>
+      {article && <meta property='og:type' content='article' />}
+
+      {title && <meta property='og:title' content={title} />}
+      {description && <meta property='og:description' content={description} />}
+      {imageURL && <meta property='og:image' content={imageURL} />}
+      <meta name='twitter:card' content='summary_large_image' />
+      {twitterUsername && (
+        <meta name='twitter:creator' content={twitterUsername} />
+      )}
+      {title && <meta name='twitter:title' content={title} />}
+      {imageURL && <meta name='twitter:image' content={imageURL} />}
+      {description && <meta name='twitter:description' content={description} />}
+    </Helmet>
   )
 }
 

@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Container, Styled } from 'theme-ui'
 import { Link } from 'gatsby'
 
 import { getTitle } from '../selectors/metadata'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
-
-import Container from './container'
 
 export default () => {
   const { header: { left } = {} } = useNavigationData()
@@ -16,16 +14,14 @@ export default () => {
   return (
     <Styled.div
       sx={{
-        backgroundColor: 'white',
-        py: 2,
-        px: 3
+        backgroundColor: `white`
       }}
     >
-      <Container>
+      <Container sx={{ py: 3 }}>
         <Link
-          to="/"
+          to='/'
           sx={{
-            fontWeight: 'bold',
+            fontWeight: `bold`,
             marginRight: 3
           }}
         >

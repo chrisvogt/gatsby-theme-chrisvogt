@@ -1,17 +1,16 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { Container, Footer as ThemeFooter, jsx, Styled } from 'theme-ui'
 
-import Container from '../container'
 import Credits from './credits'
 import Navigation from './navigation'
 import Profiles from '../profiles'
 
 export default () => (
-  <div sx={{ backgroundColor: 'blue' }}>
+  <ThemeFooter>
     <Container>
       <Profiles />
     </Container>
-    <div sx={{ backgroundColor: 'teal' }}>
+    <div sx={{ variant: 'styles.SubFooter' }}>
       <Container>
         <Styled.div
           style={{
@@ -30,5 +29,5 @@ export default () => (
         </Styled.div>
       </Container>
     </div>
-  </div>
+  </ThemeFooter>
 )

@@ -3,24 +3,30 @@ import get from 'lodash/get'
 const PATHS = {
   baseURL: 'baseURL',
   description: 'description',
-  imageURL: 'imageURL',
   githubUsername: 'social.github.username',
-  twitterUsername: 'social.twitter.username',
+  headline: 'headline',
+  imageURL: 'imageURL',
+  subhead: 'subhead',
   title: 'title',
-  titleTemplate: 'titleTemplate'
+  titleTemplate: 'titleTemplate',
+  twitterUsername: 'social.twitter.username'
 }
 
 export const getBaseURL = metadata => get(metadata, PATHS.baseURL)
 
 export const getDescription = metadata => get(metadata, PATHS.description)
 
-export const getImageURL = metadata => get(metadata, PATHS.imageURL)
-
 export const getGithubUsername = metadata => get(metadata, PATHS.githubUsername)
 
-export const getTwitterUsername = metadata =>
-  get(metadata, PATHS.twitterUsername)
+export const getHeadline = metadata => get(metadata, PATHS.headline)
+
+export const getImageURL = metadata => get(metadata, PATHS.imageURL)
+
+export const getSubhead = metadata => get(metadata, PATHS.subhead)
 
 export const getTitle = metadata => get(metadata, PATHS.title)
 
 export const getTitleTemplate = metadata => get(metadata, PATHS.titleTemplate)
+
+export const getTwitterUsername = metadata =>
+  get(metadata, PATHS.twitterUsername)

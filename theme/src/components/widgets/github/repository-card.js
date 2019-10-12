@@ -39,13 +39,13 @@ const RepositoryCard = ({
         >
           {avatarURL && (
             <img
-              alt="repository avatar"
-              height="42"
+              alt='repository avatar'
+              height='42'
               src={avatarURL}
               sx={{
                 mr: 2
               }}
-              width="42"
+              width='42'
             />
           )}
           <div
@@ -78,9 +78,9 @@ const RepositoryCard = ({
           >
             <Styled.a
               sx={{ fontSize: 'small' }}
-              title="View on GitHub"
+              title='View on GitHub'
               href={repositoryURL}
-              target="_blank"
+              target='_blank'
             >
               View on GitHub &raquo;
             </Styled.a>

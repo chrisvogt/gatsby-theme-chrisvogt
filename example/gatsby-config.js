@@ -1,8 +1,8 @@
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-theme-personal-sphere",
-      options: {},
+      resolve: 'gatsby-theme-personal-sphere',
+      options: {}
     }
   ]
 }

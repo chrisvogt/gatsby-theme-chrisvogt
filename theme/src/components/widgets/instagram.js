@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Container } from 'theme-ui'
 
-import Container from '../container'
 import useInstagramPosts from '../../hooks/use-instagram-posts'
 
 export default () => {
@@ -9,24 +8,24 @@ export default () => {
 
   return (
     <Container
-      id="instagram"
-      background="#f8f9fa"
+      id='instagram'
       sx={{
-        mb: 3
+        backgroundColor: '#f8f9fa',
+        mb: 4
       }}
     >
       <h3
         sx={{
           backgroundColor: 'white',
           mt: 0,
-          mb: 3,
+          mb: 4,
           padding: 3
         }}
       >
         Instagram Posts
       </h3>
 
-      <div className="gallery">
+      <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}
 
         <div
@@ -51,14 +50,14 @@ export default () => {
                     key={id}
                     href={link}
                     style={{ lineHeight: 0 }}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     <img
                       src={url}
                       height={height}
                       width={width}
-                      alt="Instagram post thumbnail"
+                      alt='Instagram post thumbnail'
                       sx={{
                         width: '100%',
                         height: '100%',
