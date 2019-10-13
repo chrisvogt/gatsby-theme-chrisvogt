@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container } from 'theme-ui'
+import { jsx, Container, Styled } from 'theme-ui'
 
 import useInstagramPosts from '../../hooks/use-instagram-posts'
 
@@ -14,7 +14,7 @@ export default () => {
         mb: 4
       }}
     >
-      <h3
+      <Styled.h3
         sx={{
           backgroundColor: 'white',
           mt: 0,
@@ -23,7 +23,7 @@ export default () => {
         }}
       >
         Instagram Posts
-      </h3>
+      </Styled.h3>
 
       <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}

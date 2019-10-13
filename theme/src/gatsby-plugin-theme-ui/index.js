@@ -20,7 +20,6 @@ export default {
   },
   styles: {
     ...themePreset.styles,
-
     root: {
       ...themePreset.styles.root,
       color: `text`,

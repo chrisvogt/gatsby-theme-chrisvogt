@@ -7,7 +7,7 @@ import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 export default () => {
-  const { header: { left } = {} } = useNavigationData()
+  const { header: { left: menuItems } = {} } = useNavigationData()
   const metadata = useSiteMetadata()
   const title = getTitle(metadata)
 
@@ -17,19 +17,33 @@ export default () => {
         backgroundColor: `white`
       }}
     >
-      <Container sx={{ py: 3 }}>
+      <Container
+        sx={{
+          py: 3,
+          textAlign: [`center`, ``, `left`]
+        }}
+      >
         <Link
           to='/'
           sx={{
+            color: `dark`,
+            display: [`block`, ``, `inline`],
+            fontFamily: `heading`,
+            fontSize: 2,
             fontWeight: `bold`,
+            textDecoration: `none`,
             marginRight: 3
           }}
         >
           {title}
         </Link>
 
-        {left &&
-          left.map(item => <Styled.a key={item.slug}>{item.text} </Styled.a>)}
+        {menuItems &&
+          menuItems.map(({ slug, path, title, text }) => (
+            <Styled.a key={slug} href={path} title={title} sx={{ mr: 3 }}>
+              {text}
+            </Styled.a>
+          ))}
       </Container>
     </Styled.div>
   )

@@ -21,9 +21,9 @@ export default () => {
       <Header>
         <div
           sx={{
-            display: [`block`, `grid`],
+            display: [`block`, ``, `grid`],
             gridGap: 0,
-            gridTemplateColumns: [``, `1fr 60%`],
+            gridTemplateColumns: [``, ``, `1fr 60%`],
             width: `100%`
           }}
         >
@@ -31,7 +31,7 @@ export default () => {
             sx={{
               display: `flex`,
               flexDirection: `column`,
-              alignItems: [`center`, `flex-end`]
+              alignItems: [`center`, ``, `flex-end`]
             }}
           >
             <img
@@ -40,7 +40,7 @@ export default () => {
                 borderRadius: `50%`,
                 borderStyle: `solid`,
                 borderWidth: 3,
-                mr: [0, 3]
+                mr: [0, 0, 3]
               }}
               alt='Avatar'
               src='https://www.chrisvogt.me/assets/images/avatar-512px.jpg'
@@ -50,7 +50,7 @@ export default () => {
           </div>
           <Flex
             sx={{
-              textAlign: [`center`, `left`],
+              textAlign: [`center`, ``, `left`],
               flexDirection: `column`,
               justifyContent: `center`
             }}

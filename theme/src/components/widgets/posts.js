@@ -22,11 +22,12 @@ Lorum ipsum dolor sit amet. Lingus dingus herple derple moop mc-meep, and then s
 
 export default () => (
   <Container
+    id='posts'
     sx={{
       backgroundColor: `#f8f9fa`
     }}
   >
-    <h3
+    <Styled.h3
       sx={{
         backgroundColor: `white`,
         mt: 0,
@@ -35,7 +36,7 @@ export default () => (
       }}
     >
       Blog Posts
-    </h3>
+    </Styled.h3>
     <Styled.div
       sx={{
         display: `grid`,
@@ -52,7 +53,7 @@ export default () => (
             padding: 3
           }}
         >
-          <Styled.h5>{post.title}</Styled.h5>
+          <Styled.h4>{post.title}</Styled.h4>
           <span>{post.createdAt}</span>
           <p>{post.excerpt}</p>
           <a href='/'>View post</a>
