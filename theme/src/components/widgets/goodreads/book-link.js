@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Styled } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import PropTypes from 'prop-types'
 
 import Book from '../../artwork/book'

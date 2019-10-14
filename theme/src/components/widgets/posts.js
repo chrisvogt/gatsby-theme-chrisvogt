@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
+import { Link } from 'gatsby'
 
 const mockPosts = [
   {
@@ -23,9 +24,11 @@ Lorum ipsum dolor sit amet. Lingus dingus herple derple moop mc-meep, and then s
 export default () => (
   <Container
     id='posts'
-    sx={{
-      backgroundColor: `#f8f9fa`
-    }}
+    sx={
+      {
+        // variant: `styles.outlined`
+      }
+    }
   >
     <div
       sx={{
@@ -33,7 +36,8 @@ export default () => (
         display: `grid`,
         gridGap: 0,
         gridTemplateColumns: [``, ``, `1fr 50%`],
-        mb: 4
+        mb: 4,
+        variant: `styles.outlinedTopBottom`
       }}
     >
       <div>
@@ -68,15 +72,21 @@ export default () => (
           key={post.slug}
           sx={{
             backgroundColor: `white`,
-            padding: 3
+            padding: 3,
+            variant: `styles.outlinedTopBottom`
           }}
         >
           <Styled.h4>{post.title}</Styled.h4>
           <span>{post.createdAt}</span>
           <p>{post.excerpt}</p>
-          <a href='/'>View post</a>
+          <div style={{ textAlign: `right` }}>
+            <a href='/'>View post &raquo;</a>
+          </div>
         </div>
       ))}
     </Styled.div>
+    <div sx={{ marginTop: 4, textAlign: `right` }}>
+      <Link to='/blog'>View all posts</Link>
+    </div>
   </Container>
 )

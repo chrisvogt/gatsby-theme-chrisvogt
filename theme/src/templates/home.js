@@ -61,7 +61,12 @@ export default () => {
         </div>
       </Header>
 
-      <div sx={{ py: 4 }}>
+      <div
+        sx={{
+          backgroundColor: `colors.background`,
+          py: 4
+        }}
+      >
         <Posts />
       </div>
 
@@ -69,6 +74,7 @@ export default () => {
 
       <div
         sx={{
+          backgroundColor: `colors.background`,
           minHeight: `500px`,
           py: 3
         }}

@@ -13,16 +13,15 @@ export default () => {
     <Container
       id='goodreads'
       sx={{
-        backgroundColor: `#f8f9fa`,
         mb: 4
       }}
     >
       <Styled.h3
         sx={{
-          backgroundColor: `white`,
           mt: 0,
           mb: 4,
-          padding: 3
+          padding: 3,
+          variant: `styles.outlinedTopBottom`
         }}
       >
         Recently Read Books

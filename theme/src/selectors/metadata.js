@@ -6,6 +6,7 @@ const PATHS = {
   githubUsername: 'social.github.username',
   headline: 'headline',
   imageURL: 'imageURL',
+  instagramUsername: 'social.instagram.username',
   subhead: 'subhead',
   title: 'title',
   titleTemplate: 'titleTemplate',
@@ -21,6 +22,9 @@ export const getGithubUsername = metadata => get(metadata, PATHS.githubUsername)
 export const getHeadline = metadata => get(metadata, PATHS.headline)
 
 export const getImageURL = metadata => get(metadata, PATHS.imageURL)
+
+export const getInstagramUsername = metadata =>
+  get(metadata, PATHS.instagramUsername)
 
 export const getSubhead = metadata => get(metadata, PATHS.subhead)
 

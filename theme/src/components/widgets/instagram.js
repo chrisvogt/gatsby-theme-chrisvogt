@@ -7,19 +7,14 @@ export default () => {
   const { isLoading, posts } = useInstagramPosts()
 
   return (
-    <Container
-      id='instagram'
-      sx={{
-        backgroundColor: '#f8f9fa',
-        mb: 4
-      }}
-    >
+    <Container id='instagram'>
       <Styled.h3
         sx={{
           backgroundColor: 'white',
-          mt: 0,
           mb: 4,
-          padding: 3
+          mt: 0,
+          padding: 3,
+          variant: 'styles.outlinedTopBottom'
         }}
       >
         Instagram Posts

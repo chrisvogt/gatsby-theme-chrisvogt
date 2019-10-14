@@ -1,6 +1,8 @@
 import { darken } from '@theme-ui/color'
 import { tailwind } from '@theme-ui/presets'
 
+import colors from './colors'
+
 const baseFonts = {
   serif: 'Domine'
 }
@@ -13,6 +15,10 @@ const themePreset = tailwind
 
 export default {
   ...tailwind,
+  colors: {
+    ...tailwind,
+    ...colors
+  },
   fonts: {
     ...themePreset.fonts,
     ...setThinFontWeight,
@@ -37,6 +43,13 @@ export default {
       ...themePreset.styles.h4,
       ...setThinFontWeight
     },
+    outlined: {
+      border: `4px solid #efefef`
+    },
+    outlinedTopBottom: {
+      borderBottom: `4px solid #efefef`,
+      borderTop: `4px solid #efefef`
+    },
     text: {
       inverse: {
         color: themePreset.colors.muted
@@ -46,7 +59,7 @@ export default {
       backgroundColor: `primary`
     },
     footer: {
-      backgroundColor: `primary`,
+      backgroundColor: `secondary`,
       color: `light`,
       a: {
         color: `lightover`
@@ -57,7 +70,7 @@ export default {
       maxWidth: `90%`
     },
     SubFooter: {
-      backgroundColor: darken(`primary`, 0.15)
+      backgroundColor: darken(`secondary`, 0.15)
     },
     Footer: {
       width: `100%`,
@@ -66,8 +79,8 @@ export default {
     },
     Header: {
       alignItems: `center`,
-      backgroundColor: `primary`,
-      // backgroundImage: `url(/images/trianglify.svg)`,
+      backgroundColor: `secondary`,
+      backgroundImage: `url(/images/trianglify.svg)`,
       backgroundPosition: `top`,
       backgroundSize: `cover`,
       color: `white`,
