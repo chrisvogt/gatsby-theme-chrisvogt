@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getInstagramPosts from '../api/personal-api/getInstagramPosts'
+import getInstagramPosts from '../api/personal-api/get-instagram-posts'
 
 const useInstagramPosts = () => {
   const [posts, setPosts] = useState([])

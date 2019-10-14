@@ -6,7 +6,7 @@ module.exports = options => {
       title: 'Gatsby Theme Personal Sphere',
       titleTemplate: '%s · Personal Sphere',
       headline: 'Personal Sphere',
-      subhead: 'A Gatsby theme with social widgets',
+      subhead: 'A Gatsby theme with built-in social widgets',
       description:
         'A gatsby blog theme with built-in recently read and GitHub plugins.',
       baseURL: 'https://www.doe.com', // NOTE(cvogt): no trailing slash

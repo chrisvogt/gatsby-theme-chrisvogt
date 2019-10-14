@@ -27,16 +27,34 @@ export default () => (
       backgroundColor: `#f8f9fa`
     }}
   >
-    <Styled.h3
+    <div
       sx={{
         backgroundColor: `white`,
-        mt: 0,
-        mb: 4,
-        padding: 3
+        display: `grid`,
+        gridGap: 0,
+        gridTemplateColumns: [``, ``, `1fr 50%`],
+        mb: 4
       }}
     >
-      Blog Posts
-    </Styled.h3>
+      <div>
+        <Styled.h3
+          sx={{
+            mt: 0,
+            padding: 3
+          }}
+        >
+          Blog Posts
+        </Styled.h3>
+      </div>
+      <div
+        sx={{
+          flexDirection: `column`,
+          justifyContent: `center`
+        }}
+      >
+        BUTTON
+      </div>
+    </div>
     <Styled.div
       sx={{
         display: `grid`,

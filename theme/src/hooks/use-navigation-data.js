@@ -21,7 +21,6 @@ const useNavigationData = () => {
                 }
                 header {
                   left {
-                    class
                     path
                     slug
                     text

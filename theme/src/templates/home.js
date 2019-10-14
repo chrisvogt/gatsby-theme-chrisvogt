@@ -3,6 +3,7 @@ import { jsx, Flex, Styled } from 'theme-ui'
 
 import Footer from '../components/footer'
 import GitHub from '../components/widgets/github'
+import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
@@ -27,9 +28,8 @@ export default () => {
             width: `100%`
           }}
         >
-          <div
+          <Flex
             sx={{
-              display: `flex`,
               flexDirection: `column`,
               alignItems: [`center`, ``, `flex-end`]
             }}
@@ -47,7 +47,7 @@ export default () => {
               height='128'
               width='128'
             />
-          </div>
+          </Flex>
           <Flex
             sx={{
               textAlign: [`center`, ``, `left`],
@@ -74,6 +74,7 @@ export default () => {
         }}
       >
         <Instagram />
+        <Goodreads />
       </div>
 
       <Footer />

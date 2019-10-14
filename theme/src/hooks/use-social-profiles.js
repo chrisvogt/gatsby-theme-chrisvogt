@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getSocialProfiles from '../api/personal-api/getSocialProfiles'
+import getSocialProfiles from '../api/personal-api/get-social-profiles'
 
 const useSocialProfiles = () => {
   const [profiles, setProfiles] = useState([])
