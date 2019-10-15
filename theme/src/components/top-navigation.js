@@ -26,7 +26,7 @@ export default () => {
         <Link
           to='/'
           sx={{
-            color: `dark`,
+            color: `colors.dark`,
             display: [`block`, ``, `inline`],
             fontFamily: `heading`,
             fontSize: 2,

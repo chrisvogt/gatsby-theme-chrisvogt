@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
 
-import useInstagramPosts from '../../hooks/use-instagram-posts'
+import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
+import useInstagramPosts from '../../../hooks/use-instagram-posts'
 
 export default () => {
   const { isLoading, posts } = useInstagramPosts()
@@ -47,6 +48,9 @@ export default () => {
                     style={{ lineHeight: 0 }}
                     target='_blank'
                     rel='noopener noreferrer'
+                    sx={{
+                      '&:hover, &:focus': { boxShadow: defaultBoxShadow }
+                    }}
                   >
                     <img
                       src={url}

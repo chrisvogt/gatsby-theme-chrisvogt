@@ -21,12 +21,7 @@ export default () => {
           const { displayName = '', href, slug } = profile
           return (
             <a key={slug} href={href} title={displayName} rel='me'>
-              <FontAwesomeIcon
-                color='green'
-                icon={IconComponent}
-                size='4x'
-                inverse
-              />
+              <FontAwesomeIcon icon={IconComponent} size='3x' inverse />
             </a>
           )
         })}

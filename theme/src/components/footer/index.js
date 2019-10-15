@@ -10,20 +10,20 @@ export default () => (
     <Container>
       <Profiles />
     </Container>
-    <div sx={{ variant: 'styles.SubFooter' }}>
+    <div sx={{ variant: `styles.SubFooter` }}>
       <Container>
         <Styled.div
           style={{
-            color: 'muted',
-            display: 'grid',
-            width: '100%',
-            gridTemplateColumns: '50% 1fr'
+            color: `muted`,
+            display: `grid`,
+            width: `100%`,
+            gridTemplateColumns: `50% 1fr`
           }}
         >
           <div>
             <Credits />
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ textAlign: `right` }}>
             <Navigation />
           </div>
         </Styled.div>

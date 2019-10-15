@@ -40,24 +40,14 @@ export default () => (
         variant: `styles.outlinedTopBottom`
       }}
     >
-      <div>
-        <Styled.h3
-          sx={{
-            mt: 0,
-            padding: 3
-          }}
-        >
-          Blog Posts
-        </Styled.h3>
-      </div>
-      <div
+      <Styled.h3
         sx={{
-          flexDirection: `column`,
-          justifyContent: `center`
+          mt: 0,
+          padding: 3
         }}
       >
-        BUTTON
-      </div>
+        Blog Posts
+      </Styled.h3>
     </div>
     <Styled.div
       sx={{
@@ -86,7 +76,15 @@ export default () => (
       ))}
     </Styled.div>
     <div sx={{ marginTop: 4, textAlign: `right` }}>
-      <Link to='/blog'>View all posts</Link>
+      <Link
+        to='/blog'
+        sx={{
+          textDecoration: `none`,
+          fontSize: 2
+        }}
+      >
+        View all posts
+      </Link>
     </div>
   </Container>
 )

@@ -15,25 +15,26 @@ const RepositoryCard = ({
 }) => (
   <div
     sx={{
-      backgroundColor: 'white',
-      borderRadius: '2px',
-      marginBottom: [3, 'inherit'],
-      padding: 3
+      backgroundColor: `white`,
+      borderRadius: `2px`,
+      marginBottom: [3, `inherit`],
+      padding: 3,
+      width: `100%`
     }}
   >
     {isLoading && <RepositoryCardPlaceholder />}
     {!isLoading && (
       <div
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%'
+          display: `flex`,
+          flexDirection: `column`,
+          height: `100%`
         }}
       >
         <div
           sx={{
-            alignItems: 'center',
-            display: 'flex',
+            alignItems: `center`,
+            display: `flex`,
             fontSize: 2
           }}
         >
@@ -50,9 +51,9 @@ const RepositoryCard = ({
           )}
           <div
             sx={{
-              display: 'flex',
+              display: `flex`,
               flexGrow: 1,
-              height: '100%'
+              height: `100%`
             }}
           >
             {name}
@@ -70,14 +71,14 @@ const RepositoryCard = ({
         {repositoryURL && (
           <div
             sx={{
-              alignItems: 'flex-end',
-              display: 'flex',
-              height: '100%',
-              justifyContent: 'flex-end'
+              alignItems: `flex-end`,
+              display: `flex`,
+              height: `100%`,
+              justifyContent: `flex-end`
             }}
           >
             <Styled.a
-              sx={{ fontSize: 'small' }}
+              sx={{ fontSize: `small` }}
               title='View on GitHub'
               href={repositoryURL}
               target='_blank'

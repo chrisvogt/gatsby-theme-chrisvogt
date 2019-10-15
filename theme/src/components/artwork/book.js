@@ -2,12 +2,20 @@
 import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
+import { defaultBoxShadow } from '../../gatsby-plugin-theme-ui/styles'
+
 const Book = ({ thumbnailURL, title }) => (
   <svg
     data-name='Book Preview'
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     viewBox='0 0 100 100'
+    sx={{
+      '&:hover, &:focus': {
+        transform: `scale(1.08)`,
+        transition: `all .35s ease-in-out`
+      }
+    }}
   >
     <defs>
       <clipPath id='ec3c1a72-0104-4d8a-830f-57d2245cb2f4'>
@@ -19,7 +27,11 @@ const Book = ({ thumbnailURL, title }) => (
       </clipPath>
     </defs>
     <title>{title}</title>
-    <g id='bc5c39bc-971a-4562-b8d4-0c72a22c3f5f' data-name='Book Sheets'>
+    <g
+      fill='#1a202c'
+      id='bc5c39bc-971a-4562-b8d4-0c72a22c3f5f'
+      data-name='Book Sheets'
+    >
       <path d='M78.6,90.9H12.3V0H78.6ZM14.9,88.3H76V2.6H14.9Z' />
       <rect x='85.1' y='9.1' width='2.61' height='46.2' />
       <polygon points='87.7 100 20.83 100 12.35 90.89 14.25 89.11 21.97 97.4 85.1 97.4 85.1 49 87.7 49 87.7 100' />
@@ -30,6 +42,7 @@ const Book = ({ thumbnailURL, title }) => (
     </g>
     <polyline
       data-name='Image Wrapper'
+      fill='#1a202c'
       points='77.3 39.9 77.3 89.6 13.6 89.6 13.6 1.3 77.3 1.3 77.3 44.9'
     />
     <g

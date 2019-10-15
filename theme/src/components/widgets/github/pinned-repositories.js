@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { jsx, Styled } from 'theme-ui'
 
+import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
 import getRepositories from '../../../api/github/get-repositories'
 import RepositoryCard from './repository-card'
 
@@ -36,18 +37,35 @@ export default () => {
       >
         {repositories.map((repository, index) => {
           return (
-            <RepositoryCard
-              key={repository.name || index}
-              avatarURL={repository.openGraphImageUrl}
-              description={repository.description}
-              isLoading={repositories.isLoading}
-              lastUpdated={repository.updatedAt}
-              repositoryURL={repository.url}
-              name={repository.nameWithOwner}
-            />
+            <Styled.a
+              href={repository.url}
+              sx={{
+                display: `flex`,
+                '&:hover, &:focus': {
+                  boxShadow: defaultBoxShadow,
+                  textDecoration: `none`,
+                  transition: `all .35s ease-in-out`
+                }
+              }}
+            >
+              <RepositoryCard
+                key={repository.name || index}
+                avatarURL={repository.openGraphImageUrl}
+                description={repository.description}
+                isLoading={repositories.isLoading}
+                lastUpdated={repository.updatedAt}
+                repositoryURL={repository.url}
+                name={repository.nameWithOwner}
+              />
+            </Styled.a>
           )
         })}
       </Styled.div>
+      <p sx={{ textAlign: `right`, marginTop: 4 }}>
+        <Styled.a sx={{ color: `white`, fontFamily: `heading`, fontSize: 3 }}>
+          View GitHub profile &raquo;
+        </Styled.a>
+      </p>
     </div>
   )
 }
