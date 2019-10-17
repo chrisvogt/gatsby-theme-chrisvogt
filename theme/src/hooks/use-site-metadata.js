@@ -14,6 +14,9 @@ const useSiteMetadata = () => {
               github {
                 username
               }
+              goodreads {
+                username
+              }
               twitter {
                 username
               }

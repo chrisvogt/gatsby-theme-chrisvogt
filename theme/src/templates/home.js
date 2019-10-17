@@ -8,9 +8,12 @@ import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
 import Posts from '../components/widgets/posts'
+import SwoopBottom from '../components/artwork/swoop-bottom'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 import { getHeadline, getSubhead } from '../selectors/metadata'
+
+import theme from '../gatsby-plugin-theme-ui'
 
 export default () => {
   const siteMetadata = useSiteMetadata()
@@ -61,26 +64,20 @@ export default () => {
         </div>
       </Header>
 
-      <div
-        sx={{
-          backgroundColor: `colors.background`,
-          py: 4
-        }}
-      >
-        <Posts />
-      </div>
-
       <GitHub />
 
       <div
         sx={{
           backgroundColor: `colors.background`,
           minHeight: `500px`,
-          py: 3
+          pt: 4
         }}
       >
+        <Posts />
         <Instagram />
         <Goodreads />
+        <div sx={{ pt: 4 }} />
+        <SwoopBottom fill={theme.colors.secondary} />
       </div>
 
       <Footer />

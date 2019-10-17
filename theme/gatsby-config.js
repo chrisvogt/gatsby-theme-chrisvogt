@@ -9,10 +9,16 @@ module.exports = options => {
       subhead: 'A Gatsby theme with built-in social widgets',
       description:
         'A gatsby blog theme with built-in recently read and GitHub plugins.',
-      baseURL: 'https://www.doe.com', // NOTE(cvogt): no trailing slash
+      baseURL: '', // NOTE(cvogt): no trailing slash
       imageURL: '/images/snape.jpg',
       social: {
         github: {
+          username: 'username'
+        },
+        goodreads: {
+          username: 'username'
+        },
+        instagram: {
           username: 'username'
         },
         twitter: {

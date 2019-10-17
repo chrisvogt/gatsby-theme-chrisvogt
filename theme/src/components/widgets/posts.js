@@ -22,33 +22,8 @@ Lorum ipsum dolor sit amet. Lingus dingus herple derple moop mc-meep, and then s
 ]
 
 export default () => (
-  <Container
-    id='posts'
-    sx={
-      {
-        // variant: `styles.outlined`
-      }
-    }
-  >
-    <div
-      sx={{
-        backgroundColor: `white`,
-        display: `grid`,
-        gridGap: 0,
-        gridTemplateColumns: [``, ``, `1fr 50%`],
-        mb: 4,
-        variant: `styles.outlinedTopBottom`
-      }}
-    >
-      <Styled.h3
-        sx={{
-          mt: 0,
-          padding: 3
-        }}
-      >
-        Blog Posts
-      </Styled.h3>
-    </div>
+  <Container id='posts' sx={{ mb: 4, variant: `styles.Widget` }}>
+    <Styled.h3 sx={{ variant: `styles.WidgetHeadline` }}>Blog Posts</Styled.h3>
     <Styled.div
       sx={{
         display: `grid`,
@@ -61,30 +36,37 @@ export default () => (
         <div
           key={post.slug}
           sx={{
+            borderBottom: `1px solid #ededed`,
+            borderTop: `1px solid #ededed`,
             backgroundColor: `white`,
-            padding: 3,
-            variant: `styles.outlinedTopBottom`
+            borderRadius: `2px`,
+            borderLeft: `3px solid`,
+            borderLeftColor: `primary`,
+            padding: 3
           }}
         >
           <Styled.h4>{post.title}</Styled.h4>
           <span>{post.createdAt}</span>
           <p>{post.excerpt}</p>
           <div style={{ textAlign: `right` }}>
-            <a href='/'>View post &raquo;</a>
+            <Styled.a href='/'>View post &raquo;</Styled.a>
           </div>
         </div>
       ))}
     </Styled.div>
-    <div sx={{ marginTop: 4, textAlign: `right` }}>
-      <Link
+    <p sx={{ textAlign: `right`, marginTop: 4 }}>
+      <Styled.a
+        as={Link}
         to='/blog'
         sx={{
-          textDecoration: `none`,
-          fontSize: 2
+          color: `dark`,
+          fontFamily: `heading`,
+          fontSize: 3,
+          textDecoration: `none`
         }}
       >
-        View all posts
-      </Link>
-    </div>
+        View blog posts &raquo;
+      </Styled.a>
+    </p>
   </Container>
 )

@@ -2,22 +2,18 @@
 import { jsx, Container, Styled } from 'theme-ui'
 
 import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
+import { getInstagramUsername } from '../../../selectors/metadata'
 import useInstagramPosts from '../../../hooks/use-instagram-posts'
+import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 export default () => {
   const { isLoading, posts } = useInstagramPosts()
+  const metadata = useSiteMetadata()
+  const instagramUsername = getInstagramUsername(metadata)
 
   return (
-    <Container id='instagram'>
-      <Styled.h3
-        sx={{
-          backgroundColor: 'white',
-          mb: 4,
-          mt: 0,
-          padding: 3,
-          variant: 'styles.outlinedTopBottom'
-        }}
-      >
+    <Container id='instagram' sx={{ mb: 4, variant: `styles.Widget` }}>
+      <Styled.h3 sx={{ variant: `styles.WidgetHeadline` }}>
         Instagram Posts
       </Styled.h3>
 
@@ -37,7 +33,7 @@ export default () => {
               .map(post => {
                 const {
                   id,
-                  images: { low_resolution: { height, width, url } = {} },
+                  images: { standard_resolution: { height, width, url } = {} },
                   link
                 } = post
 
@@ -66,6 +62,11 @@ export default () => {
                   </a>
                 )
               })}
+        </div>
+        <div sx={{ marginTop: 4, variant: `styles.WidgetFooter` }}>
+          <Styled.a href={`https://www.instagram.com/${instagramUsername}`}>
+            View Instagram profile &raquo;
+          </Styled.a>
         </div>
       </div>
     </Container>

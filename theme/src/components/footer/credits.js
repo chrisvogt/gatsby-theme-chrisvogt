@@ -1,12 +1,4 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
-const creditLink = 'https://github.com/personal-site/blog'
-
-const Link = (
-  <Styled.a href={creditLink} title='@personal-site/blog'>
-    @personal-site/blog
-  </Styled.a>
-)
-
-export default () => <span>Powered by {Link}.</span>
+export default () => <span>&copy; 2019 Chris Vogt</span>

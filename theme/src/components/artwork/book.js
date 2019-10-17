@@ -2,8 +2,6 @@
 import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-import { defaultBoxShadow } from '../../gatsby-plugin-theme-ui/styles'
-
 const Book = ({ thumbnailURL, title }) => (
   <svg
     data-name='Book Preview'
@@ -12,7 +10,7 @@ const Book = ({ thumbnailURL, title }) => (
     viewBox='0 0 100 100'
     sx={{
       '&:hover, &:focus': {
-        transform: `scale(1.08)`,
+        transform: `scale(1.04)`,
         transition: `all .35s ease-in-out`
       }
     }}

@@ -13,7 +13,9 @@ export default () => {
       sx={{
         alignItems: `center`,
         flex: 1,
-        justifyContent: `space-around`
+        justifyContent: `space-around`,
+        pt: 3,
+        pb: 4
       }}
     >
       {!isLoading &&

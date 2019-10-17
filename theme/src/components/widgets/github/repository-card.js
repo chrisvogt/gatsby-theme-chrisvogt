@@ -3,6 +3,7 @@ import { jsx, Styled } from 'theme-ui'
 import PropTypes from 'prop-types'
 import ago from 's-ago'
 
+import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
 import RepositoryCardPlaceholder from './repository-card-placeholder'
 
 const RepositoryCard = ({
@@ -19,7 +20,12 @@ const RepositoryCard = ({
       borderRadius: `2px`,
       marginBottom: [3, `inherit`],
       padding: 3,
-      width: `100%`
+      width: `100%`,
+      '&:hover, &:focus': {
+        boxShadow: defaultBoxShadow,
+        textDecoration: `none`,
+        transition: `all .35s ease-in-out`
+      }
     }}
   >
     {isLoading && <RepositoryCardPlaceholder />}
