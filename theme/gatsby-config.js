@@ -33,11 +33,6 @@ module.exports = options => {
           path: path.join(__dirname, 'src/pages')
         }
       },
-      'gatsby-plugin-react-helmet',
-      'gatsby-plugin-theme-ui',
-      'gatsby-theme-style-guide',
-      'gatsby-plugin-emotion',
-      'gatsby-transformer-json',
       {
         resolve: `gatsby-plugin-prefetch-google-fonts`,
         options: {
@@ -54,7 +49,41 @@ module.exports = options => {
         options: {
           path: path.join(__dirname, 'src/data')
         }
-      }
+      },
+      {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          path: `content`,
+          name: `content`
+        }
+      },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.mdx`, `.md`],
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 704
+              }
+            },
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                icon: false
+              }
+            },
+            `gatsby-remark-embed-video`
+          ]
+        }
+      },
+      'gatsby-plugin-emotion',
+      'gatsby-plugin-react-helmet',
+      'gatsby-theme-style-guide',
+      'gatsby-transformer-json',
+      `gatsby-plugin-sharp`,
+      `gatsby-plugin-theme-ui`
     ]
   }
 }

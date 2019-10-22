@@ -1,8 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "theme",
-    "example"
+    "example",
+    "theme"
   ],
   "devDependencies": {
     "husky": "^3.0.8",
