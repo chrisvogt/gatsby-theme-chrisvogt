@@ -38,32 +38,32 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 
 exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
-  const { createNodeField } = actions
+  const { createFilePath, createNodeField } = actions
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
     const title = node.frontmatter.title || startCase(parent.name)
 
-    let value = node.frontmatter.slug
-    if (!value && parent.relativePath) {
-      value = parent.relativePath.replace(parent.ext, '')
+    let slug = node.frontmatter.slug
+    if (!slug && parent.relativePath) {
+      slug = parent.relativePath.replace(parent.ext, '')
     }
 
-    if (!value) {
+    if (!slug) {
       reporter.panic(
         `Can not create node with title: ${title} there is no relative path or frontmatter to set the "slug" field`
       )
       return
     }
 
-    if (value === 'index') {
-      value = ''
+    if (slug === 'index') {
+      slug = ''
     }
 
     createNodeField({
       name: `slug`,
       node,
-      value: `${value}`
+      value: slug
     })
 
     createNodeField({

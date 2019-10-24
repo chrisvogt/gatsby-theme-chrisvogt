@@ -2,6 +2,7 @@ import { darken } from '@theme-ui/color'
 import { tailwind } from '@theme-ui/presets'
 
 import colors from './colors'
+import trianglify from '../components/artwork/trianglify.svg'
 
 const baseFonts = {
   serif: 'Domine'
@@ -66,7 +67,7 @@ export default {
       maxWidth: [`94%`, ``, ``, ``, `1200px`]
     },
     SubFooter: {
-      backgroundColor: darken(`secondary`, 0.15)
+      backgroundColor: darken(`secondary`, 0.08)
     },
     Footer: {
       width: `100%`,
@@ -76,13 +77,22 @@ export default {
     Header: {
       alignItems: `center`,
       backgroundColor: `secondary`,
-      backgroundImage: `url(/images/trianglify.svg)`,
+      background: `url(${trianglify})`,
       backgroundPosition: `top`,
       backgroundSize: `cover`,
       color: `white`,
       display: `block`,
       transition: `all 0.3s ease-in-out`,
       width: `100%`
+    },
+    PostCard: {
+      borderBottom: `1px solid #ededed`,
+      borderTop: `1px solid #ededed`,
+      backgroundColor: `white`,
+      borderRadius: `2px`,
+      borderLeft: `3px solid`,
+      borderLeftColor: `primary`,
+      padding: 3
     },
     Widget: {
       borderBottom: `1px solid #ededed`,

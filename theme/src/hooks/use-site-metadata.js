@@ -3,13 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 const useSiteMetadata = () => {
   const { site: { siteMetadata } = {} } = useStaticQuery(
     graphql`
-      query SiteMetaData {
+      query GetSiteMetadata {
         site {
           siteMetadata {
-            baseURL
-            description
-            headline
-            imageURL
             social {
               github {
                 username
@@ -17,10 +13,17 @@ const useSiteMetadata = () => {
               goodreads {
                 username
               }
+              instagram {
+                username
+              }
               twitter {
                 username
               }
             }
+            imageURL
+            headline
+            description
+            baseURL
             subhead
             title
             titleTemplate

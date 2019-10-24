@@ -31,19 +31,22 @@
       "right": [
         {
           "path": "https://stats.chrisvogt.me",
+          "slug": "stats",
           "text": "Stats",
-          "title": "Coding stats — last 30 days"
+          "title": "My recent code report — last 30 days"
         }
       ]
     },
     "footer": [
       {
         "path": "https://stats.chrisvogt.me",
+        "slug": "stats",
         "title": "Chris Vogt's open source stats",
         "text": "Stats"
       },
       {
         "path": "https://resume.chrisvogt.me",
+        "slug": "stackoverflow",
         "title": "Chris Vogt on StackOverflow",
         "text": "<i class='fab fa-stack-overflow' aria-hidden='true'></i> Developer Story"
       }

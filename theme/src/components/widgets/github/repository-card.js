@@ -1,5 +1,8 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { darken } from '@theme-ui/color'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import ago from 's-ago'
 
@@ -16,12 +19,14 @@ const RepositoryCard = ({
 }) => (
   <div
     sx={{
-      backgroundColor: `white`,
+      border: `2px solid white`,
       borderRadius: `2px`,
+      color: `white`,
       marginBottom: [3, `inherit`],
       padding: 3,
       width: `100%`,
       '&:hover, &:focus': {
+        backgroundColor: darken(`primary`, 0.1),
         boxShadow: defaultBoxShadow,
         textDecoration: `none`,
         transition: `all .35s ease-in-out`
@@ -50,6 +55,9 @@ const RepositoryCard = ({
               height='42'
               src={avatarURL}
               sx={{
+                backgroundColor: `colors.background`,
+                border: `1px solid white`,
+                borderRadius: 4,
                 mr: 2
               }}
               width='42'
@@ -83,14 +91,15 @@ const RepositoryCard = ({
               justifyContent: `flex-end`
             }}
           >
-            <Styled.a
+            <span
               sx={{ fontSize: `small` }}
               title='View on GitHub'
               href={repositoryURL}
               target='_blank'
             >
-              View on GitHub &raquo;
-            </Styled.a>
+              View on GitHub&nbsp;&nbsp;
+              <FontAwesomeIcon icon={faExternalLinkAlt} inverse />
+            </span>
           </div>
         )}
       </div>

@@ -43,6 +43,7 @@ export default () => {
         {repositories.map((repository, index) => (
           <Styled.a
             href={repository.url}
+            key={repository.name || index}
             sx={{
               display: `flex`,
               '&:hover, &:focus': {
@@ -51,7 +52,6 @@ export default () => {
             }}
           >
             <RepositoryCard
-              key={repository.name || index}
               avatarURL={repository.openGraphImageUrl}
               description={repository.description}
               isLoading={repositories.isLoading}
@@ -64,7 +64,8 @@ export default () => {
       </Styled.div>
       <p sx={{ textAlign: `right`, marginTop: 4 }}>
         <Styled.a
-          href={`https://www.chrisvogt.me/${githubUsername}`}
+          title={`${githubUsername} on GitHub`}
+          href={`https://www.github.com/${githubUsername}`}
           sx={{ color: `white`, fontFamily: `heading`, fontSize: 3 }}
         >
           View GitHub profile &raquo;

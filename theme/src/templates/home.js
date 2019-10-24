@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Flex, Styled } from 'theme-ui'
+import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
 import GitHub from '../components/widgets/github'
@@ -7,6 +8,7 @@ import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
+import Metrics from '../components/metrics'
 import Posts from '../components/widgets/posts'
 import SwoopBottom from '../components/artwork/swoop-bottom'
 
@@ -15,8 +17,9 @@ import { getHeadline, getSubhead } from '../selectors/metadata'
 
 import theme from '../gatsby-plugin-theme-ui'
 
-export default () => {
+const HomeTemplate = ({ data: { site, allMdx } }) => {
   const siteMetadata = useSiteMetadata()
+
   const headline = getHeadline(siteMetadata)
   const subhead = getSubhead(siteMetadata)
 
@@ -64,6 +67,8 @@ export default () => {
         </div>
       </Header>
 
+      <Metrics />
+
       <GitHub />
 
       <div
@@ -77,10 +82,46 @@ export default () => {
         <Instagram />
         <Goodreads />
         <div sx={{ pt: 4 }} />
-        <SwoopBottom fill={theme.colors.secondary} />
+        <SwoopTop fill={theme.colors.secondary} />
       </div>
 
       <Footer />
     </Layout>
   )
 }
+
+export default HomeTemplate
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        baseURL
+        description
+        headline
+        subhead
+        title
+        titleTemplate
+      }
+    }
+    allMdx(limit: 2) {
+      edges {
+        node {
+          fields {
+            slug
+            id
+          }
+          frontmatter {
+            title
+            description
+            banner
+            categories
+            date
+            slug
+          }
+          excerpt(pruneLength: 255)
+        }
+      }
+    }
+  }
+`

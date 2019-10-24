@@ -1,20 +1,21 @@
 /** @jsx jsx */
 import { Container, jsx } from 'theme-ui'
-
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
-import Header from '../components/header'
-import Layout from '../components/layout'
 import theme from '../gatsby-plugin-theme-ui'
+import Header from '../components/header'
+import Footer from '../components/footer'
+import Layout from '../components/layout'
+import SwoopBottom from '../components/artwork/swoop-bottom'
 
 const PostTemplate = ({ data }) => {
   const { mdx } = data
 
   return (
     <Layout>
-      <Header swoopFill={'white'}>
+      <Header swoopFill={'white'} styles={{ py: 2 }}>
         <Container>
           <h1>{mdx.frontmatter.title}</h1>
         </Container>
@@ -29,7 +30,9 @@ const PostTemplate = ({ data }) => {
         <Container>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
+        <SwoopBottom fill={theme.colors.secondary} />
       </div>
+      <Footer />
     </Layout>
   )
 }

@@ -1,1 +1,1 @@
-export const defaultBoxShadow = '0px 0px 16px 1px rgba(0,0,0,0.63)'
+export const defaultBoxShadow = '1px 1px 14px rgba(0,0,0,0.57)'
