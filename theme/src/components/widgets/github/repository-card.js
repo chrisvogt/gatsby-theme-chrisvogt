@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { darken } from '@theme-ui/color'
+import { darken, lighten } from '@theme-ui/color'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
@@ -19,6 +19,7 @@ const RepositoryCard = ({
 }) => (
   <div
     sx={{
+      backgroundColor: darken(`primary`, 0.04),
       border: `2px solid white`,
       borderRadius: `2px`,
       color: `white`,
@@ -26,7 +27,7 @@ const RepositoryCard = ({
       padding: 3,
       width: `100%`,
       '&:hover, &:focus': {
-        backgroundColor: darken(`primary`, 0.1),
+        backgroundColor: lighten(`primary`, 0.04),
         boxShadow: defaultBoxShadow,
         textDecoration: `none`,
         transition: `all .35s ease-in-out`
@@ -56,8 +57,8 @@ const RepositoryCard = ({
               src={avatarURL}
               sx={{
                 backgroundColor: `colors.background`,
-                border: `1px solid white`,
-                borderRadius: 4,
+                border: `2px solid white`,
+                borderRadius: `50%`,
                 mr: 2
               }}
               width='42'

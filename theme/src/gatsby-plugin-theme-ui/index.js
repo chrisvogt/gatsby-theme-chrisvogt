@@ -1,28 +1,35 @@
-import { darken } from '@theme-ui/color'
 import { tailwind } from '@theme-ui/presets'
 
 import colors from './colors'
-import trianglify from '../components/artwork/trianglify.svg'
+
+const trianglify = require('../components/artwork/trianglify.svg')
 
 const baseFonts = {
   serif: 'Domine'
+}
+
+const floatOnHover = {
+  '&:hover, &:focus': {
+    transform: `scale(1.01)`,
+    transition: `all .35s ease-in-out`,
+    boxShadow: `xl`
+  }
 }
 
 const setThinFontWeight = {
   fontWeight: 300
 }
 
-const themePreset = tailwind
+export const themePreset = tailwind
 
 export default {
   ...tailwind,
   colors: {
-    ...tailwind,
+    ...tailwind.colors,
     ...colors
   },
   fonts: {
     ...themePreset.fonts,
-    ...setThinFontWeight,
     heading: baseFonts.serif
   },
   styles: {
@@ -56,10 +63,17 @@ export default {
       backgroundColor: `primary`
     },
     footer: {
-      backgroundColor: `secondary`,
+      backgroundColor: themePreset.colors.light,
       color: `white`,
       a: {
         color: `lightover`
+      }
+    },
+    Book: {
+      '&:hover, &:focus': {
+        filter: `drop-shadow(${themePreset.shadows.xl})`,
+        transform: `scale(1.01)`,
+        transition: `all .35s ease-in-out`
       }
     },
     Container: {
@@ -67,7 +81,7 @@ export default {
       maxWidth: [`94%`, ``, ``, ``, `1200px`]
     },
     SubFooter: {
-      backgroundColor: darken(`secondary`, 0.08)
+      background: `url(${trianglify})`
     },
     Footer: {
       width: `100%`,
@@ -86,20 +100,27 @@ export default {
       width: `100%`
     },
     PostCard: {
+      ...floatOnHover,
       borderBottom: `1px solid #ededed`,
       borderTop: `1px solid #ededed`,
       backgroundColor: `white`,
       borderRadius: `2px`,
       borderLeft: `3px solid`,
       borderLeftColor: `primary`,
+      boxShadow: themePreset.shadows.md,
       padding: 3
     },
+    InstagramCard: {
+      ...floatOnHover,
+      boxShadow: themePreset.shadows.md
+    },
     Widget: {
-      borderBottom: `1px solid #ededed`,
-      borderTop: `1px solid #ededed`,
       backgroundColor: `#f8f8f8`,
+      borderBottom: `1px solid #ededed`,
+      borderLeft: `3px solid ${colors.secondary}`,
       borderRadius: `2px`,
-      borderLeft: `3px solid ${colors.accent}`
+      borderTop: `1px solid #ededed`,
+      boxShadow: themePreset.shadows.default
     },
     WidgetHeadline: {
       mb: 3,

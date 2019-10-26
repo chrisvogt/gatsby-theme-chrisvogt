@@ -1,20 +1,51 @@
 /** @jsx jsx */
-import { Container, jsx } from 'theme-ui'
-import { Fragment } from 'react'
+import { Container, jsx, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-export default ({ allMdx }) => {
+import { getPosts } from '../hooks/use-recent-posts'
+
+import Footer from '../components/footer'
+import Header from '../components/header'
+import Layout from '../components/layout'
+import Post from '../components/widgets/blog/post'
+
+export default ({ data }) => {
+  const posts = getPosts(data)
+  console.log(posts)
   return (
-    <Fragment>
+    <Layout>
       <Helmet>
-        <title>Blog Posts</title>
+        <title>Blog</title>
         <meta name='description' content='Recent articles from my blog.' />
       </Helmet>
+      <Header swoopFill={'white'} styles={{ py: 2 }}>
+        <Container>
+          <h1>Blog Posts</h1>
+        </Container>
+      </Header>
       <Container>
-        <p>Test</p>
+        <Styled.div
+          sx={{
+            display: `grid`,
+            gridAutoRows: `1fr`,
+            gridGap: 4,
+            gridTemplateColumns: [``, ``, `repeat(1, 1fr)`]
+          }}
+        >
+          {posts.map(post => (
+            <Post
+              created={post.frontmatter.createdAt}
+              key={post.frontmatter.slug}
+              excerpt={post.excerpt}
+              title={post.frontmatter.title}
+              to={post.frontmatter.slug}
+            />
+          ))}
+        </Styled.div>
       </Container>
-    </Fragment>
+      <Footer />
+    </Layout>
   )
 }
 

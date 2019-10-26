@@ -3,13 +3,11 @@ import { jsx, Flex, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
-import GitHub from '../components/widgets/github'
 import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
-import Metrics from '../components/metrics'
-import Posts from '../components/widgets/posts'
+import Posts from '../components/widgets/blog/posts'
 import SwoopBottom from '../components/artwork/swoop-bottom'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
@@ -67,10 +65,6 @@ const HomeTemplate = ({ data: { site, allMdx } }) => {
         </div>
       </Header>
 
-      <Metrics />
-
-      <GitHub />
-
       <div
         sx={{
           backgroundColor: `colors.background`,
@@ -82,7 +76,7 @@ const HomeTemplate = ({ data: { site, allMdx } }) => {
         <Instagram />
         <Goodreads />
         <div sx={{ pt: 4 }} />
-        <SwoopTop fill={theme.colors.secondary} />
+        <SwoopBottom fill={theme.colors.light} />
       </div>
 
       <Footer />

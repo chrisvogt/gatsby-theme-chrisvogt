@@ -4,6 +4,8 @@ import { Container, jsx, Styled } from 'theme-ui'
 import LatestCommit from './latest-commit'
 import PinnedRepositories from './pinned-repositories'
 import SwoopBottom from '../../artwork/swoop-bottom'
+import SwoopTop from './../../artwork/swoop-top'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 export default () => (
   <Styled.div
@@ -12,6 +14,8 @@ export default () => (
       variant: `styles.GitHub`
     }}
   >
+    <SwoopTop fill={theme.colors.background} />
+
     <Container>
       <div
         sx={{
@@ -25,6 +29,6 @@ export default () => (
       </div>
     </Container>
 
-    <SwoopBottom />
+    <SwoopBottom fill={theme.colors.background} />
   </Styled.div>
 )

@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
 
-import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
 import { getInstagramUsername } from '../../../selectors/metadata'
+import theme from '../../../gatsby-plugin-theme-ui'
 import useInstagramPosts from '../../../hooks/use-instagram-posts'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
+
+console.log(theme)
 
 export default () => {
   const { isLoading, posts } = useInstagramPosts()
@@ -45,7 +47,7 @@ export default () => {
                     target='_blank'
                     rel='noopener noreferrer'
                     sx={{
-                      '&:hover, &:focus': { boxShadow: defaultBoxShadow }
+                      variant: `styles.InstagramCard`
                     }}
                   >
                     <img

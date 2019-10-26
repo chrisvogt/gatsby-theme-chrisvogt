@@ -15,7 +15,7 @@ const Header = ({ children, swoopFill, styles }) => (
     >
       {children}
     </div>
-    <SwoopBottom fill={swoopFill} />
+    <SwoopBottom fill={theme.colors.background} invert />
   </ThemeHeader>
 )
 

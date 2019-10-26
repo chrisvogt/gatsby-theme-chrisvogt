@@ -4,7 +4,7 @@
     "header": {
       "left": [
         {
-          "path": "/#blog",
+          "path": "/blog",
           "slug": "blog",
           "text": "Blog",
           "title": "Blog Posts"
@@ -42,7 +42,7 @@
         "path": "https://stats.chrisvogt.me",
         "slug": "stats",
         "title": "Chris Vogt's open source stats",
-        "text": "Stats"
+        "text": "View Stats Report"
       },
       {
         "path": "https://resume.chrisvogt.me",

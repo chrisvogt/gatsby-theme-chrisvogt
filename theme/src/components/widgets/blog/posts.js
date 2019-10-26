@@ -2,10 +2,25 @@
 import { jsx, Container, Styled } from 'theme-ui'
 import { Link } from 'gatsby'
 
-import useRecentPosts from '../../hooks/use-recent-posts'
+import Post from './post'
+import useRecentPosts from '../../../hooks/use-recent-posts'
 
 export default () => {
   const posts = useRecentPosts()
+  const getColumnCount = postsCount => {
+    let columnCount
+    switch (postsCount) {
+      case 1:
+        columnCount = 1
+        break
+      case 2:
+        columnCount = 2
+        break
+      default:
+        columnCount = 3
+    }
+    return columnCount
+  }
   return (
     <Container id='posts' sx={{ mb: 4, variant: `styles.Widget` }}>
       <Styled.h3 sx={{ variant: `styles.WidgetHeadline` }}>
@@ -16,25 +31,21 @@ export default () => {
           display: `grid`,
           gridAutoRows: `1fr`,
           gridGap: 4,
-          gridTemplateColumns: [``, ``, `repeat(2, 1fr)`]
+          gridTemplateColumns: [
+            ``,
+            ``,
+            `repeat(${getColumnCount(posts.length)}, 1fr)`
+          ]
         }}
       >
-        {posts.map((post, index) => (
-          <div
+        {posts.map(post => (
+          <Post
+            created={post.frontmatter.createdAt}
+            excerpt={post.excerpt}
             key={post.frontmatter.slug}
-            sx={{
-              variant: `styles.PostCard`
-            }}
-          >
-            <Styled.h4>{post.frontmatter.title}</Styled.h4>
-            <span>{post.frontmatter.createdAt}</span>
-            <p>{post.excerpt}</p>
-            <div style={{ textAlign: `right` }}>
-              <Styled.a as={Link} to={`${post.frontmatter.slug}`}>
-                View post &raquo;
-              </Styled.a>
-            </div>
-          </div>
+            link={post.frontmatter.slug}
+            title={post.frontmatter.title}
+          />
         ))}
       </Styled.div>
       <p sx={{ textAlign: `right`, marginTop: 4 }}>
@@ -42,7 +53,6 @@ export default () => {
           as={Link}
           to='/blog'
           sx={{
-            color: `dark`,
             fontFamily: `heading`,
             fontSize: 3,
             textDecoration: `none`

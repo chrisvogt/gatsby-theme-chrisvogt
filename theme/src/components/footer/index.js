@@ -3,7 +3,7 @@ import { Container, Footer as ThemeFooter, jsx, Styled } from 'theme-ui'
 
 import Credits from './credits'
 import Navigation from './navigation'
-import Profiles from '../profiles'
+import Profiles from './profiles'
 
 export default () => (
   <ThemeFooter>

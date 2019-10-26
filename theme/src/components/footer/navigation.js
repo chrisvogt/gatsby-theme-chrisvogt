@@ -9,7 +9,12 @@ export default () => {
   return (
     menuItems &&
     menuItems.map(({ slug, path, title, text }) => (
-      <Styled.a key={slug} href={path} title={title} sx={{ mr: 3 }}>
+      <Styled.a
+        key={slug}
+        href={path}
+        title={title}
+        sx={{ variant: `buttons.simple`, mr: 3 }}
+      >
         {text}
       </Styled.a>
     ))

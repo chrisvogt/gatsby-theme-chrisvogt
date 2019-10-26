@@ -1,5 +1,11 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
+export const getPosts = queryResult => {
+  const { allMdx: { edges = [] } = {} } = queryResult
+  const recentPosts = edges.map(({ node }) => node)
+  return recentPosts
+}
+
 const useRecentPosts = () => {
   const queryResult = useStaticQuery(
     graphql`
@@ -27,8 +33,7 @@ const useRecentPosts = () => {
     `
   )
 
-  const { allMdx: { edges = [] } = {} } = queryResult
-  const recentPosts = edges.map(({ node }) => node)
+  const recentPosts = getPosts(queryResult)
   return recentPosts
 }
 

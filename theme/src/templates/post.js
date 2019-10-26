@@ -22,15 +22,15 @@ const PostTemplate = ({ data }) => {
       </Header>
       <div
         sx={{
-          backgroundColor: `colors.background`,
           minHeight: `500px`,
+          pc: 2,
           pt: 4
         }}
       >
         <Container>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
-        <SwoopBottom fill={theme.colors.secondary} />
+        <SwoopBottom fill={theme.colors.light} />
       </div>
       <Footer />
     </Layout>

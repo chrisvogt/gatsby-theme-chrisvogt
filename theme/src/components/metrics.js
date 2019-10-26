@@ -2,20 +2,19 @@
 import { Container, jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-import SwoopBottom from './artwork/swoop-bottom'
-import theme from '../gatsby-plugin-theme-ui'
-
-const Metrics = ({ children, swoopFill, styles }) => (
+const Metrics = ({ children, styles }) => (
   <div sx={{ backgroundColor: `colors.background` }}>
     <div
       sx={{
-        py: 5,
+        py: 1,
         ...(styles ? styles : {})
       }}
     >
-      {children}
+      <Container>
+        <div>PAGES</div>
+        <div>HOURS</div>
+      </Container>
     </div>
-    <SwoopBottom fill={theme.colors.primary} />
   </div>
 )
 
