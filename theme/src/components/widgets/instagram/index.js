@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
+import { Heading } from '@theme-ui/components'
 
-import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
 import { getInstagramUsername } from '../../../selectors/metadata'
 import useInstagramPosts from '../../../hooks/use-instagram-posts'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
@@ -13,9 +13,9 @@ export default () => {
 
   return (
     <Container id='instagram' sx={{ mb: 4, variant: `styles.Widget` }}>
-      <Styled.h3 sx={{ variant: `styles.WidgetHeadline` }}>
+      <Heading sx={{ variant: `styles.WidgetHeadline` }}>
         Instagram Posts
-      </Styled.h3>
+      </Heading>
 
       <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}
@@ -45,7 +45,7 @@ export default () => {
                     target='_blank'
                     rel='noopener noreferrer'
                     sx={{
-                      '&:hover, &:focus': { boxShadow: defaultBoxShadow }
+                      variant: `styles.InstagramCard`
                     }}
                   >
                     <img

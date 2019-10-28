@@ -4,8 +4,7 @@ import { jsx, Styled } from 'theme-ui'
 import useNavigationData from '../../hooks/use-navigation-data'
 
 export default () => {
-  const { header: { right: menuItems } = {} } = useNavigationData()
-
+  const { footer: menuItems = [] } = useNavigationData()
   return (
     menuItems &&
     menuItems.map(({ slug, path, title, text }) => (

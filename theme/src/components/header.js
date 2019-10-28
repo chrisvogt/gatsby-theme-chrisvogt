@@ -5,16 +5,17 @@ import PropTypes from 'prop-types'
 import SwoopBottom from './artwork/swoop-bottom'
 import theme from '../gatsby-plugin-theme-ui'
 
-const Header = ({ children, swoopFill }) => (
+const Header = ({ children, swoopFill, styles }) => (
   <ThemeHeader>
     <div
       sx={{
-        py: 5
+        py: 5,
+        ...(styles ? styles : {})
       }}
     >
       {children}
     </div>
-    <SwoopBottom fill={swoopFill} />
+    <SwoopBottom fill={theme.colors.background} invert />
   </ThemeHeader>
 )
 

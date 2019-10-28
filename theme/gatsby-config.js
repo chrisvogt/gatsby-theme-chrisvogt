@@ -13,16 +13,16 @@ module.exports = options => {
       imageURL: '/images/snape.jpg',
       social: {
         github: {
-          username: 'username'
+          username: 'chrisvogt'
         },
         goodreads: {
-          username: 'username'
+          username: 'chrisvogt'
         },
         instagram: {
-          username: 'username'
+          username: 'c1v0'
         },
         twitter: {
-          username: '@username'
+          username: '@c1v0'
         }
       }
     },

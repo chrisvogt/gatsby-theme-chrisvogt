@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Flex, Styled } from 'theme-ui'
+import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
 import GitHub from '../components/widgets/github'
@@ -7,16 +8,15 @@ import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
-import Posts from '../components/widgets/posts'
+import Posts from '../components/widgets/blog/posts'
 import SwoopBottom from '../components/artwork/swoop-bottom'
 
-import useSiteMetadata from '../hooks/use-site-metadata'
 import { getHeadline, getSubhead } from '../selectors/metadata'
 
 import theme from '../gatsby-plugin-theme-ui'
 
-export default () => {
-  const siteMetadata = useSiteMetadata()
+const HomeTemplate = props => {
+  const { data: { site: { siteMetadata = {} } = {} } = {} } = props
   const headline = getHeadline(siteMetadata)
   const subhead = getSubhead(siteMetadata)
 
@@ -64,8 +64,6 @@ export default () => {
         </div>
       </Header>
 
-      <GitHub />
-
       <div
         sx={{
           backgroundColor: `colors.background`,
@@ -74,13 +72,50 @@ export default () => {
         }}
       >
         <Posts />
+        <GitHub />
         <Instagram />
         <Goodreads />
-        <div sx={{ pt: 4 }} />
-        <SwoopBottom fill={theme.colors.secondary} />
+        {/* <div sx={{ pt: 4 }} /> */}
+        <SwoopBottom fill={theme.colors.light} />
       </div>
 
       <Footer />
     </Layout>
   )
 }
+
+export default HomeTemplate
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        baseURL
+        description
+        headline
+        subhead
+        title
+        titleTemplate
+      }
+    }
+    allMdx(limit: 2) {
+      edges {
+        node {
+          fields {
+            slug
+            id
+          }
+          frontmatter {
+            title
+            description
+            banner
+            categories
+            date
+            slug
+          }
+          excerpt(pruneLength: 255)
+        }
+      }
+    }
+  }
+`

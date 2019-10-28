@@ -1,16 +1,17 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Box, Heading } from '@theme-ui/components'
 
 export default () => (
-  <div>
-    <Styled.h3
+  <Box>
+    <Heading
+      as='h3'
       sx={{
-        color: 'white',
         marginBottom: '1rem'
       }}
     >
       Last Commit
-    </Styled.h3>
+    </Heading>
     <span>Placeholder text.</span>
-  </div>
+  </Box>
 )

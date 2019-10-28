@@ -4,48 +4,53 @@
     "header": {
       "left": [
         {
-          "path": "/#blog",
+          "path": "/blog",
           "slug": "blog",
           "text": "Blog",
           "title": "Blog Posts"
-        },
-        {
-          "path": "/#github",
-          "slug": "github",
-          "text": "GitHub",
-          "title": "GitHub"
-        },
-        {
-          "path": "/#instagram",
-          "slug": "instagram",
-          "text": "Instagram",
-          "title": "Instagram"
-        },
-        {
-          "path": "/#goodreads",
-          "slug": "goodreads",
-          "text": "Goodreads",
-          "title": "Goodreads"
         }
       ],
       "right": [
         {
           "path": "https://stats.chrisvogt.me",
+          "slug": "stats",
           "text": "Stats",
-          "title": "Coding stats — last 30 days"
+          "title": "My recent code report — last 30 days"
+        }
+      ],
+      "home": [
+        {
+          "path": "#github",
+          "slug": "github",
+          "text": "GitHub",
+          "title": "GitHub"
+        },
+        {
+          "path": "#instagram",
+          "slug": "instagram",
+          "text": "Instagram",
+          "title": "Instagram"
+        },
+        {
+          "path": "#goodreads",
+          "slug": "goodreads",
+          "text": "Goodreads",
+          "title": "Goodreads"
         }
       ]
     },
     "footer": [
       {
         "path": "https://stats.chrisvogt.me",
+        "slug": "stats",
         "title": "Chris Vogt's open source stats",
-        "text": "Stats"
+        "text": "Stats Report"
       },
       {
         "path": "https://resume.chrisvogt.me",
+        "slug": "stackoverflow",
         "title": "Chris Vogt on StackOverflow",
-        "text": "<i class='fab fa-stack-overflow' aria-hidden='true'></i> Developer Story"
+        "text": "Developer Story"
       }
     ]
   }
