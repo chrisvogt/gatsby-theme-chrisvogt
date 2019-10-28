@@ -2,7 +2,7 @@
 import { jsx, Styled } from 'theme-ui'
 import { Link } from 'gatsby'
 
-export default ({ created = '', excerpt, link, title }) => (
+export default ({ createdAt, excerpt, link, title }) => (
   <Link
     sx={{
       color: `text`,
@@ -12,7 +12,7 @@ export default ({ created = '', excerpt, link, title }) => (
     to={link}
   >
     <Styled.h4>{title}</Styled.h4>
-    {created && <span>{created}</span>}
+    {createdAt && <span>{createdAt}</span>}
     <p>{excerpt}</p>
     <div style={{ textAlign: `right` }}>
       <span>View post &raquo;</span>

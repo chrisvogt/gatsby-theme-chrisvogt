@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { darken, lighten } from '@theme-ui/color'
+import { Card } from '@theme-ui/components'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import ago from 's-ago'
 
-import { defaultBoxShadow } from '../../../gatsby-plugin-theme-ui/styles'
 import RepositoryCardPlaceholder from './repository-card-placeholder'
 
 const RepositoryCard = ({
@@ -17,23 +16,7 @@ const RepositoryCard = ({
   name,
   repositoryURL
 }) => (
-  <div
-    sx={{
-      backgroundColor: darken(`primary`, 0.04),
-      border: `2px solid white`,
-      borderRadius: `2px`,
-      color: `white`,
-      marginBottom: [3, `inherit`],
-      padding: 3,
-      width: `100%`,
-      '&:hover, &:focus': {
-        backgroundColor: lighten(`primary`, 0.04),
-        boxShadow: defaultBoxShadow,
-        textDecoration: `none`,
-        transition: `all .35s ease-in-out`
-      }
-    }}
-  >
+  <Card sx={{ variant: `styles.RepositoryCard` }}>
     {isLoading && <RepositoryCardPlaceholder />}
     {!isLoading && (
       <div
@@ -99,13 +82,13 @@ const RepositoryCard = ({
               target='_blank'
             >
               View on GitHub&nbsp;&nbsp;
-              <FontAwesomeIcon icon={faExternalLinkAlt} inverse />
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </span>
           </div>
         )}
       </div>
     )}
-  </div>
+  </Card>
 )
 
 RepositoryCard.propTypes = {

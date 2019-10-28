@@ -8,11 +8,13 @@ import { getPosts } from '../hooks/use-recent-posts'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Layout from '../components/layout'
-import Post from '../components/widgets/blog/post'
+import PostCard from '../components/widgets/blog/post-card'
+import SwoopBottom from '../components/artwork/swoop-bottom'
+
+import theme from '../gatsby-plugin-theme-ui'
 
 export default ({ data }) => {
   const posts = getPosts(data)
-  console.log(posts)
   return (
     <Layout>
       <Helmet>
@@ -24,7 +26,7 @@ export default ({ data }) => {
           <h1>Blog Posts</h1>
         </Container>
       </Header>
-      <Container>
+      <Container sx={{ flexGrow: 1 }}>
         <Styled.div
           sx={{
             display: `grid`,
@@ -34,16 +36,17 @@ export default ({ data }) => {
           }}
         >
           {posts.map(post => (
-            <Post
+            <PostCard
               created={post.frontmatter.createdAt}
-              key={post.frontmatter.slug}
               excerpt={post.excerpt}
+              key={post.frontmatter.slug}
               title={post.frontmatter.title}
               to={post.frontmatter.slug}
             />
           ))}
         </Styled.div>
       </Container>
+      <SwoopBottom fill={theme.colors.light} />
       <Footer />
     </Layout>
   )

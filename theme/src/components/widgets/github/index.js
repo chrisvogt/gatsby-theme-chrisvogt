@@ -1,34 +1,22 @@
 /** @jsx jsx */
-import { Container, jsx, Styled } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
+import { Grid, Heading } from '@theme-ui/components'
 
 import LatestCommit from './latest-commit'
 import PinnedRepositories from './pinned-repositories'
-import SwoopBottom from '../../artwork/swoop-bottom'
-import SwoopTop from './../../artwork/swoop-top'
-import theme from '../../../gatsby-plugin-theme-ui'
 
 export default () => (
-  <Styled.div
+  <Container
     id='github'
     sx={{
-      variant: `styles.GitHub`
+      mb: 4,
+      variant: `styles.Widget`
     }}
   >
-    <SwoopTop fill={theme.colors.background} />
-
-    <Container>
-      <div
-        sx={{
-          display: `grid`,
-          gridGap: 4,
-          gridTemplateColumns: [`auto`, `1fr 70%`]
-        }}
-      >
-        <LatestCommit />
-        <PinnedRepositories />
-      </div>
-    </Container>
-
-    <SwoopBottom fill={theme.colors.background} />
-  </Styled.div>
+    <Heading sx={{ mb: 3 }}>GitHub</Heading>
+    <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
+      <LatestCommit />
+      <PinnedRepositories />
+    </Grid>
+  </Container>
 )

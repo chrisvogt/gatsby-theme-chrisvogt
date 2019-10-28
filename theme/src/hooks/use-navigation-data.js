@@ -15,11 +15,18 @@ const useNavigationData = () => {
             node {
               payload {
                 footer {
+                  path
+                  slug
                   text
                   title
-                  path
                 }
                 header {
+                  home {
+                    path
+                    slug
+                    text
+                    title
+                  }
                   left {
                     path
                     slug

@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
+import { Heading } from '@theme-ui/components'
 import { Link } from 'gatsby'
 
-import Post from './post'
+import PostCard from './post-card'
 import useRecentPosts from '../../../hooks/use-recent-posts'
 
 export default () => {
@@ -23,31 +24,36 @@ export default () => {
   }
   return (
     <Container id='posts' sx={{ mb: 4, variant: `styles.Widget` }}>
-      <Styled.h3 sx={{ variant: `styles.WidgetHeadline` }}>
-        Blog Posts
-      </Styled.h3>
-      <Styled.div
+      <Heading sx={{ variant: `styles.WidgetHeadline` }}>Blog Posts</Heading>
+      <div
         sx={{
-          display: `grid`,
-          gridAutoRows: `1fr`,
-          gridGap: 4,
-          gridTemplateColumns: [
-            ``,
-            ``,
-            `repeat(${getColumnCount(posts.length)}, 1fr)`
-          ]
+          background: `blue`,
+          width: `100%`
         }}
       >
-        {posts.map(post => (
-          <Post
-            created={post.frontmatter.createdAt}
-            excerpt={post.excerpt}
-            key={post.frontmatter.slug}
-            link={post.frontmatter.slug}
-            title={post.frontmatter.title}
-          />
-        ))}
-      </Styled.div>
+        <Styled.div
+          sx={{
+            display: `grid`,
+            gridAutoRows: `1fr`,
+            gridGap: 4,
+            gridTemplateColumns: [
+              ``,
+              ``,
+              `repeat(${getColumnCount(posts.length)}, 1fr)`
+            ]
+          }}
+        >
+          {posts.map(post => (
+            <PostCard
+              createdAt={post.frontmatter.createdAt}
+              excerpt={post.excerpt}
+              key={post.frontmatter.slug}
+              link={post.frontmatter.slug}
+              title={post.frontmatter.title}
+            />
+          ))}
+        </Styled.div>
+      </div>
       <p sx={{ textAlign: `right`, marginTop: 4 }}>
         <Styled.a
           as={Link}

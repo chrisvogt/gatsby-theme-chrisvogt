@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
+import { Heading } from '@theme-ui/components'
 import kebabCase from 'lodash/kebabCase'
 
 import { getGoodreadsUsername } from '../../../selectors/metadata'
@@ -21,9 +22,9 @@ export default () => {
         variant: `styles.Widget`
       }}
     >
-      <Styled.h3 sx={{ variant: `styles.WidgetHeadline` }}>
+      <Heading sx={{ variant: `styles.WidgetHeadline` }}>
         Recently Read Books
-      </Styled.h3>
+      </Heading>
 
       <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}

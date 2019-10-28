@@ -3,6 +3,7 @@ import { jsx, Flex, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
+import GitHub from '../components/widgets/github'
 import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
@@ -10,14 +11,12 @@ import Layout from '../components/layout'
 import Posts from '../components/widgets/blog/posts'
 import SwoopBottom from '../components/artwork/swoop-bottom'
 
-import useSiteMetadata from '../hooks/use-site-metadata'
 import { getHeadline, getSubhead } from '../selectors/metadata'
 
 import theme from '../gatsby-plugin-theme-ui'
 
-const HomeTemplate = ({ data: { site, allMdx } }) => {
-  const siteMetadata = useSiteMetadata()
-
+const HomeTemplate = props => {
+  const { data: { site: { siteMetadata = {} } = {} } = {} } = props
   const headline = getHeadline(siteMetadata)
   const subhead = getSubhead(siteMetadata)
 
@@ -73,9 +72,10 @@ const HomeTemplate = ({ data: { site, allMdx } }) => {
         }}
       >
         <Posts />
+        <GitHub />
         <Instagram />
         <Goodreads />
-        <div sx={{ pt: 4 }} />
+        {/* <div sx={{ pt: 4 }} /> */}
         <SwoopBottom fill={theme.colors.light} />
       </div>
 

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useState, useEffect } from 'react'
 import { jsx, Styled } from 'theme-ui'
+import { Box, Heading } from '@theme-ui/components'
 
 import { getGithubUsername } from '../../../selectors/metadata'
 import getRepositories from '../../../api/github/get-repositories'
@@ -23,15 +24,15 @@ export default () => {
   }, [])
 
   return (
-    <div sx={{ marginBottom: 3 }}>
-      <Styled.h3
+    <Box sx={{ marginBottom: 3 }}>
+      <Heading
+        as='h3'
         sx={{
-          color: 'white',
           marginBottom: '1rem'
         }}
       >
         Pinned Repositories
-      </Styled.h3>
+      </Heading>
       <Styled.div
         sx={{
           display: 'grid',
@@ -66,11 +67,11 @@ export default () => {
         <Styled.a
           title={`${githubUsername} on GitHub`}
           href={`https://www.github.com/${githubUsername}`}
-          sx={{ color: `white`, fontFamily: `heading`, fontSize: 3 }}
+          sx={{ fontFamily: `heading`, fontSize: 3 }}
         >
           View GitHub profile &raquo;
         </Styled.a>
       </p>
-    </div>
+    </Box>
   )
 }
