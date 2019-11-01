@@ -6,10 +6,17 @@ import PropTypes from 'prop-types'
 import CardFooter from './card-footer'
 import ViewOnGitHub from './view-on-github'
 
-const LastPullRequest = ({ isLoading, number, repositoryName, title, url }) => {
+const LastPullRequest = ({ isLoading, pullRequest }) => {
   if (isLoading) {
     return 'Loading...'
   }
+
+  const {
+    number,
+    repository: { name: repositoryName } = {},
+    title,
+    url
+  } = pullRequest
 
   return (
     <Box>
@@ -50,14 +57,19 @@ const LastPullRequest = ({ isLoading, number, repositoryName, title, url }) => {
 LastPullRequest.propTypes = {
   /** Sets the component in a loading state when true. */
   isLoading: PropTypes.bool,
-  /** The # of the pull request on GitHub. */
-  number: PropTypes.number,
-  /** The name of the subject repository. */
-  repositoryName: PropTypes.string,
-  /** The pull request content to render. */
-  title: PropTypes.string,
-  /** The URL to hyperlink to. */
-  url: PropTypes.string
+  /** The pull request on GitHub. */
+  pullRequest: PropTypes.shape({
+    /** The # of the pull request on GitHub. */
+    number: PropTypes.number,
+    repository: PropTypes.shape({
+      /** The name of the subject repository. */
+      name: PropTypes.string
+    }),
+    /** The pull request content to render. */
+    title: PropTypes.string,
+    /** The URL to hyperlink to. */
+    url: PropTypes.string
+  })
 }
 
 export default LastPullRequest

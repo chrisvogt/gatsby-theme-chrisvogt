@@ -13,6 +13,7 @@ const CardFooter = ({ children }) => (
 )
 
 CardFooter.propTypes = {
+  /** The content for the card footer. */
   children: PropTypes.node.isRequired
 }
 

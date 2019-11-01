@@ -5,7 +5,7 @@ import { Card, Heading } from '@theme-ui/components'
 import MetricCard from './metric-card'
 import StatusCard from './status-card'
 
-export default ({ isLoading, user }) => {
+const UserProfile = ({ isLoading, user }) => {
   if (isLoading) {
     return 'Loading...'
   }
@@ -69,3 +69,7 @@ export default ({ isLoading, user }) => {
     </Card>
   )
 }
+
+UserProfile.propTypes = {}
+
+export default UserProfile

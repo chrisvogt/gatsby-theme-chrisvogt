@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import PinnedItemCard from './pinned-item-card'
 
-const PinnedItems = ({ isLoading, pinnedItems = [] }) => {
+const PinnedItems = ({ isLoading, pinnedItems }) => {
   const placeholderItems = Array(4).fill({ __typename: 'placeholder' })
   const items = isLoading ? placeholderItems : pinnedItems
 

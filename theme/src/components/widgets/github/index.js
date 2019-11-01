@@ -15,18 +15,6 @@ import useSiteMetadata from '../../../hooks/use-site-metadata'
 import useWidgetContent from '../../../hooks/use-widget-content'
 import WidgetHeader from '../widget-header'
 
-const transformPullRequestToProps = ({
-  number,
-  repository: { name } = {},
-  title,
-  url
-}) => ({
-  number,
-  repositoryName: name,
-  title,
-  url
-})
-
 const GitHubWidget = () => {
   const metadata = useSiteMetadata()
   const githubUsername = getGithubUsername(metadata)
@@ -59,10 +47,7 @@ const GitHubWidget = () => {
         </Box>
         <Box>
           <PinnedItems isLoading={isLoading} pinnedItems={pinnedItems} />
-          <LastPullRequest
-            isLoading={isLoading}
-            {...transformPullRequestToProps(pullRequest)}
-          />
+          <LastPullRequest isLoading={isLoading} pullRequest={pullRequest} />
         </Box>
       </Grid>
 
