@@ -3,13 +3,13 @@ import { Container, jsx, Styled } from 'theme-ui'
 import { Grid, Heading } from '@theme-ui/components'
 
 import LastPullRequest from './last-pull-request'
-import PinnedRepositories from './pinned-repositories'
+import PinnedItems from './pinned-items'
 import UserProfile from './user-profile'
 
 import { getGithubUsername } from '../../../selectors/metadata'
-import getPinnedRepositories from './utils/get-pinned-repositories'
-import getPullRequest from './utils/get-pull-request'
-import getUser from './utils/get-user'
+import getPinnedItems from './selectors/get-pinned-items'
+import getPullRequest from './selectors/get-pull-request'
+import getUser from './selectors/get-user'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 import useWidgetContent from '../../../hooks/use-widget-content'
 
@@ -19,12 +19,14 @@ export default () => {
 
   const { isLoading, content } = useWidgetContent()
 
-  const pinnedRepositories = !isLoading && getPinnedRepositories(content)
-  const pullRequest = !isLoading && getPullRequest(content)
-  const user = !isLoading && getUser(content)
+  let pinnedItems
+  let pullRequest
+  let user
 
   if (!isLoading) {
-    console.log(content)
+    pinnedItems = getPinnedItems(content)
+    pullRequest = getPullRequest(content)
+    user = getUser(content)
   }
 
   return (
@@ -38,11 +40,11 @@ export default () => {
       <Heading sx={{ mb: 3 }}>GitHub</Heading>
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <div>
-          <UserProfile user={user} />
+          <UserProfile user={user} isLoading={isLoading} />
         </div>
         <div>
-          <PinnedRepositories pinnedRepositories={pinnedRepositories} />
-          <LastPullRequest pullRequest={pullRequest} />
+          <PinnedItems pinnedItems={pinnedItems} />
+          <LastPullRequest pullRequest={pullRequest} isLoading={isLoading} />
           <p sx={{ marginTop: 4, textAlign: `right` }}>
             <Styled.a
               href={`https://www.github.com/${githubUsername}`}

@@ -111,6 +111,15 @@ export default {
     //   textDecoration: `none`,
     // }
   },
+  MetricCard: {
+    ...card,
+    borderLeftColor: `info`,
+    span: {
+      fontFamily: `heading`,
+      fontWeight: `bold`,
+      padding: 2
+    }
+  },
   InstagramCard: {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md

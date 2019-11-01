@@ -5,7 +5,11 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'gatsby'
 
-export default ({ pullRequest }) => {
+export default ({ isLoading, pullRequest }) => {
+  if (isLoading) {
+    return 'Loading...'
+  }
+
   const { number, repository: { name } = {}, title, url } = pullRequest
   return (
     <Box>
