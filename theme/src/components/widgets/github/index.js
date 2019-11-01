@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { Container, jsx, Styled } from 'theme-ui'
-import { Grid, Heading } from '@theme-ui/components'
+import { Container, jsx } from 'theme-ui'
+import { Box, Grid } from '@theme-ui/components'
 
+import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
 import PinnedItems from './pinned-items'
 import UserProfile from './user-profile'
@@ -12,16 +13,29 @@ import getPullRequest from './selectors/get-pull-request'
 import getUser from './selectors/get-user'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 import useWidgetContent from '../../../hooks/use-widget-content'
+import WidgetHeader from '../widget-header'
 
-export default () => {
+const transformPullRequestToProps = ({
+  number,
+  repository: { name } = {},
+  title,
+  url
+}) => ({
+  number,
+  repositoryName: name,
+  title,
+  url
+})
+
+const GitHubWidget = () => {
   const metadata = useSiteMetadata()
   const githubUsername = getGithubUsername(metadata)
 
   const { isLoading, content } = useWidgetContent()
 
-  let pinnedItems
-  let pullRequest
-  let user
+  let pinnedItems = []
+  let pullRequest = {}
+  let user = {}
 
   if (!isLoading) {
     pinnedItems = getPinnedItems(content)
@@ -37,25 +51,32 @@ export default () => {
         variant: `styles.Widget`
       }}
     >
-      <Heading sx={{ mb: 3 }}>GitHub</Heading>
+      <WidgetHeader>GitHub</WidgetHeader>
+
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
-        <div>
-          <UserProfile user={user} isLoading={isLoading} />
-        </div>
-        <div>
-          <PinnedItems pinnedItems={pinnedItems} />
-          <LastPullRequest pullRequest={pullRequest} isLoading={isLoading} />
-          <p sx={{ marginTop: 4, textAlign: `right` }}>
-            <Styled.a
-              href={`https://www.github.com/${githubUsername}`}
-              sx={{ fontFamily: `heading`, fontSize: 3 }}
-              title={`${githubUsername} on GitHub`}
-            >
-              View GitHub profile &raquo;
-            </Styled.a>
-          </p>
-        </div>
+        <Box>
+          <UserProfile isLoading={isLoading} user={user} />
+        </Box>
+        <Box>
+          <PinnedItems isLoading={isLoading} pinnedItems={pinnedItems} />
+          <LastPullRequest
+            isLoading={isLoading}
+            {...transformPullRequestToProps(pullRequest)}
+          />
+        </Box>
       </Grid>
+
+      <CallToAction
+        title={`${githubUsername} on GitHub`}
+        url={`https://www.github.com/${githubUsername}`}
+      >
+        View GitHub profile &raquo;
+      </CallToAction>
     </Container>
   )
 }
+
+/**
+ * The container component for the GitHub widget.
+ */
+export default GitHubWidget

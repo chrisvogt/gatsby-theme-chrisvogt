@@ -5,6 +5,6 @@ import 'react-placeholder/lib/reactPlaceholder.css'
 
 export default () => (
   <Placeholder showLoadingAnimation ready={false} type='media' rows={3}>
-    <p>This is a Test.</p>
+    <p>Loading</p>
   </Placeholder>
 )

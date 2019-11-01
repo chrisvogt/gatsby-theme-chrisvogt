@@ -7,7 +7,6 @@ import PropTypes from 'prop-types'
 import PlaceholderContent from './renderers/placeholder'
 import RepositoryContent from './renderers/repository'
 
-// NOTE(cvogt): this is missing a renderer for `Gist` items
 const rendererMap = {
   placeholder: PlaceholderContent,
   Repository: RepositoryContent
@@ -20,8 +19,10 @@ const PinnedItemCard = ({ item, type }) => (
 )
 
 PinnedItemCard.propTypes = {
+  /** The pinned item content. */
   item: PropTypes.object,
-  type: PropTypes.oneOf(['Gist', 'placeholder', 'Repository'])
+  /** The type of pinned item. */
+  type: PropTypes.oneOf(['placeholder', 'Repository'])
 }
 
 export default PinnedItemCard

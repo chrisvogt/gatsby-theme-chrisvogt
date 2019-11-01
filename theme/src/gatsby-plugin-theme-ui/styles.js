@@ -1,8 +1,6 @@
 import { tailwind } from '@theme-ui/presets'
 import vsDark from '@theme-ui/prism/presets/vs-dark.json'
 
-import colors from './colors'
-
 const trianglify = require('../components/artwork/trianglify.svg')
 
 const prismPreset = vsDark
@@ -53,6 +51,13 @@ export default {
   },
   GitHub: {
     backgroundColor: `primary`
+  },
+  GitHubCardFooter: {
+    alignItems: `flex-end`,
+    display: `flex`,
+    fontSize: `small`,
+    justifyContent: `flex-end`,
+    mt: 2
   },
   footer: {
     backgroundColor: themePreset.colors.light,

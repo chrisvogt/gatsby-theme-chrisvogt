@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 import { Box, Heading } from '@theme-ui/components'
+import PropTypes from 'prop-types'
 
 import PinnedItemCard from './pinned-item-card'
 
-export default ({ isLoading, pinnedItems = [] }) => {
+const PinnedItems = ({ isLoading, pinnedItems = [] }) => {
   const placeholderItems = Array(4).fill({ __typename: 'placeholder' })
   const items = isLoading ? placeholderItems : pinnedItems
 
@@ -44,3 +45,12 @@ export default ({ isLoading, pinnedItems = [] }) => {
     </Box>
   )
 }
+
+PinnedItems.propTypes = {
+  /** Sets the component in a loading state when true. */
+  isLoading: PropTypes.bool.isRequired,
+  /** The pinned items content to render. */
+  items: PropTypes.arrayOf(PropTypes.object)
+}
+
+export default PinnedItems

@@ -1,37 +1,33 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Heading } from '@theme-ui/components'
+import { Flex, Heading } from '@theme-ui/components'
 import ago from 's-ago'
+import PropTypes from 'prop-types'
 
-export default props => {
-  const {
-    description,
-    homepageUrl,
-    licenseInfo: license,
-    name,
-    nameWithOwner,
-    openGraphImageUrl,
-    updatedAt,
-    url
-  } = props
+import CardFooter from '../card-footer'
+import ViewOnGitHub from '../view-on-github'
 
-  return (
-    <div
+const Repository = ({
+  description,
+  nameWithOwner,
+  openGraphImageUrl,
+  updatedAt
+}) => (
+  <div
+    sx={{
+      display: `flex`,
+      flexDirection: `column`,
+      height: `100%`
+    }}
+  >
+    <Flex
       sx={{
-        display: `flex`,
-        flexDirection: `column`,
-        height: `100%`
+        alignItems: `center`,
+        fontSize: 2,
+        mb: 2
       }}
     >
-      <div
-        sx={{
-          alignItems: `center`,
-          display: `flex`,
-          fontSize: 2
-        }}
-      >
+      <Flex sx={{ flexDirection: `column`, alignItems: `center` }}>
         <img
           alt='repository avatar'
           height='42'
@@ -44,34 +40,34 @@ export default props => {
           }}
           width='42'
         />
-
-        <Heading as='h5' sx={{ fontWeight: 500 }}>
+      </Flex>
+      <Flex sx={{ flexDirection: `column`, alignSelf: `center` }}>
+        <Heading as='h5' sx={{ p: 0, mb: 0 }}>
           {nameWithOwner}
         </Heading>
-      </div>
-
-      <small sx={{ pt: 2, pb: 1 }}>Updated {ago(new Date(updatedAt))}</small>
-
-      {description}
-
-      <div
-        sx={{
-          alignItems: `flex-end`,
-          display: `flex`,
-          height: `100%`,
-          justifyContent: `flex-end`
-        }}
-      >
-        <span
-          sx={{ fontSize: `small` }}
-          title='View on GitHub'
-          href={url}
-          target='_blank'
-        >
-          View on GitHub&nbsp;&nbsp;
-          <FontAwesomeIcon icon={faExternalLinkAlt} />
+        <span sx={{ fontSize: `small`, p: 0 }}>
+          Updated {ago(new Date(updatedAt))}
         </span>
-      </div>
-    </div>
-  )
+      </Flex>
+    </Flex>
+
+    <span sx={{ flexGrow: 1 }}>{description}</span>
+
+    <CardFooter>
+      <ViewOnGitHub />
+    </CardFooter>
+  </div>
+)
+
+Repository.propTypes = {
+  /** @prop {String} description The description of the repository. */
+  description: PropTypes.string.isRequired,
+  /** @prop {String} nameWithOwner The repository's name with owner. */
+  nameWithOwner: PropTypes.string.isRequired,
+  /** @prop {String} openGraphImageUrl The image used to represent this repository in Open Graph data. */
+  openGraphImageUrl: PropTypes.string.isRequired,
+  /** @prop {String} updatedAt Identifies the date and time when the object was last updated. ISO-8601 encoded. */
+  updatedAt: PropTypes.string.isRequired
 }
+
+export default Repository

@@ -14,17 +14,17 @@ export default ({ isLoading, user }) => {
 
   const metrics = [
     {
-      key: 'repositories',
+      id: 'repositories',
       title: 'Repositories',
       value: repositories.totalCount
     },
     {
-      key: 'followers',
+      id: 'followers',
       title: 'Followers',
       value: followers.totalCount
     },
     {
-      key: 'following',
+      id: 'following',
       title: 'Following',
       value: following.totalCount
     }
@@ -62,8 +62,8 @@ export default ({ isLoading, user }) => {
           gridTemplateColumns: `repeat(auto-fit, minmax(128px, 1fr))`
         }}
       >
-        {metrics.map(({ key, title, value }) => (
-          <MetricCard metric={key} title={title} value={value} />
+        {metrics.map(({ id, title, value }) => (
+          <MetricCard key={id} title={title} value={value} />
         ))}
       </div>
     </Card>
