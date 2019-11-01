@@ -113,7 +113,7 @@ export default {
   },
   MetricCard: {
     ...card,
-    borderLeftColor: `info`,
+    borderLeftColor: `accent`,
     span: {
       fontFamily: `heading`,
       fontWeight: `bold`,
@@ -127,7 +127,7 @@ export default {
   Widget: {
     backgroundColor: `#f8f8f8`,
     borderBottom: `1px solid white`,
-    borderLeft: `3px solid ${colors.secondary}`,
+    borderLeft: `3px solid #cbd5e0`,
     borderRadius: `2px`,
     borderTop: `1px solid white`,
     boxShadow: themePreset.shadows.default

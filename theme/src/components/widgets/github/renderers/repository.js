@@ -6,8 +6,16 @@ import { Heading } from '@theme-ui/components'
 import ago from 's-ago'
 
 export default props => {
-  console.log(props)
-  const { avatarURL, name, lastUpdated, description, repositoryURL } = props
+  const {
+    description,
+    homepageUrl,
+    licenseInfo: license,
+    name,
+    nameWithOwner,
+    openGraphImageUrl,
+    updatedAt,
+    url
+  } = props
 
   return (
     <div
@@ -24,51 +32,46 @@ export default props => {
           fontSize: 2
         }}
       >
-        {avatarURL && (
-          <img
-            alt='repository avatar'
-            height='42'
-            src={avatarURL}
-            sx={{
-              backgroundColor: `colors.background`,
-              border: `2px solid white`,
-              borderRadius: `50%`,
-              mr: 2
-            }}
-            width='42'
-          />
-        )}
-        <Heading as='h5'>{name}</Heading>
+        <img
+          alt='repository avatar'
+          height='42'
+          src={openGraphImageUrl}
+          sx={{
+            backgroundColor: `colors.background`,
+            border: `2px solid white`,
+            borderRadius: `4px`,
+            mr: 2
+          }}
+          width='42'
+        />
+
+        <Heading as='h5' sx={{ fontWeight: 500 }}>
+          {nameWithOwner}
+        </Heading>
       </div>
 
-      {lastUpdated && (
-        <small sx={{ pt: 2, pb: 1 }}>
-          Updated {ago(new Date(lastUpdated))}
-        </small>
-      )}
+      <small sx={{ pt: 2, pb: 1 }}>Updated {ago(new Date(updatedAt))}</small>
 
       {description}
 
-      {repositoryURL && (
-        <div
-          sx={{
-            alignItems: `flex-end`,
-            display: `flex`,
-            height: `100%`,
-            justifyContent: `flex-end`
-          }}
+      <div
+        sx={{
+          alignItems: `flex-end`,
+          display: `flex`,
+          height: `100%`,
+          justifyContent: `flex-end`
+        }}
+      >
+        <span
+          sx={{ fontSize: `small` }}
+          title='View on GitHub'
+          href={url}
+          target='_blank'
         >
-          <span
-            sx={{ fontSize: `small` }}
-            title='View on GitHub'
-            href={repositoryURL}
-            target='_blank'
-          >
-            View on GitHub&nbsp;&nbsp;
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
-          </span>
-        </div>
-      )}
+          View on GitHub&nbsp;&nbsp;
+          <FontAwesomeIcon icon={faExternalLinkAlt} />
+        </span>
+      </div>
     </div>
   )
 }

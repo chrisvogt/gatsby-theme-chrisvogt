@@ -32,19 +32,29 @@ export default ({ isLoading, pullRequest }) => {
         }}
       >
         <Card sx={{ variant: `styles.RepositoryCard` }}>
-          {title} (<span sx={{ color: `textMuted` }}>#{number}</span>) – in{' '}
-          <em>{name}</em>
-          {url && (
-            <p
-              sx={{
-                fontSize: `small`,
-                textAlign: `right`
-              }}
+          <span>
+            {title} (
+            <span sx={{ color: `dark`, fontWeight: 600 }}>#{number}</span>) – in{' '}
+            <em>{name}</em>
+          </span>
+          <div
+            sx={{
+              alignItems: `flex-end`,
+              display: `flex`,
+              mt: 2,
+              justifyContent: `flex-end`
+            }}
+          >
+            <span
+              sx={{ fontSize: `small` }}
+              title='View on GitHub'
+              href={url}
+              target='_blank'
             >
               View on GitHub&nbsp;&nbsp;
               <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </p>
-          )}
+            </span>
+          </div>
         </Card>
       </Styled.a>
     </Box>
