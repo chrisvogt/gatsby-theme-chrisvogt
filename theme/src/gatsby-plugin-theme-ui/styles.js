@@ -17,15 +17,17 @@ const floatOnHover = {
 }
 
 const card = {
-  borderBottom: `1px solid white`,
-  borderTop: `1px solid white`,
   backgroundColor: `white`,
-  borderRadius: `2px`,
+  borderBottom: `1px solid white`,
   borderLeft: `3px solid`,
   borderLeftColor: `primary`,
+  borderRadius: `2px`,
+  borderTop: `1px solid white`,
   boxShadow: themePreset.shadows.md,
-  width: `100%`,
-  padding: 3
+  color: `text`,
+  flexGrow: 1,
+  padding: 3,
+  textDecoration: `none`
 }
 
 export default {

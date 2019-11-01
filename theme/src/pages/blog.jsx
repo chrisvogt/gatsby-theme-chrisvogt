@@ -39,9 +39,9 @@ export default ({ data }) => {
             <PostCard
               created={post.frontmatter.createdAt}
               excerpt={post.excerpt}
-              key={post.frontmatter.slug}
+              key={post.fields.id}
+              link={post.fields.slug}
               title={post.frontmatter.title}
-              to={post.frontmatter.slug}
             />
           ))}
         </Styled.div>
@@ -62,11 +62,12 @@ export const pageQuery = graphql`
             id
           }
           frontmatter {
-            title
-            description
             banner
             categories
             date
+            description
+            slug
+            title
           }
           excerpt(pruneLength: 255)
         }

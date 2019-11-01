@@ -1,7 +1,9 @@
 /** @jsx jsx */
-import { useState, useEffect } from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Box, Heading } from '@theme-ui/components'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState, useEffect } from 'react'
 
 import { getGithubUsername } from '../../../selectors/metadata'
 import getRepositories from '../../../api/github/get-repositories'
@@ -57,17 +59,17 @@ export default () => {
               description={repository.description}
               isLoading={repositories.isLoading}
               lastUpdated={repository.updatedAt}
-              repositoryURL={repository.url}
               name={repository.nameWithOwner}
+              repositoryURL={repository.url}
             />
           </Styled.a>
         ))}
       </Styled.div>
-      <p sx={{ textAlign: `right`, marginTop: 4 }}>
+      <p sx={{ marginTop: 4, textAlign: `right` }}>
         <Styled.a
-          title={`${githubUsername} on GitHub`}
           href={`https://www.github.com/${githubUsername}`}
           sx={{ fontFamily: `heading`, fontSize: 3 }}
+          title={`${githubUsername} on GitHub`}
         >
           View GitHub profile &raquo;
         </Styled.a>

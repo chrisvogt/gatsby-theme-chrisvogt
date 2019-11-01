@@ -14,16 +14,16 @@ const useRecentPosts = () => {
           edges {
             node {
               fields {
-                slug
                 id
+                slug
               }
               frontmatter {
-                title
-                description
                 banner
                 categories
                 date
+                description
                 slug
+                title
               }
               excerpt(pruneLength: 255)
             }

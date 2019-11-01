@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Card } from '@theme-ui/components'
+import { Card, Heading } from '@theme-ui/components'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
@@ -47,15 +47,7 @@ const RepositoryCard = ({
               width='42'
             />
           )}
-          <div
-            sx={{
-              display: `flex`,
-              flexGrow: 1,
-              height: `100%`
-            }}
-          >
-            {name}
-          </div>
+          <Heading as='h5'>{name}</Heading>
         </div>
 
         {lastUpdated && (

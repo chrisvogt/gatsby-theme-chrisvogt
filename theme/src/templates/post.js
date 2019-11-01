@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { Container, Flex, jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
+import { Heading } from '@theme-ui/components'
+import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
@@ -16,9 +18,13 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{mdx.frontmatter.title} | Blog Post</title>
+        <meta name='description' content={mdx.frontmatter.description} />
+      </Helmet>
       <Header swoopFill={theme.colors.background} styles={{ py: 2 }}>
         <Container>
-          <h1>{mdx.frontmatter.title}</h1>
+          <Heading>Blog</Heading>
         </Container>
       </Header>
       <Flex
@@ -31,6 +37,7 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
+          <Heading as='h1'>{mdx.frontmatter.title}</Heading>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
         <SwoopBottom fill={theme.colors.light} />
