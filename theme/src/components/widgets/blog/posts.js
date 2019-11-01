@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Styled } from 'theme-ui'
-import { Heading } from '@theme-ui/components'
+import { Grid, Heading } from '@theme-ui/components'
 import { Link } from 'gatsby'
 
 import PostCard from './post-card'
@@ -25,17 +25,12 @@ export default () => {
   return (
     <Container id='posts' sx={{ mb: 4, variant: `styles.Widget` }}>
       <Heading sx={{ variant: `styles.WidgetHeadline` }}>Blog Posts</Heading>
-      <div
-        sx={{
-          background: `blue`,
-          width: `100%`
-        }}
-      >
-        <Styled.div
+      <div sx={{ width: `100%` }}>
+        <Grid
           sx={{
             display: `grid`,
             gridAutoRows: `1fr`,
-            gridGap: 4,
+            gridGap: '1rem',
             gridTemplateColumns: [
               ``,
               ``,
@@ -45,14 +40,14 @@ export default () => {
         >
           {posts.map(post => (
             <PostCard
-              createdAt={post.frontmatter.createdAt}
+              createdAt={post.frontmatter.date}
               excerpt={post.excerpt}
-              key={post.frontmatter.slug}
-              link={post.frontmatter.slug}
+              key={post.fields.id}
+              link={post.fields.slug}
               title={post.frontmatter.title}
             />
           ))}
-        </Styled.div>
+        </Grid>
       </div>
       <p sx={{ textAlign: `right`, marginTop: 4 }}>
         <Styled.a

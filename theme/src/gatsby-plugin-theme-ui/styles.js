@@ -1,8 +1,6 @@
 import { tailwind } from '@theme-ui/presets'
 import vsDark from '@theme-ui/prism/presets/vs-dark.json'
 
-import colors from './colors'
-
 const trianglify = require('../components/artwork/trianglify.svg')
 
 const prismPreset = vsDark
@@ -17,15 +15,17 @@ const floatOnHover = {
 }
 
 const card = {
-  borderBottom: `1px solid white`,
-  borderTop: `1px solid white`,
   backgroundColor: `white`,
-  borderRadius: `2px`,
+  borderBottom: `1px solid white`,
   borderLeft: `3px solid`,
   borderLeftColor: `primary`,
+  borderRadius: `2px`,
+  borderTop: `1px solid white`,
   boxShadow: themePreset.shadows.md,
-  width: `100%`,
-  padding: 3
+  color: `text`,
+  flexGrow: 1,
+  padding: 3,
+  textDecoration: `none`
 }
 
 export default {
@@ -51,6 +51,13 @@ export default {
   },
   GitHub: {
     backgroundColor: `primary`
+  },
+  GitHubCardFooter: {
+    alignItems: `flex-end`,
+    display: `flex`,
+    fontSize: `small`,
+    justifyContent: `flex-end`,
+    mt: 2
   },
   footer: {
     backgroundColor: themePreset.colors.light,
@@ -109,6 +116,15 @@ export default {
     //   textDecoration: `none`,
     // }
   },
+  MetricCard: {
+    ...card,
+    borderLeftColor: `accent`,
+    span: {
+      fontFamily: `heading`,
+      fontWeight: `bold`,
+      padding: 2
+    }
+  },
   InstagramCard: {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md
@@ -116,7 +132,7 @@ export default {
   Widget: {
     backgroundColor: `#f8f8f8`,
     borderBottom: `1px solid white`,
-    borderLeft: `3px solid ${colors.secondary}`,
+    borderLeft: `3px solid #cbd5e0`,
     borderRadius: `2px`,
     borderTop: `1px solid white`,
     boxShadow: themePreset.shadows.default
