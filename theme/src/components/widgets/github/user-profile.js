@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
+import PropTypes from 'prop-types'
 
 import MetricCard from './metric-card'
 import StatusCard from './status-card'
@@ -70,6 +71,18 @@ const UserProfile = ({ isLoading, user }) => {
   )
 }
 
-UserProfile.propTypes = {}
+UserProfile.propTypes = {
+  /** Sets the component in a loading state when true. */
+  isLoading: PropTypes.bool.isRequired,
+  followers: PropTypes.shape({
+    totalCount: PropTypes.number
+  }),
+  following: PropTypes.shape({
+    totalCount: PropTypes.number
+  }),
+  repositories: PropTypes.shape({
+    totalCount: PropTypes.number
+  })
+}
 
 export default UserProfile
