@@ -1,4 +1,19 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { Fragment } from 'react'
 
-export default () => <span>&copy; 2019 Chris Vogt</span>
+export default () => (
+  <Fragment>
+    Made in San Francisco{' '}
+    <span sx={{ fontFamily: `mono`, fontSize: `small` }}>
+      (
+      <a
+        href='https://github.com/chrisvogt/gatsby-theme-personal-sphere'
+        title='View source on GitHub'
+      >
+        View Source
+      </a>
+      )
+    </span>
+  </Fragment>
+)

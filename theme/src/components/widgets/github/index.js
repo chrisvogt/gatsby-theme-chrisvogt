@@ -1,11 +1,13 @@
 /** @jsx jsx */
-import { Container, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
 
 import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
 import PinnedItems from './pinned-items'
 import UserProfile from './user-profile'
+import Widget from '../widget'
+import WidgetHeader from '../widget-header'
 
 import { getGithubUsername } from '../../../selectors/metadata'
 import getPinnedItems from './selectors/get-pinned-items'
@@ -13,7 +15,6 @@ import getPullRequest from './selectors/get-pull-request'
 import getUser from './selectors/get-user'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 import useWidgetContent from '../../../hooks/use-widget-content'
-import WidgetHeader from '../widget-header'
 
 const GitHubWidget = () => {
   const metadata = useSiteMetadata()
@@ -32,13 +33,7 @@ const GitHubWidget = () => {
   }
 
   return (
-    <Container
-      id='github'
-      sx={{
-        mb: 4,
-        variant: `styles.Widget`
-      }}
-    >
+    <Widget id='github'>
       <WidgetHeader>GitHub</WidgetHeader>
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
@@ -57,7 +52,7 @@ const GitHubWidget = () => {
       >
         View GitHub profile &raquo;
       </CallToAction>
-    </Container>
+    </Widget>
   )
 }
 

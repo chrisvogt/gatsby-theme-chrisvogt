@@ -19,7 +19,7 @@ const card = {
   borderBottom: `1px solid white`,
   borderLeft: `3px solid`,
   borderLeftColor: `primary`,
-  borderRadius: `2px`,
+  borderRadius: `3px`,
   borderTop: `1px solid white`,
   boxShadow: themePreset.shadows.md,
   color: `text`,
@@ -60,10 +60,10 @@ export default {
     mt: 2
   },
   footer: {
-    backgroundColor: themePreset.colors.light,
-    color: `white`,
+    background: `url(${trianglify})`,
+    color: `light`,
     a: {
-      color: `lightover`
+      color: `white`
     }
   },
   Book: {
@@ -75,12 +75,12 @@ export default {
   },
   Container: {
     ...themePreset.Container,
-    maxWidth: [`94%`, ``, ``, ``, `1200px`]
-  },
-  SubFooter: {
-    background: `url(${trianglify})`
+    maxWidth: [``, `94%`, ``, ``, `1200px`],
+    py: [2, 3],
+    px: [3, 4]
   },
   Footer: {
+    color: `white`,
     width: `100%`,
     display: `block`,
     variant: `styles.footer`
@@ -103,18 +103,6 @@ export default {
   RepositoryCard: {
     ...floatOnHover,
     ...card
-    // backgroundColor: darken(`primary`, 0.04),
-    // // border: `2px solid white`,
-    // // borderRadius: `2px`,
-    // color: `white`,
-    // marginBottom: [3, `inherit`],
-    // padding: 3,
-    // // width: `100%`,
-    // '&:hover, &:focus': {
-    //   ...floatOnHover,
-    //   // backgroundColor: lighten(`primary`, 0.04),
-    //   textDecoration: `none`,
-    // }
   },
   MetricCard: {
     ...card,
@@ -129,18 +117,10 @@ export default {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md
   },
-  Widget: {
-    backgroundColor: `#f8f8f8`,
-    borderBottom: `1px solid white`,
-    borderLeft: `3px solid #cbd5e0`,
-    borderRadius: `2px`,
-    borderTop: `1px solid white`,
-    boxShadow: themePreset.shadows.default
-  },
   WidgetHeadline: {
     mb: 3,
     mt: 0,
-    py: 2,
+    py: 3,
     textAlign: [`center`, `left`]
   },
   WidgetFooter: {

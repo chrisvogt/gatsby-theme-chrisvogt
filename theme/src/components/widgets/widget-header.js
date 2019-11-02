@@ -4,7 +4,7 @@ import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
 const WidgetHeader = ({ children }) => (
-  <Heading sx={{ mb: 3 }}>{children}</Heading>
+  <Heading sx={{ variant: `styles.WidgetHeadline` }}>{children}</Heading>
 )
 
 WidgetHeader.propTypes = {

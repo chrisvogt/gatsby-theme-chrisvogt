@@ -9,9 +9,6 @@ import Footer from '../components/footer'
 import Header from '../components/header'
 import Layout from '../components/layout'
 import PostCard from '../components/widgets/blog/post-card'
-import SwoopBottom from '../components/artwork/swoop-bottom'
-
-import theme from '../gatsby-plugin-theme-ui'
 
 export default ({ data }) => {
   const posts = getPosts(data)
@@ -32,12 +29,12 @@ export default ({ data }) => {
             display: `grid`,
             gridAutoRows: `1fr`,
             gridGap: 4,
-            gridTemplateColumns: [``, ``, `repeat(1, 1fr)`]
+            gridTemplateColumns: [``, ``, `repeat(2, 1fr)`]
           }}
         >
           {posts.map(post => (
             <PostCard
-              created={post.frontmatter.createdAt}
+              createdAt={post.frontmatter.date}
               excerpt={post.excerpt}
               key={post.fields.id}
               link={post.fields.slug}
@@ -46,7 +43,6 @@ export default ({ data }) => {
           ))}
         </Styled.div>
       </Container>
-      <SwoopBottom fill={theme.colors.light} />
       <Footer />
     </Layout>
   )

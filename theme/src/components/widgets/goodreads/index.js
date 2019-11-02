@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Styled } from 'theme-ui'
-import { Heading } from '@theme-ui/components'
+import { jsx } from 'theme-ui'
 import kebabCase from 'lodash/kebabCase'
 
 import { getGoodreadsUsername } from '../../../selectors/metadata'
@@ -8,6 +7,9 @@ import useRecentBooks from '../../../hooks/use-recent-books'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import BookLink from './book-link'
+import CallToAction from '../call-to-action'
+import Widget from '../widget'
+import WidgetHeader from '../widget-header'
 
 export default () => {
   const { isLoading, books } = useRecentBooks()
@@ -15,29 +17,21 @@ export default () => {
   const goodreadsUsername = getGoodreadsUsername(metadata)
 
   return (
-    <Container
-      id='goodreads'
-      sx={{
-        mb: 4,
-        variant: `styles.Widget`
-      }}
-    >
-      <Heading sx={{ variant: `styles.WidgetHeadline` }}>
-        Recently Read Books
-      </Heading>
+    <Widget id='goodreads'>
+      <WidgetHeader>Recently Read Books</WidgetHeader>
 
       <div className='gallery'>
-        {isLoading && <h3>Loading...</h3>}
-
-        <div
-          sx={{
-            display: `grid`,
-            gridGap: 3,
-            gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
-          }}
-        >
-          {!isLoading &&
-            books.map(book => {
+        {isLoading ? (
+          <span>Loading...</span>
+        ) : (
+          <div
+            sx={{
+              display: `grid`,
+              gridGap: 3,
+              gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
+            }}
+          >
+            {books.map(book => {
               const { infoLink, smallThumbnail: thumbnailURL, title } = book
               return (
                 <BookLink
@@ -48,13 +42,16 @@ export default () => {
                 />
               )
             })}
-        </div>
+          </div>
+        )}
       </div>
-      <div sx={{ marginTop: 4, variant: `styles.WidgetFooter` }}>
-        <Styled.a href={`https://www.goodreads.com/${goodreadsUsername}`}>
-          View Goodreads profile &raquo;
-        </Styled.a>
-      </div>
-    </Container>
+
+      <CallToAction
+        title={`${goodreadsUsername} on Goodreads`}
+        url={`https://www.goodreads.com/${goodreadsUsername}`}
+      >
+        View Goodreads profile &raquo;
+      </CallToAction>
+    </Widget>
   )
 }

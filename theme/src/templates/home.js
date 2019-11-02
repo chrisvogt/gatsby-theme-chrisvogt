@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Styled } from 'theme-ui'
+import { Container, jsx, Flex, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
@@ -9,11 +9,8 @@ import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
 import Posts from '../components/widgets/blog/posts'
-import SwoopBottom from '../components/artwork/swoop-bottom'
 
 import { getHeadline, getSubhead } from '../selectors/metadata'
-
-import theme from '../gatsby-plugin-theme-ui'
 
 const HomeTemplate = props => {
   const { data: { site: { siteMetadata = {} } = {} } = {} } = props
@@ -71,14 +68,13 @@ const HomeTemplate = props => {
           pt: 4
         }}
       >
-        <Posts />
-        <GitHub />
-        <Instagram />
-        <Goodreads />
-        {/* <div sx={{ pt: 4 }} /> */}
-        <SwoopBottom fill={theme.colors.light} />
+        <Container>
+          <Posts />
+          <GitHub />
+          <Instagram />
+          <Goodreads />
+        </Container>
       </div>
-
       <Footer />
     </Layout>
   )
