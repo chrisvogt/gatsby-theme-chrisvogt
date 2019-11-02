@@ -1,10 +1,12 @@
 /** @jsx jsx */
-import { jsx, Container, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Grid, Heading } from '@theme-ui/components'
-import { Link } from 'gatsby'
 
-import PostCard from './post-card'
 import useRecentPosts from '../../../hooks/use-recent-posts'
+
+import CallToAction from '../call-to-action'
+import PostCard from './post-card'
+import Widget from '../widget'
 
 export default () => {
   const posts = useRecentPosts()
@@ -23,7 +25,7 @@ export default () => {
     return columnCount
   }
   return (
-    <Container id='posts' sx={{ mb: 4, variant: `styles.Widget` }}>
+    <Widget id='posts'>
       <Heading sx={{ variant: `styles.WidgetHeadline` }}>Blog Posts</Heading>
       <div sx={{ width: `100%` }}>
         <Grid
@@ -49,19 +51,9 @@ export default () => {
           ))}
         </Grid>
       </div>
-      <p sx={{ textAlign: `right`, marginTop: 4 }}>
-        <Styled.a
-          as={Link}
-          to='/blog'
-          sx={{
-            fontFamily: `heading`,
-            fontSize: 3,
-            textDecoration: `none`
-          }}
-        >
-          View blog posts &raquo;
-        </Styled.a>
-      </p>
-    </Container>
+      <CallToAction title='View all blog posts' to='/blog'>
+        View blog posts &raquo;
+      </CallToAction>
+    </Widget>
   )
 }

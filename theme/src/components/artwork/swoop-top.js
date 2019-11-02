@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-export default ({ fill, invert }) => {
+export default ({ fill }) => {
   return (
     <svg
       width='100%'

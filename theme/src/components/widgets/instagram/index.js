@@ -1,10 +1,14 @@
 /** @jsx jsx */
-import { jsx, Container, Styled } from 'theme-ui'
-import { Heading } from '@theme-ui/components'
+import { jsx } from 'theme-ui'
+import { Grid } from '@theme-ui/components'
 
 import { getInstagramUsername } from '../../../selectors/metadata'
 import useInstagramPosts from '../../../hooks/use-instagram-posts'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
+
+import CallToAction from '../call-to-action'
+import Widget from '../widget'
+import WidgetHeader from '../widget-header'
 
 export default () => {
   const { isLoading, posts } = useInstagramPosts()
@@ -12,63 +16,58 @@ export default () => {
   const instagramUsername = getInstagramUsername(metadata)
 
   return (
-    <Container id='instagram' sx={{ mb: 4, variant: `styles.Widget` }}>
-      <Heading sx={{ variant: `styles.WidgetHeadline` }}>
-        Instagram Posts
-      </Heading>
+    <Widget id='instagram'>
+      <WidgetHeader>Instagram Posts</WidgetHeader>
 
       <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}
 
-        <div
+        <Grid
           sx={{
-            display: 'grid',
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
           {!isLoading &&
-            posts
-              .filter(post => post.type === 'image')
-              .slice(0, 4)
-              .map(post => {
-                const {
-                  id,
-                  images: { standard_resolution: { height, width, url } = {} },
-                  link
-                } = post
-
-                return (
-                  <a
-                    key={id}
-                    href={link}
-                    style={{ lineHeight: 0 }}
-                    target='_blank'
-                    rel='noopener noreferrer'
+            posts.slice(0, 4).map(post => {
+              const {
+                id,
+                images: { standard_resolution: { height, width, url } = {} },
+                link
+              } = post
+              return (
+                <a
+                  key={id}
+                  href={link}
+                  style={{ lineHeight: 0 }}
+                  target='_blank'
+                  title='View image on Instagram'
+                  rel='noopener noreferrer'
+                  sx={{
+                    variant: `styles.InstagramCard`
+                  }}
+                >
+                  <img
+                    src={url}
+                    height={height}
+                    width={width}
+                    alt='Instagram post thumbnail'
                     sx={{
-                      variant: `styles.InstagramCard`
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
                     }}
-                  >
-                    <img
-                      src={url}
-                      height={height}
-                      width={width}
-                      alt='Instagram post thumbnail'
-                      sx={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                      }}
-                    />
-                  </a>
-                )
-              })}
-        </div>
-        <div sx={{ marginTop: 4, variant: `styles.WidgetFooter` }}>
-          <Styled.a href={`https://www.instagram.com/${instagramUsername}`}>
-            View Instagram profile &raquo;
-          </Styled.a>
-        </div>
+                  />
+                </a>
+              )
+            })}
+        </Grid>
+        <CallToAction
+          title={`${instagramUsername} on Instagram`}
+          url={`https://www.instagram.com/${instagramUsername}`}
+        >
+          View Instagram profile &raquo;
+        </CallToAction>
       </div>
-    </Container>
+    </Widget>
   )
 }

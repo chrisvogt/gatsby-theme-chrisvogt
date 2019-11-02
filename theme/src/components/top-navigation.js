@@ -23,10 +23,11 @@ export default () => {
           textAlign: [`center`, ``, `left`]
         }}
       >
-        <Link
+        <Styled.a
+          as={Link}
           to='/'
           sx={{
-            color: `colors.dark`,
+            color: `text`,
             display: [`block`, ``, `inline`],
             fontFamily: `heading`,
             fontSize: 2,
@@ -36,7 +37,7 @@ export default () => {
           }}
         >
           {title}
-        </Link>
+        </Styled.a>
 
         {menuItems &&
           menuItems.map(({ slug, path, title, text }) => (

@@ -1,33 +1,29 @@
 /** @jsx jsx */
-import { Container, Footer as ThemeFooter, jsx, Styled } from 'theme-ui'
+import { Container, Footer as ThemeFooter, jsx } from 'theme-ui'
+import { Box, Grid } from '@theme-ui/components'
 
 import Credits from './credits'
 import Navigation from './navigation'
 import Profiles from './profiles'
+import SwoopTop from '../artwork/swoop-top'
+
+import theme from '../../gatsby-plugin-theme-ui'
 
 export default () => (
-  <ThemeFooter>
+  <ThemeFooter sx={{ variant: `styles.Footer` }}>
+    <SwoopTop fill={theme.colors.background} />
     <Container>
       <Profiles />
     </Container>
-    <div sx={{ variant: `styles.SubFooter` }}>
-      <Container>
-        <Styled.div
-          style={{
-            color: `muted`,
-            display: `grid`,
-            width: `100%`,
-            gridTemplateColumns: `50% 1fr`
-          }}
-        >
-          <div>
-            <Credits />
-          </div>
-          <div style={{ textAlign: `right` }}>
-            <Navigation />
-          </div>
-        </Styled.div>
-      </Container>
-    </div>
+    <Container>
+      <Grid sx={{ gridTemplateColumns: [`100%`, `50% 1fr`] }}>
+        <Box sx={{ textAlign: [`center`, `left`] }}>
+          <Credits />
+        </Box>
+        <Box sx={{ textAlign: [`center`, `right`] }}>
+          <Navigation />
+        </Box>
+      </Grid>
+    </Container>
   </ThemeFooter>
 )
