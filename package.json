@@ -1,5 +1,6 @@
 {
   "private": true,
+  "license": "MIT",
   "workspaces": [
     "example",
     "theme"
