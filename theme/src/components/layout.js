@@ -2,7 +2,6 @@
 import { Fragment } from 'react'
 import { Global } from '@emotion/core'
 import { jsx, Styled, ThemeProvider } from 'theme-ui'
-import Prism from '@theme-ui/prism'
 
 import SEO from './seo'
 import TopNavigation from './top-navigation'
@@ -10,8 +9,7 @@ import TopNavigation from './top-navigation'
 import theme from '../gatsby-plugin-theme-ui'
 
 const components = {
-  pre: ({ children }) => <Fragment>{children}</Fragment>,
-  code: Prism
+  pre: ({ children }) => <Fragment>{children}</Fragment>
 }
 
 export default ({ children }) => (

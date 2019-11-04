@@ -5,7 +5,7 @@ title: 'Hello World'
 description: 'This is the Hello World example post document ...'
 categories: ['react']
 keywords: ['react']
-banner: './images/banner.jpg'
+banner: ''
 ---
 
 import { HelloWorld } from './hello-world'
@@ -18,22 +18,35 @@ This document showcases features supported by the Personal Sphere Gatsby theme. 
 - [Theme UI](https://theme-ui.com/) – themable styles for React components
 - [FontAwesome](https://fontawesome.com/) – icons for the web
 
-### Posts
+## Features
 
-#### Code in Markdown
+### Images in Markdown
 
-```js
-const testVariable = 'hello'
-export default textVariable
+![Demonstration Image](./demonstration-image.png 'Demonstration Image')
+
+### Code in Markdown
+
+```jsx
+import React from 'react'
+
+export default () => <h1>Test</h1>
 ```
 
-#### JSX in Markdown
+```html
+<html>
+  <body>
+    Test
+  </body>
+</html>
+```
+
+### JSX in Markdown
 
 This theme uses MDX, a Markdown format that supports JSX inside of documents. Use this to create and embed components with graphs and visualizations pertaining to the data in your article.
 
 <HelloWorld />
 
-#### Embedded Content
+### Embedded Content
 
 Embed YouTube videos into posts.
 
@@ -45,3 +58,30 @@ Embed YouTube videos into posts.
   allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
   allowfullscreen
 ></iframe>
+
+## Typography
+
+#### Headers
+
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+
+#### Tables
+
+| Syntax    | Description |   Test Text |
+| :-------- | :---------: | ----------: |
+| Header    |    Title    | Here's this |
+| Paragraph |    Text     |    And more |
+
+#### Footnote
+
+This is the first item. [^Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. A erat nam at lectus urna duis.] Also see something else. [^Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. A erat nam at lectus urna duis.]

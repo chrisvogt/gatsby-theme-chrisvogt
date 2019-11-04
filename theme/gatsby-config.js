@@ -10,7 +10,7 @@ module.exports = options => {
       description:
         'A gatsby blog theme with built-in recently read and GitHub plugins.',
       baseURL: '', // NOTE(cvogt): no trailing slash
-      imageURL: '/images/snape.jpg',
+      imageURL: '',
       social: {
         github: {
           username: 'chrisvogt'
@@ -51,6 +51,9 @@ module.exports = options => {
         }
       },
       {
+        resolve: `gatsby-transformer-sharp`
+      },
+      {
         resolve: 'gatsby-source-filesystem',
         options: {
           path: `content`,
@@ -65,7 +68,7 @@ module.exports = options => {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 704
+                maxWidth: 1200
               }
             },
             {
@@ -73,6 +76,18 @@ module.exports = options => {
               options: {
                 icon: false
               }
+            },
+            {
+              resolve: `gatsby-remark-prismjs`,
+              options: {
+                // showLineNumbers: true
+              }
+            },
+            {
+              resolve: `gatsby-remark-copy-linked-files`
+              // options: {
+              //   ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
+              // },
             },
             `gatsby-remark-embed-video`
           ]
