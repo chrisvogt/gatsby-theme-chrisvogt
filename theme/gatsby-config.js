@@ -9,7 +9,7 @@ module.exports = options => {
       subhead: 'A Gatsby theme with built-in social widgets',
       description:
         'A gatsby blog theme with built-in recently read and GitHub plugins.',
-      baseURL: '', // NOTE(cvogt): no trailing slash
+      baseURL: '',
       imageURL: '',
       social: {
         github: {
@@ -51,53 +51,28 @@ module.exports = options => {
         }
       },
       {
-        resolve: `gatsby-transformer-sharp`
-      },
-      {
         resolve: 'gatsby-source-filesystem',
         options: {
           path: `content`,
           name: `content`
         }
       },
+      `gatsby-plugin-sharp`,
+      `gatsby-transformer-sharp`,
       {
-        resolve: `gatsby-plugin-mdx`,
+        resolve: 'gatsby-plugin-mdx',
         options: {
-          extensions: [`.mdx`, `.md`],
           gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 1200
-              }
-            },
-            {
-              resolve: `gatsby-remark-autolink-headers`,
-              options: {
-                icon: false
-              }
-            },
-            {
-              resolve: `gatsby-remark-prismjs`,
-              options: {
-                // showLineNumbers: true
-              }
-            },
-            {
-              resolve: `gatsby-remark-copy-linked-files`
-              // options: {
-              //   ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
-              // },
-            },
-            `gatsby-remark-embed-video`
-          ]
+            `gatsby-remark-prismjs`,
+            `gatsby-remark-images`
+          ],
+          plugins: [`gatsby-remark-prismjs`, `gatsby-remark-images`]
         }
       },
       'gatsby-plugin-emotion',
       'gatsby-plugin-react-helmet',
       'gatsby-theme-style-guide',
       'gatsby-transformer-json',
-      `gatsby-plugin-sharp`,
       `gatsby-plugin-theme-ui`
     ]
   }

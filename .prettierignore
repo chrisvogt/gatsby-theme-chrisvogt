@@ -1,0 +1,9 @@
+.cache/
+.DS_Store
+.env
+.gatsby-context.js
+*.log
+coverage
+logs
+node_modules
+public
