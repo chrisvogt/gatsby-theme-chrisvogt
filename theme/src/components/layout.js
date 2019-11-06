@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
 import { Global } from '@emotion/core'
-import { jsx, Main, Styled, ThemeProvider } from 'theme-ui'
+import { jsx, Styled, ThemeProvider } from 'theme-ui'
 
 import SEO from './seo'
 import TopNavigation from './top-navigation'
@@ -37,7 +37,7 @@ export default ({ children }) => (
       />
       <SEO />
       <TopNavigation />
-      <Main>{children}</Main>
+      {children}
     </Styled.root>
   </ThemeProvider>
 )

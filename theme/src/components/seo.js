@@ -6,20 +6,20 @@ import { useThemeUI } from 'theme-ui'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 import {
-  getBaseURL,
-  getTwitterUsername,
-  getTitleTemplate
+  getTitle,
+  getTitleTemplate,
+  getTwitterUsername
 } from '../selectors/metadata'
 
-const SEO = ({ title, description, image: imageURL, pathname, article }) => {
+const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
   const metadata = useSiteMetadata()
   const { theme } = useThemeUI()
 
-  const baseURL = getBaseURL(metadata)
+  const siteTitle = getTitle(metadata)
   const titleTemplate = getTitleTemplate(metadata)
   const twitterUsername = getTwitterUsername(metadata)
 
-  const fullPathURL = baseURL ? `${baseURL}${pathname}` : '/'
+  const title = pageTitle || siteTitle
 
   return (
     <Helmet title={title} titleTemplate={titleTemplate}>
@@ -28,18 +28,16 @@ const SEO = ({ title, description, image: imageURL, pathname, article }) => {
 
       <meta name='theme-color' content={theme.colors.background} />
 
-      <meta property='og:url' content={fullPathURL} />
-
+      <meta property='og:title' content={title} />
       {article && <meta property='og:type' content='article' />}
-
-      {title && <meta property='og:title' content={title} />}
       {description && <meta property='og:description' content={description} />}
       {imageURL && <meta property='og:image' content={imageURL} />}
       <meta name='twitter:card' content='summary_large_image' />
+
       {twitterUsername && (
         <meta name='twitter:creator' content={twitterUsername} />
       )}
-      {title && <meta name='twitter:title' content={title} />}
+      <meta name='twitter:title' content={title} />
       {imageURL && <meta name='twitter:image' content={imageURL} />}
       {description && <meta name='twitter:description' content={description} />}
     </Helmet>

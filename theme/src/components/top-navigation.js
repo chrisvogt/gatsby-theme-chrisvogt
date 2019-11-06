@@ -2,14 +2,19 @@
 import { jsx, Container, Styled } from 'theme-ui'
 import { Link } from 'gatsby'
 
+import { getHeaderLeftItems } from '../selectors/navigation'
 import { getTitle } from '../selectors/metadata'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 export default () => {
-  const { header: { left: menuItems } = {} } = useNavigationData()
   const metadata = useSiteMetadata()
+  const navigation = useNavigationData()
+
+  const menuItems = getHeaderLeftItems(navigation)
   const title = getTitle(metadata)
+
+  console.log(menuItems)
 
   return (
     <Styled.div
@@ -41,7 +46,13 @@ export default () => {
 
         {menuItems &&
           menuItems.map(({ slug, path, title, text }) => (
-            <Styled.a key={slug} href={path} title={title} sx={{ mr: 3 }}>
+            <Styled.a
+              as={Link}
+              key={slug}
+              to={path}
+              title={title}
+              sx={{ mr: 3 }}
+            >
               {text}
             </Styled.a>
           ))}

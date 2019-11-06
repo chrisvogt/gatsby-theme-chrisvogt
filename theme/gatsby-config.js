@@ -3,12 +3,15 @@ const path = require('path')
 module.exports = options => {
   return {
     siteMetadata: {
-      title: 'Gatsby Theme Personal Sphere',
-      titleTemplate: '%s · Personal Sphere',
-      headline: 'Personal Sphere',
-      subhead: 'A Gatsby theme with built-in social widgets',
-      description:
-        'A gatsby blog theme with built-in recently read and GitHub plugins.',
+      avatarURL:
+        'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
+      title: 'Private Sphere',
+      titleTemplate: '% · Private Sphere',
+      headline: 'Private Sphere',
+      subhead: 'A Gatsby blog theme with built-in social widgets',
+      description: `
+Private Sphere is a Gatsby blog theme with built-in Goodreads and GitHub widgets.
+`,
       baseURL: '',
       imageURL: '',
       social: {
