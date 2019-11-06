@@ -1,9 +1,7 @@
 import { tailwind } from '@theme-ui/presets'
-import vsDark from '@theme-ui/prism/presets/vs-dark.json'
 
 const trianglify = require('../components/artwork/trianglify.svg')
 
-const prismPreset = vsDark
 export const themePreset = tailwind
 
 const floatOnHover = {
@@ -44,10 +42,6 @@ export default {
     inverse: {
       color: themePreset.colors.muted
     }
-  },
-  pre: {
-    ...prismPreset,
-    padding: themePreset.space[3]
   },
   GitHub: {
     backgroundColor: `primary`
