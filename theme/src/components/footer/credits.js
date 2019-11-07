@@ -8,7 +8,7 @@ export default () => (
     <span sx={{ fontFamily: `mono`, fontSize: `small` }}>
       (
       <a
-        href='https://github.com/chrisvogt/gatsby-theme-personal-sphere'
+        href='https://github.com/chrisvogt/gatsby-theme-private-sphere'
         title='View source on GitHub'
       >
         View Source

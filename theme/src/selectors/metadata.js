@@ -1,6 +1,7 @@
 import get from 'lodash/get'
 
 const PATHS = {
+  avatarURL: 'avatarURL',
   baseURL: 'baseURL',
   description: 'description',
   githubUsername: 'social.github.username',
@@ -13,6 +14,8 @@ const PATHS = {
   titleTemplate: 'titleTemplate',
   twitterUsername: 'social.twitter.username'
 }
+
+export const getAvatarURL = metadata => get(metadata, PATHS.avatarURL)
 
 export const getBaseURL = metadata => get(metadata, PATHS.baseURL)
 

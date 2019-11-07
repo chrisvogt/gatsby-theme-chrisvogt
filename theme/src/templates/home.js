@@ -10,10 +10,12 @@ import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
 import Posts from '../components/widgets/blog/posts'
 
-import { getHeadline, getSubhead } from '../selectors/metadata'
+import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
 
 const HomeTemplate = props => {
   const { data: { site: { siteMetadata = {} } = {} } = {} } = props
+
+  const avatar = getAvatarURL(siteMetadata)
   const headline = getHeadline(siteMetadata)
   const subhead = getSubhead(siteMetadata)
 
@@ -43,7 +45,7 @@ const HomeTemplate = props => {
                 mr: [0, 0, 3]
               }}
               alt='Avatar'
-              src='https://www.chrisvogt.me/assets/images/avatar-512px.jpg'
+              src={avatar}
               height='128'
               width='128'
             />
@@ -86,6 +88,7 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        avatarURL
         baseURL
         description
         headline

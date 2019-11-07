@@ -3,7 +3,7 @@ import styles, { themePreset } from './styles'
 
 export default {
   ...themePreset,
-  initialColorModeName: 'personalSphere',
+  initialColorModeName: 'PrivateSphere',
   colors: {
     ...themePreset.colors,
     ...colors
