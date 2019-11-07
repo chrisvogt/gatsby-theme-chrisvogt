@@ -21,7 +21,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-theme-personal-sphere',
+      resolve: 'gatsby-theme-private-sphere',
       options: {}
     }
   ]
