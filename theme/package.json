@@ -1,22 +1,34 @@
 {
   "name": "gatsby-theme-private-sphere",
-  "version": "0.4.0",
+  "description": "A personal blog theme for creatives. Includes built-in social widgets.",
+  "version": "0.4.1",
+  "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://privatesphere.io",
+  "bugs": "https://github.com/chrisvogt/gatsby-theme-private-sphere/issues",
   "keywords": [
-    "gatsby",
     "gatsby-plugin",
-    "gatsby-theme",
     "gatsby-theme-private-sphere",
+    "gatsby-theme",
+    "gatsby",
     "mdx",
-    "theme-ui",
-    "react"
+    "react",
+    "theme-ui"
   ],
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop"
   },
+  "engines": {
+    "node": "^10.0.0",
+    "yarn": "^1.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "peerDependencies": {
     "gatsby": "^2.15.28",
     "react": "^16.10.1",
