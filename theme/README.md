@@ -1,6 +1,8 @@
 # gatsby-theme-private-sphere
 
-The Gatsby theme used on my personal website, located at [www.chrisvogt.me](https://www.chrisvogt.me). I'm building this theme to be both a window into my digital activity and a publishing tool for me to share a range of written and digital content.
+The Gatsby blog theme used on my personal website, at [www.chrisvogt.me](https://www.chrisvogt.me). This theme is built to be both a window into my online activity and a publishing tool for me to share a range of written and digital content.
+
+It is possible to customize and reuse this theme, but you will need to bring your own data. Examples of the expected data structure are available in the [**mocks**](__mocks__) directory, and your data must be available via URL.
 
 ## Installation
 
@@ -27,7 +29,7 @@ module.exports = {
 }
 ```
 
-See the [example config](/example/gatsby-config.js) to see the available site metadata fields.
+Review the [example config](/example/gatsby-config.js) for the available site metadata fields.
 
 ## Copyright & License
 
