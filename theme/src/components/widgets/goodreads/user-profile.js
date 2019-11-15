@@ -65,13 +65,12 @@ const UserProfile = ({ isLoading, profile }) => {
 
 UserProfile.propTypes = {
   /** Sets the component in a loading state when true. */
-  isLoading: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool,
   /** The Goodreads user profile. */
   profile: PropTypes.shape({
-    favoriteBooks: PropTypes.string.isRequired,
-    friendsCount: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-      .isRequired,
-    readcount: PropTypes.number.isRequired
+    favoriteBooks: PropTypes.string,
+    friendsCount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    readcount: PropTypes.number
   })
 }
 

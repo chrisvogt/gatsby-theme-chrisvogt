@@ -60,9 +60,9 @@ UserStatus.propTypes = {
   isLoading: PropTypes.bool,
   /** The pull request on GitHub. */
   status: PropTypes.shape({
-    actionText: PropTypes.string.isRequired,
-    updated: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired
+    actionText: PropTypes.string,
+    updated: PropTypes.string,
+    link: PropTypes.string
   })
 }
 

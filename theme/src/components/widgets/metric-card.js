@@ -14,7 +14,7 @@ MetricCard.propTypes = {
   /** The title of the metric. */
   title: PropTypes.string.isRequired,
   /** The value of the metric. */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 export default MetricCard

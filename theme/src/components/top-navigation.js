@@ -14,8 +14,6 @@ export default () => {
   const menuItems = getHeaderLeftItems(navigation)
   const title = getTitle(metadata)
 
-  console.log(menuItems)
-
   return (
     <Styled.div
       sx={{
