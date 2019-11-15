@@ -6,28 +6,23 @@ import PropTypes from 'prop-types'
 import MetricCard from '../metric-card'
 import StatusCard from '../status-card'
 
-const UserProfile = ({ isLoading, user }) => {
+const UserProfile = ({ isLoading, profile }) => {
   if (isLoading) {
     return 'Loading...'
   }
 
-  const { repositories = {}, followers = {}, following = {} } = user
+  const { favoriteBooks, friendsCount, readCount } = profile
 
   const metrics = [
     {
-      id: 'repositories',
-      title: 'Repositories',
-      value: repositories.totalCount
+      id: 'friends-count',
+      title: 'Friends',
+      value: friendsCount
     },
     {
-      id: 'followers',
-      title: 'Followers',
-      value: followers.totalCount
-    },
-    {
-      id: 'following',
-      title: 'Following',
-      value: following.totalCount
+      id: 'read-count',
+      title: 'Read',
+      value: readCount
     }
   ]
 
@@ -39,13 +34,10 @@ const UserProfile = ({ isLoading, user }) => {
           marginBottom: '1rem'
         }}
       >
-        Status
+        Favorite Genres
       </Heading>
 
-      <StatusCard
-        message={user.status.message}
-        updatedAt={user.status.updatedAt}
-      />
+      <StatusCard message={favoriteBooks} />
 
       <Heading
         as='h3'
@@ -73,15 +65,12 @@ const UserProfile = ({ isLoading, user }) => {
 
 UserProfile.propTypes = {
   /** Sets the component in a loading state when true. */
-  isLoading: PropTypes.bool.isRequired,
-  followers: PropTypes.shape({
-    totalCount: PropTypes.number
-  }),
-  following: PropTypes.shape({
-    totalCount: PropTypes.number
-  }),
-  repositories: PropTypes.shape({
-    totalCount: PropTypes.number
+  isLoading: PropTypes.bool,
+  /** The Goodreads user profile. */
+  profile: PropTypes.shape({
+    favoriteBooks: PropTypes.string,
+    friendsCount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    readcount: PropTypes.number
   })
 }
 

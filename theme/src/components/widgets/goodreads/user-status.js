@@ -1,22 +1,22 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
+import ago from 's-ago'
 import PropTypes from 'prop-types'
 
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const LastPullRequest = ({ isLoading, pullRequest }) => {
+const stripHtmlElements = text => text.replace(/<[^>]+>/g, '')
+
+const UserStatus = ({ isLoading, status, actorName }) => {
   if (isLoading) {
     return 'Loading...'
   }
 
-  const {
-    number,
-    repository: { name: repositoryName } = {},
-    title,
-    url
-  } = pullRequest
+  const { actionText, updated, link } = status
+
+  const statusText = actionText && stripHtmlElements(actionText)
 
   return (
     <Box>
@@ -26,11 +26,11 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
           marginBottom: '1rem'
         }}
       >
-        Last Pull Request
+        Status
       </Heading>
 
       <Styled.a
-        href={url}
+        href={link}
         sx={{
           display: `flex`,
           '&:hover, &:focus': {
@@ -40,13 +40,12 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
       >
         <Card sx={{ variant: `styles.RepositoryCard` }}>
           <span>
-            {title} (
-            <span sx={{ color: `dark`, fontWeight: 600 }}>#{number}</span>) – in{' '}
-            <em>{repositoryName}</em>
+            {actorName} {statusText}
+            <em>– {ago(new Date(updated))}</em>
           </span>
 
           <CardFooter>
-            <ViewExternal platform='GitHub' />
+            <ViewExternal platform='Goodreads' />
           </CardFooter>
         </Card>
       </Styled.a>
@@ -54,22 +53,17 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
   )
 }
 
-LastPullRequest.propTypes = {
+UserStatus.propTypes = {
+  /** The name of the person the status is about. */
+  actorName: PropTypes.string,
   /** Sets the component in a loading state when true. */
   isLoading: PropTypes.bool,
   /** The pull request on GitHub. */
-  pullRequest: PropTypes.shape({
-    /** The # of the pull request on GitHub. */
-    number: PropTypes.number,
-    repository: PropTypes.shape({
-      /** The name of the subject repository. */
-      name: PropTypes.string
-    }),
-    /** The pull request content to render. */
-    title: PropTypes.string,
-    /** The URL to hyperlink to. */
-    url: PropTypes.string
+  status: PropTypes.shape({
+    actionText: PropTypes.string,
+    updated: PropTypes.string,
+    link: PropTypes.string
   })
 }
 
-export default LastPullRequest
+export default UserStatus

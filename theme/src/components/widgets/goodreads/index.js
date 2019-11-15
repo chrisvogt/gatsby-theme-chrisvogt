@@ -1,50 +1,48 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import kebabCase from 'lodash/kebabCase'
+import { Box, Grid } from '@theme-ui/components'
 
 import { getGoodreadsUsername } from '../../../selectors/metadata'
+import useGoodreadsUser from '../../../hooks/use-goodreads-user'
 import useRecentBooks from '../../../hooks/use-recent-books'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
-import BookLink from './book-link'
 import CallToAction from '../call-to-action'
+import UserStatus from './user-status'
+import RecentlyReadBooks from './recently-read-books'
+import UserProfile from './user-profile'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 export default () => {
-  const { isLoading, books } = useRecentBooks()
+  const { isLoadingBooks, books } = useRecentBooks()
+  const { isLoadingUser, user } = useGoodreadsUser()
   const metadata = useSiteMetadata()
+
   const goodreadsUsername = getGoodreadsUsername(metadata)
+  const { profile = {}, updates = [] } = user
+  const status =
+    updates.length > 0
+      ? updates.find(update => update.type === 'userstatus')
+      : {}
 
   return (
     <Widget id='goodreads'>
-      <WidgetHeader>Recently Read Books</WidgetHeader>
+      <WidgetHeader>Goodreads</WidgetHeader>
 
-      <div className='gallery'>
-        {isLoading ? (
-          <span>Loading...</span>
-        ) : (
-          <div
-            sx={{
-              display: `grid`,
-              gridGap: 3,
-              gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
-            }}
-          >
-            {books.map(book => {
-              const { infoLink, smallThumbnail: thumbnailURL, title } = book
-              return (
-                <BookLink
-                  key={kebabCase(title)}
-                  infoLink={infoLink}
-                  thumbnailURL={thumbnailURL}
-                  title={title}
-                />
-              )
-            })}
-          </div>
-        )}
-      </div>
+      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
+        <Box>
+          <UserProfile isLoading={isLoadingUser} profile={profile} />
+        </Box>
+        <Box>
+          <RecentlyReadBooks isLoading={isLoadingBooks} books={books} />
+          <UserStatus
+            isLoading={isLoadingUser}
+            actorName={profile.name}
+            status={status}
+          />
+        </Box>
+      </Grid>
 
       <CallToAction
         title={`${goodreadsUsername} on Goodreads`}

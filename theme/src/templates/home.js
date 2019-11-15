@@ -72,8 +72,8 @@ const HomeTemplate = props => {
       >
         <Container>
           <Posts />
-          <GitHub />
           <Instagram />
+          <GitHub />
           <Goodreads />
         </Container>
       </div>

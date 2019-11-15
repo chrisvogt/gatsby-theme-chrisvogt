@@ -9,7 +9,7 @@ const StatusCard = ({ message }) => (
 
 StatusCard.propTypes = {
   /** The GitHub user's status message. */
-  message: PropTypes.string.isRequired
+  message: PropTypes.string
 }
 
 export default StatusCard

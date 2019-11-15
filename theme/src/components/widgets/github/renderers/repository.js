@@ -4,8 +4,8 @@ import { Flex, Heading } from '@theme-ui/components'
 import ago from 's-ago'
 import PropTypes from 'prop-types'
 
-import CardFooter from '../card-footer'
-import ViewOnGitHub from '../view-on-github'
+import CardFooter from '../../card-footer'
+import ViewExternal from '../../view-external'
 
 const Repository = ({
   description,
@@ -54,7 +54,7 @@ const Repository = ({
     <span sx={{ flexGrow: 1 }}>{description}</span>
 
     <CardFooter>
-      <ViewOnGitHub />
+      <ViewExternal platform='GitHub' />
     </CardFooter>
   </div>
 )
