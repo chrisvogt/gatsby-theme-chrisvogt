@@ -2,9 +2,10 @@ import React from 'react'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default () => (
+export default ({ platform }) => (
   <span>
-    View on GitHub&nbsp;&nbsp;
+    View on {platform}
+    {'  '}
     <FontAwesomeIcon icon={faExternalLinkAlt} />
   </span>
 )
