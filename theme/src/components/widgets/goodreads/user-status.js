@@ -54,6 +54,8 @@ const UserStatus = ({ isLoading, status, actorName }) => {
 }
 
 UserStatus.propTypes = {
+  /** The name of the person the status is about. */
+  actorName: PropTypes.string,
   /** Sets the component in a loading state when true. */
   isLoading: PropTypes.bool,
   /** The pull request on GitHub. */
