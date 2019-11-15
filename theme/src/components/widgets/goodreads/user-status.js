@@ -57,7 +57,11 @@ UserStatus.propTypes = {
   /** Sets the component in a loading state when true. */
   isLoading: PropTypes.bool,
   /** The pull request on GitHub. */
-  status: PropTypes.object
+  status: PropTypes.shape({
+    actionText: PropTypes.string.isRequired,
+    updated: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  })
 }
 
 export default UserStatus
