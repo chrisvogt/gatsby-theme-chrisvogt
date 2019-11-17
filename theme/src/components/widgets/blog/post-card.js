@@ -23,7 +23,7 @@ export default ({ category, date, excerpt, link, title }) => (
     </div>
     <Styled.h4>{title}</Styled.h4>
     <div>
-      <FontAwesomeIcon icon={faCalendarAlt} /> <span>Posted {date}</span>
+      <FontAwesomeIcon icon={faCalendarAlt} /> <span>{date}</span>
     </div>
     <p>{excerpt}</p>
     <div style={{ textAlign: `right` }}>

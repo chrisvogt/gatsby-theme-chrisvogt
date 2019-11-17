@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { Container, jsx, Flex, Styled } from 'theme-ui'
+import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
 import GitHub from '../components/widgets/github'
@@ -80,5 +81,21 @@ const HomeTemplate = props => {
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        avatarURL
+        baseURL
+        description
+        headline
+        subhead
+        title
+        titleTemplate
+      }
+    }
+  }
+`
 
 export default HomeTemplate

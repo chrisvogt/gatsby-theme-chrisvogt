@@ -32,8 +32,7 @@ const PostTemplate = ({ data }) => {
             {mdx.frontmatter.type}
           </Styled.h1>
           <span>
-            <FontAwesomeIcon icon={faCalendarAlt} /> Published{' '}
-            {mdx.frontmatter.date}
+            <FontAwesomeIcon icon={faCalendarAlt} /> {mdx.frontmatter.date}
           </span>
         </Container>
       </Header>
