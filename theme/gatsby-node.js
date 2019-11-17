@@ -38,7 +38,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 
 exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
-  const { createFilePath, createNodeField } = actions
+  const { createNodeField } = actions
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
@@ -58,6 +58,18 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
 
     if (slug === 'index') {
       slug = ''
+    }
+
+    const rePathRoot = /^\/([a-z]*)\//i
+    const match = slug.match(rePathRoot)
+    const [, category] = match
+
+    if (category) {
+      createNodeField({
+        name: `category`,
+        node,
+        value: category
+      })
     }
 
     createNodeField({

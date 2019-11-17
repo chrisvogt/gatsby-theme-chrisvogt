@@ -45,7 +45,8 @@ export default ({ data }) => {
           >
             {posts.map(post => (
               <PostCard
-                createdAt={post.frontmatter.date}
+                category={post.fields.category}
+                date={post.frontmatter.date}
                 excerpt={post.excerpt}
                 key={post.fields.id}
                 link={post.fields.slug}
@@ -66,19 +67,20 @@ export const pageQuery = graphql`
     allMdx {
       edges {
         node {
+          excerpt(pruneLength: 255)
           fields {
+            category
             slug
             id
           }
           frontmatter {
             banner
             categories
-            date
+            date(formatString: "MMMM DD, YYYY")
             description
             slug
             title
           }
-          excerpt(pruneLength: 255)
         }
       }
     }

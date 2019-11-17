@@ -1,7 +1,7 @@
 ---
 slug: '/posts/hello-world'
 date: '2019-10-27T09:00:00.000Z'
-title: 'Hello World'
+title: Hello World
 description: 'This is the Hello World example post document ...'
 categories: ['react']
 keywords: ['react']
@@ -9,6 +9,7 @@ banner: ''
 ---
 
 import { HelloWorld } from './hello-world'
+import { YouTubeEmbed } from '../../../helpers/youtube-embed'
 
 This document showcases features supported by the Private Sphere Gatsby theme. Private Spere is the Gatsby theme made for [my personal website](https://www.chrisvogt.me). The theme is built using:
 
@@ -54,14 +55,7 @@ This theme uses MDX, a Markdown format that supports JSX inside of documents. Us
 
 Embed YouTube videos into posts.
 
-<iframe
-  width='560'
-  height='315'
-  src='https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ'
-  frameborder='0'
-  allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-  allowfullscreen
-></iframe>
+<YouTubeEmbed url='https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ' />
 
 ## Typography
 

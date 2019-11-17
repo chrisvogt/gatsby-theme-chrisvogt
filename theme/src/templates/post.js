@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
@@ -18,15 +21,20 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{mdx.frontmatter.title} | Blog Post</title>
+        <title>{mdx.frontmatter.title} – Blog Post</title>
         <meta name='description' content={mdx.frontmatter.description} />
       </Helmet>
 
       <Header swoopFill={theme.colors.background} styles={{ py: 3 }}>
         <Container>
-          <Styled.h4 as={Heading} sx={{ pt: 3 }}>
-            Blog post
-          </Styled.h4>
+          <Styled.h1 as={Heading} sx={{ pt: 3 }}>
+            {mdx.frontmatter.title}
+            {mdx.frontmatter.type}
+          </Styled.h1>
+          <span>
+            <FontAwesomeIcon icon={faCalendarAlt} /> Published{' '}
+            {mdx.frontmatter.date}
+          </span>
         </Container>
       </Header>
 
@@ -59,8 +67,9 @@ export const pageQuery = graphql`
     mdx(fields: { id: { eq: $id } }) {
       body
       frontmatter {
-        title
+        date(formatString: "MMMM DD, YYYY")
         description
+        title
       }
     }
   }
