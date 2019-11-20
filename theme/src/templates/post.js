@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
@@ -12,8 +13,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
+import YouTube from '../shortcodes/youtube'
 
 import theme from '../gatsby-plugin-theme-ui'
+
+const shortcodes = { YouTube }
 
 const PostTemplate = ({ data }) => {
   const { mdx } = data
@@ -46,7 +50,9 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
         </Container>
       </Flex>
 

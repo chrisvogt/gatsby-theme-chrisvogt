@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 
-export const YouTubeEmbed = ({ title, url }) => (
+const YouTube = ({ title, url }) => (
   <Styled.div className='VideoWrapper'>
     <iframe
       title={title || 'YouTube video'}
@@ -10,7 +10,9 @@ export const YouTubeEmbed = ({ title, url }) => (
       src={url}
       frameBorder='0'
       allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   </Styled.div>
 )
+
+export default YouTube
