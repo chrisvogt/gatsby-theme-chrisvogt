@@ -75,7 +75,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             banner
-            categories
             date(formatString: "MMMM DD, YYYY")
             description
             slug

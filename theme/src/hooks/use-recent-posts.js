@@ -21,7 +21,6 @@ const useRecentPosts = () => {
               }
               frontmatter {
                 banner
-                categories
                 date(formatString: "MMMM DD, YYYY")
                 description
                 slug
