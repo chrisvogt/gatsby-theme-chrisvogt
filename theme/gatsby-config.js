@@ -6,7 +6,7 @@ module.exports = options => {
       avatarURL:
         'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
       title: 'Private Sphere',
-      titleTemplate: '% · Private Sphere',
+      titleTemplate: '%s · Private Sphere',
       headline: 'Private Sphere',
       subhead: 'A Gatsby blog theme with built-in social widgets',
       description: `

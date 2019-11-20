@@ -13,19 +13,19 @@ const useRecentPosts = () => {
         allMdx(limit: 2) {
           edges {
             node {
+              excerpt(pruneLength: 255)
               fields {
+                category
                 id
                 slug
               }
               frontmatter {
                 banner
-                categories
-                date
+                date(formatString: "MMMM DD, YYYY")
                 description
                 slug
                 title
               }
-              excerpt(pruneLength: 255)
             }
           }
         }

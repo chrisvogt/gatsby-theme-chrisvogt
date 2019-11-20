@@ -1,9 +1,8 @@
 ---
 slug: '/posts/hello-world'
 date: '2019-10-27T09:00:00.000Z'
-title: 'Hello World'
+title: Hello World
 description: 'This is the Hello World example post document ...'
-categories: ['react']
 keywords: ['react']
 banner: ''
 ---
@@ -52,16 +51,15 @@ This theme uses MDX, a Markdown format that supports JSX inside of documents. Us
 
 ### Embedded Content
 
-Embed YouTube videos into posts.
+Embed YouTube videos into posts using the `<YouTube />` shortcode.
 
-<iframe
-  width='560'
-  height='315'
-  src='https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ'
-  frameborder='0'
-  allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-  allowfullscreen
-></iframe>
+```jsx
+<YouTube url='https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ' />
+```
+
+Which results in...
+
+<YouTube url='https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ' />
 
 ## Typography
 

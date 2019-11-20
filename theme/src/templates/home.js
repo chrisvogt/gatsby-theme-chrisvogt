@@ -82,8 +82,6 @@ const HomeTemplate = props => {
   )
 }
 
-export default HomeTemplate
-
 export const pageQuery = graphql`
   query {
     site {
@@ -97,24 +95,7 @@ export const pageQuery = graphql`
         titleTemplate
       }
     }
-    allMdx(limit: 2) {
-      edges {
-        node {
-          fields {
-            slug
-            id
-          }
-          frontmatter {
-            title
-            description
-            banner
-            categories
-            date
-            slug
-          }
-          excerpt(pruneLength: 255)
-        }
-      }
-    }
   }
 `
+
+export default HomeTemplate

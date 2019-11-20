@@ -32,6 +32,19 @@ export default ({ children }) => (
           },
           a: {
             transition: `all 0.3s ease-in-out`
+          },
+          '.VideoWrapper': {
+            position: `relative`,
+            paddingBottom: `56.25%` /* 16:9 */,
+            paddingTop: `25px`,
+            height: 0
+          },
+          '.VideoWrapper iframe': {
+            position: `absolute`,
+            top: 0,
+            left: 0,
+            width: `100%`,
+            height: `100%`
           }
         }}
       />

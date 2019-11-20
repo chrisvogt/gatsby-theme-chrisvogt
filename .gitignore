@@ -1,6 +1,7 @@
-node_modules
 .cache
-public
 .DS_Store
-launch.json
 .log
+.vscode
+launch.json
+node_modules
+public

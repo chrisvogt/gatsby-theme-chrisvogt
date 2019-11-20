@@ -4,13 +4,20 @@ import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
+
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
+import YouTube from '../shortcodes/youtube'
 
 import theme from '../gatsby-plugin-theme-ui'
+
+const shortcodes = { YouTube }
 
 const PostTemplate = ({ data }) => {
   const { mdx } = data
@@ -18,15 +25,19 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{mdx.frontmatter.title} | Blog Post</title>
+        <title>{mdx.frontmatter.title} – Blog Post</title>
         <meta name='description' content={mdx.frontmatter.description} />
       </Helmet>
 
       <Header swoopFill={theme.colors.background} styles={{ py: 3 }}>
         <Container>
-          <Styled.h4 as={Heading} sx={{ pt: 3 }}>
-            Blog post
-          </Styled.h4>
+          <Styled.h1 as={Heading} sx={{ pt: 3 }}>
+            {mdx.frontmatter.title}
+            {mdx.frontmatter.type}
+          </Styled.h1>
+          <span>
+            <FontAwesomeIcon icon={faCalendarAlt} /> {mdx.frontmatter.date}
+          </span>
         </Container>
       </Header>
 
@@ -39,7 +50,9 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
         </Container>
       </Flex>
 
@@ -59,8 +72,9 @@ export const pageQuery = graphql`
     mdx(fields: { id: { eq: $id } }) {
       body
       frontmatter {
-        title
+        date(formatString: "MMMM DD, YYYY")
         description
+        title
       }
     }
   }

@@ -111,6 +111,21 @@ export default {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md
   },
+  VideoWrapper: {
+    background: `blue`,
+    border: `3px solid red`,
+    position: `relative`,
+    paddingBottom: `56.25%` /* 16:9 */,
+    paddingTop: `25px`,
+    height: 0
+  },
+  'videoWrapper iframe': {
+    position: `absolute`,
+    top: 0,
+    left: 0,
+    width: `100%`,
+    height: `100%`
+  },
   WidgetHeadline: {
     mb: 3,
     mt: 0,
