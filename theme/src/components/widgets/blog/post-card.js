@@ -9,7 +9,7 @@ export default ({ category, date, excerpt, link, title }) => (
   <Link sx={{ variant: `styles.PostCard` }} to={link}>
     <Styled.h4>{title}</Styled.h4>
     <div>
-      <FontAwesomeIcon icon={faCalendarAlt} /> <span>{date}</span>
+      <FontAwesomeIcon icon={faCalendarAlt} width='16' /> <span>{date}</span>
     </div>
     <p>
       <span

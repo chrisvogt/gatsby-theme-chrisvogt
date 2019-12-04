@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import SwoopBottom from './artwork/swoop-bottom'
 import theme from '../gatsby-plugin-theme-ui'
 
-const Header = ({ children, swoopFill, styles }) => (
+const Header = ({ children, showSwoop, swoopFill, styles }) => (
   <ThemeHeader>
     <div
       sx={{
@@ -15,17 +15,19 @@ const Header = ({ children, swoopFill, styles }) => (
     >
       {children}
     </div>
-    <SwoopBottom fill={theme.colors.background} invert />
+    {showSwoop && <SwoopBottom fill={swoopFill} invert />}
   </ThemeHeader>
 )
 
 Header.propTypes = {
   children: PropTypes.node.isRequired,
+  showSwoop: PropTypes.bool,
   swoopFill: PropTypes.string
 }
 
 Header.defaultProps = {
-  swoopFill: theme.colors.primary
+  showSwoop: false,
+  swoopFill: theme.colors.background
 }
 
 export default Header

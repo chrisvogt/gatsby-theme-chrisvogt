@@ -21,7 +21,7 @@ const HomeTemplate = props => {
 
   return (
     <Layout>
-      <Header>
+      <Header showSwoop={true}>
         <div
           sx={{
             display: [`block`, ``, `grid`],

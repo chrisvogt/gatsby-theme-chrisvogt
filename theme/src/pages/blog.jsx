@@ -20,11 +20,7 @@ export default ({ data }) => {
         <meta name='description' content='Recent articles from my blog.' />
       </Helmet>
 
-      <Header swoopFill={'white'} styles={{ py: 2 }}>
-        <Container>
-          <h1>Blog Posts</h1>
-        </Container>
-      </Header>
+      <Header styles={{ py: 2 }}>&nbsp;</Header>
 
       <Flex
         sx={{
@@ -35,6 +31,7 @@ export default ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
+          <h1>Blog Posts</h1>
           <Styled.div
             sx={{
               display: `grid`,

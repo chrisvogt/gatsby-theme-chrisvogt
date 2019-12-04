@@ -15,8 +15,6 @@ import Footer from '../components/footer'
 import Layout from '../components/layout'
 import YouTube from '../shortcodes/youtube'
 
-import theme from '../gatsby-plugin-theme-ui'
-
 const shortcodes = { YouTube }
 
 const PostTemplate = ({ data }) => {
@@ -29,17 +27,7 @@ const PostTemplate = ({ data }) => {
         <meta name='description' content={mdx.frontmatter.description} />
       </Helmet>
 
-      <Header swoopFill={theme.colors.background} styles={{ py: 3 }}>
-        <Container>
-          <Styled.h1 as={Heading} sx={{ pt: 3 }}>
-            {mdx.frontmatter.title}
-            {mdx.frontmatter.type}
-          </Styled.h1>
-          <span>
-            <FontAwesomeIcon icon={faCalendarAlt} /> {mdx.frontmatter.date}
-          </span>
-        </Container>
-      </Header>
+      <Header styles={{ py: 2 }}>&nbsp;</Header>
 
       <Flex
         sx={{
@@ -50,9 +38,20 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
+          <Styled.h1 as={Heading} sx={{ pt: 3 }}>
+            {mdx.frontmatter.title}
+            {mdx.frontmatter.type}
+          </Styled.h1>
+
+          <time className='created'>
+            <FontAwesomeIcon icon={faCalendarAlt} /> {mdx.frontmatter.date}
+          </time>
+
+          <div className='article-content'>
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer>{mdx.body}</MDXRenderer>
+            </MDXProvider>
+          </div>
         </Container>
       </Flex>
 

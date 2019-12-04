@@ -8,9 +8,10 @@ const Widget = ({ children, id }) => {
   return (
     <div
       sx={{
-        backgroundColor: [`background`, `#fbfbfb`],
-
-        borderLeft: [``, `3px solid #cbd5e0`],
+        backgroundColor: [`background`, `#fdfdfd`],
+        borderLeftWidth: [``, `3px`],
+        borderLeftStyle: `solid`,
+        borderLeftColor: [``, `#9231A7`],
         borderRadius: [``, `2px`],
         borderTop: [``, `1px solid white`],
         boxShadow: [``, theme.shadows.default],

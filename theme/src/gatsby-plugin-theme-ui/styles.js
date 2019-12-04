@@ -100,7 +100,7 @@ export default {
   },
   MetricCard: {
     ...card,
-    borderLeftColor: `accent`,
+    borderLeftColor: `textMuted`,
     span: {
       fontFamily: `heading`,
       fontWeight: `bold`,
