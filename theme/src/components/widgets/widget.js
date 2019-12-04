@@ -10,7 +10,7 @@ const Widget = ({ children, id }) => {
       sx={{
         backgroundColor: [`background`, `#fdfdfd`],
         borderLeftWidth: [``, `3px`],
-        borderLeftStyle: `solid`,
+        borderLeftStyle: [`none`, `solid`],
         borderLeftColor: [``, `#9231A7`],
         borderRadius: [``, `2px`],
         borderTop: [``, `1px solid white`],
