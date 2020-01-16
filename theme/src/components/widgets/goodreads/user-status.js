@@ -22,7 +22,7 @@ const getRatingStars = count => {
 const mapStatusToTemplate = {
   review: ({ book, rating }) =>
     `rated ${book.title} ${rating} out of 5 stars: ${getRatingStars(rating)}.`,
-  userstatus: ({ actionText }) => `${stripHtmlElements(actionText)}`
+  userstatus: ({ actionText }) => stripHtmlElements(actionText)
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
@@ -32,19 +32,9 @@ const UserStatus = ({ isLoading, status, actorName }) => {
 
   const { link, type, updated } = status
 
-  console.log('Mapping text for status...', {
-    status
-  })
-
-  // const statusText = actionText && stripHtmlElements(actionText)
   const statusText = mapStatusToTemplate[type]
     ? mapStatusToTemplate[type](status)
     : 'Loading...'
-
-  console.log({
-    updated,
-    parsed: new Date(updated)
-  })
 
   return (
     <Box>
@@ -84,9 +74,9 @@ const UserStatus = ({ isLoading, status, actorName }) => {
 UserStatus.propTypes = {
   /** The name of the person the status is about. */
   actorName: PropTypes.string,
-  /** Sets the component in a loading state when true. */
+  /** Widget is in a loading state if true. */
   isLoading: PropTypes.bool,
-  /** The pull request on GitHub. */
+  /** The Goodreads user status object. */
   status: PropTypes.shape({
     actionText: PropTypes.string,
     updated: PropTypes.string,
