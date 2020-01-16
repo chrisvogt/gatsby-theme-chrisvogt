@@ -9,14 +9,42 @@ import ViewExternal from '../view-external'
 
 const stripHtmlElements = text => text.replace(/<[^>]+>/g, '')
 
+const getRatingStars = count => {
+  const repeat = (char, n) =>
+    Array(n)
+      .fill(char)
+      .join('')
+  const rating = repeat('★', count) + repeat('☆', 5 - count)
+
+  return rating
+}
+
+const mapStatusToTemplate = {
+  review: ({ book, rating }) =>
+    `rated ${book.title} ${rating} out of 5 stars: ${getRatingStars(rating)}.`,
+  userstatus: ({ actionText }) => `${stripHtmlElements(actionText)}`
+}
+
 const UserStatus = ({ isLoading, status, actorName }) => {
   if (isLoading) {
     return 'Loading...'
   }
 
-  const { actionText, updated, link } = status
+  const { link, type, updated } = status
 
-  const statusText = actionText && stripHtmlElements(actionText)
+  console.log('Mapping text for status...', {
+    status
+  })
+
+  // const statusText = actionText && stripHtmlElements(actionText)
+  const statusText = mapStatusToTemplate[type]
+    ? mapStatusToTemplate[type](status)
+    : 'Loading...'
+
+  console.log({
+    updated,
+    parsed: new Date(updated)
+  })
 
   return (
     <Box>

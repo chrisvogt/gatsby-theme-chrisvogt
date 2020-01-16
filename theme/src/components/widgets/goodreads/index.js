@@ -23,7 +23,9 @@ export default () => {
   const { profile = {}, updates = [] } = user
   const status =
     updates.length > 0
-      ? updates.find(update => update.type === 'userstatus')
+      ? updates.find(
+          update => update.type === 'userstatus' || update.type === 'review'
+        )
       : {}
 
   return (
