@@ -9,14 +9,33 @@ import ViewExternal from '../view-external'
 
 const stripHtmlElements = text => text.replace(/<[^>]+>/g, '')
 
+const getRatingStars = count => {
+  const repeat = (char, n) =>
+    Array(n)
+      .fill(char)
+      .join('')
+
+  const rating = repeat('★', count) + repeat('☆', 5 - count)
+
+  return rating
+}
+
+const mapStatusToTemplate = {
+  review: ({ book, rating }) =>
+    `rated ${book.title} ${rating} out of 5 stars: ${getRatingStars(rating)}.`,
+  userstatus: ({ actionText }) => stripHtmlElements(actionText)
+}
+
 const UserStatus = ({ isLoading, status, actorName }) => {
   if (isLoading) {
     return 'Loading...'
   }
 
-  const { actionText, updated, link } = status
+  const { link, type, updated } = status
 
-  const statusText = actionText && stripHtmlElements(actionText)
+  const statusText = mapStatusToTemplate[type]
+    ? mapStatusToTemplate[type](status)
+    : 'Loading...'
 
   return (
     <Box>
@@ -56,9 +75,9 @@ const UserStatus = ({ isLoading, status, actorName }) => {
 UserStatus.propTypes = {
   /** The name of the person the status is about. */
   actorName: PropTypes.string,
-  /** Sets the component in a loading state when true. */
+  /** Widget is in a loading state if true. */
   isLoading: PropTypes.bool,
-  /** The pull request on GitHub. */
+  /** The Goodreads user status object. */
   status: PropTypes.shape({
     actionText: PropTypes.string,
     updated: PropTypes.string,
