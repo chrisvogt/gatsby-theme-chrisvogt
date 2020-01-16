@@ -14,6 +14,7 @@ const getRatingStars = count => {
     Array(n)
       .fill(char)
       .join('')
+
   const rating = repeat('★', count) + repeat('☆', 5 - count)
 
   return rating
