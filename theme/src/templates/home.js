@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { Container, jsx, Flex, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
 import Footer from '../components/footer'
 import GitHub from '../components/widgets/github'
@@ -21,6 +22,10 @@ const HomeTemplate = props => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
+
       <Header showSwoop={true}>
         <div
           sx={{

@@ -38,20 +38,6 @@
           "title": "Goodreads"
         }
       ]
-    },
-    "footer": [
-      {
-        "path": "https://stats.chrisvogt.me",
-        "slug": "stats",
-        "title": "Chris Vogt's open source stats",
-        "text": "Stats Report"
-      },
-      {
-        "path": "https://resume.chrisvogt.me",
-        "slug": "stackoverflow",
-        "title": "Chris Vogt on StackOverflow",
-        "text": "Developer Story"
-      }
-    ]
+    }
   }
 }

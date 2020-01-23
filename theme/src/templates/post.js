@@ -23,7 +23,7 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{mdx.frontmatter.title} – Blog Post</title>
+        <title>{mdx.frontmatter.title}</title>
         <meta name='description' content={mdx.frontmatter.description} />
       </Helmet>
 

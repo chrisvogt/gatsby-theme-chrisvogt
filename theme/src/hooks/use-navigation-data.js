@@ -14,12 +14,6 @@ const useNavigationData = () => {
           edges {
             node {
               payload {
-                footer {
-                  path
-                  slug
-                  text
-                  title
-                }
                 header {
                   home {
                     path
