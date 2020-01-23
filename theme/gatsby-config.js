@@ -9,9 +9,9 @@ module.exports = options => {
       titleTemplate: '%s · Private Sphere',
       headline: 'Private Sphere',
       subhead: 'A Gatsby blog theme with built-in social widgets',
-      description: `
-Private Sphere is a Gatsby blog theme with built-in Goodreads and GitHub widgets.
-`,
+      description:
+        'Private Sphere is a Gatsby blog theme with built-in Goodreads and GitHub widgets.',
+      footerText: 'Made in San Francisco',
       baseURL: '',
       imageURL: '',
       social: {

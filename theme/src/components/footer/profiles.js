@@ -12,16 +12,21 @@ export default () => {
       sx={{
         alignItems: `right`,
         flex: 1,
-        justifyContent: `space-between`,
-        py: 2
+        justifyContent: [`center`, `flex-end`]
       }}
     >
       {!isLoading &&
         profiles.map(({ IconComponent, profile }) => {
           const { displayName, href, slug } = profile
           return (
-            <a key={slug} href={href} title={displayName} rel='me'>
-              <FontAwesomeIcon icon={IconComponent} size='2x' />
+            <a
+              key={slug}
+              href={href}
+              title={displayName}
+              rel='me'
+              sx={{ mx: 2 }}
+            >
+              <FontAwesomeIcon icon={IconComponent} size='1x' />
             </a>
           )
         })}

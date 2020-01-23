@@ -24,6 +24,7 @@ const useSiteMetadata = () => {
             headline
             description
             baseURL
+            footerText
             subhead
             title
             titleTemplate
