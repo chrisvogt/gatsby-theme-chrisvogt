@@ -2,4 +2,9 @@
 import { jsx } from 'theme-ui'
 import { Fragment } from 'react'
 
-export default () => <Fragment>Made in San Francisco</Fragment>
+import useSiteMetadata from '../../hooks/use-site-metadata'
+
+export default () => {
+  const { footerText } = useSiteMetadata()
+  return <Fragment>{footerText}</Fragment>
+}
