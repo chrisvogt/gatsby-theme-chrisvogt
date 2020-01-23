@@ -3,7 +3,6 @@ import { Container, Footer as ThemeFooter, jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
 
 import Credits from './credits'
-import Navigation from './navigation'
 import Profiles from './profiles'
 import SwoopTop from '../artwork/swoop-top'
 
