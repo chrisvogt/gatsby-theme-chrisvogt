@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-export default async type => {
+export default async widgetId => {
   try {
     const { data: { payload } = {} } = await axios(
       'https://metrics.chrisvogt.me/api/widget-content',
       {
         params: {
-          widget: type
+          widget: widgetId
         }
       }
     )

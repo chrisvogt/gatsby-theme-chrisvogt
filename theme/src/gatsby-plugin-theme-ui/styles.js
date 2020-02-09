@@ -111,6 +111,13 @@ export default {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md
   },
+  TrackPreview: {
+    img: {
+      ...floatOnHover,
+      borderRadius: `4px`,
+      boxShadow: themePreset.shadows.md
+    }
+  },
   VideoWrapper: {
     background: `blue`,
     border: `3px solid red`,

@@ -20,7 +20,7 @@ const GitHubWidget = () => {
   const metadata = useSiteMetadata()
   const githubUsername = getGithubUsername(metadata)
 
-  const { isLoading, content } = useWidgetContent()
+  const { isLoading, content } = useWidgetContent('github')
 
   let pinnedItems = []
   let pullRequest = {}

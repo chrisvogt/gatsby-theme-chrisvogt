@@ -1,0 +1,27 @@
+{
+  "country": "US",
+  "display_name": "artinreality",
+  "explicit_content": {
+    "filter_enabled": false,
+    "filter_locked": false
+  },
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/artinreality"
+  },
+  "followers": {
+    "href": null,
+    "total": 43
+  },
+  "href": "https://api.spotify.com/v1/users/artinreality",
+  "id": "artinreality",
+  "images": [
+    {
+      "height": null,
+      "url": "https://profile-images.scdn.co/images/userprofile/default/88882671c8c71a284cae03d4b6f60d3055f7ccae",
+      "width": null
+    }
+  ],
+  "product": "premium",
+  "type": "user",
+  "uri": "spotify:user:artinreality"
+}
