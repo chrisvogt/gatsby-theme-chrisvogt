@@ -1,18 +1,17 @@
 import { useEffect, useState } from 'react'
 import getWidgetContent from '../api/metrics/get-widget-content'
 
-const useWidgetContent = () => {
-  const type = 'github'
+const useWidgetContent = widgetId => {
   const [content, setContent] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     ;(async () => {
-      const payload = await getWidgetContent(type)
+      const payload = await getWidgetContent(widgetId)
       setContent(payload)
       setIsLoading(false)
     })()
-  }, [])
+  }, [widgetId])
 
   return {
     isLoading,

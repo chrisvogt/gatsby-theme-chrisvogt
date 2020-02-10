@@ -10,6 +10,7 @@ import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
 import Posts from '../components/widgets/blog/posts'
+import Spotify from '../components/widgets/spotify'
 
 import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
 
@@ -80,6 +81,7 @@ const HomeTemplate = props => {
           <Instagram />
           <GitHub />
           <Goodreads />
+          <Spotify />
         </Container>
       </div>
       <Footer />
