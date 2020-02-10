@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-private-sphere",
-  "description": "A personal blog with built-in social widgets for developers and creatives.",
-  "version": "0.7.0",
+  "description": "A personal blog with built-in social widgets for bloggers, creatives, and developers.",
+  "version": "0.7.1",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -12,6 +12,9 @@
     "gatsby-theme-private-sphere",
     "gatsby-theme",
     "gatsby",
+    "github",
+    "goodreads",
+    "spotify",
     "mdx",
     "react",
     "theme-ui"
