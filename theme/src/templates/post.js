@@ -6,7 +6,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 
-import Header from '../components/header'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -25,8 +24,6 @@ const PostTemplate = ({ data }) => {
         description={mdx.frontmatter.description}
         image={mdx.frontmatter.banner}
       />
-
-      <Header styles={{ py: 2 }}>&nbsp;</Header>
 
       <Flex
         sx={{

@@ -82,7 +82,6 @@ export default {
   Header: {
     alignItems: `center`,
     backgroundColor: `secondary`,
-    background: `url(${trianglify})`,
     backgroundPosition: `top`,
     backgroundSize: `cover`,
     color: `white`,
@@ -112,6 +111,9 @@ export default {
   InstagramCard: {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md
+  },
+  TopNavigation: {
+    color: `white`
   },
   TrackPreview: {
     img: {

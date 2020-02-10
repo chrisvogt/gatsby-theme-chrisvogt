@@ -6,7 +6,6 @@ import { graphql } from 'gatsby'
 import { getPosts } from '../hooks/use-recent-posts'
 
 import Footer from '../components/footer'
-import Header from '../components/header'
 import Layout from '../components/layout'
 import PostCard from '../components/widgets/recent-posts/post-card'
 import SEO from '../components/seo'
@@ -19,8 +18,6 @@ export default ({ data }) => {
         title='Recent Blog Posts'
         description='An overview of recent articles posted to my blog'
       />
-
-      <Header styles={{ py: 2 }}>&nbsp;</Header>
 
       <Flex
         sx={{
