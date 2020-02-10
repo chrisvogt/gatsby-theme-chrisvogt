@@ -4,12 +4,21 @@ import PropTypes from 'prop-types'
 
 import SwoopBottom from './artwork/swoop-bottom'
 import theme from '../gatsby-plugin-theme-ui'
+const trianglify = require('./artwork/trianglify.svg')
 
-const Header = ({ children, showSwoop, swoopFill, styles }) => (
-  <ThemeHeader>
+const Header = ({
+  children,
+  hideBackground,
+  hideTopPadding,
+  showSwoop,
+  swoopFill,
+  styles
+}) => (
+  <ThemeHeader sx={{ background: hideBackground ? '' : `url(${trianglify})` }}>
     <div
       sx={{
-        py: 5,
+        pt: hideTopPadding ? 0 : 5,
+        pb: 5,
         ...(styles ? styles : {})
       }}
     >

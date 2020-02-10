@@ -10,7 +10,7 @@ const useRecentPosts = () => {
   const queryResult = useStaticQuery(
     graphql`
       query RecentPosts {
-        allMdx(limit: 2) {
+        allMdx(limit: 2, sort: { order: DESC, fields: [frontmatter___date] }) {
           edges {
             node {
               excerpt(pruneLength: 255)

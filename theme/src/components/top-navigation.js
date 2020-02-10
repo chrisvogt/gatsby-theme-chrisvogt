@@ -7,7 +7,9 @@ import { getTitle } from '../selectors/metadata'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-export default () => {
+const trianglify = require('./artwork/trianglify.svg')
+
+const TopNavigation = ({ hideBackground }) => {
   const metadata = useSiteMetadata()
   const navigation = useNavigationData()
 
@@ -15,9 +17,10 @@ export default () => {
   const title = getTitle(metadata)
 
   return (
-    <Styled.div
+    <div
       sx={{
-        backgroundColor: `white`
+        background: hideBackground ? 'none' : `url(${trianglify})`,
+        variant: `styles.TopNavigation`
       }}
     >
       <Container
@@ -30,7 +33,7 @@ export default () => {
           as={Link}
           to='/'
           sx={{
-            color: `text`,
+            color: `light`,
             display: [`block`, ``, `inline`],
             fontFamily: `heading`,
             fontSize: 2,
@@ -49,12 +52,14 @@ export default () => {
               key={slug}
               to={path}
               title={title}
-              sx={{ mr: 3 }}
+              sx={{ color: `light`, mr: 3 }}
             >
               {text}
             </Styled.a>
           ))}
       </Container>
-    </Styled.div>
+    </div>
   )
 }
+
+export default TopNavigation

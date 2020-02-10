@@ -82,7 +82,6 @@ export default {
   Header: {
     alignItems: `center`,
     backgroundColor: `secondary`,
-    background: `url(${trianglify})`,
     backgroundPosition: `top`,
     backgroundSize: `cover`,
     color: `white`,
@@ -92,7 +91,9 @@ export default {
   },
   PostCard: {
     ...floatOnHover,
-    ...card
+    ...card,
+    display: `flex`,
+    flexDirection: `column`
   },
   RepositoryCard: {
     ...floatOnHover,
@@ -110,6 +111,9 @@ export default {
   InstagramCard: {
     ...floatOnHover,
     boxShadow: themePreset.shadows.md
+  },
+  TopNavigation: {
+    color: `white`
   },
   TrackPreview: {
     img: {
@@ -132,6 +136,21 @@ export default {
     left: 0,
     width: `100%`,
     height: `100%`
+  },
+  Widget: {
+    backgroundColor: `background`,
+    borderLeftWidth: [``, `3px`],
+    borderLeftStyle: [`none`, `solid`],
+    borderLeftColor: [``, `#9231A7`],
+    borderRadius: [``, `3px`],
+    borderTop: [``, `1px solid white`],
+    boxShadow: [``, themePreset.shadows.default],
+    mb: [3, 4],
+    px: [0, 3, 4],
+    py: [0, 3],
+    '&:not(:last-of-type)': {
+      borderBottom: [`2px solid #f9f9f9`, `1px solid white`]
+    }
   },
   WidgetHeadline: {
     mb: 3,

@@ -42,12 +42,13 @@ export default () => {
         >
           {posts.map(post => (
             <PostCard
+              category={post.fields.category}
               date={post.frontmatter.date}
               excerpt={post.excerpt}
               key={post.fields.id}
               link={post.fields.slug}
               title={post.frontmatter.title}
-              category={post.fields.category}
+              banner={post.frontmatter.banner}
             />
           ))}
         </Grid>

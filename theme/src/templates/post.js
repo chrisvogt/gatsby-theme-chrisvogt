@@ -2,17 +2,13 @@
 import { Container, Flex, jsx, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
-import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import Header from '../components/header'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import YouTube from '../shortcodes/youtube'
 
 const shortcodes = { YouTube }
@@ -22,12 +18,12 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>{mdx.frontmatter.title}</title>
-        <meta name='description' content={mdx.frontmatter.description} />
-      </Helmet>
-
-      <Header styles={{ py: 2 }}>&nbsp;</Header>
+      <SEO
+        article={true}
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.description}
+        image={mdx.frontmatter.banner}
+      />
 
       <Flex
         sx={{
@@ -38,14 +34,12 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <Styled.h1 as={Heading} sx={{ pt: 3 }}>
+          <time className='created'>{mdx.frontmatter.date}</time>
+
+          <Styled.h1 as={Heading}>
             {mdx.frontmatter.title}
             {mdx.frontmatter.type}
           </Styled.h1>
-
-          <time className='created'>
-            <FontAwesomeIcon icon={faCalendarAlt} /> {mdx.frontmatter.date}
-          </time>
 
           <div className='article-content'>
             <MDXProvider components={shortcodes}>
@@ -71,6 +65,7 @@ export const pageQuery = graphql`
     mdx(fields: { id: { eq: $id } }) {
       body
       frontmatter {
+        banner
         date(formatString: "MMMM DD, YYYY")
         description
         title

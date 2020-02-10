@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { Container, jsx, Flex, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import Footer from '../components/footer'
 import GitHub from '../components/widgets/github'
@@ -9,8 +8,10 @@ import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
-import Posts from '../components/widgets/blog/posts'
+import RecentPosts from '../components/widgets/recent-posts'
+import SEO from '../components/seo'
 import Spotify from '../components/widgets/spotify'
+import TopNavigation from '../components/top-navigation'
 
 import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
 
@@ -22,14 +23,15 @@ const HomeTemplate = props => {
   const subhead = getSubhead(siteMetadata)
 
   return (
-    <Layout>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
+    <Layout hideNavigation>
+      <SEO title='Home' />
 
-      <Header showSwoop={true}>
+      <Header showSwoop hideTopPadding>
+        <TopNavigation hideBackground />
+
         <div
           sx={{
+            mt: 5,
             display: [`block`, ``, `grid`],
             gridGap: 0,
             gridTemplateColumns: [``, ``, `1fr 60%`],
@@ -77,7 +79,7 @@ const HomeTemplate = props => {
         }}
       >
         <Container>
-          <Posts />
+          <RecentPosts />
           <Instagram />
           <GitHub />
           <Goodreads />

@@ -2,25 +2,22 @@
 import { Container, jsx, Styled } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
 
 import { getPosts } from '../hooks/use-recent-posts'
 
 import Footer from '../components/footer'
-import Header from '../components/header'
 import Layout from '../components/layout'
-import PostCard from '../components/widgets/blog/post-card'
+import PostCard from '../components/widgets/recent-posts/post-card'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   const posts = getPosts(data)
   return (
     <Layout>
-      <Helmet>
-        <title>Blog</title>
-        <meta name='description' content='Recent articles from my blog.' />
-      </Helmet>
-
-      <Header styles={{ py: 2 }}>&nbsp;</Header>
+      <SEO
+        title='Recent Blog Posts'
+        description='An overview of recent articles posted to my blog'
+      />
 
       <Flex
         sx={{
@@ -42,6 +39,7 @@ export default ({ data }) => {
           >
             {posts.map(post => (
               <PostCard
+                banner={post.frontmatter.banner}
                 category={post.fields.category}
                 date={post.frontmatter.date}
                 excerpt={post.excerpt}
@@ -61,7 +59,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query QueryRecentPosts {
-    allMdx {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 255)
