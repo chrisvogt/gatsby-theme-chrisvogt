@@ -9,7 +9,7 @@ import Goodreads from '../components/widgets/goodreads'
 import Header from '../components/header'
 import Instagram from '../components/widgets/instagram'
 import Layout from '../components/layout'
-import Posts from '../components/widgets/blog/posts'
+import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
 
 import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
@@ -77,7 +77,7 @@ const HomeTemplate = props => {
         }}
       >
         <Container>
-          <Posts />
+          <RecentPosts />
           <Instagram />
           <GitHub />
           <Goodreads />

@@ -3,7 +3,6 @@ import { Fragment } from 'react'
 import { Global } from '@emotion/core'
 import { jsx, Styled, ThemeProvider } from 'theme-ui'
 
-import SEO from './seo'
 import TopNavigation from './top-navigation'
 
 import theme from '../gatsby-plugin-theme-ui'
@@ -48,7 +47,6 @@ export default ({ children }) => (
           }
         }}
       />
-      <SEO />
       <TopNavigation />
       {children}
     </Styled.root>
