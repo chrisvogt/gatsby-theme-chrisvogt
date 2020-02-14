@@ -1,10 +1,14 @@
-# Private Sphere
+<img src="https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/hero.png" alt="Theme hero artwork" />
+
+<br />
+
+# Private Sphere – a GatsbyJS theme
 
 This is the monorepo for the Gatsby theme used by my personal blog at [www.chrisvogt.me](https://www.chrisvogt.me). This theme only includes the React client. You must provide your own data source to use the social widgets. Examples of the expected data structure can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
 
 ## To install on a blog
 
-Find the theme intall instructions in [the theme's README](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/README.md).
+Find the theme install instructions in [the theme's README](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/README.md).
 
 ## To develop the theme
 
