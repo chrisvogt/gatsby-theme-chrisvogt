@@ -96,7 +96,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         avatarURL
-        baseURL
         description
         headline
         subhead

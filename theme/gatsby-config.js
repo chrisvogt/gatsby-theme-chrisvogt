@@ -1,5 +1,8 @@
 const path = require('path')
 
+const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
+const gatsbyPluginMdx = require('./plugins/gatsby-plugin-mdx.config')
+
 module.exports = options => {
   return {
     siteMetadata: {
@@ -12,7 +15,7 @@ module.exports = options => {
       description:
         'Private Sphere is a Gatsby blog theme with built-in Goodreads and GitHub widgets.',
       footerText: 'Made in San Francisco',
-      baseURL: '',
+      baseURL: 'https://www.privatesphere.io',
       imageURL: '',
       social: {
         github: {
@@ -60,23 +63,10 @@ module.exports = options => {
           name: `content`
         }
       },
+      gatsbyPluginFeedConfig,
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
-      {
-        resolve: 'gatsby-plugin-mdx',
-        options: {
-          gatsbyRemarkPlugins: [
-            `gatsby-remark-prismjs`,
-            `gatsby-remark-images`,
-            `gatsby-remark-copy-linked-files`
-          ],
-          plugins: [
-            // FIX(cvogt): this plugin is defined here as a temporary fix for the bug
-            // described in gatsbyjs/gatsby#15486
-            `gatsby-remark-images`
-          ]
-        }
-      },
+      gatsbyPluginMdx,
       'gatsby-plugin-emotion',
       'gatsby-plugin-react-helmet',
       'gatsby-theme-style-guide',
