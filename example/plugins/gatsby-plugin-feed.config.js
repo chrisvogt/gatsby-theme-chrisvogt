@@ -21,6 +21,7 @@ module.exports = {
               category: edge.node.fields.category,
               date: edge.node.frontmatter.date,
               description: edge.node.excerpt,
+              feed_url: site.siteMetadata.baseUrl + '/rss.xml',
               guid: site.siteMetadata.baseURL + edge.node.fields.slug,
               ...(hasImage ? { image: edge.node.frontmatter.banner } : {}),
               url: site.siteMetadata.baseURL + edge.node.fields.slug
@@ -50,7 +51,7 @@ module.exports = {
           }
         `,
         output: '/rss.xml',
-        title: "Chris Vogt's RSS Feed – CHRISVOGT.me"
+        title: 'Gatsby Theme Private Sphere RSS Feed'
       }
     ]
   }

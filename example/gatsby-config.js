@@ -1,3 +1,5 @@
+const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
+
 module.exports = {
   siteMetadata: {
     description:
@@ -24,6 +26,7 @@ module.exports = {
     {
       resolve: 'gatsby-theme-private-sphere',
       options: {}
-    }
+    },
+    gatsbyPluginFeedConfig
   ]
 }

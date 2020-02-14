@@ -1,6 +1,5 @@
 const path = require('path')
 
-const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 const gatsbyPluginMdx = require('./plugins/gatsby-plugin-mdx.config')
 
 module.exports = options => {
@@ -63,7 +62,6 @@ module.exports = options => {
           name: `content`
         }
       },
-      gatsbyPluginFeedConfig,
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
       gatsbyPluginMdx,
