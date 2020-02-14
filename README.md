@@ -32,4 +32,4 @@ The example site build will be output to `/example/public`.
 
 ## Copyright & License
 
-Copyright (c) 2019 [Chris Vogt](https://www.chrisvogt.me) - Released under the [MIT license](LICENSE).
+Copyright © 2019-2020 [Chris Vogt](https://www.chrisvogt.me) - Released under the [MIT license](LICENSE).

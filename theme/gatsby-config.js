@@ -1,7 +1,5 @@
 const path = require('path')
 
-const gatsbyPluginMdx = require('./plugins/gatsby-plugin-mdx.config')
-
 module.exports = options => {
   return {
     siteMetadata: {
@@ -64,7 +62,21 @@ module.exports = options => {
       },
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
-      gatsbyPluginMdx,
+      {
+        resolve: 'gatsby-plugin-mdx',
+        options: {
+          gatsbyRemarkPlugins: [
+            `gatsby-remark-prismjs`,
+            `gatsby-remark-images`,
+            `gatsby-remark-copy-linked-files`
+          ],
+          plugins: [
+            // FIX(cvogt): this plugin is defined here as a temporary fix for the bug
+            // described in gatsbyjs/gatsby#15486
+            `gatsby-remark-images`
+          ]
+        }
+      },
       'gatsby-plugin-emotion',
       'gatsby-plugin-react-helmet',
       'gatsby-theme-style-guide',
