@@ -19,7 +19,7 @@ export default ({ banner, date, excerpt, link, title }) => (
         <img
           alt='post thumbnail'
           src={banner}
-          sx={{ borderRadius: `4px`, width: `100px` }}
+          sx={{ borderRadius: `4px`, ml: 2 }}
         />
       )}
     </div>

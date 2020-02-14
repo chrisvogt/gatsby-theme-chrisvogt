@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-private-sphere",
   "description": "A personal blog with built-in social widgets for bloggers, creatives, and developers.",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -67,6 +67,7 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-emotion": "^4.1.4",
+    "gatsby-plugin-feed": "^2.3.27",
     "gatsby-plugin-manifest": "^2.2.15",
     "gatsby-plugin-mdx": "^1.0.31",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",

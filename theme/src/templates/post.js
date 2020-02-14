@@ -34,7 +34,9 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <time className='created'>{mdx.frontmatter.date}</time>
+          <time className='created' sx={{ color: `textMuted` }}>
+            {mdx.frontmatter.date}
+          </time>
 
           <Styled.h1 as={Heading}>
             {mdx.frontmatter.title}

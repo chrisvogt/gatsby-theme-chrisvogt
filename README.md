@@ -1,13 +1,35 @@
-# Private Sphere Gatsby Theme
+# Private Sphere
 
-This is the monorepo for the Gatsby theme `gatsby-theme-private-sphere`, a blog theme built to be my personal blog, hosted at [www.chrisvogt.me](https://www.chrisvogt.me). It is possible to use Gatsby [theme shadowing](https://www.gatsbyjs.org/docs/theme-api/#shadowing) to override the styles, content, and components of this theme; however, you will need to provide your own data. Data for the social widgets must be available via URL. Examples of the expected response structure can be found in [/theme/**mocks**](/theme/__mocks__).
+This is the monorepo for the Gatsby theme used by my personal blog at [www.chrisvogt.me](https://www.chrisvogt.me). This theme only includes the React client. You must provide your own data source to use the social widgets. Examples of the expected data structure can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
 
-## How To Use
+## To install on a blog
 
-This repository contains the theme and an example website, using [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/). This setup is intended for contributors to the theme and allows you to view the example website content while working in the theme source files.
+Find the theme intall instructions in [the theme's README](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/README.md).
 
-If you are looking for information on how to use this theme, check out the [theme README](theme/README.md) document.
+## To develop the theme
+
+This repository is a [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) containing the theme and an example website.
+
+To install, use Yarn. From the root, do:
+
+```sh
+yarn
+```
+
+To work on the theme, open the `/theme` directory in an editor and run the following command to preview the example website.
+
+```sh
+yarn workspace example develop
+```
+
+To build the example website, run the following.
+
+```sh
+yarn workspace example build
+```
+
+The example site build will be output to `/example/public`.
 
 ## Copyright & License
 
-Copyright (c) 2019 [Chris Vogt](https://www.chrisvogt.me) - Released under the [MIT license](LICENSE).
+Copyright © 2019-2020 [Chris Vogt](https://www.chrisvogt.me) - Released under the [MIT license](LICENSE).

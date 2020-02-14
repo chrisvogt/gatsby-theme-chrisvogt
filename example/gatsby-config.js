@@ -1,10 +1,12 @@
+const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
+
 module.exports = {
   siteMetadata: {
     description:
       'A gatsby blog theme with built-in recently read and GitHub plugins.',
-    footerText: '© chrisvogt.me',
-    baseURL: '', // NOTE(cvogt): no trailing slash
-    imageURL: '/images/snape.jpg',
+    footerText: '© 2020 Chris Vogt',
+    baseURL: 'http://127.0.0.1:8080',
+    imageURL: '',
     social: {
       github: {
         username: 'chrisvogt'
@@ -24,6 +26,7 @@ module.exports = {
     {
       resolve: 'gatsby-theme-private-sphere',
       options: {}
-    }
+    },
+    gatsbyPluginFeedConfig
   ]
 }

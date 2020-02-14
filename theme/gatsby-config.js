@@ -12,7 +12,7 @@ module.exports = options => {
       description:
         'Private Sphere is a Gatsby blog theme with built-in Goodreads and GitHub widgets.',
       footerText: 'Made in San Francisco',
-      baseURL: '',
+      baseURL: 'https://www.privatesphere.io',
       imageURL: '',
       social: {
         github: {
