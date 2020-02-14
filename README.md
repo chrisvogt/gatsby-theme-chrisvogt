@@ -1,10 +1,22 @@
 <img src="https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/hero.png" alt="Theme hero artwork" />
 
-<br />
-
 # Private Sphere – a GatsbyJS theme
 
-This is the monorepo for the Gatsby theme used by my personal blog at [www.chrisvogt.me](https://www.chrisvogt.me). This theme only includes the React client. You must provide your own data source to use the social widgets. Examples of the expected data structure can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
+Private Sphere is the Gatsby theme for my personal blog and website, [www.chrisvogt.me](https://www.chrisvogt.me). It is a platform for me to publish feeds of my online activity, links to my social profiles, photography galleries that I create, and blog posts about my creative and coding endeavors.
+
+## Widgets
+
+This theme comes with a collection of Home page widgets that render content from social networks and services.
+
+| Name           | Description                                   | Screenshot                                                                                                                             |
+| -------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Blog Posts     | Recent blog articles                          | ![Widget: Blog Posts](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-blog.png)     |
+| Instagram Feed | Recent Instagram posts                        | ![Widget: Instagram](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-instagram.jpg) |
+| GitHub         | Recent activity, pinned repositories, metrics | ![Widget: GitHub](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-github.png)       |
+| Goodreads      | Recently read books, recent activity, metrics | ![Widget: Goodreads](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-goodreads.png) |
+| Spotify        | Top tracks, metrics                           | ![Widget: Spotify](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-spotify.png)     |
+
+> NOTE: Private Sphere only includes the client. You will need to supply your own REST endpoints for widgets to fetch data from. The expected response structure can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
 
 ## To install on a blog
 
