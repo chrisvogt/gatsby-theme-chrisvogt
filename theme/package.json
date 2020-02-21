@@ -90,6 +90,7 @@
     "prop-types": "^15.7.2",
     "react-helmet": "^5.2.1",
     "react-placeholder": "^3.0.2",
+    "react-visibility-sensor": "^5.1.1",
     "s-ago": "^2.1.0",
     "theme-ui": "^0.2.36"
   }
