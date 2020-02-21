@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
 
 import { getInstagramUsername } from '../../../selectors/metadata'
@@ -7,6 +7,7 @@ import useInstagramPosts from '../../../hooks/use-instagram-posts'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
+import LazyLoad from '../../lazy-load'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
@@ -35,7 +36,7 @@ export default () => {
                 link
               } = post
               return (
-                <a
+                <Styled.a
                   key={id}
                   href={link}
                   style={{ lineHeight: 0 }}
@@ -46,18 +47,21 @@ export default () => {
                     variant: `styles.InstagramCard`
                   }}
                 >
-                  <img
-                    src={url}
-                    height={height}
-                    width={width}
-                    alt='Instagram post thumbnail'
-                    sx={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover'
-                    }}
-                  />
-                </a>
+                  <LazyLoad>
+                    <img
+                      crossOrigin='anonymous'
+                      src={url}
+                      height={height}
+                      width={width}
+                      alt='Instagram post'
+                      sx={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                      }}
+                    />
+                  </LazyLoad>
+                </Styled.a>
               )
             })}
         </Grid>
