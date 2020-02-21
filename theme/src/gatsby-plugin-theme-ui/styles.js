@@ -90,7 +90,6 @@ export default {
   },
   Container: {
     ...themePreset.Container,
-    maxWidth: [``, `94%`, ``, ``, `1200px`],
     py: [2, 3],
     px: [3, 4]
   },

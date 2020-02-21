@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, Footer as ThemeFooter, jsx } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
 
 import Credits from './credits'
@@ -9,7 +9,7 @@ import SwoopTop from '../artwork/swoop-top'
 import theme from '../../gatsby-plugin-theme-ui'
 
 export default () => (
-  <ThemeFooter sx={{ variant: `styles.Footer` }}>
+  <div sx={{ variant: `styles.Footer` }}>
     <SwoopTop fill={theme.colors.background} />
     <Container>&nbsp;</Container>
     <Container>
@@ -22,5 +22,5 @@ export default () => (
         </Box>
       </Grid>
     </Container>
-  </ThemeFooter>
+  </div>
 )

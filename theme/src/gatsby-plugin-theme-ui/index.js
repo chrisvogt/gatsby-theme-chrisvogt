@@ -12,6 +12,13 @@ export default {
     ...themePreset.fonts,
     heading: 'Domine, serif'
   },
+  layout: {
+    container: {
+      maxWidth: [``, `94%`, ``, ``, `1200px`],
+      py: [2, 3],
+      px: [3, 4]
+    }
+  },
   styles: {
     ...themePreset.styles,
     ...styles
