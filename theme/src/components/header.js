@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Header as ThemeHeader, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
 import SwoopBottom from './artwork/swoop-bottom'
@@ -14,7 +14,12 @@ const Header = ({
   swoopFill,
   styles
 }) => (
-  <ThemeHeader sx={{ background: hideBackground ? '' : `url(${trianglify})` }}>
+  <div
+    sx={{
+      variant: `styles.Header`,
+      background: hideBackground ? '' : `url(${trianglify})`
+    }}
+  >
     <div
       sx={{
         pt: hideTopPadding ? 0 : 5,
@@ -25,7 +30,7 @@ const Header = ({
       {children}
     </div>
     {showSwoop && <SwoopBottom fill={swoopFill} invert />}
-  </ThemeHeader>
+  </div>
 )
 
 Header.propTypes = {
