@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Flex } from 'theme-ui'
+import { Fragment } from 'react'
+import { jsx } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import useSocialProfiles from '../../hooks/use-social-profiles'
@@ -7,14 +8,7 @@ import useSocialProfiles from '../../hooks/use-social-profiles'
 export default () => {
   const { isLoading, profiles } = useSocialProfiles()
   return (
-    <Flex
-      as='nav'
-      sx={{
-        alignItems: `right`,
-        flex: 1,
-        justifyContent: [`center`, `flex-end`]
-      }}
-    >
+    <Fragment>
       {!isLoading &&
         profiles.map(({ IconComponent, profile }) => {
           const { displayName, href, slug } = profile
@@ -26,10 +20,10 @@ export default () => {
               rel='me'
               sx={{ mx: 2 }}
             >
-              <FontAwesomeIcon icon={IconComponent} size='1x' />
+              <FontAwesomeIcon icon={IconComponent} size='lg' />
             </a>
           )
         })}
-    </Flex>
+    </Fragment>
   )
 }

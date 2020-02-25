@@ -26,7 +26,7 @@ export default () => {
   }
   return (
     <Widget id='posts'>
-      <Heading sx={{ variant: `styles.WidgetHeadline` }}>Blog Posts</Heading>
+      <Heading sx={{ variant: `styles.WidgetHeadline` }}>Blog</Heading>
       <div sx={{ width: `100%` }}>
         <Grid
           sx={{
@@ -54,7 +54,7 @@ export default () => {
         </Grid>
       </div>
       <CallToAction title='View all blog posts' to='/blog'>
-        View blog posts &raquo;
+        Blog posts &rarr;
       </CallToAction>
     </Widget>
   )
