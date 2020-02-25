@@ -12,7 +12,7 @@ export default ({ banner, date, excerpt, link, title }) => (
 
     <div sx={{ display: `flex`, flexGrow: 1, mt: 0, mb: 1 }}>
       <span>
-        {excerpt} <em>Read more &raquo;</em>
+        {excerpt} <em>Read more &rarr;</em>
       </span>
 
       {banner && (

@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <Widget id='instagram'>
-      <WidgetHeader>Instagram Posts</WidgetHeader>
+      <WidgetHeader>Instagram</WidgetHeader>
 
       <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}
@@ -69,7 +69,7 @@ export default () => {
           title={`${instagramUsername} on Instagram`}
           url={`https://www.instagram.com/${instagramUsername}`}
         >
-          View Instagram profile &raquo;
+          Instagram profile &rarr;
         </CallToAction>
       </div>
     </Widget>

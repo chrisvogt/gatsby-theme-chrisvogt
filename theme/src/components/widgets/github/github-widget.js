@@ -50,7 +50,7 @@ const GitHubWidget = () => {
         title={`${githubUsername} on GitHub`}
         url={`https://www.github.com/${githubUsername}`}
       >
-        View GitHub profile &raquo;
+        GitHub profile &rarr;
       </CallToAction>
     </Widget>
   )

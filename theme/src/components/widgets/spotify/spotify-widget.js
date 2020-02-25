@@ -37,7 +37,7 @@ const SpotifyWidget = () => {
         title={`${profileDisplayName} on ${providerDisplayName}`}
         url={profileURL}
       >
-        View {providerDisplayName} profile &raquo;
+        {providerDisplayName} profile &rarr;
       </CallToAction>
     </Widget>
   )

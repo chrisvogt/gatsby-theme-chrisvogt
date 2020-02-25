@@ -8,25 +8,25 @@ import useRecentBooks from '../../../hooks/use-recent-books'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
-import UserStatus from './user-status'
 import RecentlyReadBooks from './recently-read-books'
 import UserProfile from './user-profile'
+import UserStatus from './user-status'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
+
+const getStatusFromUpdates = updates =>
+  updates.length > 0
+    ? updates.find(({ type }) => type === 'userstatus' || type === 'review')
+    : {}
 
 export default () => {
   const { isLoadingBooks, books } = useRecentBooks()
   const { isLoadingUser, user } = useGoodreadsUser()
-  const metadata = useSiteMetadata()
-
-  const goodreadsUsername = getGoodreadsUsername(metadata)
   const { profile = {}, updates = [] } = user
-  const status =
-    updates.length > 0
-      ? updates.find(
-          update => update.type === 'userstatus' || update.type === 'review'
-        )
-      : {}
+  const status = getStatusFromUpdates(updates)
+  const metadata = useSiteMetadata()
+  const goodreadsUsername = getGoodreadsUsername(metadata)
+  const profileURL = `https://www.goodreads.com/${goodreadsUsername}`
 
   return (
     <Widget id='goodreads'>
@@ -39,8 +39,8 @@ export default () => {
         <Box>
           <RecentlyReadBooks isLoading={isLoadingBooks} books={books} />
           <UserStatus
-            isLoading={isLoadingUser}
             actorName={profile.name}
+            isLoading={isLoadingUser}
             status={status}
           />
         </Box>
@@ -48,9 +48,9 @@ export default () => {
 
       <CallToAction
         title={`${goodreadsUsername} on Goodreads`}
-        url={`https://www.goodreads.com/${goodreadsUsername}`}
+        url={profileURL}
       >
-        View Goodreads profile &raquo;
+        Goodreads profile &rarr;
       </CallToAction>
     </Widget>
   )
