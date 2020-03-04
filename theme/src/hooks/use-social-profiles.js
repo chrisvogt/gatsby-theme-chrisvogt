@@ -10,6 +10,7 @@ const useSocialProfiles = () => {
       const profilesResponse = await getSocialProfiles()
       const profilesAndIcons = profilesResponse.map(profile => {
         const { icon: { reactIcon } = {} } = profile
+
         const IconComponent = require('@fortawesome/free-brands-svg-icons')[
           reactIcon
         ]

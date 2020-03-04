@@ -32,6 +32,41 @@ export default ({ children, hideNavigation }) => (
           a: {
             transition: `all 0.3s ease-in-out`
           },
+          table: {
+            width: `100%`,
+            textAlign: `left`,
+            th: {
+              background: theme.colors.dark,
+              color: theme.colors.light,
+              padding: theme.space[3],
+              textAlign: `left`
+            },
+            'tr th:first-of-type': {
+              borderLeft: `0`,
+              borderTopLeftRadius: `8px`
+            },
+            'tr th:last-of-type': {
+              borderRight: `0`,
+              borderTopRightRadius: `8px`
+            },
+            'tr td': {
+              borderBottom: `1px dotted ${theme.colors.muted}`,
+              padding: theme.space[3]
+            },
+            'tr:last-of-type td': {
+              borderBottom: `2px solid ${theme.colors.dark}`
+            },
+            'tbody tr td:first-of-type': {
+              borderLeft: `2px solid ${theme.colors.dark}`,
+              borderRight: `1px solid ${theme.colors.muted}`
+            },
+            'tbody tr td:last-of-type': {
+              borderRight: `2px solid ${theme.colors.dark}`
+            }
+          },
+          '.footnotes': {
+            fontSize: theme.sizes[3]
+          },
           '.text-center': {
             textAlign: `center`
           },
