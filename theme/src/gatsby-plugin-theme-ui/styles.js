@@ -43,27 +43,6 @@ export default {
       color: themePreset.colors.muted
     }
   },
-  table: {
-    width: `100%`,
-    textAlign: `left`,
-    th: {
-      background: themePreset.colors.dark,
-      color: themePreset.colors.light,
-      padding: themePreset.space[3],
-      textAlign: `left`
-    },
-    'tr th:first-of-type': {
-      borderLeft: `0`,
-      borderTopLeftRadius: `8px`
-    },
-    'tr th:last-of-type': {
-      borderRight: `0`,
-      borderTopRightRadius: `8px`
-    },
-    'tr td': {
-      padding: themePreset.space[3]
-    }
-  },
   GitHub: {
     backgroundColor: `primary`
   },

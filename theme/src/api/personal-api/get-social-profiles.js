@@ -1,15 +1,15 @@
 import axios from 'axios'
 
-// NOTE(cvogt): the current sorting below is fragile and will not scale.
-// Consider whether this really needs to support non-determanistic order.
 const getProfiles = response => {
   const [profilesResponse, metaResponse] = response
   const { data: { result: { profiles = [] } = {} } = {} } = profilesResponse
   const { data: { result: { metas = [] } = {} } = {} } = metaResponse
   const order = metas.find(meta => meta.key === 'socialProfilesOrder').order
-  const sortedMetas = order.map((meta, index) => profiles[index])
+  const sortedProfiles = order
+    .map((meta, index) => profiles[index])
+    .filter(Boolean)
 
-  return sortedMetas
+  return sortedProfiles
 }
 
 export default async () => {
