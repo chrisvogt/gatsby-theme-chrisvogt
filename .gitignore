@@ -1,0 +1,7 @@
+.cache
+.DS_Store
+.log
+.vscode
+launch.json
+node_modules
+public
