@@ -55,6 +55,8 @@ export default {
   },
   footer: {
     background: `url(${trianglify})`,
+    backgroundSize: `cover`,
+    backgroundPosition: `top center`,
     color: `light`,
     a: {
       color: `white`
@@ -81,8 +83,6 @@ export default {
   Header: {
     alignItems: `center`,
     backgroundColor: `secondary`,
-    backgroundPosition: `top`,
-    backgroundSize: `cover`,
     color: `white`,
     display: `block`,
     transition: `all 0.3s ease-in-out`,
