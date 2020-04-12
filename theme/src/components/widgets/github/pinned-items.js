@@ -24,7 +24,7 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
           display: 'grid',
           gridAutoRows: '1fr',
           gridGap: '1rem',
-          gridTemplateColumns: ['', '', 'repeat(2, 1fr)']
+          gridTemplateColumns: ['', '', '', 'repeat(2, 1fr)']
         }}
       >
         {items.map((item, index) => (
