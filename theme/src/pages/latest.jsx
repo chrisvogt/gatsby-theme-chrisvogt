@@ -15,8 +15,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title='Recent Blog Posts'
-        description='An overview of recent articles posted to my blog'
+        title='Latest Content and Blog Posts'
+        description='A list of the most recent content posted to my website'
       />
 
       <Flex
@@ -28,7 +28,7 @@ export default ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <h1>Blog Posts</h1>
+          <h1>Latest Content</h1>
           <Styled.div
             sx={{
               display: `grid`,
