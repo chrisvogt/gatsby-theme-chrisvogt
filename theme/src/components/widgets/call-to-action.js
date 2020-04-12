@@ -13,7 +13,7 @@ const CallToAction = ({ children, title, to, url }) => {
   return (
     <p
       sx={{
-        marginBottom: `1rem`,
+        marginBottom: [``, `1rem`],
         marginTop: 4,
         variant: `styles.WidgetFooter`
       }}

@@ -110,7 +110,7 @@ export default {
   },
   MetricCard: {
     ...card,
-    borderLeftColor: `textMuted`,
+    borderLeftColor: `text`,
     span: {
       fontFamily: `heading`,
       fontWeight: `bold`,
@@ -148,13 +148,11 @@ export default {
   },
   Widget: {
     backgroundColor: `background`,
-    borderLeftWidth: [``, `3px`],
-    borderLeftStyle: [`none`, `solid`],
-    borderLeftColor: [``, `#9231A7`],
     borderRadius: [``, `3px`],
     borderTop: [``, `1px solid #efefef`],
     borderRight: [``, `1px solid #efefef`],
     borderBottom: [`2px solid #f9f9f9`, `1px solid #eaeaea`],
+    borderLeft: [``, `1px solid #efefef`],
     mb: [3, 4],
     px: [0, 3, 4],
     py: [0, 3],
