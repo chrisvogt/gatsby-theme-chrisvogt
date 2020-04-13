@@ -18,7 +18,8 @@ const Header = ({
     sx={{
       variant: `styles.Header`,
       background: hideBackground ? '' : `url(${trianglify})`,
-      backgroundSize: `cover`
+      backgroundSize: `cover`,
+      backgroundPosition: `bottom center`
     }}
   >
     <div

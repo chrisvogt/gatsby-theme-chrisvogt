@@ -55,6 +55,8 @@ export default {
   },
   footer: {
     background: `url(${trianglify})`,
+    backgroundSize: `cover`,
+    backgroundPosition: `top center`,
     color: `light`,
     a: {
       color: `white`
@@ -81,8 +83,6 @@ export default {
   Header: {
     alignItems: `center`,
     backgroundColor: `secondary`,
-    backgroundPosition: `top`,
-    backgroundSize: `cover`,
     color: `white`,
     display: `block`,
     transition: `all 0.3s ease-in-out`,
@@ -92,7 +92,17 @@ export default {
     ...floatOnHover,
     ...card,
     display: `flex`,
-    flexDirection: `column`
+    flexDirection: `column`,
+    '.read-more-icon': {
+      display: `inline`,
+      transition: `all .3s ease-in-out`,
+      opacity: 0,
+      paddingLeft: 0
+    },
+    '&:hover .read-more-icon': {
+      opacity: 1,
+      paddingLeft: `8px`
+    }
   },
   RepositoryCard: {
     ...floatOnHover,
@@ -100,7 +110,7 @@ export default {
   },
   MetricCard: {
     ...card,
-    borderLeftColor: `textMuted`,
+    borderLeftColor: `text`,
     span: {
       fontFamily: `heading`,
       fontWeight: `bold`,
@@ -138,17 +148,16 @@ export default {
   },
   Widget: {
     backgroundColor: `background`,
-    borderLeftWidth: [``, `3px`],
-    borderLeftStyle: [`none`, `solid`],
-    borderLeftColor: [``, `#9231A7`],
     borderRadius: [``, `3px`],
-    borderTop: [``, `1px solid white`],
-    boxShadow: [``, themePreset.shadows.default],
+    borderTop: [``, `1px solid #efefef`],
+    borderRight: [``, `1px solid #efefef`],
+    borderBottom: [`2px solid #f9f9f9`, `1px solid #eaeaea`],
+    borderLeft: [``, `1px solid #efefef`],
     mb: [3, 4],
     px: [0, 3, 4],
     py: [0, 3],
-    '&:not(:last-of-type)': {
-      borderBottom: [`2px solid #f9f9f9`, `1px solid white`]
+    '&:last-of-type': {
+      borderBottom: [`none`, `1px solid #eaeaea`]
     }
   },
   WidgetHeadline: {

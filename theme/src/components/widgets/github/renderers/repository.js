@@ -37,18 +37,17 @@ const Repository = ({
             sx={{
               backgroundColor: `colors.background`,
               border: `2px solid white`,
-              borderRadius: `4px`,
-              mr: 2
+              borderRadius: `4px`
             }}
             width='42'
           />
         </LazyLoad>
       </Flex>
-      <Flex sx={{ flexDirection: `column`, alignSelf: `center` }}>
+      <Flex sx={{ flexDirection: `column`, alignSelf: `center`, pl: 3 }}>
         <Heading as='h5' sx={{ p: 0, mb: 0 }}>
           {nameWithOwner}
         </Heading>
-        <span sx={{ fontSize: `small`, p: 0 }}>
+        <span sx={{ color: `textMuted`, fontSize: `small`, p: 0 }}>
           Updated {ago(new Date(updatedAt))}
         </span>
       </Flex>

@@ -11,7 +11,13 @@ const CallToAction = ({ children, title, to, url }) => {
       }
     : {}
   return (
-    <p sx={{ marginTop: 4, variant: `styles.WidgetFooter` }}>
+    <p
+      sx={{
+        marginBottom: [``, `1rem`],
+        marginTop: 4,
+        variant: `styles.WidgetFooter`
+      }}
+    >
       <Styled.a
         href={url}
         sx={{ fontFamily: `heading`, fontSize: 3 }}

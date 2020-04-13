@@ -11,9 +11,7 @@ export default ({ banner, date, excerpt, link, title }) => (
     <Styled.h4 sx={{ mt: 1 }}>{title}</Styled.h4>
 
     <div sx={{ display: `flex`, flexGrow: 1, mt: 0, mb: 1 }}>
-      <span>
-        {excerpt} <em>Read more &rarr;</em>
-      </span>
+      <span>{excerpt}</span>
 
       {banner && (
         <img
@@ -22,6 +20,11 @@ export default ({ banner, date, excerpt, link, title }) => (
           sx={{ borderRadius: `4px`, ml: 2 }}
         />
       )}
+    </div>
+
+    <div>
+      Read more
+      <span className='read-more-icon'>&rarr;</span>
     </div>
   </Link>
 )
