@@ -5,9 +5,10 @@ const trianglify = require('../components/artwork/trianglify.svg')
 export const themePreset = tailwind
 
 const floatOnHover = {
+  transform: `scale(1.01)`,
+  transition: `all .35s ease-in-out`,
+
   '&:hover, &:focus': {
-    transform: `scale(1.01)`,
-    transition: `all .35s ease-in-out`,
     boxShadow: `xl`
   }
 }
@@ -19,7 +20,7 @@ const card = {
   borderLeftColor: `primary`,
   borderRadius: `3px`,
   borderTop: `1px solid white`,
-  boxShadow: themePreset.shadows.md,
+  boxShadow: `default`,
   color: `text`,
   flexGrow: 1,
   padding: 3,
@@ -40,7 +41,7 @@ export default {
   },
   text: {
     inverse: {
-      color: themePreset.colors.muted
+      color: `muted`
     }
   },
   GitHub: {
@@ -63,6 +64,7 @@ export default {
     }
   },
   Book: {
+    filter: `drop-shadow(${themePreset.shadows.default})`,
     '&:hover, &:focus': {
       filter: `drop-shadow(${themePreset.shadows.xl})`,
       transform: `scale(1.01)`,
@@ -119,7 +121,7 @@ export default {
   },
   InstagramCard: {
     ...floatOnHover,
-    boxShadow: themePreset.shadows.md
+    boxShadow: `md`
   },
   TopNavigation: {
     color: `white`
@@ -128,7 +130,7 @@ export default {
     img: {
       ...floatOnHover,
       borderRadius: `4px`,
-      boxShadow: themePreset.shadows.md
+      boxShadow: `md`
     }
   },
   VideoWrapper: {

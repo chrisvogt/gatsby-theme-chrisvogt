@@ -41,8 +41,12 @@ module.exports = options => {
         options: {
           fonts: [
             {
-              family: `Domine`,
+              family: `Open Sans`,
               variants: [`400`, `700`]
+            },
+            {
+              family: `PT Serif`,
+              variants: [`400`, `400i`, `700`]
             }
           ]
         }
