@@ -24,7 +24,6 @@ const Repository = ({
     <Flex
       sx={{
         alignItems: `center`,
-        // fontSize: 2,
         mb: 2
       }}
     >

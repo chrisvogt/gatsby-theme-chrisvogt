@@ -36,7 +36,6 @@ const TopNavigation = ({ hideBackground }) => {
             color: `light`,
             display: [`block`, ``, `inline`],
             fontFamily: `heading`,
-            // fontSize: 2,
             fontWeight: `bold`,
             textDecoration: `none`,
             marginRight: 3

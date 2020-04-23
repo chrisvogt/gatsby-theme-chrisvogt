@@ -9,7 +9,7 @@ const floatOnHover = {
   transition: `all .35s ease-in-out`,
 
   '&:hover, &:focus': {
-    boxShadow: `xl`
+    boxShadow: `lg`
   }
 }
 
