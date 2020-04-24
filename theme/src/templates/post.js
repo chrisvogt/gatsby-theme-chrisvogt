@@ -30,14 +30,17 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <time className='created' sx={{ color: `textMuted` }}>
-            {mdx.frontmatter.date}
-          </time>
-
           <Styled.h1 as={Heading}>
             {mdx.frontmatter.title}
             {mdx.frontmatter.type}
           </Styled.h1>
+
+          <span>
+            Posted
+            <time className='created' sx={{ mx: 1 }}>
+              {mdx.frontmatter.date}
+            </time>
+          </span>
 
           <div className='article-content'>
             <MDXRenderer>{mdx.body}</MDXRenderer>
