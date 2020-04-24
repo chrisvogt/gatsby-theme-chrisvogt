@@ -41,32 +41,33 @@ export default ({ children, hideNavigation }) => (
               width: `100%`,
               textAlign: `left`,
               th: {
-                background: theme.colors.dark,
-                color: theme.colors.light,
-                padding: theme.space[3],
+                borderBottom: `1px dotted #ddd`,
+                borderLeft: `1px dotted #ddd`,
+                borderTop: `1px solid #ddd`,
+                color: `text`,
+                padding: theme.space[2],
                 textAlign: `left`
               },
               'tr th:first-of-type': {
-                borderLeft: `0`,
-                borderTopLeftRadius: `8px`
+                borderLeft: `1px solid #ddd`,
+                borderTopLeftRadius: `4px`
               },
               'tr th:last-of-type': {
-                borderRight: `0`,
-                borderTopRightRadius: `8px`
+                borderRight: `1px solid #ddd`,
+                borderTopRightRadius: `4px`
               },
               'tr td': {
-                borderBottom: `1px dotted ${theme.colors.muted}`,
-                padding: theme.space[3]
+                borderBottom: `1px dotted #ddd`,
+                padding: theme.space[2]
               },
               'tr:last-of-type td': {
-                borderBottom: `2px solid ${theme.colors.dark}`
+                borderBottom: `1px solid #ddd`
               },
               'tbody tr td:first-of-type': {
-                borderLeft: `2px solid ${theme.colors.dark}`,
-                borderRight: `1px solid ${theme.colors.dark}`
+                borderLeft: `1px solid #ddd`
               },
               'tbody tr td:last-of-type': {
-                borderRight: `2px solid ${theme.colors.dark}`
+                borderRight: `1px solid #ddd`
               }
             },
             '.footnotes': {

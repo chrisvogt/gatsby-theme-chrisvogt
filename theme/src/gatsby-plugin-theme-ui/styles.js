@@ -13,13 +13,16 @@ const floatOnHover = {
   }
 }
 
+const interactiveCard = {
+  borderLeft: `1px solid white`,
+  borderTop: `3px solid`,
+  borderTopColor: `primary`
+}
+
 const card = {
   backgroundColor: `white`,
   borderBottom: `1px solid white`,
-  borderLeft: `3px solid`,
-  borderLeftColor: `primary`,
   borderRadius: `3px`,
-  borderTop: `1px solid white`,
   boxShadow: `default`,
   color: `text`,
   flexGrow: 1,
@@ -93,6 +96,7 @@ export default {
   PostCard: {
     ...floatOnHover,
     ...card,
+    ...interactiveCard,
     display: `flex`,
     flexDirection: `column`,
     '.read-more-icon': {
@@ -108,11 +112,13 @@ export default {
   },
   RepositoryCard: {
     ...floatOnHover,
-    ...card
+    ...card,
+    ...interactiveCard
   },
   MetricCard: {
     ...card,
     borderLeftColor: `text`,
+    borderLeft: `3px solid`,
     span: {
       fontFamily: `heading`,
       fontWeight: `bold`,

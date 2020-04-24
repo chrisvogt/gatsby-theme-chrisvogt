@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 
 const MetricCard = ({ title, value }) => (
   <Card sx={{ variant: `styles.MetricCard`, p: 2 }}>
-    {title}
     <span>{value}</span>
+    {title}
   </Card>
 )
 
