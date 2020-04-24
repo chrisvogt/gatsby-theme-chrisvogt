@@ -35,8 +35,7 @@ const Repository = ({
             src={openGraphImageUrl}
             sx={{
               backgroundColor: `colors.background`,
-              border: `2px solid white`,
-              borderRadius: `4px`
+              borderRadius: `3px`
             }}
             width='42'
           />
@@ -46,7 +45,7 @@ const Repository = ({
         <Heading as='h4' sx={{ p: 0, mb: 0 }}>
           {nameWithOwner}
         </Heading>
-        <span sx={{ color: `textMuted`, fontSize: 1, p: 0 }}>
+        <span sx={{ color: `textMuted`, fontSize: 0, p: 0 }}>
           Updated {ago(new Date(updatedAt))}
         </span>
       </Flex>

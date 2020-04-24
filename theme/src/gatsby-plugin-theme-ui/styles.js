@@ -5,8 +5,8 @@ const trianglify = require('../components/artwork/trianglify.svg')
 export const themePreset = tailwind
 
 const floatOnHover = {
-  transform: `scale(1.01)`,
-  transition: `all .35s ease-in-out`,
+  transform: `scale(1.015)`,
+  transition: `all .3s ease-in-out`,
 
   '&:hover, &:focus': {
     boxShadow: `lg`
