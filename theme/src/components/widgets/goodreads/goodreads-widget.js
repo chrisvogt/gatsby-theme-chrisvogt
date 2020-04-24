@@ -28,9 +28,15 @@ export default () => {
   const goodreadsUsername = getGoodreadsUsername(metadata)
   const profileURL = `https://www.goodreads.com/${goodreadsUsername}`
 
+  const callToAction = (
+    <CallToAction title={`${goodreadsUsername} on Goodreads`} url={profileURL}>
+      Goodreads profile &rarr;
+    </CallToAction>
+  )
+
   return (
     <Widget id='goodreads'>
-      <WidgetHeader>Goodreads</WidgetHeader>
+      <WidgetHeader aside={callToAction}>Goodreads</WidgetHeader>
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <Box>
@@ -45,13 +51,6 @@ export default () => {
           />
         </Box>
       </Grid>
-
-      <CallToAction
-        title={`${goodreadsUsername} on Goodreads`}
-        url={profileURL}
-      >
-        Goodreads profile &rarr;
-      </CallToAction>
     </Widget>
   )
 }

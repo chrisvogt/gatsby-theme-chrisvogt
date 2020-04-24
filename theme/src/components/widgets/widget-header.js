@@ -3,8 +3,13 @@ import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
-const WidgetHeader = ({ children }) => (
-  <Heading sx={{ variant: `styles.WidgetHeadline` }}>{children}</Heading>
+const WidgetHeader = ({ aside, children }) => (
+  <header sx={{ variant: `styles.WidgetHeadline` }}>
+    <Heading>{children}</Heading>
+    {aside && (
+      <div sx={{ variant: `styles.WidgetHeadline__Aside` }}>{aside}</div>
+    )}
+  </header>
 )
 
 WidgetHeader.propTypes = {

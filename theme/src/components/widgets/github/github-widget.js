@@ -32,9 +32,18 @@ const GitHubWidget = () => {
     user = getUser(content)
   }
 
+  const callToAction = (
+    <CallToAction
+      title={`${githubUsername} on GitHub`}
+      url={`https://www.github.com/${githubUsername}`}
+    >
+      View profile &rarr;
+    </CallToAction>
+  )
+
   return (
     <Widget id='github'>
-      <WidgetHeader>GitHub</WidgetHeader>
+      <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <Box>
@@ -45,13 +54,6 @@ const GitHubWidget = () => {
           <LastPullRequest isLoading={isLoading} pullRequest={pullRequest} />
         </Box>
       </Grid>
-
-      <CallToAction
-        title={`${githubUsername} on GitHub`}
-        url={`https://www.github.com/${githubUsername}`}
-      >
-        GitHub profile &rarr;
-      </CallToAction>
     </Widget>
   )
 }

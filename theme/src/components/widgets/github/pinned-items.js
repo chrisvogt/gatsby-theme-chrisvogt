@@ -23,7 +23,7 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
         sx={{
           display: 'grid',
           gridAutoRows: '1fr',
-          gridGap: '1rem',
+          gridGap: [3, 3, 3, 4],
           gridTemplateColumns: ['', '', '', 'repeat(2, 1fr)']
         }}
       >

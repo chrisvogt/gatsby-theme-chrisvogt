@@ -1,15 +1,17 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Grid, Heading } from '@theme-ui/components'
+import { Grid } from '@theme-ui/components'
 
 import useRecentPosts from '../../../hooks/use-recent-posts'
 
 import CallToAction from '../call-to-action'
 import PostCard from './post-card'
 import Widget from '../widget'
+import WidgetHeader from '../widget-header'
 
 export default () => {
   const posts = useRecentPosts()
+
   const getColumnCount = postsCount => {
     let columnCount
     switch (postsCount) {
@@ -24,17 +26,23 @@ export default () => {
     }
     return columnCount
   }
+
+  const callToAction = (
+    <CallToAction title='View all published content' to='/latest'>
+      View all &rarr;
+    </CallToAction>
+  )
+
   return (
     <Widget id='posts'>
-      <Heading sx={{ variant: `styles.WidgetHeadline` }}>
-        Recently Published
-      </Heading>
+      <WidgetHeader aside={callToAction}>Recently Published</WidgetHeader>
+
       <div sx={{ width: `100%` }}>
         <Grid
           sx={{
             display: `grid`,
             gridAutoRows: `1fr`,
-            gridGap: '1rem',
+            gridGap: [3, 3, 4],
             gridTemplateColumns: [
               ``,
               ``,
@@ -55,9 +63,6 @@ export default () => {
           ))}
         </Grid>
       </div>
-      <CallToAction title='View all latest content' to='/latest'>
-        More posts &rarr;
-      </CallToAction>
     </Widget>
   )
 }

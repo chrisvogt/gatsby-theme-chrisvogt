@@ -16,15 +16,25 @@ export default () => {
   const metadata = useSiteMetadata()
   const instagramUsername = getInstagramUsername(metadata)
 
+  const callToAction = (
+    <CallToAction
+      title={`${instagramUsername} on Instagram`}
+      url={`https://www.instagram.com/${instagramUsername}`}
+    >
+      Instagram profile &rarr;
+    </CallToAction>
+  )
+
   return (
     <Widget id='instagram'>
-      <WidgetHeader>Instagram</WidgetHeader>
+      <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
       <div className='gallery'>
         {isLoading && <h3>Loading...</h3>}
 
         <Grid
           sx={{
+            gridGap: [3, 3, 3, 4],
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
@@ -65,12 +75,6 @@ export default () => {
               )
             })}
         </Grid>
-        <CallToAction
-          title={`${instagramUsername} on Instagram`}
-          url={`https://www.instagram.com/${instagramUsername}`}
-        >
-          Instagram profile &rarr;
-        </CallToAction>
       </div>
     </Widget>
   )

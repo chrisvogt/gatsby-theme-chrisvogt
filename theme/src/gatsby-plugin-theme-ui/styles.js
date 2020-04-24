@@ -163,16 +163,22 @@ export default {
     borderLeft: [``, `1px solid #efefef`],
     mb: [3, 4],
     px: [0, 3, 4],
-    py: [0, 3],
+    py: [0, 3, 4],
     '&:last-of-type': {
       borderBottom: [`none`, `1px solid #eaeaea`]
     }
   },
   WidgetHeadline: {
+    textAlign: [`center`, `left`],
+    display: `flex`,
+    flexDirection: [`column`, `row`],
+    alignItems: [``, `center`],
     mb: 3,
     mt: 0,
-    py: 3,
-    textAlign: [`center`, `left`]
+    py: 3
+  },
+  WidgetHeadline__Aside: {
+    ml: [0, 2]
   },
   WidgetFooter: {
     color: `text`,

@@ -22,7 +22,7 @@ const TopTracks = ({ isLoading, tracks }) => (
         <div
           sx={{
             display: `grid`,
-            gridGap: 3,
+            gridGap: [3, 2, 2, 3],
             gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
           }}
         >

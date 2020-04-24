@@ -20,9 +20,18 @@ const SpotifyWidget = () => {
     provider: { displayName: providerDisplayName } = {}
   } = content
 
+  const callToAction = (
+    <CallToAction
+      title={`${profileDisplayName} on ${providerDisplayName}`}
+      url={profileURL}
+    >
+      {providerDisplayName} profile &rarr;
+    </CallToAction>
+  )
+
   return (
     <Widget id='spotify'>
-      <WidgetHeader>Spotify</WidgetHeader>
+      <WidgetHeader aside={callToAction}>Spotify</WidgetHeader>
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <Box>
@@ -32,13 +41,6 @@ const SpotifyWidget = () => {
           <TopTracks isLoading={isLoading} tracks={topTracks} />
         </Box>
       </Grid>
-
-      <CallToAction
-        title={`${profileDisplayName} on ${providerDisplayName}`}
-        url={profileURL}
-      >
-        {providerDisplayName} profile &rarr;
-      </CallToAction>
     </Widget>
   )
 }
