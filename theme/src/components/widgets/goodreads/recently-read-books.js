@@ -22,7 +22,7 @@ const RecentlyReadBooks = ({ books, isLoading }) => (
         <div
           sx={{
             display: `grid`,
-            gridGap: 3,
+            gridGap: [3, 1, 2],
             gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
           }}
         >

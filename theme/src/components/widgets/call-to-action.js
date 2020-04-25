@@ -11,22 +11,9 @@ const CallToAction = ({ children, title, to, url }) => {
       }
     : {}
   return (
-    <p
-      sx={{
-        marginBottom: [``, `1rem`],
-        marginTop: 4,
-        variant: `styles.WidgetFooter`
-      }}
-    >
-      <Styled.a
-        href={url}
-        sx={{ fontFamily: `heading`, fontSize: 3 }}
-        title={title}
-        {...linkProps}
-      >
-        {children}
-      </Styled.a>
-    </p>
+    <Styled.a href={url} sx={{ fontSize: 0 }} title={title} {...linkProps}>
+      {children}
+    </Styled.a>
   )
 }
 

@@ -3,15 +3,11 @@ import { Container, Flex, jsx, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 
 import Footer from '../components/footer'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import YouTube from '../shortcodes/youtube'
-
-const shortcodes = { YouTube }
 
 const PostTemplate = ({ data }) => {
   const { mdx } = data
@@ -34,19 +30,20 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <time className='created' sx={{ color: `textMuted` }}>
-            {mdx.frontmatter.date}
-          </time>
-
           <Styled.h1 as={Heading}>
             {mdx.frontmatter.title}
             {mdx.frontmatter.type}
           </Styled.h1>
 
+          <span>
+            Posted
+            <time className='created' sx={{ mx: 1 }}>
+              {mdx.frontmatter.date}
+            </time>
+          </span>
+
           <div className='article-content'>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </MDXProvider>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
           </div>
         </Container>
       </Flex>

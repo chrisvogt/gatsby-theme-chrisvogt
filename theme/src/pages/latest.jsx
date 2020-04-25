@@ -29,6 +29,7 @@ export default ({ data }) => {
       >
         <Container sx={{ flexGrow: 1 }}>
           <h1>Latest Content</h1>
+
           <Styled.div
             sx={{
               display: `grid`,

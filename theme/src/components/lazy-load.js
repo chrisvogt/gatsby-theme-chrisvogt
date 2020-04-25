@@ -19,7 +19,16 @@ const LazyLoad = props => {
       {hasBeenVisible ? (
         children
       ) : (
-        <div sx={{ minHeight: `1px`, minWidth: `1px`, height, width }}> </div>
+        <div
+          sx={{
+            minHeight: `1px`,
+            minWidth: `1px`,
+            height,
+            width
+          }}
+        >
+          {' '}
+        </div>
       )}
     </VisibilitySensor>
   )

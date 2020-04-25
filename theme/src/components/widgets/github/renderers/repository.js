@@ -24,7 +24,6 @@ const Repository = ({
     <Flex
       sx={{
         alignItems: `center`,
-        fontSize: 2,
         mb: 2
       }}
     >
@@ -36,18 +35,17 @@ const Repository = ({
             src={openGraphImageUrl}
             sx={{
               backgroundColor: `colors.background`,
-              border: `2px solid white`,
-              borderRadius: `4px`
+              borderRadius: `3px`
             }}
             width='42'
           />
         </LazyLoad>
       </Flex>
       <Flex sx={{ flexDirection: `column`, alignSelf: `center`, pl: 3 }}>
-        <Heading as='h5' sx={{ p: 0, mb: 0 }}>
+        <Heading as='h4' sx={{ p: 0, mb: 0 }}>
           {nameWithOwner}
         </Heading>
-        <span sx={{ color: `textMuted`, fontSize: `small`, p: 0 }}>
+        <span sx={{ color: `textMuted`, fontSize: 0, p: 0 }}>
           Updated {ago(new Date(updatedAt))}
         </span>
       </Flex>

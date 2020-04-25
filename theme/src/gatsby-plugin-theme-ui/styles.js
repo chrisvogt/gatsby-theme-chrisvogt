@@ -5,21 +5,25 @@ const trianglify = require('../components/artwork/trianglify.svg')
 export const themePreset = tailwind
 
 const floatOnHover = {
+  transform: `scale(1.015)`,
+  transition: `all .3s ease-in-out`,
+
   '&:hover, &:focus': {
-    transform: `scale(1.01)`,
-    transition: `all .35s ease-in-out`,
-    boxShadow: `xl`
+    boxShadow: `lg`
   }
+}
+
+const interactiveCard = {
+  borderLeft: `1px solid white`,
+  borderTop: `3px solid`,
+  borderTopColor: `primary`
 }
 
 const card = {
   backgroundColor: `white`,
   borderBottom: `1px solid white`,
-  borderLeft: `3px solid`,
-  borderLeftColor: `primary`,
   borderRadius: `3px`,
-  borderTop: `1px solid white`,
-  boxShadow: themePreset.shadows.md,
+  boxShadow: `default`,
   color: `text`,
   flexGrow: 1,
   padding: 3,
@@ -40,7 +44,7 @@ export default {
   },
   text: {
     inverse: {
-      color: themePreset.colors.muted
+      color: `muted`
     }
   },
   GitHub: {
@@ -63,6 +67,7 @@ export default {
     }
   },
   Book: {
+    filter: `drop-shadow(${themePreset.shadows.default})`,
     '&:hover, &:focus': {
       filter: `drop-shadow(${themePreset.shadows.xl})`,
       transform: `scale(1.01)`,
@@ -91,6 +96,7 @@ export default {
   PostCard: {
     ...floatOnHover,
     ...card,
+    ...interactiveCard,
     display: `flex`,
     flexDirection: `column`,
     '.read-more-icon': {
@@ -106,11 +112,13 @@ export default {
   },
   RepositoryCard: {
     ...floatOnHover,
-    ...card
+    ...card,
+    ...interactiveCard
   },
   MetricCard: {
     ...card,
     borderLeftColor: `text`,
+    borderLeft: `3px solid`,
     span: {
       fontFamily: `heading`,
       fontWeight: `bold`,
@@ -119,7 +127,7 @@ export default {
   },
   InstagramCard: {
     ...floatOnHover,
-    boxShadow: themePreset.shadows.md
+    boxShadow: `md`
   },
   TopNavigation: {
     color: `white`
@@ -128,7 +136,7 @@ export default {
     img: {
       ...floatOnHover,
       borderRadius: `4px`,
-      boxShadow: themePreset.shadows.md
+      boxShadow: `md`
     }
   },
   VideoWrapper: {
@@ -155,16 +163,22 @@ export default {
     borderLeft: [``, `1px solid #efefef`],
     mb: [3, 4],
     px: [0, 3, 4],
-    py: [0, 3],
+    py: [0, 3, 4],
     '&:last-of-type': {
       borderBottom: [`none`, `1px solid #eaeaea`]
     }
   },
   WidgetHeadline: {
+    textAlign: [`center`, `left`],
+    display: `flex`,
+    flexDirection: [`column`, `row`],
+    alignItems: [``, `center`],
     mb: 3,
     mt: 0,
-    py: 3,
-    textAlign: [`center`, `left`]
+    py: 3
+  },
+  WidgetHeadline__Aside: {
+    ml: [0, 2]
   },
   WidgetFooter: {
     color: `text`,
