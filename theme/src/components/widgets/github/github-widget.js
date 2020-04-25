@@ -45,7 +45,7 @@ const GitHubWidget = () => {
     <Widget id='github'>
       <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
 
-      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
+      <Grid gap={3} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <Box>
           <UserProfile isLoading={isLoading} user={user} />
         </Box>
