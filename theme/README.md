@@ -45,7 +45,7 @@ Review the [example site configuration](https://github.com/chrisvogt/gatsby-them
 
 ###### Instagram
 
-![Screenshot: Instagram](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-instagram.png)
+![Screenshot: Instagram](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-instagram.jpg)
 
 ###### GitHub
 
