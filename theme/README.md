@@ -2,7 +2,11 @@
 
 # Private Sphere – a GatsbyJS theme
 
-This is the Gatsby theme used on my personal website and blog, at [www.chrisvogt.me](https://www.chrisvogt.me). This theme includes widgets to display latest activity on GitHub, Goodreads, Instagram, and Spotify, but you will need to provide your own data source for the widgets (REST endpoints). Examples of the expected data structure can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
+Private Sphere is a Gatsby theme I built for my personal blog and website, [www.chrisvogt.me](https://www.chrisvogt.me). My website and this theme exists so I can publish and share content on my own website, while widgets on the home page showcase my activity across online platforms like GitHub, Goodreads, Instagram, and Spotify.
+
+> **Warning:** This theme is a personal hobby project. This project is unstable and not ready for use on a live site unless you are feeling adventurous.
+
+> **Note:** To use the home page widgets, you must currently build and serve your own data service, and expose that data over REST endpoints. The expected schema for each widget is saved in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
 
 ## Installation
 
@@ -30,6 +34,30 @@ module.exports = {
 ```
 
 Review the [example site configuration](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/example/gatsby-config.js) for an example of available site metadata fields.
+
+## Screenshots
+
+#### Widgets
+
+###### Blog
+
+![Screenshot: Blog](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-blog.png)
+
+###### Instagram
+
+![Screenshot: Instagram](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-instagram.png)
+
+###### GitHub
+
+![Screenshot: GitHub](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-github.png)
+
+###### Goodreads
+
+![Screenshot: Goodreads](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-goodreads.png)
+
+###### Spotify
+
+![Screenshot: Spotify](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-spotify.png)
 
 ## Copyright & License
 
