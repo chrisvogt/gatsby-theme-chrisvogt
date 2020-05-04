@@ -14,9 +14,7 @@ const floatOnHover = {
 }
 
 const interactiveCard = {
-  borderLeft: `1px solid white`,
-  borderTop: `3px solid`,
-  borderTopColor: `primary`
+  borderLeft: `1px solid white`
 }
 
 const card = {
@@ -99,6 +97,9 @@ export default {
     ...interactiveCard,
     display: `flex`,
     flexDirection: `column`,
+    '.card-media': {
+      mb: 2
+    },
     '.read-more-icon': {
       display: `inline`,
       transition: `all .3s ease-in-out`,

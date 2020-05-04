@@ -29,7 +29,8 @@ export default () => {
 
   const callToAction = (
     <CallToAction title='View all published content' to='/latest'>
-      View all &rarr;
+      View all
+      <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
 
@@ -52,13 +53,13 @@ export default () => {
         >
           {posts.map(post => (
             <PostCard
+              banner={post.frontmatter.banner}
               category={post.fields.category}
               date={post.frontmatter.date}
               excerpt={post.excerpt}
               key={post.fields.id}
               link={post.fields.slug}
               title={post.frontmatter.title}
-              banner={post.frontmatter.banner}
             />
           ))}
         </Grid>

@@ -60,10 +60,7 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
       slug = ''
     }
 
-    const rePathRoot = /^\/([a-z]*)\//i
-    const match = slug.match(rePathRoot)
-    const [, category] = match
-
+    const category = node.frontmatter.category
     if (category) {
       createNodeField({
         name: `category`,
