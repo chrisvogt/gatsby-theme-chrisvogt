@@ -37,7 +37,8 @@ const GitHubWidget = () => {
       title={`${githubUsername} on GitHub`}
       url={`https://www.github.com/${githubUsername}`}
     >
-      View profile &rarr;
+      View profile
+      <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
 

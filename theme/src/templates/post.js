@@ -12,13 +12,19 @@ import SEO from '../components/seo'
 const PostTemplate = ({ data }) => {
   const { mdx } = data
 
+  const banner = mdx.frontmatter.banner
+  const category = mdx.fields.category
+  const date = mdx.frontmatter.date
+  const description = mdx.frontmatter.description
+  const title = mdx.frontmatter.title
+
   return (
     <Layout>
       <SEO
         article={true}
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-        image={mdx.frontmatter.banner}
+        description={description}
+        image={banner}
+        title={title}
       />
 
       <Flex
@@ -29,18 +35,12 @@ const PostTemplate = ({ data }) => {
           py: 3
         }}
       >
-        <Container sx={{ flexGrow: 1 }}>
-          <Styled.h1 as={Heading}>
-            {mdx.frontmatter.title}
-            {mdx.frontmatter.type}
-          </Styled.h1>
+        <Container sx={{ height: `100%` }}>
+          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
 
-          <span>
-            Posted
-            <time className='created' sx={{ mx: 1 }}>
-              {mdx.frontmatter.date}
-            </time>
-          </span>
+          <time className='created'>{date}</time>
+
+          <Styled.h1 as={Heading}>{title}</Styled.h1>
 
           <div className='article-content'>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -63,6 +63,9 @@ export const pageQuery = graphql`
   query($id: String!) {
     mdx(fields: { id: { eq: $id } }) {
       body
+      fields {
+        category
+      }
       frontmatter {
         banner
         date(formatString: "MMMM DD, YYYY")

@@ -21,7 +21,8 @@ export default () => {
       title={`${instagramUsername} on Instagram`}
       url={`https://www.instagram.com/${instagramUsername}`}
     >
-      View profile &rarr;
+      View profile
+      <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
 

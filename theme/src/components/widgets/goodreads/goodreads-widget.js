@@ -30,7 +30,8 @@ export default () => {
 
   const callToAction = (
     <CallToAction title={`${goodreadsUsername} on Goodreads`} url={profileURL}>
-      View profile &rarr;
+      View profile
+      <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
 

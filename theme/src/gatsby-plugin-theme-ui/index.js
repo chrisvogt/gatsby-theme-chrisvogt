@@ -34,5 +34,14 @@ export default {
   styles: {
     ...themePreset.styles,
     ...styles
+  },
+  text: {
+    ...themePreset.text,
+    title: {
+      color: `primary`,
+      fontSize: 0,
+      fontWeight: `550`,
+      textTransform: `uppercase`
+    }
   }
 }
