@@ -75,7 +75,7 @@ const HomeTemplate = props => {
         sx={{
           backgroundColor: `colors.background`,
           minHeight: `500px`,
-          pt: 4
+          pt: 3
         }}
       >
         <Container>
