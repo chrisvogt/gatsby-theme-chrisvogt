@@ -28,14 +28,15 @@ export default ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <h1>Latest Content</h1>
+          <Styled.h1>Blog</Styled.h1>
 
           <Styled.div
             sx={{
               display: `grid`,
               gridAutoRows: `1fr`,
               gridGap: 4,
-              gridTemplateColumns: [``, ``, `repeat(2, 1fr)`]
+              gridTemplateColumns: [``, ``, `repeat(2, 1fr)`],
+              mt: 4
             }}
           >
             {posts.map(post => (

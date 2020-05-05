@@ -6,7 +6,7 @@ export const themePreset = tailwind
 
 const floatOnHover = {
   transform: `scale(1.015)`,
-  transition: `all .3s ease-in-out`,
+  transition: `all .25s ease-in-out`,
 
   '&:hover, &:focus': {
     boxShadow: `lg`
@@ -156,18 +156,8 @@ export default {
     height: `100%`
   },
   Widget: {
-    backgroundColor: `background`,
-    borderRadius: [``, `3px`],
-    borderTop: [``, `1px solid #efefef`],
-    borderRight: [``, `1px solid #efefef`],
-    borderBottom: [`2px solid #f9f9f9`, `1px solid #eaeaea`],
-    borderLeft: [``, `1px solid #efefef`],
     mb: [3, 4],
-    px: [0, 3, 4],
-    py: [0, 3, 4],
-    '&:last-of-type': {
-      borderBottom: [`none`, `1px solid #eaeaea`]
-    }
+    py: [0, 3, 4]
   },
   WidgetHeadline: {
     textAlign: [`center`, `left`],
