@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
 
 import { getInstagramUsername } from '../../../selectors/metadata'
@@ -7,8 +7,8 @@ import useInstagramPosts from '../../../hooks/use-instagram-posts'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
-import LazyLoad from '../../lazy-load'
 import Widget from '../widget'
+import WidgetItem from './instagram-widget-item'
 import WidgetHeader from '../widget-header'
 
 export default () => {
@@ -40,41 +40,7 @@ export default () => {
           }}
         >
           {!isLoading &&
-            posts.slice(0, 4).map(post => {
-              const {
-                id,
-                images: { standard_resolution: { height, width, url } = {} },
-                link
-              } = post
-              return (
-                <Styled.a
-                  key={id}
-                  href={link}
-                  style={{ lineHeight: 0 }}
-                  target='_blank'
-                  title='View image on Instagram'
-                  rel='noopener noreferrer'
-                  sx={{
-                    variant: `styles.InstagramCard`
-                  }}
-                >
-                  <LazyLoad>
-                    <img
-                      crossOrigin='anonymous'
-                      src={url}
-                      height={height}
-                      width={width}
-                      alt='Instagram post'
-                      sx={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                      }}
-                    />
-                  </LazyLoad>
-                </Styled.a>
-              )
-            })}
+            posts.slice(0, 4).map(post => <WidgetItem post={post} />)}
         </Grid>
       </div>
     </Widget>
