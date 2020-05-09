@@ -92,6 +92,7 @@
     "react-placeholder": "^3.0.2",
     "react-visibility-sensor": "^5.1.1",
     "s-ago": "^2.1.0",
+    "svg-loaders-react": "^2.2.1",
     "theme-ui": "0.3.1"
   }
 }

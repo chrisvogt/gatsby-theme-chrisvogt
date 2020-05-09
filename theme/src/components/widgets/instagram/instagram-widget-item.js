@@ -105,7 +105,7 @@ const InstagramWidgetItem = props => {
           src={url}
           height={height}
           width={width}
-          alt='Instagram post'
+          alt='Instagram post thumbnail'
           sx={{
             width: '100%',
             height: '100%',
