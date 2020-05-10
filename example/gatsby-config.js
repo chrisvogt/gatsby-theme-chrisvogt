@@ -27,6 +27,12 @@ module.exports = {
       resolve: 'gatsby-theme-private-sphere',
       options: {}
     },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        // devMode: true,
+      }
+    },
     gatsbyPluginFeedConfig
   ]
 }
