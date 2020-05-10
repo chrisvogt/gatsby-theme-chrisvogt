@@ -8,8 +8,7 @@ export default ({ banner, category, date, excerpt, link, title }) => (
       className='card-content'
       sx={{
         display: `flex`,
-        flexDirection: `column`,
-        height: `100%`
+        flexDirection: `column`
       }}
     >
       {banner && (
