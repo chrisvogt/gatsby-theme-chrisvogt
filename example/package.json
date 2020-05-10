@@ -13,5 +13,8 @@
     "gatsby-theme-private-sphere": "*",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9"
   }
 }
