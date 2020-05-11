@@ -3,6 +3,12 @@ import { jsx, Styled } from 'theme-ui'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
+/**
+ * Call To Action
+ *
+ * Each widget contains a call to action next to its headline. For most Private
+ * Sphere social widgets, I render a 'View profile' call to action.
+ */
 const CallToAction = ({ children, title, to, url }) => {
   const linkProps = to
     ? {
@@ -37,13 +43,13 @@ const CallToAction = ({ children, title, to, url }) => {
 }
 
 CallToAction.propTypes = {
-  /** Content to render within the call to action container. */
+  /** Content rendered within the call to action container. */
   children: PropTypes.node.isRequired,
   /** The title attribute for the hyperlink. */
   title: PropTypes.string.isRequired,
-  /** A destination for Gatsby router navigation. */
+  /** Use instead of href to define a Gatsby router destination. */
   to: PropTypes.string,
-  /** A URL for hyperlink navigation. */
+  /** The URL for the hyperlink's navigation. */
   url: PropTypes.string
 }
 

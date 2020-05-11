@@ -3,10 +3,11 @@ const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 module.exports = {
   siteMetadata: {
     description:
-      'A gatsby blog theme with built-in recently read and GitHub plugins.',
+      'A GatsbyJS blog theme with built-in social widgets for Instagram, Goodreads, GitHub, and Spotify.',
     footerText: '© 2020 Chris Vogt',
-    baseURL: 'http://127.0.0.1:8080',
+    baseURL: 'https://www.privatesphere.io',
     imageURL: '',
+    languageCode: 'en',
     social: {
       github: {
         username: 'chrisvogt'
@@ -28,10 +29,7 @@ module.exports = {
       options: {}
     },
     {
-      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-      options: {
-        // devMode: true,
-      }
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2'
     },
     gatsbyPluginFeedConfig
   ]

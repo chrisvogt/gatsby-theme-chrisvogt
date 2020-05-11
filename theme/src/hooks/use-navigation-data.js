@@ -27,12 +27,6 @@ const useNavigationData = () => {
                     text
                     title
                   }
-                  right {
-                    path
-                    slug
-                    text
-                    title
-                  }
                 }
               }
             }

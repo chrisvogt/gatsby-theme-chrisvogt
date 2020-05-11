@@ -15,7 +15,14 @@ const components = {
 
 const shortcodes = { YouTube }
 
-export default ({ children, hideNavigation }) => (
+/**
+ * Layout
+ *
+ * The default layout component. Wrap all templates in this layout to inherit
+ * the default navigation, theme styles, and any important providers. Use shadowing
+ * to extend this component and attach additional contexts and providers.
+ */
+const Layout = ({ children, hideNavigation }) => (
   <ThemeProvider theme={theme} components={components}>
     <MDXProvider components={shortcodes}>
       <Styled.root data-testid='theme-root'>
@@ -88,6 +95,18 @@ export default ({ children, hideNavigation }) => (
               left: 0,
               width: `100%`,
               height: `100%`
+            },
+
+            '.gatsby-highlight pre[class*="language-"]': {
+              padding: 0,
+              overflow: `initial`,
+              float: `left`,
+              minWidth: `100%`
+            },
+
+            /* Adjust the position of the line numbers */
+            '.gatsby-highlight pre[class*="language-"].line-numbers': {
+              paddingLeft: `2.8em`
             }
           }}
         />
@@ -97,3 +116,5 @@ export default ({ children, hideNavigation }) => (
     </MDXProvider>
   </ThemeProvider>
 )
+
+export default Layout

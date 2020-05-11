@@ -6,6 +6,12 @@ const useSiteMetadata = () => {
       query GetSiteMetadata {
         site {
           siteMetadata {
+            baseURL
+            description
+            footerText
+            headline
+            imageURL
+            languageCode
             social {
               github {
                 username
@@ -20,11 +26,6 @@ const useSiteMetadata = () => {
                 username
               }
             }
-            imageURL
-            headline
-            description
-            baseURL
-            footerText
             subhead
             title
             titleTemplate

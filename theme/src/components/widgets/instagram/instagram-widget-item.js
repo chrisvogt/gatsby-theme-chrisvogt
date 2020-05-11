@@ -5,8 +5,6 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart, faImages } from '@fortawesome/free-solid-svg-icons'
 
-import LazyLoad from '../../lazy-load'
-
 const InstagramWidgetItem = props => {
   const {
     post: {
@@ -99,20 +97,18 @@ const InstagramWidgetItem = props => {
         </div>
       )}
 
-      <LazyLoad>
-        <img
-          crossOrigin='anonymous'
-          src={url}
-          height={height}
-          width={width}
-          alt='Instagram post thumbnail'
-          sx={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
-        />
-      </LazyLoad>
+      <img
+        crossOrigin='anonymous'
+        src={url}
+        height={height}
+        width={width}
+        alt='Instagram post thumbnail'
+        sx={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }}
+      />
     </Styled.a>
   )
 }

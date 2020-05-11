@@ -10,14 +10,6 @@
           "title": "Latest content"
         }
       ],
-      "right": [
-        {
-          "path": "https://stats.chrisvogt.me",
-          "slug": "stats",
-          "text": "Stats",
-          "title": "My recent code report — last 30 days"
-        }
-      ],
       "home": [
         {
           "path": "#github",

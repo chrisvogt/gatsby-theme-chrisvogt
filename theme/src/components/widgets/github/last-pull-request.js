@@ -1,16 +1,18 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
+import Placeholder from 'react-placeholder'
+import {
+  TextRow,
+  TextBlock,
+  RectShape
+} from 'react-placeholder/lib/placeholders'
 import PropTypes from 'prop-types'
 
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
 const LastPullRequest = ({ isLoading, pullRequest }) => {
-  if (isLoading) {
-    return 'Loading...'
-  }
-
   const {
     number,
     repository: { name: repositoryName } = {},
@@ -39,14 +41,39 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
         }}
       >
         <Card sx={{ variant: `styles.RepositoryCard` }}>
-          <span>
-            {title} (
-            <span sx={{ color: `dark`, fontWeight: 600 }}>#{number}</span>) – in{' '}
-            <em>{repositoryName}</em>
-          </span>
+          <Placeholder
+            color='#efefef'
+            customPlaceholder={
+              <TextRow
+                color='#efefef'
+                style={{ marginTop: 0, width: `100%` }}
+              />
+            }
+            ready={!isLoading}
+            rows={1}
+            showLoadingAnimation
+          >
+            <span>
+              {title} (
+              <span sx={{ color: `dark`, fontWeight: 600 }}>#{number}</span>) –
+              in <em>{repositoryName}</em>
+            </span>
+          </Placeholder>
 
           <CardFooter>
-            <ViewExternal platform='GitHub' />
+            <Placeholder
+              color='#efefef'
+              customPlaceholder={
+                <TextRow
+                  color='#efefef'
+                  style={{ marginTop: 0, width: `140px` }}
+                />
+              }
+              ready={!isLoading}
+              showLoadingAnimation
+            >
+              <ViewExternal platform='GitHub' />
+            </Placeholder>
           </CardFooter>
         </Card>
       </Styled.a>

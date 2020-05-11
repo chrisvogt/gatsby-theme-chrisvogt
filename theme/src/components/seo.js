@@ -6,6 +6,7 @@ import { useThemeUI } from 'theme-ui'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 import {
+  getLanguageCode,
   getTitle,
   getTitleTemplate,
   getTwitterUsername
@@ -15,6 +16,7 @@ const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
   const metadata = useSiteMetadata()
   const { theme } = useThemeUI()
 
+  const languageCode = getLanguageCode(metadata)
   const siteTitle = getTitle(metadata)
   const titleTemplate = getTitleTemplate(metadata)
   const twitterUsername = getTwitterUsername(metadata)
@@ -23,6 +25,7 @@ const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
 
   return (
     <Helmet title={title} titleTemplate={titleTemplate}>
+      <html lang={languageCode} />
       <meta name='description' content={description} />
       <meta name='image' content={imageURL} />
 

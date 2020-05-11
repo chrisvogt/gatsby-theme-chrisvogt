@@ -1,10 +1,17 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
 import Placeholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
 
+import PinnedItemPlaceholder from '../placeholders/PinnedItemPlaceholder'
+
 export default () => (
-  <Placeholder showLoadingAnimation ready={false} type='media' rows={3}>
+  <Placeholder
+    customPlaceholder={PinnedItemPlaceholder}
+    showLoadingAnimation
+    ready={false}
+  >
     <p>Loading</p>
   </Placeholder>
 )

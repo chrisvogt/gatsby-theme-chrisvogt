@@ -5,7 +5,6 @@ import ago from 's-ago'
 import PropTypes from 'prop-types'
 
 import CardFooter from '../../card-footer'
-import LazyLoad from '../../../lazy-load'
 import ViewExternal from '../../view-external'
 
 const Repository = ({
@@ -28,18 +27,16 @@ const Repository = ({
       }}
     >
       <Flex sx={{ flexDirection: `column`, alignItems: `center` }}>
-        <LazyLoad>
-          <img
-            alt='repository avatar'
-            height='42'
-            src={openGraphImageUrl}
-            sx={{
-              backgroundColor: `colors.background`,
-              borderRadius: `3px`
-            }}
-            width='42'
-          />
-        </LazyLoad>
+        <img
+          alt='repository avatar'
+          height='42'
+          src={openGraphImageUrl}
+          sx={{
+            backgroundColor: `colors.background`,
+            borderRadius: `3px`
+          }}
+          width='42'
+        />
       </Flex>
       <Flex sx={{ flexDirection: `column`, alignSelf: `center`, pl: 3 }}>
         <Heading as='h4' sx={{ p: 0, mb: 0 }}>

@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
 import ReactPlaceholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
-import { Grid as GridSpinner } from 'svg-loaders-react'
+import { Bars } from 'svg-loaders-react'
 
 import { getInstagramUsername } from '../../../selectors/metadata'
 import useInstagramPosts from '../../../hooks/use-instagram-posts'
@@ -16,7 +16,10 @@ import WidgetHeader from '../widget-header'
 
 const ItemPlaceholder = (
   <div className='image-placeholder'>
-    <RectShape color='#cecece' style={{ width: `100%`, minHeight: `330px` }} />
+    <RectShape
+      color='#efefef'
+      sx={{ boxShadow: `md`, width: `100%`, minHeight: `330px` }}
+    />
   </div>
 )
 
@@ -26,7 +29,7 @@ export default () => {
   const instagramUsername = getInstagramUsername(metadata)
 
   const callToAction = isLoading ? (
-    <GridSpinner
+    <Bars
       fill='#1E90FF'
       width='24'
       height='24'

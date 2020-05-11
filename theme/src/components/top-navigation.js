@@ -36,10 +36,10 @@ const TopNavigation = ({ hideBackground }) => {
             color: `light`,
             display: [`block`, ``, `inline`],
             fontFamily: `heading`,
-            fontWeight: `bold`,
             fontSize: 2,
-            textDecoration: `none`,
-            marginRight: 3
+            fontWeight: `bold`,
+            marginRight: 3,
+            textDecoration: `none`
           }}
         >
           {title}
@@ -50,9 +50,9 @@ const TopNavigation = ({ hideBackground }) => {
             <Styled.a
               as={Link}
               key={slug}
-              to={path}
-              title={title}
               sx={{ color: `light`, mr: 3 }}
+              title={title}
+              to={path}
             >
               {text}
             </Styled.a>
