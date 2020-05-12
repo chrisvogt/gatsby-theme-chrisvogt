@@ -31,6 +31,7 @@ export default () => {
     <CallToAction
       title={`${instagramUsername} on Instagram`}
       url={`https://www.instagram.com/${instagramUsername}`}
+      isLoading={isLoading}
     >
       View profile
       <span className='read-more-icon'>&rarr;</span>
