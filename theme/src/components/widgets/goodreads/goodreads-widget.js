@@ -33,6 +33,7 @@ export default () => {
     <CallToAction
       title={`${goodreadsUsername} on Goodreads`}
       url={`https://www.goodreads.com/${goodreadsUsername}`}
+      isLoading={isLoadingBooks || isLoadingUser}
     >
       View profile
       <span className='read-more-icon'>&rarr;</span>
