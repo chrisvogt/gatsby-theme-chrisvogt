@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
-import { Bars } from 'svg-loaders-react'
 
 import CallToAction from '../call-to-action'
 import TopTracks from './top-tracks'
@@ -21,17 +20,11 @@ const SpotifyWidget = () => {
     provider: { displayName: providerDisplayName } = {}
   } = content
 
-  const callToAction = isLoading ? (
-    <Bars
-      fill='#1E90FF'
-      width='24'
-      height='24'
-      sx={{ verticalAlign: `middle` }}
-    />
-  ) : (
+  const callToAction = (
     <CallToAction
       title={`${profileDisplayName} on ${providerDisplayName}`}
       url={profileURL}
+      isLoading={isLoading}
     >
       View profile
       <span className='read-more-icon'>&rarr;</span>
@@ -40,7 +33,9 @@ const SpotifyWidget = () => {
 
   return (
     <Widget id='spotify'>
-      <WidgetHeader aside={callToAction}>Spotify</WidgetHeader>
+      <WidgetHeader aside={callToAction} isLoading={isLoading}>
+        Spotify
+      </WidgetHeader>
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <Box>

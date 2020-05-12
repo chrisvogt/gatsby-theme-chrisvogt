@@ -71,11 +71,22 @@ const UserStatus = ({ isLoading, status, actorName }) => {
               {actorName} {statusText}
               <em>– {ago(new Date(updated))}</em>
             </span>
-
-            <CardFooter>
-              <ViewExternal platform='Goodreads' />
-            </CardFooter>
           </Placeholder>
+          <CardFooter>
+            <Placeholder
+              color='#efefef'
+              customPlaceholder={
+                <TextRow
+                  color='#efefef'
+                  style={{ marginTop: 0, width: `140px` }}
+                />
+              }
+              ready={!isLoading}
+              showLoadingAnimation
+            >
+              <ViewExternal platform='Goodreads' />
+            </Placeholder>
+          </CardFooter>
         </Card>
       </Styled.a>
     </Box>

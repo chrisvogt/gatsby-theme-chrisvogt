@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
-import { Bars } from 'svg-loaders-react'
 
 import { getGoodreadsUsername } from '../../../selectors/metadata'
 import useGoodreadsUser from '../../../hooks/use-goodreads-user'
@@ -23,22 +22,14 @@ const getStatusFromUpdates = updates =>
 export default () => {
   const [isLoadingBooks, books] = useRecentBooks()
   const [isLoadingUser, user] = useGoodreadsUser()
-  const isLoading = isLoadingBooks || isLoadingUser
 
   const { profile = {}, updates = [] } = user
 
-  const status = getStatusFromUpdates(updates)
+  const status = updates.length && getStatusFromUpdates(updates)
   const metadata = useSiteMetadata()
   const goodreadsUsername = getGoodreadsUsername(metadata)
 
-  const callToAction = isLoading ? (
-    <Bars
-      fill='#1E90FF'
-      width='24'
-      height='24'
-      sx={{ verticalAlign: `middle` }}
-    />
-  ) : (
+  const callToAction = (
     <CallToAction
       title={`${goodreadsUsername} on Goodreads`}
       url={`https://www.goodreads.com/${goodreadsUsername}`}

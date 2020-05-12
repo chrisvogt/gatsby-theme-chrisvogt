@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
-import { Bars } from 'svg-loaders-react'
 
 import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
@@ -33,14 +32,7 @@ const GitHubWidget = () => {
     user = getUser(content)
   }
 
-  const callToAction = isLoading ? (
-    <Bars
-      fill='#1E90FF'
-      width='24'
-      height='24'
-      sx={{ verticalAlign: `middle` }}
-    />
-  ) : (
+  const callToAction = (
     <CallToAction
       title={`${githubUsername} on GitHub`}
       url={`https://www.github.com/${githubUsername}`}

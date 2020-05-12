@@ -77,7 +77,7 @@ const UserProfile = ({ isLoading, user }) => {
             key={id}
             title={title}
             value={value}
-            placeholder={isLoading}
+            showPlaceholder={isLoading}
           />
         ))}
       </div>

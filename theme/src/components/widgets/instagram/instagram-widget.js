@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
 import ReactPlaceholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
-import { Bars } from 'svg-loaders-react'
 
 import { getInstagramUsername } from '../../../selectors/metadata'
 import useInstagramPosts from '../../../hooks/use-instagram-posts'
@@ -28,14 +27,7 @@ export default () => {
   const metadata = useSiteMetadata()
   const instagramUsername = getInstagramUsername(metadata)
 
-  const callToAction = isLoading ? (
-    <Bars
-      fill='#1E90FF'
-      width='24'
-      height='24'
-      sx={{ verticalAlign: `middle` }}
-    />
-  ) : (
+  const callToAction = (
     <CallToAction
       title={`${instagramUsername} on Instagram`}
       url={`https://www.instagram.com/${instagramUsername}`}

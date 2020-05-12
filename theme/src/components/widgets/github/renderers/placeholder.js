@@ -9,8 +9,8 @@ import PinnedItemPlaceholder from '../placeholders/PinnedItemPlaceholder'
 export default () => (
   <Placeholder
     customPlaceholder={PinnedItemPlaceholder}
-    showLoadingAnimation
     ready={false}
+    showLoadingAnimation
   >
     <p>Loading</p>
   </Placeholder>

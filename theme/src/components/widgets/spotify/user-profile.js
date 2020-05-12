@@ -29,7 +29,7 @@ const UserProfile = ({ isLoading, metrics }) => {
             key={id}
             title={displayName}
             value={value}
-            placeholder={isLoading}
+            showPlaceholder={isLoading}
           />
         ))}
       </div>
