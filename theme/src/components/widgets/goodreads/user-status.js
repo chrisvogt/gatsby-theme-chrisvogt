@@ -3,6 +3,8 @@ import { jsx, Styled } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
 import ago from 's-ago'
 import PropTypes from 'prop-types'
+import Placeholder from 'react-placeholder'
+import { TextRow } from 'react-placeholder/lib/placeholders'
 
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
@@ -27,10 +29,6 @@ const mapStatusToTemplate = {
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
-  if (isLoading) {
-    return 'Loading...'
-  }
-
   const { link, type, updated } = status
 
   const statusText = mapStatusToTemplate[type]
@@ -45,7 +43,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           marginBottom: '1rem'
         }}
       >
-        Status
+        Latest Status
       </Heading>
 
       <Styled.a
@@ -58,14 +56,26 @@ const UserStatus = ({ isLoading, status, actorName }) => {
         }}
       >
         <Card sx={{ variant: `styles.RepositoryCard` }}>
-          <span>
-            {actorName} {statusText}
-            <em>– {ago(new Date(updated))}</em>
-          </span>
+          <Placeholder
+            color='#efefef'
+            customPlaceholder={
+              <TextRow
+                color='#efefef'
+                style={{ marginTop: 0, width: `100%` }}
+              />
+            }
+            ready={!isLoading}
+            showLoadingAnimation
+          >
+            <span>
+              {actorName} {statusText}
+              <em>– {ago(new Date(updated))}</em>
+            </span>
 
-          <CardFooter>
-            <ViewExternal platform='Goodreads' />
-          </CardFooter>
+            <CardFooter>
+              <ViewExternal platform='Goodreads' />
+            </CardFooter>
+          </Placeholder>
         </Card>
       </Styled.a>
     </Box>

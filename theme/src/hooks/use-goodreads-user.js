@@ -13,10 +13,7 @@ const useGoodreadsUser = () => {
     })()
   }, [])
 
-  return {
-    isLoading,
-    user
-  }
+  return [isLoading, user]
 }
 
 export default useGoodreadsUser

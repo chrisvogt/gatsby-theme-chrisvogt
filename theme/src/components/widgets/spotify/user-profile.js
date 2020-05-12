@@ -6,10 +6,6 @@ import PropTypes from 'prop-types'
 import MetricCard from '../metric-card'
 
 const UserProfile = ({ isLoading, metrics }) => {
-  if (isLoading) {
-    return 'Loading...'
-  }
-
   return (
     <Card>
       <Heading
@@ -28,8 +24,13 @@ const UserProfile = ({ isLoading, metrics }) => {
           gridTemplateColumns: `repeat(auto-fit, minmax(128px, 1fr))`
         }}
       >
-        {metrics.map(({ displayName, id, value }) => (
-          <MetricCard key={id} title={displayName} value={value} />
+        {(isLoading ? [{}, {}] : metrics).map(({ displayName, id, value }) => (
+          <MetricCard
+            key={id}
+            title={displayName}
+            value={value}
+            placeholder={isLoading}
+          />
         ))}
       </div>
     </Card>

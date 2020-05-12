@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
+import { Bars } from 'svg-loaders-react'
 
 import CallToAction from '../call-to-action'
 import TopTracks from './top-tracks'
@@ -20,7 +21,14 @@ const SpotifyWidget = () => {
     provider: { displayName: providerDisplayName } = {}
   } = content
 
-  const callToAction = (
+  const callToAction = isLoading ? (
+    <Bars
+      fill='#1E90FF'
+      width='24'
+      height='24'
+      sx={{ verticalAlign: `middle` }}
+    />
+  ) : (
     <CallToAction
       title={`${profileDisplayName} on ${providerDisplayName}`}
       url={profileURL}

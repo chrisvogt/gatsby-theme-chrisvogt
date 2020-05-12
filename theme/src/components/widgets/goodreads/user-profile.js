@@ -2,15 +2,12 @@
 import { jsx } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
+import Placeholder from 'react-placeholder'
 
 import MetricCard from '../metric-card'
 import StatusCard from '../status-card'
 
 const UserProfile = ({ isLoading, profile }) => {
-  if (isLoading) {
-    return 'Loading...'
-  }
-
   const { favoriteBooks, friendsCount, readCount } = profile
 
   const metrics = [
@@ -37,7 +34,13 @@ const UserProfile = ({ isLoading, profile }) => {
         Favorite Genres
       </Heading>
 
-      <StatusCard message={favoriteBooks} />
+      <StatusCard
+        message={
+          <Placeholder color='#efefef' ready={!isLoading} showLoadingAnimation>
+            {favoriteBooks}
+          </Placeholder>
+        }
+      />
 
       <Heading
         as='h3'
@@ -56,7 +59,12 @@ const UserProfile = ({ isLoading, profile }) => {
         }}
       >
         {metrics.map(({ id, title, value }) => (
-          <MetricCard key={id} title={title} value={value} />
+          <MetricCard
+            key={id}
+            title={title}
+            value={value}
+            placeholder={isLoading}
+          />
         ))}
       </div>
     </Card>

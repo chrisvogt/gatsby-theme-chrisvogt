@@ -2,11 +2,7 @@
 import { jsx, Styled } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
 import Placeholder from 'react-placeholder'
-import {
-  TextRow,
-  TextBlock,
-  RectShape
-} from 'react-placeholder/lib/placeholders'
+import { TextRow } from 'react-placeholder/lib/placeholders'
 import PropTypes from 'prop-types'
 
 import CardFooter from '../card-footer'
