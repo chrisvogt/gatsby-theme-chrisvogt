@@ -1,43 +1,31 @@
 import get from 'lodash/get'
 
-const PATHS = {
-  avatarURL: 'avatarURL',
-  baseURL: 'baseURL',
-  description: 'description',
-  githubUsername: 'social.github.username',
-  goodreadsUsername: 'social.goodreads.username',
-  headline: 'headline',
-  imageURL: 'imageURL',
-  instagramUsername: 'social.instagram.username',
-  subhead: 'subhead',
-  title: 'title',
-  titleTemplate: 'titleTemplate',
-  twitterUsername: 'social.twitter.username'
-}
+export const getAvatarURL = metadata => get(metadata, 'avatarURL')
 
-export const getAvatarURL = metadata => get(metadata, PATHS.avatarURL)
+export const getBaseURL = metadata => get(metadata, 'baseURL')
 
-export const getBaseURL = metadata => get(metadata, PATHS.baseURL)
+export const getDescription = metadata => get(metadata, 'description')
 
-export const getDescription = metadata => get(metadata, PATHS.description)
-
-export const getGithubUsername = metadata => get(metadata, PATHS.githubUsername)
+export const getGithubUsername = metadata =>
+  get(metadata, 'social.github.username')
 
 export const getGoodreadsUsername = metadata =>
-  get(metadata, PATHS.goodreadsUsername)
+  get(metadata, 'social.goodreads.username')
 
-export const getHeadline = metadata => get(metadata, PATHS.headline)
+export const getHeadline = metadata => get(metadata, 'headline')
 
-export const getImageURL = metadata => get(metadata, PATHS.imageURL)
+export const getImageURL = metadata => get(metadata, 'imageURL')
 
 export const getInstagramUsername = metadata =>
-  get(metadata, PATHS.instagramUsername)
+  get(metadata, 'social.instagram.username')
 
-export const getSubhead = metadata => get(metadata, PATHS.subhead)
+export const getLanguageCode = metadata => get(metadata, 'languageCode')
 
-export const getTitle = metadata => get(metadata, PATHS.title)
+export const getSubhead = metadata => get(metadata, 'subhead')
 
-export const getTitleTemplate = metadata => get(metadata, PATHS.titleTemplate)
+export const getTitle = metadata => get(metadata, 'title')
+
+export const getTitleTemplate = metadata => get(metadata, 'titleTemplate')
 
 export const getTwitterUsername = metadata =>
-  get(metadata, PATHS.twitterUsername)
+  get(metadata, 'social.twitter.username')

@@ -3,31 +3,35 @@ import { jsx } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
+import { TextRow } from 'react-placeholder/lib/placeholders'
+import 'react-placeholder/lib/reactPlaceholder.css'
+
 import MetricCard from '../metric-card'
 import StatusCard from '../status-card'
 
 const UserProfile = ({ isLoading, user }) => {
-  if (isLoading) {
-    return 'Loading...'
-  }
-
-  const { repositories = {}, followers = {}, following = {} } = user
+  const {
+    repositories: { totalCount: totalRepositoriesCount = 0 } = {},
+    followers: { totalCount: totalFollowersCount = 0 } = {},
+    following: { totalCount: totalFollowingCount = 0 } = {},
+    status: { message: userStatusMessage = '' } = {}
+  } = user || {}
 
   const metrics = [
     {
       id: 'repositories',
       title: 'Repositories',
-      value: repositories.totalCount
+      value: totalRepositoriesCount
     },
     {
       id: 'followers',
       title: 'Followers',
-      value: followers.totalCount
+      value: totalFollowersCount
     },
     {
       id: 'following',
       title: 'Following',
-      value: following.totalCount
+      value: totalFollowingCount
     }
   ]
 
@@ -43,8 +47,13 @@ const UserProfile = ({ isLoading, user }) => {
       </Heading>
 
       <StatusCard
-        message={user.status.message}
-        updatedAt={user.status.updatedAt}
+        message={
+          isLoading ? (
+            <TextRow color='#efefef' style={{ marginTop: 0 }} />
+          ) : (
+            userStatusMessage
+          )
+        }
       />
 
       <Heading
@@ -64,7 +73,12 @@ const UserProfile = ({ isLoading, user }) => {
         }}
       >
         {metrics.map(({ id, title, value }) => (
-          <MetricCard key={id} title={title} value={value} />
+          <MetricCard
+            key={id}
+            title={title}
+            value={value}
+            showPlaceholder={isLoading}
+          />
         ))}
       </div>
     </Card>

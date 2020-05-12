@@ -6,6 +6,11 @@ import SwoopBottom from './artwork/swoop-bottom'
 import theme from '../gatsby-plugin-theme-ui'
 const trianglify = require('./artwork/trianglify.svg')
 
+/**
+ * Header
+ *
+ * A decorative masthead element.
+ */
 const Header = ({
   children,
   hideBackground,

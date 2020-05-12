@@ -2,8 +2,6 @@
 import { jsx, Styled } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-import LazyLoad from '../../lazy-load'
-
 const TrackPreview = ({ link, name, thumbnailURL }) => (
   <Styled.a
     href={link}
@@ -12,18 +10,16 @@ const TrackPreview = ({ link, name, thumbnailURL }) => (
       variant: `styles.TrackPreview`
     }}
   >
-    <LazyLoad>
-      <img
-        alt='album cover'
-        crossOrigin='anonymous'
-        src={thumbnailURL}
-        sx={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }}
-      />
-    </LazyLoad>
+    <img
+      alt='album cover'
+      crossOrigin='anonymous'
+      src={thumbnailURL}
+      sx={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+      }}
+    />
   </Styled.a>
 )
 

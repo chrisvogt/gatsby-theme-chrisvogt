@@ -13,10 +13,7 @@ const useRecentBooks = () => {
     })()
   }, [])
 
-  return {
-    isLoading,
-    books
-  }
+  return [isLoading, books]
 }
 
 export default useRecentBooks

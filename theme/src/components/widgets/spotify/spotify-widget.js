@@ -24,6 +24,7 @@ const SpotifyWidget = () => {
     <CallToAction
       title={`${profileDisplayName} on ${providerDisplayName}`}
       url={profileURL}
+      isLoading={isLoading}
     >
       View profile
       <span className='read-more-icon'>&rarr;</span>
@@ -32,7 +33,9 @@ const SpotifyWidget = () => {
 
   return (
     <Widget id='spotify'>
-      <WidgetHeader aside={callToAction}>Spotify</WidgetHeader>
+      <WidgetHeader aside={callToAction} isLoading={isLoading}>
+        Spotify
+      </WidgetHeader>
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
         <Box>

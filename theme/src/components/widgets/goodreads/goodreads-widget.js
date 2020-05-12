@@ -20,16 +20,20 @@ const getStatusFromUpdates = updates =>
     : {}
 
 export default () => {
-  const { isLoadingBooks, books } = useRecentBooks()
-  const { isLoadingUser, user } = useGoodreadsUser()
+  const [isLoadingBooks, books] = useRecentBooks()
+  const [isLoadingUser, user] = useGoodreadsUser()
+
   const { profile = {}, updates = [] } = user
-  const status = getStatusFromUpdates(updates)
+
+  const status = updates.length && getStatusFromUpdates(updates)
   const metadata = useSiteMetadata()
   const goodreadsUsername = getGoodreadsUsername(metadata)
-  const profileURL = `https://www.goodreads.com/${goodreadsUsername}`
 
   const callToAction = (
-    <CallToAction title={`${goodreadsUsername} on Goodreads`} url={profileURL}>
+    <CallToAction
+      title={`${goodreadsUsername} on Goodreads`}
+      url={`https://www.goodreads.com/${goodreadsUsername}`}
+    >
       View profile
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>

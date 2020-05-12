@@ -1,11 +1,26 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import VisibilitySensor from 'react-visibility-sensor'
 
-const LazyLoad = props => {
-  const { children, height = '100%', width = `100%` } = props
+const DefaultPlaceholder = () => (
+  <div
+    sx={{
+      minHeight: `1px`,
+      minWidth: `1px`,
+      height,
+      width
+    }}
+  >
+    {' '}
+  </div>
+)
 
+/**
+ * Hides a component until it's been visible in the viewport.
+ */
+const LazyLoad = ({ children, height, placholder, width }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   const onChange = isVisible => {
@@ -16,22 +31,22 @@ const LazyLoad = props => {
 
   return (
     <VisibilitySensor onChange={onChange} partialVisibility={true}>
-      {hasBeenVisible ? (
-        children
-      ) : (
-        <div
-          sx={{
-            minHeight: `1px`,
-            minWidth: `1px`,
-            height,
-            width
-          }}
-        >
-          {' '}
-        </div>
-      )}
+      {hasBeenVisible ? children : DefaultPlaceholder}
     </VisibilitySensor>
   )
+}
+
+LazyLoad.propTypes = {
+  children: PropTypes.node.isRequired,
+  height: PropTypes.string,
+  placholder: PropTypes.element,
+  width: PropTypes.string
+}
+
+LazyLoad.defaultProps = {
+  height: '100%',
+  placholder: DefaultPlaceholder,
+  width: '100%'
 }
 
 export default LazyLoad
