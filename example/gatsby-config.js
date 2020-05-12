@@ -5,7 +5,7 @@ module.exports = {
     description:
       'A GatsbyJS blog theme with built-in social widgets for Instagram, Goodreads, GitHub, and Spotify.',
     footerText: '© 2020 Chris Vogt',
-    baseURL: 'https://www.privatesphere.io',
+    baseURL: 'https://privatesphere.io',
     imageURL: '',
     languageCode: 'en',
     social: {
@@ -16,7 +16,7 @@ module.exports = {
         username: 'chrisvogt'
       },
       github: {
-        username: 'instagram'
+        username: 'chrisvogt'
       },
       twitter: {
         username: 'c1v0'

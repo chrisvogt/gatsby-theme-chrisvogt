@@ -1,0 +1,35 @@
+---
+slug: /tips/override-home-widgets
+date: '2020-05-11T09:00:00.000Z'
+title: Use component shadowing to control widgets on the home page
+category: tips
+description: >
+  This theme ships with a number of built-in social profile widgets. Use component
+  shadowing to control which widgets render on the home page.
+keywords: ['react']
+banner: 'https://picsum.photos/560/448?sig=2'
+---
+
+Private Sphere comes with a collection of widgets that render social profile information. To utilize these widgets, you must currently supply your own datasource. To avoid using these widgets altogether, use [GatsbyJS component shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) to specify which widgets your theme uses.
+
+```javascript{numberLines: true}
+# /ROOT/src/gatsby-theme-private-sphere/components/home-widgets.js
+
+import React from 'react'
+
+import GitHub from 'gatsby-theme-private-sphere/src/components/widgets/github'
+import RecentPosts from 'gatsby-theme-private-sphere/src/components/widgets/recent-posts'
+
+const HomeWidgets = () => (
+  <>
+    <RecentPosts />
+    <GitHub />
+  </>
+)
+
+export default HomeWidgets
+```
+
+The above file will override the theme's `<HomeWidgets />` component, and cause only the recent posts widget and the GitHub widget to render.
+
+![Screenshot: Home Widgets](example-alt-home-widgets.png)
