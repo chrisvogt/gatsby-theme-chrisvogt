@@ -98,7 +98,9 @@ export default {
     display: `flex`,
     flexDirection: `column`,
     '.card-media': {
-      mb: 2
+      mb: 2,
+      height: `100%`,
+      overflow: `hidden`
     },
     '.read-more-icon': {
       display: `inline`,
@@ -118,6 +120,8 @@ export default {
   },
   MetricCard: {
     ...card,
+    boxShadow: `none`,
+    borderBottom: `1px solid #efefef`,
     borderLeftColor: `text`,
     borderLeft: `3px solid`,
     span: {
@@ -128,7 +132,11 @@ export default {
   },
   InstagramCard: {
     ...floatOnHover,
-    boxShadow: `md`
+    boxShadow: `md`,
+    overflow: `hidden`,
+    '&:hover .instagram-item-image': {
+      transform: `scale(1.05)`
+    }
   },
   TopNavigation: {
     color: `white`

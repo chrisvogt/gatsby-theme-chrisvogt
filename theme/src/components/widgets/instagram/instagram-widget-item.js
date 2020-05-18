@@ -43,6 +43,7 @@ const InstagramWidgetItem = props => {
             justifyContent: `space-evenly`,
             background: `rgba(0, 0, 0, 0.3)`,
             width: `100%`,
+            overflow: `hidden`,
             height: `100%`,
             position: `absolute`,
             zIndex: 33
@@ -99,6 +100,7 @@ const InstagramWidgetItem = props => {
 
       <img
         crossOrigin='anonymous'
+        className='instagram-item-image'
         src={url}
         height={height}
         width={width}
@@ -106,6 +108,7 @@ const InstagramWidgetItem = props => {
         sx={{
           width: '100%',
           height: '100%',
+          transition: `all 1.5s ease`,
           objectFit: 'cover'
         }}
       />
