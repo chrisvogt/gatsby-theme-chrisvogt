@@ -8,18 +8,23 @@ export default ({ banner, category, date, excerpt, link, title }) => (
       className='card-content'
       sx={{
         display: `flex`,
-        flexDirection: `column`
+        flexDirection: `column`,
+        '&:hover .banner-image': {
+          transform: `scale(1.05)`
+        }
       }}
     >
       {banner && (
         <div className='card-media'>
           <div
+            className='banner-image'
             sx={{
               backgroundImage: `url(${banner})`,
               backgroundPosition: `center`,
               backgroundSize: `cover`,
               borderRadius: `1px`,
-              height: `240px`
+              height: `240px`,
+              transition: `all 1.5s ease`
             }}
           />
         </div>
@@ -29,7 +34,7 @@ export default ({ banner, category, date, excerpt, link, title }) => (
         <span sx={{ variant: `text.title`, mt: 1 }}>{category}</span>
       )}
 
-      <Styled.h4 sx={{ height: `100%`, mt: 2 }}>{title}</Styled.h4>
+      <Styled.h4 sx={{ mt: 2 }}>{title}</Styled.h4>
 
       <time
         className='created'

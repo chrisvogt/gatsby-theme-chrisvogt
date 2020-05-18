@@ -15,9 +15,8 @@ const TrackPreview = ({ link, name, thumbnailURL }) => (
       crossOrigin='anonymous'
       src={thumbnailURL}
       sx={{
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
+        objectFit: 'cover',
+        width: '100%'
       }}
     />
   </Styled.a>
