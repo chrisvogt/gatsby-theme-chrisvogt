@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusCard renders correctly 1`] = `
+<div
+  className="css-bmvaq1-Component"
+/>
+`;

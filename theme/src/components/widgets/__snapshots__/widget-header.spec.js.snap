@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetHeader renders correctly 1`] = `
+<header
+  className="css-17ragm3-Component"
+>
+  <h2
+    className="css-1wf7gym"
+  >
+    Neat & Interesting Widget
+  </h2>
+</header>
+`;
