@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackPreview renders correctly 1`] = `
+<a
+  className="css-17ragm3-Component"
+  href="https://www.fake-book-website.com/book-example"
+  title="Fake Song"
+>
+  <img
+    alt="album cover"
+    className="css-1gn66rm-Component"
+    crossOrigin="anonymous"
+    src="https://placehold.it/400/400"
+  />
+</a>
+`;
