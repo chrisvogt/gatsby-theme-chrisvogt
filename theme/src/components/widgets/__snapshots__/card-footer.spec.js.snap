@@ -2,7 +2,7 @@
 
 exports[`CardFooter renders correctly 1`] = `
 <div
-  className="css-17ragm3-Component"
+  className="css-1nldqfs-CardFooter"
 >
   Test
 </div>

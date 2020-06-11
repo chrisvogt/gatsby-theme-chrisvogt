@@ -7,7 +7,7 @@ exports[`BookLink renders correctly 1`] = `
   title="The Three-Body Problem"
 >
   <svg
-    className="css-17ragm3-Component"
+    className="css-dqme39-Book"
     data-name="Book Preview"
     viewBox="0 0 100 100"
     xmlns="http://www.w3.org/2000/svg"

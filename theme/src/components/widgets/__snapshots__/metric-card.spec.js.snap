@@ -2,7 +2,7 @@
 
 exports[`MetricCard renders correctly 1`] = `
 <div
-  className="css-1te47bh-Component"
+  className="css-8kxwsd-MetricCard"
 >
   <span>
     Fake Value

@@ -2,7 +2,7 @@
 
 exports[`CallToAction renders correctly 1`] = `
 <a
-  className="css-1skv6ml-Component"
+  className="css-o1z7o2-CallToAction"
   title="Example Widget Title"
 >
   Test

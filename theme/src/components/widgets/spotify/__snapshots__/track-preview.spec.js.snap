@@ -2,13 +2,13 @@
 
 exports[`TrackPreview renders correctly 1`] = `
 <a
-  className="css-17ragm3-Component"
+  className="css-1s6nee6-TrackPreview"
   href="https://www.fake-book-website.com/book-example"
   title="Fake Song"
 >
   <img
     alt="album cover"
-    className="css-1gn66rm-Component"
+    className="css-voxaeh-TrackPreview"
     crossOrigin="anonymous"
     src="https://placehold.it/400/400"
   />

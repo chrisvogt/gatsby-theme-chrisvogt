@@ -2,6 +2,6 @@
 
 exports[`StatusCard renders correctly 1`] = `
 <div
-  className="css-bmvaq1-Component"
+  className="css-1hcqsf3-StatusCard"
 />
 `;
