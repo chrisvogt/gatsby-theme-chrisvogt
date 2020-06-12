@@ -2,6 +2,23 @@
 
 # Private Sphere – a GatsbyJS theme
 
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
+
+<p align="center">
+  <a href="https://github.com/chrisvogt/gatsby-theme-private-sphere/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Private Sphere is released under the MIT license." />
+  </a>
+  <a href="https://circleci.com/gh/chrisvogt/gatsby-theme-private-sphere">
+    <img src="https://circleci.com/gh/chrisvogt/gatsby-theme-private-sphere.svg?style=shield" alt="Current CircleCI build status." />
+  </a>
+  <a href="https://www.npmjs.org/package/gatsby-theme-private-sphere">
+    <img src="https://img.shields.io/npm/v/gatsby-theme-private-sphere.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=c1v0">
+    <img src="https://img.shields.io/twitter/follow/c1v0.svg?label=Follow%20@c1v0" alt="Follow @c1v0" />
+  </a>
+</p>
+
 Private Sphere is the Gatsby theme for my personal blog and website, [www.chrisvogt.me](https://www.chrisvogt.me). My website is a personal space where I share an overview of my online activity, links to my social profiles, photo galleries, and blog posts about my creative and coding endeavors.
 
 ## Widgets
