@@ -1,4 +1,7 @@
 const boxen = require('boxen')
+const chalk = require('chalk')
+
+const package = require('./theme/package.json')
 
 const banner = boxen('Private Sphere\na GatsbyJS theme', {
   align: 'center',
@@ -13,3 +16,8 @@ const banner = boxen('Private Sphere\na GatsbyJS theme', {
 })
 
 console.log(banner)
+
+console.log(
+  `✅  Installation succeeded: ${chalk.bold('gatsby-theme-private-sphere')}`
+)
+console.log(`⚙  Version: ${chalk.bold(package.version)}`)
