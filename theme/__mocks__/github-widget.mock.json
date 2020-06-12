@@ -1,0 +1,168 @@
+{
+  "ok": true,
+  "payload": {
+    "user": {
+      "login": "chrisvogt",
+      "name": "Chris Vogt",
+      "createdAt": "2012-07-07T03:18:03Z",
+      "bio": "",
+      "followers": {
+        "totalCount": 42
+      },
+      "following": {
+        "totalCount": 64
+      },
+      "url": "https://github.com/chrisvogt",
+      "status": {
+        "emoji": null,
+        "updatedAt": "2020-03-23T19:24:51Z",
+        "createdAt": "2019-10-29T03:51:06Z",
+        "expiresAt": null,
+        "message": "✌(◕‿◕) ✌"
+      },
+      "projectsUrl": "https://github.com/users/chrisvogt/projects",
+      "location": "San Francisco, California, US",
+      "avatarUrl": "https://avatars3.githubusercontent.com/u/1934719?u=db48b4b6879c8d5ec084c66acc7e70a2c98515af&v=4",
+      "pinnedItems": {
+        "totalCount": 4,
+        "nodes": [
+          {
+            "__typename": "Repository",
+            "createdAt": "2019-10-07T05:33:40Z",
+            "description": "A Gatsby personal blog theme with built-in GitHub, Goodreads, Instagram, and Spotify widgets.",
+            "hasIssuesEnabled": true,
+            "hasWikiEnabled": true,
+            "homepageUrl": "",
+            "id": "MDEwOlJlcG9zaXRvcnkyMTMzMDI5NzQ=",
+            "licenseInfo": {
+              "name": "MIT License",
+              "nickname": null,
+              "key": "mit",
+              "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "name": "gatsby-theme-private-sphere",
+            "nameWithOwner": "chrisvogt/gatsby-theme-private-sphere",
+            "openGraphImageUrl": "https://avatars0.githubusercontent.com/u/1934719?s=400&v=4",
+            "primaryLanguage": {
+              "id": "MDg6TGFuZ3VhZ2UxNDA=",
+              "color": "#f1e05a",
+              "name": "JavaScript"
+            },
+            "updatedAt": "2020-06-12T01:42:55Z",
+            "pushedAt": "2020-06-12T03:21:36Z",
+            "url": "https://github.com/chrisvogt/gatsby-theme-private-sphere",
+            "usesCustomOpenGraphImage": false
+          },
+          {
+            "__typename": "Repository",
+            "createdAt": "2018-08-12T21:59:08Z",
+            "description": "A personal API for storing and serving personal data and metrics collected from various online platforms.",
+            "hasIssuesEnabled": true,
+            "hasWikiEnabled": false,
+            "homepageUrl": "",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDQ1MDM2NjQ=",
+            "licenseInfo": {
+              "name": "MIT License",
+              "nickname": null,
+              "key": "mit",
+              "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "name": "core",
+            "nameWithOwner": "personal-api/core",
+            "openGraphImageUrl": "https://avatars1.githubusercontent.com/u/42729416?s=400&v=4",
+            "primaryLanguage": {
+              "id": "MDg6TGFuZ3VhZ2UxNDA=",
+              "color": "#f1e05a",
+              "name": "JavaScript"
+            },
+            "updatedAt": "2020-03-26T12:11:58Z",
+            "pushedAt": "2020-06-06T12:06:17Z",
+            "url": "https://github.com/personal-api/core",
+            "usesCustomOpenGraphImage": false
+          },
+          {
+            "__typename": "Repository",
+            "createdAt": "2018-10-17T03:27:18Z",
+            "description": "Slack bot that announces upcoming catered meals and supports ZeroCater.",
+            "hasIssuesEnabled": true,
+            "hasWikiEnabled": true,
+            "homepageUrl": "",
+            "id": "MDEwOlJlcG9zaXRvcnkxNTMzOTAxMDE=",
+            "licenseInfo": {
+              "name": "MIT License",
+              "nickname": null,
+              "key": "mit",
+              "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "name": "slack-bot",
+            "nameWithOwner": "lunchly/slack-bot",
+            "openGraphImageUrl": "https://avatars3.githubusercontent.com/u/43972259?s=400&v=4",
+            "primaryLanguage": {
+              "id": "MDg6TGFuZ3VhZ2UxNDA=",
+              "color": "#f1e05a",
+              "name": "JavaScript"
+            },
+            "updatedAt": "2019-08-21T01:53:12Z",
+            "pushedAt": "2020-03-13T23:05:11Z",
+            "url": "https://github.com/lunchly/slack-bot",
+            "usesCustomOpenGraphImage": false
+          },
+          {
+            "__typename": "Repository",
+            "createdAt": "2018-10-08T21:12:28Z",
+            "description": "Lunchly datasource for ZeroCater.",
+            "hasIssuesEnabled": true,
+            "hasWikiEnabled": false,
+            "homepageUrl": "https://www.npmjs.com/package/@lunchly/service-zerocater",
+            "id": "MDEwOlJlcG9zaXRvcnkxNTIxNDc0MDk=",
+            "licenseInfo": {
+              "name": "MIT License",
+              "nickname": null,
+              "key": "mit",
+              "url": "http://choosealicense.com/licenses/mit/"
+            },
+            "name": "service-zerocater",
+            "nameWithOwner": "lunchly/service-zerocater",
+            "openGraphImageUrl": "https://avatars3.githubusercontent.com/u/43972259?s=400&v=4",
+            "primaryLanguage": {
+              "id": "MDg6TGFuZ3VhZ2UxNDA=",
+              "color": "#f1e05a",
+              "name": "JavaScript"
+            },
+            "updatedAt": "2019-03-28T08:26:47Z",
+            "pushedAt": "2019-03-25T18:31:55Z",
+            "url": "https://github.com/lunchly/service-zerocater",
+            "usesCustomOpenGraphImage": false
+          }
+        ]
+      },
+      "repositories": {
+        "totalCount": 54
+      },
+      "pullRequests": {
+        "nodes": [
+          {
+            "labels": {
+              "edges": []
+            },
+            "lastEditedAt": "2020-06-12T01:35:12Z",
+            "url": "https://github.com/chrisvogt/gatsby-theme-private-sphere/pull/40",
+            "closed": true,
+            "closedAt": "2020-06-12T01:42:52Z",
+            "createdAt": "2020-06-12T00:50:30Z",
+            "id": "MDExOlB1bGxSZXF1ZXN0NDMzNDA2MDQ5",
+            "merged": true,
+            "number": 40,
+            "repository": {
+              "name": "gatsby-theme-private-sphere",
+              "id": "MDEwOlJlcG9zaXRvcnkyMTMzMDI5NzQ=",
+              "url": "https://github.com/chrisvogt/gatsby-theme-private-sphere"
+            },
+            "title": "Initial check-in of unit tests and coverage collection/reporting",
+            "viewerDidAuthor": true
+          }
+        ]
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ import WidgetHeader from '../widget-header'
 
 import { getGithubUsername } from '../../../selectors/metadata'
 import getPinnedItems from './selectors/get-pinned-items'
-import getPullRequest from './selectors/get-pull-request'
+import getPullRequests from './selectors/get-pull-requests'
 import getUser from './selectors/get-user'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 import useWidgetContent from '../../../hooks/use-widget-content'
@@ -28,7 +28,7 @@ const GitHubWidget = () => {
 
   if (!isLoading) {
     pinnedItems = getPinnedItems(content)
-    pullRequest = getPullRequest(content)
+    pullRequest = getPullRequests(content)
     user = getUser(content)
   }
 

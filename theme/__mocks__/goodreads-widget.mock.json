@@ -1,0 +1,172 @@
+{
+  "ok": true,
+  "payload": {
+    "profile": {
+      "name": "Chris Vogt",
+      "userName": "chrisvogt",
+      "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+      "imageURL": "https://images.gr-assets.com/users/1573542534p3/10454947.jpg",
+      "smallImageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
+      "website": "https://www.chrisvogt.me",
+      "joined": "06/2012",
+      "interests": "╭(◔ ◡ ◔)/",
+      "favoriteBooks": "speculative fiction, psychology",
+      "friendsCount": "79",
+      "readCount": 111
+    },
+    "updates": [
+      {
+        "actionText": "is on page 221 of 265 of <a href=\"https://www.goodreads.com/book/show/10639.The_Paradox_of_Choice\">The Paradox of Choice</a>",
+        "book": {
+          "author": {
+            "about": "an American psychologist. Schwartz is the Dorwin Cartwright Professor of Social Theory and Social Action at Swarthmore College. He frequently publishes editorials in the New York Times applying his research in psychology to current events.",
+            "displayName": "Schwartz, Barry",
+            "name": "Barry Schwartz",
+            "sortName": "schwartz, barry"
+          },
+          "format": "Paperback",
+          "goodreadsID": "10639",
+          "isbn": "0060005696",
+          "isbn13": "9780060005696",
+          "pageCount": 265,
+          "publicationYear": 2005,
+          "publisher": "Harper Perennial",
+          "sortTitle": "paradox of choice: why more is less, the",
+          "title": "The Paradox of Choice: Why More Is Less"
+        },
+        "created": "2020-06-10T15:14:26+00:00",
+        "imageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
+        "link": "https://www.goodreads.com/user_status/show/290758234",
+        "page": 221,
+        "percent": 83,
+        "type": "userstatus",
+        "updated": "2020-06-10T15:14:26+00:00",
+        "userID": "10454947"
+      },
+      {
+        "actionText": "is on page 204 of 265 of <a href=\"https://www.goodreads.com/book/show/10639.The_Paradox_of_Choice\">The Paradox of Choice</a>",
+        "book": {
+          "author": {
+            "about": "an American psychologist. Schwartz is the Dorwin Cartwright Professor of Social Theory and Social Action at Swarthmore College. He frequently publishes editorials in the New York Times applying his research in psychology to current events.",
+            "displayName": "Schwartz, Barry",
+            "name": "Barry Schwartz",
+            "sortName": "schwartz, barry"
+          },
+          "format": "Paperback",
+          "goodreadsID": "10639",
+          "isbn": "0060005696",
+          "isbn13": "9780060005696",
+          "pageCount": 265,
+          "publicationYear": 2005,
+          "publisher": "Harper Perennial",
+          "sortTitle": "paradox of choice: why more is less, the",
+          "title": "The Paradox of Choice: Why More Is Less"
+        },
+        "created": "2020-06-09T15:39:01+00:00",
+        "imageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
+        "link": "https://www.goodreads.com/user_status/show/290539225",
+        "page": 204,
+        "percent": 76,
+        "type": "userstatus",
+        "updated": "2020-06-09T15:39:01+00:00",
+        "userID": "10454947"
+      },
+      {
+        "actor": {
+          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+          "name": "Chris Vogt"
+        },
+        "book": {
+          "author": {
+            "averageRating": "4.16",
+            "goodreadsID": "160932",
+            "imageURL": "https://images.gr-assets.com/authors/1293767250p5/160932.jpg",
+            "hasImageURL": "false",
+            "smallImageURL": "https://images.gr-assets.com/authors/1293767250p2/160932.jpg",
+            "hasSmallImageURL": "false",
+            "textReviewCount": "4416"
+          },
+          "goodreadsID": "123684",
+          "link": "https://www.goodreads.com/book/show/123684.Influence",
+          "title": "Influence: Science and Practice"
+        },
+        "link": "https://www.goodreads.com/review/show/3184828857",
+        "rating": 3,
+        "type": "review",
+        "updated": "Thu, 20 Feb 2020 11:30:13 -0800"
+      },
+      {
+        "actor": {
+          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+          "name": "Chris Vogt"
+        },
+        "book": {
+          "author": {
+            "averageRating": "4.23",
+            "goodreadsID": "1825",
+            "imageURL": "https://s.gr-assets.com/assets/nophoto/user/f_200x266-3061b784cc8e7f021c6430c9aba94587.png",
+            "hasImageURL": "true",
+            "smallImageURL": "https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png",
+            "hasSmallImageURL": "true",
+            "textReviewCount": "118274"
+          },
+          "goodreadsID": "25124132",
+          "link": "https://www.goodreads.com/book/show/25124132-to-kill-a-mockingbird",
+          "title": "To Kill a Mockingbird"
+        },
+        "link": "https://www.goodreads.com/review/show/2619246814",
+        "rating": 5,
+        "type": "review",
+        "updated": "Wed, 05 Feb 2020 17:02:41 -0800"
+      },
+      {
+        "actor": {
+          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+          "name": "Chris Vogt"
+        },
+        "book": {
+          "author": {
+            "averageRating": "4.13",
+            "goodreadsID": "1445909",
+            "imageURL": "https://images.gr-assets.com/authors/1282303363p5/1445909.jpg",
+            "hasImageURL": "false",
+            "smallImageURL": "https://images.gr-assets.com/authors/1282303363p2/1445909.jpg",
+            "hasSmallImageURL": "false",
+            "textReviewCount": "10667"
+          },
+          "goodreadsID": "25499718",
+          "link": "https://www.goodreads.com/book/show/25499718-children-of-time",
+          "title": "Children of Time (Children of Time #1)"
+        },
+        "link": "https://www.goodreads.com/review/show/3133062702",
+        "rating": 5,
+        "type": "review",
+        "updated": "Sun, 26 Jan 2020 16:27:05 -0800"
+      },
+      {
+        "actor": {
+          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+          "name": "Chris Vogt"
+        },
+        "book": {
+          "author": {
+            "averageRating": "4.05",
+            "goodreadsID": "874602",
+            "imageURL": "https://images.gr-assets.com/authors/1244291425p5/874602.jpg",
+            "hasImageURL": "false",
+            "smallImageURL": "https://images.gr-assets.com/authors/1244291425p2/874602.jpg",
+            "hasSmallImageURL": "false",
+            "textReviewCount": "57561"
+          },
+          "goodreadsID": "33830160",
+          "link": "https://www.goodreads.com/book/show/33830160-the-left-hand-of-darkness",
+          "title": "The Left Hand of Darkness (Hainish Cycle, #4)"
+        },
+        "link": "https://www.goodreads.com/review/show/3090526771",
+        "rating": 4,
+        "type": "review",
+        "updated": "Fri, 10 Jan 2020 12:19:28 -0800"
+      }
+    ]
+  }
+}
