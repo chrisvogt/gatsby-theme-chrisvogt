@@ -5,10 +5,12 @@ import Content from './content'
 import SwoopTop from '../artwork/swoop-top'
 
 import theme from '../../gatsby-plugin-theme-ui'
+import useSiteMetadata from '../../hooks/use-site-metadata'
+const { footerText } = useSiteMetadata()
 
 export default () => (
   <div sx={{ variant: `styles.Footer` }}>
     <SwoopTop fill={theme.colors.background} />
-    <Content />
+    <Content footerText={footerText} />
   </div>
 )

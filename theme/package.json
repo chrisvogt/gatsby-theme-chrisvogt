@@ -23,7 +23,21 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "test": "./scripts/test.sh"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "coverageReporters": [
+      "text"
+    ]
   },
   "engines": {
     "node": "^10.0.0",
@@ -39,12 +53,21 @@
     "react-dom": "^16.10.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
     "@mdx-js/loader": "^1.5.1",
     "@mdx-js/mdx": "^1.5.1",
+    "babel-jest": "^26.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
     "gatsby": "^2.15.28",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.0.1",
     "loader-utils": "^1.2.3",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react-dom": "^16.10.1",
+    "react-test-renderer": "^16.13.1"
   },
   "dependencies": {
     "@emotion/core": "^10.0.16",

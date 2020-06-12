@@ -9,12 +9,12 @@ import Profiles from './profiles'
  *
  * Override to control the content rendered into the page footer.
  */
-const Content = () => (
+const Content = ({ footerText }) => (
   <Container sx={{ textAlign: `center` }}>
     <div sx={{ mb: 3, pt: 3, pb: [4, 5] }}>
       <Profiles />
     </div>
-    <Credits />
+    <div>{footerText}</div>
   </Container>
 )
 

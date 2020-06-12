@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 import PropTypes from 'prop-types'
-
 import Book from '../../artwork/book'
 
 const BookLink = ({ infoLink, thumbnailURL, title }) => (

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallToAction renders correctly 1`] = `
+<a
+  className="css-o1z7o2-CallToAction"
+  title="Example Widget Title"
+>
+  Test
+</a>
+`;
