@@ -1,6 +1,5 @@
-const getPinnedItems = content => {
-  const { user: { pinnedItems: { nodes = [] } = {} } = {} } = content
-
+const getPinnedItems = payload => {
+  const { user: { pinnedItems: { nodes = [] } = {} } = {} } = payload
   return nodes
 }
 

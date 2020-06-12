@@ -20,7 +20,7 @@
   </a>
 </p>
 
-Private Sphere is the Gatsby theme for my personal blog and website, [www.chrisvogt.me](https://www.chrisvogt.me). My website is a personal space where I share an overview of my online activity, links to my social profiles, photo galleries, and blog posts about my creative and coding endeavors.
+Private Sphere is the GatsbyJS theme behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). My website exists both to display my aggregate social network activity in a single place and to share original content on my own, original platform.
 
 ## Widgets
 

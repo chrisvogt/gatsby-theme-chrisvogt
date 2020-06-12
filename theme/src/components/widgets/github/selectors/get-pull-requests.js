@@ -1,4 +1,4 @@
-const getPullRequest = content => {
+const getPullRequests = content => {
   const {
     user: { pullRequests: { nodes: pullRequests = [] } = {} } = {}
   } = content
@@ -6,4 +6,4 @@ const getPullRequest = content => {
   return pullRequests[0]
 }
 
-export default getPullRequest
+export default getPullRequests
