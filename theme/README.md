@@ -2,12 +2,7 @@
 
 # Private Sphere – a GatsbyJS theme
 
-Private Sphere is a GatsbyJS theme built for my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). Private Sphere was created both to showcase my aggregate social network activity in a single place and to share original content on my own, original platform. My intentioan is for Private Sphere to be a content-publishing project enabling me to share:
-
-- Photography (high-res photos and also Instagram)
-- Video (short- and long-format)
-- Personal metrics and stats (_e.g._, recent favorite music, recent favorite videos, recent favorite read)
-- Professional metrics and stats (_e.g._, open source commits & prs)
+Private Sphere is the GatsbyJS theme behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). My website exists both to display my aggregate social network activity in a single place and to share original content on my own, original platform.
 
 > **Warning:** This theme is a personal hobby project. This project is unstable and not ready for use on a live site unless you are feeling adventurous.
 
