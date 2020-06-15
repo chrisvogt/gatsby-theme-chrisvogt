@@ -20,7 +20,7 @@ const DefaultPlaceholder = () => (
 /**
  * Hides a component until it's been visible in the viewport.
  */
-const LazyLoad = ({ children, height, placholder, width }) => {
+const LazyLoad = ({ children }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   const onChange = isVisible => {
