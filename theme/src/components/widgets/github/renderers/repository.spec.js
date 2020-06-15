@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import Repository from './repository'
 
 describe('GitHub Repository Renderer', () => {
-  it('renders correctly', () => {
+  it('matches the snapshot', () => {
     const tree = renderer
       .create(
         <Repository

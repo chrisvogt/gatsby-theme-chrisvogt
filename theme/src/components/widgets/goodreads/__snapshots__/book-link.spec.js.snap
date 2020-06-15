@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookLink renders correctly 1`] = `
+exports[`BookLink matches the snapshot 1`] = `
 <a
   className="css-0"
   href="https://www.google.com/books/edition/_/ZrNzAwAAQBAJ?hl=en"

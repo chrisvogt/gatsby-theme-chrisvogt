@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GitHub Repository Renderer renders correctly 1`] = `
+exports[`GitHub Repository Renderer matches the snapshot 1`] = `
 <div
   className="css-a7zmsk-Repository"
 >

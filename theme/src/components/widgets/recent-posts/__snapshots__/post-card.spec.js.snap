@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostCard matches the snapshot 1`] = `
+<a
+  className="css-0"
+  href="/blog/article"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <div
+    className="card-content css-9z5gw0"
+  >
+    <div
+      className="card-media"
+    >
+      <div
+        className="banner-image css-1ncfhdf"
+      />
+    </div>
+    <span
+      className="css-1fhgjcy"
+    >
+      personal
+    </span>
+    <h4
+      className="css-164r41r"
+    >
+      My Blog Post
+    </h4>
+    <time
+      className="created css-1dqf291"
+    >
+      1592202624
+    </time>
+  </div>
+</a>
+`;

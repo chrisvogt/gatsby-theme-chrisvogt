@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import TrackPreview from './track-preview'
 
 describe('TrackPreview', () => {
-  it('renders correctly', () => {
+  it('matches the snapshot', () => {
     const tree = renderer
       .create(
         <TrackPreview
