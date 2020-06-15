@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TrackPreview renders correctly 1`] = `
+exports[`TrackPreview matches the snapshot 1`] = `
 <a
   className="css-1s6nee6-TrackPreview"
   href="https://www.fake-book-website.com/book-example"

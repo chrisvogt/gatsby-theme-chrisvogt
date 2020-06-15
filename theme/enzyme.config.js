@@ -5,6 +5,9 @@ configure({
   adapter: new Adapter()
 })
 
+// loader shim
+global.___loader = { enqueue: () => {} }
+
 global.mount = mount
 global.render = render
 global.shallow = shallow

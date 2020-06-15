@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WidgetHeader renders correctly 1`] = `
+exports[`WidgetHeader matches the snapshot 1`] = `
 <header
   className="css-13f4yxw-WidgetHeader"
 >
@@ -9,5 +9,14 @@ exports[`WidgetHeader renders correctly 1`] = `
   >
     Neat & Interesting Widget
   </h2>
+  <div
+    className="css-13f4yxw-WidgetHeader"
+  >
+    <div
+      className="sidebar-content"
+    >
+      Sidebar
+    </div>
+  </div>
 </header>
 `;

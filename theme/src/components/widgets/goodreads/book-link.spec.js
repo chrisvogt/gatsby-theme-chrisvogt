@@ -3,7 +3,7 @@ import BookLink from './book-link'
 import renderer from 'react-test-renderer'
 
 describe('BookLink', () => {
-  it('renders correctly', () => {
+  it('matches the snapshot', () => {
     const tree = renderer
       .create(
         <BookLink

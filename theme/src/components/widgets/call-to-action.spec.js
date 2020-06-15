@@ -6,12 +6,7 @@ import CallToAction from './call-to-action'
 describe('CallToAction', () => {
   const title = 'Example Widget Title'
 
-  global.___loader = {
-    // eslint-disable-line no-underscore-dangle
-    enqueue: jest.fn()
-  }
-
-  it('renders correctly', () => {
+  it('matches the snapshot', () => {
     const tree = renderer
       .create(
         <CallToAction title={title} isLoading={false}>

@@ -2,7 +2,7 @@
 import { jsx, Styled } from 'theme-ui'
 import { Link } from 'gatsby'
 
-export default ({ banner, category, date, excerpt, link, title }) => (
+export default ({ banner, category, date, link, title }) => (
   <Link sx={{ variant: `styles.PostCard` }} to={link}>
     <div
       className='card-content'

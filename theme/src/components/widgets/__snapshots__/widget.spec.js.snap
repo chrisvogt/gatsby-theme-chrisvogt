@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Widget renders correctly 1`] = `
+exports[`Widget matches the snapshot 1`] = `
 <div
   className="css-132vj4o-Widget"
-  id="fake-widget"
 >
   Test
 </div>

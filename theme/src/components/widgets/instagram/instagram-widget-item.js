@@ -14,7 +14,7 @@ const InstagramWidgetItem = props => {
       likes: { count: likesCount = 0 },
       link,
       type
-    } = []
+    } = {}
   } = props
 
   const [isInFocus, setIsInFocus] = useState(false)

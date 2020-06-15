@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstagramWidgetItem matches the snapshot 1`] = `
+<a
+  className="css-19bqgup-InstagramWidgetItem"
+  href="https://instagram.com/fake-image-link"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  rel="noopener noreferrer"
+  style={
+    Object {
+      "lineHeight": 0,
+    }
+  }
+  title="Access media on Instagram"
+>
+  <img
+    alt="Instagram post thumbnail"
+    className="instagram-item-image css-nowwr3-InstagramWidgetItem"
+    crossOrigin="anonymous"
+    height={100}
+    src="https://cdn.privatesphere.io/images/fake-instagram-image.jpg"
+    width={100}
+  />
+</a>
+`;
