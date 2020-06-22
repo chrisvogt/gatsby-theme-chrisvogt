@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot 1`] = `
+<div
+  className="css-1trr7g1-PinnedItemCard"
+>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="css-4cffwv"
+    >
+      <div>
+        <div
+          className="rect-shape"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": 40,
+              "marginBottom": "2em",
+              "marginRight": 10,
+              "width": 40,
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-uwwqev"
+      >
+        <div
+          className="text-block"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            className="text-row"
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "height": "1em",
+                "marginTop": 0,
+                "maxHeight": "33.333333333333336%",
+                "width": "97%",
+              }
+            }
+          />
+          <div
+            className="text-row"
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "height": "1em",
+                "marginTop": "0.7em",
+                "maxHeight": "33.333333333333336%",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="text-block"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="text-row"
+        style={
+          Object {
+            "backgroundColor": "#efefef",
+            "height": "1em",
+            "marginTop": 0,
+            "maxHeight": "20%",
+            "width": "97%",
+          }
+        }
+      />
+      <div
+        className="text-row"
+        style={
+          Object {
+            "backgroundColor": "#efefef",
+            "height": "1em",
+            "marginTop": "0.7em",
+            "maxHeight": "20%",
+            "width": "100%",
+          }
+        }
+      />
+      <div
+        className="text-row"
+        style={
+          Object {
+            "backgroundColor": "#efefef",
+            "height": "1em",
+            "marginTop": "0.7em",
+            "maxHeight": "20%",
+            "width": "94%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant snapshot 1`] = `
+<div
+  className="css-1trr7g1-PinnedItemCard"
+>
+  <div
+    className="css-1g4yje1"
+  >
+    <div
+      className="css-gkju6w"
+    >
+      <div
+        className="css-yyvsvt"
+      >
+        <img
+          alt="repository avatar"
+          className="css-1lvgjmp"
+          height="42"
+          src="./fake-image-path.png"
+          width="42"
+        />
+      </div>
+      <div
+        className="css-ak53vk"
+      >
+        <h4
+          className="css-n2p9zs"
+        >
+          chrisvogt/null
+        </h4>
+        <span
+          className="css-1q038d8"
+        >
+          Updated 
+          NaN years ago
+        </span>
+      </div>
+    </div>
+    <span
+      className="css-i9gxme"
+    >
+      A fake NodeJS project.
+    </span>
+    <div
+      className="css-1nldqfs-CardFooter"
+    >
+      <span>
+        View on 
+        GitHub
+          
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-external-link-alt fa-w-16 "
+          data-icon="external-link-alt"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;

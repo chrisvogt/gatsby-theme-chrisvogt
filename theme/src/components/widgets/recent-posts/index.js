@@ -1,3 +1,1 @@
-import RecentPostsWidget from './recent-posts-widget'
-
-export default RecentPostsWidget
+export { default } from './recent-posts-widget'

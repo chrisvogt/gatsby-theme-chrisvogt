@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeHeaderContent matches the snapshot 1`] = `
+<div
+  className="css-1tjds7f-HomeHeaderContent"
+>
+  <div
+    className="css-qll0zh-HomeHeaderContent"
+  >
+    <img
+      alt="Avatar"
+      className="css-4t2e6u-HomeHeaderContent"
+      height="128"
+      src="https://fake-cdn.chrisvogt.me/images/avatar.jpg"
+      width="128"
+    />
+  </div>
+  <div
+    className="css-cv27iz-HomeHeaderContent"
+  >
+    <h1
+      className="css-ercwh-HomeHeaderContent"
+    >
+      Website Title
+    </h1>
+    <p
+      className="css-1pntkjx-HomeHeaderContent"
+    >
+      A cool subtitle for my website
+    </p>
+  </div>
+</div>
+`;

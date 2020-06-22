@@ -27,7 +27,7 @@ jobs:
 
       - run:
           name: Unit Tests w/Coverage
-          command: yarn workspace gatsby-theme-private-sphere test:coverage
+          command: yarn workspace gatsby-theme-private-sphere test:coverage --maxWorkers=2
 
       - store_artifacts:
           path: theme/coverage

@@ -1,3 +1,1 @@
-import SpotifyWidget from './spotify-widget'
-
-export default SpotifyWidget
+export { default } from './spotify-widget'

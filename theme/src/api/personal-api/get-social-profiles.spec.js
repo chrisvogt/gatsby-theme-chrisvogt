@@ -9,7 +9,7 @@ const mockProfilesAxiosResponse = {
   data: socialProfilesFixture
 }
 
-const mockMetasresponse = {
+const mockMetasAxiosresponse = {
   data: metasFixture
 }
 
@@ -24,9 +24,21 @@ describe('getRecentBooks', () => {
     await expect(getSocialProfiles()).resolves.toEqual([])
   })
 
-  // NOTE(cvogt): when doing this, also look into factoring out the sorting logic
-  // from the API request module
-  test.todo('it fetches, selects, and returns expected data from the expected API endpoin')
+  it('returns unsorted profiles if the metadata is not found', async () => {
+    axios
+      .mockImplementationOnce(() => Promise.resolve(mockProfilesAxiosResponse))
+      .mockImplementationOnce(() => Promise.resolve({}))
+      
+    await expect(getSocialProfiles()).resolves.toEqual(socialProfilesFixture.result.profiles)
+  })
+
+  it('it fetches, selects, and returns expected data from the expected API endpoint', async () => {
+    axios
+      .mockImplementationOnce(() => Promise.resolve(mockProfilesAxiosResponse))
+      .mockImplementationOnce(() => Promise.resolve(mockMetasAxiosresponse))
+      
+    await expect(getSocialProfiles()).resolves.toEqual(socialProfilesFixture.result.profiles)
+  })
 
   it('serializes errors for rejected requests', async () => {
     const errorMessage = 'Something went wrong!'

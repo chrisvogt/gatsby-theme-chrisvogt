@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { Container, jsx } from 'theme-ui'
 
-import Credits from './credits'
 import Profiles from './profiles'
 
 /**

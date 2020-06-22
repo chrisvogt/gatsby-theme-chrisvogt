@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer/Content matches the snapshot 1`] = `
+<div
+  className="css-o91fde-Content"
+>
+  <div
+    className="css-f4963r-Content"
+  >
+    <div
+      className="MOCK__Profiles"
+    />
+  </div>
+  <div>
+    © 2019-2020 Chris Vogt
+  </div>
+</div>
+`;

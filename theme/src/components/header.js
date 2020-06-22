@@ -13,16 +13,14 @@ const trianglify = require('./artwork/trianglify.svg')
  */
 const Header = ({
   children,
-  hideBackground,
   hideTopPadding,
   showSwoop,
-  swoopFill,
   styles
 }) => (
   <div
     sx={{
       variant: `styles.Header`,
-      background: hideBackground ? '' : `url(${trianglify})`,
+      background: `url(${trianglify})`,
       backgroundSize: `cover`,
       backgroundPosition: `bottom center`
     }}
@@ -36,19 +34,17 @@ const Header = ({
     >
       {children}
     </div>
-    {showSwoop && <SwoopBottom fill={swoopFill} invert />}
+    {showSwoop && <SwoopBottom fill={theme.colors.background} invert />}
   </div>
 )
 
 Header.propTypes = {
   children: PropTypes.node.isRequired,
-  showSwoop: PropTypes.bool,
-  swoopFill: PropTypes.string
+  showSwoop: PropTypes.bool
 }
 
 Header.defaultProps = {
-  showSwoop: false,
-  swoopFill: theme.colors.background
+  showSwoop: false
 }
 
 export default Header

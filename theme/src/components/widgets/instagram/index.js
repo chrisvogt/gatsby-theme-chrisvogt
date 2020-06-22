@@ -1,3 +1,1 @@
-import InstagramWidget from './instagram-widget'
-
-export default InstagramWidget
+export { default } from './instagram-widget'
