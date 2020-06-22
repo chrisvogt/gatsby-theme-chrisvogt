@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getInstagramPosts from '../api/personal-api/get-instagram-posts'
+import fetchInstagramPosts from '../api/personal-api/fetch-instagram-posts'
 
 const useInstagramPosts = () => {
   const [posts, setPosts] = useState([])
@@ -7,7 +7,7 @@ const useInstagramPosts = () => {
 
   useEffect(() => {
     ;(async () => {
-      const posts = await getInstagramPosts()
+      const posts = await fetchInstagramPosts()
       setPosts(posts)
       setIsLoading(false)
     })()

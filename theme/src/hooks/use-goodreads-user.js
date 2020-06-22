@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getWidgetContent from '../api/metrics/get-widget-content'
+import getWidgetContent from '../api/metrics/fetch-widget-content'
 
 const useGoodreadsUser = () => {
   const [user, setUser] = useState({ profile: {}, updates: [] })

@@ -1,28 +1,28 @@
 import axios from 'axios'
 
-import getRecentBooks from './get-recent-books'
-import recentlyReadBooksFixture from '../../../__mocks__/instagram.mock.json'
+import fetchWidgetContent from './fetch-widget-content'
+import githubFixture from '../../../__mocks__/github-widget.mock.json'
 
 const mockAxiosResponse = {
-  data: recentlyReadBooksFixture
+  data: githubFixture
 }
 
 jest.mock('axios')
 
-describe('getRecentBooks', () => {
-  it('defaults to an empty array on successful response with no books', async () => {
+describe('fetchWidgetContent', () => {
+  it('returns undefinedf on successful responses with no data', async () => {
     axios.mockImplementationOnce(() => Promise.resolve({}))
-    await expect(getRecentBooks()).resolves.toEqual([])
+    await expect(fetchWidgetContent()).resolves.toEqual(undefined)
   })
 
   it('fetches, selects, and returns expected data from the expected API endpoint', async () => {
     axios.mockImplementationOnce(() => Promise.resolve(mockAxiosResponse))
-    await expect(getRecentBooks()).resolves.toEqual(recentlyReadBooksFixture)
+    await expect(fetchWidgetContent('github')).resolves.toEqual(githubFixture.payload)
   })
 
   it('serializes errors for rejected requests', async () => {
     const errorMessage = 'Something went wrong!'
     axios.mockImplementationOnce(() => Promise.reject(errorMessage))
-    await expect(getRecentBooks()).resolves.toEqual({ error: errorMessage })
+    await expect(fetchWidgetContent('invalid')).resolves.toEqual({ error: errorMessage })
   })
 })
