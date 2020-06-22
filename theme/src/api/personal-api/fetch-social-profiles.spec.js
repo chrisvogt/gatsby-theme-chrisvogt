@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import fetchSocialProfiles from './get-social-profiles'
+import fetchSocialProfiles from './fetch-social-profiles'
 
 import metasFixture from '../../../__mocks__/metas.mock.json'
 import socialProfilesFixture from '../../../__mocks__/profiles.mock.json'

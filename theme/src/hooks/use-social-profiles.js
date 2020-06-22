@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getSocialProfiles from '../api/personal-api/get-social-profiles'
+import getSocialProfiles from '../api/personal-api/fetch-social-profiles'
 
 import {
   faBehance,

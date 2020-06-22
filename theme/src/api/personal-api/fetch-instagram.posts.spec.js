@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import fetchInstagramPosts from './get-instagram-posts'
+import fetchInstagramPosts from './fetch-instagram-posts'
 import instagramFixture from '../../../__mocks__/instagram.mock.json'
 
 const mockAxiosResponse = {

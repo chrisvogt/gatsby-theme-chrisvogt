@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import fetchWidgetContent from './get-widget-content'
+import fetchWidgetContent from './fetch-widget-content'
 import githubFixture from '../../../__mocks__/github-widget.mock.json'
 
 const mockAxiosResponse = {

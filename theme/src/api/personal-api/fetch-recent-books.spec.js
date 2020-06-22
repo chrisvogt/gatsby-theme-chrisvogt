@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import fetchRecentBooks from './get-recent-books'
+import fetchRecentBooks from './fetch-recent-books'
 import recentlyReadBooksFixture from '../../../__mocks__/instagram.mock.json'
 
 const mockAxiosResponse = {

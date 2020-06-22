@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import fetchRecentBooks from '../api/personal-api/get-recent-books'
+import fetchRecentBooks from '../api/personal-api/fetch-recent-books'
 
 const useRecentBooks = () => {
   const [books, setBooks] = useState([])
