@@ -12,7 +12,7 @@ exports[`Footer/Content matches the snapshot 1`] = `
     />
   </div>
   <div>
-    © 2019 Chris Vogt
+    © 2019-2020 Chris Vogt
   </div>
 </div>
 `;

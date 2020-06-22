@@ -11,7 +11,7 @@ describe('Footer/Content', () => {
     const tree = renderer
       .create(
         <Content
-          footerText='© 2019 Chris Vogt'
+          footerText='© 2019-2020 Chris Vogt'
         />
       )
       .toJSON()
