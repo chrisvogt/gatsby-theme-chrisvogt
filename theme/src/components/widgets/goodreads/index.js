@@ -1,3 +1,1 @@
-import GoodreadsWidget from './goodreads-widget'
-
-export default GoodreadsWidget
+export { default } from './goodreads-widget'
