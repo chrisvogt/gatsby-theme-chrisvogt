@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Content from './Content'
+import Content from './content'
 import Profiles from './profiles'
 
 jest.mock('./profiles')
