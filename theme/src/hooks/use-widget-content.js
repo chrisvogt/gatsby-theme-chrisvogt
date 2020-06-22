@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import getWidgetContent from '../api/metrics/get-widget-content'
+import fetchWidgetContent from '../api/metrics/fetch-widget-content'
 
 const useWidgetContent = widgetId => {
   const [content, setContent] = useState([])
@@ -7,7 +7,7 @@ const useWidgetContent = widgetId => {
 
   useEffect(() => {
     ;(async () => {
-      const payload = await getWidgetContent(widgetId)
+      const payload = await fetchWidgetContent(widgetId)
       setContent(payload)
       setIsLoading(false)
     })()
