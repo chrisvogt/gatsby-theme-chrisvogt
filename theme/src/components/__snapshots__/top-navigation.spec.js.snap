@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNavigation matches the snapshot 1`] = `
+<div
+  className="css-1nphrl8-TopNavigation"
+>
+  <div
+    className="css-ni2j8u-TopNavigation"
+  >
+    <a
+      aria-current="page"
+      className="css-16ogb71-TopNavigation"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      My Personal Blog & Portfolio
+    </a>
+    <a
+      className="css-17j6ldh"
+      href="/about-me"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="About Me"
+    >
+      About Me
+    </a>
+  </div>
+</div>
+`;
