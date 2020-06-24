@@ -6754,11 +6754,6 @@ eslint-plugin-react-hooks@^1.7.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
 
-eslint-plugin-react-hooks@^2.0.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.5.1.tgz#4ef5930592588ce171abeb26f400c7fbcbc23cd0"
-  integrity sha512-Y2c4b55R+6ZzwtTppKwSmK/Kar8AdLiC2f9NADCuxbcTgPPg41Gyqa6b9GppgXSvCtkRw43ZE86CT5sejKC6/g==
-
 eslint-plugin-react-hooks@^4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.4.tgz#aed33b4254a41b045818cacb047b81e6df27fa58"
@@ -6829,7 +6824,7 @@ eslint-visitor-keys@^1.2.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.2.0.tgz#74415ac884874495f78ec2a97349525344c981fa"
   integrity sha512-WFb4ihckKil6hu3Dp798xdzSfddwKKU3+nGniKF6HfeW6OLd2OUDEPP7TcHtB5+QXOKg2s6B2DaMPE1Nn/kxKQ==
 
-eslint@^6.2.2, eslint@^6.8.0:
+eslint@^6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.8.0.tgz#62262d6729739f9275723824302fb227c8c93ffb"
   integrity sha512-K+Iayyo2LtyYhDSYwz5D5QdWw0hCacNzyq1Y821Xna2xSJj7cijoLLYmLxTQgcgZ9mC61nryMy9S7GRbYpI5Ig==
@@ -8136,15 +8131,6 @@ gatsby-remark-copy-linked-files@^2.1.28:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.1.tgz#d7b5a8ecbde9ec8fc33fb2e569b87b2af35cb278"
-  integrity sha512-V+cW4Ev+iXb0jmqfqKpcdPRn9vsKahIdj9sAUj26Ox4rooknWCjhayBdxT51BM2u7P2u3ck3Ty96PnqW7e/Mog==
-  dependencies:
-    get-video-id "^3.1.4"
-    remark-burger "^1.0.1"
-    unist-util-visit "^2.0.0"
-
 gatsby-remark-embed-video@^3.0.10:
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.0.10.tgz#2813199338d27e731783a6f8663477f877e72b73"
@@ -8223,60 +8209,6 @@ gatsby-telemetry@^1.3.4:
     stack-trace "^0.0.10"
     stack-utils "1.0.2"
     uuid "3.4.0"
-
-gatsby-theme-private-sphere@*:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-private-sphere/-/gatsby-theme-private-sphere-0.10.0.tgz#48e24f2f02c86d2575281e2360de1faa1a6070ba"
-  integrity sha512-8supdErr8gsr6UvGQzCtbo2QtMgp5574BKMgyk6w3xVt5cL1IFYQbxdkysE4UkXGUBKh1P6ulpdNc2qyZkICww==
-  dependencies:
-    "@emotion/core" "^10.0.16"
-    "@emotion/styled" "^10.0.15"
-    "@fortawesome/fontawesome-svg-core" "^1.2.28"
-    "@fortawesome/free-brands-svg-icons" "^5.11.2"
-    "@fortawesome/free-regular-svg-icons" "^5.11.2"
-    "@fortawesome/free-solid-svg-icons" "^5.13.0"
-    "@fortawesome/react-fontawesome" "^0.1.9"
-    "@mdx-js/mdx" "^1.3.2"
-    "@mdx-js/react" "^1.3.2"
-    "@theme-ui/color" "0.3.1"
-    "@theme-ui/components" "0.3.1"
-    "@theme-ui/presets" "0.3.0"
-    "@theme-ui/prism" "0.3.0"
-    axios "^0.19.0"
-    classnames "^2.2.6"
-    eslint "^6.2.2"
-    eslint-config-prettier "^6.1.0"
-    eslint-plugin-prettier "^3.1.0"
-    eslint-plugin-react-hooks "^2.0.1"
-    gatsby-image "^2.2.30"
-    gatsby-plugin-emotion "^4.1.4"
-    gatsby-plugin-feed "^2.3.27"
-    gatsby-plugin-manifest "^2.2.15"
-    gatsby-plugin-mdx "^1.0.31"
-    gatsby-plugin-prefetch-google-fonts "^1.4.3"
-    gatsby-plugin-react-helmet "^3.1.5"
-    gatsby-plugin-sharp "^2.2.36"
-    gatsby-plugin-theme-ui "0.3.0"
-    gatsby-remark-autolink-headers "^2.1.9"
-    gatsby-remark-copy-linked-files "^2.1.28"
-    gatsby-remark-embed-video "2.0.1"
-    gatsby-remark-images "^3.1.20"
-    gatsby-remark-prismjs "^3.3.20"
-    gatsby-source-filesystem "^2.1.19"
-    gatsby-theme-style-guide "0.3.1"
-    gatsby-transformer-json "^2.2.15"
-    gatsby-transformer-remark "^2.6.32"
-    gatsby-transformer-sharp "^2.3.2"
-    lodash "^4.17.15"
-    prism-themes "^1.3.0"
-    prismjs "^1.17.1"
-    prop-types "^15.7.2"
-    react-helmet "^5.2.1"
-    react-placeholder "^3.0.2"
-    react-visibility-sensor "^5.1.1"
-    s-ago "^2.1.0"
-    svg-loaders-react "^2.2.1"
-    theme-ui "0.3.1"
 
 gatsby-theme-style-guide@0.3.1:
   version "0.3.1"
@@ -13844,7 +13776,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -14122,25 +14054,10 @@ react-error-overlay@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
 
-react-fast-compare@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
-  integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
-
 react-fast-compare@^3.1.1:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
-
-react-helmet@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
-  integrity sha512-CnwD822LU8NDBnjCpZ4ySh8L6HYyngViTZLfBBb3NjtrpN8m49clH8hidHouq20I51Y6TpCTISCBbqiY5GamwA==
-  dependencies:
-    object-assign "^4.1.1"
-    prop-types "^15.5.4"
-    react-fast-compare "^2.0.2"
-    react-side-effect "^1.1.0"
 
 react-helmet@^6.1.0:
   version "6.1.0"
@@ -14176,13 +14093,6 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-placeholder@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-3.0.2.tgz#08bf95b8e2ff20827d8ae8235c4cb2a3a428b292"
-  integrity sha512-PItNXiq7GO3bK8iLobGLcBeRPtxyGdtAdZ7S0zeVdAlpIlUrJy+c6igzKr6uyK74Fh/WhOL5uCNju8FVUjCJEQ==
-  dependencies:
-    prop-types "^15.6.0"
-
 react-placeholder@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-4.0.3.tgz#098f8ee00122bfd73f1ce47d7d99de00384ab141"
@@ -14202,13 +14112,6 @@ react-refresh@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.7.2.tgz#f30978d21eb8cac6e2f2fde056a7d04f6844dd50"
   integrity sha512-u5l7fhAJXecWUJzVxzMRU2Zvw8m4QmDNHlTrT5uo3KBlYBhmChd7syAakBoay1yIiVhx/8Fi7a6v6kQZfsw81Q==
-
-react-side-effect@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.2.0.tgz#0e940c78faba0c73b9b0eba9cd3dda8dfb7e7dae"
-  integrity sha512-v1ht1aHg5k/thv56DRcjw+WtojuuDHFUgGfc+bFHOWsF4ZK6C2V57DO0Or0GPsg6+LSTE0M6Ry/gfzhzSwbc5w==
-  dependencies:
-    shallowequal "^1.0.1"
 
 react-side-effect@^2.1.0:
   version "2.1.0"
@@ -15203,7 +15106,7 @@ shallow-compare@^1.2.2:
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-shallowequal@^1.0.1, shallowequal@^1.1.0:
+shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==

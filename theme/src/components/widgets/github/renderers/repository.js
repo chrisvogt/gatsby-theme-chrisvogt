@@ -11,6 +11,7 @@ const Repository = ({
   description,
   nameWithOwner,
   openGraphImageUrl,
+  primaryLanguage,
   updatedAt
 }) => (
   <div
@@ -26,6 +27,14 @@ const Repository = ({
         mb: 2
       }}
     >
+      <Flex sx={{ flexGrow: 1, flexDirection: `column`, alignSelf: `center` }}>
+        <Heading as='h4' sx={{ pt: 0, pr: 3, pb: 0, mb: 0 }}>
+          {nameWithOwner}
+        </Heading>
+        <span sx={{ color: `textMuted`, fontSize: 0, p: 0 }}>
+          Updated {ago(new Date(updatedAt))}
+        </span>
+      </Flex>
       <Flex sx={{ flexDirection: `column`, alignItems: `center` }}>
         <img
           alt='repository avatar'
@@ -38,20 +47,23 @@ const Repository = ({
           width='42'
         />
       </Flex>
-      <Flex sx={{ flexDirection: `column`, alignSelf: `center`, pl: 3 }}>
-        <Heading as='h4' sx={{ p: 0, mb: 0 }}>
-          {nameWithOwner}
-        </Heading>
-        <span sx={{ color: `textMuted`, fontSize: 0, p: 0 }}>
-          Updated {ago(new Date(updatedAt))}
-        </span>
-      </Flex>
     </Flex>
 
     <span sx={{ flexGrow: 1 }}>{description}</span>
 
     <CardFooter>
-      <ViewExternal platform='GitHub' />
+      {/* <ViewExternal platform='GitHub' /> */}
+      <span>
+      {primaryLanguage.name}
+      </span>
+      <span sx={{
+        backgroundColor: primaryLanguage.color,
+        ml: 2,
+        mb: `2px`,
+        width: `15px`,
+        height: `15px`,
+        borderRadius: `50%`
+      }}></span>
     </CardFooter>
   </div>
 )
