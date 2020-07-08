@@ -18,7 +18,9 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       <div
         className="css-1trr7g1-PinnedItemCard"
       >
-        <div>
+        <div
+          className="show-loading-animation"
+        >
           <div
             className="css-4cffwv"
           >
@@ -128,7 +130,9 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       <div
         className="css-1trr7g1-PinnedItemCard"
       >
-        <div>
+        <div
+          className="show-loading-animation"
+        >
           <div
             className="css-4cffwv"
           >
@@ -238,7 +242,9 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       <div
         className="css-1trr7g1-PinnedItemCard"
       >
-        <div>
+        <div
+          className="show-loading-animation"
+        >
           <div
             className="css-4cffwv"
           >
@@ -348,7 +354,9 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       <div
         className="css-1trr7g1-PinnedItemCard"
       >
-        <div>
+        <div
+          className="show-loading-animation"
+        >
           <div
             className="css-4cffwv"
           >

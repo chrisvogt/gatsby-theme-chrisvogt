@@ -5,7 +5,7 @@ import { TextBlock, RectShape } from 'react-placeholder/lib/placeholders'
 import 'react-placeholder/lib/reactPlaceholder.css'
 
 export default () => (
-  <div>
+  <div className='show-loading-animation'>
     <Flex>
       <div>
         <RectShape
