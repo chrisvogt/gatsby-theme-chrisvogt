@@ -12,7 +12,7 @@ const RecentlyReadBooks = ({ books, isLoading }) => (
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Recently Read Books

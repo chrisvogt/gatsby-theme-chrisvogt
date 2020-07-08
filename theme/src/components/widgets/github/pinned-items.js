@@ -14,11 +14,12 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Pinned Items
       </Heading>
+
       <Styled.div
         sx={{
           display: 'grid',

@@ -40,7 +40,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Latest Status

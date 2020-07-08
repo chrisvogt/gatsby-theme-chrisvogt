@@ -4,9 +4,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot
 <div
   className="css-1trr7g1-PinnedItemCard"
 >
-  <div
-    className="show-loading-animation"
-  >
+  <div>
     <div
       className="css-4cffwv"
     >

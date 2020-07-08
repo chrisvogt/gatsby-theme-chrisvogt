@@ -10,7 +10,7 @@ const TopTracks = ({ isLoading, tracks }) => (
     <Heading
       as='h3'
       sx={{
-        marginBottom: '1rem'
+        mb: 3
       }}
     >
       Top Tracks

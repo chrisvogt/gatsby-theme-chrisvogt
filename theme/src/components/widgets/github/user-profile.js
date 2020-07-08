@@ -40,7 +40,7 @@ const UserProfile = ({ isLoading, user }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Status
@@ -59,7 +59,7 @@ const UserProfile = ({ isLoading, user }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Metrics

@@ -5,7 +5,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
   className="css-vurnku"
 >
   <h3
-    className="css-10gmf8y-LastPullRequest"
+    className="css-4bdn9t-LastPullRequest"
   >
     Last Pull Request
   </h3>
@@ -53,7 +53,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
   className="css-vurnku"
 >
   <h3
-    className="css-10gmf8y-LastPullRequest"
+    className="css-4bdn9t-LastPullRequest"
   >
     Last Pull Request
   </h3>

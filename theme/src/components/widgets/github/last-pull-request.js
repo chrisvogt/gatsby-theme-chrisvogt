@@ -21,7 +21,7 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Last Pull Request
