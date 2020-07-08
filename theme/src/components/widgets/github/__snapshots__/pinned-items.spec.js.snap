@@ -5,7 +5,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
   className="css-stt52z-PinnedItems"
 >
   <h3
-    className="css-18ftx1e-PinnedItems"
+    className="css-9zaks-PinnedItems"
   >
     Pinned Items
   </h3>
@@ -469,7 +469,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
   className="css-stt52z-PinnedItems"
 >
   <h3
-    className="css-18ftx1e-PinnedItems"
+    className="css-9zaks-PinnedItems"
   >
     Pinned Items
   </h3>

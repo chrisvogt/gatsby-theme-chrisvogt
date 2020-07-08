@@ -28,7 +28,7 @@ const UserProfile = ({ isLoading, profile }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Favorite Genres
@@ -45,7 +45,7 @@ const UserProfile = ({ isLoading, profile }) => {
       <Heading
         as='h3'
         sx={{
-          marginBottom: '1rem'
+          mb: 3
         }}
       >
         Metrics

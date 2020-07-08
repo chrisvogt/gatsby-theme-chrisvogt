@@ -3,14 +3,10 @@ import renderer from 'react-test-renderer'
 import HomeWidgets from './home-widgets'
 
 import GitHub from '../components/widgets/github'
-import Goodreads from '../components/widgets/goodreads'
-import Instagram from '../components/widgets/instagram'
 import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
 
 jest.mock('../components/widgets/github')
-jest.mock('../components/widgets/goodreads')
-jest.mock('../components/widgets/instagram')
 jest.mock('../components/widgets/recent-posts')
 jest.mock('../components/widgets/spotify')
 
@@ -18,8 +14,6 @@ const getMockWidgetComponent = id => <div className={`MOCK__${id}Widget`}></div>
 
 describe('HomeWidgets', () => {
   GitHub.mockImplementation(() => getMockWidgetComponent('GitHub'))
-  Goodreads.mockImplementation(() => getMockWidgetComponent('Goodreads'))
-  Instagram.mockImplementation(() => getMockWidgetComponent('Instagram'))
   RecentPosts.mockImplementation(() => getMockWidgetComponent('RecentPosts'))
   Spotify.mockImplementation(() => getMockWidgetComponent('Spotify'))
 
@@ -39,18 +33,6 @@ describe('HomeWidgets', () => {
     it('renders the GitHub widget', () => {
       expect(
         testInstance.findByProps({ className: 'MOCK__GitHubWidget' }).type
-      ).toBe('div')
-    })
-
-    it('renders the Goodreads widget', () => {
-      expect(
-        testInstance.findByProps({ className: 'MOCK__GoodreadsWidget' }).type
-      ).toBe('div')
-    })
-
-    it('renders the Instagram widget', () => {
-      expect(
-        testInstance.findByProps({ className: 'MOCK__InstagramWidget' }).type
       ).toBe('div')
     })
 
