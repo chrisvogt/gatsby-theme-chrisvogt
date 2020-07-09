@@ -11,10 +11,10 @@ import Spotify from '../components/widgets/spotify'
  * Exports widgets to be rendered onto the home page. Override this file using
  * shadowing to add or remove widgets onto the home page.
  * 
- * For example, if you are using this for a child theme, create a new file at
- * /src/gatsby-theme-private-sphere/components/home-widgets.js and use theme
- * shadowing to override this file. The import path for Private Sphere widgets
- * looks like: 'gatsby-theme-private-sphere/src/components/widgets/recent-posts'
+ * For example, if you are using this as a parent theme, create a new file at
+ * /src/gatsby-theme-private-sphere/components/home-widgets.js to use GatsbyJS
+ * theme shadowing to override this file. The import path for Private Sphere
+ * widgets is: 'gatsby-theme-private-sphere/src/components/widgets/recent-posts'
  */
 const HomeWidgets = () => (
   <>
