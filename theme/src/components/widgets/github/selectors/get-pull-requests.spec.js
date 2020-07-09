@@ -1,7 +1,6 @@
 import getPullRequests from './get-pull-requests'
 
-const githubContentFixture = require('../../../../../__mocks__/github-widget.mock.json')
-const { payload } = githubContentFixture
+const { payload } = require('../../../../../__mocks__/github-widget.mock.json')
 
 const getTotalCount = payload => {
   const {

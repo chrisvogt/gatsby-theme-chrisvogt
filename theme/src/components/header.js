@@ -4,19 +4,14 @@ import PropTypes from 'prop-types'
 
 import SwoopBottom from './artwork/swoop-bottom'
 import theme from '../gatsby-plugin-theme-ui'
-const trianglify = require('./artwork/trianglify.svg')
+import trianglify from './artwork/trianglify.svg'
 
 /**
  * Header
  *
- * A decorative masthead element.
+ * A decorative masthead element that can be used across page layouts.
  */
-const Header = ({
-  children,
-  hideTopPadding,
-  showSwoop,
-  styles
-}) => (
+const Header = ({ children, hideTopPadding, showSwoop, styles }) => (
   <div
     sx={{
       variant: `styles.Header`,

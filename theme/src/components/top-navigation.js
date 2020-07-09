@@ -8,6 +8,11 @@ import trianglify from './artwork/trianglify.svg'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
+/**
+ * Header Navigation
+ *
+ * Top navigation component for the page.
+ */
 const TopNavigation = ({ hideBackground }) => {
   const metadata = useSiteMetadata()
 

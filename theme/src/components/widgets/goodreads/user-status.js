@@ -11,20 +11,17 @@ import ViewExternal from '../view-external'
 
 const stripHtmlElements = text => text.replace(/<[^>]+>/g, '')
 
-const getRatingStars = count => {
-  const repeat = (char, n) =>
-    Array(n)
-      .fill(char)
-      .join('')
-
+const renderStarsForRating = count => {
+  const repeat = (char, n) => Array(n).fill(char).join('')
   const rating = repeat('★', count) + repeat('☆', 5 - count)
-
   return rating
 }
 
 const mapStatusToTemplate = {
   review: ({ book, rating }) =>
-    `rated ${book.title} ${rating} out of 5 stars: ${getRatingStars(rating)}.`,
+    `rated ${book.title} ${rating} out of 5 stars: ${renderStarsForRating(
+      rating
+    )}.`,
   userstatus: ({ actionText }) => stripHtmlElements(actionText)
 }
 
@@ -59,10 +56,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           <Placeholder
             color='#efefef'
             customPlaceholder={
-              <TextRow
-                color='#efefef'
-                style={{ marginTop: 0, width: `100%` }}
-              />
+              <TextRow style={{ marginTop: 0, width: `100%` }} />
             }
             ready={!isLoading}
             showLoadingAnimation
@@ -76,10 +70,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
             <Placeholder
               color='#efefef'
               customPlaceholder={
-                <TextRow
-                  color='#efefef'
-                  style={{ marginTop: 0, width: `140px` }}
-                />
+                <TextRow style={{ marginTop: 0, width: `140px` }} />
               }
               ready={!isLoading}
               showLoadingAnimation

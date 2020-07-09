@@ -9,6 +9,9 @@ Array [
     className="MOCK__GitHubWidget"
   />,
   <div
+    className="MOCK__GoodreadsWidget"
+  />,
+  <div
     className="MOCK__SpotifyWidget"
   />,
 ]

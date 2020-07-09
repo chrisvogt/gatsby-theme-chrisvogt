@@ -1,6 +1,5 @@
 import { tailwind } from '@theme-ui/presets'
-
-const trianglify = require('../components/artwork/trianglify.svg')
+import trianglify from '../components/artwork/trianglify.svg'
 
 export const themePreset = tailwind
 

@@ -3,10 +3,12 @@ import renderer from 'react-test-renderer'
 import HomeWidgets from './home-widgets'
 
 import GitHub from '../components/widgets/github'
+import Goodreads from '../components/widgets/goodreads'
 import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
 
 jest.mock('../components/widgets/github')
+jest.mock('../components/widgets/goodreads')
 jest.mock('../components/widgets/recent-posts')
 jest.mock('../components/widgets/spotify')
 
@@ -14,6 +16,7 @@ const getMockWidgetComponent = id => <div className={`MOCK__${id}Widget`}></div>
 
 describe('HomeWidgets', () => {
   GitHub.mockImplementation(() => getMockWidgetComponent('GitHub'))
+  Goodreads.mockImplementation(() => getMockWidgetComponent('Goodreads'))
   RecentPosts.mockImplementation(() => getMockWidgetComponent('RecentPosts'))
   Spotify.mockImplementation(() => getMockWidgetComponent('Spotify'))
 

@@ -4,10 +4,9 @@ import { Global } from '@emotion/core'
 import { jsx, Styled, ThemeProvider } from 'theme-ui'
 import { MDXProvider } from '@mdx-js/react'
 
+import theme from '../gatsby-plugin-theme-ui'
 import TopNavigation from './top-navigation'
 import YouTube from '../shortcodes/youtube'
-
-import theme from '../gatsby-plugin-theme-ui'
 
 const components = {
   pre: ({ children }) => <Fragment>{children}</Fragment>
