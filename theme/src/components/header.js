@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import SwoopBottom from './artwork/swoop-bottom'
 import theme from '../gatsby-plugin-theme-ui'
 import trianglify from './artwork/trianglify.svg'
-// const trianglify = require('./artwork/trianglify.svg')
 
 /**
  * Header

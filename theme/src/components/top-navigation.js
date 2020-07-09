@@ -4,10 +4,9 @@ import { Link } from 'gatsby'
 
 import { getHeaderLeftItems } from '../selectors/navigation'
 import { getTitle } from '../selectors/metadata'
+import trianglify from './artwork/trianglify.svg'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
-
-const trianglify = require('./artwork/trianglify.svg')
 
 const TopNavigation = ({ hideBackground }) => {
   const metadata = useSiteMetadata()
