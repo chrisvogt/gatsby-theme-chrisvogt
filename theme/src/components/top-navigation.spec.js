@@ -6,8 +6,7 @@ import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 const mockSiteMetadata = {
-  title: 'My Personal Blog & Portfolio',
-
+  title: 'My Personal Blog & Portfolio'
 }
 
 const mockNavigationData = {
