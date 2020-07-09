@@ -2,10 +2,28 @@
 import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
+import Placeholder from 'react-placeholder'
 
 import TrackPreview from './track-preview'
 
-const TopTracks = ({ isLoading, tracks }) => (
+const placeholders = Array(12)
+  .fill()
+  .map(() => (
+    <div className='show-loading-animation'>
+      <RectShape
+        color='#efefef'
+        sx={{
+          borderRadius: `6px`,
+          boxShadow: `md`,
+          paddingBottom: `100%`,
+          width: `100%`
+        }}
+        showLoadingAnimation
+      />
+    </div>
+  ))
+
+const TopTracks = ({ isLoading, tracks = [] }) => (
   <div className='gallery'>
     <Heading
       as='h3'
@@ -22,22 +40,13 @@ const TopTracks = ({ isLoading, tracks }) => (
         gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
       }}
     >
-      {isLoading &&
-        Array(12)
-          .fill()
-          .map(item => {
-            return (
-              <RectShape
-                color='#efefef'
-                sx={{ boxShadow: `md`, width: `100%`, paddingBottom: `100%` }}
-              />
-            )
-          })}
-      {!isLoading &&
-        tracks.map(track => {
+      <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
+        {tracks.map(track => {
           const { albumImages = [], id, name, spotifyURL } = track
-          const thumbnailURL = albumImages.find(image => image.width === 300)
-            .url
+          const { url: thumbnailURL } = albumImages.find(
+            image => image.width === 300
+          )
+
           return (
             <TrackPreview
               key={id}
@@ -47,6 +56,7 @@ const TopTracks = ({ isLoading, tracks }) => (
             />
           )
         })}
+      </Placeholder>
     </div>
   </div>
 )

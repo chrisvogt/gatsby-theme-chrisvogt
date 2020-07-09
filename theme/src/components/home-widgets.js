@@ -1,6 +1,7 @@
 import React from 'react'
 
 import GitHub from '../components/widgets/github'
+import Goodreads from '../components/widgets/goodreads'
 import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
 
@@ -14,6 +15,7 @@ const HomeWidgets = () => (
   <>
     <RecentPosts />
     <GitHub />
+    <Goodreads />
     <Spotify />
   </>
 )
