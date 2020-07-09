@@ -1,8 +1,6 @@
 import getUser from './get-user'
 
-const githubContentFixture = require('../../../../../__mocks__/github-widget.mock.json')
-const { payload } = githubContentFixture
-
+const { payload } = require('../../../../../__mocks__/github-widget.mock.json')
 const keysUsedByWidget = ['followers', 'following', 'repositories', 'status']
 
 describe('getPullRequests', () => {

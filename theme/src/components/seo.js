@@ -12,6 +12,11 @@ import {
   getTwitterUsername
 } from '../selectors/metadata'
 
+/**
+ * SEO
+ *
+ * Updates <head> tags.
+ */
 const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
   const metadata = useSiteMetadata()
   const { theme } = useThemeUI()
@@ -26,20 +31,15 @@ const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
   return (
     <Helmet title={title} titleTemplate={titleTemplate}>
       <html lang={languageCode} />
-      <meta name='description' content={description} />
-      <meta name='image' content={imageURL} />
-
+      {description && <meta name='description' content={description} />}
+      {imageURL && <meta name='image' content={imageURL} />}
       <meta name='theme-color' content={theme.colors.background} />
-
       <meta property='og:title' content={title} />
       {article && <meta property='og:type' content='article' />}
       {description && <meta property='og:description' content={description} />}
       {imageURL && <meta property='og:image' content={imageURL} />}
       <meta name='twitter:card' content='summary_large_image' />
-
-      {twitterUsername && (
-        <meta name='twitter:creator' content={twitterUsername} />
-      )}
+      {twitterUsername && <meta name='twitter:creator' content={twitterUsername} />}
       <meta name='twitter:title' content={title} />
       {imageURL && <meta name='twitter:image' content={imageURL} />}
       {description && <meta name='twitter:description' content={description} />}
@@ -48,18 +48,11 @@ const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
 }
 
 SEO.propTypes = {
-  title: PropTypes.string,
+  article: PropTypes.bool,
   description: PropTypes.string,
   image: PropTypes.string,
   pathname: PropTypes.string,
-  article: PropTypes.bool
-}
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  pathname: null,
-  article: false
+  title: PropTypes.string
 }
 
 export default SEO

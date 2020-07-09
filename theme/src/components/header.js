@@ -9,7 +9,7 @@ import trianglify from './artwork/trianglify.svg'
 /**
  * Header
  *
- * A decorative masthead element.
+ * A decorative masthead element that can be used across page layouts.
  */
 const Header = ({ children, hideTopPadding, showSwoop, styles }) => (
   <div

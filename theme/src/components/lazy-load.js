@@ -18,9 +18,11 @@ const DefaultPlaceholder = () => (
 )
 
 /**
+ * Lazy Loader
+ *
  * Hides a component until it's been visible in the viewport.
  */
-const LazyLoad = ({ children }) => {
+const LazyLoad = ({ children, placeholder }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   const onChange = isVisible => {
@@ -31,7 +33,7 @@ const LazyLoad = ({ children }) => {
 
   return (
     <VisibilitySensor onChange={onChange} partialVisibility={true}>
-      {hasBeenVisible ? children : DefaultPlaceholder}
+      {hasBeenVisible ? children : placeholder}
     </VisibilitySensor>
   )
 }

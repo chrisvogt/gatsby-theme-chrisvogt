@@ -4,7 +4,6 @@ import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
 
 import { getPosts } from '../hooks/use-recent-posts'
-
 import Footer from '../components/footer'
 import Layout from '../components/layout'
 import PostCard from '../components/widgets/recent-posts/post-card'
@@ -15,8 +14,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title='Latest Content and Blog Posts'
-        description='A list of the most recent content posted to my website'
+        title='Latest Content'
+        description='A list of the most recent articles published on my blog.'
       />
 
       <Flex
