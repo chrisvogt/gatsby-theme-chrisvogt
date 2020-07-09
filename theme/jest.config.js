@@ -12,6 +12,7 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   globals: {
+    __BASE_PATH__: ``,
     __PATH_PREFIX__: ``
   },
 

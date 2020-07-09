@@ -15,8 +15,8 @@ import useSiteMetadata from '../hooks/use-site-metadata'
  */
 const TopNavigation = ({ hideBackground }) => {
   const metadata = useSiteMetadata()
-  const navigation = useNavigationData()
 
+  const navigation = useNavigationData()
   const menuItems = getHeaderLeftItems(navigation)
   const title = getTitle(metadata)
 

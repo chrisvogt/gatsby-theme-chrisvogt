@@ -1,15 +1,15 @@
-import {
-  getHeaderLeftItems
-} from './navigation'
+import { getHeaderLeftItems } from './navigation'
 
 const navigation = {
   header: {
-    left: [{
-      path: '/about-me',
-      slug: '/about-me',
-      text: 'About Me',
-      title: 'About Me'
-    }]
+    left: [
+      {
+        path: '/about-me',
+        slug: '/about-me',
+        text: 'About Me',
+        title: 'About Me'
+      }
+    ]
   }
 }
 
