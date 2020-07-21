@@ -2,9 +2,19 @@ import colors from './abstracts/colors'
 import fonts from './abstracts/fonts'
 import styles, { themePreset } from './styles'
 
+console.log('the theme preset variants are:', themePreset)
+
 export default {
   ...themePreset,
   useColorSchemeMediaQuery: true,
+  cards: {
+    backgroundColor: `#354054`,
+    text: `white`,
+    dark: {
+      backgroundColor: `#354054`,
+      text: `white`
+    }
+  },
   colors: {
     ...themePreset.colors,
     ...colors
@@ -43,6 +53,14 @@ export default {
       fontSize: 0,
       fontWeight: `550`,
       textTransform: `uppercase`
+    }
+  },
+  variants: {
+    ...themePreset.variants,
+    cards: {
+      dark: {
+        backgroundColor: 'teal'
+      }
     }
   }
 }
