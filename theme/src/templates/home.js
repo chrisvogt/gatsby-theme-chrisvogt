@@ -2,6 +2,7 @@
 import { Container, jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
 
+import ColorToggle from '../components/color-toggle'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
@@ -30,11 +31,11 @@ const HomeTemplate = props => {
           headline={headline}
           subhead={subhead}
         />
+        <ColorToggle />
       </Header>
 
       <div
         sx={{
-          backgroundColor: `colors.background`,
           minHeight: `500px`,
           pt: 3
         }}

@@ -183,5 +183,74 @@ export default {
     fontFamily: `heading`,
     fontSize: 3,
     textAlign: [`center`, `right`]
+  },
+
+  table: {
+    width: `100%`,
+    textAlign: `left`,
+    th: {
+      borderBottom: `1px dotted #ddd`,
+      borderLeft: `1px dotted #ddd`,
+      borderTop: `1px solid #ddd`,
+      color: `text`,
+      padding: theme => theme.space[2],
+      textAlign: `left`
+    },
+    'tr th:first-of-type': {
+      borderLeft: `1px solid #ddd`,
+      borderTopLeftRadius: `4px`
+    },
+    'tr th:last-of-type': {
+      borderRight: `1px solid #ddd`,
+      borderTopRightRadius: `4px`
+    },
+    'tr td': {
+      borderBottom: `1px dotted #ddd`,
+      padding: theme => theme.space[2]
+    },
+    'tr:last-of-type td': {
+      borderBottom: `1px solid #ddd`
+    },
+    'tbody tr td:first-of-type': {
+      borderLeft: `1px solid #ddd`
+    },
+    'tbody tr td:last-of-type': {
+      borderRight: `1px solid #ddd`
+    }
+  },
+
+  '.footnotes': {
+    fontSize: theme => theme.fontSizes[1]
+  },
+
+  '.text-center': {
+    textAlign: `center`
+  },
+
+  '.VideoWrapper': {
+    position: `relative`,
+    paddingBottom: `56.25%` /* 16:9 */,
+    paddingTop: `25px`,
+    height: 0
+  },
+
+  '.VideoWrapper iframe': {
+    position: `absolute`,
+    top: 0,
+    left: 0,
+    width: `100%`,
+    height: `100%`
+  },
+
+  '.gatsby-highlight pre[class*="language-"]': {
+    padding: 0,
+    overflow: `initial`,
+    float: `left`,
+    minWidth: `100%`
+  },
+
+  /* Adjust the position of the line numbers */
+  '.gatsby-highlight pre[class*="language-"].line-numbers': {
+    paddingLeft: `2.8em`
   }
 }

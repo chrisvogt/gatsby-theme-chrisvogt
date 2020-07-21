@@ -4,6 +4,7 @@ import styles, { themePreset } from './styles'
 
 export default {
   ...themePreset,
+  useColorSchemeMediaQuery: true,
   colors: {
     ...themePreset.colors,
     ...colors
