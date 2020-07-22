@@ -37,7 +37,7 @@ const SpotifyWidget = () => {
         Spotify
       </WidgetHeader>
 
-      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
+      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
         <Box>
           <UserProfile isLoading={isLoading} metrics={metrics} />
         </Box>

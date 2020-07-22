@@ -8,7 +8,7 @@ import useSiteMetadata from '../../hooks/use-site-metadata'
 export default () => {
   const { footerText } = useSiteMetadata()
   return (
-    <div sx={{ variant: `styles.Footer` }}>
+    <div sx={{ variant: `styles.PageFooter` }}>
       <SwoopTop />
       <Content footerText={footerText} />
     </div>

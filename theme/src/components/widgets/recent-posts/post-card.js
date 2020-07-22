@@ -32,7 +32,7 @@ export default ({ banner, category, date, link, title }) => {
                   backgroundSize: `cover`,
                   borderRadius: `1px`,
                   height: `240px`,
-                  transition: `all 1.5s ease`
+                  transition: `all 2.5s ease`
                 }}
               />
             </div>

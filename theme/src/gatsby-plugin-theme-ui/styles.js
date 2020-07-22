@@ -43,6 +43,7 @@ export const PostCard = {
   ...card,
   ...floatOnHover,
   display: `flex`,
+  height: `100%`,
   flexDirection: `column`,
   '.card-media': {
     mb: 2,
@@ -51,7 +52,7 @@ export const PostCard = {
   },
   '.read-more-icon': {
     display: `inline`,
-    transition: `all 4s ease-in`,
+    transition: `all 250ms ease-in`,
     opacity: 0,
     paddingLeft: 0
   },
@@ -76,9 +77,6 @@ export default {
       color: `muted`
     }
   },
-  GitHub: {
-    // backgroundColor: `primary`
-  },
   GitHubCardFooter: {
     alignItems: `flex-end`,
     display: `flex`,
@@ -86,14 +84,14 @@ export default {
     justifyContent: `flex-end`,
     mt: 2
   },
-  footer: {
-    background: `url(${trianglify})`,
-    backgroundSize: `cover`,
-    backgroundPosition: `top center`,
+  PageFooter: {
+    backgroundColor: `#1e2530`,
     color: `light`,
     a: {
       color: `white`
-    }
+    },
+    width: `100%`,
+    display: `block`
   },
   Book: {
     filter: `drop-shadow(${themePreset.shadows.default})`,
@@ -107,12 +105,6 @@ export default {
     ...themePreset.Container,
     py: [2, 3],
     px: [3, 4]
-  },
-  Footer: {
-    color: `white`,
-    width: `100%`,
-    display: `block`,
-    variant: `styles.footer`
   },
   Header: {
     alignItems: `center`,

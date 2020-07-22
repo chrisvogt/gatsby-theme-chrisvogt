@@ -69,6 +69,7 @@ export default merge(themePreset, {
     },
 
     PostCard,
+
     PostCardDark: {
       ...PostCard,
       backgroundColor: `#252e3c`,
