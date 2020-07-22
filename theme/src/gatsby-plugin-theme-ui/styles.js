@@ -1,5 +1,4 @@
 import { tailwind } from '@theme-ui/presets'
-import trianglify from '../components/artwork/trianglify.svg'
 
 export const themePreset = tailwind
 
@@ -10,10 +9,6 @@ export const floatOnHover = {
     transform: `scale(1.015)`,
     boxShadow: `lg`
   }
-}
-
-const interactiveCard = {
-  borderLeft: `1px solid white`
 }
 
 export const card = {
@@ -105,6 +100,43 @@ export default {
     ...themePreset.Container,
     py: [2, 3],
     px: [3, 4]
+  },
+  GradientBanner: {
+    /**
+     * Gradient animation created by @bibby0912.
+     * Visit https://codepen.io/bibby0912/pen/mErWyA
+     */
+    mx: [3, `auto`],
+    maxWidth: [`100%`, `100%`, `80%`],
+    height: `40vh`,
+    border: `20px solid transparent`,
+    boxSizing: `border-box`,
+    padding: `1rem`,
+    display: `flex`,
+    justifyContent: `center`,
+    alignItems: `center`,
+    color: `black`,
+    backgroundImage: `
+      linear-gradient(white 5%, white 10%),
+      linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);`,
+    backgroundRepeat: `no-repeat`,
+    backgroundOrigin: `padding-box, border-box`,
+    textAlign: `center`,
+    '@keyframes GradientBanner': {
+      '100%': {
+        backgroundPosition: `0 0, 0 0`
+      }
+    }
+  },
+  IntroExperienceSlide: {
+    opacity: 0,
+    height: 0,
+    display: `flex`,
+    '&.active-slide': {
+      display: `block`,
+      height: `auto`,
+      opacity: 1
+    }
   },
   Header: {
     alignItems: `center`,

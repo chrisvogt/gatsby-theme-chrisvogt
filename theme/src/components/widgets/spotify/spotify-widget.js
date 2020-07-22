@@ -26,7 +26,7 @@ const SpotifyWidget = () => {
       url={profileURL}
       isLoading={isLoading}
     >
-      View profile
+      Browse Playlists
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )

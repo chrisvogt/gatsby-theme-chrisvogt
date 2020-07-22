@@ -6,6 +6,7 @@ import ColorToggle from '../components/color-toggle'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
+import HomeIntroBanner from '../components/home-intro-banner'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -31,6 +32,7 @@ const HomeTemplate = props => {
           headline={headline}
           subhead={subhead}
         />
+        <HomeIntroBanner />
         <ColorToggle />
       </Header>
 

@@ -11,6 +11,13 @@ import { merge } from 'theme-ui'
 
 export default merge(themePreset, {
   useColorSchemeMediaQuery: true,
+
+  // buttons: {
+  //   '*': {
+  //     cursor: `inherit`
+  //   }
+  // },
+
   cards: {
     /* The <Card /> default style. Used when no variant is defined. */
     primary: {
