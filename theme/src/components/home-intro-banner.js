@@ -27,7 +27,7 @@ const HomeIntroBanner = () => {
   }
 
   return (
-    <div sx={{ variant: 'styles.GradientBanner' }}>
+    <div sx={{ variant: 'styles.GradientBannerDark' }}>
       <div style={{ maxWidth: `80%` }}>
         <div
           className={`slide-0 ${currentFrameIndex === 0 && 'active-slide'}`}
