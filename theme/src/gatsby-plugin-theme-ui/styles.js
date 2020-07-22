@@ -3,11 +3,11 @@ import trianglify from '../components/artwork/trianglify.svg'
 
 export const themePreset = tailwind
 
-const floatOnHover = {
-  transform: `scale(1.015)`,
-  transition: `all .25s ease-in-out`,
+export const floatOnHover = {
+  transition: `all 200ms ease-in-out`,
 
   '&:hover, &:focus': {
+    transform: `scale(1.015)`,
     boxShadow: `lg`
   }
 }
@@ -16,7 +16,7 @@ const interactiveCard = {
   borderLeft: `1px solid white`
 }
 
-const card = {
+export const card = {
   backgroundColor: `white`,
   borderBottom: `1px solid white`,
   borderRadius: `3px`,
@@ -27,10 +27,42 @@ const card = {
   textDecoration: `none`
 }
 
+export const infoCard = {
+  boxShadow: `none`,
+  borderBottom: `1px solid #efefef`,
+  borderLeftColor: `text`,
+  borderLeft: `2px solid`,
+  span: {
+    fontFamily: `heading`,
+    fontWeight: `bold`,
+    padding: 2
+  }
+}
+
+export const PostCard = {
+  ...card,
+  ...floatOnHover,
+  display: `flex`,
+  flexDirection: `column`,
+  '.card-media': {
+    mb: 2,
+    height: `100%`,
+    overflow: `hidden`
+  },
+  '.read-more-icon': {
+    display: `inline`,
+    transition: `all 4s ease-in`,
+    opacity: 0,
+    paddingLeft: 0
+  },
+  '&:hover .read-more-icon': {
+    opacity: 1,
+    paddingLeft: `8px`
+  }
+}
+
 export default {
   root: {
-    ...themePreset.styles.root,
-    backgroundColor: `background`,
     color: `text`,
     display: `flex`,
     flexDirection: `column`,
@@ -45,7 +77,7 @@ export default {
     }
   },
   GitHub: {
-    backgroundColor: `primary`
+    // backgroundColor: `primary`
   },
   GitHubCardFooter: {
     alignItems: `flex-end`,
@@ -90,45 +122,6 @@ export default {
     transition: `all 0.3s ease-in-out`,
     width: `100%`
   },
-  PostCard: {
-    ...floatOnHover,
-    ...card,
-    ...interactiveCard,
-    display: `flex`,
-    flexDirection: `column`,
-    '.card-media': {
-      mb: 2,
-      height: `100%`,
-      overflow: `hidden`
-    },
-    '.read-more-icon': {
-      display: `inline`,
-      transition: `all .3s ease-in-out`,
-      opacity: 0,
-      paddingLeft: 0
-    },
-    '&:hover .read-more-icon': {
-      opacity: 1,
-      paddingLeft: `8px`
-    }
-  },
-  RepositoryCard: {
-    ...floatOnHover,
-    ...card,
-    ...interactiveCard
-  },
-  MetricCard: {
-    ...card,
-    boxShadow: `none`,
-    borderBottom: `1px solid #efefef`,
-    borderLeftColor: `text`,
-    borderLeft: `3px solid`,
-    span: {
-      fontFamily: `heading`,
-      fontWeight: `bold`,
-      padding: 2
-    }
-  },
   InstagramCard: {
     ...floatOnHover,
     boxShadow: `md`,
@@ -136,6 +129,9 @@ export default {
     '&:hover .instagram-item-image': {
       transform: `scale(1.05)`
     }
+  },
+  PostCardLink: {
+    textDecoration: `none`
   },
   TopNavigation: {
     color: `white`

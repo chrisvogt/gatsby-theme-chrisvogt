@@ -12,3 +12,6 @@ export default {
     }
   }
 }
+
+export const cardBackgroundDark = '#252e3c'
+export const pageBackgroundDark = '#2d3748'

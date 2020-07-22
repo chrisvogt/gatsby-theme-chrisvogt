@@ -4,6 +4,8 @@ import { Card } from '@theme-ui/components'
 
 import PropTypes from 'prop-types'
 
+import isDarkMode from '../../../helpers/isDarkMode'
+
 import PlaceholderContent from './renderers/placeholder'
 import RepositoryContent from './renderers/repository'
 
@@ -16,24 +18,11 @@ const rendererRegistry = {
 }
 
 const PinnedItemCard = ({ item, type }) => {
-  const themeContext = useThemeUI()
-  const { colorMode, theme } = themeContext
-
-  const backgroundColor =
-    colorMode === 'dark'
-      ? theme.colors.modes.dark.cardBackground
-      : theme.colors.background
+  const { colorMode } = useThemeUI()
+  const variant = isDarkMode(colorMode) ? 'actionCardDark' : 'actionCard'
 
   return (
-    <Card
-      sx={{
-        backgroundColor,
-        variant:
-          colorMode === 'dark'
-            ? `styles.RepositoryCardDark`
-            : `styles.RepositoryCard`
-      }}
-    >
+    <Card variant={variant}>
       {rendererRegistry[type] && rendererRegistry[type](item)}
     </Card>
   )

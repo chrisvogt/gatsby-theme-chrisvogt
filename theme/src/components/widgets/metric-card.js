@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { Card } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
+import isDarkMode from '../../helpers/isDarkMode'
 import Placeholder from 'react-placeholder'
 
 /**
@@ -12,14 +13,23 @@ import Placeholder from 'react-placeholder'
  * area of the social widgets. They typically contain an insight for the social
  * profile (e.g., Followers: 24).
  */
-const MetricCard = ({ title, value, showPlaceholder }) => (
-  <Card sx={{ variant: `styles.MetricCard`, p: 3 }}>
-    <Placeholder color='#efefef' ready={!showPlaceholder} showLoadingAnimation>
-      <span>{value}</span>
-      {title}
-    </Placeholder>
-  </Card>
-)
+const MetricCard = ({ title, value, showPlaceholder }) => {
+  const { colorMode } = useThemeUI()
+  const variant = isDarkMode(colorMode) ? 'infoCardDark' : 'infoCard'
+
+  return (
+    <Card variant={variant}>
+      <Placeholder
+        color='#efefef'
+        ready={!showPlaceholder}
+        showLoadingAnimation
+      >
+        <span>{value}</span>
+        {title}
+      </Placeholder>
+    </Card>
+  )
+}
 
 MetricCard.propTypes = {
   /** An animated placeholder is rendered when true. */
