@@ -119,6 +119,7 @@
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-dark-mode-toggle": "^0.0.9",
     "react-helmet": "^6.1.0",
     "react-placeholder": "^4.0.3",
     "react-test-renderer": "^16.13.1",

@@ -13,18 +13,12 @@ import isDarkMode from '../../../helpers/isDarkMode'
 
 const UserProfile = ({ isLoading, user }) => {
   const {
-    repositories: { totalCount: totalRepositoriesCount = 0 } = {},
     followers: { totalCount: totalFollowersCount = 0 } = {},
     following: { totalCount: totalFollowingCount = 0 } = {},
     status: { message: userStatusMessage = '' } = {}
   } = user || {}
 
   const metrics = [
-    {
-      id: 'repositories',
-      title: 'Repositories',
-      value: totalRepositoriesCount
-    },
     {
       id: 'followers',
       title: 'Followers',
@@ -97,9 +91,6 @@ UserProfile.propTypes = {
     totalCount: PropTypes.number
   }),
   following: PropTypes.shape({
-    totalCount: PropTypes.number
-  }),
-  repositories: PropTypes.shape({
     totalCount: PropTypes.number
   })
 }

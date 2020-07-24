@@ -35,7 +35,7 @@ export default () => {
       url={`https://www.goodreads.com/${goodreadsUsername}`}
       isLoading={isLoadingBooks || isLoadingUser}
     >
-      Visit profile
+      Visit Profile
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )

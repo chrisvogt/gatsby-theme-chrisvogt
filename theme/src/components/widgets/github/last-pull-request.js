@@ -60,7 +60,7 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
             </span>
           </Placeholder>
 
-          <CardFooter>
+          <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
               customPlaceholder={

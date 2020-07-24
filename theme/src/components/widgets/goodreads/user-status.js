@@ -70,7 +70,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
               <em>– {ago(new Date(updated))}</em>
             </span>
           </Placeholder>
-          <CardFooter>
+          <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
               customPlaceholder={

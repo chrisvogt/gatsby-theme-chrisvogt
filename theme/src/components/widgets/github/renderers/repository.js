@@ -13,9 +13,8 @@ const Repository = ({
   openGraphImageUrl,
   updatedAt
 }) => (
-  <div
+  <Flex
     sx={{
-      display: `flex`,
       flexDirection: `column`,
       height: `100%`
     }}
@@ -45,7 +44,7 @@ const Repository = ({
       </span>
       <ViewExternal platform='GitHub' />
     </CardFooter>
-  </div>
+  </Flex>
 )
 
 Repository.propTypes = {
