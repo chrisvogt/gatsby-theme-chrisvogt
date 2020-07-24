@@ -16,7 +16,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-t8qaj3"
     >
       <div
-        className="css-1trr7g1-PinnedItemCard"
+        className="css-vurnku"
       >
         <div
           className="show-loading-animation"
@@ -128,7 +128,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-t8qaj3"
     >
       <div
-        className="css-1trr7g1-PinnedItemCard"
+        className="css-vurnku"
       >
         <div
           className="show-loading-animation"
@@ -240,7 +240,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-t8qaj3"
     >
       <div
-        className="css-1trr7g1-PinnedItemCard"
+        className="css-vurnku"
       >
         <div
           className="show-loading-animation"
@@ -352,7 +352,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-t8qaj3"
     >
       <div
-        className="css-1trr7g1-PinnedItemCard"
+        className="css-vurnku"
       >
         <div
           className="show-loading-animation"
@@ -481,44 +481,36 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       href="https://www.github.com/chrisvogt/null/"
     >
       <div
-        className="css-1trr7g1-PinnedItemCard"
+        className="css-vurnku"
       >
         <div
-          className="css-1g4yje1"
+          className="css-ixavtg"
         >
           <div
-            className="css-gkju6w"
+            className="css-19idom"
           >
-            <div
-              className="css-yyvsvt"
-            >
-              <img
-                alt="repository avatar"
-                className="css-1lvgjmp"
-                height="42"
-                width="42"
-              />
-            </div>
-            <div
-              className="css-ak53vk"
-            >
-              <h4
-                className="css-n2p9zs"
-              />
-              <span
-                className="css-1q038d8"
-              >
-                Updated 
-                NaN years ago
-              </span>
-            </div>
+            <img
+              alt="repository avatar"
+              className="css-1lvgjmp"
+              height="42"
+              width="42"
+            />
           </div>
+          <h4
+            className="css-rx5q00"
+          />
           <span
-            className="css-i9gxme"
+            className="css-v635f6"
           />
           <div
             className="css-1nldqfs-CardFooter"
           >
+            <span
+              className="css-1sryiaj"
+            >
+              Last updated 
+              NaN years ago
+            </span>
             <span>
               View on 
               GitHub

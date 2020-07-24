@@ -8,30 +8,34 @@ exports[`PostCard matches the snapshot 1`] = `
   onMouseEnter={[Function]}
 >
   <div
-    className="card-content css-9z5gw0"
+    className="css-vurnku"
   >
     <div
-      className="card-media"
+      className="card-content css-9z5gw0"
     >
       <div
-        className="banner-image css-1ncfhdf"
-      />
+        className="card-media"
+      >
+        <div
+          className="banner-image css-un1bl9"
+        />
+      </div>
+      <span
+        className="css-1fhgjcy"
+      >
+        personal
+      </span>
+      <h4
+        className="css-164r41r"
+      >
+        My Blog Post
+      </h4>
+      <time
+        className="created css-1dqf291"
+      >
+        1592202624
+      </time>
     </div>
-    <span
-      className="css-1fhgjcy"
-    >
-      personal
-    </span>
-    <h4
-      className="css-164r41r"
-    >
-      My Blog Post
-    </h4>
-    <time
-      className="created css-1dqf291"
-    >
-      1592202624
-    </time>
   </div>
 </a>
 `;
