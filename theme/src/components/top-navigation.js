@@ -2,6 +2,7 @@
 import { jsx, Container, Styled } from 'theme-ui'
 import { Link } from 'gatsby'
 
+import ColorToggle from '../components/color-toggle'
 import { getHeaderLeftItems } from '../selectors/navigation'
 import { getTitle } from '../selectors/metadata'
 import trianglify from './artwork/trianglify.svg'
@@ -29,6 +30,8 @@ const TopNavigation = ({ hideBackground }) => {
     >
       <Container
         sx={{
+          display: `flex`,
+          alignItems: `center`,
           py: 3,
           textAlign: [`center`, ``, `left`]
         }}
@@ -61,6 +64,8 @@ const TopNavigation = ({ hideBackground }) => {
               {text}
             </Styled.a>
           ))}
+
+        <ColorToggle />
       </Container>
     </div>
   )

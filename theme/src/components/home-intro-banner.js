@@ -36,7 +36,10 @@ const HomeIntroBanner = () => {
           <h3>Hello there.</h3>
           <p>
             This site is my personal blog, photo gallery, and activity
-            dashboard. If we don't know each other, hi! I'm Chris Vogt.{' '}
+            dashboard.
+          </p>
+          <p>
+            If we don't know each other, hi! I'm Chris Vogt.{' '}
             <Emoji label='Hand waving emoji'>👋</Emoji>
           </p>
         </div>

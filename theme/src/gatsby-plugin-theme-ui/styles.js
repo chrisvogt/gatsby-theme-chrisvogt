@@ -39,9 +39,8 @@ const GradientBanner = {
    * Gradient animation created by @bibby0912.
    * Visit https://codepen.io/bibby0912/pen/mErWyA
    */
-  mx: [3, 5, `auto`],
-  maxWidth: [`100%`, `100%`, `94%` /* note: max-width is container */],
-  height: `40vh`,
+  maxWidth: `100%`,
+  height: `340px`,
   border: `20px solid transparent`,
   boxSizing: `border-box`,
   padding: `1rem`,
@@ -49,13 +48,28 @@ const GradientBanner = {
   justifyContent: `center`,
   alignItems: `center`,
   color: `black`,
+
+  // backgroundImage: `
+  //   linear-gradient(white, white),
+  //   linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);`,
+  // backgroundRepeat: `no-repeat`,
+  // backgroundOrigin: `padding-box, border-box`,
+  // backgroundPosition: `0 0, 0 100%`,
+  // backgroundSize: `100% 100%, 100% 200%`,
+  // animation: `highlight 3s infinite alternate`,
+  // textAlign: `center`,
+
   backgroundImage: `
-    linear-gradient(white 5%, white 10%),
-    linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);`,
+  linear-gradient(white, white),
+  linear-gradient(180deg, cornflowerblue, purple 50%, cornflowerblue)`,
+
   backgroundRepeat: `no-repeat`,
+  backgroundSize: `100% 100%, 100% 200%`,
+  backgroundPosition: `0 0, 0 100%`,
   backgroundOrigin: `padding-box, border-box`,
-  textAlign: `center`,
-  '@keyframes GradientBanner': {
+  animation: `highlight 3s infinite alternate`,
+
+  '@keyframes highlight': {
     '100%': {
       backgroundPosition: `0 0, 0 0`
     }
@@ -92,21 +106,24 @@ export default {
     flexDirection: `column`,
     minHeight: `100vh`
   },
+
   outlined: {
     border: `4px solid #efefef`
   },
+
   text: {
     inverse: {
       color: `muted`
     }
   },
+
   GitHubCardFooter: {
-    alignItems: `flex-end`,
     display: `flex`,
     fontSize: `small`,
-    justifyContent: `flex-end`,
+    justifyContent: `space-between`,
     mt: 2
   },
+
   PageFooter: {
     backgroundColor: `#1e2530`,
     color: `light`,
@@ -116,6 +133,7 @@ export default {
     width: `100%`,
     display: `block`
   },
+
   Book: {
     filter: `drop-shadow(${themePreset.shadows.default})`,
     '&:hover, &:focus': {
@@ -124,26 +142,36 @@ export default {
       transition: `all .35s ease-in-out`
     }
   },
+
   Container: {
     ...themePreset.Container,
     py: [2, 3],
     px: [3, 4]
   },
+
   GradientBanner,
+
   GradientBannerDark: {
     ...GradientBanner,
-    backgroundColor: `#252e3c`
+    backgroundImage: `
+    linear-gradient(#252e3c, #252e3c),
+    linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);`,
+    color: `light`
   },
+
   IntroExperienceSlide: {
     opacity: 0,
     height: 0,
     display: `flex`,
+    visibility: `hidden`,
     '&.active-slide': {
       display: `block`,
       height: `auto`,
-      opacity: 1
+      opacity: 1,
+      visibility: `initial`
     }
   },
+
   Header: {
     alignItems: `center`,
     backgroundColor: `secondary`,
@@ -152,6 +180,7 @@ export default {
     transition: `all 0.3s ease-in-out`,
     width: `100%`
   },
+
   InstagramCard: {
     ...floatOnHover,
     boxShadow: `md`,
@@ -160,12 +189,15 @@ export default {
       transform: `scale(1.05)`
     }
   },
+
   PostCardLink: {
     textDecoration: `none`
   },
+
   TopNavigation: {
     color: `white`
   },
+
   TrackPreview: {
     img: {
       ...floatOnHover,
@@ -173,6 +205,7 @@ export default {
       boxShadow: `md`
     }
   },
+
   VideoWrapper: {
     background: `blue`,
     border: `3px solid red`,
@@ -181,6 +214,7 @@ export default {
     paddingTop: `25px`,
     height: 0
   },
+
   'videoWrapper iframe': {
     position: `absolute`,
     top: 0,
@@ -188,10 +222,12 @@ export default {
     width: `100%`,
     height: `100%`
   },
+
   Widget: {
     mb: [3, 4],
     py: [0, 3, 4]
   },
+
   WidgetHeadline: {
     textAlign: [`center`, `left`],
     display: `flex`,
@@ -201,9 +237,11 @@ export default {
     mt: 0,
     py: 3
   },
+
   WidgetHeadline__Aside: {
     ml: [0, 2]
   },
+
   WidgetFooter: {
     color: `text`,
     fontFamily: `heading`,
