@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
+import { TestProvider } from '../testUtils'
 import TopNavigation from './top-navigation'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
@@ -11,12 +12,14 @@ const mockSiteMetadata = {
 
 const mockNavigationData = {
   header: {
-    left: [{
-      path: '/about-me',
-      slug: 'about-me',
-      text: 'About Me',
-      title: 'About Me'
-    }]
+    left: [
+      {
+        path: '/about-me',
+        slug: 'about-me',
+        text: 'About Me',
+        title: 'About Me'
+      }
+    ]
   }
 }
 
@@ -29,7 +32,9 @@ describe('TopNavigation', () => {
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
-        <TopNavigation />
+        <TestProvider>
+          <TopNavigation />
+        </TestProvider>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
