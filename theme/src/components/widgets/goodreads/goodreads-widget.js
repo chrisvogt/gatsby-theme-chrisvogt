@@ -35,7 +35,7 @@ export default () => {
       url={`https://www.goodreads.com/${goodreadsUsername}`}
       isLoading={isLoadingBooks || isLoadingUser}
     >
-      View profile
+      Visit Profile
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
@@ -44,7 +44,7 @@ export default () => {
     <Widget id='goodreads'>
       <WidgetHeader aside={callToAction}>Goodreads</WidgetHeader>
 
-      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
+      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
         <Box>
           <UserProfile isLoading={isLoadingUser} profile={profile} />
         </Box>

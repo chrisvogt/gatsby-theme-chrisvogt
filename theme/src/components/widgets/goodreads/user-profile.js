@@ -1,14 +1,18 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 import Placeholder from 'react-placeholder'
 
+import isDarkMode from '../../../helpers/isDarkMode'
 import MetricCard from '../metric-card'
 import StatusCard from '../status-card'
 
 const UserProfile = ({ isLoading, profile }) => {
   const { favoriteBooks, friendsCount, readCount } = profile
+
+  const { colorMode } = useThemeUI()
+  const variant = isDarkMode(colorMode) ? 'UserProfileDark' : 'UserProfile'
 
   const metrics = [
     {
@@ -24,7 +28,7 @@ const UserProfile = ({ isLoading, profile }) => {
   ]
 
   return (
-    <Card>
+    <Card variant={variant}>
       <Heading
         as='h3'
         sx={{

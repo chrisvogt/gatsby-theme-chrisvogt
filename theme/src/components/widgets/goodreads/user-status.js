@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
 import ago from 's-ago'
 import PropTypes from 'prop-types'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'
 
+import isDarkMode from '../../../helpers/isDarkMode'
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
@@ -32,6 +33,9 @@ const UserStatus = ({ isLoading, status, actorName }) => {
     ? mapStatusToTemplate[type](status)
     : 'Loading...'
 
+  const { colorMode } = useThemeUI()
+  const variant = isDarkMode(colorMode) ? 'actionCardDark' : 'actionCard'
+
   return (
     <Box>
       <Heading
@@ -52,7 +56,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           }
         }}
       >
-        <Card sx={{ variant: `styles.RepositoryCard` }}>
+        <Card variant={variant}>
           <Placeholder
             color='#efefef'
             customPlaceholder={
@@ -66,7 +70,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
               <em>– {ago(new Date(updated))}</em>
             </span>
           </Placeholder>
-          <CardFooter>
+          <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
               customPlaceholder={

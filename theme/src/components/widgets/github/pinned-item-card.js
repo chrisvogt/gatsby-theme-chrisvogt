@@ -1,8 +1,10 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { Card } from '@theme-ui/components'
 
 import PropTypes from 'prop-types'
+
+import isDarkMode from '../../../helpers/isDarkMode'
 
 import PlaceholderContent from './renderers/placeholder'
 import RepositoryContent from './renderers/repository'
@@ -15,11 +17,16 @@ const rendererRegistry = {
   [REPOSITORY]: RepositoryContent
 }
 
-const PinnedItemCard = ({ item, type }) => (
-  <Card sx={{ variant: `styles.RepositoryCard` }}>
-    {rendererRegistry[type] && rendererRegistry[type](item)}
-  </Card>
-)
+const PinnedItemCard = ({ item, type }) => {
+  const { colorMode } = useThemeUI()
+  const variant = isDarkMode(colorMode) ? 'actionCardDark' : 'actionCard'
+
+  return (
+    <Card variant={variant}>
+      {rendererRegistry[type] && rendererRegistry[type](item)}
+    </Card>
+  )
+}
 
 PinnedItemCard.propTypes = {
   /** The pinned item content. */

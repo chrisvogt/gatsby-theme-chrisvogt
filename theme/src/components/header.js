@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
 import SwoopBottom from './artwork/swoop-bottom'
-import theme from '../gatsby-plugin-theme-ui'
 import trianglify from './artwork/trianglify.svg'
 
 /**
@@ -29,7 +28,7 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => (
     >
       {children}
     </div>
-    {showSwoop && <SwoopBottom fill={theme.colors.background} invert />}
+    {showSwoop && <SwoopBottom invert />}
   </div>
 )
 

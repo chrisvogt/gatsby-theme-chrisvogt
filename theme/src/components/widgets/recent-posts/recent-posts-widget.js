@@ -28,8 +28,8 @@ export default () => {
   }
 
   const callToAction = (
-    <CallToAction title='View all published content' to='/latest'>
-      View all
+    <CallToAction title='Browse all published content' to='/latest'>
+      Browse All
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )

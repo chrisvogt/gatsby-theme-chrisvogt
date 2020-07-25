@@ -26,7 +26,7 @@ const SpotifyWidget = () => {
       url={profileURL}
       isLoading={isLoading}
     >
-      View profile
+      Browse Playlists
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
@@ -37,7 +37,7 @@ const SpotifyWidget = () => {
         Spotify
       </WidgetHeader>
 
-      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `1fr 70%`] }}>
+      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
         <Box>
           <UserProfile isLoading={isLoading} metrics={metrics} />
         </Box>

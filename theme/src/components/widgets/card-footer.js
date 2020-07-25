@@ -2,10 +2,11 @@
 import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-const CardFooter = ({ children }) => (
+const CardFooter = ({ children, customStyles }) => (
   <div
     sx={{
-      variant: `styles.GitHubCardFooter`
+      variant: `styles.GitHubCardFooter`,
+      ...(typeof customStyles === 'object' ? customStyles : {})
     }}
   >
     {children}

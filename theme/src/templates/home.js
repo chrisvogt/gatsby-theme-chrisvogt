@@ -34,7 +34,6 @@ const HomeTemplate = props => {
 
       <div
         sx={{
-          backgroundColor: `colors.background`,
           minHeight: `500px`,
           pt: 3
         }}

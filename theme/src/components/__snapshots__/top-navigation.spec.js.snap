@@ -2,30 +2,82 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-1nphrl8-TopNavigation"
+  className="css-1uoha03-TopNavigation"
 >
   <div
-    className="css-ni2j8u-TopNavigation"
+    className="css-wixpt9-TopNavigation"
   >
-    <a
-      aria-current="page"
-      className="css-16ogb71-TopNavigation"
-      href="/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      style={Object {}}
+    <div
+      className="css-18lvm9j-TopNavigation"
     >
-      My Personal Blog & Portfolio
-    </a>
-    <a
-      className="css-17j6ldh"
-      href="/about-me"
+      <a
+        aria-current="page"
+        className="css-12gesju-TopNavigation"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        My Personal Blog & Portfolio
+      </a>
+      <a
+        className="css-sozs5y"
+        href="/about-me"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        title="About Me"
+      >
+        About Me
+      </a>
+    </div>
+    <button
+      aria-hidden="true"
       onClick={[Function]}
-      onMouseEnter={[Function]}
-      title="About Me"
+      style={
+        Object {
+          "MozAppearance": "none",
+          "WebkitAppearance": "none",
+          "appearance": "none",
+          "backgroundColor": "transparent",
+          "border": "none",
+          "cursor": "pointer",
+          "height": "37.599999999999994px",
+          "overflow": "hidden",
+          "padding": 0,
+          "width": "80px",
+        }
+      }
     >
-      About Me
-    </a>
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "height": "132px",
+            "justifyContent": "center",
+            "marginLeft": "-25.6px",
+            "marginTop": "-47.599999999999994px",
+            "width": "132px",
+          }
+        }
+      >
+        <div
+          aria-label="animation"
+          role="button"
+          style={
+            Object {
+              "height": "100%",
+              "margin": "0 auto",
+              "outline": "none",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+          tabIndex={0}
+          title=""
+        />
+      </div>
+    </button>
   </div>
 </div>
 `;

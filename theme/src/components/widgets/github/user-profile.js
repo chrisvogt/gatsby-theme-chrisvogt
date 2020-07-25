@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
@@ -9,20 +9,16 @@ import 'react-placeholder/lib/reactPlaceholder.css'
 import MetricCard from '../metric-card'
 import StatusCard from '../status-card'
 
+import isDarkMode from '../../../helpers/isDarkMode'
+
 const UserProfile = ({ isLoading, user }) => {
   const {
-    repositories: { totalCount: totalRepositoriesCount = 0 } = {},
     followers: { totalCount: totalFollowersCount = 0 } = {},
     following: { totalCount: totalFollowingCount = 0 } = {},
     status: { message: userStatusMessage = '' } = {}
   } = user || {}
 
   const metrics = [
-    {
-      id: 'repositories',
-      title: 'Repositories',
-      value: totalRepositoriesCount
-    },
     {
       id: 'followers',
       title: 'Followers',
@@ -35,8 +31,11 @@ const UserProfile = ({ isLoading, user }) => {
     }
   ]
 
+  const { colorMode } = useThemeUI()
+  const variant = isDarkMode(colorMode) ? 'UserProfileDark' : 'UserProfile'
+
   return (
-    <Card>
+    <Card variant={variant}>
       <Heading
         as='h3'
         sx={{
@@ -92,9 +91,6 @@ UserProfile.propTypes = {
     totalCount: PropTypes.number
   }),
   following: PropTypes.shape({
-    totalCount: PropTypes.number
-  }),
-  repositories: PropTypes.shape({
     totalCount: PropTypes.number
   })
 }

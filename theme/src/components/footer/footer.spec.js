@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer'
 
 import Content from './content'
 import Footer from './footer'
+import { TestProvider } from '../../testUtils'
 import useSiteMetadata from '../../hooks/use-site-metadata'
 
 jest.mock('./content')
@@ -17,7 +18,13 @@ describe('Footer', () => {
   }))
 
   it('matches the snapshot', () => {
-    const tree = renderer.create(<Footer />).toJSON()
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <Footer />
+        </TestProvider>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

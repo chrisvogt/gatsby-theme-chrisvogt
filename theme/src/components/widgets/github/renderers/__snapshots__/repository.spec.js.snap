@@ -2,46 +2,38 @@
 
 exports[`GitHub Repository Renderer matches the snapshot 1`] = `
 <div
-  className="css-a7zmsk-Repository"
+  className="css-3xm76x-Repository"
 >
   <div
-    className="css-17w8lk8-Repository"
+    className="css-1hl77mz-Repository"
   >
-    <div
-      className="css-1ae1kk9-Repository"
-    >
-      <img
-        alt="repository avatar"
-        className="css-1tslwml-Repository"
-        height="42"
-        src="https://avatars0.githubusercontent.com/u/1934719?s=400&v=4"
-        width="42"
-      />
-    </div>
-    <div
-      className="css-htumkj-Repository"
-    >
-      <h4
-        className="css-62x98a-Repository"
-      >
-        chrisvogt/gatsby-theme-private-sphere
-      </h4>
-      <span
-        className="css-1sapdcv-Repository"
-      >
-        Updated 
-        3 months ago
-      </span>
-    </div>
+    <img
+      alt="repository avatar"
+      className="css-1tslwml-Repository"
+      height="42"
+      src="https://avatars0.githubusercontent.com/u/1934719?s=400&v=4"
+      width="42"
+    />
   </div>
+  <h4
+    className="css-dxkypm-Repository"
+  >
+    chrisvogt/gatsby-theme-private-sphere
+  </h4>
   <span
-    className="css-zrfwpy-Repository"
+    className="css-1yqdz9k-Repository"
   >
     GatsbyJS blog theme with built-in social widgets for creatives and developers.
   </span>
   <div
     className="css-1nldqfs-CardFooter"
   >
+    <span
+      className="css-15n3i4m-Repository"
+    >
+      Last updated 
+      4 months ago
+    </span>
     <span>
       View on 
       GitHub

@@ -13,7 +13,7 @@ const HomeHeaderContent = ({ avatar, headline, subhead }) => (
       display: [`block`, ``, `grid`],
       gridGap: 0,
       gridTemplateColumns: [``, ``, `1fr 60%`],
-      mt: 5,
+      my: 5,
       width: `100%`
     }}
   >

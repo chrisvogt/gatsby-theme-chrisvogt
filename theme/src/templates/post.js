@@ -29,7 +29,6 @@ const PostTemplate = ({ data }) => {
 
       <Flex
         sx={{
-          backgroundColor: `colors.background`,
           flexDirection: `column`,
           flexGrow: 1,
           py: 3
