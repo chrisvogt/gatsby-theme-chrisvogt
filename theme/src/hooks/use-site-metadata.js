@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const useSiteMetadata = () => {
   const { site: { siteMetadata } = {} } = useStaticQuery(
     graphql`
-      query GetSiteMetadata {
+      query SiteMetadata {
         site {
           siteMetadata {
             baseURL
@@ -15,12 +15,16 @@ const useSiteMetadata = () => {
             social {
               github {
                 username
+                widgetDataSource
               }
               goodreads {
                 username
+                widgetDataSourceBooks
+                widgetDataSourceProfile
               }
               instagram {
                 username
+                widgetDataSource
               }
               twitter {
                 username

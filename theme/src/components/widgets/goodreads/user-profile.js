@@ -40,7 +40,11 @@ const UserProfile = ({ isLoading, profile }) => {
 
       <StatusCard
         message={
-          <Placeholder color='#efefef' ready={!isLoading} showLoadingAnimation>
+          <Placeholder
+            color='#efefef'
+            ready={!isLoading && favoriteBooks}
+            showLoadingAnimation
+          >
             {favoriteBooks}
           </Placeholder>
         }

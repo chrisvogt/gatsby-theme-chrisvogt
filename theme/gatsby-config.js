@@ -16,16 +16,20 @@ module.exports = () => ({
     imageURL: '',
     social: {
       github: {
-        username: 'chrisvogt'
+        username: '',
+        widgetDataSource: ''
       },
       goodreads: {
-        username: 'chrisvogt'
+        username: '',
+        widgetDataSourceBooks: '',
+        widgetDataSourceProfile: ''
       },
       instagram: {
-        username: 'c1v0'
+        username: '',
+        widgetDataSource: ''
       },
       twitter: {
-        username: '@c1v0'
+        username: ''
       }
     }
   },

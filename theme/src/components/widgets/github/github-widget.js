@@ -9,27 +9,32 @@ import UserProfile from './user-profile'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-import { getGithubUsername } from '../../../selectors/metadata'
+import {
+  getGithubUsername,
+  getGithubWidgetDataSource
+} from '../../../selectors/metadata'
 import getPinnedItems from './selectors/get-pinned-items'
 import getPullRequests from './selectors/get-pull-requests'
 import getUser from './selectors/get-user'
+
+import useDataSource from '../../../hooks/use-data-source'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
-import useWidgetContent from '../../../hooks/use-widget-content'
 
 const GitHubWidget = () => {
   const metadata = useSiteMetadata()
   const githubUsername = getGithubUsername(metadata)
+  const githubDataSource = getGithubWidgetDataSource(metadata)
 
-  const { isLoading, content } = useWidgetContent('github')
+  const { isLoading, data } = useDataSource(githubDataSource)
 
   let pinnedItems = []
   let pullRequest = {}
   let user = {}
 
   if (!isLoading) {
-    pinnedItems = getPinnedItems(content)
-    pullRequest = getPullRequests(content)
-    user = getUser(content)
+    pinnedItems = getPinnedItems(data)
+    pullRequest = getPullRequests(data)
+    user = getUser(data)
   }
 
   const callToAction = (
