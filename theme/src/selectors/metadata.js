@@ -6,6 +6,8 @@ export const getBaseURL = metadata => get(metadata, 'baseURL')
 
 export const getDescription = metadata => get(metadata, 'description')
 
+export const getFooterText = (metadata = {}) => metadata.footerText
+
 export const getGithubWidgetDataSource = metadata =>
   get(metadata, 'social.github.widgetDataSource')
 
@@ -32,6 +34,12 @@ export const getInstagramUsername = metadata =>
   get(metadata, 'social.instagram.username')
 
 export const getLanguageCode = metadata => get(metadata, 'languageCode')
+
+export const getProfilesWidgetDataSourceMetas = metadata =>
+  get(metadata, 'social.profiles.widgetDataSourceMetas')
+
+export const getProfilesWidgetDataSourceProfiles = metadata =>
+  get(metadata, 'social.profiles.widgetDataSourceProfiles')
 
 export const getSpotifyWidgetDataSource = metadata =>
   get(metadata, 'social.spotify.widgetDataSource')

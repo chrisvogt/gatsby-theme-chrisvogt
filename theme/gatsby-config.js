@@ -14,7 +14,7 @@ module.exports = () => ({
     baseURL: 'https://www.privatesphere.io',
     languageCode: 'en',
     imageURL: '',
-    social: {
+    widgets: {
       github: {
         username: '',
         widgetDataSource: ''
@@ -27,6 +27,10 @@ module.exports = () => ({
       instagram: {
         username: '',
         widgetDataSource: ''
+      },
+      profiles: {
+        widgetDataSourceMetas: '',
+        widgetDataSourceProfiles: ''
       },
       spotify: {
         username: '',

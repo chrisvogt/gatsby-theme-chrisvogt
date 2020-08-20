@@ -12,7 +12,10 @@ const useSiteMetadata = () => {
             headline
             imageURL
             languageCode
-            social {
+            subhead
+            title
+            titleTemplate
+            widgets {
               github {
                 username
                 widgetDataSource
@@ -26,14 +29,15 @@ const useSiteMetadata = () => {
                 username
                 widgetDataSource
               }
+              profiles {
+                widgetDataSourceMetas
+                widgetDataSourceProfiles
+              }
               spotify {
                 username
                 widgetDataSource
               }
             }
-            subhead
-            title
-            titleTemplate
           }
         }
       }

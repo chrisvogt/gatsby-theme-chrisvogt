@@ -9,29 +9,30 @@ module.exports = {
     imageURL: '',
     languageCode: 'en',
     // TODO(chrisvogt): rename this to `widgets`
-    social: {
-      // github: {
-      //   username: 'chrisvogt',
-      //   widgetDataSource:
-      //     'https://metrics.chrisvogt.me/api/widget-content?widget=github'
-      // },
-      // goodreads: {
-      //   username: 'chrisvogt',
-      //   widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
-      //   widgetDataSourceProfile:
-      //     'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
-      // },
-      // instagram: {
-      //   username: 'c1v0',
-      //   widgetDataSource:
-      //     'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
-      // },
+    widgets: {
+      github: {
+        username: 'chrisvogt',
+        widgetDataSource:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=github'
+      },
+      goodreads: {
+        username: 'chrisvogt',
+        widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
+        widgetDataSourceProfile:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
+      },
+      instagram: {
+        username: 'c1v0',
+        widgetDataSource:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
+      },
+      profiles: {
+        widgetDataSourceMetas: 'https://api.chrisvogt.me/metas',
+        widgetDataSourceProfiles: 'https://api.chrisvogt.me/profiles'
+      },
       spotify: {
         widgetDataSource:
           'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
-      },
-      twitter: {
-        username: ''
       }
     }
   },
