@@ -26,8 +26,9 @@ const useSiteMetadata = () => {
                 username
                 widgetDataSource
               }
-              twitter {
+              spotify {
                 username
+                widgetDataSource
               }
             }
             subhead

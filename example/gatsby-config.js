@@ -10,21 +10,25 @@ module.exports = {
     languageCode: 'en',
     // TODO(chrisvogt): rename this to `widgets`
     social: {
-      github: {
-        username: 'chrisvogt',
+      // github: {
+      //   username: 'chrisvogt',
+      //   widgetDataSource:
+      //     'https://metrics.chrisvogt.me/api/widget-content?widget=github'
+      // },
+      // goodreads: {
+      //   username: 'chrisvogt',
+      //   widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
+      //   widgetDataSourceProfile:
+      //     'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
+      // },
+      // instagram: {
+      //   username: 'c1v0',
+      //   widgetDataSource:
+      //     'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
+      // },
+      spotify: {
         widgetDataSource:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=github'
-      },
-      goodreads: {
-        username: 'chrisvogt',
-        widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
-        widgetDataSourceProfile:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
-      },
-      instagram: {
-        username: 'c1v0',
-        widgetDataSource:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
+          'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
       },
       twitter: {
         username: ''

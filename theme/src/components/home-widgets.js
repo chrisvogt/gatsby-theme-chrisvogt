@@ -37,6 +37,8 @@ const HomeWidgets = () => {
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
 
+  console.log(spotifyDataSource)
+
   return (
     <>
       {/* All widgets get the recent posts home page widget. */}

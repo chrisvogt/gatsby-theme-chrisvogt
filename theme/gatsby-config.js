@@ -28,8 +28,9 @@ module.exports = () => ({
         username: '',
         widgetDataSource: ''
       },
-      twitter: {
-        username: ''
+      spotify: {
+        username: '',
+        widgetDataSource: ''
       }
     }
   },

@@ -7,6 +7,7 @@ import useSocialProfiles from '../../hooks/use-social-profiles'
 
 export default () => {
   const { isLoading, profiles } = useSocialProfiles()
+
   return (
     <Fragment>
       <h4 sx={{ mb: 4 }}>My social profiles</h4>
