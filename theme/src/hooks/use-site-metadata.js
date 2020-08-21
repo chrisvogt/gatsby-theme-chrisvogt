@@ -12,6 +12,9 @@ const useSiteMetadata = () => {
             headline
             imageURL
             languageCode
+            social {
+              twitterUsername
+            }
             subhead
             title
             titleTemplate
