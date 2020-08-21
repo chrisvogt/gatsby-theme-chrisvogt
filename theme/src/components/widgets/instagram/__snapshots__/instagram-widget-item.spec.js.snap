@@ -3,9 +3,6 @@
 exports[`InstagramWidgetItem matches the snapshot 1`] = `
 <a
   className="css-19bqgup-InstagramWidgetItem"
-  href="https://instagram.com/fake-image-link"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
   rel="noopener noreferrer"
   style={
     Object {
@@ -18,9 +15,8 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
     alt="Instagram post thumbnail"
     className="instagram-item-image css-nowwr3-InstagramWidgetItem"
     crossOrigin="anonymous"
-    height={100}
-    src="https://cdn.privatesphere.io/images/fake-instagram-image.jpg"
-    width={100}
+    height="400"
+    src="undefined?h=400"
   />
 </a>
 `;
