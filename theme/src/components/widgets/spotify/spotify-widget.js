@@ -8,10 +8,15 @@ import UserProfile from './user-profile'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-import useWidgetContent from '../../../hooks/use-widget-content'
+import useSiteMetadata from '../../../hooks/use-site-metadata'
+import useDataSource from '../../../hooks/use-data-source'
+
+import { getSpotifyWidgetDataSource } from '../../../selectors/metadata'
 
 const SpotifyWidget = () => {
-  const { isLoading, content } = useWidgetContent('spotify')
+  const metadata = useSiteMetadata()
+  const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
+  const { isLoading, data: content } = useDataSource(spotifyDataSource)
 
   const {
     collections: { topTracks } = [],

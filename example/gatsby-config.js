@@ -8,18 +8,31 @@ module.exports = {
     baseURL: 'https://www.privatesphere.io',
     imageURL: '',
     languageCode: 'en',
-    social: {
+    // TODO(chrisvogt): rename this to `widgets`
+    widgets: {
       github: {
-        username: 'chrisvogt'
+        username: 'chrisvogt',
+        widgetDataSource:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=github'
       },
       goodreads: {
-        username: 'chrisvogt'
+        username: 'chrisvogt',
+        widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
+        widgetDataSourceProfile:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
       },
-      github: {
-        username: 'instagram'
+      instagram: {
+        username: 'c1v0',
+        widgetDataSource:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
       },
-      twitter: {
-        username: 'c1v0'
+      profiles: {
+        widgetDataSourceMetas: 'https://api.chrisvogt.me/metas',
+        widgetDataSourceProfiles: 'https://api.chrisvogt.me/profiles'
+      },
+      spotify: {
+        widgetDataSource:
+          'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
       }
     }
   },

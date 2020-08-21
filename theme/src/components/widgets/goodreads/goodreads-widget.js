@@ -2,9 +2,13 @@
 import { jsx } from 'theme-ui'
 import { Box, Grid } from '@theme-ui/components'
 
-import { getGoodreadsUsername } from '../../../selectors/metadata'
-import useGoodreadsUser from '../../../hooks/use-goodreads-user'
-import useRecentBooks from '../../../hooks/use-recent-books'
+import {
+  getGoodreadsUsername,
+  getGoodreadsWidgetDataSourceBooks,
+  getGoodreadsWidgetDataSourceProfile
+} from '../../../selectors/metadata'
+
+import useDataSource from '../../../hooks/use-data-source'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
@@ -20,20 +24,26 @@ const getStatusFromUpdates = updates =>
     : {}
 
 export default () => {
-  const [isLoadingBooks, books] = useRecentBooks()
-  const [isLoadingUser, user] = useGoodreadsUser()
+  const metadata = useSiteMetadata()
 
-  const { profile = {}, updates = [] } = user
+  const goodreadsUsername = getGoodreadsUsername(metadata)
+  const booksDataSource = getGoodreadsWidgetDataSourceBooks(metadata)
+  const profileDataSource = getGoodreadsWidgetDataSourceProfile(metadata)
+
+  const { isLoadingBooks, data: booksData } = useDataSource(booksDataSource)
+  const { isLoadingProfile, data: profileData } = useDataSource(
+    profileDataSource
+  )
+
+  const { profile = {}, updates = [] } = profileData
 
   const status = updates.length && getStatusFromUpdates(updates)
-  const metadata = useSiteMetadata()
-  const goodreadsUsername = getGoodreadsUsername(metadata)
 
   const callToAction = (
     <CallToAction
       title={`${goodreadsUsername} on Goodreads`}
       url={`https://www.goodreads.com/${goodreadsUsername}`}
-      isLoading={isLoadingBooks || isLoadingUser}
+      isLoading={isLoadingBooks || isLoadingProfile}
     >
       Visit Profile
       <span className='read-more-icon'>&rarr;</span>
@@ -46,13 +56,13 @@ export default () => {
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
         <Box>
-          <UserProfile isLoading={isLoadingUser} profile={profile} />
+          <UserProfile isLoading={isLoadingProfile} profile={profile} />
         </Box>
         <Box>
-          <RecentlyReadBooks isLoading={isLoadingBooks} books={books} />
+          <RecentlyReadBooks isLoading={isLoadingBooks} books={booksData} />
           <UserStatus
             actorName={profile.name}
-            isLoading={isLoadingUser}
+            isLoading={isLoadingProfile}
             status={status}
           />
         </Box>

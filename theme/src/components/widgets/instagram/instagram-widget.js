@@ -4,9 +4,12 @@ import { Grid } from '@theme-ui/components'
 import ReactPlaceholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 
-import { getInstagramUsername } from '../../../selectors/metadata'
-import useInstagramPosts from '../../../hooks/use-instagram-posts'
+import {
+  getInstagramUsername,
+  getInstagramWidgetDataSource
+} from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
+import useDataSource from '../../../hooks/use-data-source'
 
 import CallToAction from '../call-to-action'
 import Widget from '../widget'
@@ -23,9 +26,14 @@ const ItemPlaceholder = (
 )
 
 export default () => {
-  const { isLoading, posts } = useInstagramPosts()
   const metadata = useSiteMetadata()
+
   const instagramUsername = getInstagramUsername(metadata)
+  const instagramDataSource = getInstagramWidgetDataSource(metadata)
+
+  const { isLoading, data } = useDataSource(instagramDataSource)
+
+  const { collections: { media: posts } = {} } = data
 
   const callToAction = (
     <CallToAction
