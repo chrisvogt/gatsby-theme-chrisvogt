@@ -2,13 +2,15 @@ const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 
 module.exports = {
   siteMetadata: {
+    baseURL: 'https://www.privatesphere.io',
     description:
       'A GatsbyJS blog theme with built-in social widgets for Instagram, Goodreads, GitHub, and Spotify.',
-    footerText: '© 2020 Chris Vogt',
-    baseURL: 'https://www.privatesphere.io',
+    footerText: '© Chris Vogt',
     imageURL: '',
     languageCode: 'en',
-    // TODO(chrisvogt): rename this to `widgets`
+    social: {
+      twitterUsername: '@c1v0'
+    },
     widgets: {
       github: {
         username: 'chrisvogt',

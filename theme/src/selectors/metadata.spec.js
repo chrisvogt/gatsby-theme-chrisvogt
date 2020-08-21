@@ -3,11 +3,16 @@ import {
   getBaseURL,
   getDescription,
   getGithubUsername,
+  getGithubWidgetDataSource,
   getGoodreadsUsername,
+  getGoodreadsWidgetDataSourceBooks,
+  getGoodreadsWidgetDataSourceProfile,
   getHeadline,
   getImageURL,
   getInstagramUsername,
   getLanguageCode,
+  getProfilesWidgetDataSourceMetas,
+  getProfilesWidgetDataSourceProfiles,
   getSubhead,
   getTitle,
   getTitleTemplate,
@@ -17,25 +22,40 @@ import {
 const metadata = {
   avatarURL: 'https://cdn.fake-site.com/images/avatar.jpg',
   baseURL: 'https://www.fake-site.com/blog',
-  title: 'My Cool Website',
   description: 'Personal blog for web developer and creative.',
   headline: 'My Site Headline',
-  subhead: 'Just another GatsbyJS blog',
-  languageCode: 'en',
   imageURL: 'https://cdn.fake-site.com/images/og-banner.jpg',
-  titleTemplate: '%s | My Cool Website',
+  languageCode: 'en',
   social: {
+    twitterUsername: '@c1v0'
+  },
+  subhead: 'Just another GatsbyJS blog',
+  title: 'My Cool Website',
+  titleTemplate: '%s | My Cool Website',
+  widgets: {
     github: {
-      username: 'fake-github-user'
+      username: 'private-sphere-theme',
+      widgetDataSource:
+        'https://metrics.chrisvogt.me/api/widget-content?widget=github'
     },
     goodreads: {
-      username: '1234567'
+      username: 'private-sphere-theme',
+      widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
+      widgetDataSourceProfile:
+        'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
     },
     instagram: {
-      username: 'fake.instagram.user'
+      username: 'private-sphere-theme',
+      widgetDataSource:
+        'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
     },
-    twitter: {
-      username: '@fake-twitter-account'
+    profiles: {
+      widgetDataSourceMetas: 'https://api.chrisvogt.me/metas',
+      widgetDataSourceProfiles: 'https://api.chrisvogt.me/profiles'
+    },
+    spotify: {
+      widgetDataSource:
+        'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
     }
   }
 }
@@ -58,17 +78,42 @@ describe('Metadata Selectors', () => {
 
   it('selects the github username', () => {
     const result = getGithubUsername(metadata)
-    expect(result).toEqual(metadata.social.github.username)
+    expect(result).toEqual(metadata.widgets.github.username)
+  })
+
+  it('selects the github widget data source', () => {
+    const result = getGithubWidgetDataSource(metadata)
+    expect(result).toEqual(metadata.widgets.github.widgetDataSource)
   })
 
   it('selects the goodreads username', () => {
     const result = getGoodreadsUsername(metadata)
-    expect(result).toEqual(metadata.social.goodreads.username)
+    expect(result).toEqual(metadata.widgets.goodreads.username)
+  })
+
+  it('selects the goodreads books data source', () => {
+    const result = getGoodreadsWidgetDataSourceBooks(metadata)
+    expect(result).toEqual(metadata.widgets.goodreads.widgetDataSourceBooks)
+  })
+
+  it('selects the goodreads profiles data source', () => {
+    const result = getGoodreadsWidgetDataSourceProfile(metadata)
+    expect(result).toEqual(metadata.widgets.goodreads.widgetDataSourceProfile)
+  })
+
+  it('selects the profiles widget metas data source', () => {
+    const result = getProfilesWidgetDataSourceMetas(metadata)
+    expect(result).toEqual(metadata.widgets.profiles.widgetDataSourceMetas)
+  })
+
+  it('selects the profiles widget data source', () => {
+    const result = getProfilesWidgetDataSourceProfiles(metadata)
+    expect(result).toEqual(metadata.widgets.profiles.widgetDataSourceProfiles)
   })
 
   it('selects the twitter username', () => {
     const result = getTwitterUsername(metadata)
-    expect(result).toEqual(metadata.social.twitter.username)
+    expect(result).toEqual(metadata.widgets.twitterUsername)
   })
 
   it('selects the home page headline text', () => {
@@ -88,7 +133,7 @@ describe('Metadata Selectors', () => {
 
   it('selects the instagram username', () => {
     const result = getInstagramUsername(metadata)
-    expect(result).toEqual(metadata.social.instagram.username)
+    expect(result).toEqual(metadata.widgets.instagram.username)
   })
 
   it('selects the language code for the site', () => {
