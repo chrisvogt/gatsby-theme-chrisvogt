@@ -14,27 +14,24 @@ module.exports = {
     widgets: {
       github: {
         username: 'chrisvogt',
-        widgetDataSource:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=github'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/github'
       },
       goodreads: {
         username: 'chrisvogt',
         widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
         widgetDataSourceProfile:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
+          'https://metrics.chrisvogt.me/api/widgets/goodreads'
       },
       instagram: {
         username: 'c1v0',
-        widgetDataSource:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/instagram'
       },
       profiles: {
         widgetDataSourceMetas: 'https://api.chrisvogt.me/metas',
         widgetDataSourceProfiles: 'https://api.chrisvogt.me/profiles'
       },
       spotify: {
-        widgetDataSource:
-          'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/spotify'
       }
     }
   },
