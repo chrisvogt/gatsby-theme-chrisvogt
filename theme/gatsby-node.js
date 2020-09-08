@@ -15,6 +15,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               fields {
                 id
                 slug
+                type
               }
             }
           }
@@ -22,14 +23,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     `
   )
+
   if (result.errors) {
     reporter.panic('error loading content', result.errors)
     return
   }
+
   result.data.allMdx.edges.forEach(({ node }) => {
     actions.createPage({
       path: node.fields.slug ? node.fields.slug : '/',
-      component: require.resolve('./src/templates/post'),
+      component:
+        node.fields.type === 'media'
+          ? require.resolve('./src/templates/media')
+          : require.resolve('./src/templates/post'),
       context: {
         id: node.fields.id
       }
@@ -66,6 +72,15 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
         name: `category`,
         node,
         value: category
+      })
+    }
+
+    const type = node.frontmatter.type
+    if (type) {
+      createNodeField({
+        name: `type`,
+        node,
+        value: type
       })
     }
 

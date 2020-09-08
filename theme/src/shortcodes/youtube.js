@@ -2,8 +2,9 @@
 import { jsx, Styled } from 'theme-ui'
 
 const YouTube = ({ title, url }) => (
-  <Styled.div className='VideoWrapper'>
+  <Styled.div sx={{ variant: `styles.VideoWrapper` }}>
     <iframe
+      className='VideoFrame'
       title={title || 'YouTube video'}
       width='560'
       height='315'

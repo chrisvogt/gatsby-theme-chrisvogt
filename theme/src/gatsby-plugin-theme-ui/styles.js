@@ -207,20 +207,17 @@ export default {
   },
 
   VideoWrapper: {
-    background: `blue`,
-    border: `3px solid red`,
     position: `relative`,
     paddingBottom: `56.25%` /* 16:9 */,
     paddingTop: `25px`,
-    height: 0
-  },
-
-  'videoWrapper iframe': {
-    position: `absolute`,
-    top: 0,
-    left: 0,
-    width: `100%`,
-    height: `100%`
+    height: 0,
+    iframe: {
+      position: `absolute`,
+      top: 0,
+      left: 0,
+      width: `100%`,
+      height: `100%`
+    }
   },
 
   Widget: {
@@ -289,21 +286,6 @@ export default {
 
   '.text-center': {
     textAlign: `center`
-  },
-
-  '.VideoWrapper': {
-    position: `relative`,
-    paddingBottom: `56.25%` /* 16:9 */,
-    paddingTop: `25px`,
-    height: 0
-  },
-
-  '.VideoWrapper iframe': {
-    position: `absolute`,
-    top: 0,
-    left: 0,
-    width: `100%`,
-    height: `100%`
   },
 
   '.gatsby-highlight pre[class*="language-"]': {
