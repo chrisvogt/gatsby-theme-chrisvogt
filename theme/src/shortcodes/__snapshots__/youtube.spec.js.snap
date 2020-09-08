@@ -2,11 +2,12 @@
 
 exports[`YouTube Shortcode matches the snapshot 1`] = `
 <div
-  className="VideoWrapper css-0"
+  className="css-d7h4os-YouTube"
 >
   <iframe
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen={true}
+    className="VideoFrame"
     frameBorder="0"
     height="315"
     src="https://www.youtube-nocookie.com/embed/XJashBvI17A"

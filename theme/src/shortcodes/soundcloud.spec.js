@@ -1,27 +1,22 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import YouTube from './youtube'
+import SoundCloud from './soundcloud'
 
-describe('YouTube Shortcode', () => {
+describe('SoundCloud Shortcode', () => {
   it('matches the snapshot', () => {
     const tree = renderer
-      .create(
-        <YouTube
-          title='Here, There And Everywhere (Piano Cover) by Chris Vogt'
-          url='https://www.youtube-nocookie.com/embed/XJashBvI17A'
-        />
-      )
+      .create(<SoundCloud soundcloudId='880888540' />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders a default title if one is not provided', () => {
     const testRenderer = renderer.create(
-      <YouTube url='https://www.youtube-nocookie.com/embed/XJashBvI17A' />
+      <SoundCloud soundcloudId='880888540' />
     )
     const testInstance = testRenderer.root
     expect(testInstance.findByType('iframe').props.title).toEqual(
-      'Video on YouTube'
+      'Song on SoundCloud'
     )
   })
 })
