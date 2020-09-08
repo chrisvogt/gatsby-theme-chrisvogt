@@ -20,6 +20,8 @@ describe('YouTube Shortcode', () => {
       <YouTube url='https://www.youtube-nocookie.com/embed/XJashBvI17A' />
     )
     const testInstance = testRenderer.root
-    expect(testInstance.findByType('iframe').props.title).toEqual('YouTube video')
+    expect(testInstance.findByType('iframe').props.title).toEqual(
+      'Video on YouTube'
+    )
   })
 })
