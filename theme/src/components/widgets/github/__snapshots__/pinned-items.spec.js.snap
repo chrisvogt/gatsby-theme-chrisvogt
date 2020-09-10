@@ -484,29 +484,29 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
         className="css-vurnku"
       >
         <div
-          className="css-ixavtg"
+          className="css-3xm76x-Repository"
         >
           <div
-            className="css-19idom"
+            className="css-1hl77mz-Repository"
           >
             <img
               alt="repository avatar"
-              className="css-1lvgjmp"
+              className="css-1tslwml-Repository"
               height="42"
               width="42"
             />
           </div>
           <h4
-            className="css-rx5q00"
+            className="css-dxkypm-Repository"
           />
           <span
-            className="css-v635f6"
+            className="css-1yqdz9k-Repository"
           />
           <div
             className="css-1nldqfs-CardFooter"
           >
             <span
-              className="css-1sryiaj"
+              className="css-15n3i4m-Repository"
             >
               Last updated 
               NaN years ago

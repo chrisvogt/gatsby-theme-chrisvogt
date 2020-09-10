@@ -9,10 +9,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^2.15.29",
+    "gatsby": "^2.24.57",
     "gatsby-theme-private-sphere": "*",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "pretty-quick": "^3.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9"

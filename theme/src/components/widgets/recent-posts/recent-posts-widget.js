@@ -36,7 +36,7 @@ export default () => {
 
   return (
     <Widget id='posts'>
-      <WidgetHeader aside={callToAction}>Recently Published</WidgetHeader>
+      <WidgetHeader aside={callToAction}>Latest Posts</WidgetHeader>
 
       <div sx={{ width: `100%` }}>
         <Grid

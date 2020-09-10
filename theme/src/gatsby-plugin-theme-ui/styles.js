@@ -1,38 +1,7 @@
 import { tailwind } from '@theme-ui/presets'
+import { floatOnHover } from './abstracts/shadows'
 
 export const themePreset = tailwind
-
-export const floatOnHover = {
-  transition: `all 200ms ease-in-out`,
-
-  '&:hover, &:focus': {
-    transform: `scale(1.015)`,
-    boxShadow: `lg`
-  }
-}
-
-export const card = {
-  backgroundColor: `white`,
-  borderBottom: `1px solid white`,
-  borderRadius: `3px`,
-  boxShadow: `default`,
-  color: `text`,
-  flexGrow: 1,
-  padding: 3,
-  textDecoration: `none`
-}
-
-export const infoCard = {
-  boxShadow: `none`,
-  borderBottom: `1px solid #efefef`,
-  borderLeftColor: `text`,
-  borderLeft: `2px solid`,
-  span: {
-    fontFamily: `heading`,
-    fontWeight: `bold`,
-    padding: 2
-  }
-}
 
 const GradientBanner = {
   /**
@@ -76,29 +45,6 @@ const GradientBanner = {
   }
 }
 
-export const PostCard = {
-  ...card,
-  ...floatOnHover,
-  display: `flex`,
-  height: `100%`,
-  flexDirection: `column`,
-  '.card-media': {
-    mb: 2,
-    height: `100%`,
-    overflow: `hidden`
-  },
-  '.read-more-icon': {
-    display: `inline`,
-    transition: `all 250ms ease-in`,
-    opacity: 0,
-    paddingLeft: 0
-  },
-  '&:hover .read-more-icon': {
-    opacity: 1,
-    paddingLeft: `8px`
-  }
-}
-
 export default {
   root: {
     color: `text`,
@@ -135,16 +81,15 @@ export default {
   },
 
   Book: {
-    filter: `drop-shadow(${themePreset.shadows.default})`,
+    filter: theme => `drop-shadow(${theme.shadows.default})`,
     '&:hover, &:focus': {
-      filter: `drop-shadow(${themePreset.shadows.xl})`,
+      filter: theme => `drop-shadow(${theme.shadows.xl})`,
       transform: `scale(1.01)`,
       transition: `all .35s ease-in-out`
     }
   },
 
   Container: {
-    ...themePreset.Container,
     py: [2, 3],
     px: [3, 4]
   },
