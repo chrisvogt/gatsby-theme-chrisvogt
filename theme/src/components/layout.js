@@ -5,13 +5,14 @@ import { MDXProvider } from '@mdx-js/react'
 
 import theme from '../gatsby-plugin-theme-ui'
 import TopNavigation from './top-navigation'
+import Emoji from '../shortcodes/emoji'
 import YouTube from '../shortcodes/youtube'
 
 const components = {
   pre: ({ children }) => <Fragment>{children}</Fragment>
 }
 
-const shortcodes = { YouTube }
+const shortcodes = { Emoji, YouTube }
 
 /**
  * Layout

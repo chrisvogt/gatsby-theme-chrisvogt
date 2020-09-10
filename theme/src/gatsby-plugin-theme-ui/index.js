@@ -1,12 +1,12 @@
 import colors from './abstracts/colors'
 import fonts from './abstracts/fonts'
-import styles, {
-  card,
-  infoCard,
-  floatOnHover,
-  themePreset,
-  PostCard
-} from './styles'
+
+import { card, infoCard, PostCard } from './components/card'
+
+import { floatOnHover } from './abstracts/shadows'
+
+import styles, { themePreset } from './styles'
+
 import { merge } from 'theme-ui'
 
 export default merge(themePreset, {
@@ -78,14 +78,15 @@ export default merge(themePreset, {
       color: `white`
     }
   },
-  colors: {
-    ...colors
-  },
+
+  colors,
+
   fonts: {
     body: fonts.sans,
     heading: fonts.serif,
     monospace: fonts.mono
   },
+
   fontSizes: [
     '0.875rem',
     '1rem',
@@ -97,6 +98,7 @@ export default merge(themePreset, {
     '4rem',
     '4.5rem'
   ],
+
   layout: {
     container: {
       maxWidth: [``, `94%`, ``, ``, `1200px`],
@@ -104,7 +106,9 @@ export default merge(themePreset, {
       px: [3, 4]
     }
   },
+
   styles,
+
   text: {
     title: {
       color: `primary`,
@@ -113,6 +117,7 @@ export default merge(themePreset, {
       textTransform: `uppercase`
     }
   },
+
   variants: {
     cards: {
       dark: {
