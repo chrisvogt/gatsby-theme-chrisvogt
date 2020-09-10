@@ -31,15 +31,12 @@ const HomeWidgets = () => {
 
   const githubDataSource = getGithubWidgetDataSource(metadata)
   const goodreadsDataSourceBooks = getGoodreadsWidgetDataSourceBooks(metadata)
-  const goodreadsDataSourceProfile = getGoodreadsWidgetDataSourceProfile(
-    metadata
-  )
+  const goodreadsDataSourceProfile = getGoodreadsWidgetDataSourceProfile(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
 
   return (
     <>
-      {/* All widgets get the recent posts home page widget. */}
       <RecentPosts />
 
       {instagramDataSource && <Instagram />}
