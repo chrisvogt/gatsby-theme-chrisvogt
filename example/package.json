@@ -11,6 +11,7 @@
   "dependencies": {
     "gatsby": "^2.15.29",
     "gatsby-theme-private-sphere": "*",
+    "pretty-quick": "^3.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
