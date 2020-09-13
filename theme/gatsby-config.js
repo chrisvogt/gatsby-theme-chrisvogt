@@ -24,8 +24,7 @@ module.exports = () => ({
       },
       goodreads: {
         username: '',
-        widgetDataSourceBooks: '',
-        widgetDataSourceProfile: ''
+        widgetDataSource: ''
       },
       instagram: {
         username: '',

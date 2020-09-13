@@ -9,8 +9,7 @@ import Spotify from '../components/widgets/spotify'
 import useSiteMetadata from '../hooks/use-site-metadata'
 import {
   getGithubWidgetDataSource,
-  getGoodreadsWidgetDataSourceBooks,
-  getGoodreadsWidgetDataSourceProfile,
+  getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
   getSpotifyWidgetDataSource
 } from '../selectors/metadata'
@@ -30,8 +29,7 @@ const HomeWidgets = () => {
   const metadata = useSiteMetadata()
 
   const githubDataSource = getGithubWidgetDataSource(metadata)
-  const goodreadsDataSourceBooks = getGoodreadsWidgetDataSourceBooks(metadata)
-  const goodreadsDataSourceProfile = getGoodreadsWidgetDataSourceProfile(metadata)
+  const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
 
@@ -41,7 +39,7 @@ const HomeWidgets = () => {
 
       {instagramDataSource && <Instagram />}
       {githubDataSource && <GitHub />}
-      {goodreadsDataSourceBooks && goodreadsDataSourceProfile && <Goodreads />}
+      {goodreadsDataSource && <Goodreads />}
       {spotifyDataSource && <Spotify />}
     </>
   )

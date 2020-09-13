@@ -4,8 +4,7 @@ import { Box, Grid } from '@theme-ui/components'
 
 import {
   getGoodreadsUsername,
-  getGoodreadsWidgetDataSourceBooks,
-  getGoodreadsWidgetDataSourceProfile
+  getGoodreadsWidgetDataSource,
 } from '../../../selectors/metadata'
 
 import useDataSource from '../../../hooks/use-data-source'
@@ -27,15 +26,15 @@ export default () => {
   const metadata = useSiteMetadata()
 
   const goodreadsUsername = getGoodreadsUsername(metadata)
-  const booksDataSource = getGoodreadsWidgetDataSourceBooks(metadata)
-  const profileDataSource = getGoodreadsWidgetDataSourceProfile(metadata)
+  const dataSource = getGoodreadsWidgetDataSource(metadata)
 
-  const { isLoadingBooks, data: booksData } = useDataSource(booksDataSource)
-  const { isLoadingProfile, data: profileData } = useDataSource(
-    profileDataSource
-  )
+  const { isLoading, data } = useDataSource(dataSource)
 
-  const { profile = {}, updates = [] } = profileData
+  const { profile = {}, updates = [], recentlyReadBooks = [] } = data
+
+  const books = recentlyReadBooks.length && recentlyReadBooks
+    .filter(({ thumbnail }) => Boolean(thumbnail))
+    .slice(0, 12)
 
   const status = updates.length && getStatusFromUpdates(updates)
 
@@ -43,7 +42,7 @@ export default () => {
     <CallToAction
       title={`${goodreadsUsername} on Goodreads`}
       url={`https://www.goodreads.com/${goodreadsUsername}`}
-      isLoading={isLoadingBooks || isLoadingProfile}
+      isLoading={isLoading}
     >
       Visit Profile
       <span className='read-more-icon'>&rarr;</span>
@@ -56,13 +55,13 @@ export default () => {
 
       <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
         <Box>
-          <UserProfile isLoading={isLoadingProfile} profile={profile} />
+          <UserProfile isLoading={isLoading} profile={profile} />
         </Box>
         <Box>
-          <RecentlyReadBooks isLoading={isLoadingBooks} books={booksData} />
+          <RecentlyReadBooks isLoading={isLoading} books={books} />
           <UserStatus
             actorName={profile.name}
-            isLoading={isLoadingProfile}
+            isLoading={isLoading}
             status={status}
           />
         </Box>

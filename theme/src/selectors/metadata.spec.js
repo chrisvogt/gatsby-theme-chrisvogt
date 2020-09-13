@@ -5,8 +5,7 @@ import {
   getGithubUsername,
   getGithubWidgetDataSource,
   getGoodreadsUsername,
-  getGoodreadsWidgetDataSourceBooks,
-  getGoodreadsWidgetDataSourceProfile,
+  getGoodreadsWidgetDataSource,
   getHeadline,
   getImageURL,
   getInstagramUsername,
@@ -40,8 +39,7 @@ const metadata = {
     },
     goodreads: {
       username: 'private-sphere-theme',
-      widgetDataSourceBooks: 'https://recently-read.chrisvogt.me',
-      widgetDataSourceProfile:
+      widgetDataSource:
         'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
     },
     instagram: {
@@ -91,14 +89,9 @@ describe('Metadata Selectors', () => {
     expect(result).toEqual(metadata.widgets.goodreads.username)
   })
 
-  it('selects the goodreads books data source', () => {
-    const result = getGoodreadsWidgetDataSourceBooks(metadata)
-    expect(result).toEqual(metadata.widgets.goodreads.widgetDataSourceBooks)
-  })
-
-  it('selects the goodreads profiles data source', () => {
-    const result = getGoodreadsWidgetDataSourceProfile(metadata)
-    expect(result).toEqual(metadata.widgets.goodreads.widgetDataSourceProfile)
+  it('selects the goodreads widget data source', () => {
+    const result = getGoodreadsWidgetDataSource(metadata)
+    expect(result).toEqual(metadata.widgets.goodreads.widgetDataSource)
   })
 
   it('selects the profiles widget metas data source', () => {
