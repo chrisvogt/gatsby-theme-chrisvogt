@@ -17,11 +17,8 @@ export const getGithubWidgetDataSource = metadata =>
 export const getGoodreadsUsername = metadata =>
   get(metadata, 'widgets.goodreads.username')
 
-export const getGoodreadsWidgetDataSourceBooks = metadata =>
-  get(metadata, 'widgets.goodreads.widgetDataSourceBooks')
-
-export const getGoodreadsWidgetDataSourceProfile = metadata =>
-  get(metadata, 'widgets.goodreads.widgetDataSourceProfile')
+export const getGoodreadsWidgetDataSource = metadata =>
+  get(metadata, 'widgets.goodreads.widgetDataSource')
 
 export const getHeadline = metadata => get(metadata, 'headline')
 

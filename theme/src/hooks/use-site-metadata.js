@@ -25,8 +25,7 @@ const useSiteMetadata = () => {
               }
               goodreads {
                 username
-                widgetDataSourceBooks
-                widgetDataSourceProfile
+                widgetDataSource
               }
               instagram {
                 username
