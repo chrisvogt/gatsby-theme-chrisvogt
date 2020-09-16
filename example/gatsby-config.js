@@ -24,10 +24,6 @@ module.exports = {
         username: 'c1v0',
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/instagram'
       },
-      profiles: {
-        widgetDataSourceMetas: 'https://api.chrisvogt.me/metas',
-        widgetDataSourceProfiles: 'https://api.chrisvogt.me/profiles'
-      },
       spotify: {
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/spotify'
       }

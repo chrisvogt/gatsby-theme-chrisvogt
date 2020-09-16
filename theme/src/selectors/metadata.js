@@ -32,12 +32,6 @@ export const getInstagramUsername = metadata =>
 
 export const getLanguageCode = metadata => get(metadata, 'languageCode')
 
-export const getProfilesWidgetDataSourceMetas = metadata =>
-  get(metadata, 'widgets.profiles.widgetDataSourceMetas')
-
-export const getProfilesWidgetDataSourceProfiles = metadata =>
-  get(metadata, 'widgets.profiles.widgetDataSourceProfiles')
-
 export const getSpotifyWidgetDataSource = metadata =>
   get(metadata, 'widgets.spotify.widgetDataSource')
 

@@ -30,10 +30,6 @@ module.exports = () => ({
         username: '',
         widgetDataSource: ''
       },
-      profiles: {
-        widgetDataSourceMetas: '',
-        widgetDataSourceProfiles: ''
-      },
       spotify: {
         username: '',
         widgetDataSource: ''

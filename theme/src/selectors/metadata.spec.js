@@ -10,8 +10,6 @@ import {
   getImageURL,
   getInstagramUsername,
   getLanguageCode,
-  getProfilesWidgetDataSourceMetas,
-  getProfilesWidgetDataSourceProfiles,
   getSubhead,
   getTitle,
   getTitleTemplate,
@@ -92,16 +90,6 @@ describe('Metadata Selectors', () => {
   it('selects the goodreads widget data source', () => {
     const result = getGoodreadsWidgetDataSource(metadata)
     expect(result).toEqual(metadata.widgets.goodreads.widgetDataSource)
-  })
-
-  it('selects the profiles widget metas data source', () => {
-    const result = getProfilesWidgetDataSourceMetas(metadata)
-    expect(result).toEqual(metadata.widgets.profiles.widgetDataSourceMetas)
-  })
-
-  it('selects the profiles widget data source', () => {
-    const result = getProfilesWidgetDataSourceProfiles(metadata)
-    expect(result).toEqual(metadata.widgets.profiles.widgetDataSourceProfiles)
   })
 
   it('selects the twitter username', () => {
