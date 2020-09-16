@@ -5,8 +5,9 @@ configure({
   adapter: new Adapter()
 })
 
-// loader shim
-global.___loader = { enqueue: () => {} }
+global.___loader = {
+  enqueue: jest.fn()
+}
 
 global.mount = mount
 global.render = render
