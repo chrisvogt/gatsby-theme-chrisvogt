@@ -16,6 +16,8 @@ import Widget from '../widget'
 import WidgetItem from './instagram-widget-item'
 import WidgetHeader from '../widget-header'
 
+const MAX_IMAGES = 4
+
 const ItemPlaceholder = (
   <div className='image-placeholder'>
     <RectShape
@@ -31,8 +33,7 @@ export default () => {
   const instagramUsername = getInstagramUsername(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
-  const { isLoading, data } = useDataSource(instagramDataSource)
-
+  const { isLoading, data = {} } = useDataSource(instagramDataSource)
   const { collections: { media: posts } = {} } = data
 
   const callToAction = (
@@ -57,16 +58,18 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(4).fill() : posts).slice(0, 4).map(post => (
-            <ReactPlaceholder
-              customPlaceholder={ItemPlaceholder}
-              showLoadingAnimation
-              ready={!isLoading}
-              type='rect'
-            >
-              <WidgetItem post={post} />
-            </ReactPlaceholder>
-          ))}
+          {(isLoading ? Array(MAX_IMAGES).fill() : posts)
+            .slice(0, MAX_IMAGES)
+            .map(post => (
+              <ReactPlaceholder
+                customPlaceholder={ItemPlaceholder}
+                showLoadingAnimation
+                ready={!isLoading}
+                type='rect'
+              >
+                <WidgetItem post={post} />
+              </ReactPlaceholder>
+            ))}
         </Grid>
       </div>
     </Widget>

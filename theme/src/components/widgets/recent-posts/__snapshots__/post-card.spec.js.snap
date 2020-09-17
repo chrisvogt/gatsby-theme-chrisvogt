@@ -11,13 +11,13 @@ exports[`PostCard matches the snapshot 1`] = `
     className="css-vurnku"
   >
     <div
-      className="card-content css-9z5gw0"
+      className="card-content css-j7qwjs"
     >
       <div
         className="card-media"
       >
         <div
-          className="banner-image css-un1bl9"
+          className="css-un1bl9"
         />
       </div>
       <span

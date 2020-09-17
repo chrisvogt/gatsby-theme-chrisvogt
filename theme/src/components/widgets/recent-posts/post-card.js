@@ -16,16 +16,12 @@ export default ({ banner, category, date, link, title }) => {
           className='card-content'
           sx={{
             display: `flex`,
-            flexDirection: `column`,
-            '&:hover .banner-image': {
-              transform: `scale(1.05)`
-            }
+            flexDirection: `column`
           }}
         >
           {banner && (
             <div className='card-media'>
               <div
-                className='banner-image'
                 sx={{
                   backgroundImage: `url(${banner})`,
                   backgroundPosition: `center`,
