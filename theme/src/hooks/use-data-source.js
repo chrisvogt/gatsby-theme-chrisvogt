@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 const useDataSource = dataSourceURL => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState({})
   const [error, setError] = useState()
   const [isLoading, setIsLoading] = useState(true)
 

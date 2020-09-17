@@ -128,11 +128,7 @@ export default {
 
   InstagramCard: {
     ...floatOnHover,
-    boxShadow: `md`,
-    overflow: `hidden`,
-    '&:hover .instagram-item-image': {
-      transform: `scale(1.05)`
-    }
+    boxShadow: `md`
   },
 
   PostCardLink: {
