@@ -2,7 +2,7 @@ import React from 'react'
 import { useColorMode } from 'theme-ui'
 import DarkModeToggle from 'react-dark-mode-toggle'
 
-export default props => {
+export default () => {
   const [colorMode, setColorMode] = useColorMode()
   return (
     <DarkModeToggle
