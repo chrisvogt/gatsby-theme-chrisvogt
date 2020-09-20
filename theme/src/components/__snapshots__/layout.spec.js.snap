@@ -15,5 +15,8 @@ Array [
       Lorum ipsum dolor sit amet.
     </p>
   </div>,
+  <div
+    className="MOCK__Footer"
+  />,
 ]
 `;
