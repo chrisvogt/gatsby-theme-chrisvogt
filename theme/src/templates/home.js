@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { Container, jsx } from 'theme-ui'
+import { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
-import Footer from '../components/footer'
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
 import HomeWidgets from '../components/home-widgets'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TopNavigation from '../components/top-navigation'
 
@@ -20,7 +19,7 @@ const HomeTemplate = props => {
   const subhead = getSubhead(siteMetadata)
 
   return (
-    <Layout hideNavigation>
+    <Fragment>
       <SEO title='Home' />
 
       <Header showSwoop hideTopPadding>
@@ -42,8 +41,7 @@ const HomeTemplate = props => {
           <HomeWidgets />
         </Container>
       </div>
-      <Footer />
-    </Layout>
+    </Fragment>
   )
 }
 
