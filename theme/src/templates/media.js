@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { Container, Flex, jsx, Styled, useThemeUI } from 'theme-ui'
-import { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -8,6 +7,7 @@ import PropTypes from 'prop-types'
 
 import isDarkMode from '../helpers/isDarkMode'
 
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import SoundCloud from '../shortcodes/soundcloud'
@@ -27,7 +27,7 @@ const MediaTemplate = ({ data }) => {
   const soundcloudId = mdx.frontmatter.soundcloudId
 
   return (
-    <Fragment>
+    <Layout>
       <SEO
         article={true}
         description={description}
@@ -72,7 +72,7 @@ const MediaTemplate = ({ data }) => {
           </div>
         </Container>
       </Flex>
-    </Fragment>
+    </Layout>
   )
 }
 
