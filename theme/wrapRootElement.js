@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { Fragment } from 'react'
 import { jsx } from 'theme-ui'
+import { Fragment } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
-import { ThemeProvider, Styled } from 'theme-ui'
+import { ThemeProvider } from 'theme-ui'
 
 import theme from './src/gatsby-plugin-theme-ui'
 import Emoji from './src/shortcodes/emoji'
@@ -18,9 +18,7 @@ const shortcodes = { Emoji, YouTube }
 // NOTE(chrisvogt): wraps the root element and attaches context providers
 const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme} components={components}>
-    <MDXProvider components={shortcodes}>
-      <Styled.root>{element}</Styled.root>
-    </MDXProvider>
+    <MDXProvider components={shortcodes}>{element}</MDXProvider>
   </ThemeProvider>
 )
 

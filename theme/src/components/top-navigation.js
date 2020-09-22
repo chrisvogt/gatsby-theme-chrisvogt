@@ -23,9 +23,10 @@ const TopNavigation = ({ hideBackground }) => {
 
   return (
     <div
+      className='TopNavigation'
       sx={{
         background: hideBackground ? 'none' : `url(${trianglify})`,
-        variant: `styles.TopNavigation`
+        color: `white`
       }}
     >
       <Container
@@ -33,7 +34,6 @@ const TopNavigation = ({ hideBackground }) => {
           display: `flex`,
           alignItems: `center`,
           py: 3
-          // textAlign: [`center`, ``, `left`]
         }}
       >
         <div sx={{ flexGrow: 1 }}>
