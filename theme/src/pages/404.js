@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Container, jsx } from 'theme-ui'
-import { useRef } from 'react'
+import { Container, Flex, jsx } from 'theme-ui'
+import { Fragment, useRef } from 'react'
 import Lottie from 'lottie-react-web'
 
 const options = Object.freeze({
@@ -12,24 +12,27 @@ const options = Object.freeze({
 const NotFoundPage = () => {
   const ref = useRef()
   return (
-    <Container>
-      <Lottie
-        key='$floatingAstronaut'
-        ref={ref}
-        height='50vh'
-        options={options}
-      />
-      <div sx={{ textAlign: `center` }}>
-        <h1>404</h1>
-        <p>
-          Lost in space? Why not go{' '}
-          <a title='Home page' href='/'>
-            home
-          </a>
-          .
-        </p>
-      </div>
-    </Container>
+    <Fragment>
+      <div></div>
+      <Container>
+        <div sx={{ textAlign: `center` }}>
+          <Lottie
+            key='$floatingAstronaut'
+            ref={ref}
+            height='250px'
+            options={options}
+          />
+          <h1>404</h1>
+          <p>
+            Lost in space? Why not go{' '}
+            <a title='Home page' href='/'>
+              home
+            </a>
+            .
+          </p>
+        </div>
+      </Container>
+    </Fragment>
   )
 }
 

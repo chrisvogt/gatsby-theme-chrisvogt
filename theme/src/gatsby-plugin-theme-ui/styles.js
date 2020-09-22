@@ -135,10 +135,6 @@ export default {
     textDecoration: `none`
   },
 
-  TopNavigation: {
-    color: `white`
-  },
-
   TrackPreview: {
     img: {
       ...floatOnHover,
