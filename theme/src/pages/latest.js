@@ -5,13 +5,14 @@ import { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
 import { getPosts } from '../hooks/use-recent-posts'
+import Layout from '../components/layout'
 import PostCard from '../components/widgets/recent-posts/post-card'
 import SEO from '../components/seo'
 
 export default ({ data }) => {
   const posts = getPosts(data)
   return (
-    <Fragment>
+    <Layout>
       <SEO
         title='Latest Content'
         description='A list of the most recent articles published on my blog.'
@@ -50,7 +51,7 @@ export default ({ data }) => {
           </Styled.div>
         </Container>
       </Flex>
-    </Fragment>
+    </Layout>
   )
 }
 

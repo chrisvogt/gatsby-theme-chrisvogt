@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
 import HomeWidgets from '../components/home-widgets'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TopNavigation from '../components/top-navigation'
 
@@ -19,7 +20,7 @@ const HomeTemplate = props => {
   const subhead = getSubhead(siteMetadata)
 
   return (
-    <Fragment>
+    <Layout hideHeader>
       <SEO title='Home' />
 
       <Header showSwoop hideTopPadding>
@@ -41,7 +42,7 @@ const HomeTemplate = props => {
           <HomeWidgets />
         </Container>
       </div>
-    </Fragment>
+    </Layout>
   )
 }
 

@@ -5,8 +5,9 @@
   "license": "GPL",
   "scripts": {
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "clean": "gatsby clean"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.24.57",

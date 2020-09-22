@@ -3,6 +3,8 @@ import { Container, Flex, jsx } from 'theme-ui'
 import { Fragment, useRef } from 'react'
 import Lottie from 'lottie-react-web'
 
+import Layout from '../components/layout'
+
 const options = Object.freeze({
   animationData: require('../../assets/astronaout.json'),
   autoplay: true,
@@ -12,7 +14,7 @@ const options = Object.freeze({
 const NotFoundPage = () => {
   const ref = useRef()
   return (
-    <Fragment>
+    <Layout>
       <div></div>
       <Container>
         <div sx={{ textAlign: `center` }}>
@@ -32,7 +34,7 @@ const NotFoundPage = () => {
           </p>
         </div>
       </Container>
-    </Fragment>
+    </Layout>
   )
 }
 

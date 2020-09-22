@@ -12,10 +12,10 @@ import TopNavigation from './top-navigation'
  * the default navigation, theme styles, and any important providers. Use shadowing
  * to extend this component and attach additional contexts and providers.
  */
-const Layout = ({ children, custom404, path }) => (
+const Layout = ({ children, hideHeader }) => (
   <Fragment>
     {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
-    {path !== '/' && !custom404 && <TopNavigation />}
+    {!hideHeader && <TopNavigation />}
     {children}
     <Footer />
   </Fragment>
