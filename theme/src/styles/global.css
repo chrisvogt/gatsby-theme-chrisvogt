@@ -1,4 +1,7 @@
-html,
+html {
+  min-height: 100%;
+}
+
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
