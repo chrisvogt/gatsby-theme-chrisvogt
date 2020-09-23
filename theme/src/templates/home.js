@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { Container, jsx } from 'theme-ui'
-import { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
 import Header from '../components/header'

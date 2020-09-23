@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { Container, jsx, Styled } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
-import { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
 import { getPosts } from '../hooks/use-recent-posts'

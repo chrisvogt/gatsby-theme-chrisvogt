@@ -1,8 +1,12 @@
-html,
+html {
+  min-height: 100%;
+}
+
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
   min-height: 100%;
+  height: 100%;
 }
 
 #gatsby-focus-wrapper {
