@@ -15,8 +15,14 @@ const RecentlyReadBooks = ({ books, isLoading }) => (
           mb: 3
         }}
       >
-        Recently Read Books
+        Books
       </Heading>
+
+      <p>
+        I've used Goodreads to track all books I've read since 2012. Following are
+        the latest books I've read, in descending order, by date.
+      </p>
+
       <div
         sx={{
           display: `grid`,

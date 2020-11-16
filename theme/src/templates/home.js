@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { Container, jsx } from 'theme-ui'
+import { Box, Container, Grid, jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
+import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -38,7 +39,14 @@ const HomeTemplate = props => {
         }}
       >
         <Container>
-          <HomeWidgets />
+          <Grid columns={[ null, null, `1fr 2fr` ]}>
+            <Box>
+              <HomeNavigation />
+            </Box>
+            <Box>
+              <HomeWidgets />
+            </Box>
+          </Grid>
         </Container>
       </div>
     </Layout>

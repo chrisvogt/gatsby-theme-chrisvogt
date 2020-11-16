@@ -12,6 +12,18 @@ import { merge } from 'theme-ui'
 export default merge(themePreset, {
   useColorSchemeMediaQuery: true,
 
+  badges: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+    },
+    outline: {
+      color: 'primary',
+      bg: 'transparent',
+      boxShadow: 'inset 0 0 0 1px',
+    },
+  },
+
   cards: {
     /* The <Card /> default style. Used when no variant is defined. */
     primary: {

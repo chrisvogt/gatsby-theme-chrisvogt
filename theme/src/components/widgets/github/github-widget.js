@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { useEffect, useState } from 'react'
 import { Box, Grid } from '@theme-ui/components'
 
 import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
 import PinnedItems from './pinned-items'
-import UserProfile from './user-profile'
+import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
@@ -13,9 +14,9 @@ import {
   getGithubUsername,
   getGithubWidgetDataSource
 } from '../../../selectors/metadata'
-import getPinnedItems from './selectors/get-pinned-items'
-import getPullRequests from './selectors/get-pull-requests'
-import getUser from './selectors/get-user'
+import selectPinnedItems from './selectors/get-pinned-items'
+import selectPullRequests from './selectors/get-pull-requests'
+import selectUser from './selectors/get-user'
 
 import useDataSource from '../../../hooks/use-data-source'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
@@ -27,15 +28,41 @@ const GitHubWidget = () => {
 
   const { isLoading, data } = useDataSource(githubDataSource)
 
-  let pinnedItems = []
-  let pullRequest = {}
-  let user = {}
+  const [latestPullRequest, setLatestPullRequests] = useState({})
+  const [metrics, setMetrics] = useState([])
+  const [pinnedItems, setPinnedItems] = useState([])
 
-  if (!isLoading) {
-    pinnedItems = getPinnedItems(data)
-    pullRequest = getPullRequests(data)
-    user = getUser(data)
-  }
+  useEffect(() => {
+    if (isLoading) {
+      return
+    }
+
+    const pinnedItems = selectPinnedItems(data)
+    const pullRequest = selectPullRequests(data)
+
+    setLatestPullRequests(pullRequest)
+    setPinnedItems(pinnedItems)
+
+    const {
+      followers: { totalCount: totalFollowersCount = 0 } = {},
+      following: { totalCount: totalFollowingCount = 0 } = {}
+    } = selectUser(data) || {}
+  
+    const metrics = [
+      {
+        displayName: 'Followers',
+        id: 'followers',
+        value: totalFollowersCount
+      },
+      {
+        displayName: 'Following',
+        id: 'following',
+        value: totalFollowingCount
+      }
+    ]
+
+    setMetrics(metrics)
+  })
 
   const callToAction = (
     <CallToAction
@@ -51,16 +78,9 @@ const GitHubWidget = () => {
   return (
     <Widget id='github'>
       <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
-
-      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
-        <Box>
-          <UserProfile isLoading={isLoading} user={user} />
-        </Box>
-        <Box>
-          <PinnedItems isLoading={isLoading} pinnedItems={pinnedItems} />
-          <LastPullRequest isLoading={isLoading} pullRequest={pullRequest} />
-        </Box>
-      </Grid>
+      <ProfileMetricsBadge metrics={ metrics } />
+      <PinnedItems items={pinnedItems} />
+      <LastPullRequest isLoading={isLoading} pullRequest={latestPullRequest} />
     </Widget>
   )
 }

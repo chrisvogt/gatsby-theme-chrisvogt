@@ -170,10 +170,7 @@ export default {
     textAlign: [`center`, `left`],
     display: `flex`,
     flexDirection: [`column`, `row`],
-    alignItems: [``, `center`],
-    mb: 3,
-    mt: 0,
-    py: 3
+    alignItems: [``, `center`]
   },
 
   WidgetHeadline__Aside: {

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 import PinnedItemCard from './pinned-item-card'
 
-const PinnedItems = ({ isLoading, pinnedItems }) => {
+const PinnedItems = ({ items = [] }) => {
   const placeholderItems = Array(4).fill({ __typename: 'placeholder' })
-  const items = isLoading ? placeholderItems : pinnedItems
+  const itemsToRender = items.length === 0 ? placeholderItems : items
 
   return (
     <Box sx={{ marginBottom: 4 }}>
@@ -28,7 +28,7 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
           gridTemplateColumns: ['', '', '', 'repeat(2, 1fr)']
         }}
       >
-        {items.map((item, index) => (
+        {itemsToRender.map((item, index) => (
           <Styled.a
             href={item.url}
             key={item.id || index}
