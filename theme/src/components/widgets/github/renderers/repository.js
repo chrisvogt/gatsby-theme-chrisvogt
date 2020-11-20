@@ -10,7 +10,6 @@ import ViewExternal from '../../view-external'
 const Repository = ({
   description,
   nameWithOwner,
-  openGraphImageUrl,
   updatedAt
 }) => (
   <Flex
@@ -19,19 +18,6 @@ const Repository = ({
       height: `100%`
     }}
   >
-    <div sx={{ mb: 2 }}>
-      <img
-        alt='repository avatar'
-        height='42'
-        src={openGraphImageUrl}
-        sx={{
-          backgroundColor: `colors.background`,
-          borderRadius: `3px`
-        }}
-        width='42'
-      />
-    </div>
-
     <Heading as='h4' sx={{ p: 0, mb: 2 }}>
       {nameWithOwner}
     </Heading>

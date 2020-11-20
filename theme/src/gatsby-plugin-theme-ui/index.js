@@ -33,7 +33,7 @@ export default merge(themePreset, {
     actionCard: {
       ...card,
       ...floatOnHover,
-      borderLeft: theme => `2px solid ${theme.colors.primary}`
+      borderLeft: theme => `3px solid ${theme.colors.primary}`
     },
 
     actionCardDark: {
@@ -41,7 +41,7 @@ export default merge(themePreset, {
       ...floatOnHover,
       backgroundColor: `#252e3c`,
       borderBottom: `none`,
-      borderLeft: theme => `2px solid ${theme.colors.primary}`,
+      borderLeft: theme => `3px solid ${theme.colors.primary}`,
       color: `white`
     },
 
@@ -54,7 +54,7 @@ export default merge(themePreset, {
       ...card,
       ...infoCard,
       backgroundColor: `#252e3c`,
-      borderLeft: `2px solid #fefefe`,
+      borderLeft: `3px solid #fefefe`,
       borderBottom: `none`,
       color: `white`
     },
