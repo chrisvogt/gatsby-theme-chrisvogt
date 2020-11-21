@@ -3,12 +3,21 @@ import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
+const headerStyles = {
+  textAlign: [`center`, `left`],
+  display: `flex`,
+  flexDirection: [`column`, `row`],
+  alignItems: [``, `center`]
+}
+
+const asideStyles = {
+  ml: [0, 2]
+}
+
 const WidgetHeader = ({ aside, children }) => (
-  <header sx={{ variant: `styles.WidgetHeadline` }}>
+  <header sx={headerStyles}>
     <Heading>{children}</Heading>
-    {aside && (
-      <div sx={{ variant: `styles.WidgetHeadline__Aside` }}>{aside}</div>
-    )}
+    {aside && <div sx={{ asideStyles }}>{aside}</div>}
   </header>
 )
 

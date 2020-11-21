@@ -39,13 +39,13 @@ const HomeTemplate = props => {
         }}
       >
         <Container>
-          <Grid columns={[ null, null, `1fr 2fr` ]}>
-            <Box>
+          <Grid columns={[null, null, `.5fr 2fr`]}>
+            <aside>
               <HomeNavigation />
-            </Box>
-            <Box>
+            </aside>
+            <main>
               <HomeWidgets />
-            </Box>
+            </main>
           </Grid>
         </Container>
       </div>

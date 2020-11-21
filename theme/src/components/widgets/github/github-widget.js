@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { useEffect, useState } from 'react'
-import { Box, Grid } from '@theme-ui/components'
 
 import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
@@ -33,21 +32,18 @@ const GitHubWidget = () => {
   const [pinnedItems, setPinnedItems] = useState([])
 
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading || Object.keys(data).length === 0) {
       return
     }
 
     const pinnedItems = selectPinnedItems(data)
     const pullRequest = selectPullRequests(data)
 
-    setLatestPullRequests(pullRequest)
-    setPinnedItems(pinnedItems)
-
     const {
       followers: { totalCount: totalFollowersCount = 0 } = {},
       following: { totalCount: totalFollowingCount = 0 } = {}
     } = selectUser(data) || {}
-  
+
     const metrics = [
       {
         displayName: 'Followers',
@@ -61,8 +57,11 @@ const GitHubWidget = () => {
       }
     ]
 
+    setLatestPullRequests(pullRequest)
+    setPinnedItems(pinnedItems)
+
     setMetrics(metrics)
-  })
+  }, [isLoading, data])
 
   const callToAction = (
     <CallToAction
@@ -78,7 +77,7 @@ const GitHubWidget = () => {
   return (
     <Widget id='github'>
       <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
-      <ProfileMetricsBadge metrics={ metrics } />
+      <ProfileMetricsBadge metrics={metrics} />
       <PinnedItems items={pinnedItems} />
       <LastPullRequest isLoading={isLoading} pullRequest={latestPullRequest} />
     </Widget>

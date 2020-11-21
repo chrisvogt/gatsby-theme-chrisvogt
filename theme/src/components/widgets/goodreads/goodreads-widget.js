@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Box, Grid } from '@theme-ui/components'
 
 import {
   getGoodreadsUsername,
@@ -13,7 +12,6 @@ import useSiteMetadata from '../../../hooks/use-site-metadata'
 import CallToAction from '../call-to-action'
 import RecentlyReadBooks from './recently-read-books'
 import ProfileMetricsBadge from '../profile-metrics-badge'
-import UserProfile from './user-profile'
 import UserStatus from './user-status'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
@@ -32,7 +30,7 @@ export default () => {
   const { isLoading, data } = useDataSource(dataSource)
 
   const {
-    profile: { favoriteBooks, friendsCount, name: profileName, readCount } = {},
+    profile: { friendsCount, name: profileName, readCount } = {},
     updates = [],
     recentlyReadBooks = []
   } = data

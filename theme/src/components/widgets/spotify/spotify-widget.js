@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Box, Grid } from '@theme-ui/components'
 
 import CallToAction from '../call-to-action'
 import ProfileMetricsBadge from '../profile-metrics-badge'

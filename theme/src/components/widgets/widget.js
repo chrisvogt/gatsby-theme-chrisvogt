@@ -2,13 +2,16 @@
 import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-const Widget = ({ children, id }) => {
-  return (
-    <div sx={{ variant: 'styles.Widget' }} {...(id ? { id } : {})}>
-      {children}
-    </div>
-  )
+const widgetStyles = {
+  mb: [3, 4],
+  py: [0, 3, 4]
 }
+
+const Widget = ({ children, id }) => (
+  <div sx={widgetStyles} {...(id ? { id } : {})}>
+    {children}
+  </div>
+)
 
 Widget.propTypes = {
   /** The elements to render within the widget. */

@@ -161,22 +161,6 @@ export default {
     }
   },
 
-  Widget: {
-    mb: [3, 4],
-    py: [0, 3, 4]
-  },
-
-  WidgetHeadline: {
-    textAlign: [`center`, `left`],
-    display: `flex`,
-    flexDirection: [`column`, `row`],
-    alignItems: [``, `center`]
-  },
-
-  WidgetHeadline__Aside: {
-    ml: [0, 2]
-  },
-
   WidgetFooter: {
     color: `text`,
     fontFamily: `heading`,

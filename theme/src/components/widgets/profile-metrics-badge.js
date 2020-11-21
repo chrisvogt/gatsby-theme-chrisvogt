@@ -1,20 +1,22 @@
 /** @jsx jsx */
-import { Badge, jsx, useThemeUI } from 'theme-ui'
+import { Badge, jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-import isDarkMode from '../../helpers/isDarkMode'
+// import isDarkMode from '../../helpers/isDarkMode'
 
 const ProfileMetricsBadge = ({ isLoading, metrics }) => {
-  const { colorMode } = useThemeUI()
-  const variant = isDarkMode(colorMode) ? 'UserProfileDark' : 'UserProfile'
+  // const { colorMode } = useThemeUI()
+  // const variant = isDarkMode(colorMode) ? 'UserProfileDark' : 'UserProfile'
 
   return (
     <div sx={{ pb: 4, pt: 1 }}>
-      {(isLoading ? [{}, {}] : metrics).map(({ displayName, id, value }, idx) => (
-        <Badge key={id} variant='outline' ml={idx !== 0 && 2}>
-          {value} {displayName}
-        </Badge>
-      ))}
+      {(isLoading ? [{}, {}] : metrics).map(
+        ({ displayName, id, value }, idx) => (
+          <Badge key={id} variant='outline' ml={idx !== 0 && 2}>
+            {value} {displayName}
+          </Badge>
+        )
+      )}
     </div>
   )
 }
