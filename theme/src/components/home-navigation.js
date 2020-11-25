@@ -5,6 +5,11 @@ import { Card } from '@theme-ui/components'
 
 const links = [
   {
+    href: '#posts',
+    id: 'posts',
+    text: 'Latest Posts'
+  },
+  {
     href: '#instagram',
     id: 'instagram',
     text: 'Instagram'
@@ -27,8 +32,8 @@ const links = [
 ]
 
 const navListItemStyles = {
-  backgroundColor: `red`,
-  borderBottom: theme => `1px solid ${theme.colors.primary}`,
+  borderBottom: theme =>
+    console.log(theme.colors) || `1px solid ${theme.colors.gray[3]}`,
   mb: 3,
   a: {
     textDecoration: `none`

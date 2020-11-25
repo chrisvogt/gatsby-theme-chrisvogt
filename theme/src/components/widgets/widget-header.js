@@ -17,7 +17,7 @@ const asideStyles = {
 const WidgetHeader = ({ aside, children }) => (
   <header sx={headerStyles}>
     <Heading>{children}</Heading>
-    {aside && <div sx={{ asideStyles }}>{aside}</div>}
+    {aside && <div sx={asideStyles}>{aside}</div>}
   </header>
 )
 

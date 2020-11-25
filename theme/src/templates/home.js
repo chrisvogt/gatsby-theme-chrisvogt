@@ -39,8 +39,8 @@ const HomeTemplate = props => {
         }}
       >
         <Container>
-          <Grid columns={[null, null, `.5fr 2fr`]}>
-            <aside>
+          <Grid columns={[null, null, `.67fr 1.5fr`]} gap={[null, 4]}>
+            <aside sx={{ mb: [4, null] }}>
               <HomeNavigation />
             </aside>
             <main>

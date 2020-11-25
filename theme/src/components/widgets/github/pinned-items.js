@@ -20,6 +20,8 @@ const PinnedItems = ({ items = [] }) => {
         Pinned Items
       </Heading>
 
+      <p>All pinned items on my GitHub profile.</p>
+
       <Styled.div
         sx={{
           display: 'grid',

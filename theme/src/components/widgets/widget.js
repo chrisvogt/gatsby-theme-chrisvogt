@@ -3,12 +3,13 @@ import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
 const widgetStyles = {
-  mb: [3, 4],
-  py: [0, 3, 4]
+  mb: 4,
+  pt: [0, 3, 4],
+  pb: [0, 3, 4]
 }
 
-const Widget = ({ children, id }) => (
-  <div sx={widgetStyles} {...(id ? { id } : {})}>
+const Widget = ({ children, id, styleOverrides = {} }) => (
+  <div sx={{ ...widgetStyles, ...styleOverrides }} {...(id ? { id } : {})}>
     {children}
   </div>
 )

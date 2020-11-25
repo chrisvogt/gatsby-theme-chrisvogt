@@ -18,9 +18,7 @@ const RecentlyReadBooks = ({ books, isLoading }) => (
         Books
       </Heading>
 
-      <p>
-        Following are the latest books I've read, in descending order, by date.
-      </p>
+      <p>The last 12 books I read and finished.</p>
 
       <div
         sx={{
