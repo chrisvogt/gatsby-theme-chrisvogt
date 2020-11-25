@@ -4,17 +4,6 @@ exports[`GitHub Repository Renderer matches the snapshot 1`] = `
 <div
   className="css-3xm76x-Repository"
 >
-  <div
-    className="css-1hl77mz-Repository"
-  >
-    <img
-      alt="repository avatar"
-      className="css-1tslwml-Repository"
-      height="42"
-      src="https://avatars0.githubusercontent.com/u/1934719?s=400&v=4"
-      width="42"
-    />
-  </div>
   <h4
     className="css-dxkypm-Repository"
   >

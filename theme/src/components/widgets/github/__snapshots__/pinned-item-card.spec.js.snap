@@ -118,17 +118,6 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant s
   <div
     className="css-3xm76x-Repository"
   >
-    <div
-      className="css-1hl77mz-Repository"
-    >
-      <img
-        alt="repository avatar"
-        className="css-1tslwml-Repository"
-        height="42"
-        src="./fake-image-path.png"
-        width="42"
-      />
-    </div>
     <h4
       className="css-dxkypm-Repository"
     >

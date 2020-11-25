@@ -15,13 +15,13 @@ export default merge(themePreset, {
   badges: {
     primary: {
       color: 'background',
-      bg: 'primary',
+      bg: 'primary'
     },
     outline: {
       color: 'primary',
       bg: 'transparent',
-      boxShadow: 'inset 0 0 0 1px',
-    },
+      boxShadow: 'inset 0 0 0 1px'
+    }
   },
 
   cards: {
@@ -56,7 +56,10 @@ export default merge(themePreset, {
       backgroundColor: `#252e3c`,
       borderLeft: `3px solid #fefefe`,
       borderBottom: `none`,
-      color: `white`
+      color: `white`,
+      a: {
+        color: theme => theme.colors.primary
+      }
     },
 
     /* The following styles represent specific card components, indicated in PascalCase. */

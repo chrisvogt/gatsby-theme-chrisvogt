@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Container, Grid, jsx } from 'theme-ui'
+import { Container, Grid, jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Header from '../components/header'
