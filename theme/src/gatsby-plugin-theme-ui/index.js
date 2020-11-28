@@ -122,6 +122,18 @@ export default merge(themePreset, {
     }
   },
 
+  links: {
+    homeNavigation: {
+      display: `block`,
+      width: `100%`,
+      py: 2,
+      textDecoration: `none`,
+      '&:not(:last-of-type)': {
+        borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
+      }
+    }
+  },
+
   styles,
 
   text: {

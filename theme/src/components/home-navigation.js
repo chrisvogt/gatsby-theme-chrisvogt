@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { Heading, jsx, useThemeUI, Link } from 'theme-ui'
 import { useEffect, useRef } from 'react'
 import { Card } from '@theme-ui/components'
 
@@ -57,14 +57,6 @@ const getLinks = (widgets = []) => [
     : [])
 ]
 
-const navListItemStyles = {
-  borderBottom: theme => `1px solid ${theme.colors.gray[3]}`,
-  mb: 3,
-  a: {
-    textDecoration: `none`
-  }
-}
-
 const HomeNavigation = () => {
   const { colorMode } = useThemeUI()
   const metadata = useSiteMetadata()
@@ -105,25 +97,29 @@ const HomeNavigation = () => {
 
   return (
     <Fragment>
-      <h2 sx={{ display: ['none', 'revert'], mt: 0, visibility: 'hidden' }}>
-        Navigation
-      </h2>
+      <Heading
+        aria-hidden='true'
+        sx={{ display: ['none', 'revert'], mt: 0, mb: 4, visibility: 'hidden' }}
+      >
+        Widget Navigation
+      </Heading>
       <Card
         sx={{
+          boxShadow: 'default',
           position: `sticky`,
           top: `1.5em`
         }}
         variant={cardStyle}
       >
-        <nav aria-label='Navigate to on-page sections'>
+        <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           On-page navigation
-          <ul ref={navItemsRef} sx={{ listStyle: `none`, padding: 0 }}>
-            {links.map(({ href, id, text }) => (
-              <li key={id} sx={navListItemStyles}>
-                <a href={href}>{text}</a>
-              </li>
-            ))}
-          </ul>
+          {/* <ul ref={navItemsRef} sx={{ listStyle: `none`, padding: 0 }}> */}
+          {links.map(({ href, id, text }) => (
+            <Link href={href} key={id} variant='homeNavigation'>
+              {text}
+            </Link>
+          ))}
+          {/* </ul> */}
         </nav>
       </Card>
     </Fragment>
