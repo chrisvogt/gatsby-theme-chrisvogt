@@ -4,22 +4,17 @@ import PropTypes from 'prop-types'
 
 // import isDarkMode from '../../helpers/isDarkMode'
 
-const ProfileMetricsBadge = ({ isLoading, metrics }) => {
-  // const { colorMode } = useThemeUI()
-  // const variant = isDarkMode(colorMode) ? 'UserProfileDark' : 'UserProfile'
-
-  return (
-    <div sx={{ pb: 4, pt: 1 }}>
-      {(isLoading ? [{}, {}] : metrics).map(
-        ({ displayName, id, value }, idx) => (
-          <Badge key={id || idx} variant='outline' ml={idx !== 0 && 2}>
-            {value} {displayName}
-          </Badge>
-        )
-      )}
-    </div>
-  )
-}
+const ProfileMetricsBadge = ({ isLoading, metrics }) => (
+  <div sx={{ mt: 2, pb: 4, pt: 1, display: `flex`, justifyContent: [`center`, `unset`] }}>
+    {(isLoading ? [{}, {}] : metrics).map(
+      ({ displayName, id, value }, idx) => (
+        <Badge key={id || idx} variant='outline' ml={idx !== 0 && 2}>
+          {value} {displayName}
+        </Badge>
+      )
+    )}
+  </div>
+)
 
 ProfileMetricsBadge.propTypes = {
   /** Sets the component in a loading state when true. */
