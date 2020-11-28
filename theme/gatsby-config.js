@@ -44,21 +44,6 @@ module.exports = () => ({
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `PT Serif`,
-            variants: [`400`, `400i`, `700`]
-          }
-        ]
-      }
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: path.join(__dirname, 'src/data')
