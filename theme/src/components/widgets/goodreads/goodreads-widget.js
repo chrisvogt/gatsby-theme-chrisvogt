@@ -52,7 +52,7 @@ export default () => {
     recentlyReadBooks.length &&
     recentlyReadBooks.filter(({ thumbnail }) => Boolean(thumbnail)).slice(0, 12)
 
-  const status = updates.length && getStatusFromUpdates(updates)
+  const status = updates.length ? getStatusFromUpdates(updates) : {}
 
   const callToAction = (
     <CallToAction

@@ -12,7 +12,7 @@ const ProfileMetricsBadge = ({ isLoading, metrics }) => {
     <div sx={{ pb: 4, pt: 1 }}>
       {(isLoading ? [{}, {}] : metrics).map(
         ({ displayName, id, value }, idx) => (
-          <Badge key={id} variant='outline' ml={idx !== 0 && 2}>
+          <Badge key={id || idx} variant='outline' ml={idx !== 0 && 2}>
             {value} {displayName}
           </Badge>
         )
@@ -27,10 +27,9 @@ ProfileMetricsBadge.propTypes = {
   /** The metrics for the user profile. */
   metrics: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      displayName: PropTypes.string.isRequired,
+      id: PropTypes.string,
+      displayName: PropTypes.string,
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-        .isRequired
     })
   )
 }

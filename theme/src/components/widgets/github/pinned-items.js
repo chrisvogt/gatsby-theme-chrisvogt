@@ -51,7 +51,7 @@ const PinnedItems = ({ items = [] }) => {
 
 PinnedItems.propTypes = {
   /** Sets the component in a loading state when true. */
-  isLoading: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool,
   /** The pinned items content to render. */
   items: PropTypes.arrayOf(PropTypes.object)
 }

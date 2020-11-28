@@ -8,8 +8,8 @@ import TrackPreview from './track-preview'
 
 const placeholders = Array(12)
   .fill()
-  .map(() => (
-    <div className='show-loading-animation'>
+  .map((item, idx) => (
+    <div className='show-loading-animation' key={idx}>
       <RectShape
         color='#efefef'
         sx={{

@@ -52,7 +52,7 @@ export default () => {
     <Widget id='instagram'>
       <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
-      { metrics && <ProfileMetricsBadge metrics={ metrics } /> }
+      {metrics && <ProfileMetricsBadge metrics={metrics} />}
 
       <div className='gallery'>
         <Grid
@@ -63,10 +63,11 @@ export default () => {
         >
           {(isLoading ? Array(MAX_IMAGES).fill() : posts)
             .slice(0, MAX_IMAGES)
-            .map(post => (
+            .map((post, idx) => (
               <ReactPlaceholder
                 customPlaceholder={ItemPlaceholder}
                 showLoadingAnimation
+                key={isLoading ? idx : post.id}
                 ready={!isLoading}
                 type='rect'
               >
