@@ -15,8 +15,11 @@ const RecentlyReadBooks = ({ books, isLoading }) => (
           mb: 3
         }}
       >
-        Recently Read Books
+        Books
       </Heading>
+
+      <p>The last 12 books I read and finished.</p>
+
       <div
         sx={{
           display: `grid`,
@@ -27,14 +30,13 @@ const RecentlyReadBooks = ({ books, isLoading }) => (
         {isLoading &&
           Array(12)
             .fill()
-            .map(item => {
-              return (
-                <RectShape
-                  color='#efefef'
-                  sx={{ boxShadow: `md`, width: `100%`, minHeight: `140px` }}
-                />
-              )
-            })}
+            .map((item, idx) => (
+              <RectShape
+                color='#efefef'
+                key={idx}
+                sx={{ boxShadow: `md`, width: `100%`, minHeight: `140px` }}
+              />
+            ))}
         {!isLoading &&
           books.map(book => {
             const { infoLink, smallThumbnail: thumbnailURL, title } = book

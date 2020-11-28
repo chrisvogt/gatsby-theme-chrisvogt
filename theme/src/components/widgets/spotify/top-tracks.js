@@ -8,8 +8,8 @@ import TrackPreview from './track-preview'
 
 const placeholders = Array(12)
   .fill()
-  .map(() => (
-    <div className='show-loading-animation'>
+  .map((item, idx) => (
+    <div className='show-loading-animation' key={idx}>
       <RectShape
         color='#efefef'
         sx={{
@@ -25,14 +25,10 @@ const placeholders = Array(12)
 
 const TopTracks = ({ isLoading, tracks = [] }) => (
   <div className='gallery'>
-    <Heading
-      as='h3'
-      sx={{
-        mb: 3
-      }}
-    >
-      Top Tracks
-    </Heading>
+    <Heading as='h3'>Top Tracks</Heading>
+
+    <p>My most-played tracks over the last 4 weeks.</p>
+
     <div
       sx={{
         display: `grid`,

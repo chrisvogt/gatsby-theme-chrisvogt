@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 import PinnedItemCard from './pinned-item-card'
 
-const PinnedItems = ({ isLoading, pinnedItems }) => {
+const PinnedItems = ({ items = [] }) => {
   const placeholderItems = Array(4).fill({ __typename: 'placeholder' })
-  const items = isLoading ? placeholderItems : pinnedItems
+  const itemsToRender = items.length === 0 ? placeholderItems : items
 
   return (
     <Box sx={{ marginBottom: 4 }}>
@@ -20,6 +20,8 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
         Pinned Items
       </Heading>
 
+      <p>All pinned items on my GitHub profile.</p>
+
       <Styled.div
         sx={{
           display: 'grid',
@@ -28,7 +30,7 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
           gridTemplateColumns: ['', '', '', 'repeat(2, 1fr)']
         }}
       >
-        {items.map((item, index) => (
+        {itemsToRender.map((item, index) => (
           <Styled.a
             href={item.url}
             key={item.id || index}
@@ -49,7 +51,7 @@ const PinnedItems = ({ isLoading, pinnedItems }) => {
 
 PinnedItems.propTypes = {
   /** Sets the component in a loading state when true. */
-  isLoading: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool,
   /** The pinned items content to render. */
   items: PropTypes.arrayOf(PropTypes.object)
 }

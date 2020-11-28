@@ -12,6 +12,18 @@ import { merge } from 'theme-ui'
 export default merge(themePreset, {
   useColorSchemeMediaQuery: true,
 
+  badges: {
+    primary: {
+      color: 'background',
+      bg: 'primary'
+    },
+    outline: {
+      color: 'primary',
+      bg: 'transparent',
+      boxShadow: 'inset 0 0 0 1px'
+    }
+  },
+
   cards: {
     /* The <Card /> default style. Used when no variant is defined. */
     primary: {
@@ -21,7 +33,7 @@ export default merge(themePreset, {
     actionCard: {
       ...card,
       ...floatOnHover,
-      borderLeft: theme => `2px solid ${theme.colors.primary}`
+      borderLeft: theme => `3px solid ${theme.colors.primary}`
     },
 
     actionCardDark: {
@@ -29,7 +41,7 @@ export default merge(themePreset, {
       ...floatOnHover,
       backgroundColor: `#252e3c`,
       borderBottom: `none`,
-      borderLeft: theme => `2px solid ${theme.colors.primary}`,
+      borderLeft: theme => `3px solid ${theme.colors.primary}`,
       color: `white`
     },
 
@@ -42,9 +54,12 @@ export default merge(themePreset, {
       ...card,
       ...infoCard,
       backgroundColor: `#252e3c`,
-      borderLeft: `2px solid #fefefe`,
+      borderLeft: `3px solid #fefefe`,
       borderBottom: `none`,
-      color: `white`
+      color: `white`,
+      a: {
+        color: theme => theme.colors.primary
+      }
     },
 
     /* The following styles represent specific card components, indicated in PascalCase. */
@@ -104,6 +119,18 @@ export default merge(themePreset, {
       maxWidth: [``, `94%`, ``, ``, `1200px`],
       py: [2, 3],
       px: [3, 4]
+    }
+  },
+
+  links: {
+    homeNavigation: {
+      display: `block`,
+      width: `100%`,
+      py: 2,
+      textDecoration: `none`,
+      '&:not(:last-of-type)': {
+        borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
+      }
     }
   },
 

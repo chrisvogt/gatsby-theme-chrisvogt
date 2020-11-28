@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Box, Grid } from '@theme-ui/components'
 
 import CallToAction from '../call-to-action'
+import ProfileMetricsBadge from '../profile-metrics-badge'
 import TopTracks from './top-tracks'
-import UserProfile from './user-profile'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
@@ -42,14 +41,9 @@ const SpotifyWidget = () => {
         Spotify
       </WidgetHeader>
 
-      <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
-        <Box>
-          <UserProfile isLoading={isLoading} metrics={metrics} />
-        </Box>
-        <Box>
-          <TopTracks isLoading={isLoading} tracks={topTracks} />
-        </Box>
-      </Grid>
+      <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
+
+      <TopTracks isLoading={isLoading} tracks={topTracks} />
     </Widget>
   )
 }

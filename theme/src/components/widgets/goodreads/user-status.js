@@ -44,7 +44,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           mb: 3
         }}
       >
-        Latest Status
+        Status
       </Heading>
 
       <Styled.a

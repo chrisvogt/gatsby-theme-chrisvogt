@@ -12,6 +12,7 @@ import useSiteMetadata from '../../../hooks/use-site-metadata'
 import useDataSource from '../../../hooks/use-data-source'
 
 import CallToAction from '../call-to-action'
+import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetItem from './instagram-widget-item'
 import WidgetHeader from '../widget-header'
@@ -34,7 +35,7 @@ export default () => {
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
   const { isLoading, data = {} } = useDataSource(instagramDataSource)
-  const { collections: { media: posts } = {} } = data
+  const { collections: { media: posts } = {}, metrics = [] } = data
 
   const callToAction = (
     <CallToAction
@@ -51,6 +52,8 @@ export default () => {
     <Widget id='instagram'>
       <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
+      {metrics && <ProfileMetricsBadge metrics={metrics} />}
+
       <div className='gallery'>
         <Grid
           sx={{
@@ -60,10 +63,11 @@ export default () => {
         >
           {(isLoading ? Array(MAX_IMAGES).fill() : posts)
             .slice(0, MAX_IMAGES)
-            .map(post => (
+            .map((post, idx) => (
               <ReactPlaceholder
                 customPlaceholder={ItemPlaceholder}
                 showLoadingAnimation
+                key={isLoading ? idx : post.id}
                 ready={!isLoading}
                 type='rect'
               >

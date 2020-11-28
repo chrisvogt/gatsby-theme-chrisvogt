@@ -35,10 +35,10 @@ export default () => {
   )
 
   return (
-    <Widget id='posts'>
+    <Widget id='posts' styleOverrides={{ pt: 0 }}>
       <WidgetHeader aside={callToAction}>Latest Posts</WidgetHeader>
 
-      <div sx={{ width: `100%` }}>
+      <div sx={{ width: `100%`, mt: 4 }}>
         <Grid
           sx={{
             display: `grid`,
