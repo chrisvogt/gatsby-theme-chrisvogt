@@ -139,14 +139,6 @@ export default {
     color: `white`
   },
 
-  TrackPreview: {
-    img: {
-      ...floatOnHover,
-      borderRadius: `4px`,
-      boxShadow: `md`
-    }
-  },
-
   VideoWrapper: {
     position: `relative`,
     paddingBottom: `56.25%` /* 16:9 */,

@@ -1,60 +1,51 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Button } from 'theme-ui'
+import { useState } from 'react'
 import { Heading } from '@theme-ui/components'
-import { RectShape } from 'react-placeholder/lib/placeholders'
-import Placeholder from 'react-placeholder'
 
-import TrackPreview from './track-preview'
+import TopTracksGrid from './top-tracks-grid'
+import TopTracksList from './top-tracks-list'
 
-const placeholders = Array(12)
-  .fill()
-  .map((item, idx) => (
-    <div className='show-loading-animation' key={idx}>
-      <RectShape
-        color='#efefef'
-        sx={{
-          borderRadius: `6px`,
-          boxShadow: `md`,
-          paddingBottom: `100%`,
-          width: `100%`
-        }}
-        showLoadingAnimation
-      />
+const TopTracks = ({ isLoading, tracks = [] }) => {
+  const [renderAsGrid, setRenderAsGrid] = useState(true)
+  const TopTracks = renderAsGrid ? TopTracksGrid : TopTracksList
+
+  return (
+    <div className='gallery'>
+      <div sx={{ display: `flex`, flex: 1, alignItems: `center` }}>
+        <Heading as='h3'>Top Tracks</Heading>
+        <div
+          sx={{
+            display: `flex`,
+            flex: 1,
+            alignItems: `center`,
+            justifyContent: `flex-end`
+          }}
+        >
+          <span sx={{ mr: 2 }}>View as</span>
+          <Button
+            variant={renderAsGrid ? 'disabled' : '3D'}
+            mr={2}
+            onClick={() => setRenderAsGrid(true)}
+            sx={{ py: 0, px: 2 }}
+          >
+            Grid
+          </Button>
+          <Button
+            variant={!renderAsGrid ? 'disabled' : '3D'}
+            onClick={() => setRenderAsGrid(false)}
+            sx={{ py: 0, px: 2 }}
+          >
+            List
+          </Button>
+        </div>
+      </div>
+
+      <p>My 12 most-played tracks over the last 4 weeks.</p>
+
+      <TopTracks isLoading={isLoading} tracks={tracks} />
     </div>
-  ))
-
-const TopTracks = ({ isLoading, tracks = [] }) => (
-  <div className='gallery'>
-    <Heading as='h3'>Top Tracks</Heading>
-
-    <p>My most-played tracks over the last 4 weeks.</p>
-
-    <div
-      sx={{
-        display: `grid`,
-        gridGap: [3, 2, 2, 3],
-        gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
-      }}
-    >
-      <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-        {tracks.map(track => {
-          const { albumImages = [], id, name, spotifyURL } = track
-          const { url: thumbnailURL } = albumImages.find(
-            image => image.width === 300
-          )
-
-          return (
-            <TrackPreview
-              key={id}
-              link={spotifyURL}
-              name={name}
-              thumbnailURL={thumbnailURL}
-            />
-          )
-        })}
-      </Placeholder>
-    </div>
-  </div>
-)
+  )
+}
 
 export default TopTracks
