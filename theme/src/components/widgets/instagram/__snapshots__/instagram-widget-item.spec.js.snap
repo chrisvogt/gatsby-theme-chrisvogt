@@ -13,10 +13,11 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
 >
   <img
     alt="Instagram post thumbnail"
-    className="instagram-item-image css-nowwr3-InstagramWidgetItem"
+    className="instagram-item-image css-152q4me-InstagramWidgetItem"
     crossOrigin="anonymous"
     height="280"
-    src="undefined?h=280&auto=format"
+    src="undefined?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format"
+    width="280"
   />
 </a>
 `;

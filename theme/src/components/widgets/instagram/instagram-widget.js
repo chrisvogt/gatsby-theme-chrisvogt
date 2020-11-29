@@ -17,13 +17,18 @@ import Widget from '../widget'
 import WidgetItem from './instagram-widget-item'
 import WidgetHeader from '../widget-header'
 
-const MAX_IMAGES = 4
+const MAX_IMAGES = 8
 
 const ItemPlaceholder = (
   <div className='image-placeholder'>
     <RectShape
       color='#efefef'
-      sx={{ boxShadow: `md`, width: `100%`, minHeight: `330px` }}
+      sx={{
+        borderRadius: `4px`,
+        boxShadow: `md`,
+        width: `100%`,
+        paddingBottom: `100%`
+      }}
     />
   </div>
 )
@@ -61,14 +66,14 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(MAX_IMAGES).fill() : posts)
+          {(isLoading ? Array(MAX_IMAGES).fill({}) : posts)
             .slice(0, MAX_IMAGES)
             .map((post, idx) => (
               <ReactPlaceholder
                 customPlaceholder={ItemPlaceholder}
-                showLoadingAnimation
                 key={isLoading ? idx : post.id}
                 ready={!isLoading}
+                showLoadingAnimation
                 type='rect'
               >
                 <WidgetItem post={post} />
