@@ -36,8 +36,8 @@ const InstagramWidgetItem = props => {
       <img
         crossOrigin='anonymous'
         className='instagram-item-image'
-        src={`${cdnMediaURL}?h=400&fm=webp&auto=format`}
-        height='400'
+        src={`${cdnMediaURL}?h=280&auto=format`}
+        height='280'
         alt='Instagram post thumbnail'
         sx={{
           width: '100%',
