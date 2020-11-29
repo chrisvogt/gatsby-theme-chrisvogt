@@ -2,10 +2,15 @@
 import { Badge, jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-// import isDarkMode from '../../helpers/isDarkMode'
-
 const ProfileMetricsBadge = ({ isLoading, metrics }) => (
-  <div sx={{ mt: 2, pb: 4, pt: 1, display: `flex`, justifyContent: [`center`, `unset`] }}>
+  <div sx={{
+    fontFamily: 'heading',
+    mt: 2,
+    pb: 4,
+    pt: 1,
+    display: `flex`,
+    justifyContent: [`center`, `unset`]
+  }}>
     {(isLoading ? [{}, {}] : metrics).map(
       ({ displayName, id, value }, idx) => (
         <Badge key={id || idx} variant='outline' ml={idx !== 0 && 2}>

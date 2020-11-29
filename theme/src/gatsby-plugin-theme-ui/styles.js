@@ -60,6 +60,9 @@ export default {
   text: {
     inverse: {
       color: `muted`
+    },
+    title: {
+      fontFamily: 'fonts.sans'
     }
   },
 

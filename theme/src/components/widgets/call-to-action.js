@@ -29,6 +29,7 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       href={url}
       sx={{
         fontSize: 0,
+        fontFamily: 'heading',
         '.read-more-icon': {
           opacity: 0,
           transition: `all .3s ease`

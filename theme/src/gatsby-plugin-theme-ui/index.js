@@ -97,8 +97,8 @@ export default merge(themePreset, {
   colors,
 
   fonts: {
-    body: fonts.sans,
-    heading: fonts.serif,
+    body: fonts.serif,
+    heading: fonts.sans,
     monospace: fonts.mono
   },
 
@@ -139,6 +139,7 @@ export default merge(themePreset, {
   text: {
     title: {
       color: `primary`,
+      fontFamily: `heading`,
       fontSize: 0,
       fontWeight: `550`,
       textTransform: `uppercase`
