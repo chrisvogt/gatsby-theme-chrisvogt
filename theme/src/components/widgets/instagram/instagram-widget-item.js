@@ -4,15 +4,20 @@ import { jsx, Styled } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImages } from '@fortawesome/free-solid-svg-icons'
 
-const InstagramWidgetItem = props => {
-  const { post: { cdnMediaURL, id, mediaType, permalink } = {} } = props
-
+const InstagramWidgetItem = ({
+  handleClick,
+  index,
+  post: { caption, cdnMediaURL, id, mediaType, permalink } = {}
+}) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM"'
 
   return (
     <Styled.a
       key={id}
-      href={permalink}
+      // href={permalink}
+      onClick={event =>
+        handleClick(event, { index, photo: { caption, id, src: cdnMediaURL } })
+      }
       style={{ lineHeight: 0 }}
       title='Access media on Instagram'
       rel='noopener noreferrer'

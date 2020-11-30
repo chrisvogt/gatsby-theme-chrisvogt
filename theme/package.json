@@ -127,6 +127,8 @@
     "prop-types": "^15.7.2",
     "react-dark-mode-toggle": "^0.0.9",
     "react-helmet": "^6.1.0",
+    "react-images": "^1.1.7",
+    "react-photo-gallery": "^8.0.0",
     "react-placeholder": "^4.0.3",
     "react-test-renderer": "^16.13.1",
     "react-visibility-sensor": "^5.1.1",
