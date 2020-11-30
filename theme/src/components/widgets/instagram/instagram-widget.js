@@ -107,7 +107,7 @@ export default () => {
                 currentIndex={currentImage}
                 views={photos.map(x => ({
                   ...x,
-                  src: x.src,
+                  src: `${x.src}?auto=format`,
                   caption: x.caption
                 }))}
               />

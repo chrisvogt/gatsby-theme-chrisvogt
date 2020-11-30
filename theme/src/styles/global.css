@@ -13,3 +13,8 @@ body,
   display: flex;
   flex-direction: column;
 }
+
+/* NOTE(cvogt): overrides the default react-photo-gallery footer style */
+.react-images__footer.react-images__footer--isModal {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))!important;
+}

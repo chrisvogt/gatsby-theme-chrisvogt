@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImages } from '@fortawesome/free-solid-svg-icons'
@@ -12,17 +12,14 @@ const InstagramWidgetItem = ({
   const isCarousel = mediaType === 'CAROUSEL_ALBUM"'
 
   return (
-    <Styled.a
+    <button
       key={id}
-      // href={permalink}
       onClick={event =>
         handleClick(event, { index, photo: { caption, id, src: cdnMediaURL } })
       }
-      style={{ lineHeight: 0 }}
-      title='Access media on Instagram'
       rel='noopener noreferrer'
       sx={{
-        variant: `styles.InstagramCard`
+        variant: `styles.InstagramItem`
       }}
     >
       {isCarousel && (
@@ -53,7 +50,7 @@ const InstagramWidgetItem = ({
           objectFit: 'cover'
         }}
       />
-    </Styled.a>
+    </button>
   )
 }
 
