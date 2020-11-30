@@ -129,9 +129,13 @@ export default {
     width: `100%`
   },
 
-  InstagramCard: {
+  InstagramItem: {
     ...floatOnHover,
-    boxShadow: `md`
+    background: `none`,
+    border: `none`,
+    boxShadow: `md`,
+    cursor: `pointer`,
+    p: 0
   },
 
   PostCardLink: {

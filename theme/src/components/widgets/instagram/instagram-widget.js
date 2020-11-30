@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
+import { useCallback, useState } from 'react'
 import ReactPlaceholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
+import Carousel, { Modal, ModalGateway } from 'react-images'
 
 import {
   getInstagramUsername,
@@ -39,8 +41,23 @@ export default () => {
   const instagramUsername = getInstagramUsername(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
+  const [currentImage, setCurrentImage] = useState(0)
+  const [viewerIsOpen, setViewerIsOpen] = useState(false)
+
   const { isLoading, data = {} } = useDataSource(instagramDataSource)
   const { collections: { media: posts } = {}, metrics = [] } = data
+
+  const photos = !isLoading && posts.map(({ caption, cdnMediaURL: src }) => ({ caption, src }))
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
   const callToAction = (
     <CallToAction
@@ -76,11 +93,28 @@ export default () => {
                 showLoadingAnimation
                 type='rect'
               >
-                <WidgetItem post={post} />
+                <WidgetItem handleClick={openLightbox} index={idx} post={post} />
               </ReactPlaceholder>
             ))}
         </Grid>
       </div>
+
+      <ModalGateway>
+        {viewerIsOpen && (
+          <Modal onClose={closeLightbox}>
+            {!isLoading && (
+              <Carousel
+                currentIndex={currentImage}
+                views={photos.map(x => ({
+                  ...x,
+                  src: `${x.src}?auto=format`,
+                  caption: x.caption
+                }))}
+              />
+            )}
+          </Modal>
+        )}
+      </ModalGateway>
     </Widget>
   )
 }

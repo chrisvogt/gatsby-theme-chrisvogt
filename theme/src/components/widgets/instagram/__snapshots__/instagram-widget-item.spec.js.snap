@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InstagramWidgetItem matches the snapshot 1`] = `
-<a
+<button
   className="css-19bqgup-InstagramWidgetItem"
+  onClick={[Function]}
   rel="noopener noreferrer"
-  style={
-    Object {
-      "lineHeight": 0,
-    }
-  }
-  title="Access media on Instagram"
 >
   <img
     alt="Instagram post thumbnail"
@@ -19,5 +14,5 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
     src="undefined?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format"
     width="280"
   />
-</a>
+</button>
 `;
