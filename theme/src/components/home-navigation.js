@@ -13,65 +13,80 @@ import {
 import isDarkMode from '../helpers/isDarkMode'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-const getLinks = (widgets = []) => [
+/**
+ * Link Registry
+ * 
+ * The items in this array follow the following schema:
+ * 
+ * * rule {function} – validator function
+ * * value {object} – props for the link item
+ */
+const linkRegistry = [
   {
-    href: '#posts',
-    id: 'posts',
-    text: 'Latest Posts'
+    rule: () => true, // Everyone sees this.
+    value: {
+      href: '#posts',
+      id: 'posts',
+      text: 'Latest Posts'
+    }
   },
-  ...(widgets.includes('instagram')
-    ? [
-        {
-          href: '#instagram',
-          id: 'instagram',
-          text: 'Instagram'
-        }
-      ]
-    : []),
-  ...(widgets.includes('github')
-    ? [
-        {
-          href: '#github',
-          id: 'github',
-          text: 'GitHub'
-        }
-      ]
-    : []),
-  ...(widgets.includes('goodreads')
-    ? [
-        {
-          href: '#goodreads',
-          id: 'goodreads',
-          text: 'Goodreads'
-        }
-      ]
-    : []),
-  ...(widgets.includes('spotify')
-    ? [
-        {
-          href: '#spotify',
-          id: 'spotify',
-          text: 'Spotify'
-        }
-      ]
-    : [])
+  {
+    rule: options => !!options.isInstagramWidgetEnabled,
+    value: {
+      href: '#instagram',
+      id: 'instagram',
+      text: 'Instagram'
+    }
+  },
+  {
+    rule: options => !!options.isGitHubWidgetEnabled,
+    value: {
+      href: '#github',
+      id: 'github',
+      text: 'GitHub'
+    }
+  },
+  {
+    rule: options => !!options.isGoodreadsWidgetEnabled,
+    value: {
+      href: '#goodreads',
+      id: 'goodreads',
+      text: 'Goodreads'
+    }
+  },
+  {
+    rule: options => !!options.isSpotifyWidgetEnabled,
+    value: {
+      href: '#spotify',
+      id: 'spotify',
+      text: 'Spotify'
+    }
+  }
 ]
+
+const determineLinksToRender = (options = {}) => {
+  const links = linkRegistry.reduce((linksToRender, { rule, value }) => {
+    if (rule(options)) {
+      linksToRender.push(value)
+    }
+    return linksToRender
+  }, [])
+
+  return links;
+}
 
 const HomeNavigation = () => {
   const { colorMode } = useThemeUI()
-  const metadata = useSiteMetadata()
+  const cardStyle = isDarkMode(colorMode) ? 'infoCardDark' : 'infoCard'
   const navItemsRef = useRef()
 
-  const cardStyle = isDarkMode(colorMode) ? 'infoCardDark' : 'infoCard'
-
-  const github = getGithubWidgetDataSource(metadata) && 'github'
-  const goodreads = getGoodreadsWidgetDataSource(metadata) && 'goodreads'
-  const instagram = getInstagramWidgetDataSource(metadata) && 'instagram'
-  const spotify = getSpotifyWidgetDataSource(metadata) && 'spotify'
-
-  const allHomeWidgets = [github, goodreads, instagram, spotify].filter(Boolean)
-
-  const links = getLinks(allHomeWidgets)
+  const metadata = useSiteMetadata()
+  const links = determineLinksToRender({
+    isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
+    isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
+    isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
+    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
+  })
 
   useEffect(() => {
     const navItemsEl = navItemsRef.current
@@ -97,6 +112,13 @@ const HomeNavigation = () => {
 
   return (
     <Fragment>
+      {/*
+        This hack pushes the navigation card down so that it lines up with the
+        first widget in the main column on desktop layouts. Another way to solve
+        this might be to use React Refs and use JavaScript to line the top up
+        exactly. I opted to instead just match the widget's header inside of a
+        hidden element.
+      */}
       <Heading
         aria-hidden='true'
         sx={{ display: ['none', 'revert'], mt: 0, mb: 4, visibility: 'hidden' }}
@@ -106,6 +128,7 @@ const HomeNavigation = () => {
       <Card
         sx={{
           boxShadow: 'default',
+          display: ['none', 'block'],
           position: `sticky`,
           top: `1.5em`
         }}
@@ -113,13 +136,11 @@ const HomeNavigation = () => {
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           On-page navigation
-          {/* <ul ref={navItemsRef} sx={{ listStyle: `none`, padding: 0 }}> */}
           {links.map(({ href, id, text }) => (
             <Link href={href} key={id} variant='homeNavigation'>
               {text}
             </Link>
           ))}
-          {/* </ul> */}
         </nav>
       </Card>
     </Fragment>

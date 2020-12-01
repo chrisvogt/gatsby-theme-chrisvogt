@@ -13,7 +13,7 @@ const TopTracksList = ({ isLoading, tracks = [] }) => {
         li: {
           p: 2
         },
-        'li:nth-child(odd)': {
+        'li:nth-of-type(odd)': {
           backgroundColor: theme => isDarkMode ? `#252e3c` : theme.colors.gray[2]
         }
       }}
