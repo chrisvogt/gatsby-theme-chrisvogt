@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "example",
+  "description": "Demonstration website for gatsby-theme-private-sphere.",
   "version": "1.0.0",
   "license": "GPL",
   "scripts": {

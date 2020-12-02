@@ -22,6 +22,8 @@
 
 Private Sphere is the GatsbyJS theme behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). My website exists both to display my aggregate social network activity in a single place and to share original content on my own, original platform.
 
+> WARNING: Private Sphere includes only the front-end client. You must supply and connect your own backing service to utilize the widgets, which are currently bundled with theme. The expected data structure for the necessary API endpoints can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
+
 ## Widgets
 
 The following table defines the available widgets.
@@ -33,8 +35,6 @@ The following table defines the available widgets.
 | GitHub         | Recent activity, pinned repositories, metrics | ![Widget: GitHub](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-github.png)       |
 | Goodreads      | Recently read books, recent activity, metrics | ![Widget: Goodreads](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-goodreads.png) |
 | Spotify        | Top tracks, metrics                           | ![Widget: Spotify](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-private-sphere/master/theme/assets/widget-spotify.png)     |
-
-> NOTE: Private Sphere only includes the front-end client code. You must supply and connect your own datasource(s) to use widgets. The expected data schema can be found in the [/theme/\_\_mocks\_\_](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/theme/__mocks__) directory.
 
 ## To install as a GatsbyJS theme
 
