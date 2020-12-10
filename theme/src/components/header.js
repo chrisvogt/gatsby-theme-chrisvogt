@@ -22,7 +22,6 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => (
     <div
       sx={{
         pt: hideTopPadding ? 0 : 5,
-        pb: 5,
         ...(styles ? styles : {})
       }}
     >

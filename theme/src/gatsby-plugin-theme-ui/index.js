@@ -126,14 +126,28 @@ export default merge(themePreset, {
     homeNavigation: {
       color: theme => theme.colors.primary,
       display: `block`,
-      width: `100%`,
       py: 2,
       textDecoration: `none`,
       '&:not(:last-of-type)': {
         borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
       },
       '&:hover': {
-        backgroundColor: theme => console.log(theme.colors.gray) || theme.colors.gray[1]
+        backgroundColor: theme => theme.colors.gray[1]
+      }
+    },
+    homeNavigationDark: {
+      color: theme => theme.colors.gray[8],
+      '&:visited, &:link': {
+        color: 'primary'
+      },
+      display: `block`,
+      py: 2,
+      textDecoration: `none`,
+      '&:not(:last-of-type)': {
+        borderBottom: theme => `1px solid ${theme.colors.gray[8]}`
+      },
+      '&:hover': {
+        backgroundColor: theme => theme.colors.gray[8]
       }
     }
   },

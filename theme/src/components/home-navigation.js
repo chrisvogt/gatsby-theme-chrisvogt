@@ -10,7 +10,7 @@ import {
   getInstagramWidgetDataSource,
   getSpotifyWidgetDataSource
 } from '../selectors/metadata'
-import isDarkMode from '../helpers/isDarkMode'
+import getIsDarkMode from '../helpers/isDarkMode'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 /**
@@ -77,7 +77,8 @@ const determineLinksToRender = (options = {}) => {
 
 const HomeNavigation = () => {
   const { colorMode } = useThemeUI()
-  const cardStyle = isDarkMode(colorMode) ? 'infoCardDark' : 'infoCard'
+  const isDarkMode = getIsDarkMode(colorMode)
+  const cardStyle = isDarkMode ? 'infoCardDark' : 'infoCard'
   const navItemsRef = useRef()
 
   const metadata = useSiteMetadata()
@@ -135,9 +136,9 @@ const HomeNavigation = () => {
         variant={cardStyle}
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
-          <h3 sx={{ mt: 0, mb: 2 }}>On-page navigation</h3>
+          <h3 sx={{ fontWeight: `unset`, mt: 0, mb: 2 }}>On-page navigation</h3>
           {links.map(({ href, id, text }) => (
-            <Link href={href} key={id} variant='homeNavigation'>
+            <Link href={href} key={id} variant={ isDarkMode ? 'homeNavigationDark' : 'homeNavigation' }>
               {text}
             </Link>
           ))}
