@@ -9,7 +9,7 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
   >
     <img
       alt="Avatar"
-      className="css-4t2e6u-HomeHeaderContent"
+      className="css-18cbw15-HomeHeaderContent"
       height="128"
       src="https://fake-cdn.chrisvogt.me/images/avatar.jpg"
       width="128"
@@ -18,6 +18,11 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
   <div
     className="css-cv27iz-HomeHeaderContent"
   >
+    <h1
+      className="css-1bfsgft-HomeHeaderContent"
+    >
+      Website Title
+    </h1>
     <p
       className="css-1pntkjx-HomeHeaderContent"
     >
