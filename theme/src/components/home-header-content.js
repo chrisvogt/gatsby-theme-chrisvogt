@@ -29,7 +29,7 @@ const HomeHeaderContent = ({ avatar, headline, subhead }) => (
           borderRadius: `50%`,
           borderStyle: `solid`,
           borderWidth: 3,
-          mr: [0, 0, 3]
+          mr: [0, 0, 4]
         }}
         alt='Avatar'
         src={avatar}
@@ -44,7 +44,7 @@ const HomeHeaderContent = ({ avatar, headline, subhead }) => (
         textAlign: [`center`, ``, `left`]
       }}
     >
-      {/* <Styled.h1 sx={{ mb: 0, pb: 0 }}>{headline}</Styled.h1> */}
+      <Styled.h1 sx={{ mb: 0, pb: 0 }}>{headline}</Styled.h1>
       <Styled.p sx={{ py: 0, my: 0, fontSize: 2 }}>{subhead}</Styled.p>
     </Flex>
   </div>
