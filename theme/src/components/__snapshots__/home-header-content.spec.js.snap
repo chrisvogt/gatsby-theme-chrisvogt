@@ -18,11 +18,6 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
   <div
     className="css-cv27iz-HomeHeaderContent"
   >
-    <h1
-      className="css-ercwh-HomeHeaderContent"
-    >
-      Website Title
-    </h1>
     <p
       className="css-1pntkjx-HomeHeaderContent"
     >
