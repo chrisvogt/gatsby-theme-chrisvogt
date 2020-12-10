@@ -135,7 +135,7 @@ const HomeNavigation = () => {
         variant={cardStyle}
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
-          On-page navigation
+          <h3 sx={{ mt: 0, mb: 2 }}>On-page navigation</h3>
           {links.map(({ href, id, text }) => (
             <Link href={href} key={id} variant='homeNavigation'>
               {text}

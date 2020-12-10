@@ -124,12 +124,16 @@ export default merge(themePreset, {
 
   links: {
     homeNavigation: {
+      color: theme => theme.colors.primary,
       display: `block`,
       width: `100%`,
       py: 2,
       textDecoration: `none`,
       '&:not(:last-of-type)': {
         borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
+      },
+      '&:hover': {
+        backgroundColor: theme => console.log(theme.colors.gray) || theme.colors.gray[1]
       }
     }
   },
