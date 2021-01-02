@@ -1,172 +1,380 @@
 {
   "ok": true,
   "payload": {
-    "profile": {
-      "name": "Chris Vogt",
-      "userName": "chrisvogt",
-      "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
-      "imageURL": "https://images.gr-assets.com/users/1573542534p3/10454947.jpg",
-      "smallImageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
-      "website": "https://www.chrisvogt.me",
-      "joined": "06/2012",
-      "interests": "╭(◔ ◡ ◔)/",
-      "favoriteBooks": "speculative fiction, psychology",
-      "friendsCount": "79",
-      "readCount": 111
+    "collections": {
+      "recentlyReadBooks": [
+        {
+          "title": "Children of Ruin",
+          "thumbnail": "https://books.google.com/books/content?id=y3NcuwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "authors": [
+            "Adrian Tchaikovsky"
+          ],
+          "categories": [
+            "Fiction"
+          ],
+          "infoLink": "https://books.google.com/books?id=y3NcuwEACAAJ&dq=isbn:9780316452533&hl=&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=y3NcuwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=y3NcuwEACAAJ&dq=isbn:9780316452533&hl=&cd=1&source=gbs_api",
+          "pageCount": 608,
+          "rating": "3"
+        },
+        {
+          "title": "Babycakes",
+          "categories": [
+            "Fiction"
+          ],
+          "infoLink": "https://books.google.com/books?id=FekFVsC5rp0C&dq=isbn:9780060924836&hl=&source=gbs_api",
+          "pageCount": 336,
+          "smallThumbnail": "https://books.google.com/books/content?id=FekFVsC5rp0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=FekFVsC5rp0C&printsec=frontcover&dq=isbn:9780060924836&hl=&cd=1&source=gbs_api",
+          "rating": "4",
+          "thumbnail": "https://books.google.com/books/content?id=FekFVsC5rp0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "authors": [
+            "Armistead Maupin"
+          ]
+        },
+        {
+          "authors": [
+            "Barry Schwartz"
+          ],
+          "rating": "2",
+          "categories": [
+            "Psychology"
+          ],
+          "title": "The Paradox of Choice",
+          "subtitle": "Why More Is Less, Revised Edition",
+          "pageCount": 304,
+          "smallThumbnail": "https://books.google.com/books/content?id=gyIDswEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=gyIDswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=gyIDswEACAAJ&dq=isbn:9780062449924&hl=&cd=1&source=gbs_api",
+          "infoLink": "https://books.google.com/books?id=gyIDswEACAAJ&dq=isbn:9780062449924&hl=&source=gbs_api"
+        },
+        {
+          "categories": [
+            "Psychology"
+          ],
+          "thumbnail": "https://books.google.com/books/content?id=d91vPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "rating": "3",
+          "pageCount": 260,
+          "infoLink": "https://books.google.com/books?id=d91vPwAACAAJ&dq=isbn:9780205609994&hl=&source=gbs_api",
+          "subtitle": "Science and Practice",
+          "smallThumbnail": "https://books.google.com/books/content?id=d91vPwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "title": "Influence",
+          "previewLink": "http://books.google.com/books?id=d91vPwAACAAJ&dq=isbn:9780205609994&hl=&cd=1&source=gbs_api",
+          "authors": [
+            "Robert B. Cialdini"
+          ]
+        },
+        {
+          "smallThumbnail": "https://books.google.com/books/content?id=_a2VCwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=_a2VCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "rating": "5",
+          "title": "Children of Time",
+          "infoLink": "https://books.google.com/books?id=_a2VCwAAQBAJ&dq=isbn:9781447273288&hl=&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=_a2VCwAAQBAJ&dq=isbn:9781447273288&hl=&cd=1&source=gbs_api",
+          "authors": [
+            "Adrian Tchaikovsky"
+          ],
+          "pageCount": 480,
+          "categories": [
+            "Dystopias"
+          ]
+        },
+        {
+          "title": "The Left Hand of Darkness",
+          "categories": [
+            "Ethnologists"
+          ],
+          "pageCount": 336,
+          "previewLink": "http://books.google.com/books?id=_JEhMQAACAAJ&dq=isbn:9781473221628&hl=&cd=1&source=gbs_api",
+          "authors": [
+            "Ursula K. Le Guin"
+          ],
+          "infoLink": "https://books.google.com/books?id=_JEhMQAACAAJ&dq=isbn:9781473221628&hl=&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=_JEhMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=_JEhMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "rating": "4"
+        },
+        {
+          "infoLink": "https://books.google.com/books?id=F-Q_xGjWBi8C&dq=isbn:9780807014271&hl=&source=gbs_api",
+          "pageCount": 165,
+          "authors": [
+            "Viktor Emil Frankl"
+          ],
+          "thumbnail": "https://books.google.com/books/content?id=F-Q_xGjWBi8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "categories": [
+            "Biography & Autobiography"
+          ],
+          "rating": "3",
+          "previewLink": "http://books.google.com/books?id=F-Q_xGjWBi8C&printsec=frontcover&dq=isbn:9780807014271&hl=&cd=1&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=F-Q_xGjWBi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "title": "Man's Search for Meaning"
+        },
+        {
+          "pageCount": 275,
+          "categories": [
+            "Fiction"
+          ],
+          "smallThumbnail": "https://books.google.com/books/content?id=pWyLDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "infoLink": "https://books.google.com/books?id=pWyLDQAAQBAJ&dq=isbn:9780385333849&hl=&source=gbs_api",
+          "authors": [
+            "Kurt Vonnegut"
+          ],
+          "title": "Slaughterhouse-five",
+          "subtitle": "Or, The Children's Crusade, a Duty-dance with Death",
+          "thumbnail": "https://books.google.com/books/content?id=pWyLDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "rating": "5",
+          "previewLink": "http://books.google.com/books?id=pWyLDQAAQBAJ&printsec=frontcover&dq=isbn:9780385333849&hl=&cd=1&source=gbs_api"
+        },
+        {
+          "infoLink": "https://books.google.com/books?id=QzbJwQEACAAJ&dq=isbn:9780316478526&hl=&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=QzbJwQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "authors": [
+            "Malcolm Gladwell"
+          ],
+          "categories": [
+            "Social Science"
+          ],
+          "subtitle": "What We Should Know about the People We Don't Know",
+          "title": "Talking to Strangers",
+          "pageCount": 304,
+          "previewLink": "http://books.google.com/books?id=QzbJwQEACAAJ&dq=isbn:9780316478526&hl=&cd=1&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=QzbJwQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "rating": "4"
+        },
+        {
+          "previewLink": "http://books.google.com/books?id=5n4ToUG9R-gC&printsec=frontcover&dq=isbn:9780060924928&hl=&cd=1&source=gbs_api",
+          "rating": "4",
+          "authors": [
+            "Armistead Maupin"
+          ],
+          "categories": [
+            "Fiction"
+          ],
+          "title": "Further Tales of the City",
+          "smallThumbnail": "https://books.google.com/books/content?id=5n4ToUG9R-gC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "infoLink": "https://books.google.com/books?id=5n4ToUG9R-gC&dq=isbn:9780060924928&hl=&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=5n4ToUG9R-gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "pageCount": 384
+        },
+        {
+          "thumbnail": "https://books.google.com/books/content?id=PGFhwgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "authors": [
+            "Philip Pullman"
+          ],
+          "previewLink": "http://books.google.com/books?id=PGFhwgEACAAJ&dq=isbn:9780553510669&hl=&cd=1&source=gbs_api",
+          "rating": "2",
+          "infoLink": "https://books.google.com/books?id=PGFhwgEACAAJ&dq=isbn:9780553510669&hl=&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=PGFhwgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "title": "The Secret Commonwealth",
+          "pageCount": 656,
+          "categories": [
+            "Young Adult Fiction"
+          ]
+        },
+        {
+          "infoLink": "https://books.google.com/books?id=hxPcvQEACAAJ&dq=isbn:9781407230924&hl=&source=gbs_api",
+          "pageCount": 295,
+          "smallThumbnail": "https://books.google.com/books/content?id=hxPcvQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "title": "The Color Purple",
+          "categories": [
+            "Abused wives"
+          ],
+          "authors": [
+            "Alice Walker"
+          ],
+          "previewLink": "http://books.google.com/books?id=hxPcvQEACAAJ&dq=isbn:9781407230924&hl=&cd=1&source=gbs_api",
+          "rating": "5",
+          "thumbnail": "https://books.google.com/books/content?id=hxPcvQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        {
+          "infoLink": "https://books.google.com/books?id=qD-1vAEACAAJ&dq=isbn:9781732265141&hl=&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=qD-1vAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "subtitle": "And the Crisis of Authority in the New Millennium",
+          "smallThumbnail": "https://books.google.com/books/content?id=qD-1vAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "rating": "4",
+          "previewLink": "http://books.google.com/books?id=qD-1vAEACAAJ&dq=isbn:9781732265141&hl=&cd=1&source=gbs_api",
+          "categories": [],
+          "title": "The Revolt of the Public",
+          "authors": [
+            "Martin Gurri"
+          ]
+        },
+        {
+          "categories": [
+            "Fiction"
+          ],
+          "rating": "4",
+          "infoLink": "https://play.google.com/store/books/details?id=TgUZDAAAQBAJ&source=gbs_api",
+          "authors": [
+            "Sylvain Neuvel"
+          ],
+          "thumbnail": "https://books.google.com/books/content?id=TgUZDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=TgUZDAAAQBAJ&printsec=frontcover&dq=isbn:9781101886731&hl=&cd=1&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=TgUZDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "pageCount": 320,
+          "title": "Waking Gods",
+          "subtitle": "Book 2 of The Themis Files"
+        },
+        {
+          "thumbnail": "https://books.google.com/books/content?id=cxTUCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=cxTUCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=cxTUCwAAQBAJ&printsec=frontcover&dq=isbn:9781101886694&hl=&cd=1&source=gbs_api",
+          "pageCount": 304,
+          "title": "Sleeping Giants",
+          "infoLink": "https://books.google.com/books?id=cxTUCwAAQBAJ&dq=isbn:9781101886694&hl=&source=gbs_api",
+          "categories": [
+            "FICTION"
+          ],
+          "rating": "5",
+          "authors": [
+            "Sylvain Neuvel"
+          ]
+        },
+        {
+          "pageCount": 104,
+          "rating": "3",
+          "title": "Atmosphra Incognita",
+          "authors": [
+            "Neal Stephenson"
+          ],
+          "categories": [],
+          "infoLink": "https://books.google.com/books?id=1rTywQEACAAJ&dq=isbn:9781596069190&hl=&source=gbs_api",
+          "smallThumbnail": "https://books.google.com/books/content?id=1rTywQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "previewLink": "http://books.google.com/books?id=1rTywQEACAAJ&dq=isbn:9781596069190&hl=&cd=1&source=gbs_api",
+          "thumbnail": "https://books.google.com/books/content?id=1rTywQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        }
+      ],
+      "updates": [
+        {
+          "book": {
+            "goodreadsID": "35066358",
+            "publicationYear": 2014,
+            "pageCount": 417,
+            "publisher": "Redhook",
+            "isbn13": {
+              "nil": "true"
+            },
+            "format": "Kindle Edition",
+            "title": "The First Fifteen Lives of Harry August",
+            "sortTitle": "first fifteen lives of harry august, the",
+            "author": {
+              "name": "Claire North",
+              "about": "Claire North is actually Catherine Webb, a Carnegie Medal-nominated young-adult novel author whose first book, Mirror Dreams, was written when she was just 14 years old. She went on to write seven more successful YA novels. \r\n\r\n\r\n\r\nClaire North is a pseudonym for adult fantasy books written by  <a href=\"https://www.goodreads.com/author/show/40118.Catherine_Webb\">Catherine Webb</a>, who also writes under the pseudonym <a href=\"https://www.goodreads.com/author/show/613805.Kate_Griffin\">Kate Griffin</a>.",
+              "sortName": "north, claire",
+              "displayName": "North, Claire"
+            },
+            "isbn": {
+              "nil": "true"
+            }
+          },
+          "userID": "10454947",
+          "created": "2020-12-30T16:57:39+00:00",
+          "type": "userstatus",
+          "percent": 52,
+          "updated": "2020-12-30T16:57:39+00:00",
+          "link": "https://www.goodreads.com/user_status/show/331133202",
+          "imageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
+          "page": 218,
+          "actionText": "is on page 218 of 417 of <a href=\"https://www.goodreads.com/book/show/35066358-the-first-fifteen-lives-of-harry-august\">The First Fifteen Lives of Harry August</a>"
+        },
+        {
+          "percent": 49,
+          "created": "2020-12-29T21:06:02+00:00",
+          "updated": "2020-12-29T21:06:02+00:00",
+          "type": "userstatus",
+          "page": 206,
+          "actionText": "is on page 206 of 417 of <a href=\"https://www.goodreads.com/book/show/35066358-the-first-fifteen-lives-of-harry-august\">The First Fifteen Lives of Harry August</a>",
+          "imageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
+          "userID": "10454947",
+          "link": "https://www.goodreads.com/user_status/show/330905443",
+          "book": {
+            "goodreadsID": "35066358",
+            "pageCount": 417,
+            "isbn": {
+              "nil": "true"
+            },
+            "publisher": "Redhook",
+            "title": "The First Fifteen Lives of Harry August",
+            "sortTitle": "first fifteen lives of harry august, the",
+            "author": {
+              "name": "Claire North",
+              "about": "Claire North is actually Catherine Webb, a Carnegie Medal-nominated young-adult novel author whose first book, Mirror Dreams, was written when she was just 14 years old. She went on to write seven more successful YA novels. \r\n\r\n\r\n\r\nClaire North is a pseudonym for adult fantasy books written by  <a href=\"https://www.goodreads.com/author/show/40118.Catherine_Webb\">Catherine Webb</a>, who also writes under the pseudonym <a href=\"https://www.goodreads.com/author/show/613805.Kate_Griffin\">Kate Griffin</a>.",
+              "sortName": "north, claire",
+              "displayName": "North, Claire"
+            },
+            "format": "Kindle Edition",
+            "isbn13": {
+              "nil": "true"
+            },
+            "publicationYear": 2014
+          }
+        },
+        {
+          "book": {
+            "title": "Children of Ruin (Children of Time, #2)",
+            "link": "https://www.goodreads.com/book/show/41716930-children-of-ruin",
+            "goodreadsID": "41716930",
+            "author": {
+              "hasImageURL": "false",
+              "goodreadsID": "1445909",
+              "imageURL": "https://images.gr-assets.com/authors/1282303363p5/1445909.jpg",
+              "hasSmallImageURL": "false",
+              "averageRating": "4.12",
+              "smallImageURL": "https://images.gr-assets.com/authors/1282303363p2/1445909.jpg",
+              "textReviewCount": "12898"
+            }
+          },
+          "type": "review",
+          "actor": {
+            "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+            "name": "Chris Vogt"
+          },
+          "updated": "Thu, 03 Dec 2020 13:23:26 -0800",
+          "link": "https://www.goodreads.com/review/show/3509588552",
+          "rating": 3
+        },
+        {
+          "rating": 4,
+          "book": {
+            "title": "Babycakes (Tales of the City, #4)",
+            "link": "https://www.goodreads.com/book/show/727985.Babycakes",
+            "goodreadsID": "727985",
+            "author": {
+              "averageRating": "4.04",
+              "smallImageURL": "https://images.gr-assets.com/authors/1534626007p2/10022.jpg",
+              "goodreadsID": "10022",
+              "imageURL": "https://images.gr-assets.com/authors/1534626007p5/10022.jpg",
+              "hasImageURL": "false",
+              "hasSmallImageURL": "false",
+              "textReviewCount": "8216"
+            }
+          },
+          "link": "https://www.goodreads.com/review/show/3410309780",
+          "type": "review",
+          "actor": {
+            "name": "Chris Vogt",
+            "link": "https://www.goodreads.com/user/show/10454947-chris-vogt"
+          },
+          "updated": "Sat, 22 Aug 2020 14:09:13 -0700"
+        }
+      ]
     },
-    "updates": [
-      {
-        "actionText": "is on page 221 of 265 of <a href=\"https://www.goodreads.com/book/show/10639.The_Paradox_of_Choice\">The Paradox of Choice</a>",
-        "book": {
-          "author": {
-            "about": "an American psychologist. Schwartz is the Dorwin Cartwright Professor of Social Theory and Social Action at Swarthmore College. He frequently publishes editorials in the New York Times applying his research in psychology to current events.",
-            "displayName": "Schwartz, Barry",
-            "name": "Barry Schwartz",
-            "sortName": "schwartz, barry"
-          },
-          "format": "Paperback",
-          "goodreadsID": "10639",
-          "isbn": "0060005696",
-          "isbn13": "9780060005696",
-          "pageCount": 265,
-          "publicationYear": 2005,
-          "publisher": "Harper Perennial",
-          "sortTitle": "paradox of choice: why more is less, the",
-          "title": "The Paradox of Choice: Why More Is Less"
-        },
-        "created": "2020-06-10T15:14:26+00:00",
-        "imageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
-        "link": "https://www.goodreads.com/user_status/show/290758234",
-        "page": 221,
-        "percent": 83,
-        "type": "userstatus",
-        "updated": "2020-06-10T15:14:26+00:00",
-        "userID": "10454947"
-      },
-      {
-        "actionText": "is on page 204 of 265 of <a href=\"https://www.goodreads.com/book/show/10639.The_Paradox_of_Choice\">The Paradox of Choice</a>",
-        "book": {
-          "author": {
-            "about": "an American psychologist. Schwartz is the Dorwin Cartwright Professor of Social Theory and Social Action at Swarthmore College. He frequently publishes editorials in the New York Times applying his research in psychology to current events.",
-            "displayName": "Schwartz, Barry",
-            "name": "Barry Schwartz",
-            "sortName": "schwartz, barry"
-          },
-          "format": "Paperback",
-          "goodreadsID": "10639",
-          "isbn": "0060005696",
-          "isbn13": "9780060005696",
-          "pageCount": 265,
-          "publicationYear": 2005,
-          "publisher": "Harper Perennial",
-          "sortTitle": "paradox of choice: why more is less, the",
-          "title": "The Paradox of Choice: Why More Is Less"
-        },
-        "created": "2020-06-09T15:39:01+00:00",
-        "imageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
-        "link": "https://www.goodreads.com/user_status/show/290539225",
-        "page": 204,
-        "percent": 76,
-        "type": "userstatus",
-        "updated": "2020-06-09T15:39:01+00:00",
-        "userID": "10454947"
-      },
-      {
-        "actor": {
-          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
-          "name": "Chris Vogt"
-        },
-        "book": {
-          "author": {
-            "averageRating": "4.16",
-            "goodreadsID": "160932",
-            "imageURL": "https://images.gr-assets.com/authors/1293767250p5/160932.jpg",
-            "hasImageURL": "false",
-            "smallImageURL": "https://images.gr-assets.com/authors/1293767250p2/160932.jpg",
-            "hasSmallImageURL": "false",
-            "textReviewCount": "4416"
-          },
-          "goodreadsID": "123684",
-          "link": "https://www.goodreads.com/book/show/123684.Influence",
-          "title": "Influence: Science and Practice"
-        },
-        "link": "https://www.goodreads.com/review/show/3184828857",
-        "rating": 3,
-        "type": "review",
-        "updated": "Thu, 20 Feb 2020 11:30:13 -0800"
-      },
-      {
-        "actor": {
-          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
-          "name": "Chris Vogt"
-        },
-        "book": {
-          "author": {
-            "averageRating": "4.23",
-            "goodreadsID": "1825",
-            "imageURL": "https://s.gr-assets.com/assets/nophoto/user/f_200x266-3061b784cc8e7f021c6430c9aba94587.png",
-            "hasImageURL": "true",
-            "smallImageURL": "https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png",
-            "hasSmallImageURL": "true",
-            "textReviewCount": "118274"
-          },
-          "goodreadsID": "25124132",
-          "link": "https://www.goodreads.com/book/show/25124132-to-kill-a-mockingbird",
-          "title": "To Kill a Mockingbird"
-        },
-        "link": "https://www.goodreads.com/review/show/2619246814",
-        "rating": 5,
-        "type": "review",
-        "updated": "Wed, 05 Feb 2020 17:02:41 -0800"
-      },
-      {
-        "actor": {
-          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
-          "name": "Chris Vogt"
-        },
-        "book": {
-          "author": {
-            "averageRating": "4.13",
-            "goodreadsID": "1445909",
-            "imageURL": "https://images.gr-assets.com/authors/1282303363p5/1445909.jpg",
-            "hasImageURL": "false",
-            "smallImageURL": "https://images.gr-assets.com/authors/1282303363p2/1445909.jpg",
-            "hasSmallImageURL": "false",
-            "textReviewCount": "10667"
-          },
-          "goodreadsID": "25499718",
-          "link": "https://www.goodreads.com/book/show/25499718-children-of-time",
-          "title": "Children of Time (Children of Time #1)"
-        },
-        "link": "https://www.goodreads.com/review/show/3133062702",
-        "rating": 5,
-        "type": "review",
-        "updated": "Sun, 26 Jan 2020 16:27:05 -0800"
-      },
-      {
-        "actor": {
-          "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
-          "name": "Chris Vogt"
-        },
-        "book": {
-          "author": {
-            "averageRating": "4.05",
-            "goodreadsID": "874602",
-            "imageURL": "https://images.gr-assets.com/authors/1244291425p5/874602.jpg",
-            "hasImageURL": "false",
-            "smallImageURL": "https://images.gr-assets.com/authors/1244291425p2/874602.jpg",
-            "hasSmallImageURL": "false",
-            "textReviewCount": "57561"
-          },
-          "goodreadsID": "33830160",
-          "link": "https://www.goodreads.com/book/show/33830160-the-left-hand-of-darkness",
-          "title": "The Left Hand of Darkness (Hainish Cycle, #4)"
-        },
-        "link": "https://www.goodreads.com/review/show/3090526771",
-        "rating": 4,
-        "type": "review",
-        "updated": "Fri, 10 Jan 2020 12:19:28 -0800"
-      }
-    ]
+    "profile": {
+      "joined": "06/2012",
+      "friendsCount": "79",
+      "website": "https://www.chrisvogt.me",
+      "username": "chrisvogt",
+      "name": "Chris Vogt",
+      "readCount": 114,
+      "imageURL": "https://images.gr-assets.com/users/1573542534p3/10454947.jpg",
+      "favoriteBooks": "speculative fiction, psychology",
+      "smallImageURL": "https://images.gr-assets.com/users/1573542534p2/10454947.jpg",
+      "link": "https://www.goodreads.com/user/show/10454947-chris-vogt",
+      "interests": "╭(◔ ◡ ◔)/"
+    },
+    "meta": {
+      "synced": "2021-01-02T17:54:31.714Z"
+    }
   }
 }
