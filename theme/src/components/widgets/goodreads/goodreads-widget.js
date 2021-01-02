@@ -30,9 +30,11 @@ export default () => {
   const { isLoading, data } = useDataSource(dataSource)
 
   const {
-    profile: { friendsCount, name: profileName, readCount } = {},
-    updates = [],
-    recentlyReadBooks = []
+    collections: {
+      updates = [],
+      recentlyReadBooks = []
+    } = {},
+    profile: { friendsCount, name: profileName, readCount } = {}
   } = data
 
   const metrics = [
