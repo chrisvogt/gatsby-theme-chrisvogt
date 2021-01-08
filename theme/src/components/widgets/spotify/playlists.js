@@ -11,7 +11,10 @@ const Playlists = ({ isLoading, playlists = [] }) => {
       } = {},
       id,
       images = [],
-      name
+      name,
+      tracks: {
+        total: totalTracksCount = 0
+      } = {}
     } = item
 
     const { url: thumbnailURL } = images.find(
@@ -22,18 +25,30 @@ const Playlists = ({ isLoading, playlists = [] }) => {
         image => image.url
       )
     
+    const tooltipContent = (
+      <article>
+        <header>{name}</header>
+        <span sx={{ fontStyle: `italic` }}>{totalTracksCount} tracks</span>
+      </article>
+    )
+    
     return {
       id,
       name,
       spotifyURL,
-      thumbnailURL
+      thumbnailURL,
+      tooltipContent
     }
   })
 
   return (
     <div sx={{ mb: 4 }}>
-      <Heading as='h3'>Playlists</Heading>
+      <div sx={{ display: `flex`, flex: 1, alignItems: `center` }}>
+        <Heading as='h3'>Playlists</Heading>
+      </div>
+
       <p>My 12 favorite playlists.</p>
+
       <MediaItemGrid isLoading={isLoading} items={items} />
     </div>
   )

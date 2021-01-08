@@ -130,6 +130,7 @@
     "react-images": "^1.1.7",
     "react-photo-gallery": "^8.0.0",
     "react-placeholder": "^4.0.3",
+    "react-popper-tooltip": "^3.1.1",
     "react-test-renderer": "^16.13.1",
     "react-visibility-sensor": "^5.1.1",
     "s-ago": "^2.2.0",

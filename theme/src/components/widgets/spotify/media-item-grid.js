@@ -4,6 +4,7 @@ import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 
 import { floatOnHover } from '../../../gatsby-plugin-theme-ui/abstracts/shadows'
+import Tooltip from '../../tooltip'
 
 const placeholders = Array(12)
   .fill()
@@ -22,7 +23,6 @@ const placeholders = Array(12)
     </div>
   ))
 
-
 const MediaItemGrid = ({ isLoading, items = [] }) => (
   <div
     sx={{
@@ -33,34 +33,31 @@ const MediaItemGrid = ({ isLoading, items = [] }) => (
   >
     <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
       {items.map(({
-        id,
-        name,
-        spotifyURL,
-        thumbnailURL
-      }) => {
-        return (
-          <Styled.a
-            href={spotifyURL}
-            key={id}
-            title={name}
-            sx={{
-            }}
-          >
-            <img
-              alt='cover artwork'
-              crossOrigin='anonymous'
-              src={thumbnailURL}
-              sx={{
-                ...floatOnHover,
-                boxShadow: `md`,
-                borderRadius: `4px`,
-                objectFit: 'cover',
-                width: '100%'
-              }}
-            />
-          </Styled.a>
-        )
-      })}
+          id,
+          spotifyURL,
+          thumbnailURL,
+          tooltipContent
+        }) => (
+          <Tooltip placement='top' trigger={['hover', 'focus']} tooltip={tooltipContent}>
+            <Styled.a
+              href={spotifyURL}
+              key={id}
+            >
+              <img
+                alt='cover artwork'
+                crossOrigin='anonymous'
+                src={thumbnailURL}
+                sx={{
+                  ...floatOnHover,
+                  boxShadow: `md`,
+                  borderRadius: `4px`,
+                  objectFit: 'cover',
+                  width: '100%'
+                }}
+              />
+            </Styled.a>
+          </Tooltip>
+        ))}
     </Placeholder>
   </div>
 )
