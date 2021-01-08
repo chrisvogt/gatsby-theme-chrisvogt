@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 
 import CallToAction from '../call-to-action'
+import Playlists from './playlists'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import TopTracks from './top-tracks'
 import Widget from '../widget'
@@ -18,7 +19,7 @@ const SpotifyWidget = () => {
   const { isLoading, data: content } = useDataSource(spotifyDataSource)
 
   const {
-    collections: { topTracks } = [],
+    collections: { playlists = [], topTracks = [] } = [],
     metrics,
     profile: { displayName: profileDisplayName, profileURL } = {},
     provider: { displayName: providerDisplayName } = {}
@@ -43,6 +44,7 @@ const SpotifyWidget = () => {
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
+      <Playlists isLoading={isLoading} playlists={playlists} />
       <TopTracks isLoading={isLoading} tracks={topTracks} />
     </Widget>
   )

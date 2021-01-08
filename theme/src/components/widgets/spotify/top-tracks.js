@@ -3,18 +3,31 @@ import { jsx, Button } from 'theme-ui'
 import { useState } from 'react'
 import { Heading } from '@theme-ui/components'
 
-import TopTracksGrid from './top-tracks-grid'
+import MediaItemGrid from './media-item-grid'
 import TopTracksList from './top-tracks-list'
 
 const TopTracks = ({ isLoading, tracks = [] }) => {
   const [renderAsGrid, setRenderAsGrid] = useState(true)
-  const TopTracks = renderAsGrid ? TopTracksGrid : TopTracksList
+  const Component = renderAsGrid ? MediaItemGrid : TopTracksList
+
+  const items = tracks.map(track => {
+    const { albumImages = [], id, name, spotifyURL } = track
+    const { url: thumbnailURL } = albumImages.find(
+      image => image.width === 300
+    )
+    return {
+      id,
+      name,
+      spotifyURL,
+      thumbnailURL
+    }
+  })
 
   return (
-    <div className='gallery'>
+    <div>
       <div sx={{ display: `flex`, flex: 1, alignItems: `center` }}>
         <Heading as='h3'>Top Tracks</Heading>
-        <div
+        {/* <div
           sx={{
             display: `flex`,
             flex: 1,
@@ -38,12 +51,12 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
           >
             List
           </Button>
-        </div>
+        </div> */}
       </div>
 
       <p>My 12 most-played tracks over the last 4 weeks.</p>
 
-      <TopTracks isLoading={isLoading} tracks={tracks} />
+      <Component isLoading={isLoading} items={items} />
     </div>
   )
 }

@@ -23,7 +23,7 @@ const placeholders = Array(12)
   ))
 
 
-const TopTracksGrid = ({ isLoading, tracks }) => (
+const MediaItemGrid = ({ isLoading, items = [] }) => (
   <div
     sx={{
       display: `grid`,
@@ -32,12 +32,12 @@ const TopTracksGrid = ({ isLoading, tracks }) => (
     }}
   >
     <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-      {tracks.map(track => {
-        const { albumImages = [], id, name, spotifyURL } = track
-        const { url: thumbnailURL } = albumImages.find(
-          image => image.width === 300
-        )
-
+      {items.map(({
+        id,
+        name,
+        spotifyURL,
+        thumbnailURL
+      }) => {
         return (
           <Styled.a
             href={spotifyURL}
@@ -47,7 +47,7 @@ const TopTracksGrid = ({ isLoading, tracks }) => (
             }}
           >
             <img
-              alt='album cover'
+              alt='cover artwork'
               crossOrigin='anonymous'
               src={thumbnailURL}
               sx={{
@@ -65,4 +65,4 @@ const TopTracksGrid = ({ isLoading, tracks }) => (
   </div>
 )
 
-export default TopTracksGrid
+export default MediaItemGrid
