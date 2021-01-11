@@ -35,6 +35,9 @@ export const getLanguageCode = metadata => get(metadata, 'languageCode')
 export const getSpotifyWidgetDataSource = metadata =>
   get(metadata, 'widgets.spotify.widgetDataSource')
 
+export const getSteamWidgetDataSource = metadata =>
+  get(metadata, 'widgets.steam.widgetDataSource')
+
 export const getSubhead = metadata => get(metadata, 'subhead')
 
 export const getTitle = metadata => get(metadata, 'title')

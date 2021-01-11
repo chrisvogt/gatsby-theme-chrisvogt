@@ -8,16 +8,17 @@ import {
   getGithubWidgetDataSource,
   getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
-  getSpotifyWidgetDataSource
+  getSpotifyWidgetDataSource,
+  getSteamWidgetDataSource
 } from '../selectors/metadata'
 import getIsDarkMode from '../helpers/isDarkMode'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 /**
  * Link Registry
- * 
+ *
  * The items in this array follow the following schema:
- * 
+ *
  * * rule {function} – validator function
  * * value {object} – props for the link item
  */
@@ -61,6 +62,14 @@ const linkRegistry = [
       id: 'spotify',
       text: 'Spotify'
     }
+  },
+  {
+    rule: options => !!options.isSteamWidgetEnabled,
+    value: {
+      href: '#steam',
+      id: 'steam',
+      text: 'Steam'
+    }
   }
 ]
 
@@ -72,7 +81,7 @@ const determineLinksToRender = (options = {}) => {
     return linksToRender
   }, [])
 
-  return links;
+  return links
 }
 
 const HomeNavigation = () => {
@@ -86,7 +95,8 @@ const HomeNavigation = () => {
     isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
     isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
-    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
+    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata),
+    isSteamWidgetEnabled: getSteamWidgetDataSource(metadata)
   })
 
   useEffect(() => {
@@ -138,7 +148,11 @@ const HomeNavigation = () => {
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           <h3 sx={{ fontWeight: `unset`, mt: 0, mb: 2 }}>On-page navigation</h3>
           {links.map(({ href, id, text }) => (
-            <Link href={href} key={id} variant={ isDarkMode ? 'homeNavigationDark' : 'homeNavigation' }>
+            <Link
+              href={href}
+              key={id}
+              variant={isDarkMode ? 'homeNavigationDark' : 'homeNavigation'}
+            >
               {text}
             </Link>
           ))}

@@ -33,6 +33,10 @@ module.exports = () => ({
       spotify: {
         username: '',
         widgetDataSource: ''
+      },
+      steam: {
+        username: '',
+        widgetDataSource: ''
       }
     }
   },

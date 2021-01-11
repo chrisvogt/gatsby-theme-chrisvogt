@@ -14,7 +14,8 @@ module.exports = {
     widgets: {
       github: {
         username: 'chrisvogt',
-        widgetDataSource: 'http://metrics.dev-chrisvogt.me:5000/api/widgets/github'
+        widgetDataSource:
+          'http://metrics.dev-chrisvogt.me:5000/api/widgets/github'
       },
       goodreads: {
         username: 'chrisvogt',
@@ -25,7 +26,12 @@ module.exports = {
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/instagram'
       },
       spotify: {
+        username: 'artinreality',
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/spotify'
+      },
+      steam: {
+        username: 'chrisvogt',
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/steam'
       }
     }
   },

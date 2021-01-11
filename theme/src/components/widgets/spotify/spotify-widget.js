@@ -19,7 +19,7 @@ const SpotifyWidget = () => {
   const { isLoading, data: content } = useDataSource(spotifyDataSource)
 
   const {
-    collections: { playlists = [], topTracks = [] } = [],
+    collections: { playlists = [], topTracks = [] } = {},
     metrics,
     profile: { displayName: profileDisplayName, profileURL } = {},
     provider: { displayName: providerDisplayName } = {}
