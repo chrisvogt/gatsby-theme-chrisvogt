@@ -3,8 +3,10 @@ import { jsx } from 'theme-ui'
 import { Fragment } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
+import { Provider as ReduxProvider } from 'react-redux'
 import { ThemeProvider } from 'theme-ui'
 
+import store from './src/store'
 import theme from './src/gatsby-plugin-theme-ui'
 import Emoji from './src/shortcodes/emoji'
 import YouTube from './src/shortcodes/youtube'
@@ -15,11 +17,12 @@ const components = {
 
 const shortcodes = { Emoji, YouTube }
 
-// NOTE(chrisvogt): wraps the root element and attaches context providers
 const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme} components={components}>
-    <MDXProvider components={shortcodes}>{element}</MDXProvider>
-  </ThemeProvider>
+  <ReduxProvider store={store}>
+    <ThemeProvider theme={theme} components={components}>
+      <MDXProvider components={shortcodes}>{element}</MDXProvider>
+    </ThemeProvider>
+  </ReduxProvider>
 )
 
 wrapRootElement.propTypes = {

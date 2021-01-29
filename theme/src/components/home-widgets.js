@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
 import GitHub from '../components/widgets/github'
 import Goodreads from '../components/widgets/goodreads'
 import Instagram from '../components/widgets/instagram'
 import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
+
+import fetchDataSource from '../actions/fetchDataSource'
+import selectMetricsPayload from '../selectors/selectMetricsPayload'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 import {
@@ -26,12 +30,22 @@ import {
  * widgets is: 'gatsby-theme-private-sphere/src/components/widgets/recent-posts'
  */
 const HomeWidgets = () => {
+  const dispatch = useDispatch()
   const metadata = useSiteMetadata()
 
   const githubDataSource = getGithubWidgetDataSource(metadata)
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
+
+  useEffect(() => {
+    dispatch(
+      fetchDataSource('instagram', instagramDataSource, selectMetricsPayload)
+    )
+    dispatch(
+      fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload)
+    )
+  }, [instagramDataSource])
 
   return (
     <>
