@@ -1,63 +1,65 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
-import { useCallback, useState } from 'react'
-import ReactPlaceholder from 'react-placeholder'
+import { jsx } from 'theme-ui'
 import { RectShape } from 'react-placeholder/lib/placeholders'
+import { useCallback, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
+import get from 'lodash/get'
+import ReactPlaceholder from 'react-placeholder'
 
+import fetchDataSource from '../../../actions/fetchDataSource'
 import {
   getInstagramUsername,
   getInstagramWidgetDataSource
 } from '../../../selectors/metadata'
+import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
-import useDataSource from '../../../hooks/use-data-source'
 
 import CallToAction from '../call-to-action'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
-import WidgetItem from './instagram-widget-item'
 import WidgetHeader from '../widget-header'
+import WidgetItem from './instagram-widget-item'
 
 const MAX_IMAGES = 8
-
-const ItemPlaceholder = (
-  <div className='image-placeholder'>
-    <RectShape
-      color='#efefef'
-      sx={{
-        borderRadius: `4px`,
-        boxShadow: `md`,
-        width: `100%`,
-        paddingBottom: `100%`
-      }}
-    />
-  </div>
-)
+const WIDGET_ID = 'instagram'
 
 export default () => {
+  const dispatch = useDispatch()
   const metadata = useSiteMetadata()
-
   const instagramUsername = getInstagramUsername(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
+
+  useEffect(() => {
+    dispatch(
+      fetchDataSource(WIDGET_ID, instagramDataSource, selectMetricsPayload)
+    )
+  }, [dispatch, instagramDataSource])
 
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const { isLoading, data = {} } = useDataSource(instagramDataSource)
-  const { collections: { media: posts } = {}, metrics = [] } = data
-
-  const photos = !isLoading && posts.map(({ caption, cdnMediaURL: src }) => ({ caption, src }))
+  const { isLoading, media, metrics } = useSelector(state => ({
+    isLoading: get(state, 'widgets.dataSources.instagram.state') !== 'SUCCESS',
+    media: get(
+      state,
+      'widgets.dataSources.instagram.data.collections.media',
+      []
+    ),
+    metrics: get(state, 'widgets.dataSources.instagram.data.metrics', [])
+  }))
 
   const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
+    setCurrentImage(index)
+    setViewerIsOpen(true)
+  }, [])
 
   const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
+    setCurrentImage(0)
+    setViewerIsOpen(false)
+  }
 
   const callToAction = (
     <CallToAction
@@ -74,7 +76,7 @@ export default () => {
     <Widget id='instagram'>
       <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
-      {metrics && <ProfileMetricsBadge metrics={metrics} />}
+      <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
 
       <div className='gallery'>
         <Grid
@@ -83,17 +85,33 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(MAX_IMAGES).fill({}) : posts)
+          {(isLoading ? Array(MAX_IMAGES).fill({}) : media)
             .slice(0, MAX_IMAGES)
             .map((post, idx) => (
               <ReactPlaceholder
-                customPlaceholder={ItemPlaceholder}
+                customPlaceholder={
+                  <div className='image-placeholder'>
+                    <RectShape
+                      color='#efefef'
+                      sx={{
+                        borderRadius: `4px`,
+                        boxShadow: `md`,
+                        width: `100%`,
+                        paddingBottom: `100%`
+                      }}
+                    />
+                  </div>
+                }
                 key={isLoading ? idx : post.id}
                 ready={!isLoading}
                 showLoadingAnimation
                 type='rect'
               >
-                <WidgetItem handleClick={openLightbox} index={idx} post={post} />
+                <WidgetItem
+                  handleClick={openLightbox}
+                  index={idx}
+                  post={post}
+                />
               </ReactPlaceholder>
             ))}
         </Grid>
@@ -105,10 +123,10 @@ export default () => {
             {!isLoading && (
               <Carousel
                 currentIndex={currentImage}
-                views={photos.map(x => ({
+                views={media.map(x => ({
                   ...x,
-                  src: `${x.src}?auto=format`,
-                  caption: x.caption
+                  caption: x.caption,
+                  src: `${x.cdnMediaURL}?auto=format`
                 }))}
               />
             )}
