@@ -4,10 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import get from 'lodash/get'
 
-import {
-  getGoodreadsUsername,
-  getGoodreadsWidgetDataSource
-} from '../../../selectors/metadata'
+import { getGoodreadsUsername, getGoodreadsWidgetDataSource } from '../../../selectors/metadata'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
@@ -20,14 +17,8 @@ import UserStatus from './user-status'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-const WIDGET_ID = 'goodreads'
-
 const getBooks = state => {
-  const booksCollection = get(
-    state,
-    'widgets.dataSources.goodreads.data.collections.recentlyReadBooks',
-    []
-  )
+  const booksCollection = get(state, 'widgets.goodreads.data.collections.recentlyReadBooks', [])
 
   if (!booksCollection.length) {
     return {}
@@ -43,14 +34,8 @@ const getBooks = state => {
 }
 
 const getMetrics = state => {
-  const friendsCount = get(
-    state,
-    'widgets.dataSources.goodreads.data.profile.friendsCount'
-  )
-  const readCount = get(
-    state,
-    'widgets.dataSources.goodreads.data.profile.readCount'
-  )
+  const friendsCount = get(state, 'widgets.goodreads.data.profile.friendsCount')
+  const readCount = get(state, 'widgets.goodreads.data.profile.readCount')
 
   const metrics = [
     {
@@ -69,19 +54,13 @@ const getMetrics = state => {
 }
 
 const getUserStatus = state => {
-  const updates = get(
-    state,
-    'widgets.dataSources.goodreads.data.collections.updates',
-    []
-  )
+  const updates = get(state, 'widgets.goodreads.data.collections.updates', [])
 
   if (!updates.length) {
     return {}
   }
 
-  const userStatus = updates.find(
-    ({ type }) => type === 'userstatus' || type === 'review'
-  )
+  const userStatus = updates.find(({ type }) => type === 'userstatus' || type === 'review')
 
   return userStatus
 }
@@ -93,39 +72,16 @@ export default () => {
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
 
   useEffect(() => {
-    dispatch(
-      fetchDataSource(WIDGET_ID, goodreadsDataSource, selectMetricsPayload)
-    )
+    dispatch(fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload))
   }, [dispatch, goodreadsDataSource])
 
-  const { books, isLoading, metrics, profileDisplayName, status } = useSelector(
-    state => ({
-      books: getBooks(state),
-      isLoading: get(state, 'widgets.dataSources.github.state') !== 'SUCCESS',
-      metrics: getMetrics(state),
-      profileDisplayName: get(
-        state,
-        'widgets.dataSources.goodreads.data.profile.name'
-      ),
-      status: getUserStatus(state)
-    })
-  )
-
-  // const { isLoading, data } = useDataSource(dataSource)
-
-  // const {
-  //   collections: {
-  //     updates = [],
-  //     recentlyReadBooks = []
-  //   } = {},
-  //   profile: { friendsCount, name: profileName, readCount } = {}
-  // } = data
-
-  // const books =
-  //   recentlyReadBooks.length &&
-  //   recentlyReadBooks.filter(({ thumbnail }) => Boolean(thumbnail)).slice(0, 12)
-
-  // const status = updates.length ? getStatusFromUpdates(updates) : {}
+  const { books, isLoading, metrics, profileDisplayName, status } = useSelector(state => ({
+    books: getBooks(state),
+    isLoading: get(state, 'widgets.github.state') !== 'SUCCESS',
+    metrics: getMetrics(state),
+    profileDisplayName: get(state, 'widgets.goodreads.data.profile.name'),
+    status: getUserStatus(state)
+  }))
 
   const callToAction = (
     <CallToAction
@@ -146,11 +102,7 @@ export default () => {
 
       <RecentlyReadBooks isLoading={isLoading} books={books} />
 
-      <UserStatus
-        actorName={profileDisplayName}
-        isLoading={isLoading}
-        status={status}
-      />
+      <UserStatus actorName={profileDisplayName} isLoading={isLoading} status={status} />
     </Widget>
   )
 }

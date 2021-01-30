@@ -10,10 +10,7 @@ import get from 'lodash/get'
 import ReactPlaceholder from 'react-placeholder'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import {
-  getInstagramUsername,
-  getInstagramWidgetDataSource
-} from '../../../selectors/metadata'
+import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
 import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
@@ -24,7 +21,6 @@ import WidgetHeader from '../widget-header'
 import WidgetItem from './instagram-widget-item'
 
 const MAX_IMAGES = 8
-const WIDGET_ID = 'instagram'
 
 export default () => {
   const dispatch = useDispatch()
@@ -33,22 +29,16 @@ export default () => {
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
   useEffect(() => {
-    dispatch(
-      fetchDataSource(WIDGET_ID, instagramDataSource, selectMetricsPayload)
-    )
+    dispatch(fetchDataSource('instagram', instagramDataSource, selectMetricsPayload))
   }, [dispatch, instagramDataSource])
 
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
   const { isLoading, media, metrics } = useSelector(state => ({
-    isLoading: get(state, 'widgets.dataSources.instagram.state') !== 'SUCCESS',
-    media: get(
-      state,
-      'widgets.dataSources.instagram.data.collections.media',
-      []
-    ),
-    metrics: get(state, 'widgets.dataSources.instagram.data.metrics', [])
+    isLoading: get(state, 'widgets.instagram.state') !== 'SUCCESS',
+    media: get(state, 'widgets.instagram.data.collections.media', []),
+    metrics: get(state, 'widgets.instagram.data.metrics', [])
   }))
 
   const openLightbox = useCallback((event, { photo, index }) => {
@@ -107,11 +97,7 @@ export default () => {
                 showLoadingAnimation
                 type='rect'
               >
-                <WidgetItem
-                  handleClick={openLightbox}
-                  index={idx}
-                  post={post}
-                />
+                <WidgetItem handleClick={openLightbox} index={idx} post={post} />
               </ReactPlaceholder>
             ))}
         </Grid>

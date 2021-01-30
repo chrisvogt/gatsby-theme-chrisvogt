@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react'
 
 import GitHub from '../components/widgets/github'
 import Goodreads from '../components/widgets/goodreads'
@@ -27,7 +26,6 @@ import {
  * widgets is: 'gatsby-theme-private-sphere/src/components/widgets/recent-posts'
  */
 const HomeWidgets = () => {
-  const dispatch = useDispatch()
   const metadata = useSiteMetadata()
 
   const githubDataSource = getGithubWidgetDataSource(metadata)

@@ -1,5 +1,8 @@
 /** @jsx jsx */
+import get from 'lodash/get'
 import { jsx } from 'theme-ui'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import CallToAction from '../call-to-action'
 import Playlists from './playlists'
@@ -8,22 +11,37 @@ import TopTracks from './top-tracks'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-import useSiteMetadata from '../../../hooks/use-site-metadata'
-import useDataSource from '../../../hooks/use-data-source'
-
+import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSpotifyWidgetDataSource } from '../../../selectors/metadata'
+import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
+import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 const SpotifyWidget = () => {
+  const dispatch = useDispatch()
   const metadata = useSiteMetadata()
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
-  const { isLoading, data: content } = useDataSource(spotifyDataSource)
+
+  useEffect(() => {
+    dispatch(fetchDataSource('spotify', spotifyDataSource, selectMetricsPayload))
+  }, [dispatch, spotifyDataSource])
 
   const {
-    collections: { playlists = [], topTracks = [] } = [],
+    isLoading,
+    playlists,
+    topTracks,
     metrics,
-    profile: { displayName: profileDisplayName, profileURL } = {},
-    provider: { displayName: providerDisplayName } = {}
-  } = content
+    profileDisplayName,
+    profileURL,
+    providerDisplayName
+  } = useSelector(state => ({
+    isLoading: get(state, 'widgets.github.state') !== 'SUCCESS',
+    playlists: get(state, 'widgets.spotify.data.collections.playlists', []),
+    topTracks: get(state, 'widgets.spotify.data.collections.topTracks', []),
+    metrics: get(state, 'widgets.spotify.data.metrics', []),
+    profileDisplayName: get(state, 'widgets.spotify.data.profile.displayName', ''),
+    profileURL: get(state, 'widgets.spotify.data.profile.profileURL', ''),
+    providerDisplayName: get(state, 'widgets.spotify.data.provider.displayName', '')
+  }))
 
   const callToAction = (
     <CallToAction
@@ -43,7 +61,6 @@ const SpotifyWidget = () => {
       </WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
-
       <Playlists isLoading={isLoading} playlists={playlists} />
       <TopTracks isLoading={isLoading} tracks={topTracks} />
     </Widget>
