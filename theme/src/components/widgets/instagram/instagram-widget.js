@@ -10,8 +10,12 @@ import get from 'lodash/get'
 import ReactPlaceholder from 'react-placeholder'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
+import {
+  getInstagramUsername,
+  getInstagramWidgetDataSource
+} from '../../../selectors/metadata'
 import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
+import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
@@ -24,19 +28,23 @@ const MAX_IMAGES = 8
 
 export default () => {
   const dispatch = useDispatch()
+
   const metadata = useSiteMetadata()
   const instagramUsername = getInstagramUsername(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
   useEffect(() => {
-    dispatch(fetchDataSource('instagram', instagramDataSource, selectMetricsPayload))
+    dispatch(
+      fetchDataSource('instagram', instagramDataSource, selectMetricsPayload)
+    )
   }, [dispatch, instagramDataSource])
 
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const { isLoading, media, metrics } = useSelector(state => ({
-    isLoading: get(state, 'widgets.instagram.state') !== 'SUCCESS',
+  const { hasFatalError, isLoading, media, metrics } = useSelector(state => ({
+    hasFatalError: get(state, 'widgets.instagram.state') === FAILURE,
+    isLoading: get(state, 'widgets.instagram.state') !== SUCCESS,
     media: get(state, 'widgets.instagram.data.collections.media', []),
     metrics: get(state, 'widgets.instagram.data.metrics', [])
   }))
@@ -63,7 +71,7 @@ export default () => {
   )
 
   return (
-    <Widget id='instagram'>
+    <Widget id='instagram' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
       <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
@@ -97,7 +105,11 @@ export default () => {
                 showLoadingAnimation
                 type='rect'
               >
-                <WidgetItem handleClick={openLightbox} index={idx} post={post} />
+                <WidgetItem
+                  handleClick={openLightbox}
+                  index={idx}
+                  post={post}
+                />
               </ReactPlaceholder>
             ))}
         </Grid>
