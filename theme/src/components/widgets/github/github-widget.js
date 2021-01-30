@@ -12,14 +12,23 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import { getGithubUsername, getGithubWidgetDataSource } from '../../../selectors/metadata'
+import {
+  getGithubUsername,
+  getGithubWidgetDataSource
+} from '../../../selectors/metadata'
 import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
-
+import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 const getMetrics = state => {
-  const totalFollowersCount = get(state, 'widgets.github.data.user.followers.totalCount')
-  const totalFollowingCount = get(state, 'widgets.github.data.user.following.totalCount')
+  const totalFollowersCount = get(
+    state,
+    'widgets.github.data.user.followers.totalCount'
+  )
+  const totalFollowingCount = get(
+    state,
+    'widgets.github.data.user.following.totalCount'
+  )
 
   const metrics = [
     {
@@ -47,9 +56,20 @@ const GitHubWidget = () => {
     dispatch(fetchDataSource('github', githubDataSource, selectMetricsPayload))
   }, [dispatch, githubDataSource])
 
-  const { isLoading, lastPullRequest, metrics, pinnedItems } = useSelector(state => ({
-    isLoading: get(state, 'widgets.github.state') !== 'SUCCESS',
-    lastPullRequest: get(state, 'widgets.github.data.user.pullRequests.nodes[0]', {}),
+  const {
+    hasFatalError,
+    isLoading,
+    lastPullRequest,
+    metrics,
+    pinnedItems
+  } = useSelector(state => ({
+    hasFatalError: get(state, 'widgets.github.state') === FAILURE,
+    isLoading: get(state, 'widgets.github.state') !== SUCCESS,
+    lastPullRequest: get(
+      state,
+      'widgets.github.data.user.pullRequests.nodes[0]',
+      {}
+    ),
     metrics: getMetrics(state),
     pinnedItems: get(state, 'widgets.github.data.user.pinnedItems.nodes', [])
   }))
@@ -66,10 +86,14 @@ const GitHubWidget = () => {
   )
 
   return (
-    <Widget id='github'>
+    <Widget id='github' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
-      <ProfileMetricsBadge metrics={metrics} />
-      <PinnedItems isLoading={isLoading} items={pinnedItems} placeholderCount={2} />
+      {!hasFatalError && <ProfileMetricsBadge metrics={metrics} />}
+      <PinnedItems
+        isLoading={isLoading}
+        items={pinnedItems}
+        placeholderCount={2}
+      />
       <LastPullRequest isLoading={isLoading} pullRequest={lastPullRequest} />
     </Widget>
   )

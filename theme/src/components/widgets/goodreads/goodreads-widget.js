@@ -4,7 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import get from 'lodash/get'
 
-import { getGoodreadsUsername, getGoodreadsWidgetDataSource } from '../../../selectors/metadata'
+import {
+  getGoodreadsUsername,
+  getGoodreadsWidgetDataSource
+} from '../../../selectors/metadata'
+import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
@@ -18,10 +22,14 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 const getBooks = state => {
-  const booksCollection = get(state, 'widgets.goodreads.data.collections.recentlyReadBooks', [])
+  const booksCollection = get(
+    state,
+    'widgets.goodreads.data.collections.recentlyReadBooks',
+    []
+  )
 
   if (!booksCollection.length) {
-    return {}
+    return []
   }
 
   const books = booksCollection
@@ -60,7 +68,9 @@ const getUserStatus = state => {
     return {}
   }
 
-  const userStatus = updates.find(({ type }) => type === 'userstatus' || type === 'review')
+  const userStatus = updates.find(
+    ({ type }) => type === 'userstatus' || type === 'review'
+  )
 
   return userStatus
 }
@@ -72,12 +82,22 @@ export default () => {
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
 
   useEffect(() => {
-    dispatch(fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload))
+    dispatch(
+      fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload)
+    )
   }, [dispatch, goodreadsDataSource])
 
-  const { books, isLoading, metrics, profileDisplayName, status } = useSelector(state => ({
+  const {
+    books,
+    hasFatalError,
+    isLoading,
+    metrics,
+    profileDisplayName,
+    status
+  } = useSelector(state => ({
     books: getBooks(state),
-    isLoading: get(state, 'widgets.github.state') !== 'SUCCESS',
+    hasFatalError: get(state, 'widgets.github.state') === FAILURE,
+    isLoading: get(state, 'widgets.github.state') !== SUCCESS,
     metrics: getMetrics(state),
     profileDisplayName: get(state, 'widgets.goodreads.data.profile.name'),
     status: getUserStatus(state)
@@ -95,14 +115,18 @@ export default () => {
   )
 
   return (
-    <Widget id='goodreads'>
+    <Widget id='goodreads' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction}>Goodreads</WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
       <RecentlyReadBooks isLoading={isLoading} books={books} />
 
-      <UserStatus actorName={profileDisplayName} isLoading={isLoading} status={status} />
+      <UserStatus
+        actorName={profileDisplayName}
+        isLoading={isLoading}
+        status={status}
+      />
     </Widget>
   )
 }
