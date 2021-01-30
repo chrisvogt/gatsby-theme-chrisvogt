@@ -10,7 +10,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
     Pinned Items
   </h3>
   <p>
-    All pinned items on my GitHub profile.
+    Pinned items on my GitHub profile.
   </p>
   <div
     className="css-hdsl9a-PinnedItems"
@@ -477,7 +477,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
     Pinned Items
   </h3>
   <p>
-    All pinned items on my GitHub profile.
+    Pinned items on my GitHub profile.
   </p>
   <div
     className="css-hdsl9a-PinnedItems"
