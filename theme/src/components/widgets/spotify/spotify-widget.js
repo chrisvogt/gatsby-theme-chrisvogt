@@ -1,5 +1,8 @@
 /** @jsx jsx */
+import get from 'lodash/get'
 import { jsx } from 'theme-ui'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import CallToAction from '../call-to-action'
 import Playlists from './playlists'
@@ -8,22 +11,50 @@ import TopTracks from './top-tracks'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-import useSiteMetadata from '../../../hooks/use-site-metadata'
-import useDataSource from '../../../hooks/use-data-source'
-
+import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSpotifyWidgetDataSource } from '../../../selectors/metadata'
+import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
+import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 const SpotifyWidget = () => {
+  const dispatch = useDispatch()
   const metadata = useSiteMetadata()
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
-  const { isLoading, data: content } = useDataSource(spotifyDataSource)
+
+  useEffect(() => {
+    dispatch(
+      fetchDataSource('spotify', spotifyDataSource, selectMetricsPayload)
+    )
+  }, [dispatch, spotifyDataSource])
 
   const {
-    collections: { playlists = [], topTracks = [] } = [],
+    hasFatalError,
+    isLoading,
     metrics,
-    profile: { displayName: profileDisplayName, profileURL } = {},
-    provider: { displayName: providerDisplayName } = {}
-  } = content
+    playlists,
+    profileDisplayName,
+    profileURL,
+    providerDisplayName,
+    topTracks
+  } = useSelector(state => ({
+    hasFatalError: get(state, 'widgets.spotify.state') === FAILURE,
+    isLoading: get(state, 'widgets.spotify.state') !== SUCCESS,
+    metrics: get(state, 'widgets.spotify.data.metrics', []),
+    playlists: get(state, 'widgets.spotify.data.collections.playlists', []),
+    profileDisplayName: get(
+      state,
+      'widgets.spotify.data.profile.displayName',
+      ''
+    ),
+    profileURL: get(state, 'widgets.spotify.data.profile.profileURL', ''),
+    providerDisplayName: get(
+      state,
+      'widgets.spotify.data.provider.displayName',
+      ''
+    ),
+    topTracks: get(state, 'widgets.spotify.data.collections.topTracks', [])
+  }))
 
   const callToAction = (
     <CallToAction
@@ -37,13 +68,12 @@ const SpotifyWidget = () => {
   )
 
   return (
-    <Widget id='spotify'>
+    <Widget id='spotify' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction} isLoading={isLoading}>
         Spotify
       </WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
-
       <Playlists isLoading={isLoading} playlists={playlists} />
       <TopTracks isLoading={isLoading} tracks={topTracks} />
     </Widget>

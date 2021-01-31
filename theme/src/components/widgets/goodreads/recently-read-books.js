@@ -6,7 +6,7 @@ import { RectShape } from 'react-placeholder/lib/placeholders'
 
 import BookLink from './book-link'
 
-const RecentlyReadBooks = ({ books, isLoading }) => (
+const RecentlyReadBooks = ({ books = [], isLoading }) => (
   <div className='gallery'>
     <div sx={{ mb: 4 }}>
       <Heading

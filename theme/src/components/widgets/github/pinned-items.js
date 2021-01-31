@@ -5,9 +5,12 @@ import PropTypes from 'prop-types'
 
 import PinnedItemCard from './pinned-item-card'
 
-const PinnedItems = ({ items = [] }) => {
-  const placeholderItems = Array(4).fill({ __typename: 'placeholder' })
-  const itemsToRender = items.length === 0 ? placeholderItems : items
+const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
+  const placeholderItems = Array(placeholderCount).fill({
+    __typename: 'placeholder'
+  })
+  const itemsToRender =
+    isLoading || items.length === 0 ? placeholderItems : items
 
   return (
     <Box sx={{ marginBottom: 4 }}>
@@ -20,7 +23,7 @@ const PinnedItems = ({ items = [] }) => {
         Pinned Items
       </Heading>
 
-      <p>All pinned items on my GitHub profile.</p>
+      <p>Pinned items on my GitHub profile.</p>
 
       <Styled.div
         sx={{
@@ -53,7 +56,9 @@ PinnedItems.propTypes = {
   /** Sets the component in a loading state when true. */
   isLoading: PropTypes.bool,
   /** The pinned items content to render. */
-  items: PropTypes.arrayOf(PropTypes.object)
+  items: PropTypes.arrayOf(PropTypes.object),
+  /** The number of placeholder items to render. */
+  placeholderCount: PropTypes.number
 }
 
 export default PinnedItems

@@ -1,41 +1,49 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import get from 'lodash/get'
 
 import {
   getGoodreadsUsername,
   getGoodreadsWidgetDataSource
 } from '../../../selectors/metadata'
+import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 
-import useDataSource from '../../../hooks/use-data-source'
+import fetchDataSource from '../../../actions/fetchDataSource'
+import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
-import RecentlyReadBooks from './recently-read-books'
 import ProfileMetricsBadge from '../profile-metrics-badge'
+import RecentlyReadBooks from './recently-read-books'
 import UserStatus from './user-status'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-const getStatusFromUpdates = updates =>
-  updates.length > 0
-    ? updates.find(({ type }) => type === 'userstatus' || type === 'review')
-    : {}
+const getBooks = state => {
+  const booksCollection = get(
+    state,
+    'widgets.goodreads.data.collections.recentlyReadBooks',
+    []
+  )
 
-export default () => {
-  const metadata = useSiteMetadata()
+  if (!booksCollection.length) {
+    return []
+  }
 
-  const goodreadsUsername = getGoodreadsUsername(metadata)
-  const dataSource = getGoodreadsWidgetDataSource(metadata)
+  const books = booksCollection
+    // NOTE(chrisvogt): only select books with thumbnails, since we render those
+    // into image elements
+    .filter(({ thumbnail }) => Boolean(thumbnail))
+    .slice(0, 12)
 
-  const { isLoading, data } = useDataSource(dataSource)
+  return books
+}
 
-  const {
-    collections: {
-      updates = [],
-      recentlyReadBooks = []
-    } = {},
-    profile: { friendsCount, name: profileName, readCount } = {}
-  } = data
+const getMetrics = state => {
+  const friendsCount = get(state, 'widgets.goodreads.data.profile.friendsCount')
+  const readCount = get(state, 'widgets.goodreads.data.profile.readCount')
 
   const metrics = [
     {
@@ -50,11 +58,50 @@ export default () => {
     }
   ]
 
-  const books =
-    recentlyReadBooks.length &&
-    recentlyReadBooks.filter(({ thumbnail }) => Boolean(thumbnail)).slice(0, 12)
+  return metrics
+}
 
-  const status = updates.length ? getStatusFromUpdates(updates) : {}
+const getUserStatus = state => {
+  const updates = get(state, 'widgets.goodreads.data.collections.updates', [])
+
+  if (!updates.length) {
+    return {}
+  }
+
+  const userStatus = updates.find(
+    ({ type }) => type === 'userstatus' || type === 'review'
+  )
+
+  return userStatus
+}
+
+export default () => {
+  const dispatch = useDispatch()
+  const metadata = useSiteMetadata()
+  const goodreadsUsername = getGoodreadsUsername(metadata)
+  const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
+
+  useEffect(() => {
+    dispatch(
+      fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload)
+    )
+  }, [dispatch, goodreadsDataSource])
+
+  const {
+    books,
+    hasFatalError,
+    isLoading,
+    metrics,
+    profileDisplayName,
+    status
+  } = useSelector(state => ({
+    books: getBooks(state),
+    hasFatalError: get(state, 'widgets.github.state') === FAILURE,
+    isLoading: get(state, 'widgets.github.state') !== SUCCESS,
+    metrics: getMetrics(state),
+    profileDisplayName: get(state, 'widgets.goodreads.data.profile.name'),
+    status: getUserStatus(state)
+  }))
 
   const callToAction = (
     <CallToAction
@@ -68,7 +115,7 @@ export default () => {
   )
 
   return (
-    <Widget id='goodreads'>
+    <Widget id='goodreads' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction}>Goodreads</WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
@@ -76,7 +123,7 @@ export default () => {
       <RecentlyReadBooks isLoading={isLoading} books={books} />
 
       <UserStatus
-        actorName={profileName}
+        actorName={profileDisplayName}
         isLoading={isLoading}
         status={status}
       />

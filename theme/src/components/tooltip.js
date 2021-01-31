@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { Heading, jsx, useThemeUI, Link } from 'theme-ui'
-import TooltipTrigger from 'react-popper-tooltip';
+import { jsx, useThemeUI } from 'theme-ui'
+import TooltipTrigger from 'react-popper-tooltip'
 import getIsDarkMode from '../helpers/isDarkMode'
-import 'react-popper-tooltip/dist/styles.css';
+import 'react-popper-tooltip/dist/styles.css'
 
-const Tooltip = ({children, tooltip, hideArrow, ...props}) => {
+const Tooltip = ({ children, tooltip, hideArrow, ...props }) => {
   const { colorMode } = useThemeUI()
   const isDarkMode = getIsDarkMode(colorMode)
   return (
@@ -20,10 +20,10 @@ const Tooltip = ({children, tooltip, hideArrow, ...props}) => {
         <div
           {...getTooltipProps({
             ref: tooltipRef,
-            className: 'tooltip-container',
+            className: 'tooltip-container'
           })}
           sx={{
-            border: theme => isDarkMode ? `none` : theme.colors.gray[8],
+            border: theme => (isDarkMode ? `none` : theme.colors.gray[8]),
             ...(isDarkMode ? { color: `text` } : {})
           }}
         >
@@ -40,7 +40,7 @@ const Tooltip = ({children, tooltip, hideArrow, ...props}) => {
         </div>
       )}
     >
-      {({getTriggerProps, triggerRef}) => (
+      {({ getTriggerProps, triggerRef }) => (
         <span
           {...getTriggerProps({
             ref: triggerRef,
