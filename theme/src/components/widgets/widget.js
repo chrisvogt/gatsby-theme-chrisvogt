@@ -61,9 +61,10 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
               bottom: 0,
               left: 0,
               background: darkMode
-                ? `radial-gradient(rgba(14.5, 18, 23.5, 0.9), transparent)`
-                : `radial-gradient(rgba(255, 255, 255, 0.9), transparent)`,
-              position: `absolute`
+                ? `radial-gradient(rgba(14.5,18,23.5,0.4) 20%, transparent 50%);`
+                : `radial-gradient(rgba(255, 255, 255, 0.4) 20%, transparent 50%)`,
+              position: `absolute`,
+              zIndex: 470
             }}
           ></div>
         </div>
