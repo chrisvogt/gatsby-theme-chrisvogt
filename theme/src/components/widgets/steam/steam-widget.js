@@ -1,4 +1,7 @@
 /** @jsx jsx */
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { get } from 'lodash'
 import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 
@@ -7,22 +10,43 @@ import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
-import useSiteMetadata from '../../../hooks/use-site-metadata'
-import useDataSource from '../../../hooks/use-data-source'
+import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import fetchDataSource from '../../../actions/fetchDataSource'
+import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
+import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import { floatOnHover } from '../../../gatsby-plugin-theme-ui/abstracts/shadows'
 
 const SteamWidget = () => {
+  const dispatch = useDispatch()
   const metadata = useSiteMetadata()
   const steamDataSource = getSteamWidgetDataSource(metadata)
-  const { isLoading, data: content } = useDataSource(steamDataSource)
+
+  useEffect(() => {
+    dispatch(fetchDataSource('steam', steamDataSource, selectMetricsPayload))
+  }, [dispatch, steamDataSource])
 
   const {
-    collections: { recentlyPlayedGames = [] } = {},
+    // hasFatalError,
+    isLoading,
     metrics,
-    profile: { displayName: profileDisplayName, profileURL } = {}
-  } = content
+    profileDisplayName,
+    profileURL,
+    recentlyPlayedGames
+  } = useSelector(state => ({
+    // hasFatalError: get(state, 'widgets.steam.state') === FAILURE,
+    isLoading: get(state, 'widgets.steam.state') !== SUCCESS,
+    metrics: get(state, 'widgets.steam.data.metrics', []),
+    profile: get(state, 'widgets.steam.data.profile'),
+    profileDisplayName: get(state, 'widgets.steam.data.profile.displayName'),
+    profileURL: get(state, 'widgets.steam.data.profile.profileURL'),
+    recentlyPlayedGames: get(
+      state,
+      'widgets.steam.data.collections.recentlyPlayedGames',
+      []
+    )
+  }))
 
   const callToAction = (
     <CallToAction
