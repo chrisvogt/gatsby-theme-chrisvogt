@@ -96,8 +96,8 @@ export default () => {
     status
   } = useSelector(state => ({
     books: getBooks(state),
-    hasFatalError: get(state, 'widgets.github.state') === FAILURE,
-    isLoading: get(state, 'widgets.github.state') !== SUCCESS,
+    hasFatalError: get(state, 'widgets.goodreads.state') === FAILURE,
+    isLoading: get(state, 'widgets.goodreads.state') !== SUCCESS,
     metrics: getMetrics(state),
     profileDisplayName: get(state, 'widgets.goodreads.data.profile.name'),
     status: getUserStatus(state)
