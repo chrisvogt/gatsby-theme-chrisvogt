@@ -976,10 +976,17 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.12.5":
+  version "7.13.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
+  integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1884,9 +1891,9 @@
     source-map "^0.7.3"
 
 "@popperjs/core@^2.5.4":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
-  integrity sha512-cPqjjzuFWNK3BSKLm0abspP0sp/IGOli4p5I5fKFAzdS8fvjdOwDCfZqAaIiXd9lPkOWi3SUUfZof3hEb7J/uw==
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.1.tgz#7f554e7368c9ab679a11f4a042ca17149d70cf12"
+  integrity sha512-DvJbbn3dUgMxDnJLH+RZQPnXak1h4ZVYQ7CWiFWjQwBFkVajT4rfw2PdpHLTSTwxrYfnoEXkuBiwkDm6tPMQeA==
 
 "@reach/alert@0.10.3":
   version "0.10.3"
@@ -3501,10 +3508,10 @@ axios@^0.19.0, axios@^0.19.2:
   dependencies:
     follow-redirects "1.5.10"
 
-axios@^0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
-  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
     follow-redirects "^1.10.0"
 
@@ -6476,12 +6483,10 @@ escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.11.0:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
-  integrity sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
-  dependencies:
-    get-stdin "^6.0.0"
+eslint-config-prettier@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
+  integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
 
 eslint-config-react-app@^5.2.1:
   version "5.2.1"
@@ -7081,7 +7086,7 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fast-deep-equal@^3.1.1:
+fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
@@ -8324,11 +8329,6 @@ get-stdin@^4.0.1:
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
   integrity sha1-uWjGsKBDhDJJAui/Gl3zJXmkUP4=
 
-get-stdin@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
-  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
-
 get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
@@ -9300,7 +9300,7 @@ human-signals@^1.1.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
 
-husky@^4.2.5, husky@^4.3.0:
+husky@^4.2.5:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/husky/-/husky-4.3.0.tgz#0b2ec1d66424e9219d359e26a51c58ec5278f0de"
   integrity sha512-tTMeLCLqSBqnflBZnlVDhpaIMucSGaYyX6855jM4AguGeWCeSzNdb1mfyWduTZ3pe3SJVvVWGL0jO1iKZVPfTA==
@@ -9315,6 +9315,11 @@ husky@^4.2.5, husky@^4.3.0:
     please-upgrade-node "^3.2.0"
     slash "^3.0.0"
     which-pm-runs "^1.0.0"
+
+husky@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-5.1.3.tgz#1a0645a4fe3ffc006c4d0d8bd0bcb4c98787cc9d"
+  integrity sha512-fbNJ+Gz5wx2LIBtMweJNY1D7Uc8p1XERi5KNRMccwfQA+rXlxWNSdUxswo0gT8XqxywTIw7Ywm/F4v/O35RdMg==
 
 hyphenate-style-name@^1.0.2:
   version "1.0.4"
@@ -11265,11 +11270,11 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
     js-tokens "^3.0.0 || ^4.0.0"
 
 lottie-api@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/lottie-api/-/lottie-api-1.0.2.tgz#4de8c27b35a565604f643543bcf092e60dce3c99"
-  integrity sha512-v9I2fYYDCEIPOSWUwvaVl9rVTuMU2iRRXZXmNFiw6zzTFe8aQAQHr/Vun4Oblr+sxFIxIUdvZMZXB+NbeG/3eQ==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/lottie-api/-/lottie-api-1.0.3.tgz#465cfc7a1d23220b8a8893d3fab8943237fe1d4b"
+  integrity sha512-TB8sytVs/o7/xrT76Gq1p49SpvV/KRz9g7wJpNXC6c0CjqowvQaBy+ynLR5R+cGu9ORwmNSwphC0Zy1r9QZtZQ==
 
-lottie-react-web@^2.1.4:
+lottie-react-web@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/lottie-react-web/-/lottie-react-web-2.2.2.tgz#4bcf799fa76cad06accb568370e01815c550bf27"
   integrity sha512-0xCUysLcOsIHUy+PdHOXdCJb58XOYrWtUaZkIJwVS3E807/j6Rs9jt57YvqYgziFXquCjI2uP3hxBrOw528CZQ==
@@ -11279,10 +11284,10 @@ lottie-react-web@^2.1.4:
     lottie-api "^1.0.2"
     lottie-web "^5.6.1"
 
-lottie-web@^5.6.1:
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.3.tgz#dbe542270665be5dd5b32deae19e27de6e77728c"
-  integrity sha512-ftN4AdiNmtoVpCfN1doiUIUbhOrDSMikH1Yl64/xO5lzQ31AO0+G82bqrCNHIW5Ec2zE/g7y4iz7zBR1YJwDaA==
+lottie-web@^5.6.1, lottie-web@^5.7.6:
+  version "5.7.6"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.6.tgz#f20e5555ff120dc1e07ba53adb40061e822f3c48"
+  integrity sha512-qn/KYMI4QQvFDhtoxs0RPkn9uZKhDB9keE5BKgbJlSRfNEZpRiDlwBE9ibYz4nPhbyE+NUlt8IRIVR7g5OSX3w==
 
 loud-rejection@^1.0.0:
   version "1.6.0"
@@ -14037,13 +14042,13 @@ react-clientside-effect@^1.2.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-react-dark-mode-toggle@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/react-dark-mode-toggle/-/react-dark-mode-toggle-0.0.9.tgz#3a4aabee5d680de0af05fd44739d56101a8c9881"
-  integrity sha512-v5b0BjvSgB2IS+KyosKJEO4Xu7uZKeHv/it82FtjGnT8jHK3aknB/ZNZ3L5AZjF9ZXvPl3xZ/C18sfq5C+/V2Q==
+react-dark-mode-toggle@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-dark-mode-toggle/-/react-dark-mode-toggle-0.2.0.tgz#73172805b0ea6a5f2db89c1e05a4365ac93735d1"
+  integrity sha512-YGN6EKU54TaEIQ2G5veB+XVRXSsbyrW9+rop/1Ap06A0z1j6QBVuMIZjhQpwYLKVhSPIxoe7zsWj0cZaEf7cQA==
   dependencies:
-    lottie-react-web "^2.1.4"
     parse-unit "^1.0.1"
+    react-lottie-player "^1.1.1"
 
 react-dev-utils@^4.2.3:
   version "4.2.3"
@@ -14182,6 +14187,14 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-lottie-player@^1.1.1:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-lottie-player/-/react-lottie-player-1.3.0.tgz#a50222cb980daef633183092ef9b9b3203cd9a37"
+  integrity sha512-pVoktwL5KMgae/00CQqIzjYINn5fQncauavW4hWR85aEfoAlN+hfrEjXwtRrtGGYAnsw4FRqCf9wlg7a3s7YBg==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    lottie-web "^5.7.6"
+
 react-motion@^0.5.0:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
@@ -14204,7 +14217,7 @@ react-placeholder@^4.0.3:
   resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-4.0.3.tgz#098f8ee00122bfd73f1ce47d7d99de00384ab141"
   integrity sha512-yPyqFYbh/u72p0UHsKTu19KruK/aJFP0x3YENg8ZBBjf13PoTKBQckVxlpLCfn0Rm2MaMly7IxZuRsUIQV+mrw==
 
-react-popper-tooltip@^3.1.1:
+react-popper-tooltip@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-popper-tooltip/-/react-popper-tooltip-3.1.1.tgz#329569eb7b287008f04fcbddb6370452ad3f9eac"
   integrity sha512-EnERAnnKRptQBJyaee5GJScWNUKQPDD2ywvzZyUjst/wj5U64C8/CnSYLNEmP2hG0IJ3ZhtDxE8oDN+KOyavXQ==
