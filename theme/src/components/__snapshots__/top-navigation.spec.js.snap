@@ -32,6 +32,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
     </div>
     <button
       aria-hidden="true"
+      className={null}
       onClick={[Function]}
       style={
         Object {
@@ -56,26 +57,12 @@ exports[`TopNavigation matches the snapshot 1`] = `
             "height": "132px",
             "justifyContent": "center",
             "marginLeft": "-25.6px",
-            "marginTop": "-47.599999999999994px",
+            "marginTop": "-46px",
             "width": "132px",
           }
         }
       >
-        <div
-          aria-label="animation"
-          role="button"
-          style={
-            Object {
-              "height": "100%",
-              "margin": "0 auto",
-              "outline": "none",
-              "overflow": "hidden",
-              "width": "100%",
-            }
-          }
-          tabIndex={0}
-          title=""
-        />
+        <div />
       </div>
     </button>
   </div>

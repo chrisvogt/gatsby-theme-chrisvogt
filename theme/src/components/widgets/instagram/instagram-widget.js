@@ -121,10 +121,32 @@ export default () => {
             {!isLoading && (
               <Carousel
                 currentIndex={currentImage}
+                styles={{
+                  // NOTE(cvogt): these styles were copy + pasted from craigrich/ruff-guide
+                  // as a temporary fix for the `autoSize` feature not working as intended.
+                  container: base => ({
+                    ...base,
+                    height: '100vh'
+                  }),
+                  view: base => ({
+                    ...base,
+                    alignItems: 'center',
+                    display: 'flex ',
+                    height: 'calc(100vh - 54px)',
+                    justifyContent: 'center',
+                    '& > img': {
+                      maxHeight: 'calc(100vh - 94px)'
+                    }
+                  })
+                }}
                 views={media.map(x => ({
                   ...x,
-                  caption: x.caption,
-                  src: `${x.cdnMediaURL}?auto=format`
+                  source: {
+                    download: `${x.cdnMediaURL}?auto=format`,
+                    fullscreen: `${x.cdnMediaURL}?auto=format`,
+                    regular: `${x.cdnMediaURL}?auto=format`,
+                    thumbnail: `${x.cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`
+                  }
                 }))}
               />
             )}

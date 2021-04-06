@@ -13,11 +13,6 @@
     "prettier": "^2.0.5",
     "pretty-quick": "^3.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "boxen": "^4.1.0"
   }
