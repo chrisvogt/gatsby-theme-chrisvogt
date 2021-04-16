@@ -131,7 +131,7 @@ export default merge(themePreset, {
       '&:not(:last-of-type)': {
         borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
       },
-      '&:hover': {
+      '&:hover, &:focus': {
         backgroundColor: theme => theme.colors.gray[1]
       }
     },
@@ -146,7 +146,7 @@ export default merge(themePreset, {
       '&:not(:last-of-type)': {
         borderBottom: theme => `1px solid ${theme.colors.gray[8]}`
       },
-      '&:hover': {
+      '&:hover, &:focus': {
         backgroundColor: theme => theme.colors.gray[8]
       }
     }
