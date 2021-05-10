@@ -119,7 +119,7 @@
     "gatsby-transformer-sharp": "^2.5.10",
     "husky": "^5.1.3",
     "identity-obj-proxy": "^3.0.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "lottie-react-web": "^2.2.2",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.0",
