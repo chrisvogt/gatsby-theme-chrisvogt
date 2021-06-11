@@ -116,7 +116,7 @@ export default merge(themePreset, {
 
   layout: {
     container: {
-      maxWidth: [``, `94%`, ``, ``, `1200px`],
+      maxWidth: [``, `94%`, ``, ``, `1440px`],
       py: [2, 3],
       px: [3, 4]
     }
