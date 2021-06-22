@@ -23,7 +23,7 @@ const Playlists = ({ isLoading, playlists = [] }) => {
       ) || images.find(
         // If no mosaic cover image was found, select the first available image.
         image => image.url
-      )
+      ) || {}
     
     const tooltipContent = (
       <article>
