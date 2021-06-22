@@ -2,330 +2,767 @@
   "ok": true,
   "payload": {
     "collections": {
-      "topTracks": [
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b27350fd96bb9e4c5a3fdd4496bc",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e0250fd96bb9e4c5a3fdd4496bc",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d0000485150fd96bb9e4c5a3fdd4496bc",
-              "width": 64
-            }
-          ],
-          "artists": ["slenderbodies"],
-          "id": "1MD2yGSeBRALkMui1fZ05P",
-          "name": "anemone",
-          "previewURL": "https://p.scdn.co/mp3-preview/32695c21681888cf3cf18b8668c844737634d8ed?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/1MD2yGSeBRALkMui1fZ05P",
-          "type": "track",
-          "uri": "spotify:track:1MD2yGSeBRALkMui1fZ05P"
+      "topTracks": [{
+        "previewURL": "https://p.scdn.co/mp3-preview/85b567e4e72f2f12b990e1f1b0c7644e4a86c30e?cid=7e543c00908f43738ba514c7213a93d8",
+        "id": "3XfO4iKlM7fdoiJ4uz1wku",
+        "albumImages": [{
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273930f6a7ee143629902a43c4b"
+        }, {
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02930f6a7ee143629902a43c4b",
+          "height": 300
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00004851930f6a7ee143629902a43c4b",
+          "width": 64,
+          "height": 64
+        }],
+        "type": "track",
+        "name": "Love for the Sake of Love",
+        "artists": ["Claudia Barry"],
+        "spotifyURL": "https://open.spotify.com/track/3XfO4iKlM7fdoiJ4uz1wku",
+        "uri": "spotify:track:3XfO4iKlM7fdoiJ4uz1wku"
+      }, {
+        "id": "2IFFKj9orAsQOOS0JRhHAW",
+        "uri": "spotify:track:2IFFKj9orAsQOOS0JRhHAW",
+        "type": "track",
+        "albumImages": [{
+          "width": 640,
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d3af16078e9a78edac2ebed8"
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d3af16078e9a78edac2ebed8",
+          "height": 300,
+          "width": 300
+        }, {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d3af16078e9a78edac2ebed8",
+          "width": 64
+        }],
+        "name": "JEWELZ",
+        "artists": ["Anderson .Paak"],
+        "previewURL": "https://p.scdn.co/mp3-preview/bba91a6b9bd23d9e662ed0361162903975d8c2a5?cid=7e543c00908f43738ba514c7213a93d8",
+        "spotifyURL": "https://open.spotify.com/track/2IFFKj9orAsQOOS0JRhHAW"
+      }, {
+        "previewURL": "https://p.scdn.co/mp3-preview/eed0dcbe7a1dfcca41cdf64ac2f82cca8e139a8b?cid=7e543c00908f43738ba514c7213a93d8",
+        "type": "track",
+        "artists": ["Zara Larsson"],
+        "albumImages": [{
+          "url": "https://i.scdn.co/image/ab67616d0000b2730bc295fb742c44064e6abccb",
+          "width": 640,
+          "height": 640
+        }, {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020bc295fb742c44064e6abccb",
+          "width": 300
+        }, {
+          "width": 64,
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510bc295fb742c44064e6abccb"
+        }],
+        "name": "Need Someone",
+        "uri": "spotify:track:0e6HwIMqkDwr80TmH1mdt3",
+        "id": "0e6HwIMqkDwr80TmH1mdt3",
+        "spotifyURL": "https://open.spotify.com/track/0e6HwIMqkDwr80TmH1mdt3"
+      }, {
+        "name": "Kumbaya",
+        "type": "track",
+        "uri": "spotify:track:2LiAbVThDjRxRWz8SQaWuw",
+        "id": "2LiAbVThDjRxRWz8SQaWuw",
+        "previewURL": "https://p.scdn.co/mp3-preview/b4bd150ca9dcf5f28bfeb1a4b795c5b2aa5ccb0d?cid=7e543c00908f43738ba514c7213a93d8",
+        "spotifyURL": "https://open.spotify.com/track/2LiAbVThDjRxRWz8SQaWuw",
+        "albumImages": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27389934cd399af1ab7e0eb53cd",
+          "width": 640
+        }, {
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0289934cd399af1ab7e0eb53cd",
+          "height": 300
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d0000485189934cd399af1ab7e0eb53cd",
+          "width": 64,
+          "height": 64
+        }],
+        "artists": ["Nick Dorian", "Shibo"]
+      }, {
+        "artists": ["Toro y Moi"],
+        "spotifyURL": "https://open.spotify.com/track/31F0KxmTD4rz3o0tJht5RL",
+        "type": "track",
+        "name": "Ordinary Pleasure",
+        "previewURL": "https://p.scdn.co/mp3-preview/73124eeeb7ffc8998b969bcc31f0ff22d0035a52?cid=7e543c00908f43738ba514c7213a93d8",
+        "uri": "spotify:track:31F0KxmTD4rz3o0tJht5RL",
+        "id": "31F0KxmTD4rz3o0tJht5RL",
+        "albumImages": [{
+          "url": "https://i.scdn.co/image/ab67616d0000b273e6afa3b111faa03806f7d257",
+          "height": 640,
+          "width": 640
+        }, {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02e6afa3b111faa03806f7d257"
+        }, {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851e6afa3b111faa03806f7d257"
+        }]
+      }, {
+        "previewURL": "https://p.scdn.co/mp3-preview/cc5e26dc6c10a17e46a493221689d961300aed6a?cid=7e543c00908f43738ba514c7213a93d8",
+        "id": "3KapR70eIR6Zm3kJfG4oB3",
+        "albumImages": [{
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27307557fc5835b32bd8bdcd813",
+          "height": 640
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00001e0207557fc5835b32bd8bdcd813",
+          "height": 300,
+          "width": 300
+        }, {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485107557fc5835b32bd8bdcd813"
+        }],
+        "uri": "spotify:track:3KapR70eIR6Zm3kJfG4oB3",
+        "artists": ["BJ The Chicago Kid", "Anderson .Paak"],
+        "spotifyURL": "https://open.spotify.com/track/3KapR70eIR6Zm3kJfG4oB3",
+        "type": "track",
+        "name": "Feel The Vibe"
+      }, {
+        "id": "2rXH6dk75hFUjg81BMJYFD",
+        "albumImages": [{
+          "width": 640,
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273503b16348e47bc3c1c823eba"
+        }, {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02503b16348e47bc3c1c823eba"
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00004851503b16348e47bc3c1c823eba",
+          "width": 64,
+          "height": 64
+        }],
+        "type": "track",
+        "artists": ["Zara Larsson"],
+        "name": "Need Someone",
+        "uri": "spotify:track:2rXH6dk75hFUjg81BMJYFD",
+        "spotifyURL": "https://open.spotify.com/track/2rXH6dk75hFUjg81BMJYFD",
+        "previewURL": "https://p.scdn.co/mp3-preview/eed0dcbe7a1dfcca41cdf64ac2f82cca8e139a8b?cid=7e543c00908f43738ba514c7213a93d8"
+      }, {
+        "id": "3B9ieKCdzdULYHSETdNsKR",
+        "name": "Feel Good",
+        "type": "track",
+        "uri": "spotify:track:3B9ieKCdzdULYHSETdNsKR",
+        "albumImages": [{
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734674688688f74bd523616d0f",
+          "height": 640
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00001e024674688688f74bd523616d0f",
+          "height": 300,
+          "width": 300
+        }, {
+          "width": 64,
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048514674688688f74bd523616d0f"
+        }],
+        "previewURL": "https://p.scdn.co/mp3-preview/26d66997de3531f20e54fa03dd073e4f27e0ed66?cid=7e543c00908f43738ba514c7213a93d8",
+        "artists": ["Chet Faker"],
+        "spotifyURL": "https://open.spotify.com/track/3B9ieKCdzdULYHSETdNsKR"
+      }, {
+        "uri": "spotify:track:7HtNRW16rKIWHaHIoRWUbw",
+        "spotifyURL": "https://open.spotify.com/track/7HtNRW16rKIWHaHIoRWUbw",
+        "previewURL": "https://p.scdn.co/mp3-preview/bf3d23584ba357f0b128d7b521c3001d0cc9d1a7?cid=7e543c00908f43738ba514c7213a93d8",
+        "albumImages": [{
+          "url": "https://i.scdn.co/image/ab67616d0000b2738d54bda9af74a20244570ec0",
+          "height": 640,
+          "width": 640
+        }, {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e028d54bda9af74a20244570ec0"
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d000048518d54bda9af74a20244570ec0",
+          "width": 64,
+          "height": 64
+        }],
+        "artists": ["Anderson .Paak", "JID", "Jay Rock", "Noname"],
+        "name": "Lockdown (feat. JID, Noname & Jay Rock) - Remix",
+        "id": "7HtNRW16rKIWHaHIoRWUbw",
+        "type": "track"
+      }, {
+        "previewURL": "https://p.scdn.co/mp3-preview/d346982764e3ce0f39e1d4cff2c8abb9c401743a?cid=7e543c00908f43738ba514c7213a93d8",
+        "uri": "spotify:track:3f9Xt5Bcu1QooplxlTPEtb",
+        "id": "3f9Xt5Bcu1QooplxlTPEtb",
+        "name": "Ur Gonna Wish U Believed Me",
+        "spotifyURL": "https://open.spotify.com/track/3f9Xt5Bcu1QooplxlTPEtb",
+        "artists": ["Cavetown"],
+        "albumImages": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734e851f5899d7b7c0dd95f9ef",
+          "width": 640
+        }, {
+          "width": 300,
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e024e851f5899d7b7c0dd95f9ef"
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d000048514e851f5899d7b7c0dd95f9ef",
+          "width": 64,
+          "height": 64
+        }],
+        "type": "track"
+      }, {
+        "type": "track",
+        "albumImages": [{
+          "width": 640,
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2736c523e64dffbdad6b28d8be4"
+        }, {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e026c523e64dffbdad6b28d8be4",
+          "width": 300
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d000048516c523e64dffbdad6b28d8be4",
+          "width": 64,
+          "height": 64
+        }],
+        "artists": ["Euføeni", "Max Green"],
+        "uri": "spotify:track:7LKnHmDpqEiLuSWsb7MACx",
+        "previewURL": "https://p.scdn.co/mp3-preview/aad96a13f128968a2f484444f56e03dcdfc26614?cid=7e543c00908f43738ba514c7213a93d8",
+        "id": "7LKnHmDpqEiLuSWsb7MACx",
+        "spotifyURL": "https://open.spotify.com/track/7LKnHmDpqEiLuSWsb7MACx",
+        "name": "Only on the Weekends"
+      }, {
+        "artists": ["Slave"],
+        "spotifyURL": "https://open.spotify.com/track/2frjUX62I8nGF41cSUmNVx",
+        "type": "track",
+        "uri": "spotify:track:2frjUX62I8nGF41cSUmNVx",
+        "id": "2frjUX62I8nGF41cSUmNVx",
+        "name": "Party Lites - Joey Negro Boogiefied Mix",
+        "previewURL": "https://p.scdn.co/mp3-preview/7107718e76bd47dfd16da7709cf4ad929873b710?cid=7e543c00908f43738ba514c7213a93d8",
+        "albumImages": [{
+          "url": "https://i.scdn.co/image/ab67616d0000b273cc73e2badf2bfc17bfa348df",
+          "height": 640,
+          "width": 640
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00001e02cc73e2badf2bfc17bfa348df",
+          "width": 300,
+          "height": 300
+        }, {
+          "url": "https://i.scdn.co/image/ab67616d00004851cc73e2badf2bfc17bfa348df",
+          "width": 64,
+          "height": 64
+        }]
+      }],
+      "playlists": [{
+        "collaborative": false,
+        "description": "",
+        "owner": {
+          "display_name": "artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "id": "artinreality",
+          "type": "user",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "uri": "spotify:user:artinreality"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273f0c3f4db92bf83e296517d74",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02f0c3f4db92bf83e296517d74",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d00004851f0c3f4db92bf83e296517d74",
-              "width": 64
-            }
-          ],
-          "artists": ["CAPYAC"],
-          "id": "5ZHtJESnGmQNUo0AmBm4rN",
-          "name": "Fade Out",
-          "previewURL": "https://p.scdn.co/mp3-preview/1d1212c82dbd7568b61ea8a510895412864c51d5?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/5ZHtJESnGmQNUo0AmBm4rN",
-          "type": "track",
-          "uri": "spotify:track:5ZHtJESnGmQNUo0AmBm4rN"
+        "public": true,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4YPO7LX6bOxrCtYGh3OyeP"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/a6c18bf07e6ea959da314c5f23af04e096421242",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/dd7625e6c2def465472abafc87a3108cb9124ef6",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/9d152730fb8c785beae6af15b0e47e1debf93680",
-              "width": 64
-            }
-          ],
-          "artists": ["Amber Mark", "Franc Moody"],
-          "id": "4gdQamULpFs7WeyFGfmTCZ",
-          "name": "Lose My Cool - Franc Moody Remix",
-          "previewURL": "https://p.scdn.co/mp3-preview/c0c0960666baccb851ee8af877b32a82721f69d2?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/4gdQamULpFs7WeyFGfmTCZ",
-          "type": "track",
-          "uri": "spotify:track:4gdQamULpFs7WeyFGfmTCZ"
+        "href": "https://api.spotify.com/v1/playlists/4YPO7LX6bOxrCtYGh3OyeP",
+        "type": "playlist",
+        "tracks": {
+          "total": 395,
+          "href": "https://api.spotify.com/v1/playlists/4YPO7LX6bOxrCtYGh3OyeP/tracks"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2732ccef2adc96fe40c09345c7d",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e022ccef2adc96fe40c09345c7d",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048512ccef2adc96fe40c09345c7d",
-              "width": 64
-            }
-          ],
-          "artists": ["Cherokee", "Darianna Everett"],
-          "id": "2afK7FH9DWHYMqltxqf7IT",
-          "name": "Don't Matter",
-          "previewURL": "https://p.scdn.co/mp3-preview/68e6b25ec9d48b69aa488590ccf58a14c6a85496?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/2afK7FH9DWHYMqltxqf7IT",
-          "type": "track",
-          "uri": "spotify:track:2afK7FH9DWHYMqltxqf7IT"
+        "images": [{
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169",
+          "width": 640
+        }, {
+          "width": 300,
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169"
+        }, {
+          "width": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169",
+          "height": 60
+        }],
+        "uri": "spotify:playlist:4YPO7LX6bOxrCtYGh3OyeP",
+        "snapshot_id": "NzM4LDM1MjAyZTNjNWQ1MTY0ODM5MmJkYmMyYzRjZjk2ZDY0MWQwOGQ0YWQ=",
+        "primary_color": null,
+        "name": "Ultimate Indie Pop",
+        "id": "4YPO7LX6bOxrCtYGh3OyeP"
+      }, {
+        "snapshot_id": "NjY4LDQ5YWFiYjg1NTliYmEwODM0NGY4MjMwMzFkZWRmYjcxMDkzODBiNWY=",
+        "type": "playlist",
+        "owner": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "id": "artinreality",
+          "uri": "spotify:user:artinreality",
+          "type": "user",
+          "display_name": "artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2733f9de2a1db5213ff8e3c0517",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e023f9de2a1db5213ff8e3c0517",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048513f9de2a1db5213ff8e3c0517",
-              "width": 64
-            }
-          ],
-          "artists": ["Sure Sure"],
-          "id": "7oiZRx7OZbUAYUiYeFTXrf",
-          "name": "Warm Animal",
-          "previewURL": "https://p.scdn.co/mp3-preview/db45eae651bc6ee653d42abafffd231d226bc7ca?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/7oiZRx7OZbUAYUiYeFTXrf",
-          "type": "track",
-          "uri": "spotify:track:7oiZRx7OZbUAYUiYeFTXrf"
+        "description": "",
+        "name": "Synth-Pop, Nu-Disco, Dance, House",
+        "uri": "spotify:playlist:53Ry00dOkLb6yp9C2ev6ff",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/53Ry00dOkLb6yp9C2ev6ff/tracks",
+          "total": 258
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2731e57969cdfd106845659d402",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e021e57969cdfd106845659d402",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048511e57969cdfd106845659d402",
-              "width": 64
-            }
-          ],
-          "artists": ["Spooky Mansion"],
-          "id": "4XFAZiuoFOY6kz0qtO07kz",
-          "name": "I'm the Moon",
-          "previewURL": "https://p.scdn.co/mp3-preview/38c81fe97e57f30ffc442639d8616b4ef84ebd1a?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/4XFAZiuoFOY6kz0qtO07kz",
-          "type": "track",
-          "uri": "spotify:track:4XFAZiuoFOY6kz0qtO07kz"
+        "id": "53Ry00dOkLb6yp9C2ev6ff",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/53Ry00dOkLb6yp9C2ev6ff"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2735903e8e0ac75fea1ec096872",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e025903e8e0ac75fea1ec096872",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048515903e8e0ac75fea1ec096872",
-              "width": 64
-            }
-          ],
-          "artists": ["Medasin"],
-          "id": "42NB7w0tDCag0mQpCtZe7Y",
-          "name": "Home",
-          "previewURL": "https://p.scdn.co/mp3-preview/f3e6101bd3bebcc843c951bb23b1d5f2a9d066ef?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/42NB7w0tDCag0mQpCtZe7Y",
-          "type": "track",
-          "uri": "spotify:track:42NB7w0tDCag0mQpCtZe7Y"
+        "images": [{
+          "width": 640,
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a"
+        }, {
+          "width": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a",
+          "height": 300
+        }, {
+          "width": 60,
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a"
+        }],
+        "primary_color": null,
+        "href": "https://api.spotify.com/v1/playlists/53Ry00dOkLb6yp9C2ev6ff",
+        "public": true,
+        "collaborative": false
+      }, {
+        "tracks": {
+          "total": 211,
+          "href": "https://api.spotify.com/v1/playlists/4cWFcKJwGWdus1ybRF0JpH/tracks"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2735850e5a578de304674c58b41",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e025850e5a578de304674c58b41",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048515850e5a578de304674c58b41",
-              "width": 64
-            }
-          ],
-          "artists": ["CAPYAC"],
-          "id": "5sac8J8GOrLYhgyI0Wv8JA",
-          "name": "Cloud",
-          "previewURL": "https://p.scdn.co/mp3-preview/2eeaed4ba896132b77cdc9983e832ff8ea55760a?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/5sac8J8GOrLYhgyI0Wv8JA",
-          "type": "track",
-          "uri": "spotify:track:5sac8J8GOrLYhgyI0Wv8JA"
+        "description": "EDM, Chillout, Trap, etc. MUST HAVE VOCALS.",
+        "owner": {
+          "display_name": "artinreality",
+          "id": "artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "type": "user",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "uri": "spotify:user:artinreality"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273ca433cd4e9d415980ae59d0d",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02ca433cd4e9d415980ae59d0d",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d00004851ca433cd4e9d415980ae59d0d",
-              "width": 64
-            }
-          ],
-          "artists": ["Flight Facilities", "Emma Louise"],
-          "id": "2hulgdYA9kUBXb2SRwXUGp",
-          "name": "Arty Boy - Tennyson Remix",
-          "previewURL": "https://p.scdn.co/mp3-preview/88a5a0d67402dd49146625f727d37cb6f8140700?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/2hulgdYA9kUBXb2SRwXUGp",
-          "type": "track",
-          "uri": "spotify:track:2hulgdYA9kUBXb2SRwXUGp"
+        "collaborative": false,
+        "uri": "spotify:playlist:4cWFcKJwGWdus1ybRF0JpH",
+        "href": "https://api.spotify.com/v1/playlists/4cWFcKJwGWdus1ybRF0JpH",
+        "public": true,
+        "id": "4cWFcKJwGWdus1ybRF0JpH",
+        "images": [{
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7",
+          "width": 640
+        }, {
+          "height": 300,
+          "width": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7"
+        }, {
+          "width": 60,
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7"
+        }],
+        "primary_color": null,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4cWFcKJwGWdus1ybRF0JpH"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/9fcc7c1628f0cb8c811170b74a1240844bc4920a",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/00da6fd7c1710d2ada2f7db8db9a4b2c83223d06",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ddeae3ede2391b3ab6765da3d40bad8f2db36c84",
-              "width": 64
-            }
-          ],
-          "artists": ["The Knocks", "Sofi Tukker"],
-          "id": "5iX7aAVoO3dzUOZ1eAvg6f",
-          "name": "Brazilian Soul (feat. Sofi Tukker) - Acoustic Bossa Version",
-          "previewURL": "https://p.scdn.co/mp3-preview/ef7680349b578859da7b71eae889f0c287d01035?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/5iX7aAVoO3dzUOZ1eAvg6f",
-          "type": "track",
-          "uri": "spotify:track:5iX7aAVoO3dzUOZ1eAvg6f"
+        "snapshot_id": "MzU4LDExMDljY2NiYzQyYTgxNzA4ZDY4OTU3Y2FiNWY5YjI3MThlYmQ4M2Y=",
+        "type": "playlist",
+        "name": "Vocal Electronic"
+      }, {
+        "tracks": {
+          "total": 141,
+          "href": "https://api.spotify.com/v1/playlists/3h8hEJstYMBLe9HYKWQ3Mi/tracks"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273ff12bab75fd8ad7040655217",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02ff12bab75fd8ad7040655217",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d00004851ff12bab75fd8ad7040655217",
-              "width": 64
-            }
-          ],
-          "artists": ["Cherokee", "Knight One"],
-          "id": "5WaHatPe9W2ivWX1y0C2oQ",
-          "name": "Someone in L.A. (feat. Knight One)",
-          "previewURL": "https://p.scdn.co/mp3-preview/43afca8cb0fe1c11bde468cf5e37f78df1218f01?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/5WaHatPe9W2ivWX1y0C2oQ",
-          "type": "track",
-          "uri": "spotify:track:5WaHatPe9W2ivWX1y0C2oQ"
+        "images": [{
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72",
+          "width": 640
+        }, {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72",
+          "width": 300
+        }, {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72",
+          "width": 60,
+          "height": 60
+        }],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/3h8hEJstYMBLe9HYKWQ3Mi"
         },
-        {
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273f1d10a00b56951c0858c839b",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02f1d10a00b56951c0858c839b",
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d00004851f1d10a00b56951c0858c839b",
-              "width": 64
-            }
-          ],
-          "artists": ["CAPYAC"],
-          "id": "6RUUaEumPDW1ZDSUUluOyg",
-          "name": "Speedracer",
-          "previewURL": "https://p.scdn.co/mp3-preview/58ca8147c48e83c280d4163d2e649557e3341404?cid=774b29d4f13844c495f206cafdad9c86",
-          "spotifyURL": "https://open.spotify.com/track/6RUUaEumPDW1ZDSUUluOyg",
-          "type": "track",
-          "uri": "spotify:track:6RUUaEumPDW1ZDSUUluOyg"
+        "href": "https://api.spotify.com/v1/playlists/3h8hEJstYMBLe9HYKWQ3Mi",
+        "public": true,
+        "description": "",
+        "uri": "spotify:playlist:3h8hEJstYMBLe9HYKWQ3Mi",
+        "collaborative": false,
+        "snapshot_id": "MTk4LDQ3NTEyMTRiNTJkMDEzMDc0N2M3ZGYwZTIwMzQ3ODY4NzdhYzkxYWE=",
+        "id": "3h8hEJstYMBLe9HYKWQ3Mi",
+        "primary_color": null,
+        "owner": {
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "type": "user",
+          "uri": "spotify:user:artinreality",
+          "id": "artinreality",
+          "display_name": "artinreality"
+        },
+        "type": "playlist",
+        "name": "Electronic Chillout"
+      }, {
+        "images": [{
+          "width": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead",
+          "height": 640
+        }, {
+          "width": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead",
+          "height": 300
+        }, {
+          "width": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead",
+          "height": 60
+        }],
+        "name": "Indie Chillout",
+        "type": "playlist",
+        "primary_color": null,
+        "id": "42a26csbjfu6Jq9Y9CvS5b",
+        "snapshot_id": "MzU0LGM2NDRlNzEzYzc4ZmE2MmViNGM4MzQ5NGIyYjRiOWQ1N2FmMTUwYzQ=",
+        "href": "https://api.spotify.com/v1/playlists/42a26csbjfu6Jq9Y9CvS5b",
+        "tracks": {
+          "total": 228,
+          "href": "https://api.spotify.com/v1/playlists/42a26csbjfu6Jq9Y9CvS5b/tracks"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/42a26csbjfu6Jq9Y9CvS5b"
+        },
+        "owner": {
+          "type": "user",
+          "display_name": "artinreality",
+          "uri": "spotify:user:artinreality",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "id": "artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality"
+        },
+        "collaborative": false,
+        "uri": "spotify:playlist:42a26csbjfu6Jq9Y9CvS5b",
+        "description": "",
+        "public": true
+      }, {
+        "images": [{
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6",
+          "width": 640
+        }, {
+          "height": 300,
+          "width": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6"
+        }, {
+          "height": 60,
+          "width": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6"
+        }],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/12hPoK5CsB46n2w3gi7GMJ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/12hPoK5CsB46n2w3gi7GMJ",
+        "snapshot_id": "NzYsMTE4OTBiM2QxMDI4YzczODc5MzFkNmYzYjJkZTE5NzUxNGYyMWE0ZA==",
+        "type": "playlist",
+        "name": "Indie Dance, Vocal & Electronica",
+        "public": true,
+        "primary_color": null,
+        "uri": "spotify:playlist:12hPoK5CsB46n2w3gi7GMJ",
+        "id": "12hPoK5CsB46n2w3gi7GMJ",
+        "description": "",
+        "owner": {
+          "type": "user",
+          "id": "artinreality",
+          "uri": "spotify:user:artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "display_name": "artinreality",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          }
+        },
+        "collaborative": false,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/12hPoK5CsB46n2w3gi7GMJ/tracks",
+          "total": 162
         }
-      ]
+      }, {
+        "id": "05aRcvpURUQdWgbn5iZ26p",
+        "public": true,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/05aRcvpURUQdWgbn5iZ26p/tracks",
+          "total": 110
+        },
+        "owner": {
+          "type": "user",
+          "display_name": "artinreality",
+          "id": "artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "uri": "spotify:user:artinreality",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          }
+        },
+        "name": "Eclectic 60s and 70s",
+        "collaborative": false,
+        "href": "https://api.spotify.com/v1/playlists/05aRcvpURUQdWgbn5iZ26p",
+        "images": [{
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b",
+          "width": 640
+        }, {
+          "height": 300,
+          "width": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b"
+        }, {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b",
+          "width": 60,
+          "height": 60
+        }],
+        "description": "",
+        "uri": "spotify:playlist:05aRcvpURUQdWgbn5iZ26p",
+        "snapshot_id": "MTg5LDJmZmJiNWQyZGE0NGMxN2RmYjdkODBjNGY3NWZlZGJjMWMyNDVjNmY=",
+        "primary_color": null,
+        "type": "playlist",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/05aRcvpURUQdWgbn5iZ26p"
+        }
+      }, {
+        "type": "playlist",
+        "primary_color": null,
+        "owner": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "display_name": "artinreality",
+          "type": "user",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "uri": "spotify:user:artinreality",
+          "id": "artinreality"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37FbCEeNnc5kIMnV2anBUP"
+        },
+        "name": "Soul, Motown, Disco",
+        "collaborative": false,
+        "snapshot_id": "NDQsZDZhMjJkZGU2MzQ4OWQ2N2QwMDAyYzYwYmMwMThjMDdiM2RhMDBkYw==",
+        "images": [{
+          "width": 640,
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f"
+        }, {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f",
+          "height": 300,
+          "width": 300
+        }, {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f",
+          "height": 60,
+          "width": 60
+        }],
+        "tracks": {
+          "total": 31,
+          "href": "https://api.spotify.com/v1/playlists/37FbCEeNnc5kIMnV2anBUP/tracks"
+        },
+        "description": "",
+        "public": true,
+        "id": "37FbCEeNnc5kIMnV2anBUP",
+        "href": "https://api.spotify.com/v1/playlists/37FbCEeNnc5kIMnV2anBUP",
+        "uri": "spotify:playlist:37FbCEeNnc5kIMnV2anBUP"
+      }, {
+        "id": "6E0nDvsNV4LMwdydcjQNHE",
+        "snapshot_id": "MTQ5LDY0ZjlkNjQyNmQ2MWYxMTQ3YTcwYzQ5NDc5MTA4ODI1MjI1ZTQ4NmM=",
+        "type": "playlist",
+        "href": "https://api.spotify.com/v1/playlists/6E0nDvsNV4LMwdydcjQNHE",
+        "collaborative": false,
+        "primary_color": null,
+        "description": "",
+        "public": true,
+        "images": [{
+          "width": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b",
+          "height": 640
+        }, {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b",
+          "height": 300,
+          "width": 300
+        }, {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b",
+          "width": 60,
+          "height": 60
+        }],
+        "uri": "spotify:playlist:6E0nDvsNV4LMwdydcjQNHE",
+        "owner": {
+          "uri": "spotify:user:artinreality",
+          "display_name": "artinreality",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "id": "artinreality",
+          "type": "user",
+          "href": "https://api.spotify.com/v1/users/artinreality"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/6E0nDvsNV4LMwdydcjQNHE"
+        },
+        "name": "Indie Mix",
+        "tracks": {
+          "total": 242,
+          "href": "https://api.spotify.com/v1/playlists/6E0nDvsNV4LMwdydcjQNHE/tracks"
+        }
+      }, {
+        "tracks": {
+          "total": 81,
+          "href": "https://api.spotify.com/v1/playlists/0HYUAiwdrIFBlQmazkNZ0F/tracks"
+        },
+        "description": "",
+        "href": "https://api.spotify.com/v1/playlists/0HYUAiwdrIFBlQmazkNZ0F",
+        "collaborative": false,
+        "primary_color": null,
+        "uri": "spotify:playlist:0HYUAiwdrIFBlQmazkNZ0F",
+        "snapshot_id": "MTM0LGVjOGRkYmI4MWQ2ZDM5M2M3Njc3NTEwMTQ3MmJlNTYyNTZlZDVlNDg=",
+        "owner": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "uri": "spotify:user:artinreality",
+          "display_name": "artinreality",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "type": "user",
+          "id": "artinreality"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/0HYUAiwdrIFBlQmazkNZ0F"
+        },
+        "name": "Dubstep, Trap, Hardstyle",
+        "type": "playlist",
+        "id": "0HYUAiwdrIFBlQmazkNZ0F",
+        "images": [{
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27",
+          "height": 640,
+          "width": 640
+        }, {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27",
+          "height": 300,
+          "width": 300
+        }, {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27",
+          "height": 60,
+          "width": 60
+        }],
+        "public": true
+      }, {
+        "collaborative": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1EMdjDTSZSRsOw"
+        },
+        "name": "Your Top Songs 2020",
+        "snapshot_id": "MjY3NzQ1OTgsMDAwMDAwMDA1ZTMwZThhNmExZTk2ZTIwY2QwY2U3YzE4OTc3NDhhNg==",
+        "primary_color": null,
+        "public": true,
+        "id": "37i9dQZF1EMdjDTSZSRsOw",
+        "uri": "spotify:playlist:37i9dQZF1EMdjDTSZSRsOw",
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EMdjDTSZSRsOw",
+        "description": "The songs you loved most this year, all wrapped up.",
+        "images": [{
+          "height": null,
+          "url": "https://lineup-images.scdn.co/wrapped-2020-top100_LARGE-en.jpg",
+          "width": null
+        }],
+        "type": "playlist",
+        "owner": {
+          "uri": "spotify:user:spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "display_name": "Spotify",
+          "id": "spotify",
+          "type": "user"
+        },
+        "tracks": {
+          "total": 100,
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EMdjDTSZSRsOw/tracks"
+        }
+      }, {
+        "type": "playlist",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/4OSZN85T35doDPWSHWTSYG/tracks",
+          "total": 50
+        },
+        "collaborative": false,
+        "images": [{
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362",
+          "height": 640,
+          "width": 640
+        }, {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362",
+          "height": 300,
+          "width": 300
+        }, {
+          "height": 60,
+          "width": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362"
+        }],
+        "primary_color": null,
+        "description": "",
+        "public": true,
+        "owner": {
+          "uri": "spotify:user:artinreality",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/artinreality"
+          },
+          "display_name": "artinreality",
+          "type": "user",
+          "href": "https://api.spotify.com/v1/users/artinreality",
+          "id": "artinreality"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4OSZN85T35doDPWSHWTSYG"
+        },
+        "id": "4OSZN85T35doDPWSHWTSYG",
+        "name": "Rock, Ambient & Post-Rock",
+        "snapshot_id": "ODUsN2E1N2QzZjBiNzY2Y2U4MGI0Y2RlMWM2MTllNTg1Y2Y4ODZlMDBjZQ==",
+        "uri": "spotify:playlist:4OSZN85T35doDPWSHWTSYG",
+        "href": "https://api.spotify.com/v1/playlists/4OSZN85T35doDPWSHWTSYG"
+      }]
     },
-    "metrics": [
-      { "displayName": "Followers", "id": "followers-count", "value": 43 },
-      { "displayName": "Playlists", "id": "playlists-count", "value": 52 }
-    ],
-    "provider": { "displayName": "Spotify", "id": "spotify" },
+    "metrics": [{
+      "displayName": "Followers",
+      "value": 48,
+      "id": "followers-count"
+    }, {
+      "displayName": "Playlists",
+      "id": "playlists-count",
+      "value": 47
+    }],
     "profile": {
-      "avatarURL": "https://profile-images.scdn.co/images/userprofile/default/88882671c8c71a284cae03d4b6f60d3055f7ccae",
-      "displayName": "artinreality",
-      "profileURL": "https://open.spotify.com/user/artinreality"
+      "id": "artinreality",
+      "followersCount": 48,
+      "avatarURL": {
+        "width": null,
+        "url": "https://i.scdn.co/image/ab6775700000ee854213dddf2a0a9481a2db7e6c",
+        "height": null
+      },
+      "profileURL": "https://open.spotify.com/user/artinreality",
+      "displayName": "artinreality"
+    },
+    "meta": {
+      "synced": "2021-06-22T06:51:01.533Z"
     }
   }
 }

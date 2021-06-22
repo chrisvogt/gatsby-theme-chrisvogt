@@ -34,11 +34,11 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
           opacity: 0,
           transition: `all .3s ease`
         },
-        '&:hover': {
+        '&:hover, &:focus': {
           textDecoration: `none`,
           transform: `translateX(150px)`
         },
-        '&:hover .read-more-icon': {
+        '&:hover .read-more-icon, &:focus .read-more-icon': {
           opacity: 1,
           ml: 2
         }
