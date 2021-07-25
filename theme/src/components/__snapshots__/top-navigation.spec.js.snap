@@ -11,27 +11,21 @@ exports[`TopNavigation matches the snapshot 1`] = `
       className="css-fjtwc7-TopNavigation"
     >
       <a
-        as={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          }
-        }
+        aria-current="page"
         className="css-tmfr8g-TopNavigation"
-        to="/"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
       >
         My Personal Blog & Portfolio
       </a>
       <a
-        as={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          }
-        }
         className="css-xwnvsa"
+        href="/about-me"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
         title="About Me"
-        to="/about-me"
       >
         About Me
       </a>

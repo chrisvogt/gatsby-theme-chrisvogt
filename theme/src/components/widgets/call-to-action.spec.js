@@ -51,7 +51,7 @@ describe('CallToAction', () => {
       expect(hyperlinkEl.props.href).toBe(href)
     })
 
-    it.skip('renders a Gatsby Router link', () => {
+    it('renders a Gatsby Router link', () => {
       const route = '/about-me'
       const testRenderer = renderer.create(
         <CallToAction title={title} to={route}>
