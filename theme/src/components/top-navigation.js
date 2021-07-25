@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Styled } from 'theme-ui'
+import { jsx, Container, Themed } from 'theme-ui'
 import { Link } from 'gatsby'
 
 import ColorToggle from '../components/color-toggle'
@@ -37,7 +37,7 @@ const TopNavigation = ({ hideBackground }) => {
         }}
       >
         <div sx={{ flexGrow: 1 }}>
-          <Styled.a
+          <Themed.a
             as={Link}
             to='/'
             sx={{
@@ -51,11 +51,11 @@ const TopNavigation = ({ hideBackground }) => {
             }}
           >
             {title}
-          </Styled.a>
+          </Themed.a>
 
           {menuItems &&
             menuItems.map(({ slug, path, title, text }) => (
-              <Styled.a
+              <Themed.a
                 as={Link}
                 key={slug}
                 sx={{ color: `light`, mr: 3 }}
@@ -63,7 +63,7 @@ const TopNavigation = ({ hideBackground }) => {
                 to={path}
               >
                 {text}
-              </Styled.a>
+              </Themed.a>
             ))}
         </div>
 

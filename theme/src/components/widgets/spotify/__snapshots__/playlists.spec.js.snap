@@ -20,11 +20,13 @@ exports[`Playlists matches the snapshot 1`] = `
     className="media-item_grid null css-ulmvcj-MediaItemGrid"
   >
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -41,11 +43,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -62,11 +66,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -83,11 +89,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -104,11 +112,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -125,11 +135,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -146,11 +158,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -167,11 +181,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -188,11 +204,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -209,11 +227,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -230,11 +250,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"
@@ -251,11 +273,13 @@ exports[`Playlists matches the snapshot 1`] = `
       </a>
     </span>
     <span
-      className="trigger"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
     >
       <a
         className="media-item_media css-0"

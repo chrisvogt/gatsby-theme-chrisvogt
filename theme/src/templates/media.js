@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, Flex, jsx, Styled, useThemeUI } from 'theme-ui'
+import { Container, Flex, jsx, Themed, useThemeUI } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -65,7 +65,7 @@ const MediaTemplate = ({ data }) => {
 
           <time className='created'>{date}</time>
 
-          <Styled.h1 as={Heading}>{title}</Styled.h1>
+          <Themed.h1 as={Heading}>{title}</Themed.h1>
 
           <div className='article-content'>
             <MDXRenderer>{mdx.body}</MDXRenderer>
