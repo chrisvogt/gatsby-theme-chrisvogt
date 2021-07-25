@@ -5,12 +5,12 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
   className="css-vurnku"
 >
   <h3
-    className="css-4bdn9t-LastPullRequest"
+    className="css-11k9acw-LastPullRequest"
   >
     Last Pull Request
   </h3>
   <a
-    className="css-1u3g0h0-LastPullRequest"
+    className="css-jhzvgq-LastPullRequest"
   >
     <div
       className="css-vurnku"
@@ -28,7 +28,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
         }
       />
       <div
-        className="css-1neg0er-CardFooter"
+        className="css-zn3ns5-CardFooter"
       >
         <div
           className="text-row show-loading-animation"
@@ -53,12 +53,12 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
   className="css-vurnku"
 >
   <h3
-    className="css-4bdn9t-LastPullRequest"
+    className="css-11k9acw-LastPullRequest"
   >
     Last Pull Request
   </h3>
   <a
-    className="css-1u3g0h0-LastPullRequest"
+    className="css-jhzvgq-LastPullRequest"
     href="https://www.github.com/chrisvogt/null/pulls/42"
   >
     <div
@@ -68,7 +68,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
         Add fake information to the fake project's repository
          (
         <span
-          className="css-l4wgt8-LastPullRequest"
+          className="css-12nm8yr-LastPullRequest"
         >
           #
           42
@@ -80,7 +80,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
         </em>
       </span>
       <div
-        className="css-1neg0er-CardFooter"
+        className="css-zn3ns5-CardFooter"
       >
         <span>
           View on 

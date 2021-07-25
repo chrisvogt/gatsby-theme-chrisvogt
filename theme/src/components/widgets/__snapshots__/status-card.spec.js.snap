@@ -2,6 +2,6 @@
 
 exports[`StatusCard matches the snapshot 1`] = `
 <div
-  className="css-1hcqsf3-StatusCard"
+  className="css-1ff7gh2-StatusCard"
 />
 `;

@@ -2,7 +2,7 @@
 
 exports[`CardFooter matches the snapshot 1`] = `
 <div
-  className="css-1nldqfs-CardFooter"
+  className="css-1tkdyol-CardFooter"
 >
   Test
 </div>

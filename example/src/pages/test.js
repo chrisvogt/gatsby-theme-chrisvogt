@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-export default () => (
-  <h1>Test</h1>
+const TestPage = () => (
+  <Fragment>
+    <h1>Test Page</h1>
+    <p>Lorum ipsum dolor sit amet.</p>
+  </Fragment>
 )
 
+export default TestPage

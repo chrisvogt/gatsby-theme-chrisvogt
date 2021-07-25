@@ -2,13 +2,13 @@
 
 exports[`InstagramWidgetItem matches the snapshot 1`] = `
 <button
-  className="css-19bqgup-InstagramWidgetItem"
+  className="css-sf4r4r-InstagramWidgetItem"
   onClick={[Function]}
   rel="noopener noreferrer"
 >
   <img
     alt="Instagram post thumbnail"
-    className="instagram-item-image css-152q4me-InstagramWidgetItem"
+    className="instagram-item-image css-ko57dg-InstagramWidgetItem"
     crossOrigin="anonymous"
     height="280"
     src="undefined?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format"

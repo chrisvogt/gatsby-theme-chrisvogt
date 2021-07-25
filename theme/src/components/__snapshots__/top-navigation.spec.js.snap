@@ -2,30 +2,36 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-1uoha03-TopNavigation"
+  className="css-zwfbmq-TopNavigation"
 >
   <div
-    className="css-1t0yh0-TopNavigation"
+    className="css-sl4bvk-TopNavigation"
   >
     <div
-      className="css-18lvm9j-TopNavigation"
+      className="css-fjtwc7-TopNavigation"
     >
       <a
-        aria-current="page"
-        className="css-76wk06-TopNavigation"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        style={Object {}}
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        className="css-tmfr8g-TopNavigation"
+        to="/"
       >
         My Personal Blog & Portfolio
       </a>
       <a
-        className="css-sozs5y"
-        href="/about-me"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        className="css-xwnvsa"
         title="About Me"
+        to="/about-me"
       >
         About Me
       </a>
