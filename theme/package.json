@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-private-sphere",
-  "description": "Personal blog and website with built-in social activity widgets for bloggers, creatives, and developers.",
+  "description": "Personal blog and website with built-in social widgets.",
   "version": "0.18.2",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
