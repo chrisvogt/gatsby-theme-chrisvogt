@@ -25,7 +25,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot
         />
       </div>
       <div
-        className="css-uwwqev"
+        className="css-fjakwv"
       >
         <div
           className="text-block"
@@ -116,23 +116,23 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant s
   className="css-vurnku"
 >
   <div
-    className="css-3xm76x-Repository"
+    className="css-6tik87-Repository"
   >
     <h4
-      className="css-dxkypm-Repository"
+      className="css-1t113no-Repository"
     >
       chrisvogt/null
     </h4>
     <span
-      className="css-1yqdz9k-Repository"
+      className="css-rpa521-Repository"
     >
       A fake NodeJS project.
     </span>
     <div
-      className="css-1nldqfs-CardFooter"
+      className="css-1tkdyol-CardFooter"
     >
       <span
-        className="css-15n3i4m-Repository"
+        className="css-14d26u1-Repository"
       >
         Last updated 
         NaN years ago

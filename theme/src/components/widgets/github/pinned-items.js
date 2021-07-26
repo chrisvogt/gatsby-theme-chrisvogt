@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Box, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
@@ -25,7 +25,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
 
       <p>Pinned items on my GitHub profile.</p>
 
-      <Styled.div
+      <Themed.div
         sx={{
           display: 'grid',
           gridAutoRows: '1fr',
@@ -34,7 +34,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
         }}
       >
         {itemsToRender.map((item, index) => (
-          <Styled.a
+          <Themed.a
             href={item.url}
             key={item.id || index}
             sx={{
@@ -45,9 +45,9 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
             }}
           >
             <PinnedItemCard item={item} type={item.__typename} />
-          </Styled.a>
+          </Themed.a>
         ))}
-      </Styled.div>
+      </Themed.div>
     </Box>
   )
 }

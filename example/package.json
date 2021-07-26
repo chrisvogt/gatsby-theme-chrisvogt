@@ -10,11 +10,11 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^2.24.57",
+    "gatsby": "^3.10.1",
     "gatsby-theme-private-sphere": "*",
-    "pretty-quick": "^3.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "pretty-quick": "^3.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9"

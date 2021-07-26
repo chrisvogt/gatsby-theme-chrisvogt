@@ -2,29 +2,29 @@
 
 exports[`HomeHeaderContent matches the snapshot 1`] = `
 <div
-  className="css-wnoixq-HomeHeaderContent"
+  className="css-1sf28qk-HomeHeaderContent"
 >
   <div
-    className="css-qll0zh-HomeHeaderContent"
+    className="css-1kjtssk-HomeHeaderContent"
   >
     <img
       alt="Avatar"
-      className="css-18cbw15-HomeHeaderContent"
+      className="css-e14vrk-HomeHeaderContent"
       height="128"
       src="https://fake-cdn.chrisvogt.me/images/avatar.jpg"
       width="128"
     />
   </div>
   <div
-    className="css-cv27iz-HomeHeaderContent"
+    className="css-z3564l-HomeHeaderContent"
   >
     <h1
-      className="css-1bfsgft-HomeHeaderContent"
+      className="css-1h9knbm-HomeHeaderContent"
     >
       Website Title
     </h1>
     <p
-      className="css-1pntkjx-HomeHeaderContent"
+      className="css-1ex0jat-HomeHeaderContent"
     >
       A cool subtitle for my website
     </p>

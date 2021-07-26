@@ -24,20 +24,20 @@ const mockThemeUIResult = {
   }
 }
 
-describe.only('SEO', () => {
+describe('SEO', () => {
   useSiteMetadata.mockImplementation(() => mockSiteMetadata)
   useThemeUI.mockImplementation(() => mockThemeUIResult)
 
   describe('page title', () => {
     it('defaults to the site title', () => {
-      const wrapper = mount(<SEO />)
+      mount(<SEO />)
       expect(Helmet.peek().title).toBe(
         'My Personal Blog & Portfolio | My Test Site'
       )
     })
 
     it('accepts a custom page title', () => {
-      const wrapper = mount(<SEO title='derp' />)
+      mount(<SEO title='derp' />)
       expect(Helmet.peek().title).toBe('derp | My Test Site')
     })
   })

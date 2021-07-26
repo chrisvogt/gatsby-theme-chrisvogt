@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
 import ago from 's-ago'
 import PropTypes from 'prop-types'
@@ -47,7 +47,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
         Status
       </Heading>
 
-      <Styled.a
+      <Themed.a
         href={link}
         sx={{
           display: `flex`,
@@ -83,7 +83,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
             </Placeholder>
           </CardFooter>
         </Card>
-      </Styled.a>
+      </Themed.a>
     </Box>
   )
 }
