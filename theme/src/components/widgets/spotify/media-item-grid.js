@@ -24,54 +24,17 @@ const placeholders = Array(12)
     </div>
   ))
 
-const MediaItemGrid = ({ isLoading, items = [] }) => {
-  const [currentMediaId, setCurrentMediaId] = useState(false)
+const MediaItemGrid = ({ activeMediaId, children }) => {
   return (
     <div
-      className={`media-item_grid ${!!currentMediaId ? 'media-item_grid--interacting' : null}`}
+      className={`media-item_grid ${!!activeMediaId ? 'media-item_grid--interacting' : null}`}
       sx={{
         display: `grid`,
         gridGap: [3, 2, 2, 3],
-        gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
+        gridTemplateColumns: [`1fr`, `repeat(2, 1fr)`, `repeat(3, 1fr)`]
       }}
     >
-      <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-        {items.map(({
-            id,
-            spotifyURL,
-            thumbnailURL,
-            tooltipContent
-          }) => {
-            return (
-              <Tooltip
-                key={id}
-                placement='top'
-                tooltip={tooltipContent}
-                trigger={['hover', 'focus']}
-              >
-                <Themed.a
-                  className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
-                  href={spotifyURL}
-                  onMouseEnter={() => setCurrentMediaId(id)}
-                  onMouseLeave={() => setCurrentMediaId(false)}
-                >
-                  <img
-                    alt='cover artwork'
-                    crossOrigin='anonymous'
-                    src={thumbnailURL}
-                    sx={{
-                      ...floatOnHover,
-                      boxShadow: `md`,
-                      borderRadius: `4px`,
-                      objectFit: 'cover',
-                      width: '100%'
-                    }}
-                  />
-                </Themed.a>
-              </Tooltip>
-            )
-          })}
-      </Placeholder>
+      {children}
     </div>
   )
 }
