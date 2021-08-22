@@ -6,3 +6,4 @@ coverage
 launch.json
 node_modules
 public
+yarn-error.log
