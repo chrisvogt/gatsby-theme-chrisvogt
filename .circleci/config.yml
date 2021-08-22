@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:14.17.4
 
     working_directory: ~/gatsby-theme-private-sphere
 
