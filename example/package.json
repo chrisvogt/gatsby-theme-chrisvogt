@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "license": "GPL",
   "scripts": {
-    "build": "gatsby clean && gatsby build",
+    "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "serve": "gatsby serve"
