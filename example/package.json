@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "example",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "GPL",
   "scripts": {
     "build": "gatsby build",
@@ -10,13 +10,13 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^3.10.1",
+    "gatsby": "^3.12.0",
     "gatsby-theme-private-sphere": "*",
-    "pretty-quick": "^3.1.1",
+    "pretty-quick": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9"
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.24"
   }
 }
