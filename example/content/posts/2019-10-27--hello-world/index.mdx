@@ -36,11 +36,7 @@ Private Sphere comes with a social overview page with built-in GitHub, Goodreads
 
 ### Code in Markdown
 
-```jsx{numberLines: true}
-import React from 'react'
-
-export default () => <h1>Test</h1>
-```
+Basic demonstration.
 
 ```html
 <html>
@@ -48,6 +44,22 @@ export default () => <h1>Test</h1>
     Test
   </body>
 </html>
+```
+
+Demonstrating code highlighting.
+
+```javascript{1,4-6}
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-prismjs`,
+      ]
+    }
+  }
+]
 ```
 
 ### JSX in Markdown

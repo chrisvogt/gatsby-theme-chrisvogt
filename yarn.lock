@@ -7632,7 +7632,7 @@ gatsby-remark-images@^5.7.0:
     unist-util-select "^3.0.4"
     unist-util-visit-parents "^3.1.1"
 
-gatsby-remark-prismjs@^5.7.0:
+gatsby-remark-prismjs@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-5.9.0.tgz#e6b071454c3cd0c895ba77b423680d944c4e3f18"
   integrity sha512-4InG80vkTwRVbPtDqEBmJRhE9qwsQILyHOH+tVVIlK5Rmj3vtLf5aB7Ha4hOroaYTUpZraFcepsQvXA0omrREg==
@@ -7696,7 +7696,7 @@ gatsby-transformer-json@^3.10.0:
     "@babel/runtime" "^7.14.8"
     bluebird "^3.7.2"
 
-gatsby-transformer-remark@^4.7.0:
+gatsby-transformer-remark@^4.9.0:
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-4.9.0.tgz#504e5eddb361c59126f2c0265a234d1efe1350d5"
   integrity sha512-1zz5lF4XYv+pwb+cIwY3RuKim0qgFOcYDG/1Pw6vSz2QZ6bDf6QwwwblIoXonxVaOzAzdRQzcgSj8bp+Doht5w==
@@ -13136,11 +13136,6 @@ prism-react-renderer@^1.1.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.2.1.tgz#392460acf63540960e5e3caa699d851264e99b89"
   integrity sha512-w23ch4f75V1Tnz8DajsYKvY5lF7H1+WvzvLUcF0paFxkTHSp42RS0H5CttdN2Q8RR3DRGZ9v5xD/h3n8C8kGmg==
-
-prism-themes@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.8.0.tgz#4f7b108552f75d39bf5c9556e5b5e17e912dd0d0"
-  integrity sha512-pj7A7C9C8juQRFkZHYeApQHdUiak5nkKYlHyWwh7n/b6WjI9KzGtqaGhxUZAIaV1PZ9Z1epJwe41Px3TUGsNJw==
 
 prismjs@^1.24.1:
   version "1.24.1"
