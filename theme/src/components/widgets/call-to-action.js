@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import { Bars } from 'svg-loaders-react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -11,15 +11,18 @@ import PropTypes from 'prop-types'
  * a loading indicator when `isLoading` is set.
  */
 const CallToAction = ({ children, isLoading, title, to, url }) => {
+  const { theme } = useThemeUI()
+
   const linkProps = to
     ? {
         as: Link,
         to
       }
     : {}
+
   return isLoading ? (
     <Bars
-      fill='#1E90FF'
+      fill={theme.rawColors.primary}
       width='24'
       height='24'
       sx={{ verticalAlign: `middle` }}

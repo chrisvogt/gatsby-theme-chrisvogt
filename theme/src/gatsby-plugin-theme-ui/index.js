@@ -15,10 +15,10 @@ export default merge(themePreset, {
   badges: {
     primary: {
       color: 'background',
-      bg: 'primary'
+      bg: theme => theme.rawColors.primary
     },
     outline: {
-      color: 'primary',
+      color: theme => theme.rawColors.primary,
       bg: 'transparent',
       boxShadow: 'inset 0 0 0 1px'
     }
@@ -138,7 +138,7 @@ export default merge(themePreset, {
     homeNavigationDark: {
       color: theme => theme.colors.gray[8],
       '&:visited, &:link': {
-        color: 'primary'
+        color: theme => theme.rawColors.primary
       },
       display: `block`,
       py: 2,
@@ -156,7 +156,7 @@ export default merge(themePreset, {
 
   text: {
     title: {
-      color: `primary`,
+      color: theme => theme.rawColors.primary,
       fontFamily: `heading`,
       fontSize: 0,
       fontWeight: `550`,

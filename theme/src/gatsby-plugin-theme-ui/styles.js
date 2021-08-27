@@ -46,6 +46,10 @@ const GradientBanner = {
 }
 
 export default {
+  a: {
+    color: theme => theme.rawColors.primary
+  },
+
   root: {
     color: `text`,
     display: `flex`,
@@ -60,9 +64,6 @@ export default {
   text: {
     inverse: {
       color: `muted`
-    },
-    title: {
-      fontFamily: 'fonts.sans'
     }
   },
 
@@ -122,7 +123,7 @@ export default {
 
   Header: {
     alignItems: `center`,
-    backgroundColor: `secondary`,
+    backgroundColor: theme => theme.rawColors.secondary,
     color: `white`,
     display: `block`,
     transition: `all 0.3s ease-in-out`,
