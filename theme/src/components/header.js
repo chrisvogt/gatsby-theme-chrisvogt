@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-import SwoopBottom from './artwork/swoop-bottom'
+import SwoopBottom from './swoops/swoop-bottom'
 import trianglify from './artwork/trianglify.svg'
 
 /**
@@ -10,26 +10,28 @@ import trianglify from './artwork/trianglify.svg'
  *
  * A decorative masthead element that can be used across page layouts.
  */
-const Header = ({ children, hideTopPadding, showSwoop, styles }) => (
-  <div
-    sx={{
-      variant: `styles.Header`,
-      background: `url(${trianglify})`,
-      backgroundSize: `cover`,
-      backgroundPosition: `bottom center`
-    }}
-  >
+const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
+  return (
     <div
       sx={{
-        pt: hideTopPadding ? 0 : 5,
-        ...(styles ? styles : {})
+        variant: `styles.Header`,
+        background: `url(${trianglify})`,
+        backgroundSize: `cover`,
+        backgroundPosition: `bottom center`
       }}
     >
-      {children}
+      <div
+        sx={{
+          pt: hideTopPadding ? 0 : 5,
+          ...(styles ? styles : {})
+        }}
+      >
+        {children}
+      </div>
+      {showSwoop && <SwoopBottom fill='var(--theme-ui-colors-background)' />}
     </div>
-    {showSwoop && <SwoopBottom invert />}
-  </div>
-)
+  )
+}
 
 Header.propTypes = {
   children: PropTypes.node.isRequired,

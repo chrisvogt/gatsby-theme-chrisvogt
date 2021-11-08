@@ -50,18 +50,6 @@ export default merge(themePreset, {
       ...infoCard
     },
 
-    infoCardDark: {
-      ...card,
-      ...infoCard,
-      backgroundColor: `#252e3c`,
-      borderLeft: `3px solid #fefefe`,
-      borderBottom: `none`,
-      color: `white`,
-      a: {
-        color: theme => theme.colors.primary
-      }
-    },
-
     /* The following styles represent specific card components, indicated in PascalCase. */
 
     UserProfile: {
@@ -84,14 +72,7 @@ export default merge(themePreset, {
       backgroundColor: `#1e2530`
     },
 
-    PostCard,
-
-    PostCardDark: {
-      ...PostCard,
-      backgroundColor: `#252e3c`,
-      borderBottom: `none`,
-      color: `white`
-    }
+    PostCard
   },
 
   colors,
@@ -124,30 +105,15 @@ export default merge(themePreset, {
 
   links: {
     homeNavigation: {
-      color: theme => theme.colors.primary,
+      color: 'var(--theme-ui-colors-primary)',
       display: `block`,
       py: 2,
       textDecoration: `none`,
       '&:not(:last-of-type)': {
-        borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
+        borderBottom: 'var(--theme-ui-colors-panel-divider)'
       },
       '&:hover, &:focus': {
-        backgroundColor: theme => theme.colors.gray[1]
-      }
-    },
-    homeNavigationDark: {
-      color: theme => theme.colors.gray[8],
-      '&:visited, &:link': {
-        color: 'primary'
-      },
-      display: `block`,
-      py: 2,
-      textDecoration: `none`,
-      '&:not(:last-of-type)': {
-        borderBottom: theme => `1px solid ${theme.colors.gray[8]}`
-      },
-      '&:hover, &:focus': {
-        backgroundColor: theme => theme.colors.gray[8]
+        backgroundColor: 'var(--theme-ui-colors-panel-highlight)'
       }
     }
   },

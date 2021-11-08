@@ -38,10 +38,7 @@ const MediaTemplate = ({ data }) => {
       {(youtubeSrc || soundcloudId) && (
         <div
           sx={{
-            backgroundColor: theme =>
-              isDarkMode(colorMode)
-                ? theme.colors.gray[9]
-                : theme.colors.gray[4],
+            backgroundColor: `var(--theme-ui-colors-panel-background)`,
             textAlign: `center`,
             paddingY: 3
           }}

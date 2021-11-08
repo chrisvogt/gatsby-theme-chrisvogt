@@ -2,7 +2,7 @@
 import { Container, jsx } from 'theme-ui'
 
 import Profiles from './profiles'
-import SwoopTop from '../artwork/swoop-top'
+import SwoopTop from '../swoops/swoop-top'
 
 import { getFooterText } from '../../selectors/metadata'
 import useSiteMetadata from '../../hooks/use-site-metadata'
@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <div sx={{ variant: `styles.PageFooter` }}>
-      <SwoopTop />
+      <SwoopTop fill='var(--theme-ui-colors-background)' />
       <Container sx={{ textAlign: `center` }}>
         <div sx={{ mb: 3, pt: 3, pb: [4, 5] }}>
           <Profiles />

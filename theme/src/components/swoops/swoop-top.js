@@ -1,14 +1,10 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
+import getDefaultFillColor from './get-default-fill-color'
 
 export default ({ fill }) => {
-  const themeContext = useThemeUI()
-  const { colorMode, theme } = themeContext
-
-  const fillColor =
-    colorMode === 'dark'
-      ? theme.colors.modes.dark.background
-      : theme.colors.background
+  const themeUIContext = useThemeUI()
+  const defaultFillColor = getDefaultFillColor(themeUIContext)
 
   return (
     <svg
@@ -17,11 +13,12 @@ export default ({ fill }) => {
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 1366 64'
       sx={{
+        fill: fill || defaultFillColor,
         verticalAlign: 'top'
       }}
     >
       <path
-        fill={fill ? fill : fillColor}
+        fill='inherit'
         d='M1366,0V60.42c-.2,2.32-88.53,7-218.38-.43-129.74-6.07-301-24.16-464.62-36.87C519.8,9.31,348.92,6,218.94,19.73,89,31.35-.15,60,0,61.54V0Z'
       ></path>
     </svg>
