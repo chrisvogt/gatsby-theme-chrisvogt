@@ -14,12 +14,4 @@ describe('SwoopTop', () => {
     const tree = renderer.create(<WrappedSwoop />).toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it('passes the fill prop to the SVG path', () => {
-    const fill = '#ff4600'
-    const testRenderer = renderer.create(<WrappedSwoop fill={fill} />)
-    const testInstance = testRenderer.root
-
-    expect(testInstance.findByType('path').props.fill).toEqual(fill)
-  })
 })

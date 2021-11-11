@@ -2,7 +2,7 @@
 
 exports[`PostCard matches the snapshot 1`] = `
 <a
-  className="css-1u8qly9"
+  className="css-sod6qt"
   href="/blog/article"
   onClick={[Function]}
   onMouseEnter={[Function]}

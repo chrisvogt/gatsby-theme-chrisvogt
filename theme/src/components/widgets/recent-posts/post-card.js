@@ -1,17 +1,18 @@
 /** @jsx jsx */
-import { jsx, Themed, useThemeUI } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Card } from '@theme-ui/components'
 import { Link } from 'gatsby'
 
-import isDarkMode from '../../../helpers/isDarkMode'
-
 export default ({ banner, category, date, link, title }) => {
-  const { colorMode } = useThemeUI()
-  const variant = isDarkMode(colorMode) ? 'PostCardDark' : 'PostCard'
-
   return (
-    <Link sx={{ variant: 'styles.PostCardLink' }} to={link}>
-      <Card variant={variant}>
+    <Link
+      sx={{ 
+        color: `var(--theme-ui-colors-panel-text)`,
+        textDecoration: `none`
+      }}
+      to={link}
+    >
+      <Card variant='PostCard'>
         <div
           className='card-content'
           sx={{

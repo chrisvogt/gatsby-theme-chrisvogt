@@ -138,10 +138,6 @@ export default {
     p: 0
   },
 
-  PostCardLink: {
-    textDecoration: `none`
-  },
-
   TopNavigation: {
     color: `white`
   },
