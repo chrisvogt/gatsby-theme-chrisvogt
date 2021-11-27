@@ -42,12 +42,24 @@ export default () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const { hasFatalError, isLoading, media, metrics } = useSelector(state => ({
-    hasFatalError: get(state, 'widgets.instagram.state') === FAILURE,
-    isLoading: get(state, 'widgets.instagram.state') !== SUCCESS,
-    media: get(state, 'widgets.instagram.data.collections.media', []),
-    metrics: get(state, 'widgets.instagram.data.metrics', [])
-  }))
+  console.log('Rendering Instagram widget')
+
+  const { hasFatalError, isLoading, media, metrics } = useSelector(state => {
+    console.log('useSelector() – logging state', state)
+    return {
+      hasFatalError: get(state, 'widgets.instagram.state') === FAILURE,
+      isLoading: get(state, 'widgets.instagram.state') !== SUCCESS,
+      media: get(state, 'widgets.instagram.data.collections.media', []),
+      metrics: get(state, 'widgets.instagram.data.metrics', [])
+    };
+  })
+
+  console.log({
+    hasFatalError,
+    isLoading,
+    media,
+    metrics
+  })
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index)
