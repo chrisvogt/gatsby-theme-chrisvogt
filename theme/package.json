@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-private-sphere",
   "description": "My personal blog and website, with built-in social activity widgets.",
-  "version": "0.20.2",
+  "version": "0.20.3",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -40,7 +40,7 @@
     ]
   },
   "engines": {
-    "node": "^14.0.0",
+    "node": "^14.18.1",
     "yarn": "^1.0.0"
   },
   "os": [
@@ -87,6 +87,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gatsby": "^3.14",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-emotion": "^6.12.0",
     "gatsby-plugin-feed": "^3.10.0",

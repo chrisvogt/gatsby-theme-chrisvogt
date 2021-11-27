@@ -14,7 +14,7 @@ module.exports = {
     widgets: {
       github: {
         username: 'chrisvogt',
-        widgetDataSource: 'http://metrics.dev-chrisvogt.me:5000/api/widgets/github'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/github'
       },
       goodreads: {
         username: 'chrisvogt',
