@@ -21,7 +21,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
         My Personal Blog & Portfolio
       </a>
       <a
-        className="css-xwnvsa"
+        className="css-5hi8j7-TopNavigation"
         href="/about-me"
         onClick={[Function]}
         onMouseEnter={[Function]}

@@ -25,7 +25,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot
         />
       </div>
       <div
-        className="css-fjakwv"
+        className="css-1r91rh-PinnedItemCard"
       >
         <div
           className="text-block"
