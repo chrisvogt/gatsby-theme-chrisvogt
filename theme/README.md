@@ -61,4 +61,4 @@ Review the [example site configuration](https://github.com/chrisvogt/gatsby-them
 
 ## Copyright & License
 
-Copyright © 2019-2020 [Chris Vogt](https://www.chrisvogt.me) - Released under the [MIT license](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/LICENSE).
+Copyright © 2019-2022 [Chris Vogt](https://www.chrisvogt.me) - Released under the [MIT license](https://github.com/chrisvogt/gatsby-theme-private-sphere/tree/master/LICENSE).
