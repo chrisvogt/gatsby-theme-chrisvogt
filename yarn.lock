@@ -6413,9 +6413,9 @@ debug@2, debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
     ms "2.0.0"
 
 debug@4, debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@~4.3.1:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
-  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
+  integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
   dependencies:
     ms "2.1.2"
 
@@ -7049,16 +7049,16 @@ engine.io-client@~4.1.0:
     yeast "0.1.2"
 
 engine.io-parser@~4.0.0, engine.io-parser@~4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/engine.io-parser/-/engine.io-parser-4.0.2.tgz#e41d0b3fb66f7bf4a3671d2038a154024edb501e"
-  integrity sha512-sHfEQv6nmtJrq6TKuIz5kyEKH/qSdK56H/A+7DnAuUPWosnIZAS2NHNcPLmyjtY3cGS/MqJdZbUjW97JU72iYg==
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/engine.io-parser/-/engine.io-parser-4.0.3.tgz#83d3a17acfd4226f19e721bb22a1ee8f7662d2f6"
+  integrity sha512-xEAAY0msNnESNPc00e19y5heTPX4y/TJ36gr8t1voOaNmTojP9b3oK3BbJLFufW2XFPQaaijpFewm2g2Um3uqA==
   dependencies:
     base64-arraybuffer "0.1.4"
 
 engine.io@~4.1.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/engine.io/-/engine.io-4.1.1.tgz#9a8f8a5ac5a5ea316183c489bf7f5b6cf91ace5b"
-  integrity sha512-t2E9wLlssQjGw0nluF6aYyfX8LwYU8Jj0xct+pAhfWfv/YrBn6TSNtEYsgxHIfaMqfrLx07czcMg9bMN6di+3w==
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/engine.io/-/engine.io-4.1.2.tgz#f96ceb56d4b39cc7ca5bd29a20e9c99c1ad1a765"
+  integrity sha512-t5z6zjXuVLhXDMiFJPYsPOWEER8B0tIsD3ETgw19S1yg9zryvUfY3Vhtk3Gf4sihw/bQGIqQ//gjvVlu+Ca0bQ==
   dependencies:
     accepts "~1.3.4"
     base64id "2.0.0"
@@ -9041,6 +9041,79 @@ gatsby-telemetry@^2.14.0:
     lodash "^4.17.21"
     node-fetch "^2.6.1"
     uuid "3.4.0"
+
+gatsby-theme-private-sphere@*:
+  version "0.20.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-private-sphere/-/gatsby-theme-private-sphere-0.20.3.tgz#43f8c8d8651fc579cdbaf4cc62064b6f7a85ac35"
+  integrity sha512-S9NJ4Dl25tzhoXCmrQ5Jl/0w+5osa2I4W7nQguU+8uyKd19AQ+AwxBE8EM2NqD7EooVfhCBByUkjCvZasoTBxw==
+  dependencies:
+    "@emotion/core" "^11.0.0"
+    "@emotion/styled" "^11.3.0"
+    "@fortawesome/fontawesome-svg-core" "^1.2.36"
+    "@fortawesome/free-brands-svg-icons" "^5.15.4"
+    "@fortawesome/free-regular-svg-icons" "^5.15.4"
+    "@fortawesome/free-solid-svg-icons" "^5.15.4"
+    "@fortawesome/react-fontawesome" "^0.1.15"
+    "@mdx-js/loader" "^1.6.22"
+    "@mdx-js/mdx" "^1.6.22"
+    "@mdx-js/react" "^1.6.22"
+    "@theme-ui/color" "^0.10.0"
+    "@theme-ui/components" "^0.10.0"
+    "@theme-ui/presets" "^0.10.0"
+    "@theme-ui/prism" "^0.10.0"
+    "@wojtekmaj/enzyme-adapter-react-17" "^0.6.3"
+    axios "^0.21.1"
+    babel-jest "^27.0.6"
+    classnames "^2.3.1"
+    enzyme "^3.11.0"
+    enzyme-to-json "^3.6.2"
+    eslint "^7.32.0"
+    eslint-config-prettier "^8.3.0"
+    eslint-plugin-prettier "^3.4.1"
+    eslint-plugin-react-hooks "^4.2.0"
+    gatsby "^3.14"
+    gatsby-image "^3.11.0"
+    gatsby-plugin-emotion "^6.12.0"
+    gatsby-plugin-feed "^3.10.0"
+    gatsby-plugin-manifest "^3.10.0"
+    gatsby-plugin-mdx "^2.12.0"
+    gatsby-plugin-react-helmet "^4.12.0"
+    gatsby-plugin-sharp "^3.10.2"
+    gatsby-plugin-theme-ui "^0.10.1"
+    gatsby-remark-autolink-headers "^4.7.0"
+    gatsby-remark-copy-linked-files "^4.7.0"
+    gatsby-remark-embed-video "^3.1.1"
+    gatsby-remark-images "^5.7.0"
+    gatsby-remark-prismjs "^5.9.0"
+    gatsby-source-filesystem "^3.10.0"
+    gatsby-theme-style-guide "^0.10.0"
+    gatsby-transformer-json "^3.10.0"
+    gatsby-transformer-remark "^4.9.0"
+    gatsby-transformer-sharp "^3.10.0"
+    husky "^5.1.3"
+    identity-obj-proxy "^3.0.0"
+    lodash "^4.17.21"
+    lottie-react-web "^2.2.2"
+    prettier "^2.3.2"
+    pretty-quick "^3.1.1"
+    prismjs "^1.24.1"
+    prop-types "^15.7.2"
+    react "^17.0.2"
+    react-dark-mode-toggle "^0.2.0"
+    react-helmet "^6.1.0"
+    react-images "^1.2.0-beta.7"
+    react-photo-gallery "^8.0.0"
+    react-placeholder "^4.1.0"
+    react-popper-tooltip "^4.3.0"
+    react-redux "^7.2.2"
+    react-test-renderer "^17.0.2"
+    react-visibility-sensor "^5.1.1"
+    redux "^4.0.5"
+    redux-devtools-extension "^2.13.8"
+    redux-thunk "^2.3.0"
+    s-ago "^2.2.0"
+    svg-loaders-react "^2.2.1"
+    theme-ui "^0.10.0"
 
 gatsby-theme-style-guide@^0.10.0:
   version "0.10.0"
@@ -12950,6 +13023,11 @@ mime-db@1.49.0, "mime-db@>= 1.43.0 < 2", mime-db@^1.28.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.49.0.tgz#f3dfde60c99e9cf3bc9701d687778f537001cbed"
   integrity sha512-CIc8j9URtOVApSFCQIF+VBkX1RwXp/oMMOrqdyXSBXq5RWNEsRfyj1kiRnQgmNXmHxPoFIxOroKA3zcU9P+nAA==
 
+mime-db@1.51.0:
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.51.0.tgz#d9ff62451859b18342d960850dc3cfb77e63fb0c"
+  integrity sha512-5y8A56jg7XVQx2mbv1lu49NR4dokRnhZYTtL+KGfaa27uq4pSTXkwQkFJl4pkRMyNFz/EtYDSkiiEHx3F7UN6g==
+
 mime-db@~1.25.0:
   version "1.25.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.25.0.tgz#c18dbd7c73a5dbf6f44a024dc0d165a1e7b1c392"
@@ -12962,12 +13040,19 @@ mime-types@2.1.13:
   dependencies:
     mime-db "~1.25.0"
 
-mime-types@^2.1.12, mime-types@^2.1.27, mime-types@^2.1.30, mime-types@~2.1.17, mime-types@~2.1.24:
+mime-types@^2.1.12, mime-types@^2.1.27, mime-types@^2.1.30, mime-types@~2.1.17:
   version "2.1.32"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.32.tgz#1d00e89e7de7fe02008db61001d9e02852670fd5"
   integrity sha512-hJGaVS4G4c9TSMYh2n6SQAGrC4RnfU+daP8G7cSCmaqNjiOoUY0VHCMS42pxnQmVF1GWwFhbHWn3RIxCqTmZ9A==
   dependencies:
     mime-db "1.49.0"
+
+mime-types@~2.1.24:
+  version "2.1.34"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.34.tgz#5a712f9ec1503511a945803640fafe09d3793c24"
+  integrity sha512-6cP692WwGIs9XXdOO4++N+7qjqv0rqxxVvJ3VHPh/Sc9mVZcQP+ZGhkKiTvWMQRr2tbHkJP/Yn7Y0npb3ZBs4A==
+  dependencies:
+    mime-db "1.51.0"
 
 mime@1.6.0, mime@^1.3.4:
   version "1.6.0"
