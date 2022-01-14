@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Flex } from 'theme-ui'
 
-import Footer from 'gatsby-theme-private-sphere/src/components/footer'
-import Layout from 'gatsby-theme-private-sphere/src/components/layout'
-import Seo from 'gatsby-theme-private-sphere/src/components/seo'
+import Footer from 'gatsby-theme-chrisvogt/src/components/footer'
+import Layout from 'gatsby-theme-chrisvogt/src/components/layout'
+import Seo from 'gatsby-theme-chrisvogt/src/components/seo'
 
 const PrivacyPolicy = () => (
   <Layout>

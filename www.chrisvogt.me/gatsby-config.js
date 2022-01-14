@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-theme-private-sphere",
+      resolve: "gatsby-theme-chrisvogt",
       options: {},
     },
     {

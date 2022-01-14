@@ -9,8 +9,8 @@ import Placeholder from 'react-placeholder'
 /**
  * Metric Card
  *
- * Renders insights onto a card. Private Sphere renders these into the sidebar
- * area of the social widgets. They typically contain an insight for the social
+ * Renders insights onto a card. These are rendered into the sidebar area of
+ * the social widgets. They typically contain an insight for the social
  * profile (e.g., Followers: 24).
  */
 const MetricCard = ({ title, value, showPlaceholder }) => {

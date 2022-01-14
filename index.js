@@ -3,7 +3,7 @@ const chalk = require('chalk')
 
 const package = require('./theme/package.json')
 
-const banner = boxen('Private Sphere\na GatsbyJS theme', {
+const banner = boxen('www.chrisvogt.me\nMy GatsbyJS Website', {
   align: 'center',
   backgroundColor: '#9b20dc',
   color: 'white',
@@ -18,6 +18,6 @@ const banner = boxen('Private Sphere\na GatsbyJS theme', {
 console.log(banner)
 
 console.log(
-  `✅  Installation succeeded: ${chalk.bold('gatsby-theme-private-sphere')}`
+  `✅  Installation succeeded: ${chalk.bold('gatsby-theme-chrisvogt')}`
 )
 console.log(`⚙  Version: ${chalk.bold(package.version)}`)

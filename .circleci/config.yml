@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/node:14.18.1
 
-    working_directory: ~/gatsby-theme-private-sphere
+    working_directory: ~/gatsby-theme-chrisvogt
 
     steps:
       - checkout
@@ -27,7 +27,7 @@ jobs:
 
       - run:
           name: Unit Tests w/Coverage
-          command: yarn workspace gatsby-theme-private-sphere test:coverage --maxWorkers=2
+          command: yarn workspace gatsby-theme-chrisvogt test:coverage --maxWorkers=2
 
       - store_artifacts:
           path: theme/coverage
