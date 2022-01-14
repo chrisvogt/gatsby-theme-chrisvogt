@@ -3,7 +3,7 @@ const chalk = require('chalk')
 
 const package = require('./theme/package.json')
 
-const banner = boxen('www.chrisvogt.me\nMy GatsbyJS Website', {
+const banner = boxen('www.chrisvogt.me\nMy Personal Website', {
   align: 'center',
   backgroundColor: '#9b20dc',
   color: 'white',
