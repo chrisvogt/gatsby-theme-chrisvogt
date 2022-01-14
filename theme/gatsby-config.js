@@ -4,19 +4,19 @@ module.exports = () => ({
   siteMetadata: {
     avatarURL:
       'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
-    baseURL: 'https://www.privatesphere.io',
+    baseURL: 'https://www.chrisvogt.me',
     description:
-      'A GatsbyJS blog theme with built-in social widgets for Instagram, Goodreads, GitHub, and Spotify.',
+      'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
     footerText: 'Made in San Francisco',
-    headline: 'Private Sphere',
+    headline: 'www.chrisvogt.me',
     imageURL: '',
     languageCode: 'en',
     social: {
       twitterUsername: ''
     },
-    subhead: 'A Gatsby blog theme with built-in social widgets',
-    title: 'Private Sphere',
-    titleTemplate: '%s · Private Sphere',
+    subhead: 'My personal blog and website',
+    title: 'My Personal Website',
+    titleTemplate: '%s · www.chrisvogt.me',
     widgets: {
       github: {
         username: '',

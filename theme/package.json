@@ -1,23 +1,17 @@
 {
-  "name": "gatsby-theme-private-sphere",
-  "description": "My personal blog and website, with built-in social activity widgets.",
-  "version": "0.20.4-alpha.1",
+  "name": "gatsby-theme-chrisvogt",
+  "description": "My personal blog and website.",
+  "version": "0.21.0",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "https://privatesphere.io",
-  "bugs": "https://github.com/chrisvogt/gatsby-theme-private-sphere/issues",
+  "private": true,
+  "bugs": "https://github.com/chrisvogt/gatsby-theme-chrisvogt/issues",
   "keywords": [
     "gatsby-plugin",
-    "gatsby-theme-private-sphere",
     "gatsby-theme",
     "gatsby",
-    "github",
-    "goodreads",
-    "spotify",
-    "mdx",
-    "react",
-    "theme-ui"
+    "react"
   ],
   "scripts": {
     "build": "gatsby build",

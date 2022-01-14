@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Gatsby Theme Private Sphere"
+echo "www.chrisvogt.me"

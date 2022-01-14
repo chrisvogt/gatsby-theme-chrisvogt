@@ -51,7 +51,7 @@ module.exports = {
           }
         `,
         output: '/rss.xml',
-        title: 'Gatsby Theme Private Sphere RSS Feed'
+        title: 'Chris Vogt\'s RSS Feed'
       }
     ]
   }

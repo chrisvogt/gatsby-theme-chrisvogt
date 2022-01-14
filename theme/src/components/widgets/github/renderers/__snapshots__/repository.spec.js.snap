@@ -7,7 +7,7 @@ exports[`GitHub Repository Renderer matches the snapshot 1`] = `
   <h4
     className="css-1t113no-Repository"
   >
-    chrisvogt/gatsby-theme-private-sphere
+    chrisvogt/gatsby-theme-chrisvogt
   </h4>
   <span
     className="css-rpa521-Repository"

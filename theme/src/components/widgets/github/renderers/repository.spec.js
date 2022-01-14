@@ -8,7 +8,7 @@ describe('GitHub Repository Renderer', () => {
       .create(
         <Repository
           description='GatsbyJS blog theme with built-in social widgets for creatives and developers.'
-          nameWithOwner='chrisvogt/gatsby-theme-private-sphere'
+          nameWithOwner='chrisvogt/gatsby-theme-chrisvogt'
           openGraphImageUrl='https://avatars0.githubusercontent.com/u/1934719?s=400&v=4'
           updatedAt='2020-03-26T12:11:58Z'
         />

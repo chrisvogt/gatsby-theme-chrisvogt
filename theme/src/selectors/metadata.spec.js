@@ -31,17 +31,17 @@ const metadata = {
   titleTemplate: '%s | My Cool Website',
   widgets: {
     github: {
-      username: 'private-sphere-theme',
+      username: 'chrisvogt-theme',
       widgetDataSource:
         'https://metrics.chrisvogt.me/api/widget-content?widget=github'
     },
     goodreads: {
-      username: 'private-sphere-theme',
+      username: 'chrisvogt-theme',
       widgetDataSource:
         'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
     },
     instagram: {
-      username: 'private-sphere-theme',
+      username: 'chrisvogt-theme',
       widgetDataSource:
         'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
     },
