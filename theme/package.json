@@ -106,7 +106,7 @@
     "lottie-react-web": "^2.2.2",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
-    "prismjs": "^1.24.1",
+    "prismjs": "^1.27.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dark-mode-toggle": "^0.2.0",
