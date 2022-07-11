@@ -28,7 +28,7 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
       >
         {children}
       </div>
-      {showSwoop && <SwoopBottom fill='var(--theme-ui-colors-background)' />}
+      {showSwoop && <SwoopBottom />}
     </div>
   )
 }

@@ -10,7 +10,6 @@ import {
   getInstagramWidgetDataSource,
   getSpotifyWidgetDataSource
 } from '../selectors/metadata'
-import getIsDarkMode from '../helpers/isDarkMode'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 /**
@@ -130,7 +129,7 @@ const HomeNavigation = () => {
           position: `sticky`,
           top: `1.5em`
         }}
-        variant='infoCard'
+        variant='actionCard'
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           <h3 sx={{ fontWeight: `unset`, mt: 0, mb: 2 }}>On-page navigation</h3>

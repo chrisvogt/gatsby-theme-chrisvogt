@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <div sx={{ variant: `styles.PageFooter` }}>
-      <SwoopTop fill='var(--theme-ui-colors-background)' />
+      <SwoopTop />
       <Container sx={{ textAlign: `center` }}>
         <div sx={{ mb: 3, pt: 3, pb: [4, 5] }}>
           <Profiles />

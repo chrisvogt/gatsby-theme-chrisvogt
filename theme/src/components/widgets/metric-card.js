@@ -15,7 +15,7 @@ import Placeholder from 'react-placeholder'
  */
 const MetricCard = ({ title, value, showPlaceholder }) => {
   const { colorMode } = useThemeUI()
-  const variant = isDarkMode(colorMode) ? 'infoCardDark' : 'infoCard'
+  const variant = isDarkMode(colorMode) ? 'metricCardDark' : 'metricCard'
 
   return (
     <Card variant={variant}>
