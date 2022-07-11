@@ -1,7 +1,7 @@
 import colors from './abstracts/colors'
 import fonts from './abstracts/fonts'
 
-import { card, infoCard, PostCard } from './components/card'
+import { card, metricCard, PostCard } from './components/card'
 
 import { floatOnHover } from './abstracts/shadows'
 
@@ -33,21 +33,13 @@ export default merge(themePreset, {
     actionCard: {
       ...card,
       ...floatOnHover,
+      borderBottom: `none`, // from actionCardDark
       borderLeft: theme => `3px solid ${theme.colors.primary}`
     },
 
-    actionCardDark: {
+    metricCard: {
       ...card,
-      ...floatOnHover,
-      backgroundColor: `#252e3c`,
-      borderBottom: `none`,
-      borderLeft: theme => `3px solid ${theme.colors.primary}`,
-      color: `white`
-    },
-
-    infoCard: {
-      ...card,
-      ...infoCard
+      ...metricCard
     },
 
     /* The following styles represent specific card components, indicated in PascalCase. */

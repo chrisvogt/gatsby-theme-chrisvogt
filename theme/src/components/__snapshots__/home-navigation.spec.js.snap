@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeNavigation matches the snapshot 1`] = `
+Array [
+  <h2
+    aria-hidden="true"
+    className="css-6vhbjq-HomeNavigation"
+  >
+    Widget Navigation
+  </h2>,
+  <div
+    className="css-1aj123h-HomeNavigation"
+  >
+    <nav
+      aria-label="Navigate to on-page sections"
+    >
+      <h3
+        className="css-gql1zd-HomeNavigation"
+      >
+        On-page navigation
+      </h3>
+      <a
+        className="css-vurnku"
+        href="#posts"
+      >
+        Latest Posts
+      </a>
+      <a
+        className="css-vurnku"
+        href="#instagram"
+      >
+        Instagram
+      </a>
+      <a
+        className="css-vurnku"
+        href="#github"
+      >
+        GitHub
+      </a>
+      <a
+        className="css-vurnku"
+        href="#goodreads"
+      >
+        Goodreads
+      </a>
+      <a
+        className="css-vurnku"
+        href="#spotify"
+      >
+        Spotify
+      </a>
+    </nav>
+  </div>,
+]
+`;

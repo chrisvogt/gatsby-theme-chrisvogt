@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import getDefaultFillColor from './get-default-fill-color'
 
 export default ({ fill }) => {
-  const themeUIContext = useThemeUI()
-  const defaultFillColor = getDefaultFillColor(themeUIContext)
+  const defaultFillColor = getDefaultFillColor()
 
   return (
     <svg

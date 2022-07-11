@@ -7,7 +7,7 @@ import isDarkMode from '../../helpers/isDarkMode'
 
 const StatusCard = ({ message }) => {
   const { colorMode } = useThemeUI()
-  const variant = isDarkMode(colorMode) ? 'infoCardDark' : 'infoCard'
+  const variant = isDarkMode(colorMode) ? 'metricCardDark' : 'metricCard'
 
   return (
     <Card variant={variant} sx={{ mb: 3 }}>
