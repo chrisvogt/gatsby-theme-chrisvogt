@@ -6,4 +6,5 @@ coverage
 launch.json
 node_modules
 public
+www.chrisvogt.me/certs
 yarn-error.log
