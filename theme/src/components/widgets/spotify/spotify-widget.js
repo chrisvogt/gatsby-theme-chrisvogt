@@ -22,12 +22,6 @@ const SpotifyWidget = () => {
   const metadata = useSiteMetadata()
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
 
-  useEffect(() => {
-    dispatch(
-      fetchDataSource('spotify', spotifyDataSource, selectMetricsPayload)
-    )
-  }, [dispatch, spotifyDataSource])
-
   const {
     hasFatalError,
     isLoading,
@@ -55,6 +49,14 @@ const SpotifyWidget = () => {
     ),
     topTracks: get(state, 'widgets.spotify.data.collections.topTracks', [])
   }))
+
+  useEffect(() => {
+    if (isLoading) {
+      dispatch(
+        fetchDataSource('spotify', spotifyDataSource, selectMetricsPayload)
+      )
+    }
+  }, [dispatch, spotifyDataSource, isLoading])
 
   const callToAction = (
     <CallToAction

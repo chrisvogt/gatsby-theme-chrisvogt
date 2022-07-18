@@ -81,12 +81,6 @@ export default () => {
   const goodreadsUsername = getGoodreadsUsername(metadata)
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
 
-  useEffect(() => {
-    dispatch(
-      fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload)
-    )
-  }, [dispatch, goodreadsDataSource])
-
   const {
     books,
     hasFatalError,
@@ -103,6 +97,14 @@ export default () => {
     status: getUserStatus(state)
   }))
 
+  useEffect(() => {
+    if (isLoading) {
+      dispatch(
+        fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload)
+      )
+    }
+  }, [dispatch, goodreadsDataSource, isLoading])
+
   const callToAction = (
     <CallToAction
       title={`${goodreadsUsername} on Goodreads`}
@@ -113,6 +115,13 @@ export default () => {
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>
   )
+
+  console.log('Rendering goodreads widget', {
+    status,
+    isLoading,
+    books,
+    metrics
+  })
 
   return (
     <Widget id='goodreads' hasFatalError={hasFatalError}>
