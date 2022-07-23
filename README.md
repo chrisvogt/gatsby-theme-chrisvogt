@@ -1,6 +1,9 @@
-# Chris Vogt, My Personal Website
+# www.chrisvogt.me, My Personal Website
 
 <p align='center'>
+  <a href='https://www.npmjs.org/package/gatsby-theme-chrisvogt'>
+    <img src='https://img.shields.io/npm/v/gatsby-theme-chrisvogt.svg' alt='Current npm package version.' />
+  </a>
   <a href='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt'>
     <img src='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt.svg?style=shield' alt='Current CircleCI build status.' />
   </a>
@@ -15,7 +18,7 @@
   </a>
 </p>
 
-This repository contains my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/theme) while the articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/www.chrisvogt.me).
+This repository contains my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/www.chrisvogt.me).
 
 ## Local development
 
@@ -40,6 +43,14 @@ yarn workspace www.chrisvogt.me build
 ```
 
 The website build will be output to `/www.chrisvogt.me/public`.
+
+### How to test the production build
+
+The production build can be run on your local machine over HTTPS if you generate self-signed certificates, which I did using [mkcert](https://github.com/FiloSottile/mkcert). You can use a tool like [http-server](https://www.npmjs.com/package/http-server) to serve the build.
+
+```
+http-server -o -S -C ../certs/www.chrisvogt.me.pem -K ../certs/www.chrisvogt.me-key.pem -a www.chrisvogt.me -p 443
+```
 
 ## Copyright & License
 
