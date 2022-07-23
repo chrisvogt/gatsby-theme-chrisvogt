@@ -52,10 +52,6 @@ const GitHubWidget = () => {
   const githubUsername = getGithubUsername(metadata)
   const githubDataSource = getGithubWidgetDataSource(metadata)
 
-  useEffect(() => {
-    dispatch(fetchDataSource('github', githubDataSource, selectMetricsPayload))
-  }, [dispatch, githubDataSource])
-
   const {
     hasFatalError,
     isLoading,
@@ -73,6 +69,12 @@ const GitHubWidget = () => {
     metrics: getMetrics(state),
     pinnedItems: get(state, 'widgets.github.data.user.pinnedItems.nodes', [])
   }))
+
+  useEffect(() => {
+    if (isLoading) {
+      dispatch(fetchDataSource('github', githubDataSource, selectMetricsPayload))
+    }
+  }, [dispatch, githubDataSource, isLoading])
 
   const callToAction = (
     <CallToAction

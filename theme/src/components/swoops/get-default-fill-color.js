@@ -1,5 +1,3 @@
-const getDefaultFillColor = ({ colorMode, theme }) => colorMode === 'dark'
-  ? theme.colors.modes.dark.background
-  : theme.colors.background
+const getDefaultFillColor = () => 'var(--theme-ui-colors-background)'
 
 export default getDefaultFillColor
