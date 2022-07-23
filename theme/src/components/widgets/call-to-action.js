@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Bars } from 'svg-loaders-react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -25,7 +25,7 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       sx={{ verticalAlign: `middle` }}
     />
   ) : (
-    <Styled.a
+    <Themed.a
       href={url}
       sx={{
         fontSize: 0,
@@ -34,11 +34,11 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
           opacity: 0,
           transition: `all .3s ease`
         },
-        '&:hover': {
+        '&:hover, &:focus': {
           textDecoration: `none`,
           transform: `translateX(150px)`
         },
-        '&:hover .read-more-icon': {
+        '&:hover .read-more-icon, &:focus .read-more-icon': {
           opacity: 1,
           ml: 2
         }
@@ -47,7 +47,7 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       {...linkProps}
     >
       {children}
-    </Styled.a>
+    </Themed.a>
   )
 }
 

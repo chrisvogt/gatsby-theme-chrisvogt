@@ -16,23 +16,28 @@ export const getWidgetId = action => get(action, 'payload.widgetId')
 function widgets(state = initialState, action) {
   switch (action.type) {
     case 'INIT_WIDGET_CONFIG':
-      state.config = action.payload
-      return state
+      return {
+        ...state,
+        config: action.payload
+      }
     case FETCH_DATASOURCE_SUCCESS:
     case FETCH_DATASOURCE_FAILURE:
       const data = getData(action)
       const error = getError(state)
       const widgetId = getWidgetId(action)
 
-      state[widgetId] = {
-        state: action.type === FETCH_DATASOURCE_SUCCESS ? SUCCESS : FAILURE,
-        ...(data ? { data } : {}),
-        ...(error ? { error } : {})
+      return {
+        ...state,
+        [widgetId]: {
+          state: action.type === FETCH_DATASOURCE_SUCCESS ? SUCCESS : FAILURE,
+          ...(data ? { data } : {}),
+          ...(error ? { error } : {})
+        }
       }
-
-      return state
     default:
-      return state
+      return {
+        ...state
+      }
   }
 }
 export default widgets

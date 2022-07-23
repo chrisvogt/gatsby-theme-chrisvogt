@@ -1,7 +1,7 @@
 import colors from './abstracts/colors'
 import fonts from './abstracts/fonts'
 
-import { card, infoCard, PostCard } from './components/card'
+import { card, metricCard, PostCard } from './components/card'
 
 import { floatOnHover } from './abstracts/shadows'
 
@@ -33,33 +33,13 @@ export default merge(themePreset, {
     actionCard: {
       ...card,
       ...floatOnHover,
+      borderBottom: `none`, // from actionCardDark
       borderLeft: theme => `3px solid ${theme.colors.primary}`
     },
 
-    actionCardDark: {
+    metricCard: {
       ...card,
-      ...floatOnHover,
-      backgroundColor: `#252e3c`,
-      borderBottom: `none`,
-      borderLeft: theme => `3px solid ${theme.colors.primary}`,
-      color: `white`
-    },
-
-    infoCard: {
-      ...card,
-      ...infoCard
-    },
-
-    infoCardDark: {
-      ...card,
-      ...infoCard,
-      backgroundColor: `#252e3c`,
-      borderLeft: `3px solid #fefefe`,
-      borderBottom: `none`,
-      color: `white`,
-      a: {
-        color: theme => theme.colors.primary
-      }
+      ...metricCard
     },
 
     /* The following styles represent specific card components, indicated in PascalCase. */
@@ -84,14 +64,7 @@ export default merge(themePreset, {
       backgroundColor: `#1e2530`
     },
 
-    PostCard,
-
-    PostCardDark: {
-      ...PostCard,
-      backgroundColor: `#252e3c`,
-      borderBottom: `none`,
-      color: `white`
-    }
+    PostCard
   },
 
   colors,
@@ -116,7 +89,7 @@ export default merge(themePreset, {
 
   layout: {
     container: {
-      maxWidth: [``, `94%`, ``, ``, `1200px`],
+      maxWidth: [``, `94%`, ``, ``, `1440px`],
       py: [2, 3],
       px: [3, 4]
     }
@@ -124,30 +97,15 @@ export default merge(themePreset, {
 
   links: {
     homeNavigation: {
-      color: theme => theme.colors.primary,
+      color: 'var(--theme-ui-colors-primary)',
       display: `block`,
       py: 2,
       textDecoration: `none`,
       '&:not(:last-of-type)': {
-        borderBottom: theme => `1px solid ${theme.colors.gray[3]}`
+        borderBottom: 'var(--theme-ui-colors-panel-divider)'
       },
-      '&:hover': {
-        backgroundColor: theme => theme.colors.gray[1]
-      }
-    },
-    homeNavigationDark: {
-      color: theme => theme.colors.gray[8],
-      '&:visited, &:link': {
-        color: 'primary'
-      },
-      display: `block`,
-      py: 2,
-      textDecoration: `none`,
-      '&:not(:last-of-type)': {
-        borderBottom: theme => `1px solid ${theme.colors.gray[8]}`
-      },
-      '&:hover': {
-        backgroundColor: theme => theme.colors.gray[8]
+      '&:hover, &:focus': {
+        backgroundColor: 'var(--theme-ui-colors-panel-highlight)'
       }
     }
   },

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Styled } from 'theme-ui'
+import { jsx, Flex, Themed } from 'theme-ui'
 
 /**
  * Home Page Header Content
@@ -44,8 +44,8 @@ const HomeHeaderContent = ({ avatar, headline, subhead }) => (
         textAlign: [`center`, ``, `left`]
       }}
     >
-      <Styled.h1 sx={{ mb: 0, pb: 0 }}>{headline}</Styled.h1>
-      <Styled.p sx={{ py: 0, my: 0, fontSize: 2 }}>{subhead}</Styled.p>
+      <Themed.h1 sx={{ mb: 0, pb: 0 }}>{headline}</Themed.h1>
+      <Themed.p sx={{ py: 0, my: 0, fontSize: 2 }}>{subhead}</Themed.p>
     </Flex>
   </div>
 )

@@ -2,7 +2,7 @@
 import { Container, jsx } from 'theme-ui'
 
 import Profiles from './profiles'
-import SwoopTop from '../artwork/swoop-top'
+import SwoopTop from '../swoops/swoop-top'
 
 import { getFooterText } from '../../selectors/metadata'
 import useSiteMetadata from '../../hooks/use-site-metadata'

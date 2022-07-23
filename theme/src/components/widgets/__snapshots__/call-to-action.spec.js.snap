@@ -2,7 +2,7 @@
 
 exports[`CallToAction matches the snapshot 1`] = `
 <a
-  className="css-hx6xot-CallToAction"
+  className="css-104kj7r-CallToAction"
   title="Example Widget Title"
 >
   Test

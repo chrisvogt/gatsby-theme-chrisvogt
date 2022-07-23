@@ -1,56 +1,50 @@
 /** @jsx jsx */
+import { Fragment } from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
-import TooltipTrigger from 'react-popper-tooltip'
+import { usePopperTooltip } from 'react-popper-tooltip';
 import getIsDarkMode from '../helpers/isDarkMode'
 import 'react-popper-tooltip/dist/styles.css'
 
 const Tooltip = ({ children, tooltip, hideArrow, ...props }) => {
   const { colorMode } = useThemeUI()
   const isDarkMode = getIsDarkMode(colorMode)
+
+  const {
+    getArrowProps,
+    getTooltipProps,
+    setTooltipRef,
+    setTriggerRef,
+    visible,
+  } = usePopperTooltip({
+    ...props,
+  });
+
+
   return (
-    <TooltipTrigger
-      {...props}
-      tooltip={({
-        arrowRef,
-        tooltipRef,
-        getArrowProps,
-        getTooltipProps,
-        placement
-      }) => (
+    <Fragment>
+      <span
+        ref={setTriggerRef}
+        { ...props }
+      >
+        {children}
+      </span>
+
+      {visible && (
         <div
-          {...getTooltipProps({
-            ref: tooltipRef,
-            className: 'tooltip-container'
-          })}
+          ref={setTooltipRef}
+          {...getTooltipProps({ className: 'tooltip-container' })}
           sx={{
             border: theme => (isDarkMode ? `none` : theme.colors.gray[8]),
             ...(isDarkMode ? { color: `text` } : {})
           }}
         >
           {!hideArrow && (
-            <div
-              {...getArrowProps({
-                ref: arrowRef,
-                className: 'tooltip-arrow',
-                'data-placement': placement
-              })}
-            />
+            <div {...getArrowProps({ className: 'tooltip-arrow' })} />
           )}
           {tooltip}
         </div>
       )}
-    >
-      {({ getTriggerProps, triggerRef }) => (
-        <span
-          {...getTriggerProps({
-            ref: triggerRef,
-            className: 'trigger'
-          })}
-        >
-          {children}
-        </span>
-      )}
-    </TooltipTrigger>
+    </Fragment>
   )
 }
 

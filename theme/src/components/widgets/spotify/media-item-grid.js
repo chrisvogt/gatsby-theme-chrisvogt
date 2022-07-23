@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
@@ -49,7 +49,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                 tooltip={tooltipContent}
                 trigger={['hover', 'focus']}
               >
-                <Styled.a
+                <Themed.a
                   className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
                   href={spotifyURL}
                   onMouseEnter={() => setCurrentMediaId(id)}
@@ -67,7 +67,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                       width: '100%'
                     }}
                   />
-                </Styled.a>
+                </Themed.a>
               </Tooltip>
             )
           })}

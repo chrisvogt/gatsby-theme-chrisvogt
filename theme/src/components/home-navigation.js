@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
-import { Heading, jsx, useThemeUI, Link } from 'theme-ui'
+import { Heading, jsx, Link } from 'theme-ui'
 import { useEffect, useRef } from 'react'
 import { Card } from '@theme-ui/components'
 
@@ -11,7 +11,6 @@ import {
   getSpotifyWidgetDataSource,
   getSteamWidgetDataSource
 } from '../selectors/metadata'
-import getIsDarkMode from '../helpers/isDarkMode'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 /**
@@ -85,9 +84,6 @@ const determineLinksToRender = (options = {}) => {
 }
 
 const HomeNavigation = () => {
-  const { colorMode } = useThemeUI()
-  const isDarkMode = getIsDarkMode(colorMode)
-  const cardStyle = isDarkMode ? 'infoCardDark' : 'infoCard'
   const navItemsRef = useRef()
 
   const metadata = useSiteMetadata()
@@ -143,16 +139,12 @@ const HomeNavigation = () => {
           position: `sticky`,
           top: `1.5em`
         }}
-        variant={cardStyle}
+        variant='actionCard'
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           <h3 sx={{ fontWeight: `unset`, mt: 0, mb: 2 }}>On-page navigation</h3>
           {links.map(({ href, id, text }) => (
-            <Link
-              href={href}
-              key={id}
-              variant={isDarkMode ? 'homeNavigationDark' : 'homeNavigation'}
-            >
+            <Link href={href} key={id} variant='homeNavigation'>
               {text}
             </Link>
           ))}

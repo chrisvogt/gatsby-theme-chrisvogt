@@ -11,7 +11,7 @@ describe('InstagramWidgetItem', () => {
         standard_resolution: {
           height: 100,
           width: 100,
-          url: 'https://cdn.privatesphere.io/images/fake-instagram-image.jpg'
+          url: 'https://cdn.chrisvogt.me/images/fake-instagram-image.jpg'
         }
       },
       likes: { count: { likesCount: 12 } },

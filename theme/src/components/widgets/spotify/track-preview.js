@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import PropTypes from 'prop-types'
 
 const TrackPreview = ({ link, name, thumbnailURL }) => (
-  <Styled.a
+  <Themed.a
     href={link}
     title={name}
     sx={{
@@ -19,7 +19,7 @@ const TrackPreview = ({ link, name, thumbnailURL }) => (
         width: '100%'
       }}
     />
-  </Styled.a>
+  </Themed.a>
 )
 
 TrackPreview.propTypes = {

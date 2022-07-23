@@ -1,9 +1,8 @@
 {
   "private": true,
-  "license": "MIT",
   "workspaces": [
-    "example",
-    "theme"
+    "theme",
+    "www.chrisvogt.me"
   ],
   "scripts": {
     "postinstall": "node index.js"

@@ -2,7 +2,7 @@
 
 exports[`WidgetHeader matches the snapshot 1`] = `
 <header
-  className="css-1665bv3-WidgetHeader"
+  className="css-1gotcft-WidgetHeader"
 >
   <h2
     className="css-1wf7gym"
@@ -10,7 +10,7 @@ exports[`WidgetHeader matches the snapshot 1`] = `
     Neat & Interesting Widget
   </h2>
   <div
-    className="css-1ske1cv-WidgetHeader"
+    className="css-idc44k-WidgetHeader"
   >
     <div
       className="sidebar-content"

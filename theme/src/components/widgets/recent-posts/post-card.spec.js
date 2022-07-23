@@ -4,7 +4,7 @@ import PostCard from './post-card'
 
 describe('PostCard', () => {
   const props = {
-    banner: 'https://cdn.privatesphere.io/images/article-og-banner.jpg',
+    banner: 'https://cdn.chrisvogt.me/images/article-og-banner.jpg',
     category: 'personal',
     date: '1592202624',
     link: '/blog/article',

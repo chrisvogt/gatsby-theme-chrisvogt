@@ -138,10 +138,6 @@ export default {
     p: 0
   },
 
-  PostCardLink: {
-    textDecoration: `none`
-  },
-
   TopNavigation: {
     color: `white`
   },
@@ -207,17 +203,5 @@ export default {
 
   '.text-center': {
     textAlign: `center`
-  },
-
-  '.gatsby-highlight pre[class*="language-"]': {
-    padding: 0,
-    overflow: `initial`,
-    float: `left`,
-    minWidth: `100%`
-  },
-
-  /* Adjust the position of the line numbers */
-  '.gatsby-highlight pre[class*="language-"].line-numbers': {
-    paddingLeft: `2.8em`
   }
 }

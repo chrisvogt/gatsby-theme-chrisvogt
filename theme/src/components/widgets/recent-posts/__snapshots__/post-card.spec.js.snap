@@ -2,7 +2,7 @@
 
 exports[`PostCard matches the snapshot 1`] = `
 <a
-  className="css-0"
+  className="css-sod6qt"
   href="/blog/article"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -11,27 +11,27 @@ exports[`PostCard matches the snapshot 1`] = `
     className="css-vurnku"
   >
     <div
-      className="card-content css-j7qwjs"
+      className="card-content css-x4n4mc"
     >
       <div
         className="card-media"
       >
         <div
-          className="css-un1bl9"
+          className="css-10hlus8"
         />
       </div>
       <span
-        className="css-1fhgjcy"
+        className="css-1vp9y8d"
       >
         personal
       </span>
       <h4
-        className="css-164r41r"
+        className="css-1u6fmmt"
       >
         My Blog Post
       </h4>
       <time
-        className="created css-1dqf291"
+        className="created css-1goz6uy"
       >
         1592202624
       </time>

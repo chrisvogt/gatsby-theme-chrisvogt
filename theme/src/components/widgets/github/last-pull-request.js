@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Box, Card, Heading } from '@theme-ui/components'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'
 import PropTypes from 'prop-types'
-
-import isDarkMode from '../../../helpers/isDarkMode'
 
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
@@ -18,9 +16,6 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
     url
   } = pullRequest
 
-  const { colorMode } = useThemeUI()
-  const variant = isDarkMode(colorMode) ? 'actionCardDark' : 'actionCard'
-
   return (
     <Box>
       <Heading
@@ -32,7 +27,7 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
         Last Pull Request
       </Heading>
 
-      <Styled.a
+      <Themed.a
         href={url}
         sx={{
           display: `flex`,
@@ -41,7 +36,7 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
           }
         }}
       >
-        <Card variant={variant}>
+        <Card variant='actionCard'>
           <Placeholder
             color='#efefef'
             customPlaceholder={
@@ -76,7 +71,7 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
             </Placeholder>
           </CardFooter>
         </Card>
-      </Styled.a>
+      </Themed.a>
     </Box>
   )
 }

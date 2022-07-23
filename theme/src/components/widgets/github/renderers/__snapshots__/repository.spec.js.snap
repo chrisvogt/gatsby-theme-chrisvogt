@@ -2,26 +2,26 @@
 
 exports[`GitHub Repository Renderer matches the snapshot 1`] = `
 <div
-  className="css-3xm76x-Repository"
+  className="css-6tik87-Repository"
 >
   <h4
-    className="css-dxkypm-Repository"
+    className="css-1t113no-Repository"
   >
-    chrisvogt/gatsby-theme-private-sphere
+    chrisvogt/gatsby-theme-chrisvogt
   </h4>
   <span
-    className="css-1yqdz9k-Repository"
+    className="css-rpa521-Repository"
   >
     GatsbyJS blog theme with built-in social widgets for creatives and developers.
   </span>
   <div
-    className="css-1nldqfs-CardFooter"
+    className="css-1tkdyol-CardFooter"
   >
     <span
-      className="css-15n3i4m-Repository"
+      className="css-14d26u1-Repository"
     >
       Last updated 
-      last year
+      2 years ago
     </span>
     <span>
       View on 

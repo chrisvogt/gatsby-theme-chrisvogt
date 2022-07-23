@@ -1,17 +1,18 @@
 /** @jsx jsx */
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Card } from '@theme-ui/components'
 import { Link } from 'gatsby'
 
-import isDarkMode from '../../../helpers/isDarkMode'
-
 export default ({ banner, category, date, link, title }) => {
-  const { colorMode } = useThemeUI()
-  const variant = isDarkMode(colorMode) ? 'PostCardDark' : 'PostCard'
-
   return (
-    <Link sx={{ variant: 'styles.PostCardLink' }} to={link}>
-      <Card variant={variant}>
+    <Link
+      sx={{ 
+        color: `var(--theme-ui-colors-panel-text)`,
+        textDecoration: `none`
+      }}
+      to={link}
+    >
+      <Card variant='PostCard'>
         <div
           className='card-content'
           sx={{
@@ -38,7 +39,7 @@ export default ({ banner, category, date, link, title }) => {
             <span sx={{ variant: `text.title`, mt: 1 }}>{category}</span>
           )}
 
-          <Styled.h4 sx={{ mt: 2 }}>{title}</Styled.h4>
+          <Themed.h4 sx={{ mt: 2 }}>{title}</Themed.h4>
 
           <time
             className='created'

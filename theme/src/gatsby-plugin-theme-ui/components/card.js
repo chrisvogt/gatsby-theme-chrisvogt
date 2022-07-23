@@ -1,21 +1,19 @@
 import { floatOnHover } from '../abstracts/shadows'
 
 export const card = {
-  backgroundColor: `white`,
-  borderBottom: `1px solid white`,
+  backgroundColor: `var(--theme-ui-colors-panel-background)`,
+  color: 'var(--theme-ui-colors-panel-text)',
   borderRadius: `3px`,
   boxShadow: `default`,
-  color: `text`,
   flexGrow: 1,
   padding: 3,
   textDecoration: `none`
 }
 
-export const infoCard = {
+export const metricCard = {
+  backgroundColor: `var(--theme-ui-colors-panel-background)`,
   boxShadow: `none`,
-  borderBottom: `1px solid #efefef`,
-  borderLeftColor: `text`,
-  borderLeft: `2px solid`,
+  color: 'var(--theme-ui-colors-panel-text)',
   span: {
     fontFamily: `heading`,
     fontWeight: `bold`,
@@ -26,6 +24,8 @@ export const infoCard = {
 export const PostCard = {
   ...card,
   ...floatOnHover,
+  backgroundColor: `var(--theme-ui-colors-panel-background)`,
+  color: 'var(--theme-ui-colors-panel-text)',
   display: `flex`,
   height: `100%`,
   flexDirection: `column`,

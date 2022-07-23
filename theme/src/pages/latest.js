@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, jsx, Styled } from 'theme-ui'
+import { Container, jsx, Themed } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
 
@@ -25,9 +25,9 @@ export default ({ data }) => {
         }}
       >
         <Container sx={{ flexGrow: 1 }}>
-          <Styled.h1>Blog</Styled.h1>
+          <Themed.h1>Blog</Themed.h1>
 
-          <Styled.div
+          <Themed.div
             sx={{
               display: `grid`,
               gridAutoRows: `1fr`,
@@ -47,7 +47,7 @@ export default ({ data }) => {
                 title={post.frontmatter.title}
               />
             ))}
-          </Styled.div>
+          </Themed.div>
         </Container>
       </Flex>
     </Layout>

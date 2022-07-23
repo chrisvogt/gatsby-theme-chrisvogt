@@ -40,8 +40,8 @@
               "key": "mit",
               "url": "http://choosealicense.com/licenses/mit/"
             },
-            "name": "gatsby-theme-private-sphere",
-            "nameWithOwner": "chrisvogt/gatsby-theme-private-sphere",
+            "name": "gatsby-theme-chrisvogt",
+            "nameWithOwner": "chrisvogt/gatsby-theme-chrisvogt",
             "openGraphImageUrl": "https://avatars0.githubusercontent.com/u/1934719?s=400&v=4",
             "primaryLanguage": {
               "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -50,7 +50,7 @@
             },
             "updatedAt": "2020-06-12T01:42:55Z",
             "pushedAt": "2020-06-12T03:21:36Z",
-            "url": "https://github.com/chrisvogt/gatsby-theme-private-sphere",
+            "url": "https://github.com/chrisvogt/gatsby-theme-chrisvogt",
             "usesCustomOpenGraphImage": false
           },
           {
@@ -146,7 +146,7 @@
               "edges": []
             },
             "lastEditedAt": "2020-06-12T01:35:12Z",
-            "url": "https://github.com/chrisvogt/gatsby-theme-private-sphere/pull/40",
+            "url": "https://github.com/chrisvogt/gatsby-theme-chrisvogt/pull/40",
             "closed": true,
             "closedAt": "2020-06-12T01:42:52Z",
             "createdAt": "2020-06-12T00:50:30Z",
@@ -154,9 +154,9 @@
             "merged": true,
             "number": 40,
             "repository": {
-              "name": "gatsby-theme-private-sphere",
+              "name": "gatsby-theme-chrisvogt",
               "id": "MDEwOlJlcG9zaXRvcnkyMTMzMDI5NzQ=",
-              "url": "https://github.com/chrisvogt/gatsby-theme-private-sphere"
+              "url": "https://github.com/chrisvogt/gatsby-theme-chrisvogt"
             },
             "title": "Initial check-in of unit tests and coverage collection/reporting",
             "viewerDidAuthor": true

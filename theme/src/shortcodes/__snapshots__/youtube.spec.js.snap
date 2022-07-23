@@ -2,7 +2,7 @@
 
 exports[`YouTube Shortcode matches the snapshot 1`] = `
 <div
-  className="css-d7h4os-YouTube"
+  className="css-1cytoys-YouTube"
 >
   <iframe
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
