@@ -20,20 +20,20 @@ yarn add gatsby gatsby-theme-chrisvogt react react-dom
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    /* site settings – see /example */
+    /* site settings – see /www.chrisvogt.me */
   },
   plugins: [
     {
       resolve: 'gatsby-theme-chrisvogt',
       options: {
-        /* custom theme options – see /example */
+        /* custom theme options – see /www.chrisvogt.me */
       },
     },
   ],
 }
 ```
 
-Review the [example site configuration](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/example/gatsby-config.js) for an example of available site metadata fields.
+Review the [website site configuration](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/www.chrisvogt.me/gatsby-config.js) for an example of available site metadata fields.
 
 ## Screenshots
 

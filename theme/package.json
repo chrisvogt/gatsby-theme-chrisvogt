@@ -1,13 +1,14 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.21.0",
+  "version": "0.21.1",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
   "bugs": "https://github.com/chrisvogt/gatsby-theme-chrisvogt/issues",
   "keywords": [
+    "personal-website",
+    "gatsby-website",
     "gatsby-plugin",
     "gatsby-theme",
     "gatsby",
