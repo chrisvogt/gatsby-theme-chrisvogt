@@ -30,6 +30,8 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       sx={{
         fontSize: 0,
         fontFamily: 'heading',
+        lineHeight: '1.25', // synced with widget header
+        verticalAlign: 'bottom',
         '.read-more-icon': {
           opacity: 0,
           transition: `all .3s ease`
