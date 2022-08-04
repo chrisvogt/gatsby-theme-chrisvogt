@@ -20,31 +20,31 @@ Array [
         On-page navigation
       </h3>
       <a
-        className="css-vurnku"
+        className="css-cv51xn-HomeNavigation"
         href="#posts"
       >
         Latest Posts
       </a>
       <a
-        className="css-vurnku"
+        className="css-cv51xn-HomeNavigation"
         href="#instagram"
       >
         Instagram
       </a>
       <a
-        className="css-vurnku"
+        className="css-cv51xn-HomeNavigation"
         href="#github"
       >
         GitHub
       </a>
       <a
-        className="css-vurnku"
+        className="css-cv51xn-HomeNavigation"
         href="#goodreads"
       >
         Goodreads
       </a>
       <a
-        className="css-vurnku"
+        className="css-cv51xn-HomeNavigation"
         href="#spotify"
       >
         Spotify

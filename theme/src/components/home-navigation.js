@@ -14,9 +14,9 @@ import useSiteMetadata from '../hooks/use-site-metadata'
 
 /**
  * Link Registry
- * 
+ *
  * The items in this array follow the following schema:
- * 
+ *
  * * rule {function} – validator function
  * * value {object} – props for the link item
  */
@@ -71,7 +71,7 @@ const determineLinksToRender = (options = {}) => {
     return linksToRender
   }, [])
 
-  return links;
+  return links
 }
 
 const HomeNavigation = () => {
@@ -134,7 +134,12 @@ const HomeNavigation = () => {
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           <h3 sx={{ fontWeight: `unset`, mt: 0, mb: 2 }}>On-page navigation</h3>
           {links.map(({ href, id, text }) => (
-            <Link href={href} key={id} variant='homeNavigation'>
+            <Link
+              href={href}
+              key={id}
+              variant='homeNavigation'
+              sx={{ color: `var(--theme-ui-colors-panel-text)` }}
+            >
               {text}
             </Link>
           ))}
