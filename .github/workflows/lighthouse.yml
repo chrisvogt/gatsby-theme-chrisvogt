@@ -1,24 +1,29 @@
-name: Lighthouse Scores
-
-on:
-  push:
-    branches: ["master"]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: ["master"]
-
+name: Lighthouse CI for Netlify sites
+on: pull_request
 jobs:
-  audit:
-    name: Lighthouse audit
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Audit deploy preview
-        uses: jakejarvis/lighthouse-action@master
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
         with:
-          netlify_site: chrisvogt
-      - name: Upload results as an artifact
-        uses: actions/upload-artifact@master
+          node-version: 12.x
+      - name: Install & Build
+        run: |
+          yarn install
+          yarn build
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
         with:
-          name: report
-          path: "./report"
+          site_name: 'chrisvogt'
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            ${{ steps.netlify.outputs.url }}
+            ${{ steps.netlify.outputs.url }}/latest
+            ${{ steps.netlify.outputs.url }}/meta/hello-world
+          uploadArtifacts: true
