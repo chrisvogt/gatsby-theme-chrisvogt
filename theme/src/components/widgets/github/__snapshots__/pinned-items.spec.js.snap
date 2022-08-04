@@ -16,7 +16,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
     className="css-1icm50y-PinnedItems"
   >
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -128,7 +128,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -240,7 +240,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -352,7 +352,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -483,7 +483,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
     className="css-1icm50y-PinnedItems"
   >
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -595,7 +595,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -707,7 +707,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
@@ -819,7 +819,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-7x53wm-PinnedItems"
+      className="css-1q6tr3e-PinnedItems"
     >
       <div
         className="css-vurnku"
