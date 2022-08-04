@@ -46,6 +46,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
       <Themed.a
         href={link}
         sx={{
+          color: `var(--theme-ui-colors-panel-text)`,
           display: `flex`,
           '&:hover, &:focus': {
             textDecoration: `none`

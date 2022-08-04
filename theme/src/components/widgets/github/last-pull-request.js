@@ -30,6 +30,7 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
       <Themed.a
         href={url}
         sx={{
+          color: `var(--theme-ui-colors-panel-text)`,
           display: `flex`,
           '&:hover, &:focus': {
             textDecoration: `none`

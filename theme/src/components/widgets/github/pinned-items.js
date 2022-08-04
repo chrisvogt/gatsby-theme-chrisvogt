@@ -38,6 +38,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
             href={item.url}
             key={item.id || index}
             sx={{
+              color: `var(--theme-ui-colors-panel-text)`,
               display: `flex`,
               '&:hover, &:focus': {
                 textDecoration: `none`
