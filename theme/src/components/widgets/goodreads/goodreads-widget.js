@@ -116,13 +116,6 @@ export default () => {
     </CallToAction>
   )
 
-  console.log('Rendering goodreads widget', {
-    status,
-    isLoading,
-    books,
-    metrics
-  })
-
   return (
     <Widget id='goodreads' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction}>Goodreads</WidgetHeader>

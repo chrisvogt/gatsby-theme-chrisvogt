@@ -88,7 +88,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
             
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-external-link-alt fa-w-16 "
+            className="svg-inline--fa fa-external-link-alt "
             data-icon="external-link-alt"
             data-prefix="fas"
             focusable="false"
