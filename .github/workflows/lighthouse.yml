@@ -1,0 +1,24 @@
+name: Lighthouse Scores
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: ["master"]
+
+jobs:
+  audit:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Audit deploy preview
+        uses: jakejarvis/lighthouse-action@master
+        with:
+          netlify_site: chrisvogt
+      - name: Upload results as an artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: report
+          path: "./report"
