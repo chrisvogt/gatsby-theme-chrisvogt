@@ -38,6 +38,7 @@ const InstagramWidgetItem = ({
       <img
         crossOrigin='anonymous'
         className='instagram-item-image'
+        loading='lazy'
         src={`${cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`}
         height='280'
         width='280'

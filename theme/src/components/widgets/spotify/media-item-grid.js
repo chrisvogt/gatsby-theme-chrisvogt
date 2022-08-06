@@ -58,6 +58,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                   <img
                     alt='cover artwork'
                     crossOrigin='anonymous'
+                    loading='lazy'
                     src={thumbnailURL}
                     sx={{
                       ...floatOnHover,
