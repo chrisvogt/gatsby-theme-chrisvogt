@@ -11,6 +11,7 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
     className="instagram-item-image css-ko57dg-InstagramWidgetItem"
     crossOrigin="anonymous"
     height="280"
+    loading="lazy"
     src="undefined?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format"
     width="280"
   />
