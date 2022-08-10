@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Themed } from 'theme-ui'
+import { jsx, Container, Flex, Link, Themed } from 'theme-ui'
 
 /**
  * Home Page Header Content
@@ -7,47 +7,32 @@ import { jsx, Flex, Themed } from 'theme-ui'
  * The content rendered into the home page header region. This content is rendered
  * inside of the header, on top of the themed background, and below the top nav.
  */
-const HomeHeaderContent = ({ avatar, headline, subhead }) => (
-  <div
-    sx={{
-      display: [`block`, ``, `grid`],
-      gridGap: 0,
-      gridTemplateColumns: [``, ``, `1fr 60%`],
-      my: 5,
-      width: `100%`
-    }}
-  >
-    <Flex
-      sx={{
-        alignItems: [`center`, ``, `flex-end`],
-        flexDirection: `column`
-      }}
-    >
-      <img
-        sx={{
-          borderColor: `white`,
-          borderRadius: `50%`,
-          borderStyle: `solid`,
-          borderWidth: 3,
-          mr: [0, 0, 4]
-        }}
-        alt='Avatar'
-        src={avatar}
-        height='128'
-        width='128'
-      />
-    </Flex>
-    <Flex
-      sx={{
-        flexDirection: `column`,
-        justifyContent: `center`,
-        textAlign: [`center`, ``, `left`]
-      }}
-    >
-      <Themed.h1 sx={{ mb: 0, pb: 0 }}>{headline}</Themed.h1>
-      <Themed.p sx={{ py: 0, my: 0, fontSize: 2 }}>{subhead}</Themed.p>
-    </Flex>
-  </div>
+const HomeHeaderContent = ({ headline }) => (
+  <Flex sx={{ width: '100%', justifyContent: 'center' }}>
+    <div sx={{
+      'max-width': ['90%', '75%'],
+      pt: 2,
+      pb: 4
+    }}>
+      <Themed.h1 sx={{ mb: 0, pb: 0 }}>
+        {headline}
+      </Themed.h1>
+      <p sx={{ fontSize: 2 }}>
+        I'm a Software Engineer in San Francisco with an interest in
+        photography, playing piano and building things with code. This
+        website is a digital garden where I share things I'm working
+        on or excited about.
+      </p>
+      <Flex sx={{ fontSize: 2, gap: `2em` }}>
+        <Link href='/about/me'>
+          More about me &rarr;
+        </Link>
+        <Link href='/about/site'>
+          More about this site &rarr;
+        </Link>
+      </Flex>
+    </div>
+  </Flex>
 )
 
 export default HomeHeaderContent

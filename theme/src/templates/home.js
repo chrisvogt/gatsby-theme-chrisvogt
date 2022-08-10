@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, Grid, jsx } from 'theme-ui'
+import { jsx, Container, Flex, Grid, Themed } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Header from '../components/header'
@@ -10,12 +10,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TopNavigation from '../components/top-navigation'
 
-import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
+import { getHeadline, getSubhead } from '../selectors/metadata'
 
 const HomeTemplate = props => {
   const { data: { site: { siteMetadata = {} } = {} } = {} } = props
-
-  const avatar = getAvatarURL(siteMetadata)
   const headline = getHeadline(siteMetadata)
   const subhead = getSubhead(siteMetadata)
 
@@ -24,12 +22,14 @@ const HomeTemplate = props => {
       <SEO title='Home' />
 
       <Header showSwoop hideTopPadding>
-        <TopNavigation hideBackground />
-        <HomeHeaderContent
-          avatar={avatar}
-          headline={headline}
-          subhead={subhead}
+        <TopNavigation
+          hideBackground
+          hideMenuItems
         />
+
+        <Container>
+          <HomeHeaderContent headline={headline}/>
+        </Container>
       </Header>
 
       <div

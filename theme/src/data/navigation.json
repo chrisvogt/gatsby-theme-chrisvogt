@@ -4,10 +4,16 @@
     "header": {
       "left": [
         {
+          "path": "/about",
+          "slug": "about",
+          "text": "About",
+          "title": "About"
+        },
+        {
           "path": "/latest",
           "slug": "latest",
           "text": "Latest Posts",
-          "title": "Latest content"
+          "title": "Latest Posts"
         }
       ],
       "home": [
