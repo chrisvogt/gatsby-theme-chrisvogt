@@ -16,11 +16,7 @@ const rendererRegistry = {
 }
 
 const PinnedItemCard = ({ item, type }) => {
-  return (
-    <Card variant='actionCard'>
-      {rendererRegistry[type] && rendererRegistry[type](item)}
-    </Card>
-  )
+  return <Card variant='actionCard'>{rendererRegistry[type] && rendererRegistry[type](item)}</Card>
 }
 
 PinnedItemCard.propTypes = {

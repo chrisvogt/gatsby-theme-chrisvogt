@@ -26,9 +26,7 @@ const mockSiteMetadata = {
 describe('HomeNavigation', () => {
   useSiteMetadata.mockImplementation(() => mockSiteMetadata)
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(<HomeNavigation />)
-      .toJSON()
+    const tree = renderer.create(<HomeNavigation />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

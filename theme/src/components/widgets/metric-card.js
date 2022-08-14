@@ -19,11 +19,7 @@ const MetricCard = ({ title, value, showPlaceholder }) => {
 
   return (
     <Card variant={variant}>
-      <Placeholder
-        color='#efefef'
-        ready={!showPlaceholder}
-        showLoadingAnimation
-      >
+      <Placeholder color='#efefef' ready={!showPlaceholder} showLoadingAnimation>
         <span>{value}</span>
         {title}
       </Placeholder>

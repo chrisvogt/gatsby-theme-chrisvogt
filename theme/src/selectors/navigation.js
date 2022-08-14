@@ -1,1 +1,1 @@
-export const getHeaderLeftItems = navigation => navigation?.header?.left;
+export const getHeaderLeftItems = navigation => navigation?.header?.left

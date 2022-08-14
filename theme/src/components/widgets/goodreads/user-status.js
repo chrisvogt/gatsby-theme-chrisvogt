@@ -18,19 +18,14 @@ const renderStarsForRating = count => {
 }
 
 const mapStatusToTemplate = {
-  review: ({ book, rating }) =>
-    `rated ${book.title} ${rating} out of 5 stars: ${renderStarsForRating(
-      rating
-    )}.`,
+  review: ({ book, rating }) => `rated ${book.title} ${rating} out of 5 stars: ${renderStarsForRating(rating)}.`,
   userstatus: ({ actionText }) => stripHtmlElements(actionText)
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
   const { link, type, updated } = status
 
-  const statusText = mapStatusToTemplate[type]
-    ? mapStatusToTemplate[type](status)
-    : 'Loading...'
+  const statusText = mapStatusToTemplate[type] ? mapStatusToTemplate[type](status) : 'Loading...'
 
   return (
     <Box>
@@ -56,9 +51,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
         <Card variant='actionCard'>
           <Placeholder
             color='#efefef'
-            customPlaceholder={
-              <TextRow style={{ marginTop: 0, width: `100%` }} />
-            }
+            customPlaceholder={<TextRow style={{ marginTop: 0, width: `100%` }} />}
             ready={!isLoading}
             showLoadingAnimation
           >
@@ -70,9 +63,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
-              customPlaceholder={
-                <TextRow style={{ marginTop: 0, width: `140px` }} />
-              }
+              customPlaceholder={<TextRow style={{ marginTop: 0, width: `140px` }} />}
               ready={!isLoading}
               showLoadingAnimation
             >

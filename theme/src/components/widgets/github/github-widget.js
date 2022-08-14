@@ -11,10 +11,7 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import {
-  getGithubUsername,
-  getGithubWidgetDataSource
-} from '../../../selectors/metadata'
+import { getGithubUsername, getGithubWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
@@ -47,10 +44,8 @@ const getMetrics = state => {
 
 const getHasFatalError = state => state.widgets?.github?.state === FAILURE
 const getIsLoading = state => state.widgets?.github?.state !== SUCCESS
-const getLastPullRequest = state =>
-  state.widgets?.github?.data?.user?.pullRequests?.nodes?.[0]
-const getPinnedItems = state =>
-  state.widgets?.github?.data?.user?.pinnedItems?.nodes
+const getLastPullRequest = state => state.widgets?.github?.data?.user?.pullRequests?.nodes?.[0]
+const getPinnedItems = state => state.widgets?.github?.data?.user?.pinnedItems?.nodes
 
 const GitHubWidget = () => {
   const dispatch = useDispatch()
@@ -86,11 +81,7 @@ const GitHubWidget = () => {
     <Widget id='github' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
       {!hasFatalError && <ProfileMetricsBadge metrics={metrics} />}
-      <PinnedItems
-        isLoading={isLoading}
-        items={pinnedItems}
-        placeholderCount={2}
-      />
+      <PinnedItems isLoading={isLoading} items={pinnedItems} placeholderCount={2} />
       <LastPullRequest isLoading={isLoading} pullRequest={lastPullRequest} />
     </Widget>
   )

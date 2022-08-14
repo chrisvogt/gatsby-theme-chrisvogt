@@ -18,16 +18,11 @@ import useSiteMetadata from '../../../hooks/use-site-metadata'
 const getHasFatalError = state => state.widgets?.spotify?.state === FAILURE
 const getIsLoading = state => state.widgets?.spotify?.state !== SUCCESS
 const getMetrics = state => state.widgets?.spotify?.data?.metrics || []
-const getPlaylists = state =>
-  state.widgets?.spotify?.data?.collections?.playlists || []
-const getProfileDisplayName = state =>
-  state.widgets?.spotify?.data?.profile?.displayName || ''
-const getProfileURL = state =>
-  state.widgets?.spotify?.data?.profile?.profileURL || ''
-const getProviderDisplayName = state =>
-  state.widgets?.spotify?.data?.provider?.displayName || ''
-const getTopTracks = state =>
-  state.widgets?.spotify?.data?.collections?.topTracks || []
+const getPlaylists = state => state.widgets?.spotify?.data?.collections?.playlists || []
+const getProfileDisplayName = state => state.widgets?.spotify?.data?.profile?.displayName || ''
+const getProfileURL = state => state.widgets?.spotify?.data?.profile?.profileURL || ''
+const getProviderDisplayName = state => state.widgets?.spotify?.data?.provider?.displayName || ''
+const getTopTracks = state => state.widgets?.spotify?.data?.collections?.topTracks || []
 
 const SpotifyWidget = () => {
   const dispatch = useDispatch()
@@ -51,11 +46,7 @@ const SpotifyWidget = () => {
   }, [dispatch, spotifyDataSource, isLoading])
 
   const callToAction = (
-    <CallToAction
-      title={`${profileDisplayName} on ${providerDisplayName}`}
-      url={profileURL}
-      isLoading={isLoading}
-    >
+    <CallToAction title={`${profileDisplayName} on ${providerDisplayName}`} url={profileURL} isLoading={isLoading}>
       Browse Playlists
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>

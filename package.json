@@ -5,7 +5,8 @@
     "www.chrisvogt.me"
   ],
   "scripts": {
-    "postinstall": "node index.js"
+    "postinstall": "node index.js",
+    "prettier:format": "prettier --write ."
   },
   "devDependencies": {
     "husky": "^8.0.1",

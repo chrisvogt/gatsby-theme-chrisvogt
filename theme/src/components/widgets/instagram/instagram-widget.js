@@ -81,31 +81,29 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(MAX_IMAGES).fill({}) : media)
-            .slice(0, MAX_IMAGES)
-            .map((post, idx) => (
-              <ReactPlaceholder
-                customPlaceholder={
-                  <div className='image-placeholder'>
-                    <RectShape
-                      color='#efefef'
-                      sx={{
-                        borderRadius: `4px`,
-                        boxShadow: `md`,
-                        width: `100%`,
-                        paddingBottom: `100%`
-                      }}
-                    />
-                  </div>
-                }
-                key={isLoading ? idx : post.id}
-                ready={!isLoading}
-                showLoadingAnimation
-                type='rect'
-              >
-                <WidgetItem handleClick={openLightbox} index={idx} post={post} />
-              </ReactPlaceholder>
-            ))}
+          {(isLoading ? Array(MAX_IMAGES).fill({}) : media).slice(0, MAX_IMAGES).map((post, idx) => (
+            <ReactPlaceholder
+              customPlaceholder={
+                <div className='image-placeholder'>
+                  <RectShape
+                    color='#efefef'
+                    sx={{
+                      borderRadius: `4px`,
+                      boxShadow: `md`,
+                      width: `100%`,
+                      paddingBottom: `100%`
+                    }}
+                  />
+                </div>
+              }
+              key={isLoading ? idx : post.id}
+              ready={!isLoading}
+              showLoadingAnimation
+              type='rect'
+            >
+              <WidgetItem handleClick={openLightbox} index={idx} post={post} />
+            </ReactPlaceholder>
+          ))}
         </Grid>
       </div>
 

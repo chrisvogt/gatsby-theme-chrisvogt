@@ -44,11 +44,7 @@ export default () => {
             display: `grid`,
             gridAutoRows: `1fr`,
             gridGap: [3, 3, 4],
-            gridTemplateColumns: [
-              ``,
-              ``,
-              `repeat(${getColumnCount(posts.length)}, 1fr)`
-            ]
+            gridTemplateColumns: [``, ``, `repeat(${getColumnCount(posts.length)}, 1fr)`]
           }}
         >
           {posts.map(post => (
