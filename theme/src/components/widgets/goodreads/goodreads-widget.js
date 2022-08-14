@@ -2,16 +2,11 @@
 import { jsx } from 'theme-ui'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import get from 'lodash/get'
 
-import {
-  getGoodreadsUsername,
-  getGoodreadsWidgetDataSource
-} from '../../../selectors/metadata'
+import { getGoodreadsUsername, getGoodreadsWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
@@ -22,13 +17,9 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 const getBooks = state => {
-  const booksCollection = get(
-    state,
-    'widgets.goodreads.data.collections.recentlyReadBooks',
-    []
-  )
+  const booksCollection = state.widgets?.goodreads?.data?.collections?.recentlyReadBooks
 
-  if (!booksCollection.length) {
+  if (!booksCollection?.length) {
     return []
   }
 
@@ -42,66 +33,64 @@ const getBooks = state => {
 }
 
 const getMetrics = state => {
-  const friendsCount = get(state, 'widgets.goodreads.data.profile.friendsCount')
-  const readCount = get(state, 'widgets.goodreads.data.profile.readCount')
+  const friendsCount = state.widgets?.goodreads?.data?.profile?.friendsCount
+  const readCount = state.widgets?.goodreads?.data?.profile?.readCount
 
-  const metrics = [
-    {
-      displayName: 'Friends',
-      id: 'friends-count',
-      value: friendsCount
-    },
-    {
-      displayName: 'Books Read',
-      id: 'read-count',
-      value: readCount
-    }
+  return [
+    ...(friendsCount
+      ? [
+          {
+            displayName: 'Friends',
+            id: 'friends-count',
+            value: friendsCount
+          }
+        ]
+      : []),
+    ...(readCount
+      ? [
+          {
+            displayName: 'Books Read',
+            id: 'read-count',
+            value: readCount
+          }
+        ]
+      : [])
   ]
-
-  return metrics
 }
 
 const getUserStatus = state => {
-  const updates = get(state, 'widgets.goodreads.data.collections.updates', [])
+  const updates = state.widgets?.goodreads?.data?.collections?.updates
 
-  if (!updates.length) {
+  if (!updates?.length) {
     return {}
   }
 
-  const userStatus = updates.find(
-    ({ type }) => type === 'userstatus' || type === 'review'
-  )
+  const userStatus = updates.find(({ type }) => type === 'userstatus' || type === 'review')
 
   return userStatus
 }
 
+const getHasFatalError = state => state.widgets?.goodreads?.state === FAILURE
+const getIsLoading = state => state.widgets?.goodreads?.state !== SUCCESS
+const getProfileDisplayName = state => state.widgets?.goodreads?.data?.profile?.name
+
 export default () => {
   const dispatch = useDispatch()
+
   const metadata = useSiteMetadata()
   const goodreadsUsername = getGoodreadsUsername(metadata)
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
 
-  const {
-    books,
-    hasFatalError,
-    isLoading,
-    metrics,
-    profileDisplayName,
-    status
-  } = useSelector(state => ({
-    books: getBooks(state),
-    hasFatalError: get(state, 'widgets.goodreads.state') === FAILURE,
-    isLoading: get(state, 'widgets.goodreads.state') !== SUCCESS,
-    metrics: getMetrics(state),
-    profileDisplayName: get(state, 'widgets.goodreads.data.profile.name'),
-    status: getUserStatus(state)
-  }))
+  const books = useSelector(getBooks)
+  const hasFatalError = useSelector(getHasFatalError)
+  const isLoading = useSelector(getIsLoading)
+  const metrics = useSelector(getMetrics)
+  const profileDisplayName = useSelector(getProfileDisplayName)
+  const status = useSelector(getUserStatus)
 
   useEffect(() => {
     if (isLoading) {
-      dispatch(
-        fetchDataSource('goodreads', goodreadsDataSource, selectMetricsPayload)
-      )
+      dispatch(fetchDataSource('goodreads', goodreadsDataSource))
     }
   }, [dispatch, goodreadsDataSource, isLoading])
 
@@ -124,11 +113,7 @@ export default () => {
 
       <RecentlyReadBooks isLoading={isLoading} books={books} />
 
-      <UserStatus
-        actorName={profileDisplayName}
-        isLoading={isLoading}
-        status={status}
-      />
+      <UserStatus actorName={profileDisplayName} isLoading={isLoading} status={status} />
     </Widget>
   )
 }

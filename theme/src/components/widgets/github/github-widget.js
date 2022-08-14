@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import get from 'lodash/get'
 
 import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
@@ -16,63 +15,59 @@ import {
   getGithubUsername,
   getGithubWidgetDataSource
 } from '../../../selectors/metadata'
-import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 const getMetrics = state => {
-  const totalFollowersCount = get(
-    state,
-    'widgets.github.data.user.followers.totalCount'
-  )
-  const totalFollowingCount = get(
-    state,
-    'widgets.github.data.user.following.totalCount'
-  )
+  const user = state.widgets?.github?.data?.user || {}
+  const totalFollowersCount = user.followers?.totalCount
+  const totalFollowingCount = user.following?.totalCount
 
-  const metrics = [
-    {
-      displayName: 'Followers',
-      id: 'followers',
-      value: totalFollowersCount
-    },
-    {
-      displayName: 'Following',
-      id: 'following',
-      value: totalFollowingCount
-    }
+  return [
+    ...(totalFollowersCount
+      ? [
+          {
+            displayName: 'Followers',
+            id: 'followers',
+            value: totalFollowersCount
+          }
+        ]
+      : []),
+    ...(totalFollowingCount
+      ? [
+          {
+            displayName: 'Following',
+            id: 'following',
+            value: totalFollowingCount
+          }
+        ]
+      : [])
   ]
-
-  return metrics
 }
+
+const getHasFatalError = state => state.widgets?.github?.state === FAILURE
+const getIsLoading = state => state.widgets?.github?.state !== SUCCESS
+const getLastPullRequest = state =>
+  state.widgets?.github?.data?.user?.pullRequests?.nodes?.[0]
+const getPinnedItems = state =>
+  state.widgets?.github?.data?.user?.pinnedItems?.nodes
 
 const GitHubWidget = () => {
   const dispatch = useDispatch()
+
   const metadata = useSiteMetadata()
   const githubUsername = getGithubUsername(metadata)
   const githubDataSource = getGithubWidgetDataSource(metadata)
 
-  const {
-    hasFatalError,
-    isLoading,
-    lastPullRequest,
-    metrics,
-    pinnedItems
-  } = useSelector(state => ({
-    hasFatalError: get(state, 'widgets.github.state') === FAILURE,
-    isLoading: get(state, 'widgets.github.state') !== SUCCESS,
-    lastPullRequest: get(
-      state,
-      'widgets.github.data.user.pullRequests.nodes[0]',
-      {}
-    ),
-    metrics: getMetrics(state),
-    pinnedItems: get(state, 'widgets.github.data.user.pinnedItems.nodes', [])
-  }))
+  const hasFatalError = useSelector(getHasFatalError)
+  const isLoading = useSelector(getIsLoading)
+  const lastPullRequest = useSelector(getLastPullRequest)
+  const metrics = useSelector(getMetrics)
+  const pinnedItems = useSelector(getPinnedItems)
 
   useEffect(() => {
     if (isLoading) {
-      dispatch(fetchDataSource('github', githubDataSource, selectMetricsPayload))
+      dispatch(fetchDataSource('github', githubDataSource))
     }
   }, [dispatch, githubDataSource, isLoading])
 

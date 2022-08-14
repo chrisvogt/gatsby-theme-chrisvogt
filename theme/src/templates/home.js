@@ -13,7 +13,7 @@ import TopNavigation from '../components/top-navigation'
 import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
 
 const HomeTemplate = props => {
-  const { data: { site: { siteMetadata = {} } = {} } = {} } = props
+  const siteMetadata = props.data?.site?.siteMetadata || {};
 
   const avatar = getAvatarURL(siteMetadata)
   const headline = getHeadline(siteMetadata)

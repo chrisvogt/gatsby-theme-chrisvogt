@@ -1,7 +1,3 @@
-import get from 'lodash/get'
-
-const initialState = {}
-
 export const FETCH_DATASOURCE_SUCCESS = 'FETCH_DATASOURCE_SUCCESS'
 export const FETCH_DATASOURCE_FAILURE = 'FETCH_DATASOURCE_FAILURE'
 
@@ -9,11 +5,11 @@ export const SUCCESS = 'SUCCESS'
 export const FAILURE = 'FAILURE'
 export const INIT = 'INIT'
 
-export const getError = action => get(action, 'payload.error')
-export const getData = action => get(action, 'payload.data')
-export const getWidgetId = action => get(action, 'payload.widgetId')
+export const getError = action => action?.payload?.error
+export const getData = action => action?.payload?.data?.payload
+export const getWidgetId = action => action?.payload?.widgetId
 
-function widgets(state = initialState, action) {
+function widgets(state = {}, action) {
   switch (action.type) {
     case 'INIT_WIDGET_CONFIG':
       return {

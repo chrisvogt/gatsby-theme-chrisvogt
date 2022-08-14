@@ -1,15 +1,14 @@
 import axios from 'axios'
-import isFunction from 'lodash/isFunction'
 
-const fetchDataSource = (widgetId, dataSourceURL, selectorFunc) => {
+const fetchDataSource = (widgetId, url) => {
   return async function fetchDataSourceThunk(dispatch) {
     try {
-      const { data } = await axios.get(dataSourceURL)
+      const { data } = await axios.get(url)
       dispatch({
         type: 'FETCH_DATASOURCE_SUCCESS',
         payload: {
           widgetId,
-          data: isFunction(selectorFunc) ? selectorFunc(data) : data
+          data
         }
       })
     } catch (error) {

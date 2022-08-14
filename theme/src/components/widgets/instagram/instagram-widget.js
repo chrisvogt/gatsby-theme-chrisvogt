@@ -6,15 +6,10 @@ import { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
-import get from 'lodash/get'
 import ReactPlaceholder from 'react-placeholder'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import {
-  getInstagramUsername,
-  getInstagramWidgetDataSource
-} from '../../../selectors/metadata'
-import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
+import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
@@ -26,6 +21,11 @@ import WidgetItem from './instagram-widget-item'
 
 const MAX_IMAGES = 8
 
+const getHasFatalError = state => state.widgets?.instagram?.state === FAILURE
+const getIsLoading = state => state.widgets?.instagram?.state !== SUCCESS
+const getMedia = state => state.widgets?.instagram?.data?.collections?.media || []
+const getMetrics = state => state.widgets?.instagram?.data?.metrics || []
+
 export default () => {
   const dispatch = useDispatch()
 
@@ -33,18 +33,14 @@ export default () => {
   const instagramUsername = getInstagramUsername(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
-  const { hasFatalError, isLoading, media, metrics } = useSelector(state => ({
-    hasFatalError: get(state, 'widgets.instagram.state') === FAILURE,
-    isLoading: get(state, 'widgets.instagram.state') !== SUCCESS,
-    media: get(state, 'widgets.instagram.data.collections.media', []),
-    metrics: get(state, 'widgets.instagram.data.metrics', [])
-  }))
+  const hasFatalError = useSelector(getHasFatalError)
+  const isLoading = useSelector(getIsLoading)
+  const media = useSelector(getMedia)
+  const metrics = useSelector(getMetrics)
 
   useEffect(() => {
     if (isLoading) {
-      dispatch(
-        fetchDataSource('instagram', instagramDataSource, selectMetricsPayload)
-      )
+      dispatch(fetchDataSource('instagram', instagramDataSource))
     }
   }, [dispatch, instagramDataSource, isLoading])
 
@@ -107,11 +103,7 @@ export default () => {
                 showLoadingAnimation
                 type='rect'
               >
-                <WidgetItem
-                  handleClick={openLightbox}
-                  index={idx}
-                  post={post}
-                />
+                <WidgetItem handleClick={openLightbox} index={idx} post={post} />
               </ReactPlaceholder>
             ))}
         </Grid>

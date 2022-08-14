@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const LastPullRequest = ({ isLoading, pullRequest }) => {
+const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
   const {
     number,
     repository: { name: repositoryName } = {},
