@@ -4,18 +4,20 @@ import useNavigationData from './use-navigation-data'
 
 const data = {
   allDataJson: {
-    edges: [{
-      node: {
-        payload: {
-          left: {
-            path: '/',
-            slug: 'home',
-            text: 'Home',
-            title: 'Home'
+    edges: [
+      {
+        node: {
+          payload: {
+            left: {
+              path: '/',
+              slug: 'home',
+              text: 'Home',
+              title: 'Home'
+            }
           }
         }
       }
-    }]
+    ]
   }
 }
 

@@ -4,20 +4,22 @@ import useRecentPosts from './use-recent-posts'
 
 const data = {
   allMdx: {
-    edges: [{
-      node: {
-        excerpt: 'One simple thing and you\'ll never believe what happened!',
-        fields: {
-          id: 'post-identifier',
-          category: 'general',
-          slug: 'a-blog-article'
-        },
-        frontmatter: {
-          banner: 'https://placekitten.com/300/300',
-          title: 'A Blog Article'
+    edges: [
+      {
+        node: {
+          excerpt: "One simple thing and you'll never believe what happened!",
+          fields: {
+            id: 'post-identifier',
+            category: 'general',
+            slug: 'a-blog-article'
+          },
+          frontmatter: {
+            banner: 'https://placekitten.com/300/300',
+            title: 'A Blog Article'
+          }
         }
       }
-    }]
+    ]
   }
 }
 
@@ -34,8 +36,10 @@ describe('useRecentPosts', () => {
 
   it('returns the latest posts', () => {
     const { result } = renderHook(() => useRecentPosts())
-    expect(result.current).toEqual([{
-      ...data.allMdx.edges[0].node
-    }])
+    expect(result.current).toEqual([
+      {
+        ...data.allMdx.edges[0].node
+      }
+    ])
   })
 })
