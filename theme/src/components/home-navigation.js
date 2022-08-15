@@ -116,10 +116,7 @@ const HomeNavigation = () => {
         exactly. I opted to instead just match the widget's header inside of a
         hidden element.
       */}
-      <Heading
-        aria-hidden='true'
-        sx={{ display: ['none', 'revert'], mt: 0, mb: 4, visibility: 'hidden' }}
-      >
+      <Heading aria-hidden='true' sx={{ display: ['none', 'revert'], mt: 0, mb: 4, visibility: 'hidden' }}>
         Widget Navigation
       </Heading>
       <Card
@@ -137,12 +134,7 @@ const HomeNavigation = () => {
           </h2>
 
           {links.map(({ href, id, text }) => (
-            <Link
-              href={href}
-              key={id}
-              variant='homeNavigation'
-              sx={{ color: `var(--theme-ui-colors-panel-text)` }}
-            >
+            <Link href={href} key={id} variant='homeNavigation' sx={{ color: `var(--theme-ui-colors-panel-text)` }}>
               {text}
             </Link>
           ))}

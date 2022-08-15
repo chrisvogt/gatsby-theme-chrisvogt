@@ -9,8 +9,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
   const placeholderItems = Array(placeholderCount).fill({
     __typename: 'placeholder'
   })
-  const itemsToRender =
-    isLoading || items.length === 0 ? placeholderItems : items
+  const itemsToRender = isLoading || items.length === 0 ? placeholderItems : items
 
   return (
     <Box sx={{ marginBottom: 4 }}>

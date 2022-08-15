@@ -28,12 +28,7 @@ const MediaTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        article={true}
-        description={description}
-        image={banner}
-        title={title}
-      />
+      <SEO article={true} description={description} image={banner} title={title} />
 
       {(youtubeSrc || soundcloudId) && (
         <div
@@ -80,7 +75,7 @@ MediaTemplate.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     mdx(fields: { id: { eq: $id } }) {
       body
       fields {

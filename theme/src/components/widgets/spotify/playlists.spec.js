@@ -4,18 +4,11 @@ import Playlists from './playlists'
 
 import spotifyResponseFixture from '../../../../__mocks__/spotify.mock.json'
 
-const playlists = spotifyResponseFixture.payload.collections.playlists;
+const playlists = spotifyResponseFixture.payload.collections.playlists
 
 describe('Playlists', () => {
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <Playlists
-          isLoading={ false }
-          playlists={ playlists }
-        />
-      )
-      .toJSON()
+    const tree = renderer.create(<Playlists isLoading={false} playlists={playlists} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

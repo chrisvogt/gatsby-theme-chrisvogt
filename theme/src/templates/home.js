@@ -10,10 +10,12 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TopNavigation from '../components/top-navigation'
 
-import { getHeadline, getSubhead } from '../selectors/metadata'
+import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
 
 const HomeTemplate = props => {
-  const { data: { site: { siteMetadata = {} } = {} } = {} } = props
+  const siteMetadata = props.data?.site?.siteMetadata || {}
+
+  const avatar = getAvatarURL(siteMetadata)
   const headline = getHeadline(siteMetadata)
   const subhead = getSubhead(siteMetadata)
 
@@ -22,14 +24,8 @@ const HomeTemplate = props => {
       <SEO title='Home' />
 
       <Header showSwoop hideTopPadding>
-        <TopNavigation
-          hideBackground
-          hideMenuItems
-        />
-
-        <Container>
-          <HomeHeaderContent headline={headline}/>
-        </Container>
+      <TopNavigation hideBackground hideMenuItems />
+        <HomeHeaderContent avatar={avatar} headline={headline} subhead={subhead} />
       </Header>
 
       <div

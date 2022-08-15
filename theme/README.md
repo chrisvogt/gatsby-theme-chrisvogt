@@ -2,7 +2,7 @@
 
 This directory contains a custom [GatsbyJS](https://www.gatsbyjs.com/) theme used to build my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The home page of my blog is a social dashboard that showcases recent activity from my accounts. My site content lives in the [../www.chrisvogt.me](../www.chrisvogt.me) workspace.
 
-> **Note:** To use the home page widgets you must provide your own backing service. The theme expects to fetch widget data from individual REST endpoints. Example schemas can be found  [the ./\_\_mocks\_\_ directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/theme/__mocks__).
+> **Note:** To use the home page widgets you must provide your own backing service. The theme expects to fetch widget data from individual REST endpoints. Example schemas can be found [the ./\_\_mocks\_\_ directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/theme/__mocks__).
 
 ## Installation
 
@@ -23,9 +23,9 @@ module.exports = {
       resolve: 'gatsby-theme-chrisvogt',
       options: {
         /* custom theme options – see /www.chrisvogt.me */
-      },
-    },
-  ],
+      }
+    }
+  ]
 }
 ```
 

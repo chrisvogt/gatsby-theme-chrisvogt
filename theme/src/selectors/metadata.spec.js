@@ -32,26 +32,18 @@ const metadata = {
   widgets: {
     github: {
       username: 'chrisvogt-theme',
-      widgetDataSource:
-        'https://metrics.chrisvogt.me/api/widget-content?widget=github'
+      widgetDataSource: 'https://metrics.chrisvogt.me/api/widget-content?widget=github'
     },
     goodreads: {
       username: 'chrisvogt-theme',
-      widgetDataSource:
-        'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
+      widgetDataSource: 'https://metrics.chrisvogt.me/api/widget-content?widget=goodreads'
     },
     instagram: {
       username: 'chrisvogt-theme',
-      widgetDataSource:
-        'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
-    },
-    profiles: {
-      widgetDataSourceMetas: 'https://api.chrisvogt.me/metas',
-      widgetDataSourceProfiles: 'https://api.chrisvogt.me/profiles'
+      widgetDataSource: 'https://metrics.chrisvogt.me/api/widget-content?widget=instagram'
     },
     spotify: {
-      widgetDataSource:
-        'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
+      widgetDataSource: 'https://metrics.chrisvogt.me/api/widget-content?widget=spotify'
     }
   }
 }

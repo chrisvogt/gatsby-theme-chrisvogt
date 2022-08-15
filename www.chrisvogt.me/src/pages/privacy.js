@@ -20,29 +20,33 @@ const PrivacyPolicy = () => (
       <Container>
         <h1>Privacy Policy</h1>
 
-        <p>This privacy policy outlines how my personal website, www.chrisvogt.me, collects and uses data made available by accessing the site.</p>
+        <p>
+          This privacy policy outlines how my personal website, www.chrisvogt.me, collects and uses data made available
+          by accessing the site.
+        </p>
 
         <h2>Third Parties</h2>
 
-        <p>This website uses Google Analytics to page view, impression, and interaction events. This is done for personal use to help guide the layout and content of the site. I collect and review this data to learn more about:</p>
-        
-        <ul>
-          <li>
-            Who visits the website.
-          </li>
-          <li>
-            How the website is used.
-          </li>
-          <li>
-            Whether visitors return to the website or not.
-          </li>
-          <li>
-            What content, design, and features are engaging and what aren't.
-          </li>
-        </ul>
-        
         <p>
-          Please review <em><a href='https://policies.google.com/privacy' title='Google Privacy & Terms'>Google Privacy & Terms</a></em> to learn more about the Google Analytics data collection policies and practices.
+          This website uses Google Analytics to page view, impression, and interaction events. This is done for personal
+          use to help guide the layout and content of the site. I collect and review this data to learn more about:
+        </p>
+
+        <ul>
+          <li>Who visits the website.</li>
+          <li>How the website is used.</li>
+          <li>Whether visitors return to the website or not.</li>
+          <li>What content, design, and features are engaging and what aren't.</li>
+        </ul>
+
+        <p>
+          Please review{' '}
+          <em>
+            <a href='https://policies.google.com/privacy' title='Google Privacy & Terms'>
+              Google Privacy & Terms
+            </a>
+          </em>{' '}
+          to learn more about the Google Analytics data collection policies and practices.
         </p>
 
         <em>Last updated June 29, 2020</em>

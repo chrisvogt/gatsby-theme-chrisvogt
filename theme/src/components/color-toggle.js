@@ -6,9 +6,7 @@ export default () => {
   const [colorMode, setColorMode] = useColorMode()
   return (
     <DarkModeToggle
-      onChange={() =>
-        setColorMode(colorMode === 'default' ? 'dark' : 'default')
-      }
+      onChange={() => setColorMode(colorMode === 'default' ? 'dark' : 'default')}
       checked={colorMode === 'dark'}
       size={80}
     />

@@ -6,12 +6,8 @@
         {
           "title": "Children of Ruin",
           "thumbnail": "https://books.google.com/books/content?id=y3NcuwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-          "authors": [
-            "Adrian Tchaikovsky"
-          ],
-          "categories": [
-            "Fiction"
-          ],
+          "authors": ["Adrian Tchaikovsky"],
+          "categories": ["Fiction"],
           "infoLink": "https://books.google.com/books?id=y3NcuwEACAAJ&dq=isbn:9780316452533&hl=&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=y3NcuwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
           "previewLink": "http://books.google.com/books?id=y3NcuwEACAAJ&dq=isbn:9780316452533&hl=&cd=1&source=gbs_api",
@@ -20,27 +16,19 @@
         },
         {
           "title": "Babycakes",
-          "categories": [
-            "Fiction"
-          ],
+          "categories": ["Fiction"],
           "infoLink": "https://books.google.com/books?id=FekFVsC5rp0C&dq=isbn:9780060924836&hl=&source=gbs_api",
           "pageCount": 336,
           "smallThumbnail": "https://books.google.com/books/content?id=FekFVsC5rp0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
           "previewLink": "http://books.google.com/books?id=FekFVsC5rp0C&printsec=frontcover&dq=isbn:9780060924836&hl=&cd=1&source=gbs_api",
           "rating": "4",
           "thumbnail": "https://books.google.com/books/content?id=FekFVsC5rp0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-          "authors": [
-            "Armistead Maupin"
-          ]
+          "authors": ["Armistead Maupin"]
         },
         {
-          "authors": [
-            "Barry Schwartz"
-          ],
+          "authors": ["Barry Schwartz"],
           "rating": "2",
-          "categories": [
-            "Psychology"
-          ],
+          "categories": ["Psychology"],
           "title": "The Paradox of Choice",
           "subtitle": "Why More Is Less, Revised Edition",
           "pageCount": 304,
@@ -50,9 +38,7 @@
           "infoLink": "https://books.google.com/books?id=gyIDswEACAAJ&dq=isbn:9780062449924&hl=&source=gbs_api"
         },
         {
-          "categories": [
-            "Psychology"
-          ],
+          "categories": ["Psychology"],
           "thumbnail": "https://books.google.com/books/content?id=d91vPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
           "rating": "3",
           "pageCount": 260,
@@ -61,9 +47,7 @@
           "smallThumbnail": "https://books.google.com/books/content?id=d91vPwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
           "title": "Influence",
           "previewLink": "http://books.google.com/books?id=d91vPwAACAAJ&dq=isbn:9780205609994&hl=&cd=1&source=gbs_api",
-          "authors": [
-            "Robert B. Cialdini"
-          ]
+          "authors": ["Robert B. Cialdini"]
         },
         {
           "smallThumbnail": "https://books.google.com/books/content?id=_a2VCwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
@@ -72,24 +56,16 @@
           "title": "Children of Time",
           "infoLink": "https://books.google.com/books?id=_a2VCwAAQBAJ&dq=isbn:9781447273288&hl=&source=gbs_api",
           "previewLink": "http://books.google.com/books?id=_a2VCwAAQBAJ&dq=isbn:9781447273288&hl=&cd=1&source=gbs_api",
-          "authors": [
-            "Adrian Tchaikovsky"
-          ],
+          "authors": ["Adrian Tchaikovsky"],
           "pageCount": 480,
-          "categories": [
-            "Dystopias"
-          ]
+          "categories": ["Dystopias"]
         },
         {
           "title": "The Left Hand of Darkness",
-          "categories": [
-            "Ethnologists"
-          ],
+          "categories": ["Ethnologists"],
           "pageCount": 336,
           "previewLink": "http://books.google.com/books?id=_JEhMQAACAAJ&dq=isbn:9781473221628&hl=&cd=1&source=gbs_api",
-          "authors": [
-            "Ursula K. Le Guin"
-          ],
+          "authors": ["Ursula K. Le Guin"],
           "infoLink": "https://books.google.com/books?id=_JEhMQAACAAJ&dq=isbn:9781473221628&hl=&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=_JEhMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
           "thumbnail": "https://books.google.com/books/content?id=_JEhMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
@@ -98,13 +74,9 @@
         {
           "infoLink": "https://books.google.com/books?id=F-Q_xGjWBi8C&dq=isbn:9780807014271&hl=&source=gbs_api",
           "pageCount": 165,
-          "authors": [
-            "Viktor Emil Frankl"
-          ],
+          "authors": ["Viktor Emil Frankl"],
           "thumbnail": "https://books.google.com/books/content?id=F-Q_xGjWBi8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-          "categories": [
-            "Biography & Autobiography"
-          ],
+          "categories": ["Biography & Autobiography"],
           "rating": "3",
           "previewLink": "http://books.google.com/books?id=F-Q_xGjWBi8C&printsec=frontcover&dq=isbn:9780807014271&hl=&cd=1&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=F-Q_xGjWBi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
@@ -112,14 +84,10 @@
         },
         {
           "pageCount": 275,
-          "categories": [
-            "Fiction"
-          ],
+          "categories": ["Fiction"],
           "smallThumbnail": "https://books.google.com/books/content?id=pWyLDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
           "infoLink": "https://books.google.com/books?id=pWyLDQAAQBAJ&dq=isbn:9780385333849&hl=&source=gbs_api",
-          "authors": [
-            "Kurt Vonnegut"
-          ],
+          "authors": ["Kurt Vonnegut"],
           "title": "Slaughterhouse-five",
           "subtitle": "Or, The Children's Crusade, a Duty-dance with Death",
           "thumbnail": "https://books.google.com/books/content?id=pWyLDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
@@ -129,12 +97,8 @@
         {
           "infoLink": "https://books.google.com/books?id=QzbJwQEACAAJ&dq=isbn:9780316478526&hl=&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=QzbJwQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-          "authors": [
-            "Malcolm Gladwell"
-          ],
-          "categories": [
-            "Social Science"
-          ],
+          "authors": ["Malcolm Gladwell"],
+          "categories": ["Social Science"],
           "subtitle": "What We Should Know about the People We Don't Know",
           "title": "Talking to Strangers",
           "pageCount": 304,
@@ -145,12 +109,8 @@
         {
           "previewLink": "http://books.google.com/books?id=5n4ToUG9R-gC&printsec=frontcover&dq=isbn:9780060924928&hl=&cd=1&source=gbs_api",
           "rating": "4",
-          "authors": [
-            "Armistead Maupin"
-          ],
-          "categories": [
-            "Fiction"
-          ],
+          "authors": ["Armistead Maupin"],
+          "categories": ["Fiction"],
           "title": "Further Tales of the City",
           "smallThumbnail": "https://books.google.com/books/content?id=5n4ToUG9R-gC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
           "infoLink": "https://books.google.com/books?id=5n4ToUG9R-gC&dq=isbn:9780060924928&hl=&source=gbs_api",
@@ -159,30 +119,22 @@
         },
         {
           "thumbnail": "https://books.google.com/books/content?id=PGFhwgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-          "authors": [
-            "Philip Pullman"
-          ],
+          "authors": ["Philip Pullman"],
           "previewLink": "http://books.google.com/books?id=PGFhwgEACAAJ&dq=isbn:9780553510669&hl=&cd=1&source=gbs_api",
           "rating": "2",
           "infoLink": "https://books.google.com/books?id=PGFhwgEACAAJ&dq=isbn:9780553510669&hl=&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=PGFhwgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
           "title": "The Secret Commonwealth",
           "pageCount": 656,
-          "categories": [
-            "Young Adult Fiction"
-          ]
+          "categories": ["Young Adult Fiction"]
         },
         {
           "infoLink": "https://books.google.com/books?id=hxPcvQEACAAJ&dq=isbn:9781407230924&hl=&source=gbs_api",
           "pageCount": 295,
           "smallThumbnail": "https://books.google.com/books/content?id=hxPcvQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
           "title": "The Color Purple",
-          "categories": [
-            "Abused wives"
-          ],
-          "authors": [
-            "Alice Walker"
-          ],
+          "categories": ["Abused wives"],
+          "authors": ["Alice Walker"],
           "previewLink": "http://books.google.com/books?id=hxPcvQEACAAJ&dq=isbn:9781407230924&hl=&cd=1&source=gbs_api",
           "rating": "5",
           "thumbnail": "https://books.google.com/books/content?id=hxPcvQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
@@ -196,19 +148,13 @@
           "previewLink": "http://books.google.com/books?id=qD-1vAEACAAJ&dq=isbn:9781732265141&hl=&cd=1&source=gbs_api",
           "categories": [],
           "title": "The Revolt of the Public",
-          "authors": [
-            "Martin Gurri"
-          ]
+          "authors": ["Martin Gurri"]
         },
         {
-          "categories": [
-            "Fiction"
-          ],
+          "categories": ["Fiction"],
           "rating": "4",
           "infoLink": "https://play.google.com/store/books/details?id=TgUZDAAAQBAJ&source=gbs_api",
-          "authors": [
-            "Sylvain Neuvel"
-          ],
+          "authors": ["Sylvain Neuvel"],
           "thumbnail": "https://books.google.com/books/content?id=TgUZDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
           "previewLink": "http://books.google.com/books?id=TgUZDAAAQBAJ&printsec=frontcover&dq=isbn:9781101886731&hl=&cd=1&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=TgUZDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
@@ -223,21 +169,15 @@
           "pageCount": 304,
           "title": "Sleeping Giants",
           "infoLink": "https://books.google.com/books?id=cxTUCwAAQBAJ&dq=isbn:9781101886694&hl=&source=gbs_api",
-          "categories": [
-            "FICTION"
-          ],
+          "categories": ["FICTION"],
           "rating": "5",
-          "authors": [
-            "Sylvain Neuvel"
-          ]
+          "authors": ["Sylvain Neuvel"]
         },
         {
           "pageCount": 104,
           "rating": "3",
           "title": "Atmosphra Incognita",
-          "authors": [
-            "Neal Stephenson"
-          ],
+          "authors": ["Neal Stephenson"],
           "categories": [],
           "infoLink": "https://books.google.com/books?id=1rTywQEACAAJ&dq=isbn:9781596069190&hl=&source=gbs_api",
           "smallThumbnail": "https://books.google.com/books/content?id=1rTywQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",

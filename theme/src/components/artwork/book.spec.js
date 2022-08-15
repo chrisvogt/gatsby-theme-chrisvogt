@@ -7,21 +7,15 @@ describe('Book', () => {
   const title = 'Fake Book'
 
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(<Book thumbnailURL={thumbnailURL} title={title} />)
-      .toJSON()
+    const tree = renderer.create(<Book thumbnailURL={thumbnailURL} title={title} />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
   it('renders an image using the image prop', () => {
-    const testRenderer = renderer.create(
-      <Book thumbnailURL={thumbnailURL} title={title} />
-    )
+    const testRenderer = renderer.create(<Book thumbnailURL={thumbnailURL} title={title} />)
     const testInstance = testRenderer.root
 
-    expect(testInstance.findByType('image').props.xlinkHref).toEqual(
-      thumbnailURL
-    )
+    expect(testInstance.findByType('image').props.xlinkHref).toEqual(thumbnailURL)
   })
 })
