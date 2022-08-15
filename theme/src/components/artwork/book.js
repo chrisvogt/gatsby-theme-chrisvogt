@@ -12,19 +12,11 @@ const Book = ({ thumbnailURL, title }) => (
   >
     <defs>
       <clipPath id='ec3c1a72-0104-4d8a-830f-57d2245cb2f4'>
-        <polyline
-          data-name='Book Cover'
-          points='78.6 38.6 78.6 88.3 14.9 88.3 14.9 0 78.6 0 78.6 43.6'
-          fill='none'
-        />
+        <polyline data-name='Book Cover' points='78.6 38.6 78.6 88.3 14.9 88.3 14.9 0 78.6 0 78.6 43.6' fill='none' />
       </clipPath>
     </defs>
     <title>{title}</title>
-    <g
-      fill='#1a202c'
-      id='bc5c39bc-971a-4562-b8d4-0c72a22c3f5f'
-      data-name='Book Sheets'
-    >
+    <g fill='#1a202c' id='bc5c39bc-971a-4562-b8d4-0c72a22c3f5f' data-name='Book Sheets'>
       <path d='M78.6,90.9H12.3V0H78.6ZM14.9,88.3H76V2.6H14.9Z' />
       <rect x='85.1' y='9.1' width='2.61' height='46.2' />
       <polygon points='87.7 100 20.83 100 12.35 90.89 14.25 89.11 21.97 97.4 85.1 97.4 85.1 49 87.7 49 87.7 100' />
@@ -43,12 +35,7 @@ const Book = ({ thumbnailURL, title }) => (
         clipPath: `url(#ec3c1a72-0104-4d8a-830f-57d2245cb2f4)`
       }}
     >
-      <image
-        width='128'
-        height='190'
-        transform='translate(14.53 -3.68) scale(0.5)'
-        xlinkHref={thumbnailURL}
-      />
+      <image width='128' height='190' transform='translate(14.53 -3.68) scale(0.5)' xlinkHref={thumbnailURL} />
     </g>
   </svg>
 )

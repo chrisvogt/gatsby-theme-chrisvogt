@@ -26,7 +26,7 @@ const data = {
   }
 }
 
-jest.mock('gatsby');
+jest.mock('gatsby')
 
 describe('useSocialProfiles', () => {
   beforeEach(() => {

@@ -6,9 +6,7 @@ import PinnedItemCard from './pinned-item-card'
 describe('Widget/GitHub/PinnedItemCard', () => {
   describe('snapshots', () => {
     it('matches the placeholder snapshot', () => {
-      const tree = renderer
-        .create(<PinnedItemCard type='placeholder' />)
-        .toJSON()
+      const tree = renderer.create(<PinnedItemCard type='placeholder' />).toJSON()
       expect(tree).toMatchSnapshot()
     })
 
@@ -19,9 +17,7 @@ describe('Widget/GitHub/PinnedItemCard', () => {
         openGraphImageUrl: './fake-image-path.png',
         updatedAt: '1592808981'
       }
-      const tree = renderer
-        .create(<PinnedItemCard item={mockRepositoryItem} type='Repository' />)
-        .toJSON()
+      const tree = renderer.create(<PinnedItemCard item={mockRepositoryItem} type='Repository' />).toJSON()
       expect(tree).toMatchSnapshot()
     })
   })

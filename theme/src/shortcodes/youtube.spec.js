@@ -16,12 +16,8 @@ describe('YouTube Shortcode', () => {
   })
 
   it('renders a default title if one is not provided', () => {
-    const testRenderer = renderer.create(
-      <YouTube url='https://www.youtube-nocookie.com/embed/XJashBvI17A' />
-    )
+    const testRenderer = renderer.create(<YouTube url='https://www.youtube-nocookie.com/embed/XJashBvI17A' />)
     const testInstance = testRenderer.root
-    expect(testInstance.findByType('iframe').props.title).toEqual(
-      'Video on YouTube'
-    )
+    expect(testInstance.findByType('iframe').props.title).toEqual('Video on YouTube')
   })
 })

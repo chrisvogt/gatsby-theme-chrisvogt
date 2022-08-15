@@ -31,9 +31,7 @@ describe('SEO', () => {
   describe('page title', () => {
     it('defaults to the site title', () => {
       mount(<SEO />)
-      expect(Helmet.peek().title).toBe(
-        'My Personal Blog & Portfolio | My Test Site'
-      )
+      expect(Helmet.peek().title).toBe('My Personal Blog & Portfolio | My Test Site')
     })
 
     it('accepts a custom page title', () => {

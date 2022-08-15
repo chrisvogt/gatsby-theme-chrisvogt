@@ -1,10 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import get from 'lodash/get'
 
-const selectPayload = data => {
-  const payload = get(data, 'allDataJson.edges[0].node.payload', {})
-  return payload
-}
+const selectPayload = data => data?.allDataJson?.edges?.[0]?.node?.payload || {}
 
 const useNavigationData = () => {
   const response = useStaticQuery(

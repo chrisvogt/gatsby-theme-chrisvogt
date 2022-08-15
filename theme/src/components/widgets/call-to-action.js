@@ -18,12 +18,7 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       }
     : {}
   return isLoading ? (
-    <Bars
-      fill='#1E90FF'
-      width='24'
-      height='24'
-      sx={{ verticalAlign: `middle` }}
-    />
+    <Bars fill='#1E90FF' width='24' height='24' sx={{ verticalAlign: `middle` }} />
   ) : (
     <Themed.a
       href={url}

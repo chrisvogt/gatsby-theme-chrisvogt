@@ -1,20 +1,20 @@
 import axios from 'axios'
-import isFunction from 'lodash/isFunction'
+import { FETCH_DATASOURCE_SUCCESS, FETCH_DATASOURCE_FAILURE } from '../reducers/widgets'
 
-const fetchDataSource = (widgetId, dataSourceURL, selectorFunc) => {
+const fetchDataSource = (widgetId, url) => {
   return async function fetchDataSourceThunk(dispatch) {
     try {
-      const { data } = await axios.get(dataSourceURL)
+      const { data } = await axios.get(url)
       dispatch({
-        type: 'FETCH_DATASOURCE_SUCCESS',
+        type: FETCH_DATASOURCE_SUCCESS,
         payload: {
           widgetId,
-          data: isFunction(selectorFunc) ? selectorFunc(data) : data
+          data
         }
       })
     } catch (error) {
       dispatch({
-        type: 'FETCH_DATASOURCE_FAILURE',
+        type: FETCH_DATASOURCE_FAILURE,
         payload: {
           widgetId,
           error

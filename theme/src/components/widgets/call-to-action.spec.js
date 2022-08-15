@@ -19,9 +19,7 @@ describe('CallToAction', () => {
 
   describe('loading indicator', () => {
     it("doesn't a loading indicator by default", () => {
-      const testRenderer = renderer.create(
-        <CallToAction title={title}>Test</CallToAction>
-      )
+      const testRenderer = renderer.create(<CallToAction title={title}>Test</CallToAction>)
       const testInstance = testRenderer.root
       expect(testInstance.findAllByType(Bars).length).toBe(0)
     })

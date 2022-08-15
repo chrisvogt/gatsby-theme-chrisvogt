@@ -8,13 +8,8 @@ import PropTypes from 'prop-types'
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const LastPullRequest = ({ isLoading, pullRequest }) => {
-  const {
-    number,
-    repository: { name: repositoryName } = {},
-    title,
-    url
-  } = pullRequest
+const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
+  const { number, repository: { name: repositoryName } = {}, title, url } = pullRequest
 
   return (
     <Box>
@@ -40,31 +35,20 @@ const LastPullRequest = ({ isLoading, pullRequest }) => {
         <Card variant='actionCard'>
           <Placeholder
             color='#efefef'
-            customPlaceholder={
-              <TextRow
-                color='#efefef'
-                style={{ marginTop: 0, width: `100%` }}
-              />
-            }
+            customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `100%` }} />}
             ready={!isLoading}
             rows={1}
             showLoadingAnimation
           >
             <span>
-              {title} (<span sx={{ fontWeight: 600 }}>#{number}</span>) – in{' '}
-              <em>{repositoryName}</em>
+              {title} (<span sx={{ fontWeight: 600 }}>#{number}</span>) – in <em>{repositoryName}</em>
             </span>
           </Placeholder>
 
           <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
-              customPlaceholder={
-                <TextRow
-                  color='#efefef'
-                  style={{ marginTop: 0, width: `140px` }}
-                />
-              }
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `140px` }} />}
               ready={!isLoading}
               showLoadingAnimation
             >

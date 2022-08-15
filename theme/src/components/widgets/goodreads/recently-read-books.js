@@ -31,23 +31,12 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
           Array(12)
             .fill()
             .map((item, idx) => (
-              <RectShape
-                color='#efefef'
-                key={idx}
-                sx={{ boxShadow: `md`, width: `100%`, minHeight: `140px` }}
-              />
+              <RectShape color='#efefef' key={idx} sx={{ boxShadow: `md`, width: `100%`, minHeight: `140px` }} />
             ))}
         {!isLoading &&
           books.map(book => {
             const { infoLink, smallThumbnail: thumbnailURL, title } = book
-            return (
-              <BookLink
-                key={kebabCase(title)}
-                infoLink={infoLink}
-                thumbnailURL={thumbnailURL}
-                title={title}
-              />
-            )
+            return <BookLink key={kebabCase(title)} infoLink={infoLink} thumbnailURL={thumbnailURL} title={title} />
           })}
       </div>
     </div>

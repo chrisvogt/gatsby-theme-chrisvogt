@@ -1,4 +1,1 @@
-export const getHeaderLeftItems = navigation => {
-  const { header: { left: items } = {} } = navigation
-  return items
-}
+export const getHeaderLeftItems = navigation => navigation?.header?.left

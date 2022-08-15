@@ -5,12 +5,7 @@ import { useThemeUI } from 'theme-ui'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-import {
-  getLanguageCode,
-  getTitle,
-  getTitleTemplate,
-  getTwitterUsername
-} from '../selectors/metadata'
+import { getLanguageCode, getTitle, getTitleTemplate, getTwitterUsername } from '../selectors/metadata'
 
 /**
  * SEO
