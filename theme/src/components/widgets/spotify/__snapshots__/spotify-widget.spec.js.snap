@@ -1,0 +1,560 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spotify Widget matches the loading state snapshot 1`] = `
+<div
+  className="css-12h1dx4-Widget"
+  id="spotify"
+>
+  <header
+    className="css-9v09o4-WidgetHeader"
+  >
+    <h2
+      className="css-17p01r8"
+    >
+      Spotify
+    </h2>
+    <div
+      className="css-1i3svai-WidgetHeader"
+    >
+      <svg
+        className="svg-loaders-svg css-zmfjn6-CallToAction"
+        fill="#1E90FF"
+        height="24"
+        viewBox="0 0 135 140"
+        width="24"
+      >
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={30}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={140}
+          rx={6}
+          width={15}
+          x={60}
+        >
+          <animate
+            attributeName="height"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={90}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={120}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+      </svg>
+    </div>
+  </header>
+  <div
+    className="css-o0oe1r-ProfileMetricsBadge"
+  >
+    <div
+      className="css-1stqq2l"
+    >
+       
+    </div>
+    <div
+      className="css-zixz0n"
+    >
+       
+    </div>
+  </div>
+  <div
+    className="css-swnv5q-Playlists"
+  >
+    <div
+      className="css-4i4294-Playlists"
+    >
+      <h3
+        className="css-17p01r8"
+      >
+        Playlists
+      </h3>
+    </div>
+    <p>
+      My 12 favorite playlists.
+    </p>
+    <div
+      className="media-item_grid null css-mrsgt9-MediaItemGrid"
+    >
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="css-kohdhs-TopTracks"
+    >
+      <h3
+        className="css-17p01r8"
+      >
+        Top Tracks
+      </h3>
+    </div>
+    <p>
+      My 12 most-played tracks over the last 4 weeks.
+    </p>
+    <div
+      className="media-item_grid null css-mrsgt9-MediaItemGrid"
+    >
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-1s7ojvg"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
