@@ -48,7 +48,8 @@ module.exports = {
         respectDNT: true
       }
     },
-    {
+    gatsbyPluginFeedConfig,
+    ...(process.env.NODE_ENV === 'production' ? [{
       resolve: 'gatsby-plugin-newrelic',
       options: {
         config: {
@@ -62,7 +63,6 @@ module.exports = {
           errorBeacon: 'bam.nr-data.net'
         }
       }
-    },
-    gatsbyPluginFeedConfig
+    }] : []),
   ]
 }
