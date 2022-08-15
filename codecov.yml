@@ -1,5 +1,6 @@
 ignore:
+  - "./index.js"
   - "*.config.js"
   - "gatsby-config.js"
   - "jest-preprocess.js"
-  - "./index.js"
+  - "./theme/src/gatsby-plugin-theme-ui"
