@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
 import { getGoodreadsUsername, getGoodreadsWidgetDataSource } from '../../../selectors/metadata'
-import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import { SUCCESS, FAILURE, getGoodreadsWidget } from '../../../reducers/widgets'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
@@ -17,7 +17,7 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 const getBooks = state => {
-  const booksCollection = state.widgets?.goodreads?.data?.collections?.recentlyReadBooks
+  const booksCollection = getGoodreadsWidget(state).data?.collections?.recentlyReadBooks
 
   if (!booksCollection?.length) {
     return []
@@ -33,8 +33,8 @@ const getBooks = state => {
 }
 
 const getMetrics = state => {
-  const friendsCount = state.widgets?.goodreads?.data?.profile?.friendsCount
-  const readCount = state.widgets?.goodreads?.data?.profile?.readCount
+  const friendsCount = getGoodreadsWidget(state).data?.profile?.friendsCount
+  const readCount = getGoodreadsWidget(state).data?.profile?.readCount
 
   return [
     ...(friendsCount
@@ -59,7 +59,7 @@ const getMetrics = state => {
 }
 
 const getUserStatus = state => {
-  const updates = state.widgets?.goodreads?.data?.collections?.updates
+  const updates = getGoodreadsWidget(state).data?.collections?.updates
 
   if (!updates?.length) {
     return {}
@@ -70,9 +70,9 @@ const getUserStatus = state => {
   return userStatus
 }
 
-const getHasFatalError = state => state.widgets?.goodreads?.state === FAILURE
-const getIsLoading = state => state.widgets?.goodreads?.state !== SUCCESS
-const getProfileDisplayName = state => state.widgets?.goodreads?.data?.profile?.name
+const getHasFatalError = state => getGoodreadsWidget(state).state === FAILURE
+const getIsLoading = state => getGoodreadsWidget(state).state !== SUCCESS
+const getProfileDisplayName = state => getGoodreadsWidget(state).data?.profile?.name
 
 export default () => {
   const dispatch = useDispatch()

@@ -9,6 +9,11 @@ export const getError = action => action?.payload?.error
 export const getData = action => action?.payload?.data?.payload
 export const getWidgetId = action => action?.payload?.widgetId
 
+export const getGitHubWidget = state => state.widgets?.github || {}
+export const getGoodreadsWidget = state => state.widgets?.goodreads || {}
+export const getInstagramWidget = state => state.widgets?.instagram || {}
+export const getSpotifyWidget = state => state.widgets?.spotify || {}
+
 function widgets(state = {}, action) {
   switch (action.type) {
     case 'INIT_WIDGET_CONFIG':

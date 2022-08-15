@@ -12,17 +12,17 @@ import WidgetHeader from '../widget-header'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSpotifyWidgetDataSource } from '../../../selectors/metadata'
-import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import { SUCCESS, FAILURE, getSpotifyWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
-const getHasFatalError = state => state.widgets?.spotify?.state === FAILURE
-const getIsLoading = state => state.widgets?.spotify?.state !== SUCCESS
-const getMetrics = state => state.widgets?.spotify?.data?.metrics || []
-const getPlaylists = state => state.widgets?.spotify?.data?.collections?.playlists || []
-const getProfileDisplayName = state => state.widgets?.spotify?.data?.profile?.displayName || ''
-const getProfileURL = state => state.widgets?.spotify?.data?.profile?.profileURL || ''
-const getProviderDisplayName = state => state.widgets?.spotify?.data?.provider?.displayName || ''
-const getTopTracks = state => state.widgets?.spotify?.data?.collections?.topTracks || []
+const getHasFatalError = state => getSpotifyWidget(state).state === FAILURE
+const getIsLoading = state => getSpotifyWidget(state).state !== SUCCESS
+const getMetrics = state => getSpotifyWidget(state).data?.metrics || []
+const getPlaylists = state => getSpotifyWidget(state).data?.collections?.playlists || []
+const getProfileDisplayName = state => getSpotifyWidget(state).data?.profile?.displayName || ''
+const getProfileURL = state => getSpotifyWidget(state).data?.profile?.profileURL || ''
+const getProviderDisplayName = state => getSpotifyWidget(state).data?.provider?.displayName || ''
+const getTopTracks = state => getSpotifyWidget(state).data?.collections?.topTracks || []
 
 const SpotifyWidget = () => {
   const dispatch = useDispatch()

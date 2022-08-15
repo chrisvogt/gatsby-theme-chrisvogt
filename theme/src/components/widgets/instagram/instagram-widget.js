@@ -10,7 +10,7 @@ import ReactPlaceholder from 'react-placeholder'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
-import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import { SUCCESS, FAILURE, getInstagramWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
@@ -21,10 +21,10 @@ import WidgetItem from './instagram-widget-item'
 
 const MAX_IMAGES = 8
 
-const getHasFatalError = state => state.widgets?.instagram?.state === FAILURE
-const getIsLoading = state => state.widgets?.instagram?.state !== SUCCESS
-const getMedia = state => state.widgets?.instagram?.data?.collections?.media || []
-const getMetrics = state => state.widgets?.instagram?.data?.metrics || []
+const getHasFatalError = state => getInstagramWidget(state).state === FAILURE
+const getIsLoading = state => getInstagramWidget(state).state !== SUCCESS
+const getMedia = state => getInstagramWidget(state).data?.collections?.media || []
+const getMetrics = state => getInstagramWidget(state).data?.metrics || []
 
 export default () => {
   const dispatch = useDispatch()

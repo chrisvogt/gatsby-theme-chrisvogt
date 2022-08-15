@@ -12,11 +12,11 @@ import WidgetHeader from '../widget-header'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getGithubUsername, getGithubWidgetDataSource } from '../../../selectors/metadata'
-import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import { SUCCESS, FAILURE, getGitHubWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 const getMetrics = state => {
-  const user = state.widgets?.github?.data?.user || {}
+  const user = getGitHubWidget(state).data?.user || {}
   const totalFollowersCount = user.followers?.totalCount
   const totalFollowingCount = user.following?.totalCount
 
@@ -42,10 +42,10 @@ const getMetrics = state => {
   ]
 }
 
-const getHasFatalError = state => state.widgets?.github?.state === FAILURE
-const getIsLoading = state => state.widgets?.github?.state !== SUCCESS
-const getLastPullRequest = state => state.widgets?.github?.data?.user?.pullRequests?.nodes?.[0]
-const getPinnedItems = state => state.widgets?.github?.data?.user?.pinnedItems?.nodes
+const getHasFatalError = state => getGitHubWidget(state).state === FAILURE
+const getIsLoading = state => getGitHubWidget(state).state !== SUCCESS
+const getLastPullRequest = state => getGitHubWidget(state).data?.user?.pullRequests?.nodes?.[0]
+const getPinnedItems = state => getGitHubWidget(state).data?.user?.pinnedItems?.nodes
 
 const GitHubWidget = () => {
   const dispatch = useDispatch()
