@@ -1,0 +1,5 @@
+ignore:
+  - "*.config.js"
+  - "gatsby-config.js"
+  - "jest-preprocess.js"
+  - "./index.js"
