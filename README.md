@@ -8,7 +8,7 @@
     <img src='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt.svg?style=shield' alt='Current CircleCI build status.' />
   </a>
   <a href='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt'>
-    <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/master/graph/badge.svg' alt='Code coverage report badge.' />
+    <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/master/graph/badge.svg?token=YUksu2c99s' alt='Code coverage report badge.' />
   </a>
   <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/blob/master/LICENSE'>
     <img src='https://img.shields.io/badge/license-MIT-blue.svg' alt='Released under the MIT license.' />
