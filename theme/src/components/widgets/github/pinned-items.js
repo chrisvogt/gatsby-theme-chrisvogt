@@ -9,8 +9,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
   const placeholderItems = Array(placeholderCount).fill({
     __typename: 'placeholder'
   })
-  const itemsToRender =
-    isLoading || items.length === 0 ? placeholderItems : items
+  const itemsToRender = isLoading || items.length === 0 ? placeholderItems : items
 
   return (
     <Box sx={{ marginBottom: 4 }}>
@@ -38,6 +37,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
             href={item.url}
             key={item.id || index}
             sx={{
+              color: `var(--theme-ui-colors-panel-text)`,
               display: `flex`,
               '&:hover, &:focus': {
                 textDecoration: `none`

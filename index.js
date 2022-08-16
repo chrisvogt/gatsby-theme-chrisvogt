@@ -11,13 +11,11 @@ const banner = boxen('www.chrisvogt.me\nMy Personal Website', {
     top: 1,
     right: 8,
     bottom: 1,
-    left: 8,
-  },
+    left: 8
+  }
 })
 
 console.log(banner)
 
-console.log(
-  `✅  Installation succeeded: ${chalk.bold('gatsby-theme-chrisvogt')}`
-)
+console.log(`✅  Installation succeeded: ${chalk.bold('gatsby-theme-chrisvogt')}`)
 console.log(`⚙  Version: ${chalk.bold(package.version)}`)

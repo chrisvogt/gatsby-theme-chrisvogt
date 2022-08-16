@@ -19,12 +19,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        article={true}
-        description={description}
-        image={banner}
-        title={title}
-      />
+      <SEO article={true} description={description} image={banner} title={title} />
 
       <Flex
         sx={{
@@ -56,7 +51,7 @@ PostTemplate.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     mdx(fields: { id: { eq: $id } }) {
       body
       fields {

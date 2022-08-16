@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 export default ({ banner, category, date, link, title }) => {
   return (
     <Link
-      sx={{ 
+      sx={{
         color: `var(--theme-ui-colors-panel-text)`,
         textDecoration: `none`
       }}
@@ -35,9 +35,7 @@ export default ({ banner, category, date, link, title }) => {
             </div>
           )}
 
-          {category && (
-            <span sx={{ variant: `text.title`, mt: 1 }}>{category}</span>
-          )}
+          {category && <span sx={{ variant: `text.title`, mt: 1 }}>{category}</span>}
 
           <Themed.h4 sx={{ mt: 2 }}>{title}</Themed.h4>
 

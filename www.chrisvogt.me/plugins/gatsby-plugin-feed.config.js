@@ -51,7 +51,7 @@ module.exports = {
           }
         `,
         output: '/rss.xml',
-        title: 'Chris Vogt\'s RSS Feed'
+        title: "Chris Vogt's RSS Feed"
       }
     ]
   }

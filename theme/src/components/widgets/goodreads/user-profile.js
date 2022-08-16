@@ -40,11 +40,7 @@ const UserProfile = ({ isLoading, profile }) => {
 
       <StatusCard
         message={
-          <Placeholder
-            color='#efefef'
-            ready={!isLoading && favoriteBooks}
-            showLoadingAnimation
-          >
+          <Placeholder color='#efefef' ready={!isLoading && favoriteBooks} showLoadingAnimation>
             {favoriteBooks}
           </Placeholder>
         }
@@ -67,12 +63,7 @@ const UserProfile = ({ isLoading, profile }) => {
         }}
       >
         {metrics.map(({ id, title, value }) => (
-          <MetricCard
-            key={id}
-            title={title}
-            value={value}
-            showPlaceholder={isLoading}
-          />
+          <MetricCard key={id} title={title} value={value} showPlaceholder={isLoading} />
         ))}
       </div>
     </Card>

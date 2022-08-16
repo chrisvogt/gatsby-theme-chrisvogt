@@ -12,7 +12,6 @@ import WidgetHeader from '../widget-header'
 
 import { SUCCESS, FAILURE } from '../../../reducers/widgets'
 import fetchDataSource from '../../../actions/fetchDataSource'
-import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
@@ -24,7 +23,7 @@ const SteamWidget = () => {
   const steamDataSource = getSteamWidgetDataSource(metadata)
 
   useEffect(() => {
-    dispatch(fetchDataSource('steam', steamDataSource, selectMetricsPayload))
+    dispatch(fetchDataSource('steam', steamDataSource))
   }, [dispatch, steamDataSource])
 
   const {

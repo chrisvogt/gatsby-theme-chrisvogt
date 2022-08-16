@@ -19,9 +19,7 @@ describe('Widget/GitHub/PinnedItems', () => {
     })
 
     it('matches the successful state', () => {
-      const tree = renderer
-        .create(<PinnedItems pinnedItems={mockPinnedItems} isLoading={false} />)
-        .toJSON()
+      const tree = renderer.create(<PinnedItems pinnedItems={mockPinnedItems} isLoading={false} />).toJSON()
       expect(tree).toMatchSnapshot()
     })
   })

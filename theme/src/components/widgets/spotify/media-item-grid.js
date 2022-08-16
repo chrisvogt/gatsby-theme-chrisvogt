@@ -36,41 +36,32 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
       }}
     >
       <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-        {items.map(({
-            id,
-            spotifyURL,
-            thumbnailURL,
-            tooltipContent
-          }) => {
-            return (
-              <Tooltip
-                key={id}
-                placement='top'
-                tooltip={tooltipContent}
-                trigger={['hover', 'focus']}
+        {items.map(({ id, spotifyURL, thumbnailURL, tooltipContent }) => {
+          return (
+            <Tooltip key={id} placement='top' tooltip={tooltipContent} trigger={['hover', 'focus']}>
+              <Themed.a
+                className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
+                href={spotifyURL}
+                onMouseEnter={() => setCurrentMediaId(id)}
+                onMouseLeave={() => setCurrentMediaId(false)}
               >
-                <Themed.a
-                  className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
-                  href={spotifyURL}
-                  onMouseEnter={() => setCurrentMediaId(id)}
-                  onMouseLeave={() => setCurrentMediaId(false)}
-                >
-                  <img
-                    alt='cover artwork'
-                    crossOrigin='anonymous'
-                    src={thumbnailURL}
-                    sx={{
-                      ...floatOnHover,
-                      boxShadow: `md`,
-                      borderRadius: `4px`,
-                      objectFit: 'cover',
-                      width: '100%'
-                    }}
-                  />
-                </Themed.a>
-              </Tooltip>
-            )
-          })}
+                <img
+                  alt='cover artwork'
+                  crossOrigin='anonymous'
+                  loading='lazy'
+                  src={thumbnailURL}
+                  sx={{
+                    ...floatOnHover,
+                    boxShadow: `md`,
+                    borderRadius: `4px`,
+                    objectFit: 'cover',
+                    width: '100%'
+                  }}
+                />
+              </Themed.a>
+            </Tooltip>
+          )
+        })}
       </Placeholder>
     </div>
   )

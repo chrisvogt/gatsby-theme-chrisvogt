@@ -12,10 +12,7 @@ export default ({ data }) => {
   const posts = getPosts(data)
   return (
     <Layout>
-      <SEO
-        title='Latest Content'
-        description='A list of the most recent articles published on my blog.'
-      />
+      <SEO title='Latest Content' description='A list of the most recent articles published on my blog.' />
 
       <Flex
         sx={{

@@ -18,18 +18,15 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       }
     : {}
   return isLoading ? (
-    <Bars
-      fill='#1E90FF'
-      width='24'
-      height='24'
-      sx={{ verticalAlign: `middle` }}
-    />
+    <Bars fill='#1E90FF' width='24' height='24' sx={{ verticalAlign: `middle` }} />
   ) : (
     <Themed.a
       href={url}
       sx={{
         fontSize: 0,
         fontFamily: 'heading',
+        lineHeight: '1.25', // synced with widget header
+        verticalAlign: 'bottom',
         '.read-more-icon': {
           opacity: 0,
           transition: `all .3s ease`

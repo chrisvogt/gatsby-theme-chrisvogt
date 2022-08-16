@@ -4,19 +4,13 @@ import { jsx } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImages } from '@fortawesome/free-solid-svg-icons'
 
-const InstagramWidgetItem = ({
-  handleClick,
-  index,
-  post: { caption, cdnMediaURL, id, mediaType, permalink } = {}
-}) => {
+const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType, permalink } = {} }) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM"'
 
   return (
     <button
       key={id}
-      onClick={event =>
-        handleClick(event, { index, photo: { caption, id, src: cdnMediaURL } })
-      }
+      onClick={event => handleClick(event, { index, photo: { caption, id, src: cdnMediaURL } })}
       rel='noopener noreferrer'
       sx={{
         variant: `styles.InstagramItem`
@@ -38,6 +32,7 @@ const InstagramWidgetItem = ({
       <img
         crossOrigin='anonymous'
         className='instagram-item-image'
+        loading='lazy'
         src={`${cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`}
         height='280'
         width='280'

@@ -2,11 +2,9 @@ const path = require('path')
 
 module.exports = () => ({
   siteMetadata: {
-    avatarURL:
-      'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
+    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
     baseURL: 'https://www.chrisvogt.me',
-    description:
-      'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
+    description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
     footerText: 'Made in San Francisco',
     headline: 'www.chrisvogt.me',
     imageURL: '',
@@ -65,11 +63,7 @@ module.exports = () => ({
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        gatsbyRemarkPlugins: [
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-images`,
-          `gatsby-remark-copy-linked-files`
-        ],
+        gatsbyRemarkPlugins: [`gatsby-remark-prismjs`, `gatsby-remark-images`, `gatsby-remark-copy-linked-files`],
         plugins: [
           // FIX(cvogt): this plugin is defined here as a temporary fix for the bug
           // described in gatsbyjs/gatsby#15486

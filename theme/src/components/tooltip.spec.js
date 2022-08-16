@@ -13,10 +13,7 @@ describe('Tooltip', () => {
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
-        <Tooltip
-          tooltip={DemoContent}
-          hideArrow
-        >
+        <Tooltip tooltip={DemoContent} hideArrow>
           Trigger element
         </Tooltip>
       )

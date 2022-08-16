@@ -349,9 +349,7 @@
           "id": 313556550
         },
         "attribution": null,
-        "users_in_photo": [
-          { "user": { "username": "c1v0" }, "position": { "x": 0, "y": 0 } }
-        ],
+        "users_in_photo": [{ "user": { "username": "c1v0" }, "position": { "x": 0, "y": 0 } }],
         "videos": {
           "standard_resolution": {
             "width": 640,

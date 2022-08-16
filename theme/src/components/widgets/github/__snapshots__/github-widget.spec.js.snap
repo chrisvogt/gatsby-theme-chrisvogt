@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GitHub Widget matches the loading state snapshot 1`] = `
+<div
+  className="css-12h1dx4-Widget"
+  id="github"
+>
+  <header
+    className="css-9v09o4-WidgetHeader"
+  >
+    <h2
+      className="css-17p01r8"
+    >
+      GitHub
+    </h2>
+    <div
+      className="css-1i3svai-WidgetHeader"
+    >
+      <svg
+        className="svg-loaders-svg css-zmfjn6-CallToAction"
+        fill="#1E90FF"
+        height="24"
+        viewBox="0 0 135 140"
+        width="24"
+      >
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={30}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={140}
+          rx={6}
+          width={15}
+          x={60}
+        >
+          <animate
+            attributeName="height"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={90}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={120}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+      </svg>
+    </div>
+  </header>
+  <div
+    className="css-o0oe1r-ProfileMetricsBadge"
+  />
+  <div
+    className="css-jwa2gd-PinnedItems"
+  >
+    <h3
+      className="css-1j40y2j-PinnedItems"
+    >
+      Pinned Items
+    </h3>
+    <p>
+      Pinned items on my GitHub profile.
+    </p>
+    <div
+      className="css-ybvlav-PinnedItems"
+    >
+      <a
+        className="css-y07yun-PinnedItems"
+      >
+        <div
+          className="css-t2t1qg"
+        >
+          <div
+            className="show-loading-animation"
+          >
+            <div
+              className="css-4cffwv"
+            >
+              <div>
+                <div
+                  className="rect-shape"
+                  style={
+                    Object {
+                      "backgroundColor": "#efefef",
+                      "height": 40,
+                      "marginBottom": "2em",
+                      "marginRight": 10,
+                      "width": 40,
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="css-1r91rh-PinnedItemCard"
+              >
+                <div
+                  className="text-block"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="text-row"
+                    style={
+                      Object {
+                        "backgroundColor": "#efefef",
+                        "height": "1em",
+                        "marginTop": 0,
+                        "maxHeight": "33.333333333333336%",
+                        "width": "97%",
+                      }
+                    }
+                  />
+                  <div
+                    className="text-row"
+                    style={
+                      Object {
+                        "backgroundColor": "#efefef",
+                        "height": "1em",
+                        "marginTop": "0.7em",
+                        "maxHeight": "33.333333333333336%",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="text-block"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                className="text-row"
+                style={
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "height": "1em",
+                    "marginTop": 0,
+                    "maxHeight": "20%",
+                    "width": "97%",
+                  }
+                }
+              />
+              <div
+                className="text-row"
+                style={
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "height": "1em",
+                    "marginTop": "0.7em",
+                    "maxHeight": "20%",
+                    "width": "100%",
+                  }
+                }
+              />
+              <div
+                className="text-row"
+                style={
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "height": "1em",
+                    "marginTop": "0.7em",
+                    "maxHeight": "20%",
+                    "width": "94%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+      <a
+        className="css-y07yun-PinnedItems"
+      >
+        <div
+          className="css-t2t1qg"
+        >
+          <div
+            className="show-loading-animation"
+          >
+            <div
+              className="css-4cffwv"
+            >
+              <div>
+                <div
+                  className="rect-shape"
+                  style={
+                    Object {
+                      "backgroundColor": "#efefef",
+                      "height": 40,
+                      "marginBottom": "2em",
+                      "marginRight": 10,
+                      "width": 40,
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="css-1r91rh-PinnedItemCard"
+              >
+                <div
+                  className="text-block"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="text-row"
+                    style={
+                      Object {
+                        "backgroundColor": "#efefef",
+                        "height": "1em",
+                        "marginTop": 0,
+                        "maxHeight": "33.333333333333336%",
+                        "width": "97%",
+                      }
+                    }
+                  />
+                  <div
+                    className="text-row"
+                    style={
+                      Object {
+                        "backgroundColor": "#efefef",
+                        "height": "1em",
+                        "marginTop": "0.7em",
+                        "maxHeight": "33.333333333333336%",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="text-block"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                className="text-row"
+                style={
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "height": "1em",
+                    "marginTop": 0,
+                    "maxHeight": "20%",
+                    "width": "97%",
+                  }
+                }
+              />
+              <div
+                className="text-row"
+                style={
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "height": "1em",
+                    "marginTop": "0.7em",
+                    "maxHeight": "20%",
+                    "width": "100%",
+                  }
+                }
+              />
+              <div
+                className="text-row"
+                style={
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "height": "1em",
+                    "marginTop": "0.7em",
+                    "maxHeight": "20%",
+                    "width": "94%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div
+    className="css-vurnku"
+  >
+    <h3
+      className="css-xs2gp6-LastPullRequest"
+    >
+      Last Pull Request
+    </h3>
+    <a
+      className="css-1gboxpw-LastPullRequest"
+    >
+      <div
+        className="css-t2t1qg"
+      >
+        <div
+          className="text-row show-loading-animation"
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "height": "1em",
+              "marginTop": 0,
+              "maxHeight": undefined,
+              "width": "100%",
+            }
+          }
+        />
+        <div
+          className="css-1j8von3-CardFooter"
+        >
+          <div
+            className="text-row show-loading-animation"
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "height": "1em",
+                "marginTop": 0,
+                "maxHeight": undefined,
+                "width": "140px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;

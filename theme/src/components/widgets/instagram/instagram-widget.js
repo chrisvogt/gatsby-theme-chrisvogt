@@ -6,16 +6,11 @@ import { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
-import get from 'lodash/get'
 import ReactPlaceholder from 'react-placeholder'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
-import {
-  getInstagramUsername,
-  getInstagramWidgetDataSource
-} from '../../../selectors/metadata'
-import selectMetricsPayload from '../../../selectors/selectMetricsPayload'
-import { SUCCESS, FAILURE } from '../../../reducers/widgets'
+import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
+import { SUCCESS, FAILURE, getInstagramWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 import CallToAction from '../call-to-action'
@@ -26,6 +21,11 @@ import WidgetItem from './instagram-widget-item'
 
 const MAX_IMAGES = 8
 
+const getHasFatalError = state => getInstagramWidget(state).state === FAILURE
+const getIsLoading = state => getInstagramWidget(state).state !== SUCCESS
+const getMedia = state => getInstagramWidget(state).data?.collections?.media || []
+const getMetrics = state => getInstagramWidget(state).data?.metrics || []
+
 export default () => {
   const dispatch = useDispatch()
 
@@ -33,18 +33,14 @@ export default () => {
   const instagramUsername = getInstagramUsername(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
 
-  const { hasFatalError, isLoading, media, metrics } = useSelector(state => ({
-    hasFatalError: get(state, 'widgets.instagram.state') === FAILURE,
-    isLoading: get(state, 'widgets.instagram.state') !== SUCCESS,
-    media: get(state, 'widgets.instagram.data.collections.media', []),
-    metrics: get(state, 'widgets.instagram.data.metrics', [])
-  }))
+  const hasFatalError = useSelector(getHasFatalError)
+  const isLoading = useSelector(getIsLoading)
+  const media = useSelector(getMedia)
+  const metrics = useSelector(getMetrics)
 
   useEffect(() => {
     if (isLoading) {
-      dispatch(
-        fetchDataSource('instagram', instagramDataSource, selectMetricsPayload)
-      )
+      dispatch(fetchDataSource('instagram', instagramDataSource))
     }
   }, [dispatch, instagramDataSource, isLoading])
 
@@ -85,35 +81,29 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(MAX_IMAGES).fill({}) : media)
-            .slice(0, MAX_IMAGES)
-            .map((post, idx) => (
-              <ReactPlaceholder
-                customPlaceholder={
-                  <div className='image-placeholder'>
-                    <RectShape
-                      color='#efefef'
-                      sx={{
-                        borderRadius: `4px`,
-                        boxShadow: `md`,
-                        width: `100%`,
-                        paddingBottom: `100%`
-                      }}
-                    />
-                  </div>
-                }
-                key={isLoading ? idx : post.id}
-                ready={!isLoading}
-                showLoadingAnimation
-                type='rect'
-              >
-                <WidgetItem
-                  handleClick={openLightbox}
-                  index={idx}
-                  post={post}
-                />
-              </ReactPlaceholder>
-            ))}
+          {(isLoading ? Array(MAX_IMAGES).fill({}) : media).slice(0, MAX_IMAGES).map((post, idx) => (
+            <ReactPlaceholder
+              customPlaceholder={
+                <div className='image-placeholder'>
+                  <RectShape
+                    color='#efefef'
+                    sx={{
+                      borderRadius: `4px`,
+                      boxShadow: `md`,
+                      width: `100%`,
+                      paddingBottom: `100%`
+                    }}
+                  />
+                </div>
+              }
+              key={isLoading ? idx : post.id}
+              ready={!isLoading}
+              showLoadingAnimation
+              type='rect'
+            >
+              <WidgetItem handleClick={openLightbox} index={idx} post={post} />
+            </ReactPlaceholder>
+          ))}
         </Grid>
       </div>
 

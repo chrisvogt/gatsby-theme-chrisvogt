@@ -16,7 +16,7 @@ body,
 
 /* NOTE(cvogt): overrides the default react-photo-gallery footer style */
 .react-images__footer.react-images__footer--isModal {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))!important;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) !important;
 }
 
 .media-item_grid .media-item_media {
@@ -24,9 +24,8 @@ body,
 }
 
 .media-item_grid--interacting .media-item_media:not(.media-item--focused) {
-  opacity: .4;
+  opacity: 0.4;
 }
-
 
 .gatsby-highlight-code-line {
   background-color: #feb;
@@ -57,7 +56,7 @@ body,
  * 2. Always fill the visible space in .gatsby-highlight.
  * 3. Adjust the position of the line numbers
  */
-.gatsby-highlight pre[class*="language-"] {
+.gatsby-highlight pre[class*='language-'] {
   background-color: transparent;
   margin: 0;
   padding: 0;
@@ -67,6 +66,6 @@ body,
 }
 
 /* If you already use line highlighting, just use this. */
-.gatsby-highlight pre[class*="language-"].line-numbers {
+.gatsby-highlight pre[class*='language-'].line-numbers {
   padding-left: 2.8em;
 }
