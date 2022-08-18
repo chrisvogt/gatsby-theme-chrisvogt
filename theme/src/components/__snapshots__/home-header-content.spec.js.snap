@@ -2,21 +2,10 @@
 
 exports[`HomeHeaderContent matches the snapshot 1`] = `
 <div
-  className="css-1sf28qk-HomeHeaderContent"
+  className="css-sdj7pn-HomeHeaderContent"
 >
   <div
-    className="css-1kjtssk-HomeHeaderContent"
-  >
-    <img
-      alt="Avatar"
-      className="css-e14vrk-HomeHeaderContent"
-      height="128"
-      src="https://fake-cdn.chrisvogt.me/images/avatar.jpg"
-      width="128"
-    />
-  </div>
-  <div
-    className="css-z3564l-HomeHeaderContent"
+    className="css-wxsvj0-HomeHeaderContent"
   >
     <h1
       className="css-1h9knbm-HomeHeaderContent"
@@ -24,9 +13,9 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
       Website Title
     </h1>
     <p
-      className="css-1ex0jat-HomeHeaderContent"
+      className="css-1tgqo55-HomeHeaderContent"
     >
-      A cool subtitle for my website
+      I'm a Software Engineer in San Francisco with an interest in photography, playing piano and building things with code. This website is a digital garden where I share things I'm working on or excited about.
     </p>
   </div>
 </div>
