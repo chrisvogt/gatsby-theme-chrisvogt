@@ -14,7 +14,7 @@ import useSiteMetadata from '../hooks/use-site-metadata'
  *
  * Top navigation component for the page.
  */
-const TopNavigation = ({ hideBackground }) => {
+const TopNavigation = ({ hideBackground, hideMenuItems }) => {
   const metadata = useSiteMetadata()
 
   const navigation = useNavigationData()
@@ -33,7 +33,6 @@ const TopNavigation = ({ hideBackground }) => {
           display: `flex`,
           alignItems: `center`,
           py: 3
-          // textAlign: [`center`, ``, `left`]
         }}
       >
         <div sx={{ flexGrow: 1 }}>
@@ -53,7 +52,7 @@ const TopNavigation = ({ hideBackground }) => {
             {title}
           </Themed.a>
 
-          {menuItems &&
+          {!hideMenuItems &&
             menuItems.map(({ slug, path, title, text }) => (
               <Themed.a as={Link} key={slug} sx={{ color: `light`, mr: 3 }} title={title} to={path}>
                 {text}

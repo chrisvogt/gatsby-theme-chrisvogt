@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, Grid, jsx } from 'theme-ui'
+import { jsx, Container, Flex, Grid, Themed } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Header from '../components/header'
@@ -24,7 +24,7 @@ const HomeTemplate = props => {
       <SEO title='Home' />
 
       <Header showSwoop hideTopPadding>
-        <TopNavigation hideBackground />
+      <TopNavigation hideBackground hideMenuItems />
         <HomeHeaderContent avatar={avatar} headline={headline} subhead={subhead} />
       </Header>
 

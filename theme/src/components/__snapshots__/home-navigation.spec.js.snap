@@ -14,11 +14,11 @@ Array [
     <nav
       aria-label="Navigate to on-page sections"
     >
-      <h3
+      <h2
         className="css-gql1zd-HomeNavigation"
       >
         On-page navigation
-      </h3>
+      </h2>
       <a
         className="css-cv51xn-HomeNavigation"
         href="#posts"
