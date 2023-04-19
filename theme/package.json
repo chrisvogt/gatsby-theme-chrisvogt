@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.21.2",
+  "version": "0.21.3",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -35,7 +35,7 @@
     ]
   },
   "engines": {
-    "node": "^14.18.1 || ^16 || ^17",
+    "node": ">=14.18.1 <19.0.0",
     "yarn": "^1.0.0"
   },
   "os": [
