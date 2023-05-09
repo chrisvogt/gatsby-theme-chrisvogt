@@ -47,8 +47,6 @@ export default () => {
 
   return (
     <Fragment>
-      <h4 sx={{ mb: 4 }}>My social profiles</h4>
-
       {profilesWithIcons.length &&
         profilesWithIcons.map(({ IconComponent, profile = {} }) => {
           const { displayName, href, slug } = profile

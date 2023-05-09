@@ -82,9 +82,6 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
         className="css-zn3ns5-CardFooter"
       >
         <span>
-          View on 
-          GitHub
-            
           <svg
             aria-hidden="true"
             className="svg-inline--fa fa-external-link-alt "

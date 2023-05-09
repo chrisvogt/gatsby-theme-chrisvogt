@@ -19,6 +19,16 @@ body,
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) !important;
 }
 
+/* See https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .media-item_grid .media-item_media {
   transition: opacity 300ms ease;
 }

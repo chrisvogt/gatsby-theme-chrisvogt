@@ -6,6 +6,7 @@ import { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import ReactPlaceholder from 'react-placeholder'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
@@ -70,7 +71,12 @@ export default () => {
 
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
+      <WidgetHeader
+        aside={callToAction}
+        icon={faInstagram}
+      >
+        Instagram
+      </WidgetHeader>
 
       <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
 
@@ -88,7 +94,7 @@ export default () => {
                   <RectShape
                     color='#efefef'
                     sx={{
-                      borderRadius: `4px`,
+                      borderRadius: `8px`,
                       boxShadow: `md`,
                       width: `100%`,
                       paddingBottom: `100%`

@@ -53,7 +53,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                   sx={{
                     ...floatOnHover,
                     boxShadow: `md`,
-                    borderRadius: `4px`,
+                    borderRadius: `8px`,
                     objectFit: 'cover',
                     width: '100%'
                   }}

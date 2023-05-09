@@ -2,11 +2,6 @@
 
 exports[`Profiles matches the snapshot 1`] = `
 Array [
-  <h4
-    className="css-sak8bt"
-  >
-    My social profiles
-  </h4>,
   <a
     className="css-k90wl2"
     href="https://www.github.com"

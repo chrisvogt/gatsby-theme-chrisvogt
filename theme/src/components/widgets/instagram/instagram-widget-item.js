@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImages } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType, permalink } = {} }) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM"'
@@ -38,7 +37,7 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
         width='280'
         alt='Instagram post thumbnail'
         sx={{
-          borderRadius: `4px`,
+          borderRadius: '8px',
           width: '100%',
           height: '100%',
           transition: `all 1.5s ease`,

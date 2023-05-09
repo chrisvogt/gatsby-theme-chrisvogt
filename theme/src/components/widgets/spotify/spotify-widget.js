@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 import CallToAction from '../call-to-action'
 import Playlists from './playlists'
@@ -54,7 +55,11 @@ const SpotifyWidget = () => {
 
   return (
     <Widget id='spotify' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction} isLoading={isLoading}>
+      <WidgetHeader
+        aside={callToAction}
+        icon={faSpotify}
+        isLoading={isLoading}
+      >
         Spotify
       </WidgetHeader>
 

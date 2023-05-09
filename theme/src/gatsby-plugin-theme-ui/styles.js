@@ -176,11 +176,11 @@ export default {
     },
     'tr th:first-of-type': {
       borderLeft: `1px solid #ddd`,
-      borderTopLeftRadius: `4px`
+      borderTopLeftRadius: `8px`
     },
     'tr th:last-of-type': {
       borderRight: `1px solid #ddd`,
-      borderTopRightRadius: `4px`
+      borderTopRightRadius: `8px`
     },
     'tr td': {
       borderBottom: `1px dotted #ddd`,

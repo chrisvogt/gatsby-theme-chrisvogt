@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import { faGoodreads } from '@fortawesome/free-brands-svg-icons'
 
 import { getGoodreadsUsername, getGoodreadsWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE, getGoodreadsWidget } from '../../../reducers/widgets'
@@ -107,7 +108,12 @@ export default () => {
 
   return (
     <Widget id='goodreads' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction}>Goodreads</WidgetHeader>
+      <WidgetHeader
+        aside={callToAction}
+        icon={faGoodreads}
+      >
+        Goodreads
+      </WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 

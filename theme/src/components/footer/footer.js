@@ -19,7 +19,7 @@ export default () => {
           <Profiles />
         </div>
 
-        <div>{footerText}</div>
+        {footerText ? <div>{footerText}</div> : null}
       </Container>
     </div>
   )
