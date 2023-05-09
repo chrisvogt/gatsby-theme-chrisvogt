@@ -29,7 +29,7 @@ WidgetHeader.propTypes = {
   /** The content to render in the headline. */
   children: PropTypes.node.isRequired,
   /** The icon to render. Usually an SVG. */
-  icon: PropTypes.node
+  icon: PropTypes.object
 }
 
 export default WidgetHeader

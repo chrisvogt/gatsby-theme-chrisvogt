@@ -44,7 +44,8 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
               display: [`block`, ``, `inline`],
               fontFamily: `heading`,
               fontSize: 2,
-              fontWeight: `bold`,
+              fontWeight: 500,
+              letterSpacing: '1.1px',
               marginRight: 3,
               textDecoration: `none`
             }}
