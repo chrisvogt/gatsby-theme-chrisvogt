@@ -12,13 +12,7 @@ import {
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-import {
-  faGithub,
-  faGoodreads,
-  faBlogger,
-  faSpotify,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faGoodreads, faBlogger, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -194,9 +188,7 @@ const HomeNavigation = () => {
           </h2>
 
           {links.map(({ href, icon, id, text }) => {
-            const IconComponent = icon?.reactIcon && icons[icon.reactIcon]
-              ? icons[icon.reactIcon]
-              : null
+            const IconComponent = icon?.reactIcon && icons[icon.reactIcon] ? icons[icon.reactIcon] : null
             return (
               <Link
                 href={href}
@@ -205,13 +197,10 @@ const HomeNavigation = () => {
                 sx={{
                   fontFamily: `heading`,
                   color: `var(--theme-ui-colors-panel-text)`
-                }}>
-                  {
-                    IconComponent
-                      ? <FontAwesomeIcon icon={IconComponent} sx={{ fontSize: '18px', mr: 2 }} />
-                      : null
-                  }
-                  {text}
+                }}
+              >
+                {IconComponent ? <FontAwesomeIcon icon={IconComponent} sx={{ fontSize: '18px', mr: 2 }} /> : null}
+                {text}
               </Link>
             )
           })}

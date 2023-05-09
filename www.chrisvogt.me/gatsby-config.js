@@ -4,10 +4,7 @@ module.exports = {
   siteMetadata: {
     avatarURL: '/images/avatar-256px.jpg',
     baseURL: 'https://www.chrisvogt.me',
-    description: `
-    Software Engineer in San Francisco blogging about code, photography and piano music.
-    `,
-    footerText: '© 2023',
+    description: 'Software Engineer in San Francisco blogging about code, photography and piano music.',
     headline: 'Chris Vogt',
     imageURL: '/images/og-image.png',
     languageCode: 'en',
@@ -49,20 +46,24 @@ module.exports = {
       }
     },
     gatsbyPluginFeedConfig,
-    ...(process.env.NODE_ENV === 'production' ? [{
-      resolve: 'gatsby-plugin-newrelic',
-      options: {
-        config: {
-          instrumentationType: 'proAndSPA',
-          accountId: '2238420',
-          trustKey: '2238420',
-          agentID: '1120098708',
-          licenseKey: 'b8fd757b93',
-          applicationID: '1120098708',
-          beacon: 'bam.nr-data.net',
-          errorBeacon: 'bam.nr-data.net'
-        }
-      }
-    }] : []),
+    ...(process.env.NODE_ENV === 'production'
+      ? [
+          {
+            resolve: 'gatsby-plugin-newrelic',
+            options: {
+              config: {
+                instrumentationType: 'proAndSPA',
+                accountId: '2238420',
+                trustKey: '2238420',
+                agentID: '1120098708',
+                licenseKey: 'b8fd757b93',
+                applicationID: '1120098708',
+                beacon: 'bam.nr-data.net',
+                errorBeacon: 'bam.nr-data.net'
+              }
+            }
+          }
+        ]
+      : [])
   ]
 }
