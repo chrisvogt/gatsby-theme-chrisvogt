@@ -67,10 +67,6 @@ export default merge(themePreset, {
     PostCard
   },
 
-  borderRadius: {
-    default: '8px'
-  },
-
   colors,
 
   fonts: {
