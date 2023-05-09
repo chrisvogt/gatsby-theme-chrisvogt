@@ -6,8 +6,10 @@ import { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import ReactPlaceholder from 'react-placeholder'
 
+import { DEFAULT_BORDER_RADIUS_WIDTH } from '../../../gatsby-plugin-theme-ui/styles'
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE, getInstagramWidget } from '../../../reducers/widgets'
@@ -70,7 +72,12 @@ export default () => {
 
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
+      <WidgetHeader
+        aside={callToAction}
+        icon={faInstagram}
+      >
+        Instagram
+      </WidgetHeader>
 
       <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
 
@@ -88,7 +95,7 @@ export default () => {
                   <RectShape
                     color='#efefef'
                     sx={{
-                      borderRadius: `4px`,
+                      borderRadius: DEFAULT_BORDER_RADIUS_WIDTH,
                       boxShadow: `md`,
                       width: `100%`,
                       paddingBottom: `100%`

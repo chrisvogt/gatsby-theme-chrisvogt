@@ -12,7 +12,8 @@ import {
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-import { faGithub, faGoodreads, faBlogger, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faGoodreads, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -23,9 +24,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const icons = {
   faGithub,
   faGoodreads,
-  faBlogger,
-  faSpotify,
-  faInstagram
+  faInstagram,
+  faNewspaper,
+  faSpotify
 }
 
 /**
@@ -42,10 +43,8 @@ const linkRegistry = [
     value: {
       href: '#posts',
       icon: {
-        class: 'fab fa-blogger',
-        name: 'blogger',
-        reactIcon: 'faBlogger',
-        set: 'fab'
+        name: 'newspaper',
+        reactIcon: 'faNewspaper'
       },
       id: 'posts',
       text: 'Latest Posts'
@@ -56,10 +55,8 @@ const linkRegistry = [
     value: {
       href: '#instagram',
       icon: {
-        class: 'fab fa-instagram',
         name: 'instagram',
-        reactIcon: 'faInstagram',
-        set: 'fab'
+        reactIcon: 'faInstagram'
       },
       id: 'instagram',
       text: 'Instagram'
@@ -70,10 +67,8 @@ const linkRegistry = [
     value: {
       href: '#github',
       icon: {
-        class: 'fab fa-github',
         name: 'github',
-        reactIcon: 'faGithub',
-        set: 'fab'
+        reactIcon: 'faGithub'
       },
       id: 'github',
       text: 'GitHub'
@@ -84,10 +79,8 @@ const linkRegistry = [
     value: {
       href: '#goodreads',
       icon: {
-        class: 'fab fa-goodreads',
         name: 'goodreads',
-        reactIcon: 'faGoodreads',
-        set: 'fab'
+        reactIcon: 'faGoodreads'
       },
       id: 'goodreads',
       text: 'Goodreads'
@@ -98,10 +91,8 @@ const linkRegistry = [
     value: {
       href: '#spotify',
       icon: {
-        class: 'fab fa-spotify',
         name: 'spotify',
-        reactIcon: 'faSpotify',
-        set: 'fab'
+        reactIcon: 'faSpotify'
       },
       id: 'spotify',
       text: 'Spotify'
