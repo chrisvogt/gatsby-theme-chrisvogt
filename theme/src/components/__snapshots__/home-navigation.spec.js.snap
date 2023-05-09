@@ -30,7 +30,11 @@ Array [
           data-prefix="fas"
           focusable="false"
           role="img"
-          style={Object {}}
+          style={
+            Object {
+              "height": "18px",
+            }
+          }
           viewBox="0 0 576 512"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -53,7 +57,11 @@ Array [
           data-prefix="fab"
           focusable="false"
           role="img"
-          style={Object {}}
+          style={
+            Object {
+              "height": "18px",
+            }
+          }
           viewBox="0 0 448 512"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -76,7 +84,11 @@ Array [
           data-prefix="fab"
           focusable="false"
           role="img"
-          style={Object {}}
+          style={
+            Object {
+              "height": "18px",
+            }
+          }
           viewBox="0 0 496 512"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -99,7 +111,11 @@ Array [
           data-prefix="fab"
           focusable="false"
           role="img"
-          style={Object {}}
+          style={
+            Object {
+              "height": "18px",
+            }
+          }
           viewBox="0 0 448 512"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -122,7 +138,11 @@ Array [
           data-prefix="fab"
           focusable="false"
           role="img"
-          style={Object {}}
+          style={
+            Object {
+              "height": "18px",
+            }
+          }
           viewBox="0 0 496 512"
           xmlns="http://www.w3.org/2000/svg"
         >
