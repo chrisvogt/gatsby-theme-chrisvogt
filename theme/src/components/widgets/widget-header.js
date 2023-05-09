@@ -18,7 +18,7 @@ const asideStyles = {
 const WidgetHeader = ({ aside, children, icon }) => (
   <header sx={headerStyles}>
     <Heading>
-      {icon && <FontAwesomeIcon icon={icon} sx={{ fontSize: '22px', mr: 2 }} />}
+      {icon && <FontAwesomeIcon icon={icon} style={{ height: '22px' }} sx={{ mr: 2 }} />}
       {children}
     </Heading>
     {aside && <div sx={asideStyles}>{aside}</div>}

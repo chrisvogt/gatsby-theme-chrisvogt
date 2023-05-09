@@ -13,12 +13,16 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-github css-19152ye-WidgetHeader"
+        className="svg-inline--fa fa-github css-4hvi9p-WidgetHeader"
         data-icon="github"
         data-prefix="fab"
         focusable="false"
         role="img"
-        style={Object {}}
+        style={
+          Object {
+            "height": "22px",
+          }
+        }
         viewBox="0 0 496 512"
         xmlns="http://www.w3.org/2000/svg"
       >
