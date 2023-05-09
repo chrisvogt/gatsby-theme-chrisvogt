@@ -2,9 +2,6 @@
 
 exports[`ViewExternal matches the snapshot 1`] = `
 <span>
-  View on 
-  GitHub
-    
   <svg
     aria-hidden="true"
     className="svg-inline--fa fa-external-link-alt "
