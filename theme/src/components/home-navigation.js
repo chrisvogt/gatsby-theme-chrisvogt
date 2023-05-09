@@ -12,6 +12,28 @@ import {
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
+import {
+  faGithub,
+  faGoodreads,
+  faBlogger,
+  faSpotify,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+/**
+ * icons is a library containing all of the social icons available for this theme.
+ * This is to prevent the entire font awesome library from being included in the
+ * bundle. See chrisvogt/gatsby-theme-chrisvogt#31 for to learn more.
+ */
+const icons = {
+  faGithub,
+  faGoodreads,
+  faBlogger,
+  faSpotify,
+  faInstagram
+}
+
 /**
  * Link Registry
  *
@@ -25,6 +47,12 @@ const linkRegistry = [
     rule: () => true, // Everyone sees this.
     value: {
       href: '#posts',
+      icon: {
+        class: 'fab fa-blogger',
+        name: 'blogger',
+        reactIcon: 'faBlogger',
+        set: 'fab'
+      },
       id: 'posts',
       text: 'Latest Posts'
     }
@@ -33,6 +61,12 @@ const linkRegistry = [
     rule: options => !!options.isInstagramWidgetEnabled,
     value: {
       href: '#instagram',
+      icon: {
+        class: 'fab fa-instagram',
+        name: 'instagram',
+        reactIcon: 'faInstagram',
+        set: 'fab'
+      },
       id: 'instagram',
       text: 'Instagram'
     }
@@ -41,6 +75,12 @@ const linkRegistry = [
     rule: options => !!options.isGitHubWidgetEnabled,
     value: {
       href: '#github',
+      icon: {
+        class: 'fab fa-github',
+        name: 'github',
+        reactIcon: 'faGithub',
+        set: 'fab'
+      },
       id: 'github',
       text: 'GitHub'
     }
@@ -49,6 +89,12 @@ const linkRegistry = [
     rule: options => !!options.isGoodreadsWidgetEnabled,
     value: {
       href: '#goodreads',
+      icon: {
+        class: 'fab fa-goodreads',
+        name: 'goodreads',
+        reactIcon: 'faGoodreads',
+        set: 'fab'
+      },
       id: 'goodreads',
       text: 'Goodreads'
     }
@@ -57,6 +103,12 @@ const linkRegistry = [
     rule: options => !!options.isSpotifyWidgetEnabled,
     value: {
       href: '#spotify',
+      icon: {
+        class: 'fab fa-spotify',
+        name: 'spotify',
+        reactIcon: 'faSpotify',
+        set: 'fab'
+      },
       id: 'spotify',
       text: 'Spotify'
     }
@@ -129,15 +181,40 @@ const HomeNavigation = () => {
         variant='actionCard'
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
-          <h2 sx={{ fontWeight: `unset`, mt: 0, mb: 2 }}>
+          <h2
+            className='sr-only'
+            sx={{
+              fontFamily: `heading`,
+              fontWeight: `unset`,
+              mb: 2,
+              mt: 0
+            }}
+          >
             On-page navigation
           </h2>
 
-          {links.map(({ href, id, text }) => (
-            <Link href={href} key={id} variant='homeNavigation' sx={{ color: `var(--theme-ui-colors-panel-text)` }}>
-              {text}
-            </Link>
-          ))}
+          {links.map(({ href, icon, id, text }) => {
+            const IconComponent = icon?.reactIcon && icons[icon.reactIcon]
+              ? icons[icon.reactIcon]
+              : null
+            return (
+              <Link
+                href={href}
+                key={id}
+                variant='homeNavigation'
+                sx={{
+                  fontFamily: `heading`,
+                  color: `var(--theme-ui-colors-panel-text)`
+                }}>
+                  {
+                    IconComponent
+                      ? <FontAwesomeIcon icon={IconComponent} sx={{ fontSize: '18px', mr: 2 }} />
+                      : null
+                  }
+                  {text}
+              </Link>
+            )
+          })}
         </nav>
       </Card>
     </Fragment>

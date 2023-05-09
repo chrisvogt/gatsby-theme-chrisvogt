@@ -19,7 +19,7 @@ export default () => {
           <Profiles />
         </div>
 
-        <div>{footerText}</div>
+        {/* <div>{footerText}</div> */}
       </Container>
     </div>
   )

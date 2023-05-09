@@ -5,9 +5,9 @@ module.exports = {
     avatarURL: '/images/avatar-256px.jpg',
     baseURL: 'https://www.chrisvogt.me',
     description: `
-    Software Engineer in San Francisco, sharing code, photography, and original music.
+    Software Engineer in San Francisco blogging about code, photography and piano music.
     `,
-    footerText: '© 2022 Chris Vogt',
+    footerText: '© 2023',
     headline: 'Chris Vogt',
     imageURL: '/images/og-image.png',
     languageCode: 'en',
@@ -15,7 +15,7 @@ module.exports = {
       twitterUsername: '@c1v0'
     },
     subhead: 'Code, Music & Photography',
-    title: 'CHRISVOGT.me',
+    title: 'chrisvogt.me',
     titleTemplate: '%s — Chris Vogt, Software Engineer in San Francisco',
     widgets: {
       github: {
