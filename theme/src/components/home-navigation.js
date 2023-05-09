@@ -190,7 +190,7 @@ const HomeNavigation = () => {
                   color: `var(--theme-ui-colors-panel-text)`
                 }}
               >
-                {IconComponent ? <FontAwesomeIcon icon={IconComponent} sx={{ fontSize: '18px', mr: 2 }} /> : null}
+                {IconComponent ? <FontAwesomeIcon icon={IconComponent} style={{ height: '18px' }} sx={{ fontSize: '18px', mr: 2 }} /> : null}
                 {text}
               </Link>
             )
