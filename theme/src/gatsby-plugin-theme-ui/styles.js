@@ -3,8 +3,6 @@ import { floatOnHover } from './abstracts/shadows'
 
 export const themePreset = tailwind
 
-export const DEFAULT_BORDER_RADIUS_WIDTH = '8px'
-
 const GradientBanner = {
   /**
    * Gradient animation created by @bibby0912.
@@ -178,11 +176,11 @@ export default {
     },
     'tr th:first-of-type': {
       borderLeft: `1px solid #ddd`,
-      borderTopLeftRadius: DEFAULT_BORDER_RADIUS_WIDTH
+      borderTopLeftRadius: `8px`
     },
     'tr th:last-of-type': {
       borderRight: `1px solid #ddd`,
-      borderTopRightRadius: DEFAULT_BORDER_RADIUS_WIDTH
+      borderTopRightRadius: `8px`
     },
     'tr td': {
       borderBottom: `1px dotted #ddd`,

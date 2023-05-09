@@ -4,7 +4,6 @@ import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
 
-import { DEFAULT_BORDER_RADIUS_WIDTH } from '../../../gatsby-plugin-theme-ui/styles'
 import { floatOnHover } from '../../../gatsby-plugin-theme-ui/abstracts/shadows'
 import Tooltip from '../../tooltip'
 
@@ -54,7 +53,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                   sx={{
                     ...floatOnHover,
                     boxShadow: `md`,
-                    borderRadius: DEFAULT_BORDER_RADIUS_WIDTH,
+                    borderRadius: `8px`,
                     objectFit: 'cover',
                     width: '100%'
                   }}

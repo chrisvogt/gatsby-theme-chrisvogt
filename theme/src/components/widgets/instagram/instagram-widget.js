@@ -9,7 +9,6 @@ import Carousel, { Modal, ModalGateway } from 'react-images'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import ReactPlaceholder from 'react-placeholder'
 
-import { DEFAULT_BORDER_RADIUS_WIDTH } from '../../../gatsby-plugin-theme-ui/styles'
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE, getInstagramWidget } from '../../../reducers/widgets'
@@ -95,7 +94,7 @@ export default () => {
                   <RectShape
                     color='#efefef'
                     sx={{
-                      borderRadius: DEFAULT_BORDER_RADIUS_WIDTH,
+                      borderRadius: `8px`,
                       boxShadow: `md`,
                       width: `100%`,
                       paddingBottom: `100%`
