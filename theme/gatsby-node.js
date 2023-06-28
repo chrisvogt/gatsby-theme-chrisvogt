@@ -15,6 +15,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           edges {
             node {
               fields {
+                category
                 id
                 slug
                 type
@@ -39,8 +40,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ? path.resolve('../theme/src/templates/media.js')
       : path.resolve('../theme/src/templates/post.js')
 
+    let nodePath = '/'
+
+    const category = node.fields.category
+    if (category) {
+      nodePath += `${category}/`
+    }
+
+    const slug = node.fields.slug
+    if (slug) {
+      nodePath += slug
+    }
+
+    console.log(`The node path is ${nodePath}`)
+
     actions.createPage({
-      path: node.fields.slug ? node.fields.slug : '/',
+      path: nodePath ? nodePath : '/',
       component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.fields.id
@@ -56,7 +71,7 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
     const parent = getNode(node.parent)
     const title = node.frontmatter.title || startCase(parent.name)
 
-    let slug = slugify(node.frontmatter.title)
+    let slug = slugify(title)
     if (!slug && parent.relativePath) {
       slug = parent.relativePath.replace(parent.ext, '')
     }
