@@ -54,6 +54,8 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
             {title}
           </Themed.a>
 
+          <Link to='/'>Test</Link>
+
           {!hideMenuItems &&
             menuItems.map(({ slug, path, title, text }) => (
               <Themed.a as={Link} key={slug} sx={{ color: `light`, mr: 3 }} title={title} to={path}>

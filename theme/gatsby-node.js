@@ -1,8 +1,10 @@
+const path = require('path')
+const slugify = require(`@sindresorhus/slugify`)
 const startCase = require('lodash/startCase')
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   actions.createPage({
-    component: require.resolve('./src/templates/home.js'),
+    component: path.resolve('../theme/src/templates/home.js'),
     path: '/'
   })
 
@@ -17,6 +19,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 slug
                 type
               }
+              internal {
+                contentFilePath
+              }
             }
           }
         }
@@ -30,12 +35,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMdx.edges.forEach(({ node }) => {
+    const template = node.fields.type === 'media'
+      ? path.resolve('../theme/src/templates/media.js')
+      : path.resolve('../theme/src/templates/post.js')
+
     actions.createPage({
       path: node.fields.slug ? node.fields.slug : '/',
-      component:
-        node.fields.type === 'media'
-          ? require.resolve('./src/templates/media')
-          : require.resolve('./src/templates/post'),
+      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.fields.id
       }
@@ -50,7 +56,7 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
     const parent = getNode(node.parent)
     const title = node.frontmatter.title || startCase(parent.name)
 
-    let slug = node.frontmatter.slug
+    let slug = slugify(node.frontmatter.title)
     if (!slug && parent.relativePath) {
       slug = parent.relativePath.replace(parent.ext, '')
     }

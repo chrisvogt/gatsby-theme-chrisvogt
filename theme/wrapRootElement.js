@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 import { Provider as ReduxProvider } from 'react-redux'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 
 import store from './src/store'
 import theme from './src/gatsby-plugin-theme-ui'
@@ -19,9 +19,9 @@ const shortcodes = { Emoji, YouTube }
 
 const wrapRootElement = ({ element }) => (
   <ReduxProvider store={store}>
-    <ThemeProvider theme={theme} components={components}>
+    <ThemeUIProvider theme={theme} components={components}>
       <MDXProvider components={shortcodes}>{element}</MDXProvider>
-    </ThemeProvider>
+    </ThemeUIProvider>
   </ReduxProvider>
 )
 
