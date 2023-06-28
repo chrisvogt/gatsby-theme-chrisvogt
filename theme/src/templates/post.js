@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Container, Flex, jsx, Themed } from 'theme-ui'
+import { Container, Flex, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'

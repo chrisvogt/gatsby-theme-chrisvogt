@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Flex, Themed } from 'theme-ui'
+import { jsx, Flex } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 
 /**
  * Home Page Header Content

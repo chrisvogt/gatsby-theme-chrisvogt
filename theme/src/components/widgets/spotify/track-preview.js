@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import PropTypes from 'prop-types'
 
 const TrackPreview = ({ link, name, thumbnailURL }) => (

@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 
 const YouTube = ({ title, url }) => (
   <Themed.div sx={{ variant: `styles.VideoWrapper` }}>

@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Bars } from 'svg-loaders-react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'

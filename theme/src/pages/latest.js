@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Container, jsx, Themed } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
 

@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Container, Themed } from 'theme-ui'
+import { jsx, Container } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Link } from 'gatsby'
 
 import ColorToggle from '../components/color-toggle'
