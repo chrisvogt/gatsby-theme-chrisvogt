@@ -41,7 +41,7 @@ export default ({ data }) => {
                 date={post.frontmatter.date}
                 excerpt={post.excerpt}
                 key={post.fields.id}
-                link={`/${post.fields.category}/${post.fields.slug}`}
+                link={post.fields.path}
                 title={post.frontmatter.title}
               />
             ))}
@@ -54,13 +54,12 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query QueryRecentPosts {
-    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: {frontmatter: {date: DESC}}) {
       edges {
         node {
           excerpt(pruneLength: 255)
           fields {
             category
-            slug
             id
           }
           frontmatter {

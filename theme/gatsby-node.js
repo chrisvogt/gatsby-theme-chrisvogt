@@ -1,6 +1,22 @@
 const path = require('path')
-const slugify = require(`@sindresorhus/slugify`)
+// const slugify = require(`@sindresorhus/slugify`)
 const startCase = require('lodash/startCase')
+
+const getNodePath = node => {
+  let nodePath = '/'
+
+  const category = node.fields.category
+  if (category) {
+    nodePath += `${category}/`
+  }
+
+  const slug = node.frontmatter.slug
+  if (slug) {
+    nodePath += slug
+  }
+
+  return nodePath
+}
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   actions.createPage({
@@ -19,6 +35,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 id
                 slug
                 type
+              }
+              frontmatter {
+                slug
               }
               internal {
                 contentFilePath
@@ -40,19 +59,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ? path.resolve('../theme/src/templates/media.js')
       : path.resolve('../theme/src/templates/post.js')
 
-    let nodePath = '/'
-
-    const category = node.fields.category
-    if (category) {
-      nodePath += `${category}/`
-    }
-
-    const slug = node.fields.slug
-    if (slug) {
-      nodePath += slug
-    }
-
-    console.log(`The node path is ${nodePath}`)
+    const nodePath = getNodePath(node)
 
     actions.createPage({
       path: nodePath ? nodePath : '/',
@@ -71,11 +78,7 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
     const parent = getNode(node.parent)
     const title = node.frontmatter.title || startCase(parent.name)
 
-    let slug = slugify(title)
-    if (!slug && parent.relativePath) {
-      slug = parent.relativePath.replace(parent.ext, '')
-    }
-
+    const slug = node.frontmatter.slug
     if (!slug) {
       reporter.panic(
         `Can not create node with title: ${title} there is no relative path or frontmatter to set the "slug" field`
@@ -116,6 +119,14 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
       node,
       value: node.id
     })
+
+    if (node.internal.type === `Mdx`) {
+      createNodeField({
+        name: 'path',
+        node,
+        value: getNodePath(node)
+      })
+    }
 
     createNodeField({
       name: 'title',
