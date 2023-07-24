@@ -18,6 +18,7 @@ const useRecentPosts = () => {
                 category
                 id
                 slug
+                path
               }
               frontmatter {
                 banner

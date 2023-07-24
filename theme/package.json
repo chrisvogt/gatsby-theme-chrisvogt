@@ -48,7 +48,9 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
+    "@babel/core": "^7.22.9",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
     "@testing-library/react-hooks": "^8.0.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "babel-jest": "^27.0.6",
@@ -64,7 +66,6 @@
   "dependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
-    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -75,7 +76,6 @@
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@sindresorhus/slugify": "^1",
     "@theme-ui/color": "^0.16.0",
     "@theme-ui/components": "^0.16.0",
     "@theme-ui/css": "^0.16.0",

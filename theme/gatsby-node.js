@@ -1,5 +1,4 @@
 const path = require('path')
-// const slugify = require(`@sindresorhus/slugify`)
 const startCase = require('lodash/startCase')
 
 const getNodePath = node => {

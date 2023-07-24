@@ -5,8 +5,6 @@ import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
-// import isDarkMode from '../helpers/isDarkMode'
-
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -14,11 +12,6 @@ import SoundCloud from '../shortcodes/soundcloud'
 import YouTube from '../shortcodes/youtube'
 
 const MediaTemplate = ({ data: { mdx }, children }) => {
-  // const { colorMode } = useThemeUI()
-
-  console.log(mdx);
-  console.log(children)
-
   const banner = mdx.frontmatter.banner
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
@@ -30,12 +23,13 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
 
   return (
     <Layout>
-      {/* <SEO article={true} description={description} image={banner} title={title} /> */}
+      <SEO article={true} description={description} image={banner} title={title} />
 
       {(youtubeSrc || soundcloudId) && (
         <div
           sx={{
-            backgroundColor: `var(--theme-ui-colors-panel-background)`,
+            // backgroundColor: theme => theme.colors.primary,
+            background: 'red!important',
             textAlign: `center`,
             paddingY: 3
           }}
