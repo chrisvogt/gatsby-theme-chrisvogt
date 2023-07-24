@@ -34,7 +34,7 @@ export default ({ data }) => {
               mt: 4
             }}
           >
-            {posts.map(post => (
+            {posts.map(post => console.log(post.fields) || (
               <PostCard
                 banner={post.frontmatter.banner}
                 category={post.fields.category}
@@ -61,6 +61,7 @@ export const pageQuery = graphql`
           fields {
             category
             id
+            path
           }
           frontmatter {
             banner
