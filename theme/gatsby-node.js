@@ -60,9 +60,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const nodePath = getNodePath(node)
 
+    console.log(node);
+
     actions.createPage({
       path: nodePath ? nodePath : '/',
-      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
+      component: template,
+      contentFilePath: node.internal.contentFilePath,
+      // # Setting the __contentFilePath param fixes missing MDX content
+      // while breaking the sx={} prop.
+      // component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.fields.id
       }

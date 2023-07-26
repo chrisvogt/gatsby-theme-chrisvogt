@@ -28,8 +28,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
       {(youtubeSrc || soundcloudId) && (
         <div
           sx={{
-            // backgroundColor: theme => theme.colors.primary,
-            background: 'red!important',
+            backgroundColor: theme => theme.colors['panel-background'],
             textAlign: `center`,
             paddingY: 3
           }}
@@ -56,6 +55,10 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
           <Themed.h1 as={Heading}>{title}</Themed.h1>
 
           <div className='article-content'>
+            <pre>mdx.body prop:</pre>
+            {mdx?.body}
+            <hr />
+            <pre>children prop:</pre>
             {children}
           </div>
         </Container>
@@ -74,6 +77,7 @@ MediaTemplate.propTypes = {
 export const pageQuery = graphql`
   query ($id: String!) {
     mdx(fields: { id: { eq: $id } }) {
+      body
       fields {
         category
       }
