@@ -34,7 +34,10 @@ export default merge(themePreset, {
       ...card,
       ...floatOnHover,
       borderBottom: `none`, // from actionCardDark
-      borderLeft: theme => `3px solid ${theme.colors.primary}`
+      borderLeft: theme => `3px solid ${theme.colors.primary}`,
+      a: {
+        ':hover': 'pointer'
+      }
     },
 
     metricCard: {
