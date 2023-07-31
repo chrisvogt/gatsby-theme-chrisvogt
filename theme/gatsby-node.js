@@ -29,9 +29,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         allMdx {
           edges {
             node {
+              id
               fields {
                 category
-                id
                 slug
                 type
               }
@@ -54,23 +54,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMdx.edges.forEach(({ node }) => {
-    const template = node.fields.type === 'media'
-      ? path.resolve('../theme/src/templates/media.js')
-      : path.resolve('../theme/src/templates/post.js')
-
     const nodePath = getNodePath(node)
-
-    console.log(node);
+    const template =
+      node.fields.type === 'media'
+        ? path.resolve('../theme/src/templates/media.js')
+        : path.resolve('../theme/src/templates/post.js')
 
     actions.createPage({
       path: nodePath ? nodePath : '/',
-      component: template,
-      contentFilePath: node.internal.contentFilePath,
-      // # Setting the __contentFilePath param fixes missing MDX content
-      // while breaking the sx={} prop.
-      // component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
+      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
-        id: node.fields.id
+        id: node.id
       }
     })
   })

@@ -19,7 +19,12 @@ const PostTemplate = ({ children, data }) => {
 
   return (
     <Layout>
-      <SEO article={true} description={description} image={banner} title={title} />
+      <SEO
+        article={true}
+        description={description}
+        image={banner}
+        title={title}
+      />
 
       <Flex
         sx={{
@@ -29,11 +34,17 @@ const PostTemplate = ({ children, data }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
+          {category && (
+            <Themed.div sx={{ variant: `text.title` }}>
+              {category}
+            </Themed.div>
+          )}
 
           <time className='created'>{date}</time>
 
-          <Themed.h1 as={Heading}>{title}</Themed.h1>
+          <Themed.h1 as={Heading}>
+            {title}
+          </Themed.h1>
 
           <div className='article-content'>
             {children}

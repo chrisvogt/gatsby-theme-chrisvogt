@@ -23,10 +23,15 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
 
   return (
     <Layout>
-      <SEO article={true} description={description} image={banner} title={title} />
+      <SEO
+        article={true}
+        description={description}
+        image={banner}
+        title={title}
+      />
 
       {(youtubeSrc || soundcloudId) && (
-        <div
+        <Themed.div
           sx={{
             backgroundColor: theme => theme.colors['panel-background'],
             textAlign: `center`,
@@ -37,7 +42,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
             {youtubeSrc && <YouTube url={youtubeSrc} />}
             {soundcloudId && <SoundCloud soundcloudId={soundcloudId} />}
           </Container>
-        </div>
+        </Themed.div>
       )}
 
       <Flex
@@ -48,18 +53,22 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
+          {category && (
+            <Themed.div sx={{ variant: `text.title` }}>
+              {category}
+            </Themed.div>
+          ) }
 
-          <time className='created'>{date}</time>
+          <time className='created'>
+            {date}
+          </time>
 
-          <Themed.h1 as={Heading}>{title}</Themed.h1>
+          <Themed.h1 as={Heading}>
+            {title}
+          </Themed.h1>
 
           <div className='article-content'>
-            <pre>mdx.body prop:</pre>
-            {mdx?.body}
-            <hr />
-            <pre>children prop:</pre>
-            {children}
+             {children}
           </div>
         </Container>
       </Flex>

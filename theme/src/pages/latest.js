@@ -34,7 +34,7 @@ export default ({ data }) => {
               mt: 4
             }}
           >
-            {posts.map(post => console.log(post.fields) || (
+            {posts.map(post => (
               <PostCard
                 banner={post.frontmatter.banner}
                 category={post.fields.category}
@@ -54,7 +54,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query QueryRecentPosts {
-    allMdx(sort: {frontmatter: {date: DESC}}) {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           excerpt(pruneLength: 255)
