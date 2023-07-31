@@ -2,13 +2,13 @@
 
 exports[`HomeHeaderContent matches the snapshot 1`] = `
 <div
-  className="css-sdj7pn-HomeHeaderContent"
+  className="css-161qdwd-HomeHeaderContent"
 >
   <div
     className="css-wxsvj0-HomeHeaderContent"
   >
     <h1
-      className="css-1h9knbm-HomeHeaderContent"
+      className="css-1i5um0s-HomeHeaderContent"
     >
       Website Title
     </h1>

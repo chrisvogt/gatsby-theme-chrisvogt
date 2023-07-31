@@ -59,7 +59,7 @@ exports[`Book matches the snapshot 1`] = `
   />
   <g
     style={
-      Object {
+      {
         "clipPath": "url(#ec3c1a72-0104-4d8a-830f-57d2245cb2f4)",
       }
     }

@@ -2,7 +2,7 @@
 module.exports = {
   presets: [
     ['@babel/preset-react', {
-      runtime: 'automatic'
+      runtime: 'classic'
     }],
     'babel-preset-gatsby'
   ]

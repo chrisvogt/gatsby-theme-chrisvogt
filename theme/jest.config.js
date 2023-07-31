@@ -25,7 +25,7 @@ module.exports = {
   },
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ['<rootDir>/enzyme.config.js', 'jest-canvas-mock'],
+  setupFiles: ['<rootDir>/jest-shim.js', 'jest-canvas-mock'],
 
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
@@ -36,11 +36,9 @@ module.exports = {
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
 
-  // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
-  testURL: 'http://localhost',
-
-  transform: {
-    '^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`
+  testEnvironmentOptions: {
+    // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
+    url: 'http://localhost'
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
