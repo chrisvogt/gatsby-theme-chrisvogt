@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import { Heading, jsx, Link } from 'theme-ui'
 import { useEffect, useRef } from 'react'
 import { Card } from '@theme-ui/components'
+import { Themed } from '@theme-ui/mdx'
 
 import {
   getGithubWidgetDataSource,
@@ -166,18 +167,6 @@ const HomeNavigation = () => {
         variant='actionCard'
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
-          <h2
-            className='sr-only'
-            sx={{
-              fontFamily: `heading`,
-              fontWeight: `unset`,
-              mb: 2,
-              mt: 0
-            }}
-          >
-            On-page navigation
-          </h2>
-
           {links.map(({ href, icon, id, text }) => {
             const IconComponent = icon?.reactIcon && icons[icon.reactIcon] ? icons[icon.reactIcon] : null
             return (

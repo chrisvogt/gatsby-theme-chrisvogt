@@ -14,11 +14,6 @@ exports[`HomeNavigation matches the snapshot 1`] = `
     <nav
       aria-label="Navigate to on-page sections"
     >
-      <h2
-        className="sr-only css-1vpsmv-HomeNavigation"
-      >
-        On-page navigation
-      </h2>
       <a
         className="css-1v4indd-Box"
         href="#posts"

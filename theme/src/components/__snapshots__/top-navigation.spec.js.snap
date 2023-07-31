@@ -2,13 +2,13 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-zwfbmq-TopNavigation"
+  className="css-xrv1fw-TopNavigation"
 >
   <div
     className="css-1cqf3wp-TopNavigation"
   >
     <div
-      className="css-fjtwc7-TopNavigation"
+      className="css-1oho7q7-TopNavigation"
     >
       <a
         aria-current="page"

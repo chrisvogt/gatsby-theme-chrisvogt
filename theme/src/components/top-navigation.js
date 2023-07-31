@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container } from 'theme-ui'
 import { Link } from 'gatsby'
+import { Themed } from '@theme-ui/mdx'
 
 import ColorToggle from '../components/color-toggle'
 import { getHeaderLeftItems } from '../selectors/navigation'
@@ -22,7 +23,7 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
   const title = getTitle(metadata)
 
   return (
-    <div
+    <Themed.div
       sx={{
         background: hideBackground ? 'none' : `url(${trianglify})`,
         variant: `styles.TopNavigation`
@@ -35,7 +36,7 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
           py: 3
         }}
       >
-        <div sx={{ flexGrow: 1 }}>
+        <Themed.div sx={{ flexGrow: 1 }}>
           <Link
             to='/'
             sx={{
@@ -59,11 +60,11 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
                 {text}
               </Link>
             ))}
-        </div>
+        </Themed.div>
 
         <ColorToggle />
       </Container>
-    </div>
+    </Themed.div>
   )
 }
 

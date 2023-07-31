@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { usePopperTooltip } from 'react-popper-tooltip'
 import getIsDarkMode from '../helpers/isDarkMode'
 import 'react-popper-tooltip/dist/styles.css'
@@ -20,7 +21,7 @@ const Tooltip = ({ children, tooltip, hideArrow, ...props }) => {
       </span>
 
       {visible && (
-        <div
+        <Themed.div
           ref={setTooltipRef}
           {...getTooltipProps({ className: 'tooltip-container' })}
           sx={{
@@ -30,7 +31,7 @@ const Tooltip = ({ children, tooltip, hideArrow, ...props }) => {
         >
           {!hideArrow && <div {...getArrowProps({ className: 'tooltip-arrow' })} />}
           {tooltip}
-        </div>
+        </Themed.div>
       )}
     </Fragment>
   )

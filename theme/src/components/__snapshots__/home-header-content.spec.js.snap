@@ -5,7 +5,7 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
   className="css-161qdwd-HomeHeaderContent"
 >
   <div
-    className="css-wxsvj0-HomeHeaderContent"
+    className="css-143k2e7-HomeHeaderContent"
   >
     <h1
       className="css-1i5um0s-HomeHeaderContent"
@@ -13,7 +13,7 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
       Website Title
     </h1>
     <p
-      className="css-1tgqo55-HomeHeaderContent"
+      className="css-5yrhmc-HomeHeaderContent"
     >
       I'm a Software Engineer in San Francisco with an interest in photography, playing piano and building things with code. This website is a digital garden where I share things I'm working on or excited about.
     </p>
