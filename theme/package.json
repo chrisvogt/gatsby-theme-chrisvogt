@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -47,7 +47,6 @@
     "jest": "^29.6.2",
     "jest-canvas-mock": "^2.3.1",
     "jest-environment-jsdom": "^29.6.2",
-    "loader-utils": "^3.2.0",
     "react-test-renderer": "^18.2.0"
   },
   "dependencies": {
