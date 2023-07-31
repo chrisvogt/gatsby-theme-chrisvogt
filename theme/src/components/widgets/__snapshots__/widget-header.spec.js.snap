@@ -5,7 +5,7 @@ exports[`WidgetHeader matches the snapshot 1`] = `
   className="css-1gotcft-WidgetHeader"
 >
   <h2
-    className="css-1wf7gym"
+    className="css-129mezd-Box"
   >
     Neat & Interesting Widget
   </h2>

@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { Container, Flex, jsx, Themed } from 'theme-ui'
+import { Container, Flex, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ children, data }) => {
   const { mdx } = data
 
   const banner = mdx.frontmatter.banner
@@ -19,7 +19,12 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO article={true} description={description} image={banner} title={title} />
+      <SEO
+        article={true}
+        description={description}
+        image={banner}
+        title={title}
+      />
 
       <Flex
         sx={{
@@ -29,14 +34,20 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
+          {category && (
+            <Themed.div sx={{ variant: `text.title` }}>
+              {category}
+            </Themed.div>
+          )}
 
           <time className='created'>{date}</time>
 
-          <Themed.h1 as={Heading}>{title}</Themed.h1>
+          <Themed.h1 as={Heading}>
+            {title}
+          </Themed.h1>
 
           <div className='article-content'>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+            {children}
           </div>
         </Container>
       </Flex>

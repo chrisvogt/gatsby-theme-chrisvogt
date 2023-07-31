@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
@@ -45,7 +46,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                 onMouseEnter={() => setCurrentMediaId(id)}
                 onMouseLeave={() => setCurrentMediaId(false)}
               >
-                <img
+                <Themed.img
                   alt='cover artwork'
                   crossOrigin='anonymous'
                   loading='lazy'

@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Bars } from 'svg-loaders-react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -11,18 +12,14 @@ import PropTypes from 'prop-types'
  * a loading indicator when `isLoading` is set.
  */
 const CallToAction = ({ children, isLoading, title, to, url }) => {
-  const linkProps = to
-    ? {
-        as: Link,
-        to
-      }
-    : {}
+  const LinkComponent = to ? Link : Themed.a;
   return isLoading ? (
     <Bars fill='#1E90FF' width='24' height='24' sx={{ verticalAlign: `middle` }} />
   ) : (
-    <Themed.a
+    <LinkComponent
       href={url}
       sx={{
+        variant: 'styles.a',
         fontSize: 0,
         fontFamily: 'heading',
         lineHeight: '1.25', // synced with widget header
@@ -41,10 +38,10 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
         }
       }}
       title={title}
-      {...linkProps}
+      to={to}
     >
       {children}
-    </Themed.a>
+    </LinkComponent>
   )
 }
 

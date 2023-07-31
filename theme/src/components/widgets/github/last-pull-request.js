@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Box, Card, Heading } from '@theme-ui/components'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'

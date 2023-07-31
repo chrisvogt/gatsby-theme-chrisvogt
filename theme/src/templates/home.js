@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Grid, Themed } from 'theme-ui'
+import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
+import { Themed } from '@theme-ui/mdx'
 
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
@@ -28,7 +29,7 @@ const HomeTemplate = props => {
         <HomeHeaderContent avatar={avatar} headline={headline} subhead={subhead} />
       </Header>
 
-      <div
+      <Themed.div
         sx={{
           minHeight: `500px`,
           pt: 3
@@ -44,7 +45,7 @@ const HomeTemplate = props => {
             </main>
           </Grid>
         </Container>
-      </div>
+      </Themed.div>
     </Layout>
   )
 }

@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Box, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 

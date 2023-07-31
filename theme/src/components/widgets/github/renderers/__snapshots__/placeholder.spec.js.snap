@@ -5,13 +5,13 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
   className="show-loading-animation"
 >
   <div
-    className="css-4cffwv"
+    className="css-vd02hx-Flex"
   >
     <div>
       <div
         className="rect-shape"
         style={
-          Object {
+          {
             "backgroundColor": "#efefef",
             "height": 40,
             "marginBottom": "2em",
@@ -27,7 +27,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
       <div
         className="text-block"
         style={
-          Object {
+          {
             "width": "100%",
           }
         }
@@ -35,7 +35,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
         <div
           className="text-row"
           style={
-            Object {
+            {
               "backgroundColor": "#efefef",
               "height": "1em",
               "marginTop": 0,
@@ -47,7 +47,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
         <div
           className="text-row"
           style={
-            Object {
+            {
               "backgroundColor": "#efefef",
               "height": "1em",
               "marginTop": "0.7em",
@@ -62,7 +62,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
   <div
     className="text-block"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -70,7 +70,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
     <div
       className="text-row"
       style={
-        Object {
+        {
           "backgroundColor": "#efefef",
           "height": "1em",
           "marginTop": 0,
@@ -82,7 +82,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
     <div
       className="text-row"
       style={
-        Object {
+        {
           "backgroundColor": "#efefef",
           "height": "1em",
           "marginTop": "0.7em",
@@ -94,7 +94,7 @@ exports[`GitHub Placeholder Renderer matches the snapshot 1`] = `
     <div
       className="text-row"
       style={
-        Object {
+        {
           "backgroundColor": "#efefef",
           "height": "1em",
           "marginTop": "0.7em",

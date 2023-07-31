@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import { Container, Flex, jsx, Themed, useThemeUI } from 'theme-ui'
+import { Container, Flex, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
-
-import isDarkMode from '../helpers/isDarkMode'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -13,10 +11,7 @@ import SEO from '../components/seo'
 import SoundCloud from '../shortcodes/soundcloud'
 import YouTube from '../shortcodes/youtube'
 
-const MediaTemplate = ({ data }) => {
-  const { colorMode } = useThemeUI()
-  const { mdx } = data
-
+const MediaTemplate = ({ data: { mdx }, children }) => {
   const banner = mdx.frontmatter.banner
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
@@ -28,12 +23,17 @@ const MediaTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO article={true} description={description} image={banner} title={title} />
+      <SEO
+        article={true}
+        description={description}
+        image={banner}
+        title={title}
+      />
 
       {(youtubeSrc || soundcloudId) && (
-        <div
+        <Themed.div
           sx={{
-            backgroundColor: `var(--theme-ui-colors-panel-background)`,
+            backgroundColor: theme => theme.colors['panel-background'],
             textAlign: `center`,
             paddingY: 3
           }}
@@ -42,7 +42,7 @@ const MediaTemplate = ({ data }) => {
             {youtubeSrc && <YouTube url={youtubeSrc} />}
             {soundcloudId && <SoundCloud soundcloudId={soundcloudId} />}
           </Container>
-        </div>
+        </Themed.div>
       )}
 
       <Flex
@@ -53,14 +53,22 @@ const MediaTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
+          {category && (
+            <Themed.div sx={{ variant: `text.title` }}>
+              {category}
+            </Themed.div>
+          ) }
 
-          <time className='created'>{date}</time>
+          <time className='created'>
+            {date}
+          </time>
 
-          <Themed.h1 as={Heading}>{title}</Themed.h1>
+          <Themed.h1 as={Heading}>
+            {title}
+          </Themed.h1>
 
           <div className='article-content'>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+             {children}
           </div>
         </Container>
       </Flex>
@@ -69,6 +77,7 @@ const MediaTemplate = ({ data }) => {
 }
 
 MediaTemplate.propTypes = {
+  children: PropTypes.node,
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired
   }).isRequired

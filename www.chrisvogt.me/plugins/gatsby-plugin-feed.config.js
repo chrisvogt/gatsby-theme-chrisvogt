@@ -28,28 +28,24 @@ module.exports = {
             })
           })
         },
-        query: `
-          {
-            allMdx(
-              sort: { order: DESC, fields: [frontmatter___date] },
-            ) {
-              edges {
-                node {
-                  excerpt
-                  fields {
-                    category
-                    slug
-                  }
-                  frontmatter {
-                    banner
-                    date
-                    title
-                  }
-                }
-              }
-            }
-          }
-        `,
+        query: `{
+  allMdx(sort: {frontmatter: {date: DESC}}) {
+    edges {
+      node {
+        excerpt
+        fields {
+          category
+          slug
+        }
+        frontmatter {
+          banner
+          date
+          title
+        }
+      }
+    }
+  }
+}`,
         output: '/rss.xml',
         title: "Chris Vogt's RSS Feed"
       }
