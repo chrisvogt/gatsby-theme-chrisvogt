@@ -21,7 +21,7 @@ const Repository = ({ description, nameWithOwner, updatedAt }) => (
     <span sx={{ flexGrow: 1, mb: 2 }}>{description}</span>
 
     <CardFooter>
-      <span sx={{ fontSize: 0, p: 0 }}>Last updated {ago(new Date(updatedAt))}</span>
+      <span>Last updated {ago(new Date(updatedAt))}</span>
       <ViewExternal platform='GitHub' />
     </CardFooter>
   </Flex>

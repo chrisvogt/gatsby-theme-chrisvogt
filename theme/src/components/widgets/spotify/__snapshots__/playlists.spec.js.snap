@@ -8,12 +8,14 @@ exports[`Playlists matches the snapshot 1`] = `
     className="css-4i4294-Playlists"
   >
     <h3
-      className="css-129mezd-Box"
+      className="css-14fdiym-Playlists"
     >
       Playlists
     </h3>
   </div>
-  <p>
+  <p
+    className="css-1avyp1d"
+  >
     My 12 favorite playlists.
   </p>
   <div

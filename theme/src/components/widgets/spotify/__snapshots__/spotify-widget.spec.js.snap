@@ -169,12 +169,12 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
     className="css-o0oe1r-ProfileMetricsBadge"
   >
     <div
-      className="css-xfo55a-Box"
+      className="css-18tyx52-Box"
     >
        
     </div>
     <div
-      className="css-1wisff-Box"
+      className="css-oz63zn-Box"
     >
        
     </div>
@@ -186,12 +186,14 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       className="css-4i4294-Playlists"
     >
       <h3
-        className="css-1r48a8i-Box"
+        className="css-lvvsle-Playlists"
       >
         Playlists
       </h3>
     </div>
-    <p>
+    <p
+      className="css-c197d9"
+    >
       My 12 favorite playlists.
     </p>
     <div
@@ -384,12 +386,14 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       className="css-kohdhs-TopTracks"
     >
       <h3
-        className="css-1r48a8i-Box"
+        className="css-m47u5q-TopTracks"
       >
         Top Tracks
       </h3>
     </div>
-    <p>
+    <p
+      className="css-c197d9"
+    >
       My 12 most-played tracks over the last 4 weeks.
     </p>
     <div

@@ -17,9 +17,7 @@ exports[`GitHub Repository Renderer matches the snapshot 1`] = `
   <div
     className="css-1tkdyol-CardFooter"
   >
-    <span
-      className="css-14d26u1-Repository"
-    >
+    <span>
       Last updated 
       3 years ago
     </span>

@@ -2,6 +2,7 @@
 import { Box, Container, Flex, Grid, jsx } from 'theme-ui'
 import { useRef } from 'react'
 import Lottie from 'lottie-react-web'
+import { Themed } from '@theme-ui/mdx'
 
 import Layout from '../components/layout'
 
@@ -29,14 +30,14 @@ const NotFoundPage = () => {
                 textAlign: [`center`, `center`, `left`]
               }}
             >
-              <h1 sx={{ my: 0 }}>404</h1>
-              <p>
+              <Themed.h1 sx={{ my: 0 }}>404</Themed.h1>
+              <Themed.p>
                 Lost in space? Why not go{' '}
-                <a title='Home page' href='/'>
+                <Themed.a title='Home page' href='/'>
                   home
-                </a>
+                </Themed.a>
                 .
-              </p>
+              </Themed.p>
             </Box>
           </Grid>
         </Container>

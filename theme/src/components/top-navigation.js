@@ -44,7 +44,7 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
               color: `light`,
               display: [`block`, ``, `inline`],
               fontFamily: `heading`,
-              fontSize: 2,
+              fontSize: [2, 3],
               fontWeight: 500,
               letterSpacing: '1.1px',
               marginRight: 3,
@@ -56,7 +56,7 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
 
           {!hideMenuItems &&
             menuItems.map(({ slug, path, title, text }) => (
-              <Link key={slug} sx={{ variant: 'styles.a', color: `light`, mr: 3 }} title={title} to={path}>
+              <Link key={slug} sx={{ fontSize: 2, variant: 'styles.a', color: `light`, mr: 3 }} title={title} to={path}>
                 {text}
               </Link>
             ))}

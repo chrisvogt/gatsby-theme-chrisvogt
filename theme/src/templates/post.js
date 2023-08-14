@@ -40,7 +40,11 @@ const PostTemplate = ({ children, data }) => {
             </Themed.div>
           )}
 
-          <time className='created'>{date}</time>
+          <Themed.div sx={{ fontSize: [2, 3] }}>
+            <time className='created'>
+              {date}
+            </time>
+          </Themed.div>
 
           <Themed.h1 as={Heading}>
             {title}

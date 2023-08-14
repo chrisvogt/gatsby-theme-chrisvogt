@@ -7,6 +7,7 @@ export const card = {
   boxShadow: `default`,
   flexGrow: 1,
   padding: 3,
+  fontSize: [1, 2],
   textDecoration: `none`
 }
 
