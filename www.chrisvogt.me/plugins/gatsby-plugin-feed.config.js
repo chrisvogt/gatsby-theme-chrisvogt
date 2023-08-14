@@ -29,25 +29,29 @@ module.exports = {
           })
         },
         query: `{
-  allMdx(sort: {frontmatter: {date: DESC}}) {
-    edges {
-      node {
-        excerpt
-        fields {
-          category
-          slug
-        }
-        frontmatter {
-          banner
-          date
-          title
-        }
-      }
-    }
-  }
-}`,
+          allMdx(sort: {frontmatter: {date: DESC}}) {
+            edges {
+              node {
+                excerpt
+                fields {
+                  category
+                  slug
+                }
+                frontmatter {
+                  banner
+                  date
+                  title
+                }
+              }
+            }
+          }
+        }`,
         output: '/rss.xml',
-        title: "Chris Vogt's RSS Feed"
+        generator: 'Gatsby 5',
+        title: 'Chris Vogt – Blog',
+        feed_url: 'https://www.chrisvogt.me',
+        site_url: 'https://www.chrisvogt.me',
+        docs: 'https://www.chrisvogt.me'
       }
     ]
   }
