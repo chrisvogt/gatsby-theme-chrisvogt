@@ -11,7 +11,7 @@ import {
   faInstagram,
   faLinkedin,
   faStackOverflow,
-  faTwitter
+  faXTwitter
 } from '@fortawesome/free-brands-svg-icons'
 
 import useSocialProfiles from '../../hooks/use-social-profiles'
@@ -29,7 +29,7 @@ const icons = {
   faInstagram,
   faLinkedin,
   faStackOverflow,
-  faTwitter
+  faXTwitter
 }
 
 /** Mapper function to attach React icon components to profile data. */
