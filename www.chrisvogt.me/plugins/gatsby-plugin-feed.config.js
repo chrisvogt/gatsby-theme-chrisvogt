@@ -29,25 +29,26 @@ module.exports = {
           })
         },
         query: `{
-  allMdx(sort: {frontmatter: {date: DESC}}) {
-    edges {
-      node {
-        excerpt
-        fields {
-          category
-          slug
-        }
-        frontmatter {
-          banner
-          date
-          title
-        }
-      }
-    }
-  }
-}`,
+          allMdx(sort: {frontmatter: {date: DESC}}) {
+            edges {
+              node {
+                excerpt
+                fields {
+                  category
+                  slug
+                }
+                frontmatter {
+                  banner
+                  date
+                  title
+                }
+              }
+            }
+          }
+        }`,
         output: '/rss.xml',
-        title: "Chris Vogt's RSS Feed"
+        title: 'Chris Vogt – Blog',
+        link: 'https://www.chrisvogt.me'
       }
     ]
   }
