@@ -30,13 +30,12 @@ export default ({ data }) => {
               display: `grid`,
               gridAutoRows: `1fr`,
               gridGap: 4,
-              gridTemplateColumns: [``, ``, `repeat(2, 1fr)`],
+              gridTemplateColumns: `1fr`,
               mt: 4
             }}
           >
             {posts.map(post => (
               <PostCard
-                banner={post.frontmatter.banner}
                 category={post.fields.category}
                 date={post.frontmatter.date}
                 excerpt={post.excerpt}
@@ -64,7 +63,6 @@ export const pageQuery = graphql`
             path
           }
           frontmatter {
-            banner
             date(formatString: "MMMM DD, YYYY")
             description
             slug
