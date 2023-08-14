@@ -47,8 +47,11 @@ module.exports = {
           }
         }`,
         output: '/rss.xml',
+        generator: 'Gatsby 5',
         title: 'Chris Vogt – Blog',
-        link: 'https://www.chrisvogt.me'
+        feed_url: 'https://www.chrisvogt.me',
+        site_url: 'https://www.chrisvogt.me',
+        docs: 'https://www.chrisvogt.me'
       }
     ]
   }
