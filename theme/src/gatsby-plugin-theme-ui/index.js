@@ -20,7 +20,8 @@ export default merge(themePreset, {
     outline: {
       color: 'primary',
       bg: 'transparent',
-      boxShadow: 'inset 0 0 0 1px'
+      boxShadow: 'inset 0 0 0 1px',
+      fontSize: 1
     }
   },
 
@@ -78,7 +79,17 @@ export default merge(themePreset, {
     monospace: fonts.mono
   },
 
-  fontSizes: ['0.875rem', '1rem', '1.25rem', '1.5rem', '1.875rem', '2.25rem', '3rem', '4rem', '4.5rem'],
+  fontSizes: [
+    '0.875rem',
+    '1rem',
+    '1.25rem',
+    '1.5rem',
+    '1.875rem',
+    '2.25rem',
+    '3rem',
+    '4rem',
+    '4.5rem'
+  ],
 
   layout: {
     container: {
@@ -109,7 +120,7 @@ export default merge(themePreset, {
     title: {
       color: `primary`,
       fontFamily: `heading`,
-      fontSize: 0,
+      fontSize: [2, 3],
       fontWeight: `550`,
       textTransform: `uppercase`
     }

@@ -20,7 +20,7 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       href={url}
       sx={{
         variant: 'styles.a',
-        fontSize: 0,
+        fontSize: 1,
         fontFamily: 'heading',
         lineHeight: '1.25', // synced with widget header
         verticalAlign: 'bottom',

@@ -50,7 +50,19 @@ export default {
     color: `text`,
     display: `flex`,
     flexDirection: `column`,
-    minHeight: `100vh`
+    minHeight: `100vh`,
+
+    fontFamily: 'body',
+    fontWeight: 'body',
+    lineHeight: 'body',
+  },
+
+  p: {
+    fontSize: [2, 3],
+  },
+
+  ul: {
+    fontSize: [2, 3],
   },
 
   outlined: {
@@ -68,7 +80,6 @@ export default {
 
   GitHubCardFooter: {
     display: `flex`,
-    fontSize: `small`,
     justifyContent: `space-between`,
     mt: 2
   },
@@ -159,7 +170,6 @@ export default {
   WidgetFooter: {
     color: `text`,
     fontFamily: `heading`,
-    fontSize: 3,
     textAlign: [`center`, `right`]
   },
 

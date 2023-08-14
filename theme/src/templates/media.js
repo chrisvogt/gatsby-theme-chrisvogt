@@ -54,7 +54,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
       >
         <Container sx={{ height: `100%` }}>
           {category && (
-            <Themed.div sx={{ variant: `text.title` }}>
+            <Themed.div sx={{ fontSize: [3, 4], variant: `text.title` }}>
               {category}
             </Themed.div>
           ) }

@@ -131,9 +131,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant s
     <div
       className="css-1tkdyol-CardFooter"
     >
-      <span
-        className="css-14d26u1-Repository"
-      >
+      <span>
         Last updated 
         NaN years ago
       </span>

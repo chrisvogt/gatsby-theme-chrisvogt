@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 import MediaItemGrid from './media-item-grid'
+import { Themed } from '@theme-ui/mdx'
 
 const Playlists = ({ isLoading, playlists = [] }) => {
   const items = playlists.map(item => {
@@ -43,10 +44,10 @@ const Playlists = ({ isLoading, playlists = [] }) => {
   return (
     <div sx={{ mb: 4 }}>
       <div sx={{ display: `flex`, flex: 1, alignItems: `center` }}>
-        <Heading as='h3'>Playlists</Heading>
+        <Heading as='h3' sx={{ fontSize: [3, 4] }}>Playlists</Heading>
       </div>
 
-      <p>My 12 favorite playlists.</p>
+      <Themed.p>My 12 favorite playlists.</Themed.p>
 
       <MediaItemGrid isLoading={isLoading} items={items} />
     </div>
