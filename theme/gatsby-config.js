@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = () => ({
   siteMetadata: {
-    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
+    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo',
     baseURL: 'https://www.chrisvogt.me',
     description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
     footerText: 'Made in San Francisco',
