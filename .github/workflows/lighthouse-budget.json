@@ -8,7 +8,7 @@
       },
       {
         "resourceType": "script",
-        "budget": 200
+        "budget": 900000
       },
       {
         "resourceType": "stylesheet",
@@ -16,7 +16,7 @@
       },
       {
         "resourceType": "total",
-        "budget": 700
+        "budget": 3000000
       }
     ]
   }
