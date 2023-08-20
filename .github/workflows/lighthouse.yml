@@ -6,10 +6,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1.4
         id: netlify
@@ -21,5 +17,6 @@ jobs:
         with:
           urls: |
             ${{ steps.netlify.outputs.url }}
+          budgetPath: ./lighthouse-budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
