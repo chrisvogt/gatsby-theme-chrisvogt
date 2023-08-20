@@ -8,7 +8,7 @@ import HomeHeaderContent from '../components/home-header-content'
 import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import TopNavigation from '../components/top-navigation'
 
 import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
@@ -22,8 +22,6 @@ const HomeTemplate = props => {
 
   return (
     <Layout hideHeader>
-      <SEO title='Home' />
-
       <Header showSwoop hideTopPadding>
       <TopNavigation hideBackground hideMenuItems />
         <HomeHeaderContent avatar={avatar} headline={headline} subhead={subhead} />
@@ -49,6 +47,8 @@ const HomeTemplate = props => {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title='Home' />
 
 export const pageQuery = graphql`
   query {

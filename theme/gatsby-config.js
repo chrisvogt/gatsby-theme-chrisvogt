@@ -69,7 +69,6 @@ module.exports = () => ({
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-emotion',
-    'gatsby-plugin-react-helmet',
     'gatsby-theme-style-guide',
     'gatsby-transformer-json',
     `gatsby-plugin-theme-ui`

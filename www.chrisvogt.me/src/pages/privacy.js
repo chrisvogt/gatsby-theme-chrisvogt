@@ -8,8 +8,6 @@ import Seo from 'gatsby-theme-chrisvogt/src/components/seo'
 
 const PrivacyPolicy = () => (
   <Layout>
-    <Seo title='Privacy Policy' />
-
     <Flex
       sx={{
         backgroundColor: `colors.background`,
@@ -62,5 +60,7 @@ const PrivacyPolicy = () => (
     <Footer />
   </Layout>
 )
+
+export const Head = () => <Seo title='Privacy Policy' />
 
 export default PrivacyPolicy

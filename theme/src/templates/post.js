@@ -6,26 +6,17 @@ import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const PostTemplate = ({ children, data }) => {
   const { mdx } = data
 
-  const banner = mdx.frontmatter.banner
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
-  const description = mdx.frontmatter.description
   const title = mdx.frontmatter.title
 
   return (
     <Layout>
-      <SEO
-        article={true}
-        description={description}
-        image={banner}
-        title={title}
-      />
-
       <Flex
         sx={{
           flexDirection: `column`,
@@ -63,6 +54,21 @@ PostTemplate.propTypes = {
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired
   }).isRequired
+}
+
+export const Head = ({ data: { mdx } }) => {
+  const banner = mdx.frontmatter.banner
+  const description = mdx.frontmatter.description
+  const title = mdx.frontmatter.title
+
+  return (
+    <Seo
+      article={true}
+      description={description}
+      image={banner}
+      title={title}
+    />
+  )
 }
 
 export const pageQuery = graphql`
