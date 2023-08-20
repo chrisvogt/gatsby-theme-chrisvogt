@@ -5,7 +5,7 @@ import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
 
-import { floatOnHover } from '../../../gatsby-plugin-theme-ui/abstracts/shadows'
+import { floatOnHover } from '../../../gatsby-plugin-theme-ui/theme'
 import Tooltip from '../../tooltip'
 
 const placeholders = Array(12)
