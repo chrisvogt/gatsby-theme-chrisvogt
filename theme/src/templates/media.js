@@ -6,30 +6,24 @@ import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 import SoundCloud from '../shortcodes/soundcloud'
 import YouTube from '../shortcodes/youtube'
 
+const getBanner = mdx => mdx.frontmatter.banner
+const getDescription = mdx => mdx.frontmatter.description
+const getTitle = mdx => mdx.frontmatter.title
+
 const MediaTemplate = ({ data: { mdx }, children }) => {
-  const banner = mdx.frontmatter.banner
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
-  const description = mdx.frontmatter.description
-  const title = mdx.frontmatter.title
-
-  const youtubeSrc = mdx.frontmatter.youtubeSrc
   const soundcloudId = mdx.frontmatter.soundcloudId
+  const title = getTitle(mdx)
+  const youtubeSrc = mdx.frontmatter.youtubeSrc
 
   return (
     <Layout>
-      <SEO
-        article={true}
-        description={description}
-        image={banner}
-        title={title}
-      />
-
       {(youtubeSrc || soundcloudId) && (
         <Themed.div
           sx={{
@@ -81,6 +75,21 @@ MediaTemplate.propTypes = {
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired
   }).isRequired
+}
+
+export const Head = ({ data: { mdx } }) => {
+  const banner = getBanner(mdx)
+  const description = getDescription(mdx)
+  const title = getTitle(mdx)
+
+  return (
+    <Seo
+      article={true}
+      description={description}
+      image={banner}
+      title={title}
+    />
+  )
 }
 
 export const pageQuery = graphql`

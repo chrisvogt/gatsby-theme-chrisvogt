@@ -37,7 +37,7 @@ const mockProfiles = [
   },
   {
     icon: {
-      reactIcon: 'faTwitter'
+      reactIcon: 'faXTwitter'
     },
     id: 'twitter',
     displayName: 'Twitter',

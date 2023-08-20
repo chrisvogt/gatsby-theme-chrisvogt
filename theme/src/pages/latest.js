@@ -7,14 +7,12 @@ import { graphql } from 'gatsby'
 import { getPosts } from '../hooks/use-recent-posts'
 import Layout from '../components/layout'
 import PostCard from '../components/widgets/recent-posts/post-card'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 export default ({ data }) => {
   const posts = getPosts(data)
   return (
     <Layout>
-      <SEO title='Latest Content' description='A list of the most recent articles published on my blog.' />
-
       <Flex
         sx={{
           flexDirection: `column`,
@@ -50,6 +48,13 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo
+    title='Latest Blog Posts'
+    description='A list of the most recent articles published on my blog.'
+  />
+)
 
 export const pageQuery = graphql`
   query QueryRecentPosts {
