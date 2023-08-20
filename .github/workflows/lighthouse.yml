@@ -5,20 +5,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
+      - uses: actions/checkout@v3
       - name: Wait for the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
+        uses: jakepartusch/wait-for-netlify-action@v1.4
         id: netlify
         with:
           site_name: 'chrisvogt'
+          max_timeout: 60
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v9
+        uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
             ${{ steps.netlify.outputs.url }}
+          budgetPath: ./.github/workflows/lighthouse-budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
