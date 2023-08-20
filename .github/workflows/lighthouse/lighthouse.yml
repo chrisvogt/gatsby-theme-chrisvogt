@@ -11,10 +11,11 @@ jobs:
         with:
           node-version: 18.x
       - name: Wait for the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
+        uses: jakepartusch/wait-for-netlify-action@v1.4
         id: netlify
         with:
           site_name: 'chrisvogt'
+          max_timeout: 60
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:
