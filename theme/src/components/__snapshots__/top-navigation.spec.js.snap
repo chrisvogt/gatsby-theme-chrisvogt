@@ -32,38 +32,13 @@ exports[`TopNavigation matches the snapshot 1`] = `
     </div>
     <button
       aria-hidden="true"
-      className={null}
+      className="css-2t0886"
+      id=""
       onClick={[Function]}
-      style={
-        {
-          "MozAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundColor": "transparent",
-          "border": "none",
-          "cursor": "pointer",
-          "height": "37.599999999999994px",
-          "overflow": "hidden",
-          "padding": 0,
-          "width": "80px",
-        }
-      }
     >
       <div
-        style={
-          {
-            "alignItems": "center",
-            "display": "flex",
-            "height": "132px",
-            "justifyContent": "center",
-            "marginLeft": "-25.6px",
-            "marginTop": "-46px",
-            "width": "132px",
-          }
-        }
-      >
-        <div />
-      </div>
+        className="css-1unwmv0"
+      />
     </button>
   </div>
 </div>
