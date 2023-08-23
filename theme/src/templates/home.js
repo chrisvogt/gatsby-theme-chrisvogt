@@ -23,7 +23,7 @@ const HomeTemplate = props => {
   return (
     <Layout hideHeader>
       <Header showSwoop hideTopPadding>
-      <TopNavigation hideBackground hideMenuItems />
+      <TopNavigation hideBackground hideBrandLink hideMenuItems />
         <HomeHeaderContent avatar={avatar} headline={headline} subhead={subhead} />
       </Header>
 
