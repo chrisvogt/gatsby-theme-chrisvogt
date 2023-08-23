@@ -15,14 +15,21 @@ const HomeHeaderContent = ({ headline }) => (
       pt: 2,
       pb: 4
     }}>
-      <Themed.h1 sx={{ mb: 0, pb: 0 }}>
+      <Themed.h1 sx={{
+        mb: 0,
+        pb: 0,
+        fontWeight: '500'
+      }}>
         {headline}
       </Themed.h1>
-      <Themed.p sx={{ fontSize: 2 }}>
-        I'm a Software Engineer in San Francisco with an interest in
-        photography, playing piano and building things with code. This
-        website is a digital garden where I share things I'm working
-        on or excited about.
+      <Themed.p>
+        I'm a Sr. Software Engineer on a product team at GoDaddy currently focused on reusable components and
+        personalized dashboards for the logged-in experience. Outside of work, my hobbies include
+        photography, practicing piano and traveling.
+      </Themed.p>
+      <Themed.p>
+         This website is a "digital garden" where I share personal thoughts, things I'm working on or excited
+         about and my photography.
       </Themed.p>
     </Themed.div>
   </Flex>
