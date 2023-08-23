@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
 import { Heading, jsx, Link } from 'theme-ui'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { Card } from '@theme-ui/components'
-import { Themed } from '@theme-ui/mdx'
 
 import {
   getGithubWidgetDataSource,
@@ -13,7 +12,7 @@ import {
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faGoodreads, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -25,6 +24,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const icons = {
   faGithub,
   faGoodreads,
+  faHome,
   faInstagram,
   faNewspaper,
   faSpotify
@@ -39,6 +39,18 @@ const icons = {
  * * value {object} – props for the link item
  */
 const linkRegistry = [
+  {
+    rule: () => true, // Everyone sees this.
+    value: {
+      href: '#top',
+      icon: {
+        name: 'home',
+        reactIcon: 'faHome'
+      },
+      id: 'home',
+      text: 'Home'
+    }
+  },
   {
     rule: () => true, // Everyone sees this.
     value: {
@@ -122,28 +134,6 @@ const HomeNavigation = () => {
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
     isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
   })
-
-  useEffect(() => {
-    const navItemsEl = navItemsRef.current
-
-    const handleSmoothScroll = event => {
-      const el = event.target || event.srcElement
-      if (el instanceof HTMLAnchorElement) {
-        event.preventDefault()
-
-        const href = el.getAttribute('href')
-        document.querySelector(href).scrollIntoView({
-          behavior: 'smooth'
-        })
-      }
-    }
-
-    navItemsEl.addEventListener('click', handleSmoothScroll)
-
-    return () => {
-      navItemsEl.removeEventListener('click', handleSmoothScroll)
-    }
-  }, [])
 
   return (
     <Fragment>
