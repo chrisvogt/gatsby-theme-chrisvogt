@@ -25,19 +25,12 @@ const Playlists = ({ isLoading, playlists = [] }) => {
       ) ||
       {}
 
-    const tooltipContent = (
-      <article>
-        <header>{name}</header>
-        <span sx={{ fontStyle: `italic` }}>{totalTracksCount} tracks</span>
-      </article>
-    )
-
     return {
       id,
       name,
       spotifyURL,
       thumbnailURL,
-      tooltipContent
+      details: `${name} (${totalTracksCount} tracks)`
     }
   })
 
