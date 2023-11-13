@@ -6,7 +6,6 @@ import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
 
 import { floatOnHover } from '../../../gatsby-plugin-theme-ui/theme'
-import Tooltip from '../../tooltip'
 
 const placeholders = Array(12)
   .fill()
@@ -37,30 +36,30 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
       }}
     >
       <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-        {items.map(({ id, spotifyURL, thumbnailURL, tooltipContent }) => {
+        {items.map(({ id, details, spotifyURL, thumbnailURL }) => {
           return (
-            <Tooltip key={id} placement='top' tooltip={tooltipContent} trigger={['hover', 'focus']}>
-              <Themed.a
-                className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
-                href={spotifyURL}
-                onMouseEnter={() => setCurrentMediaId(id)}
-                onMouseLeave={() => setCurrentMediaId(false)}
-              >
-                <Themed.img
-                  alt='cover artwork'
-                  crossOrigin='anonymous'
-                  loading='lazy'
-                  src={thumbnailURL}
-                  sx={{
-                    ...floatOnHover,
-                    boxShadow: `md`,
-                    borderRadius: `8px`,
-                    objectFit: 'cover',
-                    width: '100%'
-                  }}
-                />
-              </Themed.a>
-            </Tooltip>
+            <Themed.a
+              className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
+              href={spotifyURL}
+              key={ id }
+              onMouseEnter={() => setCurrentMediaId(id)}
+              onMouseLeave={() => setCurrentMediaId(false)}
+              title={ details }
+            >
+              <Themed.img
+                alt='cover artwork'
+                crossOrigin='anonymous'
+                loading='lazy'
+                src={thumbnailURL}
+                sx={{
+                  ...floatOnHover,
+                  boxShadow: `md`,
+                  borderRadius: `8px`,
+                  objectFit: 'cover',
+                  width: '100%'
+                }}
+              />
+            </Themed.a>
           )
         })}
       </Placeholder>
