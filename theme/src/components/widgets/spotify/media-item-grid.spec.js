@@ -21,9 +21,4 @@ describe('MediaItemGrid', () => {
     const tree = renderer.create(<MediaItemGrid isLoading={true} items={[]} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it('updates the ', () => {
-    const tree = renderer.create(<MediaItemGrid isLoading={true} items={[]} />).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
