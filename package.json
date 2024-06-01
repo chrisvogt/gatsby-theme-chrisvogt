@@ -5,7 +5,7 @@
     "www.chrisvogt.me"
   ],
   "scripts": {
-    "dev": "yarn workspace www.chrisvogt.me develop:https",
+    "develop": "yarn workspace www.chrisvogt.me develop:https",
     "postinstall": "node index.js",
     "prettier:format": "prettier --write ."
   },
