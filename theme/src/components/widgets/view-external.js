@@ -6,6 +6,6 @@ export default ({ platform }) => (
   <span>
     {/* View on {platform}
     {'  '} */}
-    <FontAwesomeIcon icon={faExternalLinkAlt} />
+    <FontAwesomeIcon size='xs' icon={faExternalLinkAlt} />
   </span>
 )

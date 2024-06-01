@@ -38,13 +38,15 @@ const HomeTemplate = props => {
               <HomeNavigation />
             </aside>
             <main>
-              <Card sx={{ mb: 4 }}>
-                <HomeHeaderContent
-                  avatar={avatar}
-                  headline={headline}
-                  subhead={subhead}
-                />
-              </Card>
+              <section>
+                <Card sx={{ mb: 4 }}>
+                  <HomeHeaderContent
+                    avatar={avatar}
+                    headline={headline}
+                    subhead={subhead}
+                  />
+                </Card>
+              </section>
               <HomeWidgets />
             </main>
           </Grid>

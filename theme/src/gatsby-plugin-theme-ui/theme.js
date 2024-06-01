@@ -3,9 +3,8 @@ import { merge } from 'theme-ui'
 
 const fonts = {
   sans: '-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif',
-  serif:
-    'Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
-  mono: 'Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace'
+  serif: 'Crimson Text, Georgia, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
+  mono: 'Fira Code, Source Code Pro, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace'
 }
 
 export const floatOnHover = {
@@ -183,7 +182,8 @@ export default merge(tailwind, {
         'panel-background': `#252e3c`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
-        text: `white`
+        text: `#e2e8f0`,
+        textMuted: '#a0aec0'
       }
     },
     primary: `#1E90FF`,
@@ -195,10 +195,12 @@ export default merge(tailwind, {
   fonts: {
     body: fonts.serif,
     heading: fonts.sans,
-    monospace: fonts.mono
+    monospace: fonts.mono,
+    sans: fonts.sans,
+    serif: fonts.serif
   },
 
-  fontSizes: ['1rem', '1.25rem', '1.375rem', '1.5rem', '1.875rem', '2.25rem', '3rem', '4rem', '4.5rem'],
+  fontSizes: ['.875rem', '1rem', '1.25rem', '1.375rem', '1.5rem', '1.875rem', '2.25rem', '3rem', '4rem', '4.5rem'],
 
   layout: {
     container: {
