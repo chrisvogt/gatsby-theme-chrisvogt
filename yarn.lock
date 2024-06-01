@@ -1429,21 +1429,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/crimson-text/-/crimson-text-5.0.13.tgz#7ba7727c5f7767f4334dc727b1da053bdad945a1"
   integrity sha512-yF+BQv2z/2a0t/7dj82KVtfiuhu0IhLfeYI4chWb8etBtT6NZIuOvI9lnftmsejoT92cSHkJq4Qo5x+DwtiaEQ==
 
-"@fontsource/fira-code@^5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-5.0.18.tgz#a9030d5c8d220aa5319b4d6269fe3a4300858747"
-  integrity sha512-DuH/ewp/2sSYoJw7PxB1VuCyrxo7OCEWeML7sN5yNfP8gTleIktZl/dTopcPOHv1WwDUcqRG1veRoEgfEeYfqQ==
-
-"@fontsource/merriweather@^5.0.13":
-  version "5.0.13"
-  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.13.tgz#2ef038e05766107a90bb92e800ad44e3f3c32696"
-  integrity sha512-V/UsU+5yceDICBUJJXWCT+6xf5YpLIVUHfUjBQ+NNbllIhe3zaVZ1f3t5+fNKwvBzKBDa3RNMCofAdW7uzw08Q==
-
-"@fontsource/source-code-pro@^5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@fontsource/source-code-pro/-/source-code-pro-5.0.18.tgz#fbb6989cdae05e4717c82c5da6b99ed5817c2c2c"
-  integrity sha512-5z+MFKaj+qs0PGAzv+WpMBTd8wEvAJEqATj6cGFVFJmFk6A6liJB07F2HAzLe/83FYikGeE4okh1sHM2JDVV+Q==
-
 "@fortawesome/fontawesome-common-types@6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.2.tgz#1766039cad33f8ad87f9467b98e0d18fbc8f01c5"
