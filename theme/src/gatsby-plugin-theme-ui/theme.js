@@ -204,7 +204,7 @@ export default merge(tailwind, {
 
   layout: {
     container: {
-      maxWidth: [``, `94%`, ``, ``, `1440px`],
+      maxWidth: [``, `98%`, ``, ``, `1440px`],
       py: [2, 3],
       px: [3, 4]
     }
@@ -212,7 +212,7 @@ export default merge(tailwind, {
 
   links: {
     homeNavigation: {
-      color: 'var(--theme-ui-colors-primary)',
+      color: `primary`,
       display: `block`,
       py: 2,
       textDecoration: `none`,

@@ -2,17 +2,17 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-xrv1fw-TopNavigation"
+  className="css-10qm8bf-TopNavigation"
 >
   <div
-    className="css-1cqf3wp-TopNavigation"
+    className="css-1hhifxi-TopNavigation"
   >
     <div
       className="css-1oho7q7-TopNavigation"
     >
       <a
         aria-current="page"
-        className="css-1cqhku0-TopNavigation"
+        className="css-1xy8wez-TopNavigation"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -21,7 +21,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
         My Personal Blog & Portfolio
       </a>
       <a
-        className="css-2t94dz"
+        className="css-12sa0kn"
         href="/about-me"
         onClick={[Function]}
         onMouseEnter={[Function]}

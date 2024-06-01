@@ -31,7 +31,8 @@ const TopNavigation = ({
     <Themed.div
       sx={{
         background: hideBackground ? 'none' : `url(${trianglify})`,
-        variant: `styles.TopNavigation`
+        variant: `styles.TopNavigation`,
+        minHeight: `64px`
       }}
     >
       <Container

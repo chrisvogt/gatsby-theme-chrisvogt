@@ -23,13 +23,16 @@ const HomeTemplate = props => {
   return (
     <Layout hideHeader>
       <Header showSwoop hideTopPadding>
-        <TopNavigation hideBackground hideMenuItems />
+        <Container>
+          <TopNavigation hideBackground hideMenuItems />
+        </Container>
       </Header>
 
       <Themed.div
         sx={{
           minHeight: `500px`,
-          pt: 3
+          pt: 3,
+          px: 0
         }}
       >
         <Container>

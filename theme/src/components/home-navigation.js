@@ -139,9 +139,9 @@ const HomeNavigation = () => {
     <Fragment>
       <div
         sx={{
-          display: ['none', 'block'],
+          display: ['none', '', 'block'],
           position: `sticky`,
-          top: `1.5em`
+          top: `1.5em`,
         }}
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
@@ -154,7 +154,8 @@ const HomeNavigation = () => {
                 variant='homeNavigation'
                 sx={{
                   fontFamily: `sans`,
-                  color: `var(--theme-ui-colors-panel-text)`
+                  color: `text`,
+                  paddingX: 2
                 }}
               >
                 {IconComponent ? <FontAwesomeIcon icon={IconComponent} style={{ height: '18px' }} sx={{ mr: 2 }} /> : null}

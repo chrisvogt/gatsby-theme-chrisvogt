@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Goodreads Widget matches the loading state snapshot 1`] = `
-<div
+<section
   className="css-12h1dx4-Widget"
   id="goodreads"
 >
@@ -169,12 +169,12 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     className="css-o0oe1r-ProfileMetricsBadge"
   >
     <div
-      className="css-1cm1u20-Box"
+      className="css-1fj08pc-Box"
     >
        
     </div>
     <div
-      className="css-1gyh6hj-Box"
+      className="css-1wc3ku-Box"
     >
        
     </div>
@@ -186,17 +186,17 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
       className="css-1kn2er7-RecentlyReadBooks"
     >
       <h3
-        className="css-1pfxzpp-RecentlyReadBooks"
+        className="css-1kxv5tg-RecentlyReadBooks"
       >
         Books
       </h3>
       <p
-        className="css-886wd3"
+        className="css-1qwovgy"
       >
         The last 12 books I read and finished.
       </p>
       <div
-        className="css-wy3mj5-RecentlyReadBooks"
+        className="css-qnzjfx-RecentlyReadBooks"
       >
         <div
           className="rect-shape css-b3ph2j"
@@ -345,7 +345,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
       className="css-t1qg8r-UserStatus"
     >
       <div
-        className="css-9ryjpl-Box"
+        className="css-15y3qnn-Box"
       >
         <div
           className="text-row show-loading-animation"
@@ -360,7 +360,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="css-jwrdd0-CardFooter"
+          className="css-owjkyv-CardFooter"
         >
           <div
             className="text-row show-loading-animation"
@@ -378,5 +378,5 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
       </div>
     </a>
   </div>
-</div>
+</section>
 `;

@@ -129,7 +129,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant s
       A fake NodeJS project.
     </span>
     <div
-      className="css-1tkdyol-CardFooter"
+      className="css-1vn95lq-CardFooter"
     >
       <span>
         Last updated 
@@ -138,7 +138,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant s
       <span>
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-up-right-from-square "
+          className="svg-inline--fa fa-up-right-from-square fa-xs "
           data-icon="up-right-from-square"
           data-prefix="fas"
           focusable="false"

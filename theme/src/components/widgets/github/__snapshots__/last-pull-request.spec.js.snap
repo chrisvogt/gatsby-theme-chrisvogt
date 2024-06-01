@@ -28,17 +28,17 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
         }
       />
       <div
-        className="css-zn3ns5-CardFooter"
+        className="css-klqf92-CardFooter"
       >
         <div
           className="text-row show-loading-animation"
           style={
             {
               "backgroundColor": "#efefef",
-              "height": "1em",
+              "height": "15px",
               "marginTop": 0,
               "maxHeight": undefined,
-              "width": "140px",
+              "width": "15px",
             }
           }
         />
@@ -79,12 +79,12 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
         </em>
       </span>
       <div
-        className="css-zn3ns5-CardFooter"
+        className="css-klqf92-CardFooter"
       >
         <span>
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-up-right-from-square "
+            className="svg-inline--fa fa-up-right-from-square fa-xs "
             data-icon="up-right-from-square"
             data-prefix="fas"
             focusable="false"

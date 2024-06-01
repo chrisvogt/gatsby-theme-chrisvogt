@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Instagram Widget matches the loading state snapshot 1`] = `
-<div
+<section
   className="css-12h1dx4-Widget"
   id="instagram"
 >
@@ -169,12 +169,12 @@ exports[`Instagram Widget matches the loading state snapshot 1`] = `
     className="css-o0oe1r-ProfileMetricsBadge"
   >
     <div
-      className="css-1cm1u20-Box"
+      className="css-1fj08pc-Box"
     >
        
     </div>
     <div
-      className="css-1gyh6hj-Box"
+      className="css-1wc3ku-Box"
     >
        
     </div>
@@ -183,7 +183,7 @@ exports[`Instagram Widget matches the loading state snapshot 1`] = `
     className="gallery"
   >
     <div
-      className="css-1vpwsid-Box"
+      className="css-1k6r64f-Box"
     >
       <div
         className="image-placeholder show-loading-animation"
@@ -307,5 +307,5 @@ exports[`Instagram Widget matches the loading state snapshot 1`] = `
       </div>
     </div>
   </div>
-</div>
+</section>
 `;

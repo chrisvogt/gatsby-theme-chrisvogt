@@ -18,7 +18,7 @@ const HomeHeaderContent = ({ headline }) => (
       Hi, 👋 I'm Chris Vogt
     </Themed.h1>
     <Themed.p>
-      I'm a Sr. Software Engineer on a product team at GoDaddy. I work on creating intelligent customer dashboards, in-app navigation and reusable components. Outside of work, I enjoy photography, practicing piano and exploring new places.
+      I'm a Sr. Software Engineer on a product team at GoDaddy. I work on creating intelligent customer dashboards, in-app navigation and reusable components. Outside of work, I live in The Castro District of San Francisco, and I enjoy photography, practicing piano and exploring new places.
     </Themed.p>
     <Themed.p>
       This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.

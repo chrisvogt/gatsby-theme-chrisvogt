@@ -19,7 +19,7 @@ exports[`Playlists matches the snapshot 1`] = `
     My 12 favorite playlists.
   </p>
   <div
-    className="media-item_grid null css-ulmvcj-MediaItemGrid"
+    className="media-item_grid null css-1ts3m6s-MediaItemGrid"
   >
     <a
       className="media-item_media css-1avyp1d"

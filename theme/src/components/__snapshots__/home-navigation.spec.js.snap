@@ -2,13 +2,13 @@
 
 exports[`HomeNavigation matches the snapshot 1`] = `
 <div
-  className="css-55cks4-HomeNavigation"
+  className="css-86pkje-HomeNavigation"
 >
   <nav
     aria-label="Navigate to on-page sections"
   >
     <a
-      className="css-1v4indd-Box"
+      className="css-2gv8sl-Box"
       href="#top"
     >
       <svg
@@ -35,7 +35,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Home
     </a>
     <a
-      className="css-1v4indd-Box"
+      className="css-2gv8sl-Box"
       href="#posts"
     >
       <svg
@@ -62,7 +62,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Latest Posts
     </a>
     <a
-      className="css-1v4indd-Box"
+      className="css-2gv8sl-Box"
       href="#instagram"
     >
       <svg
@@ -89,7 +89,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Instagram
     </a>
     <a
-      className="css-1v4indd-Box"
+      className="css-2gv8sl-Box"
       href="#github"
     >
       <svg
@@ -116,7 +116,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       GitHub
     </a>
     <a
-      className="css-1v4indd-Box"
+      className="css-2gv8sl-Box"
       href="#goodreads"
     >
       <svg
@@ -143,7 +143,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Goodreads
     </a>
     <a
-      className="css-1v4indd-Box"
+      className="css-2gv8sl-Box"
       href="#spotify"
     >
       <svg

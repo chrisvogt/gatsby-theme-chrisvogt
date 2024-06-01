@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GitHub Widget matches the loading state snapshot 1`] = `
-<div
+<section
   className="css-12h1dx4-Widget"
   id="github"
 >
@@ -172,12 +172,12 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
     className="css-ca01x-PinnedItems"
   >
     <h3
-      className="css-1pp0ol2-PinnedItems"
+      className="css-1qdxo5f-PinnedItems"
     >
       Pinned Items
     </h3>
     <p
-      className="css-886wd3"
+      className="css-1qwovgy"
     >
       Pinned items on my GitHub profile.
     </p>
@@ -185,10 +185,10 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       className="css-rbk31m-PinnedItems"
     >
       <a
-        className="css-1srnkuc"
+        className="css-nf0qmy"
       >
         <div
-          className="css-9ryjpl-Box"
+          className="css-15y3qnn-Box"
         >
           <div
             className="show-loading-animation"
@@ -297,10 +297,10 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
         </div>
       </a>
       <a
-        className="css-1srnkuc"
+        className="css-nf0qmy"
       >
         <div
-          className="css-9ryjpl-Box"
+          className="css-15y3qnn-Box"
         >
           <div
             className="show-loading-animation"
@@ -422,7 +422,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       className="css-1kl0pgj-LastPullRequest"
     >
       <div
-        className="css-9ryjpl-Box"
+        className="css-15y3qnn-Box"
       >
         <div
           className="text-row show-loading-animation"
@@ -437,17 +437,17 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="css-jwrdd0-CardFooter"
+          className="css-owjkyv-CardFooter"
         >
           <div
             className="text-row show-loading-animation"
             style={
               {
                 "backgroundColor": "#efefef",
-                "height": "1em",
+                "height": "15px",
                 "marginTop": 0,
                 "maxHeight": undefined,
-                "width": "140px",
+                "width": "15px",
               }
             }
           />
@@ -455,5 +455,5 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       </div>
     </a>
   </div>
-</div>
+</section>
 `;
