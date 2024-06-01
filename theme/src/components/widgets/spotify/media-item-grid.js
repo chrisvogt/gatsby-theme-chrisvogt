@@ -32,7 +32,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
       sx={{
         display: `grid`,
         gridGap: [3, 2, 2, 3],
-        gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
+        gridTemplateColumns: [`repeat(3, 1fr)`, `repeat(4, 1fr)`, `repeat(4, 1fr)`, `repeat(5, 1fr)`, `repeat(6, 1fr)`]
       }}
     >
       <Placeholder ready={!isLoading} customPlaceholder={placeholders}>

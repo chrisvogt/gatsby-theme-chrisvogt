@@ -49,7 +49,7 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
           <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `140px` }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `15px`, height: `15px` }} />}
               ready={!isLoading}
               showLoadingAnimation
             >
