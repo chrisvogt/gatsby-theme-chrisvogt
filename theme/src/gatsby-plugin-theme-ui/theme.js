@@ -4,7 +4,7 @@ import { merge } from 'theme-ui'
 const fonts = {
   sans: '-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif',
   serif: 'Crimson Text, Georgia, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
-  mono: 'Fira Code, Source Code Pro, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace'
+  mono: 'Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace'
 }
 
 export const floatOnHover = {
