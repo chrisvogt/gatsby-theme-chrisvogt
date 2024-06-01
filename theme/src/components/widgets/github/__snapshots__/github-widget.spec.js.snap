@@ -177,7 +177,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       Pinned Items
     </h3>
     <p
-      className="css-c197d9"
+      className="css-886wd3"
     >
       Pinned items on my GitHub profile.
     </p>
@@ -188,7 +188,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
         className="css-1srnkuc"
       >
         <div
-          className="css-qcfo52-Box"
+          className="css-9ryjpl-Box"
         >
           <div
             className="show-loading-animation"
@@ -300,7 +300,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
         className="css-1srnkuc"
       >
         <div
-          className="css-qcfo52-Box"
+          className="css-9ryjpl-Box"
         >
           <div
             className="show-loading-animation"
@@ -422,7 +422,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       className="css-1kl0pgj-LastPullRequest"
     >
       <div
-        className="css-qcfo52-Box"
+        className="css-9ryjpl-Box"
       >
         <div
           className="text-row show-loading-animation"

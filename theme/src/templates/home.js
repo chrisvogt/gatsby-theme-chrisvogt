@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Grid } from 'theme-ui'
+import { jsx, Card, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Themed } from '@theme-ui/mdx'
 
@@ -23,8 +23,7 @@ const HomeTemplate = props => {
   return (
     <Layout hideHeader>
       <Header showSwoop hideTopPadding>
-      <TopNavigation hideBackground hideBrandLink hideMenuItems />
-        <HomeHeaderContent avatar={avatar} headline={headline} subhead={subhead} />
+        <TopNavigation hideBackground hideMenuItems />
       </Header>
 
       <Themed.div
@@ -39,6 +38,13 @@ const HomeTemplate = props => {
               <HomeNavigation />
             </aside>
             <main>
+              <Card sx={{ mb: 4 }}>
+                <HomeHeaderContent
+                  avatar={avatar}
+                  headline={headline}
+                  subhead={subhead}
+                />
+              </Card>
               <HomeWidgets />
             </main>
           </Grid>

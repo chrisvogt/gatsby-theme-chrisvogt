@@ -10,7 +10,7 @@ export default ({ fill }) => {
       width='100%'
       preserveAspectRatio='xMidYMin slice'
       xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 1366 64'
+      viewBox='0 0 1366 63'
       sx={{
         fill: fill || defaultFillColor,
         verticalAlign: 'bottom'

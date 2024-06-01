@@ -169,12 +169,12 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     className="css-o0oe1r-ProfileMetricsBadge"
   >
     <div
-      className="css-18tyx52-Box"
+      className="css-1cm1u20-Box"
     >
        
     </div>
     <div
-      className="css-oz63zn-Box"
+      className="css-1gyh6hj-Box"
     >
        
     </div>
@@ -191,7 +191,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
         Books
       </h3>
       <p
-        className="css-c197d9"
+        className="css-886wd3"
       >
         The last 12 books I read and finished.
       </p>
@@ -345,7 +345,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
       className="css-t1qg8r-UserStatus"
     >
       <div
-        className="css-qcfo52-Box"
+        className="css-9ryjpl-Box"
       >
         <div
           className="text-row show-loading-animation"

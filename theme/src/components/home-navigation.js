@@ -137,16 +137,6 @@ const HomeNavigation = () => {
 
   return (
     <Fragment>
-      {/*
-        This hack pushes the navigation card down so that it lines up with the
-        first widget in the main column on desktop layouts. Another way to solve
-        this might be to use React Refs and use JavaScript to line the top up
-        exactly. I opted to instead just match the widget's header inside of a
-        hidden element.
-      */}
-      <Heading aria-hidden='true' sx={{ display: ['none', 'revert'], mt: 0, mb: 4, visibility: 'hidden' }}>
-        Widget Navigation
-      </Heading>
       <Card
         sx={{
           boxShadow: 'default',
