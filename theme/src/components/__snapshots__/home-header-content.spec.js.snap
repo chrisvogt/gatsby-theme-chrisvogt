@@ -10,7 +10,7 @@ exports[`HomeHeaderContent matches the snapshot 1`] = `
   <p
     className="css-1avyp1d"
   >
-    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation, and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing piano and exploring new places.
+    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation, and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing piano and traveling to new places.
   </p>
   <p
     className="css-1avyp1d"
