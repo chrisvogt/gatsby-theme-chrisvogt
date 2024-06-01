@@ -33,19 +33,27 @@ const HomeTemplate = props => {
         }}
       >
         <Container>
-          <Grid columns={[null, null, `.67fr 1.5fr`]} gap={[null, 4]}>
+          <Grid
+            columns={[
+              null,
+              null,
+              `0.375fr 1.625fr`, /* Sidebar 18%, Content 82% */
+              `0.4fr 1.6fr` /* Sidebar 20%, Content 80% */
+            ]}
+            gap={[null, 4]}
+          >
             <aside sx={{ mb: [4, null] }}>
               <HomeNavigation />
             </aside>
             <main>
               <section>
-                <Card sx={{ mb: 4 }}>
+                <div sx={{ mb: 5 }}>
                   <HomeHeaderContent
                     avatar={avatar}
                     headline={headline}
                     subhead={subhead}
                   />
-                </Card>
+                </div>
               </section>
               <HomeWidgets />
             </main>

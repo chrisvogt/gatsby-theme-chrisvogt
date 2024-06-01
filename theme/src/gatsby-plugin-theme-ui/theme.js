@@ -62,9 +62,9 @@ const GradientBanner = {
 }
 
 export const card = {
+  borderRadius: 'card',
   backgroundColor: `var(--theme-ui-colors-panel-background)`,
   color: 'var(--theme-ui-colors-panel-text)',
-  borderRadius: `3px`,
   boxShadow: `default`,
   flexGrow: 1,
   padding: 3,
@@ -223,6 +223,11 @@ export default merge(tailwind, {
         backgroundColor: 'var(--theme-ui-colors-panel-highlight)'
       }
     }
+  },
+
+  radii: {
+    default: '4px',
+    card: '8px',
   },
 
   styles: {

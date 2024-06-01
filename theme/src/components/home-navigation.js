@@ -137,14 +137,12 @@ const HomeNavigation = () => {
 
   return (
     <Fragment>
-      <Card
+      <div
         sx={{
-          boxShadow: 'default',
           display: ['none', 'block'],
           position: `sticky`,
           top: `1.5em`
         }}
-        variant='actionCard'
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           {links.map(({ href, icon, id, text }) => {
@@ -155,7 +153,7 @@ const HomeNavigation = () => {
                 key={id}
                 variant='homeNavigation'
                 sx={{
-                  fontFamily: `heading`,
+                  fontFamily: `sans`,
                   color: `var(--theme-ui-colors-panel-text)`
                 }}
               >
@@ -165,7 +163,7 @@ const HomeNavigation = () => {
             )
           })}
         </nav>
-      </Card>
+      </div>
     </Fragment>
   )
 }
