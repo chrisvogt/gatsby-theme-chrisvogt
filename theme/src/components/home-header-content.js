@@ -18,12 +18,12 @@ const HomeHeaderContent = ({ headline }) => (
       Hi! 👋 
     </Themed.h1>
     <Themed.p>
-      I'm Chris Vogt, a Sr. Software Engineer on a product team at GoDaddy currently working intelligent, personalized customer
-      dashboards, in-app navigation and reusable components. Outside of work, my hobbies include photography, practicing piano and
-      traveling.
+      I'm Chris Vogt, a Sr. Software Engineer on a product team at GoDaddy. I'm currently working on intelligent, personalized
+      customer dashboards, in-app navigation, and reusable components. Outside of work, my hobbies include photography,
+      practicing piano, and traveling.
     </Themed.p>
     <Themed.p>
-        This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.
+      This website is a digital garden where I share things I'm excited about, things I've learned, and things I'm working on.
     </Themed.p>
   </div>
 )
