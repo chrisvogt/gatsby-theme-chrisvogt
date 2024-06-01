@@ -15,10 +15,10 @@ const HomeHeaderContent = ({ headline }) => (
       pb: 0,
       fontWeight: '500'
     }}>
-      Hi, 👋 I'm Chris Vogt
+      Hi! 👋 I'm Chris Vogt.
     </Themed.h1>
     <Themed.p>
-      I'm a Sr. Software Engineer on a product team at GoDaddy. I work on creating intelligent customer dashboards, in-app navigation and reusable components. Outside of work, I live in The Castro District of San Francisco, and I enjoy photography, practicing piano and exploring new places.
+    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation, and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing piano and exploring new places.
     </Themed.p>
     <Themed.p>
       This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.
