@@ -12,7 +12,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
     >
       <a
         aria-current="page"
-        className="css-1xy8wez-TopNavigation"
+        className="css-1gew4ue-TopNavigation"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}

@@ -13,7 +13,6 @@ const HomeHeaderContent = ({ headline }) => (
     <Themed.h1 sx={{
       mb: 0,
       pb: 0,
-      fontWeight: '500'
     }}>
       Hi! 👋 I'm Chris Vogt.
     </Themed.h1>

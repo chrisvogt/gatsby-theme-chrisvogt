@@ -52,7 +52,7 @@ const TopNavigation = ({
               display: [`block`, ``, `inline`],
               fontFamily: `heading`,
               fontSize: [2, 3],
-              fontWeight: 500,
+              fontWeight: `bold`,
               letterSpacing: '1.1px',
               marginRight: 3,
               textDecoration: `none`
