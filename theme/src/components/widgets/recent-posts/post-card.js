@@ -38,7 +38,7 @@ export default ({ banner, category, date, link, title }) => {
 
           {category && <span sx={{ variant: `text.title`, mt: 1, fontSize: [1] }}>{category}</span>}
 
-          <Themed.h4 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h4>
+          <Themed.h3 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h3>
 
           <time
             className='created'

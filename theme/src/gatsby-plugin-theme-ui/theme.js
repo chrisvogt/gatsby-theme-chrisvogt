@@ -182,11 +182,12 @@ export default merge(tailwind, {
         'panel-background': `#252e3c`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
+        primary: `#1E90FF`,
         text: `#e2e8f0`,
         textMuted: '#a0aec0'
       }
     },
-    primary: `#1E90FF`,
+    primary: `#0073E6`,
     secondary: `#711E9B`,
     secondaryGradient: `linear-gradient(45deg, #4527a0 0%, #711e9b 100%)`,
     text: `#2d3748`
