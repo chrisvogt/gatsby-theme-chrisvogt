@@ -25,11 +25,11 @@ exports[`PostCard matches the snapshot 1`] = `
       >
         personal
       </span>
-      <h4
+      <h3
         className="css-13imqch"
       >
         My Blog Post
-      </h4>
+      </h3>
       <time
         className="created css-1c6hy0j"
       >
