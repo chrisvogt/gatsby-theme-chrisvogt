@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Heading, jsx, Link } from 'theme-ui'
 import { useRef } from 'react'
 import { Card } from '@theme-ui/components'
@@ -126,6 +126,7 @@ const determineLinksToRender = (options = {}) => {
 
 const HomeNavigation = () => {
   const navItemsRef = useRef()
+  const [activeSection, setActiveSection] = useState('home')
 
   const metadata = useSiteMetadata()
   const links = determineLinksToRender({
@@ -134,6 +135,24 @@ const HomeNavigation = () => {
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
     isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
   })
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = 'home';
+      links.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element && element.getBoundingClientRect().top <= window.innerHeight / 2) {
+          currentSection = section.id;
+        }
+      });
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [links]);
 
   return (
     <Fragment>
@@ -152,10 +171,14 @@ const HomeNavigation = () => {
                 href={href}
                 key={id}
                 variant='homeNavigation'
+                className={activeSection === id ? 'active' : ''}
                 sx={{
                   fontFamily: `sans`,
                   color: `text`,
-                  paddingX: 2
+                  paddingX: 2,
+                  '&.active': {
+                    color: `primary`,
+                  }
                 }}
               >
                 {IconComponent ? <FontAwesomeIcon icon={IconComponent} style={{ height: '18px' }} sx={{ mr: 2 }} /> : null}
