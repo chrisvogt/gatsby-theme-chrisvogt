@@ -11,9 +11,13 @@ export default ({ fill }) => {
       preserveAspectRatio='xMidYMin slice'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 1366 63'
+      height='auto'
       sx={{
         fill: fill || defaultFillColor,
-        verticalAlign: 'bottom'
+        verticalAlign: 'bottom',
+        // Hack to fix a bug in some browser where a fraction of a pixel
+        // of space is sometimes rendered below the swoop
+        marginBottom: '-1px'
       }}
     >
       <path
