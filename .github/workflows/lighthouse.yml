@@ -11,7 +11,7 @@ jobs:
         id: netlify
         with:
           site_name: 'chrisvogt'
-          max_timeout: 60
+          max_timeout: 120
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:

@@ -32,38 +32,27 @@ exports[`TopNavigation matches the snapshot 1`] = `
     </div>
     <button
       aria-hidden="true"
-      className={null}
+      className="_button_2eo6g_1"
+      id=""
       onClick={[Function]}
       style={
         {
-          "MozAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundColor": "transparent",
-          "border": "none",
-          "cursor": "pointer",
-          "height": "37.599999999999994px",
-          "overflow": "hidden",
-          "padding": 0,
-          "width": "80px",
+          "height": "35px",
+          "width": "70px",
         }
       }
     >
       <div
+        className="_player_2eo6g_12"
         style={
           {
-            "alignItems": "center",
-            "display": "flex",
-            "height": "132px",
-            "justifyContent": "center",
-            "marginLeft": "-25.6px",
-            "marginTop": "-46px",
-            "width": "132px",
+            "height": "115.5px",
+            "marginLeft": "-22.400000000000002px",
+            "marginTop": "-40.25px",
+            "width": "115.5px",
           }
         }
-      >
-        <div />
-      </div>
+      />
     </button>
   </div>
 </div>
