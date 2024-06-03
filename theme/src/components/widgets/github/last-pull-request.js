@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Box, Card, Heading } from '@theme-ui/components'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'
@@ -48,7 +49,7 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
           <CardFooter customStyles={{ justifyContent: `flex-end` }}>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `140px` }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `15px`, height: `15px` }} />}
               ready={!isLoading}
               showLoadingAnimation
             >

@@ -2,36 +2,38 @@
 
 exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`] = `
 <div
-  className="css-1khvkwo-PinnedItems"
+  className="css-o5u04k-PinnedItems"
 >
   <h3
-    className="css-1nnruif-PinnedItems"
+    className="css-1wi45za-PinnedItems"
   >
     Pinned Items
   </h3>
-  <p>
+  <p
+    className="css-1avyp1d"
+  >
     Pinned items on my GitHub profile.
   </p>
   <div
-    className="css-1icm50y-PinnedItems"
+    className="css-110pnm4-PinnedItems"
   >
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -47,7 +49,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -55,7 +57,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -67,7 +69,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -82,7 +84,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -90,7 +92,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -102,7 +104,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -114,7 +116,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -128,22 +130,22 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -159,7 +161,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -167,7 +169,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -179,7 +181,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -194,7 +196,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -202,7 +204,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -214,7 +216,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -226,7 +228,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -240,22 +242,22 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -271,7 +273,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -279,7 +281,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -291,7 +293,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -306,7 +308,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -314,7 +316,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -326,7 +328,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -338,7 +340,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -352,22 +354,22 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -383,7 +385,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -391,7 +393,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -403,7 +405,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -418,7 +420,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -426,7 +428,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -438,7 +440,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -450,7 +452,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -469,36 +471,38 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
 
 exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = `
 <div
-  className="css-1khvkwo-PinnedItems"
+  className="css-o5u04k-PinnedItems"
 >
   <h3
-    className="css-1nnruif-PinnedItems"
+    className="css-1wi45za-PinnedItems"
   >
     Pinned Items
   </h3>
-  <p>
+  <p
+    className="css-1avyp1d"
+  >
     Pinned items on my GitHub profile.
   </p>
   <div
-    className="css-1icm50y-PinnedItems"
+    className="css-110pnm4-PinnedItems"
   >
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -514,7 +518,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -522,7 +526,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -534,7 +538,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -549,7 +553,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -557,7 +561,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -569,7 +573,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -581,7 +585,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -595,22 +599,22 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -626,7 +630,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -634,7 +638,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -646,7 +650,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -661,7 +665,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -669,7 +673,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -681,7 +685,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -693,7 +697,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -707,22 +711,22 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -738,7 +742,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -746,7 +750,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -758,7 +762,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -773,7 +777,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -781,7 +785,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -793,7 +797,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -805,7 +809,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -819,22 +823,22 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-1q6tr3e-PinnedItems"
+      className="css-1l9an2g"
     >
       <div
-        className="css-vurnku"
+        className="css-g89m8z-Box"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-4cffwv"
+            className="css-vd02hx-Flex"
           >
             <div>
               <div
                 className="rect-shape"
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#efefef",
                     "height": 40,
                     "marginBottom": "2em",
@@ -850,7 +854,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               <div
                 className="text-block"
                 style={
-                  Object {
+                  {
                     "width": "100%",
                   }
                 }
@@ -858,7 +862,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": 0,
@@ -870,7 +874,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
                 <div
                   className="text-row"
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#efefef",
                       "height": "1em",
                       "marginTop": "0.7em",
@@ -885,7 +889,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
           <div
             className="text-block"
             style={
-              Object {
+              {
                 "width": "100%",
               }
             }
@@ -893,7 +897,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": 0,
@@ -905,7 +909,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",
@@ -917,7 +921,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
             <div
               className="text-row"
               style={
-                Object {
+                {
                   "backgroundColor": "#efefef",
                   "height": "1em",
                   "marginTop": "0.7em",

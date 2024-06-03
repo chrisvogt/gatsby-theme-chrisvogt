@@ -8,305 +8,199 @@ exports[`Playlists matches the snapshot 1`] = `
     className="css-4i4294-Playlists"
   >
     <h3
-      className="css-1wf7gym"
+      className="css-14fdiym-Playlists"
     >
       Playlists
     </h3>
   </div>
-  <p>
+  <p
+    className="css-1avyp1d"
+  >
     My 12 favorite playlists.
   </p>
   <div
-    className="media-item_grid null css-ulmvcj-MediaItemGrid"
+    className="media-item_grid null css-1ts3m6s-MediaItemGrid"
   >
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/4YPO7LX6bOxrCtYGh3OyeP"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Ultimate Indie Pop (395 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/4YPO7LX6bOxrCtYGh3OyeP"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/53Ry00dOkLb6yp9C2ev6ff"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Synth-Pop, Nu-Disco, Dance, House (258 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/53Ry00dOkLb6yp9C2ev6ff"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/4cWFcKJwGWdus1ybRF0JpH"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Vocal Electronic (211 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/4cWFcKJwGWdus1ybRF0JpH"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/3h8hEJstYMBLe9HYKWQ3Mi"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Electronic Chillout (141 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/3h8hEJstYMBLe9HYKWQ3Mi"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/42a26csbjfu6Jq9Y9CvS5b"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Indie Chillout (228 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/42a26csbjfu6Jq9Y9CvS5b"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/12hPoK5CsB46n2w3gi7GMJ"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Indie Dance, Vocal & Electronica (162 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/12hPoK5CsB46n2w3gi7GMJ"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/05aRcvpURUQdWgbn5iZ26p"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Eclectic 60s and 70s (110 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/05aRcvpURUQdWgbn5iZ26p"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/37FbCEeNnc5kIMnV2anBUP"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Soul, Motown, Disco (31 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/37FbCEeNnc5kIMnV2anBUP"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/6E0nDvsNV4LMwdydcjQNHE"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Indie Mix (242 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/6E0nDvsNV4LMwdydcjQNHE"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/0HYUAiwdrIFBlQmazkNZ0F"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Dubstep, Trap, Hardstyle (81 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/0HYUAiwdrIFBlQmazkNZ0F"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/37i9dQZF1EMdjDTSZSRsOw"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Your Top Songs 2020 (100 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/37i9dQZF1EMdjDTSZSRsOw"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://lineup-images.scdn.co/wrapped-2020-top100_LARGE-en.jpg"
-        />
-      </a>
-    </span>
-    <span
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://lineup-images.scdn.co/wrapped-2020-top100_LARGE-en.jpg"
+      />
+    </a>
+    <a
+      className="media-item_media css-1avyp1d"
+      href="https://open.spotify.com/playlist/4OSZN85T35doDPWSHWTSYG"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="Rock, Ambient & Post-Rock (50 tracks)"
     >
-      <a
-        className="media-item_media css-0"
-        href="https://open.spotify.com/playlist/4OSZN85T35doDPWSHWTSYG"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <img
-          alt="cover artwork"
-          className="css-1k47td7-MediaItemGrid"
-          crossOrigin="anonymous"
-          loading="lazy"
-          src="https://mosaic.scdn.co/300/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362"
-        />
-      </a>
-    </span>
+      <img
+        alt="cover artwork"
+        className="css-1yymcx5"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="https://mosaic.scdn.co/300/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362"
+      />
+    </a>
   </div>
 </div>
 `;

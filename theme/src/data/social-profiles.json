@@ -1,14 +1,25 @@
 [
   {
-    "href": "https://twitter.com/c1v0",
-    "slug": "twitter",
-    "displayName": "Twitter",
     "icon": {
-      "class": "fab fa-twitter",
-      "name": "twitter",
-      "reactIcon": "faTwitter",
+      "class": "fab fa-github",
+      "name": "github",
+      "reactIcon": "faGithub",
       "set": "fab"
-    }
+    },
+    "href": "https://github.com/chrisvogt",
+    "slug": "github",
+    "displayName": "GitHub"
+  },
+  {
+    "slug": "instagram",
+    "href": "https://instagram.com/c1v0",
+    "icon": {
+      "set": "fab",
+      "class": "fab fa-instagram",
+      "reactIcon": "faInstagram",
+      "name": "instagram"
+    },
+    "displayName": "Instagram"
   },
   {
     "displayName": "LinkedIn",
@@ -22,15 +33,15 @@
     }
   },
   {
+    "href": "https://twitter.com/c1v0",
+    "slug": "twitter",
+    "displayName": "Twitter",
     "icon": {
-      "class": "fab fa-github",
-      "name": "github",
-      "reactIcon": "faGithub",
+      "class": "fab fa-x-twitter",
+      "name": "twitter",
+      "reactIcon": "faXTwitter",
       "set": "fab"
-    },
-    "href": "https://github.com/chrisvogt",
-    "slug": "github",
-    "displayName": "GitHub"
+    }
   },
   {
     "href": "https://stackoverflow.com/users/1391826/chris-vogt?tab=profile",
@@ -42,16 +53,5 @@
       "class": "fab fa-stack-overflow"
     },
     "displayName": "StackOverflow"
-  },
-  {
-    "slug": "instagram",
-    "href": "https://instagram.com/c1v0",
-    "icon": {
-      "set": "fab",
-      "class": "fab fa-instagram",
-      "reactIcon": "faInstagram",
-      "name": "instagram"
-    },
-    "displayName": "Instagram"
   }
 ]

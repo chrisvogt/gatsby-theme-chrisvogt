@@ -5,6 +5,7 @@
     "www.chrisvogt.me"
   ],
   "scripts": {
+    "develop": "yarn workspace www.chrisvogt.me develop:https",
     "postinstall": "node index.js",
     "prettier:format": "prettier --write ."
   },
@@ -15,5 +16,6 @@
   },
   "dependencies": {
     "boxen": "^5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

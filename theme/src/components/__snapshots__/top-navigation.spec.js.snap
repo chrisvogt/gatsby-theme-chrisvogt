@@ -2,26 +2,26 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-zwfbmq-TopNavigation"
+  className="css-10qm8bf-TopNavigation"
 >
   <div
-    className="css-sl4bvk-TopNavigation"
+    className="css-1hhifxi-TopNavigation"
   >
     <div
-      className="css-fjtwc7-TopNavigation"
+      className="css-1oho7q7-TopNavigation"
     >
       <a
         aria-current="page"
-        className="css-tmfr8g-TopNavigation"
+        className="css-1gew4ue-TopNavigation"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
-        style={Object {}}
+        style={{}}
       >
         My Personal Blog & Portfolio
       </a>
       <a
-        className="css-5hi8j7-TopNavigation"
+        className="css-12sa0kn"
         href="/about-me"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -35,7 +35,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
       className={null}
       onClick={[Function]}
       style={
-        Object {
+        {
           "MozAppearance": "none",
           "WebkitAppearance": "none",
           "appearance": "none",
@@ -51,7 +51,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "alignItems": "center",
             "display": "flex",
             "height": "132px",

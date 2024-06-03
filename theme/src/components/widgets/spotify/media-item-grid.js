@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
 
-import { floatOnHover } from '../../../gatsby-plugin-theme-ui/abstracts/shadows'
-import Tooltip from '../../tooltip'
+import { floatOnHover } from '../../../gatsby-plugin-theme-ui/theme'
 
 const placeholders = Array(12)
   .fill()
@@ -32,34 +32,34 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
       sx={{
         display: `grid`,
         gridGap: [3, 2, 2, 3],
-        gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
+        gridTemplateColumns: [`repeat(3, 1fr)`, `repeat(4, 1fr)`, `repeat(4, 1fr)`, `repeat(5, 1fr)`, `repeat(6, 1fr)`]
       }}
     >
       <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-        {items.map(({ id, spotifyURL, thumbnailURL, tooltipContent }) => {
+        {items.map(({ id, details, spotifyURL, thumbnailURL }) => {
           return (
-            <Tooltip key={id} placement='top' tooltip={tooltipContent} trigger={['hover', 'focus']}>
-              <Themed.a
-                className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
-                href={spotifyURL}
-                onMouseEnter={() => setCurrentMediaId(id)}
-                onMouseLeave={() => setCurrentMediaId(false)}
-              >
-                <img
-                  alt='cover artwork'
-                  crossOrigin='anonymous'
-                  loading='lazy'
-                  src={thumbnailURL}
-                  sx={{
-                    ...floatOnHover,
-                    boxShadow: `md`,
-                    borderRadius: `4px`,
-                    objectFit: 'cover',
-                    width: '100%'
-                  }}
-                />
-              </Themed.a>
-            </Tooltip>
+            <Themed.a
+              className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
+              href={spotifyURL}
+              key={ id }
+              onMouseEnter={() => setCurrentMediaId(id)}
+              onMouseLeave={() => setCurrentMediaId(false)}
+              title={ details }
+            >
+              <Themed.img
+                alt='cover artwork'
+                crossOrigin='anonymous'
+                loading='lazy'
+                src={thumbnailURL}
+                sx={{
+                  ...floatOnHover,
+                  boxShadow: `md`,
+                  borderRadius: `8px`,
+                  objectFit: 'cover',
+                  width: '100%'
+                }}
+              />
+            </Themed.a>
           )
         })}
       </Placeholder>

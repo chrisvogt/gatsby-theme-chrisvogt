@@ -8,7 +8,7 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
 >
   <img
     alt="Instagram post thumbnail"
-    className="instagram-item-image css-ko57dg-InstagramWidgetItem"
+    className="instagram-item-image css-t0307v-InstagramWidgetItem"
     crossOrigin="anonymous"
     height="280"
     loading="lazy"

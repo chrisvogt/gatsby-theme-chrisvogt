@@ -1,0 +1,13 @@
+{
+  "ci": {
+    "assert": {
+      "preset": "lighthouse:recommended"
+    },
+    "collect": {
+      "settings": {
+        "chromeFlags": ["--disable-gpu", "--no-sandbox", "--no-zygote"],
+        "configPath": ".github/workflows/desktop-config.js"
+      }
+    }
+  }
+}

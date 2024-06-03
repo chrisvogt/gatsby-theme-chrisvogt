@@ -12,15 +12,15 @@ export default () => {
   const footerText = getFooterText(metadata)
 
   return (
-    <div sx={{ variant: `styles.PageFooter` }}>
+    <footer id='footer' sx={{ variant: `styles.PageFooter` }}>
       <SwoopTop />
       <Container sx={{ textAlign: `center` }}>
         <div sx={{ mb: 3, pt: 3, pb: [4, 5] }}>
           <Profiles />
         </div>
 
-        <div>{footerText}</div>
+        {footerText ? <div>{footerText}</div> : null}
       </Container>
-    </div>
+    </footer>
   )
 }

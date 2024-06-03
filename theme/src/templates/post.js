@@ -1,26 +1,22 @@
 /** @jsx jsx */
-import { Container, Flex, jsx, Themed } from 'theme-ui'
+import { Container, Flex, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ children, data }) => {
   const { mdx } = data
 
-  const banner = mdx.frontmatter.banner
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
-  const description = mdx.frontmatter.description
   const title = mdx.frontmatter.title
 
   return (
     <Layout>
-      <SEO article={true} description={description} image={banner} title={title} />
-
       <Flex
         sx={{
           flexDirection: `column`,
@@ -29,14 +25,24 @@ const PostTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
+          {category && (
+            <Themed.div sx={{ variant: `text.title` }}>
+              {category}
+            </Themed.div>
+          )}
 
-          <time className='created'>{date}</time>
+          <Themed.div sx={{ fontSize: [2, 3] }}>
+            <time className='created'>
+              {date}
+            </time>
+          </Themed.div>
 
-          <Themed.h1 as={Heading}>{title}</Themed.h1>
+          <Themed.h1 as={Heading}>
+            {title}
+          </Themed.h1>
 
           <div className='article-content'>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+            {children}
           </div>
         </Container>
       </Flex>
@@ -48,6 +54,21 @@ PostTemplate.propTypes = {
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired
   }).isRequired
+}
+
+export const Head = ({ data: { mdx } }) => {
+  const banner = mdx.frontmatter.banner
+  const description = mdx.frontmatter.description
+  const title = mdx.frontmatter.title
+
+  return (
+    <Seo
+      article={true}
+      description={description}
+      image={banner}
+      title={title}
+    />
+  )
 }
 
 export const pageQuery = graphql`

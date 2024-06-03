@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Box, Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
@@ -16,13 +17,14 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
       <Heading
         as='h3'
         sx={{
-          mb: 3
+          mb: 3,
+          fontSize: [3, 4]
         }}
       >
         Pinned Items
       </Heading>
 
-      <p>Pinned items on my GitHub profile.</p>
+      <Themed.p>Pinned items on my GitHub profile.</Themed.p>
 
       <Themed.div
         sx={{
@@ -37,7 +39,7 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
             href={item.url}
             key={item.id || index}
             sx={{
-              color: `var(--theme-ui-colors-panel-text)`,
+              color: `text`,
               display: `flex`,
               '&:hover, &:focus': {
                 textDecoration: `none`

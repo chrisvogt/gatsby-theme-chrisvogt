@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default ({ platform }) => (
   <span>
-    View on {platform}
-    {'  '}
-    <FontAwesomeIcon icon={faExternalLinkAlt} />
+    {/* View on {platform}
+    {'  '} */}
+    <FontAwesomeIcon size='xs' icon={faExternalLinkAlt} />
   </span>
 )

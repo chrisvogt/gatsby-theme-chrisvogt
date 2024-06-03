@@ -2,6 +2,9 @@
 import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
 
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import useRecentPosts from '../../../hooks/use-recent-posts'
 
 import CallToAction from '../call-to-action'
@@ -36,7 +39,12 @@ export default () => {
 
   return (
     <Widget id='posts' styleOverrides={{ pt: 0 }}>
-      <WidgetHeader aside={callToAction}>Latest Posts</WidgetHeader>
+      <WidgetHeader
+        aside={callToAction}
+        icon={faNewspaper}
+      >
+        Latest Posts
+      </WidgetHeader>
 
       <div sx={{ width: `100%`, mt: 4 }}>
         <Grid
@@ -54,7 +62,7 @@ export default () => {
               date={post.frontmatter.date}
               excerpt={post.excerpt}
               key={post.fields.id}
-              link={post.fields.slug}
+              link={post.fields.path}
               title={post.frontmatter.title}
             />
           ))}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Flex } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 
 import Footer from 'gatsby-theme-chrisvogt/src/components/footer'
 import Layout from 'gatsby-theme-chrisvogt/src/components/layout'
@@ -7,8 +8,6 @@ import Seo from 'gatsby-theme-chrisvogt/src/components/seo'
 
 const PrivacyPolicy = () => (
   <Layout>
-    <Seo title='Privacy Policy' />
-
     <Flex
       sx={{
         backgroundColor: `colors.background`,
@@ -18,28 +17,32 @@ const PrivacyPolicy = () => (
       }}
     >
       <Container>
-        <h1>Privacy Policy</h1>
+        <Themed.h1>
+          Privacy Policy
+        </Themed.h1>
 
-        <p>
+        <Themed.p>
           This privacy policy outlines how my personal website, www.chrisvogt.me, collects and uses data made available
           by accessing the site.
-        </p>
+        </Themed.p>
 
-        <h2>Third Parties</h2>
+        <Themed.h2>
+          Third Parties
+        </Themed.h2>
 
-        <p>
+        <Themed.p>
           This website uses Google Analytics to page view, impression, and interaction events. This is done for personal
           use to help guide the layout and content of the site. I collect and review this data to learn more about:
-        </p>
+        </Themed.p>
 
-        <ul>
+        <Themed.ul>
           <li>Who visits the website.</li>
           <li>How the website is used.</li>
           <li>Whether visitors return to the website or not.</li>
           <li>What content, design, and features are engaging and what aren't.</li>
-        </ul>
+        </Themed.ul>
 
-        <p>
+        <Themed.p>
           Please review{' '}
           <em>
             <a href='https://policies.google.com/privacy' title='Google Privacy & Terms'>
@@ -47,13 +50,17 @@ const PrivacyPolicy = () => (
             </a>
           </em>{' '}
           to learn more about the Google Analytics data collection policies and practices.
-        </p>
+        </Themed.p>
 
-        <em>Last updated June 29, 2020</em>
+        <div>
+          <em>Last updated June 29, 2020</em>
+        </div>
       </Container>
     </Flex>
     <Footer />
   </Layout>
 )
+
+export const Head = () => <Seo title='Privacy Policy' />
 
 export default PrivacyPolicy

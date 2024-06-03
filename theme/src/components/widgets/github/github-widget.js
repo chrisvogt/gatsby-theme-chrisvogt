@@ -3,6 +3,8 @@ import { jsx } from 'theme-ui'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 import CallToAction from '../call-to-action'
 import LastPullRequest from './last-pull-request'
 import PinnedItems from './pinned-items'
@@ -79,8 +81,15 @@ const GitHubWidget = () => {
 
   return (
     <Widget id='github' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction}>GitHub</WidgetHeader>
+      <WidgetHeader
+        aside={callToAction}
+        icon={faGithub}
+      >
+        GitHub
+      </WidgetHeader>
+
       {!hasFatalError && <ProfileMetricsBadge metrics={metrics} />}
+
       <PinnedItems isLoading={isLoading} items={pinnedItems} placeholderCount={2} />
       <LastPullRequest isLoading={isLoading} pullRequest={lastPullRequest} />
     </Widget>

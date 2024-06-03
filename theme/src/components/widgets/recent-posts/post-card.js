@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Themed } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { Card } from '@theme-ui/components'
 import { Link } from 'gatsby'
 
@@ -35,15 +36,16 @@ export default ({ banner, category, date, link, title }) => {
             </div>
           )}
 
-          {category && <span sx={{ variant: `text.title`, mt: 1 }}>{category}</span>}
+          {category && <span sx={{ variant: `text.title`, mt: 1, fontSize: [1] }}>{category}</span>}
 
-          <Themed.h4 sx={{ mt: 2 }}>{title}</Themed.h4>
+          <Themed.h4 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h4>
 
           <time
             className='created'
             sx={{
               color: `textMuted`,
-              fontSize: 0
+              fontFamily: `sans`,
+              fontSize: 1
             }}
           >
             {date}

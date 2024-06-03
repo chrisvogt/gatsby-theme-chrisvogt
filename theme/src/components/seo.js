@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
 import { useThemeUI } from 'theme-ui'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
@@ -12,7 +11,13 @@ import { getLanguageCode, getTitle, getTitleTemplate, getTwitterUsername } from 
  *
  * Updates <head> tags.
  */
-const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
+const Seo = ({
+  article,
+  children,
+  description,
+  image: imageURL,
+  title: pageTitle,
+}) => {
   const metadata = useSiteMetadata()
   const { theme } = useThemeUI()
 
@@ -21,11 +26,12 @@ const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
   const titleTemplate = getTitleTemplate(metadata)
   const twitterUsername = getTwitterUsername(metadata)
 
-  const title = pageTitle || siteTitle
+  const title = titleTemplate.replace(/%s/g, pageTitle) || siteTitle
 
   return (
-    <Helmet title={title} titleTemplate={titleTemplate}>
+    <>
       <html lang={languageCode} />
+      <title>{title}</title>
       {description && <meta name='description' content={description} />}
       {imageURL && <meta name='image' content={imageURL} />}
       <meta name='theme-color' content={theme.colors.background} />
@@ -38,11 +44,12 @@ const SEO = ({ title: pageTitle, description, image: imageURL, article }) => {
       <meta name='twitter:title' content={title} />
       {imageURL && <meta name='twitter:image' content={imageURL} />}
       {description && <meta name='twitter:description' content={description} />}
-    </Helmet>
+      {children}
+    </>
   )
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   article: PropTypes.bool,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -50,4 +57,4 @@ SEO.propTypes = {
   title: PropTypes.string
 }
 
-export default SEO
+export default Seo

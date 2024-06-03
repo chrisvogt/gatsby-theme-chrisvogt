@@ -62,4 +62,4 @@ http-server -o -S -C ../certs/www.chrisvogt.me.pem -K ../certs/www.chrisvogt.me-
 
 ## Copyright & License
 
-Copyright © 2019-2022 [Chris Vogt](https://www.chrisvogt.me) and released under the [MIT license](LICENSE).
+Copyright © 2019-2023 [Chris Vogt](https://www.chrisvogt.me) and released under the [MIT license](LICENSE).

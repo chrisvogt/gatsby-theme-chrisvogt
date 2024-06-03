@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaItemGrid matches loading state snapshot 1`] = `
+<div
+  className="media-item_grid null css-1ts3m6s-MediaItemGrid"
+>
+  <a
+    className="media-item_media css-1avyp1d"
+    href="https://www.google.com/"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    title="Item #1"
+  >
+    <img
+      alt="cover artwork"
+      className="css-1yymcx5"
+      crossOrigin="anonymous"
+      loading="lazy"
+      src="http://placekitten.com/200/200"
+    />
+  </a>
+</div>
+`;
+
+exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
+<div
+  className="media-item_grid null css-1ts3m6s-MediaItemGrid"
+>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="show-loading-animation"
+  >
+    <div
+      className="rect-shape css-l29vsk"
+      style={
+        {
+          "backgroundColor": "#efefef",
+          "height": "100%",
+          "marginRight": 10,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

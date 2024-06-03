@@ -1,52 +1,29 @@
 /** @jsx jsx */
-import { jsx, Flex, Themed } from 'theme-ui'
+import { jsx, Flex } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 
 /**
  * Home Page Header Content
  *
  * The content rendered into the home page header region. This content is rendered
- * inside of the header, on top of the themed background, and below the top nav.
+ * inside of the header, on top of the themed background and below the top nav.
  */
-const HomeHeaderContent = ({ avatar, headline, subhead }) => (
-  <div
-    sx={{
-      display: [`block`, ``, `grid`],
-      gridGap: 0,
-      gridTemplateColumns: [``, ``, `1fr 60%`],
-      my: 5,
-      width: `100%`
-    }}
-  >
-    <Flex
-      sx={{
-        alignItems: [`center`, ``, `flex-end`],
-        flexDirection: `column`
-      }}
-    >
-      <img
-        sx={{
-          borderColor: `white`,
-          borderRadius: `50%`,
-          borderStyle: `solid`,
-          borderWidth: 3,
-          mr: [0, 0, 4]
-        }}
-        alt='Avatar'
-        src={avatar}
-        height='128'
-        width='128'
-      />
-    </Flex>
-    <Flex
-      sx={{
-        flexDirection: `column`,
-        justifyContent: `center`,
-        textAlign: [`center`, ``, `left`]
-      }}
-    >
-      <Themed.h1 sx={{ mb: 0, pb: 0 }}>{headline}</Themed.h1>
-      <Themed.p sx={{ py: 0, my: 0, fontSize: 2 }}>{subhead}</Themed.p>
-    </Flex>
+const HomeHeaderContent = ({ headline }) => (
+  <div>
+    <Themed.h1 sx={{
+      mb: 0,
+      pb: 0,
+    }}>
+      Hi! 👋 I'm Chris Vogt.
+    </Themed.h1>
+    <Themed.p>
+    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation,
+    and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing
+    piano and traveling to new places.
+    </Themed.p>
+    <Themed.p>
+      This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.
+    </Themed.p>
   </div>
 )
 

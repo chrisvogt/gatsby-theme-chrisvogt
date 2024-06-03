@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Widget matches the snapshot 1`] = `
-<div
+<section
   className="css-4jhz55-Widget"
 >
   Test
-</div>
+</section>
 `;

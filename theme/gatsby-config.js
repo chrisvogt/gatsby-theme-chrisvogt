@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = () => ({
   siteMetadata: {
-    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/v1573025803/avatar_2x_srlojo.png',
+    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo',
     baseURL: 'https://www.chrisvogt.me',
     description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
     footerText: 'Made in San Francisco',
@@ -40,6 +40,18 @@ module.exports = () => ({
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-prismjs',
+          'gatsby-remark-images',
+          'gatsby-remark-embed-video',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-autolink-headers'
+        ]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-page-creator',
       options: {
         path: path.join(__dirname, 'src/pages')
@@ -58,21 +70,18 @@ module.exports = () => ({
         name: `content`
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Crimson Text\:400,400i,600,600i` // specify the weights and styles you need
+        ],
+        display: 'swap'
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        gatsbyRemarkPlugins: [`gatsby-remark-prismjs`, `gatsby-remark-images`, `gatsby-remark-copy-linked-files`],
-        plugins: [
-          // FIX(cvogt): this plugin is defined here as a temporary fix for the bug
-          // described in gatsbyjs/gatsby#15486
-          `gatsby-remark-images`
-        ]
-      }
-    },
     'gatsby-plugin-emotion',
-    'gatsby-plugin-react-helmet',
     'gatsby-theme-style-guide',
     'gatsby-transformer-json',
     `gatsby-plugin-theme-ui`

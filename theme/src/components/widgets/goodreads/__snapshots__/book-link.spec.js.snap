@@ -2,7 +2,7 @@
 
 exports[`BookLink matches the snapshot 1`] = `
 <a
-  className="css-0"
+  className="css-1avyp1d"
   href="https://www.google.com/books/edition/_/ZrNzAwAAQBAJ?hl=en"
   title="The Three-Body Problem"
 >
@@ -64,7 +64,7 @@ exports[`BookLink matches the snapshot 1`] = `
     />
     <g
       style={
-        Object {
+        {
           "clipPath": "url(#ec3c1a72-0104-4d8a-830f-57d2245cb2f4)",
         }
       }

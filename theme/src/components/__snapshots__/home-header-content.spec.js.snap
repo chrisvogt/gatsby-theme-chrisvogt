@@ -1,33 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomeHeaderContent matches the snapshot 1`] = `
-<div
-  className="css-1sf28qk-HomeHeaderContent"
->
-  <div
-    className="css-1kjtssk-HomeHeaderContent"
+<div>
+  <h1
+    className="css-1i5um0s-HomeHeaderContent"
   >
-    <img
-      alt="Avatar"
-      className="css-e14vrk-HomeHeaderContent"
-      height="128"
-      src="https://fake-cdn.chrisvogt.me/images/avatar.jpg"
-      width="128"
-    />
-  </div>
-  <div
-    className="css-z3564l-HomeHeaderContent"
+    Hi! 👋 I'm Chris Vogt.
+  </h1>
+  <p
+    className="css-1avyp1d"
   >
-    <h1
-      className="css-1h9knbm-HomeHeaderContent"
-    >
-      Website Title
-    </h1>
-    <p
-      className="css-1ex0jat-HomeHeaderContent"
-    >
-      A cool subtitle for my website
-    </p>
-  </div>
+    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation, and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing piano and traveling to new places.
+  </p>
+  <p
+    className="css-1avyp1d"
+  >
+    This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.
+  </p>
 </div>
 `;

@@ -14,7 +14,7 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
   const darkMode = isDarkMode(colorMode)
 
   return (
-    <div
+    <section
       sx={{
         ...widgetStyles,
         ...styleOverrides,
@@ -70,7 +70,7 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
         </div>
       )}
       {children}
-    </div>
+    </section>
   )
 }
 

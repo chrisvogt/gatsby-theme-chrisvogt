@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "www.chrisvogt.me",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "license": "GPL",
   "scripts": {
     "build": "gatsby build",
@@ -11,12 +11,12 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^3.14.0",
-    "gatsby-plugin-google-analytics": "^3.12.0",
-    "gatsby-plugin-newrelic": "^2.2.2",
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-google-analytics": "^5.11.0",
+    "gatsby-plugin-newrelic": "^2.3.0",
     "gatsby-theme-chrisvogt": "*",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18",
+    "react-dom": "^18",
     "react-images": "^1.2.0-beta.7",
     "react-photo-gallery": "^8.0.0"
   },

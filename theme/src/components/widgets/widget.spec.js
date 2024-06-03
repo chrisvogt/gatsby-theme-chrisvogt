@@ -12,6 +12,6 @@ describe('Widget', () => {
     const id = 'fake-widget'
     const testRenderer = renderer.create(<Widget id={id}>Test</Widget>)
     const testInstance = testRenderer.root
-    expect(testInstance.findByType('div').props.id).toEqual(id)
+    expect(testInstance.findByType('section').props.id).toEqual(id)
   })
 })

@@ -1,6 +1,8 @@
 /** @jsx jsx */
-import { jsx, Container, Themed } from 'theme-ui'
+import { jsx, Container } from 'theme-ui'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Themed } from '@theme-ui/mdx'
 
 import ColorToggle from '../components/color-toggle'
 import { getHeaderLeftItems } from '../selectors/navigation'
@@ -14,7 +16,11 @@ import useSiteMetadata from '../hooks/use-site-metadata'
  *
  * Top navigation component for the page.
  */
-const TopNavigation = ({ hideBackground }) => {
+const TopNavigation = ({
+  hideBackground,
+  hideBrandLink,
+  hideMenuItems
+}) => {
   const metadata = useSiteMetadata()
 
   const navigation = useNavigationData()
@@ -22,10 +28,11 @@ const TopNavigation = ({ hideBackground }) => {
   const title = getTitle(metadata)
 
   return (
-    <div
+    <Themed.div
       sx={{
         background: hideBackground ? 'none' : `url(${trianglify})`,
-        variant: `styles.TopNavigation`
+        variant: `styles.TopNavigation`,
+        minHeight: `64px`
       }}
     >
       <Container
@@ -33,38 +40,46 @@ const TopNavigation = ({ hideBackground }) => {
           display: `flex`,
           alignItems: `center`,
           py: 3
-          // textAlign: [`center`, ``, `left`]
         }}
       >
-        <div sx={{ flexGrow: 1 }}>
-          <Themed.a
-            as={Link}
+        <Themed.div sx={{ flexGrow: 1 }}>
+          {!hideBrandLink &&
+            <Link
             to='/'
             sx={{
+              variant: 'styles.a',
               color: `light`,
               display: [`block`, ``, `inline`],
               fontFamily: `heading`,
-              fontSize: 2,
+              fontSize: [2, 3],
               fontWeight: `bold`,
+              letterSpacing: '1.1px',
               marginRight: 3,
               textDecoration: `none`
             }}
           >
             {title}
-          </Themed.a>
+          </Link>
+          }
 
-          {menuItems &&
+          {!hideMenuItems &&
             menuItems.map(({ slug, path, title, text }) => (
-              <Themed.a as={Link} key={slug} sx={{ color: `light`, mr: 3 }} title={title} to={path}>
+              <Link key={slug} sx={{ fontSize: 2, variant: 'styles.a', color: `light`, mr: 3 }} title={title} to={path}>
                 {text}
-              </Themed.a>
+              </Link>
             ))}
-        </div>
+        </Themed.div>
 
         <ColorToggle />
       </Container>
-    </div>
+    </Themed.div>
   )
+}
+
+TopNavigation.propTypes = {
+  hideBackground: PropTypes.bool,
+  hideBrandLink: PropTypes.bool,
+  hideMenuItems: PropTypes.bool
 }
 
 export default TopNavigation

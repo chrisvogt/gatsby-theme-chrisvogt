@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 import kebabCase from 'lodash/kebabCase'
 import { RectShape } from 'react-placeholder/lib/placeholders'
+import { Themed } from '@theme-ui/mdx'
 
 import BookLink from './book-link'
 
@@ -12,19 +13,20 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
       <Heading
         as='h3'
         sx={{
-          mb: 3
+          mb: 3,
+          fontSize: [3, 4]
         }}
       >
         Books
       </Heading>
 
-      <p>The last 12 books I read and finished.</p>
+      <Themed.p>The last 12 books I read and finished.</Themed.p>
 
       <div
         sx={{
           display: `grid`,
           gridGap: [3, 1, 2],
-          gridTemplateColumns: [`repeat(4, 1fr)`, `repeat(6, 1fr)`]
+          gridTemplateColumns: [`repeat(3, 1fr)`, `repeat(4, 1fr)`, `repeat(4, 1fr)`, `repeat(6, 1fr)`]
         }}
       >
         {isLoading &&

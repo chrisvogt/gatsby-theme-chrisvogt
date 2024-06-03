@@ -15,7 +15,7 @@ import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
-import { floatOnHover } from '../../../gatsby-plugin-theme-ui/abstracts/shadows'
+import { floatOnHover } from '../../../gatsby-plugin-theme-ui/theme'
 
 const SteamWidget = () => {
   const dispatch = useDispatch()

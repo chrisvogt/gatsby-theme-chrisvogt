@@ -11,7 +11,7 @@ import {
   faInstagram,
   faLinkedin,
   faStackOverflow,
-  faTwitter
+  faXTwitter
 } from '@fortawesome/free-brands-svg-icons'
 
 import useSocialProfiles from '../../hooks/use-social-profiles'
@@ -29,7 +29,7 @@ const icons = {
   faInstagram,
   faLinkedin,
   faStackOverflow,
-  faTwitter
+  faXTwitter
 }
 
 /** Mapper function to attach React icon components to profile data. */
@@ -47,8 +47,6 @@ export default () => {
 
   return (
     <Fragment>
-      <h4 sx={{ mb: 4 }}>My social profiles</h4>
-
       {profilesWithIcons.length &&
         profilesWithIcons.map(({ IconComponent, profile = {} }) => {
           const { displayName, href, slug } = profile

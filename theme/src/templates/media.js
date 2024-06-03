@@ -1,39 +1,33 @@
 /** @jsx jsx */
-import { Container, Flex, jsx, Themed, useThemeUI } from 'theme-ui'
+import { Container, Flex, jsx } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 import { Heading } from '@theme-ui/components'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
-import isDarkMode from '../helpers/isDarkMode'
-
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 import SoundCloud from '../shortcodes/soundcloud'
 import YouTube from '../shortcodes/youtube'
 
-const MediaTemplate = ({ data }) => {
-  const { colorMode } = useThemeUI()
-  const { mdx } = data
+const getBanner = mdx => mdx.frontmatter.banner
+const getDescription = mdx => mdx.frontmatter.description
+const getTitle = mdx => mdx.frontmatter.title
 
-  const banner = mdx.frontmatter.banner
+const MediaTemplate = ({ data: { mdx }, children }) => {
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
-  const description = mdx.frontmatter.description
-  const title = mdx.frontmatter.title
-
-  const youtubeSrc = mdx.frontmatter.youtubeSrc
   const soundcloudId = mdx.frontmatter.soundcloudId
+  const title = getTitle(mdx)
+  const youtubeSrc = mdx.frontmatter.youtubeSrc
 
   return (
     <Layout>
-      <SEO article={true} description={description} image={banner} title={title} />
-
       {(youtubeSrc || soundcloudId) && (
-        <div
+        <Themed.div
           sx={{
-            backgroundColor: `var(--theme-ui-colors-panel-background)`,
+            backgroundColor: theme => theme.colors['panel-background'],
             textAlign: `center`,
             paddingY: 3
           }}
@@ -42,7 +36,7 @@ const MediaTemplate = ({ data }) => {
             {youtubeSrc && <YouTube url={youtubeSrc} />}
             {soundcloudId && <SoundCloud soundcloudId={soundcloudId} />}
           </Container>
-        </div>
+        </Themed.div>
       )}
 
       <Flex
@@ -53,14 +47,22 @@ const MediaTemplate = ({ data }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && <div sx={{ variant: `text.title` }}>{category}</div>}
+          {category && (
+            <Themed.div sx={{ fontSize: [3, 4], variant: `text.title` }}>
+              {category}
+            </Themed.div>
+          ) }
 
-          <time className='created'>{date}</time>
+          <time className='created'>
+            {date}
+          </time>
 
-          <Themed.h1 as={Heading}>{title}</Themed.h1>
+          <Themed.h1 as={Heading}>
+            {title}
+          </Themed.h1>
 
           <div className='article-content'>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+             {children}
           </div>
         </Container>
       </Flex>
@@ -69,9 +71,25 @@ const MediaTemplate = ({ data }) => {
 }
 
 MediaTemplate.propTypes = {
+  children: PropTypes.node,
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired
   }).isRequired
+}
+
+export const Head = ({ data: { mdx } }) => {
+  const banner = getBanner(mdx)
+  const description = getDescription(mdx)
+  const title = getTitle(mdx)
+
+  return (
+    <Seo
+      article={true}
+      description={description}
+      image={banner}
+      title={title}
+    />
+  )
 }
 
 export const pageQuery = graphql`
