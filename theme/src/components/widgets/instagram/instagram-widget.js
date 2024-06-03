@@ -84,7 +84,7 @@ export default () => {
         <Grid
           sx={{
             gridGap: [3, 3, 3, 4],
-            gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)']
+            gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(3, 1fr)', '', 'repeat(4, 1fr)']
           }}
         >
           {(isLoading ? Array(MAX_IMAGES).fill({}) : media).slice(0, MAX_IMAGES).map((post, idx) => (

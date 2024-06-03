@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.25.0",
+  "version": "0.27.0",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "test:coverage": "jest --coverage --colors"
   },
   "engines": {
-    "node": ">=14.18.1 <19.0.0",
+    "node": ">=14.18.1",
     "yarn": "^1.0.0"
   },
   "os": [
@@ -73,6 +73,7 @@
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-emotion": "^8.11.0",
     "gatsby-plugin-feed": "^5.11.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-mdx": "^5.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
@@ -92,12 +93,11 @@
     "prismjs": "^1.24.1",
     "prop-types": "^15.7.2",
     "react": "^18",
-    "react-dark-mode-toggle-2": "^2.0.8",
+    "react-dark-mode-toggle-2": "^2.0.9",
     "react-dom": "^18",
     "react-images": "^1.2.0-beta.7",
     "react-photo-gallery": "^8.0.0",
     "react-placeholder": "^4.1.0",
-    "react-popper-tooltip": "^4.3.0",
     "react-redux": "^7.2.2",
     "react-visibility-sensor": "^5.1.1",
     "redux": "^4.0.5",

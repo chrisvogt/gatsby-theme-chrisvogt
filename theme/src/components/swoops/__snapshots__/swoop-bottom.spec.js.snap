@@ -2,9 +2,10 @@
 
 exports[`SwoopBottom matches the snapshot 1`] = `
 <svg
-  className="css-1l6n94m"
+  className="css-odb3nj"
+  height="auto"
   preserveAspectRatio="xMidYMin slice"
-  viewBox="0 0 1366 64"
+  viewBox="0 0 1366 63"
   width="100%"
   xmlns="http://www.w3.org/2000/svg"
 >

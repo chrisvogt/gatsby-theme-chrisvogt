@@ -11,19 +11,12 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
 
     const { url: thumbnailURL } = albumImages.find(image => image.width === 300)
 
-    const tooltipContent = (
-      <article>
-        <header>{name}</header>
-        <span sx={{ fontStyle: `italic` }}>{artists.join(', ')}</span>
-      </article>
-    )
-
     return {
       id,
       name,
       spotifyURL,
       thumbnailURL,
-      tooltipContent
+      details: `${name} – ${artists.join(', ')}`
     }
   })
 

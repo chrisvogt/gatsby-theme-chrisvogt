@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
 import { Heading, jsx, Link } from 'theme-ui'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { Card } from '@theme-ui/components'
-import { Themed } from '@theme-ui/mdx'
 
 import {
   getGithubWidgetDataSource,
@@ -13,7 +12,7 @@ import {
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faGoodreads, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -25,6 +24,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const icons = {
   faGithub,
   faGoodreads,
+  faHome,
   faInstagram,
   faNewspaper,
   faSpotify
@@ -39,6 +39,18 @@ const icons = {
  * * value {object} – props for the link item
  */
 const linkRegistry = [
+  {
+    rule: () => true, // Everyone sees this.
+    value: {
+      href: '#top',
+      icon: {
+        name: 'home',
+        reactIcon: 'faHome'
+      },
+      id: 'home',
+      text: 'Home'
+    }
+  },
   {
     rule: () => true, // Everyone sees this.
     value: {
@@ -123,48 +135,14 @@ const HomeNavigation = () => {
     isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
   })
 
-  useEffect(() => {
-    const navItemsEl = navItemsRef.current
-
-    const handleSmoothScroll = event => {
-      const el = event.target || event.srcElement
-      if (el instanceof HTMLAnchorElement) {
-        event.preventDefault()
-
-        const href = el.getAttribute('href')
-        document.querySelector(href).scrollIntoView({
-          behavior: 'smooth'
-        })
-      }
-    }
-
-    navItemsEl.addEventListener('click', handleSmoothScroll)
-
-    return () => {
-      navItemsEl.removeEventListener('click', handleSmoothScroll)
-    }
-  }, [])
-
   return (
     <Fragment>
-      {/*
-        This hack pushes the navigation card down so that it lines up with the
-        first widget in the main column on desktop layouts. Another way to solve
-        this might be to use React Refs and use JavaScript to line the top up
-        exactly. I opted to instead just match the widget's header inside of a
-        hidden element.
-      */}
-      <Heading aria-hidden='true' sx={{ display: ['none', 'revert'], mt: 0, mb: 4, visibility: 'hidden' }}>
-        Widget Navigation
-      </Heading>
-      <Card
+      <div
         sx={{
-          boxShadow: 'default',
-          display: ['none', 'block'],
+          display: ['none', '', 'block'],
           position: `sticky`,
-          top: `1.5em`
+          top: `1.5em`,
         }}
-        variant='actionCard'
       >
         <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
           {links.map(({ href, icon, id, text }) => {
@@ -175,8 +153,9 @@ const HomeNavigation = () => {
                 key={id}
                 variant='homeNavigation'
                 sx={{
-                  fontFamily: `heading`,
-                  color: `var(--theme-ui-colors-panel-text)`
+                  fontFamily: `sans`,
+                  color: `text`,
+                  paddingX: 2
                 }}
               >
                 {IconComponent ? <FontAwesomeIcon icon={IconComponent} style={{ height: '18px' }} sx={{ mr: 2 }} /> : null}
@@ -185,7 +164,7 @@ const HomeNavigation = () => {
             )
           })}
         </nav>
-      </Card>
+      </div>
     </Fragment>
   )
 }

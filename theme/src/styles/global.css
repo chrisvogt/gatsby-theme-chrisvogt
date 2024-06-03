@@ -1,5 +1,10 @@
 html {
   min-height: 100%;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: unset;
+  }
 }
 
 body,

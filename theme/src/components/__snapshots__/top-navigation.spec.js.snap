@@ -2,17 +2,17 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-xrv1fw-TopNavigation"
+  className="css-10qm8bf-TopNavigation"
 >
   <div
-    className="css-1cqf3wp-TopNavigation"
+    className="css-1hhifxi-TopNavigation"
   >
     <div
       className="css-1oho7q7-TopNavigation"
     >
       <a
         aria-current="page"
-        className="css-1h8lqto-TopNavigation"
+        className="css-1gew4ue-TopNavigation"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -32,12 +32,26 @@ exports[`TopNavigation matches the snapshot 1`] = `
     </div>
     <button
       aria-hidden="true"
-      className="css-2t0886"
+      className="_button_2eo6g_1"
       id=""
       onClick={[Function]}
+      style={
+        {
+          "height": "35px",
+          "width": "70px",
+        }
+      }
     >
       <div
-        className="css-1unwmv0"
+        className="_player_2eo6g_12"
+        style={
+          {
+            "height": "115.5px",
+            "marginLeft": "-22.400000000000002px",
+            "marginTop": "-40.25px",
+            "width": "115.5px",
+          }
+        }
       />
     </button>
   </div>

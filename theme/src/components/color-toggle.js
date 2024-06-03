@@ -11,7 +11,7 @@ export default () => {
       onChange={() => setColorMode(colorMode === 'default' ? 'dark' : 'default')}
       isDarkMode={isDarkMode(colorMode)}
       checked={colorMode === 'dark'}
-      size={80}
+      size={70}
     />
   )
 }

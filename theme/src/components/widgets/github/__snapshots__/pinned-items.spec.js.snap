@@ -18,7 +18,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
     className="css-110pnm4-PinnedItems"
   >
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -130,7 +130,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -242,7 +242,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -354,7 +354,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       </div>
     </a>
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -487,7 +487,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
     className="css-110pnm4-PinnedItems"
   >
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -599,7 +599,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -711,7 +711,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"
@@ -823,7 +823,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       </div>
     </a>
     <a
-      className="css-1ovdgfi"
+      className="css-1l9an2g"
     >
       <div
         className="css-g89m8z-Box"

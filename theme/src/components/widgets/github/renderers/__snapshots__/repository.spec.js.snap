@@ -15,16 +15,16 @@ exports[`GitHub Repository Renderer matches the snapshot 1`] = `
     GatsbyJS blog theme with built-in social widgets for creatives and developers.
   </span>
   <div
-    className="css-1tkdyol-CardFooter"
+    className="css-1vn95lq-CardFooter"
   >
     <span>
       Last updated 
-      3 years ago
+      4 years ago
     </span>
     <span>
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-up-right-from-square "
+        className="svg-inline--fa fa-up-right-from-square fa-xs "
         data-icon="up-right-from-square"
         data-prefix="fas"
         focusable="false"

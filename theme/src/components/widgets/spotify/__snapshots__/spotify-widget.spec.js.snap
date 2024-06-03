@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Spotify Widget matches the loading state snapshot 1`] = `
-<div
+<section
   className="css-12h1dx4-Widget"
   id="spotify"
 >
@@ -169,12 +169,12 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
     className="css-o0oe1r-ProfileMetricsBadge"
   >
     <div
-      className="css-18tyx52-Box"
+      className="css-1fj08pc-Box"
     >
        
     </div>
     <div
-      className="css-oz63zn-Box"
+      className="css-1wc3ku-Box"
     >
        
     </div>
@@ -186,18 +186,18 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       className="css-4i4294-Playlists"
     >
       <h3
-        className="css-lvvsle-Playlists"
+        className="css-1j0cp9w-Playlists"
       >
         Playlists
       </h3>
     </div>
     <p
-      className="css-c197d9"
+      className="css-1qwovgy"
     >
       My 12 favorite playlists.
     </p>
     <div
-      className="media-item_grid null css-mrsgt9-MediaItemGrid"
+      className="media-item_grid null css-1fvffyl-MediaItemGrid"
     >
       <div
         className="show-loading-animation"
@@ -386,18 +386,18 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       className="css-kohdhs-TopTracks"
     >
       <h3
-        className="css-m47u5q-TopTracks"
+        className="css-zhe7fa-TopTracks"
       >
         Top Tracks
       </h3>
     </div>
     <p
-      className="css-c197d9"
+      className="css-1qwovgy"
     >
       My 12 most-played tracks over the last 4 weeks.
     </p>
     <div
-      className="media-item_grid null css-mrsgt9-MediaItemGrid"
+      className="media-item_grid null css-1fvffyl-MediaItemGrid"
     >
       <div
         className="show-loading-animation"
@@ -581,5 +581,5 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       </div>
     </div>
   </div>
-</div>
+</section>
 `;

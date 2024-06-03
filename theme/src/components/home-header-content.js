@@ -6,26 +6,25 @@ import { Themed } from '@theme-ui/mdx'
  * Home Page Header Content
  *
  * The content rendered into the home page header region. This content is rendered
- * inside of the header, on top of the themed background, and below the top nav.
+ * inside of the header, on top of the themed background and below the top nav.
  */
 const HomeHeaderContent = ({ headline }) => (
-  <Flex sx={{ width: '100%', justifyContent: 'center' }}>
-    <Themed.div sx={{
-      maxWidth: ['90%', '75%'],
-      pt: 2,
-      pb: 4
+  <div>
+    <Themed.h1 sx={{
+      mb: 0,
+      pb: 0,
     }}>
-      <Themed.h1 sx={{ mb: 0, pb: 0 }}>
-        {headline}
-      </Themed.h1>
-      <Themed.p sx={{ fontSize: 2 }}>
-        I'm a Software Engineer in San Francisco with an interest in
-        photography, playing piano and building things with code. This
-        website is a digital garden where I share things I'm working
-        on or excited about.
-      </Themed.p>
-    </Themed.div>
-  </Flex>
+      Hi! 👋 I'm Chris Vogt.
+    </Themed.h1>
+    <Themed.p>
+    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation,
+    and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing
+    piano and traveling to new places.
+    </Themed.p>
+    <Themed.p>
+      This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.
+    </Themed.p>
+  </div>
 )
 
 export default HomeHeaderContent

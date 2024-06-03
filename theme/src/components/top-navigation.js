@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container } from 'theme-ui'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 import { Themed } from '@theme-ui/mdx'
 
 import ColorToggle from '../components/color-toggle'
@@ -15,7 +16,11 @@ import useSiteMetadata from '../hooks/use-site-metadata'
  *
  * Top navigation component for the page.
  */
-const TopNavigation = ({ hideBackground, hideMenuItems }) => {
+const TopNavigation = ({
+  hideBackground,
+  hideBrandLink,
+  hideMenuItems
+}) => {
   const metadata = useSiteMetadata()
 
   const navigation = useNavigationData()
@@ -26,7 +31,8 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
     <Themed.div
       sx={{
         background: hideBackground ? 'none' : `url(${trianglify})`,
-        variant: `styles.TopNavigation`
+        variant: `styles.TopNavigation`,
+        minHeight: `64px`
       }}
     >
       <Container
@@ -37,7 +43,8 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
         }}
       >
         <Themed.div sx={{ flexGrow: 1 }}>
-          <Link
+          {!hideBrandLink &&
+            <Link
             to='/'
             sx={{
               variant: 'styles.a',
@@ -45,7 +52,7 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
               display: [`block`, ``, `inline`],
               fontFamily: `heading`,
               fontSize: [2, 3],
-              fontWeight: 500,
+              fontWeight: `bold`,
               letterSpacing: '1.1px',
               marginRight: 3,
               textDecoration: `none`
@@ -53,6 +60,7 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
           >
             {title}
           </Link>
+          }
 
           {!hideMenuItems &&
             menuItems.map(({ slug, path, title, text }) => (
@@ -66,6 +74,12 @@ const TopNavigation = ({ hideBackground, hideMenuItems }) => {
       </Container>
     </Themed.div>
   )
+}
+
+TopNavigation.propTypes = {
+  hideBackground: PropTypes.bool,
+  hideBrandLink: PropTypes.bool,
+  hideMenuItems: PropTypes.bool
 }
 
 export default TopNavigation

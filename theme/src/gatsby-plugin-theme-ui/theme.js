@@ -3,8 +3,7 @@ import { merge } from 'theme-ui'
 
 const fonts = {
   sans: '-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif',
-  serif:
-    'Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
+  serif: 'Crimson Text, Georgia, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
   mono: 'Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace'
 }
 
@@ -63,9 +62,9 @@ const GradientBanner = {
 }
 
 export const card = {
+  borderRadius: 'card',
   backgroundColor: `var(--theme-ui-colors-panel-background)`,
   color: 'var(--theme-ui-colors-panel-text)',
-  borderRadius: `3px`,
   boxShadow: `default`,
   flexGrow: 1,
   padding: 3,
@@ -183,10 +182,12 @@ export default merge(tailwind, {
         'panel-background': `#252e3c`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
-        text: `white`
+        primary: `#1E90FF`,
+        text: `#e2e8f0`,
+        textMuted: '#a0aec0'
       }
     },
-    primary: `#1E90FF`,
+    primary: `#0073E6`,
     secondary: `#711E9B`,
     secondaryGradient: `linear-gradient(45deg, #4527a0 0%, #711e9b 100%)`,
     text: `#2d3748`
@@ -195,14 +196,16 @@ export default merge(tailwind, {
   fonts: {
     body: fonts.serif,
     heading: fonts.sans,
-    monospace: fonts.mono
+    monospace: fonts.mono,
+    sans: fonts.sans,
+    serif: fonts.serif
   },
 
-  fontSizes: ['0.875rem', '1rem', '1.25rem', '1.5rem', '1.875rem', '2.25rem', '3rem', '4rem', '4.5rem'],
+  fontSizes: ['.875rem', '1rem', '1.25rem', '1.375rem', '1.5rem', '1.875rem', '2.25rem', '3rem', '4rem', '4.5rem'],
 
   layout: {
     container: {
-      maxWidth: [``, `94%`, ``, ``, `1440px`],
+      maxWidth: [``, `98%`, ``, ``, `1440px`],
       py: [2, 3],
       px: [3, 4]
     }
@@ -210,7 +213,7 @@ export default merge(tailwind, {
 
   links: {
     homeNavigation: {
-      color: 'var(--theme-ui-colors-primary)',
+      color: `primary`,
       display: `block`,
       py: 2,
       textDecoration: `none`,
@@ -221,6 +224,11 @@ export default merge(tailwind, {
         backgroundColor: 'var(--theme-ui-colors-panel-highlight)'
       }
     }
+  },
+
+  radii: {
+    default: '4px',
+    card: '8px',
   },
 
   styles: {
