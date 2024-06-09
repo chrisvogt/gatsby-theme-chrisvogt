@@ -11720,10 +11720,9 @@ react-clientside-effect@^1.2.6:
   dependencies:
     "@babel/runtime" "^7.12.13"
 
-react-dark-mode-toggle-2@^2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/react-dark-mode-toggle-2/-/react-dark-mode-toggle-2-2.0.9.tgz#f6ae6b0d957fbd361a4cf00c548ef48e46c0b8e4"
-  integrity sha512-bW++7scae/03CYEawI4RW9aeikNWadJ9vwZTa9i6dbiloJnLPRxAsg8BH9zbtVf4SbalqPHoRycKw2rO1KHPig==
+"react-dark-mode-toggle-2@github:chrisvogt/react-dark-mode-toggle-2#button-attributes-build":
+  version "2.1.0"
+  resolved "https://codeload.github.com/chrisvogt/react-dark-mode-toggle-2/tar.gz/ae739e13a9ff8cd1f69cfef731b185153b6cd501"
   dependencies:
     classnames "^2.3.2"
     react-lottie-player "^1.4.3"
