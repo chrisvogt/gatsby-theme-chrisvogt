@@ -8,7 +8,8 @@ import {
   getGithubWidgetDataSource,
   getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
-  getSpotifyWidgetDataSource
+  getSpotifyWidgetDataSource,
+  getSteamWidgetDataSource
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
@@ -110,6 +111,14 @@ const linkRegistry = [
       id: 'spotify',
       text: 'Spotify'
     }
+  },
+  {
+    rule: options => !!options.isSteamWidgetEnabled,
+    value: {
+      href: '#steam',
+      id: 'steam',
+      text: 'Steam'
+    }
   }
 ]
 
@@ -133,7 +142,8 @@ const HomeNavigation = () => {
     isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
     isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
-    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
+    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata),
+    isSteamWidgetEnabled: getSteamWidgetDataSource(metadata)
   })
 
   useEffect(() => {

@@ -28,7 +28,11 @@ module.exports = {
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/instagram'
       },
       spotify: {
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/spotify'
+        widgetDataSource: "https://metrics.chrisvogt.me/api/widgets/spotify",
+      },
+      steam: {
+        username: 'chrisvogt',
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/steam'
       }
     }
   },

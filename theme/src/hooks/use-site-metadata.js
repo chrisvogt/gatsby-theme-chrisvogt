@@ -35,6 +35,10 @@ const useSiteMetadata = () => {
                 username
                 widgetDataSource
               }
+              steam {
+                username
+                widgetDataSource
+              }
             }
           }
         }
