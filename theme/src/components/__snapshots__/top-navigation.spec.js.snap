@@ -31,9 +31,9 @@ exports[`TopNavigation matches the snapshot 1`] = `
       </a>
     </div>
     <button
-      aria-hidden="true"
+      aria-label="Set color mode to light"
       className="_button_2eo6g_1"
-      id=""
+      id="color-mode-toggle"
       onClick={[Function]}
       style={
         {

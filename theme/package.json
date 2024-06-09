@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.27.0",
+  "version": "0.28.0",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -93,7 +93,7 @@
     "prismjs": "^1.24.1",
     "prop-types": "^15.7.2",
     "react": "^18",
-    "react-dark-mode-toggle-2": "^2.0.9",
+    "react-dark-mode-toggle-2": "github:chrisvogt/react-dark-mode-toggle-2#button-attributes-build",
     "react-dom": "^18",
     "react-images": "^1.2.0-beta.7",
     "react-photo-gallery": "^8.0.0",

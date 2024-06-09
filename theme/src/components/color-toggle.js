@@ -8,6 +8,10 @@ export default () => {
 
   return (
     <DarkModeToggle
+      id='color-mode-toggle'
+      attributes={{
+        'aria-label': `Set color mode to ${colorMode === 'default' ? 'dark' : 'light'}`
+      }}
       onChange={() => setColorMode(colorMode === 'default' ? 'dark' : 'default')}
       isDarkMode={isDarkMode(colorMode)}
       checked={colorMode === 'dark'}
