@@ -40,7 +40,7 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
             <BookLink
               infoLink={book.infoLink}
               key={book.id}
-              thumbnailURL={book.cdnMediaURL}
+              thumbnailURL={`${book.cdnMediaURL}?fm=webp`}
               title={book.title}
             />
           ))}
