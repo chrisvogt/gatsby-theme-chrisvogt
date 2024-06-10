@@ -65,6 +65,7 @@ exports[`Book matches the snapshot 1`] = `
     }
   >
     <image
+      data-testid="book-preview-thumbnail"
       height="190"
       transform="translate(14.53 -3.68) scale(0.5)"
       width="128"

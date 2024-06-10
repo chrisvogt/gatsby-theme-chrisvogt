@@ -6,6 +6,8 @@
   ],
   "scripts": {
     "develop": "yarn workspace www.chrisvogt.me develop:https",
+    "test": "yarn workspace gatsby-theme-chrisvogt test",
+    "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
     "postinstall": "node index.js",
     "prettier:format": "prettier --write ."
   },
