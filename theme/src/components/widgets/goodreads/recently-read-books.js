@@ -36,10 +36,14 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
               <RectShape color='#efefef' key={idx} sx={{ boxShadow: `md`, width: `100%`, minHeight: `140px` }} />
             ))}
         {!isLoading &&
-          books.map(book => {
-            const { infoLink, smallThumbnail: thumbnailURL, title } = book
-            return <BookLink key={kebabCase(title)} infoLink={infoLink} thumbnailURL={thumbnailURL} title={title} />
-          })}
+          books.map(book => (
+            <BookLink
+              infoLink={book.infoLink}
+              key={book.id}
+              thumbnailURL={book.cdnMediaURL}
+              title={book.title}
+            />
+          ))}
       </div>
     </div>
   </div>
