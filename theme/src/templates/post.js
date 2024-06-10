@@ -25,25 +25,33 @@ const PostTemplate = ({ children, data }) => {
         }}
       >
         <Container sx={{ height: `100%` }}>
-          {category && (
-            <Themed.div sx={{ variant: `text.title` }}>
-              {category}
+          <article className='h-entry'>
+            {category && (
+              <Themed.div
+                className='p-category'
+                sx={{ variant: `text.title` }}
+              >
+                {category}
+              </Themed.div>
+            )}
+
+            <Themed.div sx={{ fontSize: [2, 3] }}>
+              <time className='dt-published created'>
+                {date}
+              </time>
             </Themed.div>
-          )}
 
-          <Themed.div sx={{ fontSize: [2, 3] }}>
-            <time className='created'>
-              {date}
-            </time>
-          </Themed.div>
+            <Themed.h1
+              as={Heading}
+              className='p-name'
+            >
+              {title}
+            </Themed.h1>
 
-          <Themed.h1 as={Heading}>
-            {title}
-          </Themed.h1>
-
-          <div className='article-content'>
-            {children}
-          </div>
+            <div className='e-content article-content'>
+              {children}
+            </div>
+          </article>
         </Container>
       </Flex>
     </Layout>

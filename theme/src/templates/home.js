@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx, Card, Container, Grid } from 'theme-ui'
+import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
-import { Themed } from '@theme-ui/mdx'
 
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
@@ -28,7 +27,7 @@ const HomeTemplate = props => {
         </Container>
       </Header>
 
-      <Themed.div
+      <div
         sx={{
           minHeight: `500px`,
           pt: 3,
@@ -62,12 +61,42 @@ const HomeTemplate = props => {
             </main>
           </Grid>
         </Container>
-      </Themed.div>
+      </div>
     </Layout>
   )
 }
 
-export const Head = () => <Seo title='Home' />
+export const Head = () => (
+  <Seo
+    title='Chris Vogt - Senior Software Engineer in San Francisco | Digital Garden of Photography, Piano, and Travel'
+    description="Explore Chris Vogt's digital garden. A Senior Software Engineer at GoDaddy, Chris shares his interest in photography, piano, and travel."
+    keywords='Chris Vogt, Senior Software Engineer, GoDaddy, photography, piano, travel, blog, digital garden'
+  >
+    <meta property="og:url" content="https://www.chrisvogt.me" />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+      {`{
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chris Vogt",
+        "url": "https://www.chrisvogt.me",
+        "sameAs": [
+          "https://linkedin.com/in/cjvogt",
+          "https://github.com/chrisvogt",
+          "https://x.com/c1v0",
+          "https://twitter.com/c1v0",
+          "https://www.instagram.com/c1v0",
+          "https://stackoverflow.com/users/1391826/chris-vogt"
+        ],
+        "jobTitle": "Senior Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "GoDaddy"
+        }
+      }`}
+    </script>
+  </Seo>
+)
 
 export const pageQuery = graphql`
   query {

@@ -137,6 +137,9 @@ const HomeNavigation = () => {
   })
 
   useEffect(() => {
+    if (!document) {
+      return;
+    }
     const handleScroll = () => {
       let currentSection = 'home';
       links.forEach((section) => {

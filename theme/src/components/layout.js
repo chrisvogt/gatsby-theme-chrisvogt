@@ -13,12 +13,15 @@ import TopNavigation from './top-navigation'
  * to extend this component and attach additional contexts and providers.
  */
 const Layout = ({ children, hideHeader }) => (
-  <Fragment>
+  <div sx={{
+    backgroundColor: theme => theme?.colors?.background,
+    color: theme => theme?.colors?.text,
+  }}>
     {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
     {!hideHeader && <TopNavigation />}
     {children}
     <Footer />
-  </Fragment>
+  </div>
 )
 
 export default Layout
