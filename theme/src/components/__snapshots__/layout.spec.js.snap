@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout matches the snapshot 1`] = `
-[
+<div
+  className="css-1hbnqbq-Layout"
+>
   <div
     className="MOCK__TopNavigation"
-  />,
+  />
   <div
     className="fake-website"
   >
@@ -14,9 +16,9 @@ exports[`Layout matches the snapshot 1`] = `
     <p>
       Lorum ipsum dolor sit amet.
     </p>
-  </div>,
+  </div>
   <div
     className="MOCK__Footer"
-  />,
-]
+  />
+</div>
 `;

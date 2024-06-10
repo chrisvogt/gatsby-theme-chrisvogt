@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomeHeaderContent matches the snapshot 1`] = `
-<div>
+<div
+  className="css-1k1zl3g-HomeHeaderContent"
+>
   <h1
-    className="css-1i5um0s-HomeHeaderContent"
+    className="css-oqb366-HomeHeaderContent"
   >
     Hi! 👋 I'm Chris Vogt.
   </h1>
   <p
     className="css-1avyp1d"
   >
-    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation, and reusable components. Outside of work, I live in the Castro 🏳️‍🌈 in San Francisco, and I enjoy photography, practicing piano and traveling to new places.
+    I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation, and reusable components. Outside of work, I live in the Castro in San Francisco, and I enjoy photography, practicing piano and traveling to new places.
   </p>
   <p
     className="css-1avyp1d"

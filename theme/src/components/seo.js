@@ -16,6 +16,7 @@ const Seo = ({
   children,
   description,
   image: imageURL,
+  keywords,
   title: pageTitle,
 }) => {
   const metadata = useSiteMetadata()
@@ -36,6 +37,7 @@ const Seo = ({
       {imageURL && <meta name='image' content={imageURL} />}
       <meta name='theme-color' content={theme.colors.background} />
       <meta property='og:title' content={title} />
+      {keywords && <meta name='keywords' content={keywords} />}
       {article && <meta property='og:type' content='article' />}
       {description && <meta property='og:description' content={description} />}
       {imageURL && <meta property='og:image' content={imageURL} />}
@@ -44,6 +46,7 @@ const Seo = ({
       <meta name='twitter:title' content={title} />
       {imageURL && <meta name='twitter:image' content={imageURL} />}
       {description && <meta name='twitter:description' content={description} />}
+      <link rel='webmention' href='https://webmention.io/www.chrisvogt.me/webmention' />
       {children}
     </>
   )
@@ -53,6 +56,7 @@ Seo.propTypes = {
   article: PropTypes.bool,
   description: PropTypes.string,
   image: PropTypes.string,
+  keywords: PropTypes.string,
   pathname: PropTypes.string,
   title: PropTypes.string
 }
