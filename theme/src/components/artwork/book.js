@@ -35,7 +35,13 @@ const Book = ({ thumbnailURL, title }) => (
         clipPath: `url(#ec3c1a72-0104-4d8a-830f-57d2245cb2f4)`
       }}
     >
-      <image width='128' height='190' transform='translate(14.53 -3.68) scale(0.5)' xlinkHref={thumbnailURL} />
+      <image
+        data-testid='book-preview-thumbnail'
+        width='128'
+        height='190'
+        transform='translate(14.53 -3.68) scale(0.5)'
+        xlinkHref={thumbnailURL}
+      />
     </g>
   </svg>
 )

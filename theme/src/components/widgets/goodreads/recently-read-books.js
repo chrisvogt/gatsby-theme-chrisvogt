@@ -7,6 +7,9 @@ import { Themed } from '@theme-ui/mdx'
 
 import BookLink from './book-link'
 
+export const HEADLINE ='Books'
+export const BODY_TEXT = 'The last 12 books I read and finished.'
+
 const RecentlyReadBooks = ({ books = [], isLoading }) => (
   <div className='gallery'>
     <div sx={{ mb: 4 }}>
@@ -17,10 +20,12 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
           fontSize: [3, 4]
         }}
       >
-        Books
+        {HEADLINE}
       </Heading>
 
-      <Themed.p>The last 12 books I read and finished.</Themed.p>
+      <Themed.p>
+        {BODY_TEXT}
+      </Themed.p>
 
       <div
         sx={{
@@ -33,7 +38,15 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
           Array(12)
             .fill()
             .map((item, idx) => (
-              <RectShape color='#efefef' key={idx} sx={{ boxShadow: `md`, width: `100%`, minHeight: `140px` }} />
+              <RectShape
+                color='#efefef'
+                key={idx}
+                sx={{
+                  boxShadow: `md`,
+                  minHeight: `140px`,
+                  width: `100%`,
+                }}
+              />
             ))}
         {!isLoading &&
           books.map(book => (
