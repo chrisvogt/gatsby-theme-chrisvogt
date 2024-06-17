@@ -2,7 +2,7 @@
 
 exports[`HomeHeaderContent matches the snapshot 1`] = `
 <div
-  className="css-1k1zl3g-HomeHeaderContent"
+  className="css-1dngqhx-HomeHeaderContent"
 >
   <h1
     className="css-oqb366-HomeHeaderContent"
