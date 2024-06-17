@@ -9,7 +9,7 @@ import { Themed } from '@theme-ui/mdx'
  * inside of the header, on top of the themed background and below the top nav.
  */
 const HomeHeaderContent = ({ headline }) => (
-  <div sx={{ maxWidth: '900px', lineHeight: '2'}}>
+  <div sx={{ lineHeight: '2'}}>
     <Themed.h1 sx={{
       mb: 0,
       pb: 0,
