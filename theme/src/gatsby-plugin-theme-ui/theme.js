@@ -124,6 +124,21 @@ export default merge(tailwind, {
     }
   },
 
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+    gray: {
+      color: 'background',
+      bg: 'gray',
+    },
+  },
+
   cards: {
     /* The <Card /> default style. Used when no variant is defined. */
     primary: {

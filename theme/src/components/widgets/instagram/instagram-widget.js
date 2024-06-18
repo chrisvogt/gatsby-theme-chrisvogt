@@ -1,11 +1,13 @@
 /** @jsx jsx */
-import { Grid } from '@theme-ui/components'
 import { jsx } from 'theme-ui'
+
+import { Grid } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
+import { Flex } from '@theme-ui/components'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import ReactPlaceholder from 'react-placeholder'
 
@@ -14,13 +16,17 @@ import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../sel
 import { SUCCESS, FAILURE, getInstagramWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
+import Button from '../../button'
 import CallToAction from '../call-to-action'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 import WidgetItem from './instagram-widget-item'
 
-const MAX_IMAGES = 8
+const MAX_IMAGES = {
+  default: 8,
+  showMore: 16
+}
 
 const getHasFatalError = state => getInstagramWidget(state).state === FAILURE
 const getIsLoading = state => getInstagramWidget(state).state !== SUCCESS
@@ -47,6 +53,7 @@ export default () => {
 
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
+  const [isShowingMore, setIsShowingMore] = useState(false)
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index)
@@ -69,12 +76,11 @@ export default () => {
     </CallToAction>
   )
 
+  const countItemsToRender = isShowingMore ? MAX_IMAGES.showMore : MAX_IMAGES.default
+
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
-      <WidgetHeader
-        aside={callToAction}
-        icon={faInstagram}
-      >
+      <WidgetHeader aside={callToAction} icon={faInstagram}>
         Instagram
       </WidgetHeader>
 
@@ -87,7 +93,7 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(3, 1fr)', '', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(MAX_IMAGES).fill({}) : media).slice(0, MAX_IMAGES).map((post, idx) => (
+          {(isLoading ? Array(countItemsToRender).fill({}) : media).slice(0, countItemsToRender).map((post, idx) => (
             <ReactPlaceholder
               customPlaceholder={
                 <div className='image-placeholder'>
@@ -112,6 +118,18 @@ export default () => {
           ))}
         </Grid>
       </div>
+
+      {!isLoading && (
+        <div sx={{ my: 4, textAlign: 'center' }}>
+          <Button onClick={() => setIsShowingMore(!isShowingMore)}>
+            {
+              isShowingMore
+                ? 'Show Less'
+                : 'Show More'
+            }
+          </Button>
+        </div>
+      )}
 
       <ModalGateway>
         {viewerIsOpen && (
