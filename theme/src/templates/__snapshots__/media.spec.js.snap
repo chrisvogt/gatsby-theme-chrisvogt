@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Post matches the snapshot 1`] = `
+<div
+  className="layoutMock"
+>
+  <div
+    className="css-1n57ibz-MediaTemplate"
+  >
+    <div
+      className="css-1m184v-MediaTemplate"
+    >
+      <article
+        className="h-entry"
+      >
+        <div
+          className="css-py4yl0-MediaTemplate"
+        >
+          Mock Category
+        </div>
+        <time
+          className="created"
+        >
+          Mon, 17 Jun 2024 03:30:26 GMT
+        </time>
+        <h1
+          as={
+            {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          className="css-1avyp1d"
+        />
+        <div
+          className="article-content"
+        >
+          <div>
+            Lorum ipsum dolor sit amet.
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;

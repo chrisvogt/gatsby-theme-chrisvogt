@@ -46,24 +46,26 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
           py: 3
         }}
       >
-        <Container sx={{ height: `100%` }}>
-          {category && (
-            <Themed.div sx={{ fontSize: [3, 4], variant: `text.title` }}>
-              {category}
-            </Themed.div>
-          ) }
+        <Container sx={{ width: ['', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
+          <article className='h-entry'>
+            {category && (
+              <Themed.div sx={{ fontSize: [3, 4], variant: `text.title` }}>
+                {category}
+              </Themed.div>
+            ) }
 
-          <time className='created'>
-            {date}
-          </time>
+            <time className='created'>
+              {date}
+            </time>
 
-          <Themed.h1 as={Heading}>
-            {title}
-          </Themed.h1>
+            <Themed.h1 as={Heading}>
+              {title}
+            </Themed.h1>
 
-          <div className='article-content'>
-             {children}
-          </div>
+            <div className='article-content'>
+              {children}
+            </div>
+          </article>
         </Container>
       </Flex>
     </Layout>
