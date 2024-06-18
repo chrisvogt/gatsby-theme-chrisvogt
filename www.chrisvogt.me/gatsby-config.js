@@ -46,6 +46,13 @@ module.exports = {
       }
     },
     gatsbyPluginFeedConfig,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // output: `/sitemap.xml`,
+        // exclude: [`/dev-404-page`, `/404`, `/404.html`]
+      }
+    },
     ...(process.env.NODE_ENV === 'production'
       ? [
           {
