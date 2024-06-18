@@ -15,7 +15,7 @@ import TopNavigation from './top-navigation'
 const Layout = ({ children, hideHeader }) => (
   <div sx={{
     backgroundColor: theme => theme?.colors?.background,
-    color: theme => theme?.colors?.text,
+    color: theme => theme?.colors?.text
   }}>
     {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
     {!hideHeader && <TopNavigation />}

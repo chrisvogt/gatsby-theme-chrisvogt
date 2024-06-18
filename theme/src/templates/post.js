@@ -17,43 +17,27 @@ const PostTemplate = ({ children, data }) => {
 
   return (
     <Layout>
-      <Flex
-        sx={{
-          flexDirection: `column`,
-          flexGrow: 1,
-          py: 3
-        }}
-      >
-        <Container sx={{ height: `100%` }}>
-          <article className='h-entry'>
-            {category && (
-              <Themed.div
-                className='p-category'
-                sx={{ variant: `text.title` }}
-              >
-                {category}
-              </Themed.div>
-            )}
-
-            <Themed.div sx={{ fontSize: [2, 3] }}>
-              <time className='dt-published created'>
-                {date}
-              </time>
+      <Container sx={{ width: ['', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
+        <article className='h-entry'>
+          {category && (
+            <Themed.div className='p-category' sx={{ variant: `text.title` }}>
+              {category}
             </Themed.div>
+          )}
 
-            <Themed.h1
-              as={Heading}
-              className='p-name'
-            >
-              {title}
-            </Themed.h1>
+          <Themed.h1 as={Heading} className='p-name' sx={{ background: 'blue', width: 'max(45ch, 33%)' }}>
+            {title}
+          </Themed.h1>
 
-            <div className='e-content article-content'>
-              {children}
-            </div>
-          </article>
-        </Container>
-      </Flex>
+          <Themed.div sx={{ fontSize: [2, 3] }}>
+            <time className='dt-published created'>{date}</time>
+          </Themed.div>
+
+          <div className='e-content article-content'>
+            {children}
+          </div>
+        </article>
+      </Container>
     </Layout>
   )
 }
@@ -69,14 +53,7 @@ export const Head = ({ data: { mdx } }) => {
   const description = mdx.frontmatter.description
   const title = mdx.frontmatter.title
 
-  return (
-    <Seo
-      article={true}
-      description={description}
-      image={banner}
-      title={title}
-    />
-  )
+  return <Seo article={true} description={description} image={banner} title={title} />
 }
 
 export const pageQuery = graphql`
