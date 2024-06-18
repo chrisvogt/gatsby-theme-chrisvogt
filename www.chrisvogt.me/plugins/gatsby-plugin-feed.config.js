@@ -1,3 +1,8 @@
+const buildFeedItemUrl = (baseUrl, category, slug) => {
+  const parsedCategory = category ? `/${category}/` : `/`;
+  return `${baseUrl}${parsedCategory}${slug}`
+}
+
 module.exports = {
   resolve: `gatsby-plugin-feed`,
   options: {
@@ -24,7 +29,7 @@ module.exports = {
               feed_url: site.siteMetadata.baseUrl + '/rss.xml',
               guid: site.siteMetadata.baseURL + edge.node.fields.slug,
               ...(hasImage ? { image: edge.node.frontmatter.banner } : {}),
-              url: site.siteMetadata.baseURL + edge.node.fields.slug
+              url: buildFeedItemUrl(site.siteMetadata.baseURL, edge.node.fields.category, edge.node.fields.slug)
             })
           })
         },
