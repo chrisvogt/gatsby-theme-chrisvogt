@@ -25,13 +25,13 @@ const PostTemplate = ({ children, data }) => {
             </Themed.div>
           )}
 
+          <time className='dt-published created'>
+            {date}
+          </time>
+
           <Themed.h1 as={Heading} className='p-name' sx={{ background: 'blue', width: 'max(45ch, 33%)' }}>
             {title}
           </Themed.h1>
-
-          <Themed.div sx={{ fontSize: [2, 3] }}>
-            <time className='dt-published created'>{date}</time>
-          </Themed.div>
 
           <div className='e-content article-content'>
             {children}
