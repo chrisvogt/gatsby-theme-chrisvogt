@@ -5,32 +5,36 @@ exports[`Blog Post matches the snapshot 1`] = `
   className="layoutMock"
 >
   <div
-    className="css-1rsqhio-PostTemplate"
+    className="css-3cahf8-PostTemplate"
   >
-    <article
-      className="h-entry c1v0-blog-post"
+    <div
+      className="css-12hisq7-PostTemplate"
     >
-      <div
-        className="p-category css-1cb99ej-PostTemplate"
+      <article
+        className="h-entry c1v0-blog-post"
       >
-        Mock Category
-      </div>
-      <time
-        className="dt-published created"
-      >
-        Mon, 17 Jun 2024 03:30:26 GMT
-      </time>
-      <h1
-        className="p-name css-pgjt7f-PostTemplate"
-      />
-      <div
-        className="e-content article-content"
-      >
-        <div>
-          Lorum ipsum dolor sit amet.
+        <div
+          className="p-category css-pnpblt-PostTemplate"
+        >
+          Mock Category
         </div>
-      </div>
-    </article>
+        <h1
+          className="p-name css-jvso4-Heading"
+        />
+        <time
+          className="dt-published created"
+        >
+          Mon, 17 Jun 2024 03:30:26 GMT
+        </time>
+        <div
+          className="e-content article-content"
+        >
+          <div>
+            Lorum ipsum dolor sit amet.
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </div>
 `;

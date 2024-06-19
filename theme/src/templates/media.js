@@ -2,10 +2,10 @@
 import { Container, Flex, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
 
 import SoundCloud from '../shortcodes/soundcloud'
@@ -49,20 +49,20 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
         <Container sx={{ width: ['', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
           <article className='h-entry'>
             {category && (
-              <Themed.div sx={{ fontSize: [3, 4], variant: `text.title` }}>
+              <Themed.div className='p-category' sx={{ mb: 3, variant: 'text.title' }}>
                 {category}
               </Themed.div>
             ) }
 
-            <time className='created'>
-              {date}
+            <PageHeader>
+              {title}
+            </PageHeader>
+
+            <time className='dt-published created'>
+              Published {date}
             </time>
 
-            <Themed.h1 as={Heading}>
-              {title}
-            </Themed.h1>
-
-            <div className='article-content'>
+            <div className='e-content article-content'>
               {children}
             </div>
           </article>
