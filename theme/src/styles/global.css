@@ -23,6 +23,8 @@ body,
 article.c1v0-blog-post img {
   max-width: 100%;
   border-radius: 8px;
+  /* Hack to give these images a light background color in dark mode. */
+  background-color: #fcfcfc;
 }
 
 /* NOTE(cvogt): overrides the default react-photo-gallery footer style */
