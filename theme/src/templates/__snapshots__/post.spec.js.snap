@@ -8,7 +8,7 @@ exports[`Blog Post matches the snapshot 1`] = `
     className="css-1rsqhio-PostTemplate"
   >
     <article
-      className="h-entry"
+      className="h-entry c1v0-blog-post"
     >
       <div
         className="p-category css-1cb99ej-PostTemplate"
@@ -21,13 +21,7 @@ exports[`Blog Post matches the snapshot 1`] = `
         Mon, 17 Jun 2024 03:30:26 GMT
       </time>
       <h1
-        as={
-          {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          }
-        }
-        className="p-name css-1c4rajc-PostTemplate"
+        className="p-name css-pgjt7f-PostTemplate"
       />
       <div
         className="e-content article-content"
