@@ -423,7 +423,7 @@ export default merge(tailwind, {
     title: {
       color: `primary`,
       fontFamily: `heading`,
-      fontSize: [2, 3],
+      fontSize: [1, 2],
       fontWeight: `550`,
       textTransform: `uppercase`
     }
