@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { Container, Flex, jsx } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
 
 const PostTemplate = ({ children, data }) => {
@@ -26,13 +26,9 @@ const PostTemplate = ({ children, data }) => {
               </Themed.div>
             )}
 
-            <Heading
-              as='h1'
-              className='p-name'
-              sx={{ mb: 3 }}
-            >
+            <PageHeader>
               {title}
-            </Heading>
+            </PageHeader>
 
             <time className='dt-published created'>
               {date}
