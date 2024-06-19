@@ -347,6 +347,8 @@ export default merge(tailwind, {
       border: `none`,
       boxShadow: `md`,
       cursor: `pointer`,
+      overflow: `hidden`,
+      borderRadius: `8px`,
       p: 0
     },
 
