@@ -10,15 +10,7 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import TopNavigation from '../components/top-navigation'
 
-import { getAvatarURL, getHeadline, getSubhead } from '../selectors/metadata'
-
 const HomeTemplate = props => {
-  const siteMetadata = props.data?.site?.siteMetadata || {}
-
-  const avatar = getAvatarURL(siteMetadata)
-  const headline = getHeadline(siteMetadata)
-  const subhead = getSubhead(siteMetadata)
-
   return (
     <Layout hideHeader>
       <Header showSwoop hideTopPadding>
@@ -49,13 +41,7 @@ const HomeTemplate = props => {
             </aside>
             <main>
               <section>
-                <div sx={{ mb: 5 }}>
-                  <HomeHeaderContent
-                    avatar={avatar}
-                    headline={headline}
-                    subhead={subhead}
-                  />
-                </div>
+                <HomeHeaderContent />
               </section>
               <HomeWidgets />
             </main>
