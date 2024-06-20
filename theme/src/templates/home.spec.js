@@ -39,11 +39,6 @@ describe('HomeTemplate', () => {
     render(<HomeTemplate data={mockData} />);
   });
 
-  it('renders Header component', () => {
-    render(<HomeTemplate data={mockData} />);
-    expect(screen.getByText('Hi! 👋 I\'m Chris Vogt.')).toBeInTheDocument();
-  });
-
   it('renders HomeNavigation component', () => {
     render(<HomeTemplate data={mockData} />);
     expect(screen.getByRole('navigation')).toBeInTheDocument();

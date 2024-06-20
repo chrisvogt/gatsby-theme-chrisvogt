@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Fragment } from 'react'
+import { Global } from '@emotion/react'
 import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 import { Provider as ReduxProvider } from 'react-redux'
@@ -20,6 +21,7 @@ const shortcodes = { Emoji, YouTube }
 const wrapRootElement = ({ element }) => (
   <ReduxProvider store={store}>
     <ThemeUIProvider theme={theme} components={components}>
+      <Global styles={theme.global} />
       <MDXProvider components={shortcodes}>{element}</MDXProvider>
     </ThemeUIProvider>
   </ReduxProvider>
