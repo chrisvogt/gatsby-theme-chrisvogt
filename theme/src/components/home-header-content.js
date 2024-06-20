@@ -8,8 +8,8 @@ import { Themed } from '@theme-ui/mdx'
  * The content rendered into the home page header region. This content is rendered
  * inside of the header, on top of the themed background and below the top nav.
  */
-const HomeHeaderContent = ({ headline }) => (
-  <div sx={{ lineHeight: '2'}}>
+const HomeHeaderContent = () => (
+  <div sx={{ lineHeight: '2', mb: 5}}>
     <Themed.h1 sx={{
       mb: 0,
       pb: 0,
