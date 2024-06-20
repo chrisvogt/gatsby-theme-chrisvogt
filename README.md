@@ -1,4 +1,4 @@
-# www.chrisvogt.me – My Personal Website
+# My Personal Website (www.chrisvogt.me)
 
 <p align='center'>
   <a href='https://app.netlify.com/sites/chrisvogt/deploys'>
