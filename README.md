@@ -1,4 +1,6 @@
-# My Personal Website (www.chrisvogt.me)
+<h1 align='center'>
+  My Personal Website (<a href='https://www.chrisvogt.me' title='My Website'>www.chrisvogt.me</a>)
+</h1>
 
 <p align='center'>
   <a href='https://app.netlify.com/sites/chrisvogt/deploys'>
