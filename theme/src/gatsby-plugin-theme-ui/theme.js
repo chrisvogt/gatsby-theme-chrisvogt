@@ -246,6 +246,22 @@ export default merge(tailwind, {
     card: '8px',
   },
 
+  global: {
+    '@keyframes wobble': {
+      '0%, 100%': { transform: 'rotate(0deg)' },
+      '15%': { transform: 'rotate(-15deg)' },
+      '30%': { transform: 'rotate(10deg)' },
+      '45%': { transform: 'rotate(-10deg)' },
+      '60%': { transform: 'rotate(5deg)' },
+      '75%': { transform: 'rotate(-5deg)' },
+    },
+    '@media (prefers-reduced-motion: reduce)': {
+      '.emoji': {
+        animation: 'none !important',
+      },
+    },
+  },
+
   styles: {
     root: {
       color: `text`,
