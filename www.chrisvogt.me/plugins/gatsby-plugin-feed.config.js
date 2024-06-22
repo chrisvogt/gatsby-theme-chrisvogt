@@ -27,7 +27,7 @@ module.exports = {
               date: edge.node.frontmatter.date,
               description: edge.node.excerpt,
               feed_url: site.siteMetadata.baseUrl + '/rss.xml',
-              guid: site.siteMetadata.baseURL + edge.node.fields.slug,
+              guid: buildFeedItemUrl(site.siteMetadata.baseURL, edge.node.fields.category, edge.node.fields.slug),
               ...(hasImage ? { image: edge.node.frontmatter.banner } : {}),
               url: buildFeedItemUrl(site.siteMetadata.baseURL, edge.node.fields.category, edge.node.fields.slug)
             })

@@ -19,6 +19,14 @@ body,
   flex-direction: column;
 }
 
+/* This is a temporary fix until I get it working through MDX. */
+article.c1v0-blog-post img {
+  max-width: 100%;
+  border-radius: 8px;
+  /* Hack to give these images a light background color in dark mode. */
+  background-color: #fcfcfc;
+}
+
 /* NOTE(cvogt): overrides the default react-photo-gallery footer style */
 .react-images__footer.react-images__footer--isModal {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) !important;

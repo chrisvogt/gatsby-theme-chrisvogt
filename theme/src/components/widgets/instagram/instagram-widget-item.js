@@ -37,7 +37,6 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
         width='280'
         alt='Instagram post thumbnail'
         sx={{
-          borderRadius: '8px',
           width: '100%',
           height: '100%',
           transition: `all 1.5s ease`,

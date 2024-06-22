@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader matches snapshot 1`] = `
+<h1
+  className="p-name css-jvso4-Heading"
+>
+  Hello, World!
+</h1>
+`;

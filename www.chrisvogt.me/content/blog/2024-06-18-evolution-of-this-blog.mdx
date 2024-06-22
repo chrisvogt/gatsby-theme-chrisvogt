@@ -1,0 +1,87 @@
+---
+banner: https://res.cloudinary.com/chrisvogt/image/upload/v1718776556/chrisvogt-me/thumbnails/evolution-my-blog.webp
+title: The Evolution of My Personal Website
+date: '2024-06-18T20:21:00.000Z'
+category: personal
+slug: '2024-evolution-of-this-blog'
+keywords: [journal, software engineering, personal blog, web development, website evolution, GatsbyJS, React, personal website, career growth, tech blog]
+description: >
+  Explore the 12-year evolution of Chris Vogt's personal website, detailing its transformation from a basic PHP site to a sophisticated GatsbyJS and React application.
+excerpt: >
+  Explore the 12-year evolution of Chris Vogt's website, from its early days as a PHP site to its current state powered by GatsbyJS and React
+---
+
+Building [this website](http://www.chrisvogt.me/) has been a personal hobby project of mine for the last 12 years. Over time, the code behind this app has grown in both features and complexity, as most software projects do. This post covers how I got here, how this site works today, and what I plan to do with it.
+
+## How It All Began
+
+When I first created chrisvogt.me, I was working freelance for a real estate company, building and maintaining Realtor websites with CakePHP and WordPress Multisite. I wanted a hobby project that would allow me to grow my skills, investigate tech I was interested in, and have some place online to call mine.
+
+So I started a 4-page personal site with a dashboard home page that surfaced my GitHub activity, repositories, Twitter posts, and my StumbleUpon feed. *Who else remembers [StumbleUpon](https://en.wikipedia.org/wiki/StumbleUpon)?*
+
+Using the tools I was familiar with at the time—PHP and WordPress—I created [this early version](https://github.com/chrisvogt/cakephp-devsite), a nascent form of what exists today.
+
+![The first iteration of this site, rendered server-side using CakePHP.](https://res.cloudinary.com/chrisvogt/image/upload/v1718778240/posts/cakephp-site.webp)
+
+The first iteration of this site, rendered server-side using CakePHP.
+
+The site had a home, projects, about me, and contact page but no blog. Why? Because I’ve always had the desire to write but struggled with finding inspiration. Unlike design tools like Illustrator or Figma, or playing the piano, writing doesn’t flow as naturally for me.
+
+## Building A Website Has Helped My Career
+
+The first CakePHP site stuck around until 2014. It saw me through an EdTech startup and eventually helped me land a job in patient billing and medical payments. My interviewers noted my passion for my website and appreciated the example code I provided. In many ways, this website has paid off, both in skills learned and as a career reference.
+
+I suggest every software developer working on the web try building a website. Even if you don’t blog, you will grow through the experience.
+
+## The Era of Static Sites and Vanilla JavaScript
+
+My new job introduced me to a new paradigm: instead of building server-rendered pages, I was working on an application with a separate backend and frontend. The backend was a Frankenstein PHP app—an amalgamation of components and concepts from various open-source frameworks like CakePHP, Symfony, and Laravel. The frontend was all JavaScript, initially a lot of procedural jQuery code, eventually rewritten in React.
+
+So I rewrote my personal website to better match the tech I used at work. I wanted to learn as much as I could and also practice building more features with JavaScript. Thus, [version 1.9](https://github.com/chrisvogt/legacy-chrisvogt.me) of chrisvogt.me was born—a Jekyll-powered static site fetching data from GitHub and a time-tracking service. The pages were static and with personal metrics components fetched and rendered on the client.
+
+![v1.x of this website, which used Jekyll and my Personal Stats API.](https://res.cloudinary.com/chrisvogt/image/upload/v1718778239/posts/v-1-9.webp)
+
+To handle API rate limits and server-side calls, I created a [Personal Stats API](https://github.com/chrisvogt/stats) using CakePHP, tracking time spent coding and visualizing the data on my stats subdomain. For a while it was also the backend behind my home page widgets.
+
+![Data flow diagram for my personal website v1.x.](https://res.cloudinary.com/chrisvogt/image/upload/v1718781949/posts/2019-data-diagram.webp)
+
+I had a front end report published on my stats subdomain visualizing the amount of time I was spending coding on my personal projects and breaking down the file types I was editing. I used [a time-tracking editor extension named WakaTime](https://wakatime.com/) to track my time spent in Sublime, Notepad and VS Code, and it provided the data I used for the visualizations.
+
+![The old stats.chrisvogt.me page.](https://res.cloudinary.com/chrisvogt/image/upload/v1718778239/posts/stats-site.webp)
+
+## Joining GoDaddy and Rewriting My Site in React and Cloud Functions
+
+In 2016, I moved to San Francisco and a year later joined GoDaddy. This was my first exposure to a service-based architecture and building at a large scale. I was impressed by the ease and efficiency of fetching data through services and APIs instead of direct database queries.
+
+This experience led me to rewrite my front end using GatsbyJS + React with the initial version you see today.
+
+![The top 1000 pixels of chrisvogt.me as of June 2024.](https://res.cloudinary.com/chrisvogt/image/upload/v1718778240/posts/current-site.webp)
+
+After replacing the front end, I replaced my Personal Stats API with [metrics.chrisvogt.me](https://github.com/chrisvogt/metrics), an API and collection of Node.js scripts deployed to Google Cloud Platform with Firebase that run on scheduled jobs and update a Firestore database. The current version of my website still uses these technologies.
+
+![My website's architecture as of June 2024.](https://res.cloudinary.com/chrisvogt/image/upload/v1718782557/posts/2024-data-diagram.webp)
+
+## Where I’m At Now
+
+Today, my site is powered by GatsbyJS + React + Firebase Functions + Firestore. The key repositories include:
+
+- [gatsby-theme-chrisvogt](https://github.com/chrisvogt/gatsby-theme-chrisvogt) – an open-source GatsbyJS theme for the front end.
+- [metrics](https://github.com/chrisvogt/metrics) – a collection of Firebase Functions serving data for the dashboard page.
+
+My design system and UI components are homemade and built on [Theme UI](https://theme-ui.com/), and I’m working on translating my site into Figma for rapid prototyping.
+
+## Where I’m Going
+
+At the time of writing, my site has a solid foundation. Over the second half of this year, I plan to share more blog posts to build my writing skills and give my blog more purpose.
+
+Future features include:
+
+- Integrating with the Flickr API to display [my photos](https://www.flickr.com/photos/c1v0/).
+- Integrating with the SoundCloud API for a better experience sharing [my music tracks](https://soundcloud.com/c1v0/tracks).
+- Creating a new way to interact with my photo galleries, allowing visitors to buy prints.
+- Developing interactive and reusable components for my blog posts.
+- Migrate content to a CMS like Contentful so I can write and edit articles without deploys.
+
+## Will This All Remain Open Source
+
+Yes. My plan is to keep releasing all of my front end code under the MIT license. I may start to build more back end services in private repositories, but I plan to keep the front end open so that others can learn from it and I can reference it at work and in future interviews.

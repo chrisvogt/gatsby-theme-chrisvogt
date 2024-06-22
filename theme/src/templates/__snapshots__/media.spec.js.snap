@@ -14,26 +14,21 @@ exports[`Media Post matches the snapshot 1`] = `
         className="h-entry"
       >
         <div
-          className="css-py4yl0-MediaTemplate"
+          className="p-category css-7v7dui-MediaTemplate"
         >
           Mock Category
         </div>
+        <h1
+          className="p-name css-jvso4-Heading"
+        />
         <time
-          className="created"
+          className="dt-published created"
         >
+          Published 
           Mon, 17 Jun 2024 03:30:26 GMT
         </time>
-        <h1
-          as={
-            {
-              "$$typeof": Symbol(react.forward_ref),
-              "render": [Function],
-            }
-          }
-          className="css-1avyp1d"
-        />
         <div
-          className="article-content"
+          className="e-content article-content"
         >
           <div>
             Lorum ipsum dolor sit amet.

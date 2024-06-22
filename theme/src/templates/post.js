@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { Container, Flex, jsx } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import { Heading } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
 
 const PostTemplate = ({ children, data }) => {
@@ -17,27 +17,29 @@ const PostTemplate = ({ children, data }) => {
 
   return (
     <Layout>
-      <Container sx={{ width: ['', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
-        <article className='h-entry'>
-          {category && (
-            <Themed.div className='p-category' sx={{ variant: `text.title` }}>
-              {category}
-            </Themed.div>
-          )}
+      <Themed.div sx={{ py: 3 }}>
+        <Container sx={{ width: ['', '', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
+          <article className='h-entry c1v0-blog-post'>
+            {category && (
+              <Themed.div className='p-category' sx={{ mb: 3, variant: `text.title` }}>
+                {category}
+              </Themed.div>
+            )}
 
-          <time className='dt-published created'>
-            {date}
-          </time>
+            <PageHeader>
+              {title}
+            </PageHeader>
 
-          <Themed.h1 as={Heading} className='p-name' sx={{ background: 'blue', width: 'max(45ch, 33%)' }}>
-            {title}
-          </Themed.h1>
+            <time className='dt-published created'>
+              {date}
+            </time>
 
-          <div className='e-content article-content'>
-            {children}
-          </div>
-        </article>
-      </Container>
+            <div className='e-content article-content'>
+              {children}
+            </div>
+          </article>
+        </Container>
+      </Themed.div>
     </Layout>
   )
 }
