@@ -9,6 +9,7 @@ module.exports = () => ({
     headline: 'www.chrisvogt.me',
     imageURL: '',
     languageCode: 'en',
+    siteUrl: 'https://www.chrisvogt.me',
     social: {
       twitterUsername: ''
     },
