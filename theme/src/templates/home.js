@@ -60,7 +60,6 @@ export const Head = () => (
   >
     <meta property="og:url" content="https://www.chrisvogt.me" />
     <meta property="og:type" content="website" />
-    <meta name="naver-site-verification" content="9f0709febb11d387af7361215096bf7e0a35fc82" />
     <script type="application/ld+json">
       {`{
         "@context": "https://schema.org",
