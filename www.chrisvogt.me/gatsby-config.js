@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     avatarURL: '/images/avatar-256px.jpg',
     baseURL: 'https://www.chrisvogt.me',
+    siteUrl: 'https://www.chrisvogt.me',
     description: 'Software Engineer in San Francisco blogging about code, photography and piano music.',
     headline: 'Chris Vogt',
     imageURL: '/images/og-image.png',
@@ -48,10 +49,7 @@ module.exports = {
     gatsbyPluginFeedConfig,
     {
       resolve: `gatsby-plugin-sitemap`,
-      options: {
-        // output: `/sitemap.xml`,
-        // exclude: [`/dev-404-page`, `/404`, `/404.html`]
-      }
+      options: {}
     },
     ...(process.env.NODE_ENV === 'production'
       ? [
