@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 
 import { getPosts } from '../hooks/use-recent-posts'
 import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
 import PostCard from '../components/widgets/recent-posts/post-card'
 import Seo from '../components/seo'
 
@@ -20,8 +21,10 @@ export default ({ data }) => {
           py: 3
         }}
       >
-        <Container sx={{ flexGrow: 1 }}>
-          <Themed.h1>Blog</Themed.h1>
+        <Container sx={{ flexGrow: 1, width: ['', '', 'max(80ch, 50vw)'] }}>
+          <PageHeader>
+            Blog Posts
+          </PageHeader>
 
           <Themed.div
             sx={{

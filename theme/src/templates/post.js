@@ -18,7 +18,7 @@ const PostTemplate = ({ children, data }) => {
   return (
     <Layout>
       <Themed.div sx={{ py: 3 }}>
-        <Container sx={{ width: ['', '', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
+        <Container sx={{ width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
           <article className='h-entry c1v0-blog-post'>
             {category && (
               <Themed.div className='p-category' sx={{ mb: 3, variant: `text.title` }}>
@@ -31,7 +31,7 @@ const PostTemplate = ({ children, data }) => {
             </PageHeader>
 
             <time className='dt-published created'>
-              {date}
+              Published {date}
             </time>
 
             <div className='e-content article-content'>
