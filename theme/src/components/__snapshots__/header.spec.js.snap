@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
-<div
+<header
   className="css-13vk5n5-Header"
+  role="banner"
 >
   <div
     className="css-8hbmgs-Header"
@@ -21,5 +22,5 @@ exports[`Header matches the snapshot 1`] = `
       fill="inherit"
     />
   </svg>
-</div>
+</header>
 `;

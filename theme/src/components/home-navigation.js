@@ -166,7 +166,7 @@ const HomeNavigation = () => {
           top: `1.5em`,
         }}
       >
-        <nav aria-label='Navigate to on-page sections' ref={navItemsRef}>
+        <nav role='navigation' aria-label='On-page navigation' ref={navItemsRef}>
           {links.map(({ href, icon, id, text }) => {
             const IconComponent = icon?.reactIcon && icons[icon.reactIcon] ? icons[icon.reactIcon] : null
             return (

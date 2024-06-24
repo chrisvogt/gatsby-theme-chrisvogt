@@ -16,11 +16,7 @@ import useSiteMetadata from '../hooks/use-site-metadata'
  *
  * Top navigation component for the page.
  */
-const TopNavigation = ({
-  hideBackground,
-  hideBrandLink,
-  hideMenuItems
-}) => {
+const TopNavigation = ({ hideBackground, hideBrandLink, hideMenuItems }) => {
   const metadata = useSiteMetadata()
 
   const navigation = useNavigationData()
@@ -43,31 +39,38 @@ const TopNavigation = ({
         }}
       >
         <Themed.div sx={{ flexGrow: 1 }}>
-          {!hideBrandLink &&
-            <Link
-            to='/'
-            sx={{
-              variant: 'styles.a',
-              color: `light`,
-              display: [`block`, ``, `inline`],
-              fontFamily: `heading`,
-              fontSize: [2, 3],
-              fontWeight: `bold`,
-              letterSpacing: '1.1px',
-              marginRight: 3,
-              textDecoration: `none`
-            }}
-          >
-            {title}
-          </Link>
-          }
-
-          {!hideMenuItems &&
-            menuItems.map(({ slug, path, title, text }) => (
-              <Link key={slug} sx={{ fontSize: 2, variant: 'styles.a', color: `light`, mr: 3 }} title={title} to={path}>
-                {text}
+          <nav role='navigation'>
+            {!hideBrandLink && (
+              <Link
+                to='/'
+                sx={{
+                  variant: 'styles.a',
+                  color: `light`,
+                  display: [`block`, ``, `inline`],
+                  fontFamily: `heading`,
+                  fontSize: [2, 3],
+                  fontWeight: `bold`,
+                  letterSpacing: '1.1px',
+                  marginRight: 3,
+                  textDecoration: `none`
+                }}
+              >
+                {title}
               </Link>
-            ))}
+            )}
+
+            {!hideMenuItems &&
+              menuItems.map(({ slug, path, title, text }) => (
+                <Link
+                  key={slug}
+                  sx={{ fontSize: 2, variant: 'styles.a', color: `light`, mr: 3 }}
+                  title={title}
+                  to={path}
+                >
+                  {text}
+                </Link>
+              ))}
+          </nav>
         </Themed.div>
 
         <ColorToggle />

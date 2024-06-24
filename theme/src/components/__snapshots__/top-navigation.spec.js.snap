@@ -10,25 +10,29 @@ exports[`TopNavigation matches the snapshot 1`] = `
     <div
       className="css-1oho7q7-TopNavigation"
     >
-      <a
-        aria-current="page"
-        className="css-1gew4ue-TopNavigation"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        style={{}}
+      <nav
+        role="navigation"
       >
-        My Personal Blog & Portfolio
-      </a>
-      <a
-        className="css-12sa0kn"
-        href="/about-me"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        title="About Me"
-      >
-        About Me
-      </a>
+        <a
+          aria-current="page"
+          className="css-1gew4ue-TopNavigation"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={{}}
+        >
+          My Personal Blog & Portfolio
+        </a>
+        <a
+          className="css-12sa0kn"
+          href="/about-me"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          title="About Me"
+        >
+          About Me
+        </a>
+      </nav>
     </div>
     <button
       aria-label="Set color mode to light"
