@@ -12,7 +12,8 @@ import trianglify from './artwork/trianglify.svg'
  */
 const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
   return (
-    <div
+    <header
+      role='banner'
       sx={{
         variant: `styles.Header`,
         background: `url(${trianglify})`,
@@ -29,7 +30,7 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
         {children}
       </div>
       {showSwoop && <SwoopBottom />}
-    </div>
+    </header>
   )
 }
 

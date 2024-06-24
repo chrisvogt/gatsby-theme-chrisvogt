@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Flex } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 
-import Footer from 'gatsby-theme-chrisvogt/src/components/footer'
 import Layout from 'gatsby-theme-chrisvogt/src/components/layout'
 import Seo from 'gatsby-theme-chrisvogt/src/components/seo'
 
@@ -16,7 +15,7 @@ const PrivacyPolicy = () => (
         py: 3
       }}
     >
-      <Container>
+      <Container sx={{ width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
         <Themed.h1>
           Privacy Policy
         </Themed.h1>
@@ -57,7 +56,6 @@ const PrivacyPolicy = () => (
         </div>
       </Container>
     </Flex>
-    <Footer />
   </Layout>
 )
 

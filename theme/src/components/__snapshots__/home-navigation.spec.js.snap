@@ -5,7 +5,8 @@ exports[`HomeNavigation matches the snapshot 1`] = `
   className="css-86pkje-HomeNavigation"
 >
   <nav
-    aria-label="Navigate to on-page sections"
+    aria-label="On-page navigation"
+    role="navigation"
   >
     <a
       className="active css-kj0pkx-Box"

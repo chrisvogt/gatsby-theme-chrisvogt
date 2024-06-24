@@ -4,19 +4,27 @@ exports[`Layout matches the snapshot 1`] = `
 <div
   className="css-1hbnqbq-Layout"
 >
-  <div
-    className="MOCK__TopNavigation"
-  />
-  <div
-    className="fake-website"
+  <header
+    role="banner"
   >
-    <h1>
-      Fake Website
-    </h1>
-    <p>
-      Lorum ipsum dolor sit amet.
-    </p>
-  </div>
+    <div
+      className="MOCK__TopNavigation"
+    />
+  </header>
+  <main
+    role="main"
+  >
+    <div
+      className="fake-website"
+    >
+      <h1>
+        Fake Website
+      </h1>
+      <p>
+        Lorum ipsum dolor sit amet.
+      </p>
+    </div>
+  </main>
   <div
     className="MOCK__Footer"
   />

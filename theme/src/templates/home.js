@@ -12,8 +12,8 @@ import TopNavigation from '../components/top-navigation'
 
 const HomeTemplate = props => {
   return (
-    <Layout hideHeader>
-      <Header showSwoop hideTopPadding>
+    <Layout hideHeader disableMainWrapper>
+      <Header role='banner' showSwoop hideTopPadding>
         <Container>
           <TopNavigation hideBackground hideMenuItems />
         </Container>
@@ -39,7 +39,7 @@ const HomeTemplate = props => {
             <aside sx={{ mb: [4, null] }}>
               <HomeNavigation />
             </aside>
-            <main>
+            <main role='main'>
               <section>
                 <HomeHeaderContent />
               </section>
