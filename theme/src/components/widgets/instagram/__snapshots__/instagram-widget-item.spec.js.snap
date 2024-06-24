@@ -2,7 +2,7 @@
 
 exports[`InstagramWidgetItem matches the snapshot 1`] = `
 <button
-  className="css-sf4r4r-InstagramWidgetItem"
+  className="instagram-item-button css-sf4r4r-InstagramWidgetItem"
   onClick={[Function]}
   rel="noopener noreferrer"
 >
