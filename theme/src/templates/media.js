@@ -46,7 +46,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
           py: 3
         }}
       >
-        <Container sx={{ width: ['', 'max(75ch, 50vw)'], lineHeight: 1.7 }}>
+        <Container sx={{ width: ['', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
           <article className='h-entry'>
             {category && (
               <Themed.div className='p-category' sx={{ mb: 3, variant: 'text.title' }}>
