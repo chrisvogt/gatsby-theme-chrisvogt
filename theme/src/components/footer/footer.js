@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, jsx } from 'theme-ui'
+import { Container, jsx, Link } from 'theme-ui'
 
 import Profiles from './profiles'
 import SwoopTop from '../swoops/swoop-top'
@@ -19,7 +19,8 @@ export default () => {
           <Profiles />
         </div>
 
-        {footerText ? <div>{footerText}</div> : null}
+        <span>{footerText ? <div>{footerText}</div> : null}</span>
+        <span><Link href='/rss.xml'>Subscribe via RSS</Link></span>
       </Container>
     </footer>
   )
