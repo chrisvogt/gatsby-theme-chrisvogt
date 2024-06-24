@@ -10,6 +10,7 @@ import Carousel, { Modal, ModalGateway } from 'react-images'
 import { Flex } from '@theme-ui/components'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import ReactPlaceholder from 'react-placeholder'
+import VanillaTilt from 'vanilla-tilt'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
@@ -54,6 +55,18 @@ export default () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
   const [isShowingMore, setIsShowingMore] = useState(false)
+
+  useEffect(() => {
+    if (isShowingMore || !isLoading) {
+      VanillaTilt.init(document.querySelectorAll('.instagram-item-button'), {
+        glare: true,
+        max: 21,
+        perspective: 1500,
+        reverse: true,
+        speed: 300
+      })
+    }
+  }, [isLoading, isShowingMore])
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index)
@@ -121,13 +134,7 @@ export default () => {
 
       {!isLoading && (
         <div sx={{ my: 4, textAlign: 'center' }}>
-          <Button onClick={() => setIsShowingMore(!isShowingMore)}>
-            {
-              isShowingMore
-                ? 'Show Less'
-                : 'Show More'
-            }
-          </Button>
+          <Button onClick={() => setIsShowingMore(!isShowingMore)}>{isShowingMore ? 'Show Less' : 'Show More'}</Button>
         </div>
       )}
 

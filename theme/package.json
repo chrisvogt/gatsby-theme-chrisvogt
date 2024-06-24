@@ -108,6 +108,7 @@
     "redux-thunk": "^2.3.0",
     "s-ago": "^2.2.0",
     "svg-loaders-react": "^2.2.1",
-    "theme-ui": "^0.16.0"
+    "theme-ui": "^0.16.0",
+    "vanilla-tilt": "^1.8.1"
   }
 }
