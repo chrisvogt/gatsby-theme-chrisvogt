@@ -7,7 +7,7 @@ import { Themed } from '@theme-ui/mdx'
 import ColorToggle from '../components/color-toggle'
 import { getHeaderLeftItems } from '../selectors/navigation'
 import { getTitle } from '../selectors/metadata'
-import trianglify from './artwork/trianglify.svg'
+// import trianglify from './artwork/trianglify.svg'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
@@ -16,7 +16,7 @@ import useSiteMetadata from '../hooks/use-site-metadata'
  *
  * Top navigation component for the page.
  */
-const TopNavigation = ({ hideBackground, hideBrandLink, hideMenuItems }) => {
+const TopNavigation = ({ hideBrandLink, hideMenuItems }) => {
   const metadata = useSiteMetadata()
 
   const navigation = useNavigationData()
@@ -26,7 +26,6 @@ const TopNavigation = ({ hideBackground, hideBrandLink, hideMenuItems }) => {
   return (
     <Themed.div
       sx={{
-        background: hideBackground ? 'none' : `url(${trianglify})`,
         variant: `styles.TopNavigation`,
         minHeight: `64px`
       }}
@@ -45,7 +44,7 @@ const TopNavigation = ({ hideBackground, hideBrandLink, hideMenuItems }) => {
                 to='/'
                 sx={{
                   variant: 'styles.a',
-                  color: `light`,
+                  color: `text`,
                   display: [`block`, ``, `inline`],
                   fontFamily: `heading`,
                   fontSize: [2, 3],
@@ -63,7 +62,7 @@ const TopNavigation = ({ hideBackground, hideBrandLink, hideMenuItems }) => {
               menuItems.map(({ slug, path, title, text }) => (
                 <Link
                   key={slug}
-                  sx={{ fontSize: 2, variant: 'styles.a', color: `light`, mr: 3 }}
+                  sx={{ fontSize: 2, variant: 'styles.a', color: `text`, mr: 3 }}
                   title={title}
                   to={path}
                 >

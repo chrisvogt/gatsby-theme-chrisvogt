@@ -2,23 +2,16 @@
 import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
 
-import Header from '../components/header'
+import Footer from '../components/footer'
 import HomeHeaderContent from '../components/home-header-content'
 import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import TopNavigation from '../components/top-navigation'
 
 const HomeTemplate = props => {
   return (
-    <Layout hideHeader disableMainWrapper>
-      <Header role='banner' showSwoop hideTopPadding>
-        <Container>
-          <TopNavigation hideBackground hideMenuItems />
-        </Container>
-      </Header>
-
+    <Layout hideFooter disableMainWrapper>
       <div
         sx={{
           minHeight: `500px`,
@@ -40,10 +33,34 @@ const HomeTemplate = props => {
               <HomeNavigation />
             </aside>
             <main role='main'>
-              <section>
-                <HomeHeaderContent />
-              </section>
-              <HomeWidgets />
+              <div
+                sx={{
+                  background: 'rgba(255, 255, 255, 0.07)',
+                  borderRadius: '10px',
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+
+                  borderTopRightRadius: '3em',
+                  borderTopLeftRadius: '.5em',
+                  px: [3, 4],
+                  py: [2, 3],
+                }}
+              >
+                <div
+                  sx={{
+                    maxWidth: `1200px`,
+                  }}
+                >
+                  <section>
+                    <HomeHeaderContent />
+                  </section>
+                  <HomeWidgets />
+                </div>
+              </div>
+              <div sx={{ mt: 4 }}>
+                <Footer />
+              </div>
             </main>
           </Grid>
         </Container>

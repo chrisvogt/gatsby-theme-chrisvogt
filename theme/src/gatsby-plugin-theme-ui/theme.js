@@ -16,9 +16,6 @@ export const floatOnHover = {
   }
 }
 
-export const cardBackgroundDark = '#252e3c'
-export const pageBackgroundDark = '#2d3748'
-
 const GradientBanner = {
   /**
    * Gradient animation created by @bibby0912.
@@ -33,16 +30,6 @@ const GradientBanner = {
   justifyContent: `center`,
   alignItems: `center`,
   color: `black`,
-
-  // backgroundImage: `
-  //   linear-gradient(white, white),
-  //   linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);`,
-  // backgroundRepeat: `no-repeat`,
-  // backgroundOrigin: `padding-box, border-box`,
-  // backgroundPosition: `0 0, 0 100%`,
-  // backgroundSize: `100% 100%, 100% 200%`,
-  // animation: `highlight 3s infinite alternate`,
-  // textAlign: `center`,
 
   backgroundImage: `
   linear-gradient(white, white),
@@ -63,7 +50,7 @@ const GradientBanner = {
 
 export const card = {
   borderRadius: 'card',
-  backgroundColor: `var(--theme-ui-colors-panel-background)`,
+  background: `var(--theme-ui-colors-panel-background)`,
   color: 'var(--theme-ui-colors-panel-text)',
   boxShadow: `default`,
   flexGrow: 1,
@@ -187,19 +174,19 @@ export default merge(tailwind, {
 
   colors: {
     accent: `deeppink`,
-    background: `#fcfcfc`,
-    'panel-background': `white`,
-    'panel-divider': theme => `1px solid ${theme.colors.gray[3]}`,
+    background: '#fcb8a2',
+    'panel-background': `rgba(255, 229, 224, 0.17)`,
+    'panel-divider': theme => `1px solid rgba(255, 229, 224, 0.34)`,
     'panel-highlight': theme => theme.colors.gray[1],
     modes: {
       dark: {
-        background: `#2d3748`,
-        'panel-background': `#252e3c`,
+        background: `#1e1e2f`,
+        'panel-background': `rgba(1, 1, 1, 0.09)`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
         primary: `#1E90FF`,
-        text: `#e2e8f0`,
-        textMuted: '#a0aec0'
+        text: `#fff`,
+        textMuted: '#e2e8f0'
       }
     },
     primary: `#0073E6`,
@@ -236,7 +223,7 @@ export default merge(tailwind, {
         borderBottom: 'var(--theme-ui-colors-panel-divider)'
       },
       '&:hover, &:focus': {
-        backgroundColor: 'var(--theme-ui-colors-panel-highlight)'
+        backgroundColor: 'var(--theme-ui-colors-panel-background)'
       }
     }
   },
@@ -302,10 +289,10 @@ export default merge(tailwind, {
     },
 
     PageFooter: {
-      backgroundColor: `#1e2530`,
-      color: `light`,
+      zIndex: '10',
+      color: `text`,
       a: {
-        color: `white`
+        color: `text`
       },
       width: `100%`,
       display: `block`
@@ -350,8 +337,7 @@ export default merge(tailwind, {
 
     Header: {
       alignItems: `center`,
-      backgroundColor: `secondary`,
-      color: `white`,
+      color: `text`,
       display: `block`,
       transition: `all 0.3s ease-in-out`,
       width: `100%`
