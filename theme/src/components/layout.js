@@ -20,12 +20,15 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => (
     position: 'relative', // stretch to full height
     color: theme => theme?.colors?.text
   }}>
+    <BackgroundPattern />
+
     {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
     {!hideHeader && (
       <header role='banner'>
         <TopNavigation />
       </header>
     )}
+
     {
       disableMainWrapper ? children : (
         <main role='main'>
@@ -33,8 +36,8 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => (
         </main>
       )
     }
+
     {!hideFooter && <Footer />}
-    <BackgroundPattern />
   </div>
 )
 

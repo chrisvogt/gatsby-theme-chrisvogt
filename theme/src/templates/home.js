@@ -71,7 +71,6 @@ const HomeTemplate = props => {
                   <HomeWidgets />
                 </div>
               </div>
-              <Footer />
             </main>
           </Grid>
         </Container>
