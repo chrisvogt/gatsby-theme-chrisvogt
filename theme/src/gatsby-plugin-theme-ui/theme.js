@@ -198,8 +198,8 @@ export default merge(tailwind, {
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
         primary: `#1E90FF`,
-        text: `#e2e8f0`,
-        textMuted: '#a0aec0'
+        text: `#fff`,
+        textMuted: '#e2e8f0'
       }
     },
     primary: `#0073E6`,
@@ -303,9 +303,9 @@ export default merge(tailwind, {
 
     PageFooter: {
       zIndex: '10',
-      color: `light`,
+      color: `text`,
       a: {
-        color: `white`
+        color: `text`
       },
       width: `100%`,
       display: `block`
@@ -350,8 +350,7 @@ export default merge(tailwind, {
 
     Header: {
       alignItems: `center`,
-      // backgroundColor: `secondary`,
-      color: `white`,
+      color: `text`,
       display: `block`,
       transition: `all 0.3s ease-in-out`,
       width: `100%`

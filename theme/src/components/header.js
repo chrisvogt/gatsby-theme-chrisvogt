@@ -10,27 +10,22 @@ import SwoopBottom from './swoops/swoop-bottom'
  *
  * A decorative masthead element that can be used across page layouts.
  */
-const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
+const Header = ({ children, styles }) => {
   return (
     <header
       role='banner'
       sx={{
         position: 'relative',
-        variant: `styles.Header`,
-        // background: `url(${trianglify})`,
-        // backgroundSize: `cover`,
-        // backgroundPosition: `bottom center`
+        variant: `styles.Header`
       }}
     >
       <div
         sx={{
-          pt: hideTopPadding ? 0 : 5,
           ...(styles ? styles : {})
         }}
       >
         {children}
       </div>
-      {/* {showSwoop && <SwoopBottom />} */}
     </header>
   )
 }

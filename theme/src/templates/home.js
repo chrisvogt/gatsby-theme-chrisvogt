@@ -3,25 +3,15 @@ import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
-import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
 import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import TopNavigation from '../components/top-navigation'
-import SwoopTop from '../components/swoops/swoop-top.js'
-import SwoopBottom from '../components/swoops/swoop-bottom.js'
 
 const HomeTemplate = props => {
   return (
-    <Layout hideHeader hideFooter disableMainWrapper>
-      <Header role='banner' hideTopPadding>
-        <Container>
-          <TopNavigation hideBackground hideMenuItems />
-        </Container>
-      </Header>
-
+    <Layout hideFooter disableMainWrapper>
       <div
         sx={{
           minHeight: `500px`,
@@ -43,11 +33,8 @@ const HomeTemplate = props => {
               <HomeNavigation />
             </aside>
             <main role='main'>
-              {/* {<SwoopBottom />} */}
               <div
                 sx={{
-                  // backgroundColor: theme => theme?.colors?.background,
-
                   background: 'rgba(255, 255, 255, 0.07)',
                   borderRadius: '10px',
                   backdropFilter: 'blur(10px)',

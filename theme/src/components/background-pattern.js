@@ -46,7 +46,7 @@ const AnimatedBackground = () => {
       }
 
       draw() {
-        ctx.globalAlpha = 0.75; // Set transparency to 75%
+        ctx.globalAlpha = 0.45; // Set transparency to 45%
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
         this.gradientStops.forEach(stop => {
           gradient.addColorStop(stop.position, stop.color);

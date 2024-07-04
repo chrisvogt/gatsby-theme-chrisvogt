@@ -13,14 +13,15 @@ export default () => {
 
   return (
     <footer role='contentinfo' id='footer' sx={{ position: 'relative', variant: `styles.PageFooter` }}>
-      {/* <SwoopTop /> */}
       <Container sx={{ textAlign: `center` }}>
-        <div sx={{ mb: 3, pt: 3, pb: [4, 5] }}>
+        <div sx={{ mb: 3, pt: [3, 4], pb: [1, 2] }}>
           <Profiles />
-        </div>
 
-        <span>{footerText ? <div>{footerText}</div> : null}</span>
-        <span><Link href='/rss.xml'>Subscribe via RSS</Link></span>
+          <div sx={{ mt: [4, 5] }}>
+            <span>{footerText ? <div>{footerText}</div> : null}</span>
+            <span><Link href='/rss.xml'>Subscribe via RSS</Link></span>
+          </div>
+        </div>
       </Container>
     </footer>
   )
