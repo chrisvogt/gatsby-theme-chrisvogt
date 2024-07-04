@@ -188,13 +188,13 @@ export default merge(tailwind, {
   colors: {
     accent: `deeppink`,
     background: '#fcb8a2',
-    'panel-background': `rgba(255, 229, 224, 0.09)`,
+    'panel-background': `rgba(255, 229, 224, 0.17)`,
     'panel-divider': theme => `1px solid ${theme.colors.gray[3]}`,
     'panel-highlight': theme => theme.colors.gray[1],
     modes: {
       dark: {
         background: `#1e1e2f`,
-        'panel-background': `#252e3c`,
+        'panel-background': `rgba(1, 1, 1, 0.09)`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
         primary: `#1E90FF`,

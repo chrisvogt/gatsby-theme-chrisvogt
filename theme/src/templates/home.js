@@ -48,13 +48,13 @@ const HomeTemplate = props => {
                 sx={{
                   // backgroundColor: theme => theme?.colors?.background,
 
-                  background: 'rgba(255, 255, 255, 0.10)',
+                  background: 'rgba(255, 255, 255, 0.07)',
                   borderRadius: '10px',
                   backdropFilter: 'blur(10px)',
                   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.3)',
 
-                  borderTopRightRadius: '2px',
+                  borderTopRightRadius: '3em',
                   borderTopLeftRadius: '.5em',
                   px: [3, 4],
                   py: [2, 3],
