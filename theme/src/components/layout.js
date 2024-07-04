@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Fragment } from 'react'
 
-import BackgroundPattern from './background-pattern'
+import BackgroundPattern from './animated-background'
 import Footer from './footer'
 import TopNavigation from './top-navigation'
-import trianglify from './artwork/trianglify.svg'
 
 /**
  * Layout
