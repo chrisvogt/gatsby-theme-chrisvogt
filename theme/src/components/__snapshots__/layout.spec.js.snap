@@ -30,6 +30,7 @@ exports[`Layout matches the snapshot 1`] = `
     <div
       style={
         {
+          "WebkitBackdropFilter": "blur(100px)",
           "backdropFilter": "blur(100px)",
           "backgroundColor": "rgba(75, 0, 130, 0.02)",
           "height": "100%",

@@ -132,6 +132,7 @@ const AnimatedBackground = () => {
         height: '100%', 
         backgroundColor: 'rgba(75, 0, 130, 0.02)', // Dark purple overlay
         backdropFilter: 'blur(100px)', 
+        WebkitBackdropFilter: 'blur(100px)', /* Safari */
         pointerEvents: 'none' // Ensure the overlay doesn't block interactions
       }}></div>
     </div>
