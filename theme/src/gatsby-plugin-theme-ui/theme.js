@@ -302,6 +302,7 @@ export default merge(tailwind, {
     },
 
     PageFooter: {
+      zIndex: '10',
       color: `light`,
       a: {
         color: `white`
