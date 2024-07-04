@@ -21,8 +21,8 @@ describe('HomeHeaderContent', () => {
     expect(screen.getByText(headlineText)).toBeInTheDocument();
     
     // Check for the paragraphs
-    expect(screen.getByText(/I'm a Sr. Software Engineer on a product team at GoDaddy/i)).toBeInTheDocument();
-    expect(screen.getByText(/This website is a digital garden where I share things/i)).toBeInTheDocument();
+    expect(screen.getByText(/I'm a Senior Software Engineer/i)).toBeInTheDocument();
+    expect(screen.getByText(/Welcome to my digital garden,/i)).toBeInTheDocument();
   });
 
   it('applies wobble animation to emoji on mouse enter', () => {

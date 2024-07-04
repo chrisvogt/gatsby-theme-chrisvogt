@@ -42,12 +42,12 @@ const HomeHeaderContent = () => {
         Hi! <span className='emoji' ref={emojiRef} onAnimationEnd={handleAnimationEnd}>👋</span> I'm Chris Vogt.
       </Themed.h1>
       <Themed.p>
-        I'm a Sr. Software Engineer on a product team at GoDaddy, working on intelligent customer dashboards, in-app navigation,
-        and reusable components. Outside of work, I live in the Castro in San Francisco, and I enjoy photography, practicing piano
-        and traveling to new places.
+        I'm a Senior Software Engineer at GoDaddy, creating intelligent customer dashboards and AI-powered experiences that help customers build
+        and maintain websites. Based in San Francisco, I love making music, photography, traveling, and meeting new people.
       </Themed.p>
       <Themed.p>
-        This website is a digital garden where I share things I'm excited about, things I've learned and things I'm working on.
+        Welcome to my digital garden, where I share my passions, projects, and learnings. This site is designed and built by me and is published
+        open source to inspire and help others grow and learn.
       </Themed.p>
     </div>
   )

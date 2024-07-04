@@ -16,9 +16,6 @@ export const floatOnHover = {
   }
 }
 
-// export const cardBackgroundDark = '#252e3c'
-// export const pageBackgroundDark = '#2d3748'
-
 const GradientBanner = {
   /**
    * Gradient animation created by @bibby0912.
@@ -33,16 +30,6 @@ const GradientBanner = {
   justifyContent: `center`,
   alignItems: `center`,
   color: `black`,
-
-  // backgroundImage: `
-  //   linear-gradient(white, white),
-  //   linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);`,
-  // backgroundRepeat: `no-repeat`,
-  // backgroundOrigin: `padding-box, border-box`,
-  // backgroundPosition: `0 0, 0 100%`,
-  // backgroundSize: `100% 100%, 100% 200%`,
-  // animation: `highlight 3s infinite alternate`,
-  // textAlign: `center`,
 
   backgroundImage: `
   linear-gradient(white, white),
@@ -236,7 +223,7 @@ export default merge(tailwind, {
         borderBottom: 'var(--theme-ui-colors-panel-divider)'
       },
       '&:hover, &:focus': {
-        backgroundColor: 'var(--theme-ui-colors-panel-highlight)'
+        backgroundColor: 'var(--theme-ui-colors-panel-background)'
       }
     }
   },

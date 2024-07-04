@@ -16,7 +16,7 @@ const NotFoundPage = () => {
   const ref = useRef()
   return (
     <Layout>
-      <Flex sx={{ flex: 1 }}>
+      <Flex sx={{ position: 'relative', flex: 1 }}>
         <Container>
           <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
             <Box>
