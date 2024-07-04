@@ -2,7 +2,7 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-10qm8bf-TopNavigation"
+  className="css-9vqs4f-TopNavigation"
 >
   <div
     className="css-1hhifxi-TopNavigation"
