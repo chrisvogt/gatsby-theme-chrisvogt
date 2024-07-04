@@ -24,7 +24,7 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => (
 
     {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
     {!hideHeader && (
-      <header role='banner'>
+      <header role='banner' sx={{ position: 'relative' }}>
         <TopNavigation />
       </header>
     )}

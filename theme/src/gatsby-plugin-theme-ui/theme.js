@@ -350,7 +350,7 @@ export default merge(tailwind, {
 
     Header: {
       alignItems: `center`,
-      backgroundColor: `secondary`,
+      // backgroundColor: `secondary`,
       color: `white`,
       display: `block`,
       transition: `all 0.3s ease-in-out`,

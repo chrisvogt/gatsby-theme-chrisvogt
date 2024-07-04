@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 
 import SwoopBottom from './swoops/swoop-bottom'
-import trianglify from './artwork/trianglify.svg'
+// import trianglify from './artwork/trianglify.svg'
 
 /**
  * Header
@@ -15,7 +15,8 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
     <header
       role='banner'
       sx={{
-        // variant: `styles.Header`,
+        position: 'relative',
+        variant: `styles.Header`,
         // background: `url(${trianglify})`,
         // backgroundSize: `cover`,
         // backgroundPosition: `bottom center`
@@ -29,7 +30,7 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
       >
         {children}
       </div>
-      {showSwoop && <SwoopBottom />}
+      {/* {showSwoop && <SwoopBottom />} */}
     </header>
   )
 }

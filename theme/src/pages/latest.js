@@ -18,6 +18,7 @@ export default ({ data }) => {
         sx={{
           flexDirection: `column`,
           flexGrow: 1,
+          position: 'relative',
           py: 3
         }}
       >

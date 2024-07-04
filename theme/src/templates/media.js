@@ -29,7 +29,8 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
           sx={{
             background: theme => theme.colors['panel-background'],
             textAlign: `center`,
-            paddingY: 3
+            paddingY: 3,
+            position: `relative`
           }}
         >
           <Container>
@@ -43,7 +44,8 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
         sx={{
           flexDirection: `column`,
           flexGrow: 1,
-          py: 3
+          py: 3,
+          position: 'relative'
         }}
       >
         <Container sx={{ width: ['', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>

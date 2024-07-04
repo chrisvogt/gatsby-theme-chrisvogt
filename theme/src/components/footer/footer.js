@@ -12,8 +12,8 @@ export default () => {
   const footerText = getFooterText(metadata)
 
   return (
-    <footer role='contentinfo' id='footer' sx={{ variant: `styles.PageFooter` }}>
-      <SwoopTop />
+    <footer role='contentinfo' id='footer' sx={{ position: 'relative', variant: `styles.PageFooter` }}>
+      {/* <SwoopTop /> */}
       <Container sx={{ textAlign: `center` }}>
         <div sx={{ mb: 3, pt: 3, pb: [4, 5] }}>
           <Profiles />

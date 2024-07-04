@@ -71,6 +71,9 @@ const HomeTemplate = props => {
                   <HomeWidgets />
                 </div>
               </div>
+              <div sx={{ mt: 4 }}>
+                <Footer />
+              </div>
             </main>
           </Grid>
         </Container>
