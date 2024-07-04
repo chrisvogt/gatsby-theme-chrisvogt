@@ -38,6 +38,7 @@ const HomeTemplate = props => {
                   background: 'rgba(255, 255, 255, 0.07)',
                   borderRadius: '10px',
                   backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
                   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.3)',
 

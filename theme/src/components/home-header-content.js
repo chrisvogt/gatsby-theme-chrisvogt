@@ -47,7 +47,7 @@ const HomeHeaderContent = () => {
       </Themed.p>
       <Themed.p>
         Welcome to my digital garden, where I share my passions, projects, and learnings. This site is designed and built by me and is published
-        open source to inspire and help others grow and learn.
+        open source to inspire and help others grow and learn with me.
       </Themed.p>
     </div>
   )
