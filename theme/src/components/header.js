@@ -15,10 +15,10 @@ const Header = ({ children, hideTopPadding, showSwoop, styles }) => {
     <header
       role='banner'
       sx={{
-        variant: `styles.Header`,
-        background: `url(${trianglify})`,
-        backgroundSize: `cover`,
-        backgroundPosition: `bottom center`
+        // variant: `styles.Header`,
+        // background: `url(${trianglify})`,
+        // backgroundSize: `cover`,
+        // backgroundPosition: `bottom center`
       }}
     >
       <div

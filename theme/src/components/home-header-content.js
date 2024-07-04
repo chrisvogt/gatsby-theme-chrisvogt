@@ -25,7 +25,12 @@ const HomeHeaderContent = () => {
   }
 
   return (
-    <div sx={{ lineHeight: '2', mb: 5}}>
+    <div
+      sx={{
+        lineHeight: '2',
+        mb: 5
+      }}
+    >
       <Themed.h1 onMouseEnter={handleMouseEnter} sx={{
         mb: 0,
         pb: 0,

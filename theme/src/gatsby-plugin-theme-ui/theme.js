@@ -16,8 +16,8 @@ export const floatOnHover = {
   }
 }
 
-export const cardBackgroundDark = '#252e3c'
-export const pageBackgroundDark = '#2d3748'
+// export const cardBackgroundDark = '#252e3c'
+// export const pageBackgroundDark = '#2d3748'
 
 const GradientBanner = {
   /**
@@ -63,7 +63,7 @@ const GradientBanner = {
 
 export const card = {
   borderRadius: 'card',
-  backgroundColor: `var(--theme-ui-colors-panel-background)`,
+  background: `var(--theme-ui-colors-panel-background)`,
   color: 'var(--theme-ui-colors-panel-text)',
   boxShadow: `default`,
   flexGrow: 1,
@@ -187,13 +187,13 @@ export default merge(tailwind, {
 
   colors: {
     accent: `deeppink`,
-    background: `#fcfcfc`,
-    'panel-background': `white`,
+    background: '#fcb8a2',
+    'panel-background': `rgba(255, 229, 224, 0.09)`,
     'panel-divider': theme => `1px solid ${theme.colors.gray[3]}`,
     'panel-highlight': theme => theme.colors.gray[1],
     modes: {
       dark: {
-        background: `#2d3748`,
+        background: `#1e1e2f`,
         'panel-background': `#252e3c`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
@@ -302,7 +302,6 @@ export default merge(tailwind, {
     },
 
     PageFooter: {
-      backgroundColor: `#1e2530`,
       color: `light`,
       a: {
         color: `white`

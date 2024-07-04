@@ -2,6 +2,7 @@
 import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
 
+import Footer from '../components/footer'
 import Header from '../components/header'
 import HomeHeaderContent from '../components/home-header-content'
 import HomeNavigation from '../components/home-navigation.js'
@@ -9,11 +10,13 @@ import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import TopNavigation from '../components/top-navigation'
+import SwoopTop from '../components/swoops/swoop-top.js'
+import SwoopBottom from '../components/swoops/swoop-bottom.js'
 
 const HomeTemplate = props => {
   return (
-    <Layout hideHeader disableMainWrapper>
-      <Header role='banner' showSwoop hideTopPadding>
+    <Layout hideHeader hideFooter disableMainWrapper>
+      <Header role='banner' hideTopPadding>
         <Container>
           <TopNavigation hideBackground hideMenuItems />
         </Container>
@@ -40,10 +43,35 @@ const HomeTemplate = props => {
               <HomeNavigation />
             </aside>
             <main role='main'>
-              <section>
-                <HomeHeaderContent />
-              </section>
-              <HomeWidgets />
+              {/* {<SwoopBottom />} */}
+              <div
+                sx={{
+                  // backgroundColor: theme => theme?.colors?.background,
+
+                  background: 'rgba(255, 255, 255, 0.10)',
+                  borderRadius: '10px',
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+
+                  borderTopRightRadius: '2px',
+                  borderTopLeftRadius: '.5em',
+                  px: [3, 4],
+                  py: [2, 3],
+                }}
+              >
+                <div
+                  sx={{
+                    maxWidth: `1200px`,
+                  }}
+                >
+                  <section>
+                    <HomeHeaderContent />
+                  </section>
+                  <HomeWidgets />
+                </div>
+              </div>
+              <Footer />
             </main>
           </Grid>
         </Container>

@@ -27,7 +27,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
       {(youtubeSrc || soundcloudId) && (
         <Themed.div
           sx={{
-            backgroundColor: theme => theme.colors['panel-background'],
+            background: theme => theme.colors['panel-background'],
             textAlign: `center`,
             paddingY: 3
           }}
