@@ -4,14 +4,14 @@ import { Themed } from '@theme-ui/mdx'
 import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
 
-import { getPosts } from '../hooks/use-recent-posts'
-import Layout from '../components/layout'
-import PageHeader from '../components/blog/page-header'
-import PostCard from '../components/widgets/recent-posts/post-card'
-import Seo from '../components/seo'
+import { getPosts } from '../../../theme/src/hooks/use-recent-posts'
+import Layout from '../../../theme/src/components/layout'
+import PageHeader from '../../../theme/src/components/blog/page-header'
+import PostCard from '../../../theme/src/components/widgets/recent-posts/post-card'
+import Seo from '../../../theme/src/components/seo'
 
 export default ({ data }) => {
-  const posts = getPosts(data)?.filter(post => !(post.fields.category?.startsWith('photography') || post.fields.category?.startsWith('music')))
+  const posts = getPosts(data)?.filter(post => post.fields.category === 'music')
   return (
     <Layout>
       <Flex
@@ -22,9 +22,9 @@ export default ({ data }) => {
           py: 3
         }}
       >
-        <Container sx={{ flexGrow: 1, width: ['', '', 'max(80ch, 50vw)'] }}>
+        <Container sx={{ flexGrow: 1, width: ['', '', 'max(95ch, 50vw)'] }}>
           <PageHeader>
-            Blog Posts
+            My Music
           </PageHeader>
 
           <Themed.div
@@ -55,8 +55,8 @@ export default ({ data }) => {
 
 export const Head = () => (
   <Seo
-    title='Latest Blog Posts'
-    description='A list of the most recent articles published on my blog.'
+    title='My Music'
+    description='A list of...'
   />
 )
 

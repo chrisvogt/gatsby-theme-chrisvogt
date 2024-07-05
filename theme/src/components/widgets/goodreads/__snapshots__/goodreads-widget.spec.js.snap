@@ -345,7 +345,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
       className="css-t1qg8r-UserStatus"
     >
       <div
-        className="css-1ughfyy-Box"
+        className="css-g8gy7q-Box"
       >
         <div
           className="text-row show-loading-animation"

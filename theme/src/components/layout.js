@@ -16,6 +16,9 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => (
   <div sx={{
     backgroundColor: 'background',
     position: 'relative', // stretch to full height
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
     color: theme => theme?.colors?.text
   }}>
     <BackgroundPattern />

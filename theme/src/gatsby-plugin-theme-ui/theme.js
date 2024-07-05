@@ -48,6 +48,14 @@ const GradientBanner = {
   }
 }
 
+const glassmorhismPanel = {
+  borderRadius: '10px',
+  backdropFilter: 'blur(10px)',
+  WebkitBackdropFilter: 'blur(10px)',
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+  border: '1px solid rgba(255, 255, 255, 0.15)'
+}
+
 export const card = {
   borderRadius: 'card',
   background: `var(--theme-ui-colors-panel-background)`,
@@ -73,6 +81,7 @@ export const metricCard = {
 export const PostCard = {
   ...card,
   ...floatOnHover,
+  ...glassmorhismPanel,
   backgroundColor: `var(--theme-ui-colors-panel-background)`,
   color: 'var(--theme-ui-colors-panel-text)',
   display: `flex`,
@@ -135,8 +144,8 @@ export default merge(tailwind, {
     actionCard: {
       ...card,
       ...floatOnHover,
-      borderBottom: `none`, // from actionCardDark
-      borderLeft: theme => `3px solid ${theme.colors.primary}`,
+      ...glassmorhismPanel,
+      borderLeft: theme => `2px solid ${theme.colors.primary}`,
       a: {
         ':hover': 'pointer'
       }
@@ -175,18 +184,18 @@ export default merge(tailwind, {
   colors: {
     accent: `deeppink`,
     background: '#fcb8a2',
-    'panel-background': `rgba(255, 229, 224, 0.17)`,
-    'panel-divider': theme => `1px solid rgba(255, 229, 224, 0.34)`,
+    'panel-background': `rgba(255, 229, 224, 0.10)`,
+    'panel-divider': theme => `1px solid rgba(255, 229, 224, 0.17)`,
     'panel-highlight': theme => theme.colors.gray[1],
     modes: {
       dark: {
         background: `#1e1e2f`,
-        'panel-background': `rgba(1, 1, 1, 0.09)`,
+        'panel-background': `rgba(1, 1, 1, 0.28)`,
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
         primary: `#1E90FF`,
         text: `#fff`,
-        textMuted: '#e2e8f0'
+        textMuted: '#d8d8d8'
       }
     },
     primary: `#0073E6`,
