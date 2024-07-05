@@ -27,7 +27,7 @@ const HomeHeaderContent = () => {
   return (
     <div
       sx={{
-        lineHeight: '2',
+        lineHeight: '2.5em',
         mb: 5
       }}
     >
