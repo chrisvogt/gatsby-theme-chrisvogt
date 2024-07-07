@@ -31,7 +31,7 @@ export default () => {
   }
 
   const callToAction = (
-    <CallToAction title='Browse all published content' to='/latest'>
+    <CallToAction title='Browse all published content' to='/blog'>
       Browse All
       <span className='read-more-icon'>&rarr;</span>
     </CallToAction>

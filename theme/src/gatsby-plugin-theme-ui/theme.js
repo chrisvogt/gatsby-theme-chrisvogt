@@ -198,10 +198,10 @@ export default merge(tailwind, {
         textMuted: '#d8d8d8'
       }
     },
-    primary: `#0073E6`,
+    primary: `#422EA3`,
     secondary: `#711E9B`,
     secondaryGradient: `linear-gradient(45deg, #4527a0 0%, #711e9b 100%)`,
-    text: `#2d3748`
+    text: `#111`
   },
 
   fonts: {

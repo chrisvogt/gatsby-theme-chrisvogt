@@ -10,7 +10,7 @@ import PageHeader from '../../../theme/src/components/blog/page-header'
 import PostCard from '../../../theme/src/components/widgets/recent-posts/post-card'
 import Seo from '../../../theme/src/components/seo'
 
-export default ({ data }) => {
+const MusicPage = ({ data }) => {
   const posts = getPosts(data)?.filter(post => post.fields.category === 'music')
   return (
     <Layout>
@@ -55,9 +55,12 @@ export default ({ data }) => {
 
 export const Head = () => (
   <Seo
-    title='My Music'
-    description='A list of...'
-  />
+    title="Chris Vogt's Music - Original and Cover Songs"
+    description="Explore Chris Vogt's collection of original songs and covers. Listen to unique tracks and discover the stories behind the music on chrisvogt.me."
+  >
+    <meta property='og:url' content='https://www.chrisvogt.me/music/' />
+    <meta property='og:type' content='website' />
+  </Seo>
 )
 
 export const pageQuery = graphql`
@@ -82,3 +85,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default MusicPage
