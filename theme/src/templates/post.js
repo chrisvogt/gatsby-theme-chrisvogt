@@ -22,7 +22,8 @@ const PostTemplate = ({ children, data }) => {
           <article className='h-entry c1v0-blog-post'>
             {category && (
               <Themed.div className='p-category' sx={{ mb: 3, variant: `text.title` }}>
-                {category}
+                {/* TODO: move this somewhere else so it can be reused */}
+                {category.replace('photography/travel', 'Travel Photography')}
               </Themed.div>
             )}
 

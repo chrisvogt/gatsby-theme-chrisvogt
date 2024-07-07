@@ -24,13 +24,17 @@ article.c1v0-blog-post img {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 1.5rem;
-  /* Hack to give these images a light background color in dark mode. */
-  background-color: #fcfcfc;
   /* Matches the Theme UI default breakpoints. See https://theme-ui.com/theme-spec#breakpoints. */
   @media (min-width: 56em) and (orientation: landscape) {
     max-width: 120%;
     margin-left: -10%;
   }
+}
+
+article.c1v0-blog-post img.solid-background {
+  /* Hack to give these images a light background color in dark mode. */
+  background-color: #fcfcfc;
+  padding: 16px;
 }
 
 /* NOTE(cvogt): overrides the default react-photo-gallery footer style */
