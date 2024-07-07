@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React, { useState, useCallback } from 'react'
 import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
@@ -17,8 +19,8 @@ export const PhotoGallery = ({ photos }) => {
   }
 
   return (
-    <div>
-      <Gallery photos={photos} onClick={openLightbox} />
+    <div sx={{ mb: 4 }}>
+      <Gallery  photos={photos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
