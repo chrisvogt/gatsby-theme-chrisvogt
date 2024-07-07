@@ -4,13 +4,13 @@ import { Themed } from '@theme-ui/mdx'
 import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
 
-import { getPosts } from '../hooks/use-recent-posts'
-import Layout from '../components/layout'
-import PageHeader from '../components/blog/page-header'
-import PostCard from '../components/widgets/recent-posts/post-card'
-import Seo from '../components/seo'
+import { getPosts } from '../../../theme/src/hooks/use-recent-posts'
+import Layout from '../../../theme/src/components/layout'
+import PageHeader from '../../../theme/src/components/blog/page-header'
+import PostCard from '../../../theme/src/components/widgets/recent-posts/post-card'
+import Seo from '../../../theme/src/components/seo'
 
-export default ({ data }) => {
+const BlogIndexPage = ({ data }) => {
   const posts = getPosts(data)?.filter(post => !(post.fields.category?.startsWith('photography') || post.fields.category?.startsWith('music')))
   return (
     <Layout>
@@ -55,9 +55,12 @@ export default ({ data }) => {
 
 export const Head = () => (
   <Seo
-    title='Latest Blog Posts'
-    description='A list of the most recent articles published on my blog.'
-  />
+    title="Chris Vogt's Blog - Latest Posts and Insights"
+    description='Read the latest blog posts and insights from Chris Vogt. Explore articles on technology, photography, music, and personal growth on chrisvogt.me.'
+  >
+    <meta property='og:url' content='https://www.chrisvogt.me/blog/' />
+    <meta property='og:type' content='website' />
+  </Seo>
 )
 
 export const pageQuery = graphql`
@@ -82,3 +85,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default BlogIndexPage

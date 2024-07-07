@@ -10,7 +10,7 @@ import PageHeader from '../../../theme/src/components/blog/page-header'
 import PostCard from '../../../theme/src/components/widgets/recent-posts/post-card'
 import Seo from '../../../theme/src/components/seo'
 
-export default ({ data }) => {
+const PhotographyPage = ({ data }) => {
 const posts = getPosts(data)?.filter(post => post.fields.category?.startsWith('photography'))
   return (
     <Layout>
@@ -55,9 +55,12 @@ const posts = getPosts(data)?.filter(post => post.fields.category?.startsWith('p
 
 export const Head = () => (
   <Seo
-    title='My Photography'
-    description='A list of...'
-  />
+    title="Chris Vogt's Photo Galleries - Street & Travel Photography"
+    description="Explore Chris Vogt's photo galleries featuring street and travel photography. Each gallery showcases unique perspectives and moments captured with a Sony Alpha camera on chrisvogt.me."
+  >
+    <meta property='og:url' content='https://www.chrisvogt.me/photography/' />
+    <meta property='og:type' content='website' />
+  </Seo>
 )
 
 export const pageQuery = graphql`
@@ -82,3 +85,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default PhotographyPage

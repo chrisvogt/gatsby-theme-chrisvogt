@@ -4,8 +4,8 @@
     "header": {
       "left": [
         {
-          "path": "/latest",
-          "slug": "latest",
+          "path": "/blog",
+          "slug": "blog",
           "text": "Blog",
           "title": "Latest posts from the blog"
         },
