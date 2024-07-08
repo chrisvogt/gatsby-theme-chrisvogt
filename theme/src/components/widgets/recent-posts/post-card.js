@@ -36,7 +36,7 @@ export default ({ banner, category, date, link, title }) => {
             </div>
           )}
 
-          {category && <span sx={{ variant: `text.title`, mt: 1, fontSize: [1] }}>{category}</span>}
+          {category && <span sx={{ variant: `text.title`, mt: 1, fontSize: [1] }}>{category.replace('photography/travel', 'Travel Photography')}</span>}
 
           <Themed.h3 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h3>
 

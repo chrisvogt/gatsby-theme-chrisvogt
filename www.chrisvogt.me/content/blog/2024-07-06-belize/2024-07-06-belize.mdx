@@ -12,6 +12,7 @@ excerpt: >
 ---
 
 import { PhotoGallery } from '../../../components/PhotoGallery'
+import { Themed } from '@theme-ui/mdx'
 import YouTube from '../../../../theme/src/shortcodes/youtube'
 import {
     cayeCaulker,
@@ -30,18 +31,22 @@ In July 2023, I spent the first week exploring Belize with my partner on his fam
 Caye, Caye Caulker, and the Belize Barrier Reef, highlighting the natural beauty and unique experiences of each location.
 
 ## Where is Belize?
-
-<p style={{ display: 'flex', alignItems: 'center' }}>
+<Themed.p sx={{ display: 'flex', flexDirection: ['column', 'row'], alignItems: 'center' }}>
   Imagine the turquoise waters and white sandy beaches of the Caribbean, then picture a tropical paradise nestled between Mexico and Guatemala on the Yucatán Peninsula. That’s Belize! It’s a small, English-speaking country in Central America with lush jungles, ancient Mayan ruins, and the second-largest coral reef in the world, just a short flight away from the southern United States.
 
-  <img 
-    src='https://res.cloudinary.com/chrisvogt/image/upload/v1720381747/chrisvogt-me/thumbnails/belize-map-500.png'
-    alt='Belize on a map of Central America'
-    height='200'
-    width='200'
-    style={{ float: 'right', marginLeft: '20px', height: 'auto' }} 
-  />
-</p>
+  <Themed.div sx={{ minWidth: '200px', marginLeft: ['', '18px'] }}>
+    <Themed.img 
+      src='https://res.cloudinary.com/chrisvogt/image/upload/v1720381747/chrisvogt-me/thumbnails/belize-map-500.png'
+      alt='Belize on a map of Central America'
+      height='200'
+      width='200'
+      sx={{
+        width: '200px',
+        height: '200px',
+      }}
+    />
+  </Themed.div>
+</Themed.p>
 
 ## Getting to Belize from San Francisco
 
