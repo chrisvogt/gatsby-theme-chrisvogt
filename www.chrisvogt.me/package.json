@@ -11,15 +11,13 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^5.11.0",
-    "gatsby-plugin-google-analytics": "^5.11.0",
-    "gatsby-plugin-newrelic": "^2.3.0",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby-plugin-newrelic": "^2.6.0",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-theme-chrisvogt": "*",
     "react": "^18",
-    "react-dom": "^18",
-    "react-images": "^1.2.0-beta.7",
-    "react-photo-gallery": "^8.0.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27"
