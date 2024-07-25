@@ -51,7 +51,6 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => (
         {!isLoading &&
           books.map(book => (
             <BookLink
-              id={book.id}
               infoLink={book.infoLink}
               key={book.id}
               thumbnailURL={`${book.cdnMediaURL}?fm=webp`}

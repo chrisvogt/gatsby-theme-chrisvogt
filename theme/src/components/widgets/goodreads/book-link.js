@@ -4,9 +4,9 @@ import { Themed } from '@theme-ui/mdx'
 import PropTypes from 'prop-types'
 import Book from '../../artwork/book'
 
-const BookLink = ({ id, infoLink, thumbnailURL, title }) => (
+const BookLink = ({ infoLink, thumbnailURL, title }) => (
   <Themed.a href={infoLink} title={title}>
-    <Book id={id} thumbnailURL={thumbnailURL} title={`${title} on Google Books`} />
+    <Book thumbnailURL={thumbnailURL} title={`${title} on Google Books`} />
   </Themed.a>
 )
 
