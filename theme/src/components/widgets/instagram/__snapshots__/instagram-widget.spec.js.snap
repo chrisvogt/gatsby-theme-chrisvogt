@@ -2,18 +2,18 @@
 
 exports[`Instagram Widget matches the loading state snapshot 1`] = `
 <section
-  className="css-12h1dx4-Widget"
+  className="css-1pk2a5b"
   id="instagram"
 >
   <header
-    className="css-9v09o4-WidgetHeader"
+    className="css-gzw2dr"
   >
     <h2
-      className="css-1r48a8i-Box"
+      className="css-1rxoh5f"
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-instagram css-4hvi9p-WidgetHeader"
+        className="svg-inline--fa fa-instagram css-1ni16ne"
         data-icon="instagram"
         data-prefix="fab"
         focusable="false"
@@ -35,10 +35,10 @@ exports[`Instagram Widget matches the loading state snapshot 1`] = `
       Instagram
     </h2>
     <div
-      className="css-1i3svai-WidgetHeader"
+      className="css-1rgtmy6"
     >
       <svg
-        className="svg-loaders-svg css-zmfjn6-CallToAction"
+        className="svg-loaders-svg css-ao632c"
         fill="#1E90FF"
         height="24"
         viewBox="0 0 135 140"
@@ -166,15 +166,15 @@ exports[`Instagram Widget matches the loading state snapshot 1`] = `
     </div>
   </header>
   <div
-    className="css-o0oe1r-ProfileMetricsBadge"
+    className="css-1hw7zrq"
   >
     <div
-      className="css-1fj08pc-Box"
+      className="css-1giak3r"
     >
        
     </div>
     <div
-      className="css-1wc3ku-Box"
+      className="css-zcaudb"
     >
        
     </div>
@@ -183,7 +183,7 @@ exports[`Instagram Widget matches the loading state snapshot 1`] = `
     className="gallery"
   >
     <div
-      className="css-1k6r64f-Box"
+      className="css-1uzgqa3"
     >
       <div
         className="image-placeholder show-loading-animation"

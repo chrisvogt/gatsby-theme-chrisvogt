@@ -2,7 +2,7 @@
 
 exports[`PageHeader matches snapshot 1`] = `
 <h1
-  className="p-name css-jvso4-Heading"
+  className="p-name css-12fp046"
 >
   Hello, World!
 </h1>

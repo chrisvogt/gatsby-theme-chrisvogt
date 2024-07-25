@@ -2,18 +2,18 @@
 
 exports[`Spotify Widget matches the loading state snapshot 1`] = `
 <section
-  className="css-12h1dx4-Widget"
+  className="css-1pk2a5b"
   id="spotify"
 >
   <header
-    className="css-9v09o4-WidgetHeader"
+    className="css-gzw2dr"
   >
     <h2
-      className="css-1r48a8i-Box"
+      className="css-1rxoh5f"
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-spotify css-4hvi9p-WidgetHeader"
+        className="svg-inline--fa fa-spotify css-1ni16ne"
         data-icon="spotify"
         data-prefix="fab"
         focusable="false"
@@ -35,10 +35,10 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       Spotify
     </h2>
     <div
-      className="css-1i3svai-WidgetHeader"
+      className="css-1rgtmy6"
     >
       <svg
-        className="svg-loaders-svg css-zmfjn6-CallToAction"
+        className="svg-loaders-svg css-ao632c"
         fill="#1E90FF"
         height="24"
         viewBox="0 0 135 140"
@@ -166,27 +166,27 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
     </div>
   </header>
   <div
-    className="css-o0oe1r-ProfileMetricsBadge"
+    className="css-1hw7zrq"
   >
     <div
-      className="css-1fj08pc-Box"
+      className="css-1giak3r"
     >
        
     </div>
     <div
-      className="css-1wc3ku-Box"
+      className="css-zcaudb"
     >
        
     </div>
   </div>
   <div
-    className="css-swnv5q-Playlists"
+    className="css-sak8bt"
   >
     <div
-      className="css-4i4294-Playlists"
+      className="css-ccroti"
     >
       <h3
-        className="css-1j0cp9w-Playlists"
+        className="css-9nh3l5"
       >
         Playlists
       </h3>
@@ -197,7 +197,7 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       My 12 favorite playlists.
     </p>
     <div
-      className="media-item_grid null css-1fvffyl-MediaItemGrid"
+      className="media-item_grid null css-5stlgz"
     >
       <div
         className="show-loading-animation"
@@ -383,10 +383,10 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
   </div>
   <div>
     <div
-      className="css-kohdhs-TopTracks"
+      className="css-ccroti"
     >
       <h3
-        className="css-zhe7fa-TopTracks"
+        className="css-9nh3l5"
       >
         Top Tracks
       </h3>
@@ -397,7 +397,7 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       My 12 most-played tracks over the last 4 weeks.
     </p>
     <div
-      className="media-item_grid null css-1fvffyl-MediaItemGrid"
+      className="media-item_grid null css-5stlgz"
     >
       <div
         className="show-loading-animation"

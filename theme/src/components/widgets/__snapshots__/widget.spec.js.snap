@@ -2,7 +2,7 @@
 
 exports[`Widget matches the snapshot 1`] = `
 <section
-  className="css-4jhz55-Widget"
+  className="css-1nbeq9o"
 >
   Test
 </section>

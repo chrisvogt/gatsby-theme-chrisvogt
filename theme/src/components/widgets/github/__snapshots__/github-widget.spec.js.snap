@@ -2,18 +2,18 @@
 
 exports[`GitHub Widget matches the loading state snapshot 1`] = `
 <section
-  className="css-12h1dx4-Widget"
+  className="css-1pk2a5b"
   id="github"
 >
   <header
-    className="css-9v09o4-WidgetHeader"
+    className="css-gzw2dr"
   >
     <h2
-      className="css-1r48a8i-Box"
+      className="css-1rxoh5f"
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-github css-4hvi9p-WidgetHeader"
+        className="svg-inline--fa fa-github css-1ni16ne"
         data-icon="github"
         data-prefix="fab"
         focusable="false"
@@ -35,10 +35,10 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       GitHub
     </h2>
     <div
-      className="css-1i3svai-WidgetHeader"
+      className="css-1rgtmy6"
     >
       <svg
-        className="svg-loaders-svg css-zmfjn6-CallToAction"
+        className="svg-loaders-svg css-ao632c"
         fill="#1E90FF"
         height="24"
         viewBox="0 0 135 140"
@@ -166,13 +166,13 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
     </div>
   </header>
   <div
-    className="css-o0oe1r-ProfileMetricsBadge"
+    className="css-1hw7zrq"
   />
   <div
-    className="css-ca01x-PinnedItems"
+    className="css-lnnjou"
   >
     <h3
-      className="css-1qdxo5f-PinnedItems"
+      className="css-174rnww"
     >
       Pinned Items
     </h3>
@@ -182,19 +182,19 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
       Pinned items on my GitHub profile.
     </p>
     <div
-      className="css-rbk31m-PinnedItems"
+      className="css-r2v68e"
     >
       <a
         className="css-nf0qmy"
       >
         <div
-          className="css-g8gy7q-Box"
+          className="css-dqblq9"
         >
           <div
             className="show-loading-animation"
           >
             <div
-              className="css-vd02hx-Flex"
+              className="css-z5fbhm"
             >
               <div>
                 <div
@@ -211,7 +211,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
                 />
               </div>
               <div
-                className="css-1r91rh-PinnedItemCard"
+                className="css-fjakwv"
               >
                 <div
                   className="text-block"
@@ -300,13 +300,13 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
         className="css-nf0qmy"
       >
         <div
-          className="css-g8gy7q-Box"
+          className="css-dqblq9"
         >
           <div
             className="show-loading-animation"
           >
             <div
-              className="css-vd02hx-Flex"
+              className="css-z5fbhm"
             >
               <div>
                 <div
@@ -323,7 +323,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
                 />
               </div>
               <div
-                className="css-1r91rh-PinnedItemCard"
+                className="css-fjakwv"
               >
                 <div
                   className="text-block"
@@ -411,18 +411,18 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
     </div>
   </div>
   <div
-    className="css-g89m8z-Box"
+    className="css-1yz7e9k"
   >
     <h3
-      className="css-1vqpd96-LastPullRequest"
+      className="css-uyljfj"
     >
       Last Pull Request
     </h3>
     <a
-      className="css-1kl0pgj-LastPullRequest"
+      className="css-1srnkuc"
     >
       <div
-        className="css-g8gy7q-Box"
+        className="css-dqblq9"
       >
         <div
           className="text-row show-loading-animation"
@@ -437,7 +437,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="css-owjkyv-CardFooter"
+          className="css-5cryjx"
         >
           <div
             className="text-row show-loading-animation"

@@ -2,11 +2,11 @@
 
 exports[`Header matches the snapshot 1`] = `
 <header
-  className="css-1p6b06l-Header"
+  className="css-5fqyrv"
   role="banner"
 >
   <div
-    className="css-1jhxisl-Header"
+    className="css-1u8qly9"
   >
     Wow!
   </div>

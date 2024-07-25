@@ -2,7 +2,7 @@
 
 exports[`MetricCard matches the snapshot 1`] = `
 <div
-  className="css-g89m8z-Box"
+  className="css-1yz7e9k"
 >
   <span>
     Fake Value
