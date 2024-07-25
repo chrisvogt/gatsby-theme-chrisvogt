@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
-import PropTypes from 'prop-types'
 import isDarkMode from '../../helpers/isDarkMode'
 
 const widgetStyles = {
@@ -72,13 +71,6 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
       {children}
     </section>
   )
-}
-
-Widget.propTypes = {
-  /** The elements to render within the widget. */
-  children: PropTypes.node.isRequired,
-  /** An id added to the widget wrapper element. */
-  id: PropTypes.string
 }
 
 export default Widget

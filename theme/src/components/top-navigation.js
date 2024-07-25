@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container } from 'theme-ui'
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import { Themed } from '@theme-ui/mdx'
 
 import ColorToggle from '../components/color-toggle'
@@ -76,12 +75,6 @@ const TopNavigation = ({ hideBrandLink, hideMenuItems }) => {
       </Container>
     </Themed.div>
   )
-}
-
-TopNavigation.propTypes = {
-  hideBackground: PropTypes.bool,
-  hideBrandLink: PropTypes.bool,
-  hideMenuItems: PropTypes.bool
 }
 
 export default TopNavigation

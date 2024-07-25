@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { useState } from 'react'
-import PropTypes from 'prop-types'
 import VisibilitySensor from 'react-visibility-sensor'
 
 const DefaultPlaceholder = ({
@@ -42,13 +41,6 @@ const LazyLoad = ({
       {hasBeenVisible ? children : placeholder}
     </VisibilitySensor>
   )
-}
-
-LazyLoad.propTypes = {
-  children: PropTypes.node.isRequired,
-  height: PropTypes.string,
-  placholder: PropTypes.element,
-  width: PropTypes.string
 }
 
 export default LazyLoad

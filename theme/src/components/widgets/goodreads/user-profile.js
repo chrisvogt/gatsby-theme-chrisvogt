@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
-import PropTypes from 'prop-types'
 import Placeholder from 'react-placeholder'
 
 import isDarkMode from '../../../helpers/isDarkMode'
@@ -68,17 +67,6 @@ const UserProfile = ({ isLoading, profile }) => {
       </div>
     </Card>
   )
-}
-
-UserProfile.propTypes = {
-  /** Sets the component in a loading state when true. */
-  isLoading: PropTypes.bool,
-  /** The Goodreads user profile. */
-  profile: PropTypes.shape({
-    favoriteBooks: PropTypes.string,
-    friendsCount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    readcount: PropTypes.number
-  })
 }
 
 export default UserProfile
