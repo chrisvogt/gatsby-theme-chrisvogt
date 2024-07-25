@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import PropTypes from 'prop-types'
-
 import SwoopBottom from './swoops/swoop-bottom'
-// import trianglify from './artwork/trianglify.svg'
 
 /**
  * Header
@@ -28,15 +25,6 @@ const Header = ({ children, styles }) => {
       </div>
     </header>
   )
-}
-
-Header.propTypes = {
-  children: PropTypes.node.isRequired,
-  showSwoop: PropTypes.bool
-}
-
-Header.defaultProps = {
-  showSwoop: false
 }
 
 export default Header

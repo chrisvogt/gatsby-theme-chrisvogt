@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import { Fragment } from 'react'
 import { Global } from '@emotion/react'
 import { MDXProvider } from '@mdx-js/react'
-import PropTypes from 'prop-types'
 import { Provider as ReduxProvider } from 'react-redux'
 import { ThemeUIProvider } from 'theme-ui'
 
@@ -26,9 +25,5 @@ const wrapRootElement = ({ element }) => (
     </ThemeUIProvider>
   </ReduxProvider>
 )
-
-wrapRootElement.propTypes = {
-  element: PropTypes.node.isRequired
-}
 
 export default wrapRootElement

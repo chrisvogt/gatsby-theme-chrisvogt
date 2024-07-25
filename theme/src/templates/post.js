@@ -2,7 +2,6 @@
 import { Container, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import PageHeader from '../components/blog/page-header'
@@ -43,12 +42,6 @@ const PostTemplate = ({ children, data }) => {
       </Themed.div>
     </Layout>
   )
-}
-
-PostTemplate.propTypes = {
-  data: PropTypes.shape({
-    mdx: PropTypes.object.isRequired
-  }).isRequired
 }
 
 export const Head = ({ data: { mdx } }) => {

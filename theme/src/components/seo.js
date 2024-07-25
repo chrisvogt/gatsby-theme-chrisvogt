@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useThemeUI } from 'theme-ui'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
@@ -50,15 +49,6 @@ const Seo = ({
       {children}
     </>
   )
-}
-
-Seo.propTypes = {
-  article: PropTypes.bool,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  keywords: PropTypes.string,
-  pathname: PropTypes.string,
-  title: PropTypes.string
 }
 
 export default Seo
