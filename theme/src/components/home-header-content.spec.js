@@ -22,7 +22,7 @@ describe('HomeHeaderContent', () => {
     
     // Check for the paragraphs
     expect(screen.getByText(/I'm a Senior Software Engineer/i)).toBeInTheDocument();
-    expect(screen.getByText(/Welcome to my digital garden,/i)).toBeInTheDocument();
+    expect(screen.getByText(/This website is a digital garden/i)).toBeInTheDocument();
   });
 
   it('applies wobble animation to emoji on mouse enter', () => {
