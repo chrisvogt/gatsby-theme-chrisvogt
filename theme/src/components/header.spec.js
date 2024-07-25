@@ -10,7 +10,7 @@ describe('Header', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Header showSwoop hideTopPadding>
+          <Header hideTopPadding>
             {headline}
           </Header>
         </TestProvider>

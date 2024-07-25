@@ -17,7 +17,6 @@ const getTitle = mdx => mdx.frontmatter.title
 
 const MediaTemplate = ({ data: { mdx }, children }) => {
   const category = mdx.fields.category?.replace('Photography/', '')
-  console.log(category)
   const date = mdx.frontmatter.date
   const soundcloudId = mdx.frontmatter.soundcloudId
   const title = getTitle(mdx)

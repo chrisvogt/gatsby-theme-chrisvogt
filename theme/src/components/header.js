@@ -31,12 +31,7 @@ const Header = ({ children, styles }) => {
 }
 
 Header.propTypes = {
-  children: PropTypes.node.isRequired,
-  showSwoop: PropTypes.bool
-}
-
-Header.defaultProps = {
-  showSwoop: false
+  children: PropTypes.node.isRequired
 }
 
 export default Header
