@@ -7,7 +7,7 @@ exports[`BookLink matches the snapshot 1`] = `
   title="The Three-Body Problem"
 >
   <svg
-    className="css-kklm2g-Book"
+    className="css-1u8qly9"
     data-name="Book Preview"
     viewBox="0 0 100 100"
     xmlns="http://www.w3.org/2000/svg"

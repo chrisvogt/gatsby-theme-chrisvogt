@@ -5,21 +5,21 @@ exports[`Blog Post matches the snapshot 1`] = `
   className="layoutMock"
 >
   <div
-    className="css-3cahf8-PostTemplate"
+    className="css-43plg"
   >
     <div
-      className="css-hzle9r-PostTemplate"
+      className="css-1qfp07i"
     >
       <article
         className="h-entry c1v0-blog-post"
       >
         <div
-          className="p-category css-pnpblt-PostTemplate"
+          className="p-category css-d5b7h2"
         >
           Mock Category
         </div>
         <h1
-          className="p-name css-jvso4-Heading"
+          className="p-name css-12fp046"
         />
         <time
           className="dt-published created"

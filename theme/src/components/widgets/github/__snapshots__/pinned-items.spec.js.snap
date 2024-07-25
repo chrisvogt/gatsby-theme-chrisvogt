@@ -2,10 +2,10 @@
 
 exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`] = `
 <div
-  className="css-o5u04k-PinnedItems"
+  className="css-g7i32x"
 >
   <h3
-    className="css-1wi45za-PinnedItems"
+    className="css-klu22i"
   >
     Pinned Items
   </h3>
@@ -15,19 +15,19 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
     Pinned items on my GitHub profile.
   </p>
   <div
-    className="css-110pnm4-PinnedItems"
+    className="css-uz5s83"
   >
     <a
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -44,7 +44,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -133,13 +133,13 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -156,7 +156,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -245,13 +245,13 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -268,7 +268,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -357,13 +357,13 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -380,7 +380,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -471,10 +471,10 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the placeholder snapshot 1`
 
 exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = `
 <div
-  className="css-o5u04k-PinnedItems"
+  className="css-g7i32x"
 >
   <h3
-    className="css-1wi45za-PinnedItems"
+    className="css-klu22i"
   >
     Pinned Items
   </h3>
@@ -484,19 +484,19 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
     Pinned items on my GitHub profile.
   </p>
   <div
-    className="css-110pnm4-PinnedItems"
+    className="css-uz5s83"
   >
     <a
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -513,7 +513,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -602,13 +602,13 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -625,7 +625,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -714,13 +714,13 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -737,7 +737,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"
@@ -826,13 +826,13 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
       className="css-1l9an2g"
     >
       <div
-        className="css-g89m8z-Box"
+        className="css-1yz7e9k"
       >
         <div
           className="show-loading-animation"
         >
           <div
-            className="css-vd02hx-Flex"
+            className="css-z5fbhm"
           >
             <div>
               <div
@@ -849,7 +849,7 @@ exports[`Widget/GitHub/PinnedItems snapshots matches the successful state 1`] = 
               />
             </div>
             <div
-              className="css-1r91rh-PinnedItemCard"
+              className="css-fjakwv"
             >
               <div
                 className="text-block"

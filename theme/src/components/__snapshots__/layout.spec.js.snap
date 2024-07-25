@@ -2,7 +2,7 @@
 
 exports[`Layout matches the snapshot 1`] = `
 <div
-  className="css-tvtok6-Layout"
+  className="css-1m13iln"
 >
   <div
     style={
@@ -44,7 +44,7 @@ exports[`Layout matches the snapshot 1`] = `
     />
   </div>
   <header
-    className="css-1jqf6qp-Layout"
+    className="css-l5xv05"
     role="banner"
   >
     <div

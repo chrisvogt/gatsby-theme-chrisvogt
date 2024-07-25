@@ -2,7 +2,7 @@
 
 exports[`MediaItemGrid matches loading state snapshot 1`] = `
 <div
-  className="media-item_grid null css-1ts3m6s-MediaItemGrid"
+  className="media-item_grid null css-4004kc"
 >
   <a
     className="media-item_media css-1avyp1d"
@@ -24,7 +24,7 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
 
 exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
 <div
-  className="media-item_grid null css-1ts3m6s-MediaItemGrid"
+  className="media-item_grid null css-4004kc"
 >
   <div
     className="show-loading-animation"
