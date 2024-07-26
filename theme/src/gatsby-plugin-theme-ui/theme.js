@@ -201,6 +201,7 @@ export default merge(tailwind, {
     primary: `#422EA3`,
     secondary: `#711E9B`,
     secondaryGradient: `linear-gradient(45deg, #4527a0 0%, #711e9b 100%)`,
+    tableText: `#111`,
     text: `#111`
   },
 
@@ -280,6 +281,36 @@ export default merge(tailwind, {
 
     outlined: {
       border: `4px solid #efefef`
+    },
+
+    table: {
+      backgroundColor: 'light',
+      color: 'tableText',
+      width: '100%',
+      borderCollapse: 'collapse',
+      borderSpacing: 0,
+      marginBottom: '1.5rem',
+      overflow: 'hidden',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      'th, td': {
+        fontSize: '1.125em',
+        textAlign: 'left',
+        padding: '12px 15px',
+        borderBottom: '1px solid',
+        borderColor: 'muted',
+      },
+      'th': {
+        backgroundColor: '#f4f4f9',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        borderTop: '2px solid',
+        borderColor: 'muted',
+      },
+      'tbody tr:nth-of-type(odd)': {
+        backgroundColor: '#fafafa',
+      },
     },
 
     text: {
@@ -387,47 +418,13 @@ export default merge(tailwind, {
       textAlign: [`center`, `right`]
     },
 
-    table: {
-      width: `100%`,
-      textAlign: `left`,
-      th: {
-        borderBottom: `1px dotted #ddd`,
-        borderLeft: `1px dotted #ddd`,
-        borderTop: `1px solid #ddd`,
-        color: `text`,
-        padding: theme => theme.space[2],
-        textAlign: `left`
-      },
-      'tr th:first-of-type': {
-        borderLeft: `1px solid #ddd`,
-        borderTopLeftRadius: `8px`
-      },
-      'tr th:last-of-type': {
-        borderRight: `1px solid #ddd`,
-        borderTopRightRadius: `8px`
-      },
-      'tr td': {
-        borderBottom: `1px dotted #ddd`,
-        padding: theme => theme.space[2]
-      },
-      'tr:last-of-type td': {
-        borderBottom: `1px solid #ddd`
-      },
-      'tbody tr td:first-of-type': {
-        borderLeft: `1px solid #ddd`
-      },
-      'tbody tr td:last-of-type': {
-        borderRight: `1px solid #ddd`
-      }
-    },
-
     '.footnotes': {
       fontSize: theme => theme.fontSizes[1]
     },
 
     '.text-center': {
       textAlign: `center`
-    }
+    },
   },
 
   text: {
