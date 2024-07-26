@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Global } from '@emotion/react'
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import { MDXProvider } from '@mdx-js/react'
 import { Provider as ReduxProvider } from 'react-redux'
 import { ThemeUIProvider } from 'theme-ui'
 import { MDXProvider, useMDXComponents } from '@mdx-js/react'

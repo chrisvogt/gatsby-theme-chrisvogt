@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { Bars } from 'svg-loaders-react'
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 
 /**
  * Call To Action
@@ -11,8 +10,8 @@ import PropTypes from 'prop-types'
  * Each widget contains a call to action next to its headline. Can optionally render
  * a loading indicator when `isLoading` is set.
  */
-const CallToAction = ({ children, isLoading, title, to, url }) => {
-  const LinkComponent = to ? Link : Themed.a;
+const CallToAction = ({ children, isLoading = false, title, to, url }) => {
+  const LinkComponent = to ? Link : Themed.a
   return isLoading ? (
     <Bars fill='#1E90FF' width='24' height='24' sx={{ verticalAlign: `middle` }} />
   ) : (
@@ -43,23 +42,6 @@ const CallToAction = ({ children, isLoading, title, to, url }) => {
       {children}
     </LinkComponent>
   )
-}
-
-CallToAction.propTypes = {
-  /** Content rendered within the call to action container. */
-  children: PropTypes.node.isRequired,
-  /** Renders a loading indicator when true. */
-  isLoading: PropTypes.bool,
-  /** The title attribute for the hyperlink. */
-  title: PropTypes.string.isRequired,
-  /** Use instead of href to define a Gatsby router destination. */
-  to: PropTypes.string,
-  /** The URL for the hyperlink's navigation. */
-  url: PropTypes.string
-}
-
-CallToAction.defaultProps = {
-  isLoading: false
 }
 
 export default CallToAction

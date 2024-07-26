@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
 import { Card } from '@theme-ui/components'
-import PropTypes from 'prop-types'
 
 import isDarkMode from '../../helpers/isDarkMode'
 
@@ -14,11 +13,6 @@ const StatusCard = ({ message }) => {
       {message}
     </Card>
   )
-}
-
-StatusCard.propTypes = {
-  /** The GitHub user's status message. */
-  message: PropTypes.string
 }
 
 export default StatusCard
