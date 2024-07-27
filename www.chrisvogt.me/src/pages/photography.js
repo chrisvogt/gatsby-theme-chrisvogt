@@ -10,8 +10,24 @@ import PageHeader from '../../../theme/src/components/blog/page-header'
 import PostCard from '../../../theme/src/components/widgets/recent-posts/post-card'
 import Seo from '../../../theme/src/components/seo'
 
+const getColumnCount = postsCount => {
+  let columnCount
+  switch (postsCount) {
+    case 1:
+      columnCount = 1
+      break
+    case 2:
+      columnCount = 2
+      break
+    default:
+      columnCount = 3
+  }
+  return columnCount
+}
+
 const PhotographyPage = ({ data }) => {
-const posts = getPosts(data)?.filter(post => post.fields.category?.startsWith('photography'))
+  const posts = getPosts(data)?.filter(post => post.fields.category?.startsWith('photography'))
+
   return (
     <Layout>
       <Flex
@@ -22,22 +38,25 @@ const posts = getPosts(data)?.filter(post => post.fields.category?.startsWith('p
           py: 3
         }}
       >
-        <Container sx={{ flexGrow: 1, width: ['', '', 'max(95ch, 50vw)'] }}>
-          <PageHeader>
-            My Photo Galleries
-          </PageHeader>
+        <Container sx={{ flexGrow: 1, width: ['', '', 'max(95ch, 75vw)'] }}>
+          <PageHeader>My Photo Galleries</PageHeader>
+
+          <Themed.p>
+            These galleries are blog posts with photos and videos I've captured while traveling or at events.
+          </Themed.p>
 
           <Themed.div
             sx={{
               display: `grid`,
               gridAutoRows: `1fr`,
-              gridGap: 4,
-              gridTemplateColumns: `1fr`,
+              gridGap: [3, 3, 4],
+              gridTemplateColumns: [``, `1fr 1fr`, `1fr 1fr`, `1fr 1fr`, `repeat(${getColumnCount(posts.length)}, 1fr)`],
               mt: 4
             }}
           >
             {posts.map(post => (
               <PostCard
+                banner={post.frontmatter.banner}
                 category={post.fields.category?.replace('photography/', '')}
                 date={post.frontmatter.date}
                 excerpt={post.excerpt}
@@ -75,6 +94,7 @@ export const pageQuery = graphql`
             path
           }
           frontmatter {
+            banner
             date(formatString: "MMMM DD, YYYY")
             description
             slug

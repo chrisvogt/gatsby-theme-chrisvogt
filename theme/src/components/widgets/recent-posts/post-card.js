@@ -27,9 +27,12 @@ export default ({ banner, category, date, link, title }) => {
                 sx={{
                   backgroundImage: `url(${banner})`,
                   backgroundPosition: `center`,
-                  backgroundSize: `cover`,
+                  backgroundSize: `contain`,
+                  backgroundRepeat: `no-repeat`,
                   borderRadius: `1px`,
-                  height: `240px`,
+                  // height: `240px`,
+                  width: '100%',
+                  aspectRatio: '1.9 / 1',
                   transition: `all 2.5s ease`
                 }}
               />
