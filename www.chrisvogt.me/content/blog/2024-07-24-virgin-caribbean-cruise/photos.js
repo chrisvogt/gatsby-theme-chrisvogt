@@ -122,14 +122,14 @@ export const settingSailLeftAtSea = [
 export const costaMaya = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1722105553/chrisvogt-me/galleries/mayan-sol/4-costa-maya/20240716-IMG_9314.webp',
-    title:
-      'Costa Maya, Mexico from the cruise ship. This is a small port city that exists for the cruise ships, and Mahahual is 1.9mi south.',
+    title: 'Maya Lost Mayan Kingdom Adventure Park in the distance, taken from the Virgin Valiant Lady balcony.',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1722105553/chrisvogt-me/galleries/mayan-sol/4-costa-maya/20240716-IMG_9313.webp',
-    title: 'Maya Lost Mayan Kingdom Adventure Park in the distance, taken from the Virgin Valiant Lady balcony.',
+    title:
+      'Costa Maya, Mexico from the cruise ship. This is a small port city that exists for the cruise ships, and Mahahual is 1.9mi south.',
     width: 4,
     height: 3
   }
