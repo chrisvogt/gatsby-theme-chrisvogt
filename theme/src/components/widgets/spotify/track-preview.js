@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
-import PropTypes from 'prop-types'
 
 const TrackPreview = ({ link, name, thumbnailURL }) => (
   <Themed.a
@@ -22,11 +21,5 @@ const TrackPreview = ({ link, name, thumbnailURL }) => (
     />
   </Themed.a>
 )
-
-TrackPreview.propTypes = {
-  link: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  thumbnailURL: PropTypes.string.isRequired
-}
 
 export default TrackPreview

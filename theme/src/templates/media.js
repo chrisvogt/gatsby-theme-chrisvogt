@@ -2,7 +2,6 @@
 import { Container, Flex, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import PageHeader from '../components/blog/page-header'
@@ -17,7 +16,6 @@ const getTitle = mdx => mdx.frontmatter.title
 
 const MediaTemplate = ({ data: { mdx }, children }) => {
   const category = mdx.fields.category?.replace('Photography/', '')
-  console.log(category)
   const date = mdx.frontmatter.date
   const soundcloudId = mdx.frontmatter.soundcloudId
   const title = getTitle(mdx)
@@ -73,13 +71,6 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
       </Flex>
     </Layout>
   )
-}
-
-MediaTemplate.propTypes = {
-  children: PropTypes.node,
-  data: PropTypes.shape({
-    mdx: PropTypes.object.isRequired
-  }).isRequired
 }
 
 export const Head = ({ data: { mdx } }) => {

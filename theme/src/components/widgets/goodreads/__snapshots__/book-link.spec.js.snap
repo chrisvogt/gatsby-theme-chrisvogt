@@ -7,7 +7,7 @@ exports[`BookLink matches the snapshot 1`] = `
   title="The Three-Body Problem"
 >
   <svg
-    className="css-kklm2g-Book"
+    className="css-1u8qly9"
     data-name="Book Preview"
     viewBox="0 0 100 100"
     xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ exports[`BookLink matches the snapshot 1`] = `
   >
     <defs>
       <clipPath
-        id="ec3c1a72-0104-4d8a-830f-57d2245cb2f4"
+        id="clip-:r0:"
       >
         <polyline
           data-name="Book Cover"
@@ -30,7 +30,6 @@ exports[`BookLink matches the snapshot 1`] = `
     <g
       data-name="Book Sheets"
       fill="#1a202c"
-      id="bc5c39bc-971a-4562-b8d4-0c72a22c3f5f"
     >
       <path
         d="M78.6,90.9H12.3V0H78.6ZM14.9,88.3H76V2.6H14.9Z"
@@ -65,7 +64,7 @@ exports[`BookLink matches the snapshot 1`] = `
     <g
       style={
         {
-          "clipPath": "url(#ec3c1a72-0104-4d8a-830f-57d2245cb2f4)",
+          "clipPath": "url(#clip-:r0:)",
         }
       }
     >

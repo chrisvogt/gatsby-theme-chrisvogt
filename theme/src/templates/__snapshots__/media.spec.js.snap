@@ -5,21 +5,21 @@ exports[`Media Post matches the snapshot 1`] = `
   className="layoutMock"
 >
   <div
-    className="css-1b0s1ai-MediaTemplate"
+    className="css-1v7u0sc"
   >
     <div
-      className="css-1atvmrh-MediaTemplate"
+      className="css-1aa5heh"
     >
       <article
         className="h-entry"
       >
         <div
-          className="p-category css-7v7dui-MediaTemplate"
+          className="p-category css-d5b7h2"
         >
           Mock Category
         </div>
         <h1
-          className="p-name css-jvso4-Heading"
+          className="p-name css-12fp046"
         />
         <time
           className="dt-published created"

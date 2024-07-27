@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { Box, Card, Heading } from '@theme-ui/components'
 import ago from 's-ago'
-import PropTypes from 'prop-types'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'
 
@@ -75,19 +74,6 @@ const UserStatus = ({ isLoading, status, actorName }) => {
       </Themed.a>
     </Box>
   )
-}
-
-UserStatus.propTypes = {
-  /** The name of the person the status is about. */
-  actorName: PropTypes.string,
-  /** Widget is in a loading state if true. */
-  isLoading: PropTypes.bool,
-  /** The Goodreads user status object. */
-  status: PropTypes.shape({
-    actionText: PropTypes.string,
-    updated: PropTypes.string,
-    link: PropTypes.string
-  })
 }
 
 export default UserStatus
