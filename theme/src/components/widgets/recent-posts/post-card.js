@@ -3,8 +3,9 @@ import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { Card } from '@theme-ui/components'
 import { Link } from 'gatsby'
+import Category from '../../category'
 
-export default ({ banner, category, date, link, title }) => {
+export default ({ banner, category, date, excerpt, link, title }) => {
   return (
     <Link
       sx={{
@@ -30,7 +31,6 @@ export default ({ banner, category, date, link, title }) => {
                   backgroundSize: `contain`,
                   backgroundRepeat: `no-repeat`,
                   borderRadius: `1px`,
-                  // height: `240px`,
                   width: '100%',
                   aspectRatio: '1.9 / 1',
                   transition: `all 2.5s ease`
@@ -39,7 +39,7 @@ export default ({ banner, category, date, link, title }) => {
             </div>
           )}
 
-          {category && <span sx={{ variant: `text.title`, mt: 1, fontSize: [1] }}>{category.replace('photography/travel', 'Travel Photography')}</span>}
+          {category && <Category type={category} sx={{ mt: 1 }} />}
 
           <Themed.h3 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h3>
 
@@ -53,6 +53,19 @@ export default ({ banner, category, date, link, title }) => {
           >
             {date}
           </time>
+
+          {excerpt && (
+            <Themed.p
+              className='description'
+              sx={{
+                mt: 2,
+                mb: 0,
+                fontSize: 1
+              }}
+            >
+              {excerpt}
+            </Themed.p>
+          )}
         </div>
       </Card>
     </Link>

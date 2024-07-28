@@ -202,7 +202,8 @@ export default merge(tailwind, {
     secondary: `#711E9B`,
     secondaryGradient: `linear-gradient(45deg, #4527a0 0%, #711e9b 100%)`,
     tableText: `#111`,
-    text: `#111`
+    text: `#111`,
+    textMuted: `#333`
   },
 
   fonts: {

@@ -3,6 +3,7 @@ import { Container, Flex, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 
+import Category from '../components/category'
 import Layout from '../components/layout'
 import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
@@ -50,9 +51,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
         <Container sx={{ width: ['', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
           <article className='h-entry'>
             {category && (
-              <Themed.div className='p-category' sx={{ mb: 3, variant: 'text.title' }}>
-                {category}
-              </Themed.div>
+              <Category type={category} sx={{ mb: 2 }} />
             ) }
 
             <PageHeader>

@@ -59,7 +59,6 @@ const PhotographyPage = ({ data }) => {
                 banner={post.frontmatter.banner}
                 category={post.fields.category?.replace('photography/', '')}
                 date={post.frontmatter.date}
-                excerpt={post.excerpt}
                 key={post.fields.id}
                 link={post.fields.path}
                 title={post.frontmatter.title}
@@ -87,7 +86,6 @@ export const pageQuery = graphql`
     allMdx(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
-          excerpt(pruneLength: 255)
           fields {
             category
             id
