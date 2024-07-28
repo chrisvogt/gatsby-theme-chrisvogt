@@ -3,6 +3,7 @@ import { Container, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 
+import Category from '../components/category'
 import Layout from '../components/layout'
 import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
@@ -20,19 +21,22 @@ const PostTemplate = ({ children, data }) => {
         <Container sx={{ position: 'relative', width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
           <article className='h-entry c1v0-blog-post'>
             {category && (
-              <Themed.div className='p-category' sx={{ mb: 3, variant: `text.title` }}>
-                {/* TODO: move this somewhere else so it can be reused */}
-                {category.replace('photography/travel', 'Travel Photography')}
-              </Themed.div>
+              <Category type={category} sx={{ mb: 2 }} />
             )}
 
             <PageHeader>
               {title}
             </PageHeader>
 
-            <time className='dt-published created'>
-              Published {date}
-            </time>
+            <Themed.div sx={{
+              color: `textMuted`,
+              fontFamily: `sans`,
+              fontSize: 1
+            }}>
+              <time className='dt-published created'>
+                Published {date}
+              </time>
+            </Themed.div>
 
             <div className='e-content article-content'>
               {children}

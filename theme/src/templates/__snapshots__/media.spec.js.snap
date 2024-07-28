@@ -14,12 +14,12 @@ exports[`Media Post matches the snapshot 1`] = `
         className="h-entry"
       >
         <div
-          className="p-category css-d5b7h2"
+          className="css-3eizm7"
         >
           Mock Category
         </div>
         <h1
-          className="p-name css-12fp046"
+          className="p-name css-1sus4jf"
         />
         <time
           className="dt-published created"
