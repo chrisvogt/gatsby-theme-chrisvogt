@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { Container, jsx, Link } from 'theme-ui'
+import { Container, jsx, Link as ThemedLink } from 'theme-ui'
+import { Link } from 'gatsby'
 
 import Profiles from './profiles'
-import SwoopTop from '../swoops/swoop-top'
 
 import { getFooterText } from '../../selectors/metadata'
 import useSiteMetadata from '../../hooks/use-site-metadata'
@@ -19,7 +19,9 @@ export default () => {
 
           <div sx={{ mt: [4, 5] }}>
             <span>{footerText ? <div>{footerText}</div> : null}</span>
-            <span><Link href='/rss.xml'>Subscribe via RSS</Link></span>
+            <span><ThemedLink href='/rss.xml'>Subscribe via RSS</ThemedLink></span>
+            {' | '}
+            <span><Link to='/privacy'>Privacy Policy</Link></span>
           </div>
         </div>
       </Container>
