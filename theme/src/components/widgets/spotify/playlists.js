@@ -14,6 +14,10 @@ const Playlists = ({ isLoading, playlists = [] }) => {
       tracks: { total: totalTracksCount = 0 } = {}
     } = item
 
+    if (!totalTracksCount) {
+      return null; // Fixes a bug discovered in Prod when an empty album was returned.
+    }
+
     const { url: thumbnailURL } =
       images.find(
         // Spotify provides playlist cover mosaic images at 60, 300 and 640px.
@@ -32,7 +36,7 @@ const Playlists = ({ isLoading, playlists = [] }) => {
       thumbnailURL,
       details: `${name} (${totalTracksCount} tracks)`
     }
-  })
+  }).filter(Boolean)
 
   return (
     <div sx={{ mb: 4 }}>
