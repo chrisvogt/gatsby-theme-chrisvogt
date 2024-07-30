@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { Container, jsx, Link as ThemedLink } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
 import { Link } from 'gatsby'
+import { Link as ThemedLink } from 'theme-ui'
 
 import Profiles from './profiles'
 
@@ -18,8 +19,12 @@ export default () => {
           <Profiles />
 
           <div sx={{ mt: [4, 5] }}>
-            <span>{footerText ? <div>{footerText}</div> : null}</span>
-            <span><ThemedLink href='/rss.xml'>Subscribe via RSS</ThemedLink></span>
+            {footerText ? <div>{footerText}</div> : null}
+            <span>
+              <ThemedLink href='/rss.xml' sx={{ textDecoration: 'underline' /* synced with Gatsby Link */}}>
+                Subscribe via RSS
+              </ThemedLink>
+            </span>
             {' | '}
             <span><Link to='/privacy'>Privacy Policy</Link></span>
           </div>

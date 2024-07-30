@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { useRef } from 'react'
 
