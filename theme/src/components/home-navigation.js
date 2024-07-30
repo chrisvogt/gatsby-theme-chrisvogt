@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { Fragment, useEffect, useState } from 'react'
-import { Heading, jsx, Link } from 'theme-ui'
+import { jsx, Link } from 'theme-ui'
 import { useRef } from 'react'
-import { Card } from '@theme-ui/components'
 
 import {
   getGithubWidgetDataSource,

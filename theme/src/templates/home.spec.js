@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import HomeTemplate from './home';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 
 // Mock components
 jest.mock('../components/top-navigation', () => () => <div>TopNavigation</div>);
