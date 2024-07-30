@@ -1,63 +1,56 @@
 import React from 'react'
-import { Container, Flex } from 'theme-ui'
+import { Container, Flex, Link } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
-
 import Layout from 'gatsby-theme-chrisvogt/src/components/layout'
 import Seo from 'gatsby-theme-chrisvogt/src/components/seo'
 
-const PrivacyPolicy = () => (
-  <Layout>
-    <Flex
-      sx={{
-        backgroundColor: `colors.background`,
-        flexDirection: `column`,
-        flexGrow: 1,
-        py: 3
-      }}
-    >
-      <Container sx={{ width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
-        <Themed.h1>
-          Privacy Policy
-        </Themed.h1>
+const PrivacyPolicy = () => {
+  return (
+    <Layout>
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          flexGrow: 1,
+          position: 'relative',
+          py: 3
+        }}
+      >
+        <Container sx={{ width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
+          <Themed.h1>Privacy Policy</Themed.h1>
 
-        <Themed.p>
-          This privacy policy outlines how my personal website, www.chrisvogt.me, collects and uses data made available
-          by accessing the site.
-        </Themed.p>
+          <Themed.p>
+            Welcome to my personal website, <b>www.chrisvogt.me</b>. This Privacy Policy explains how I collect, use, and share information about you when you visit my website.
+          </Themed.p>
 
-        <Themed.h2>
-          Third Parties
-        </Themed.h2>
+          <Themed.h2>Information Collection</Themed.h2>
 
-        <Themed.p>
-          This website uses Google Analytics to page view, impression, and interaction events. This is done for personal
-          use to help guide the layout and content of the site. I collect and review this data to learn more about:
-        </Themed.p>
+          <Themed.p>
+            I use Google Analytics to track page views, impressions, and interactions. This data helps me understand how visitors use my site and improve its layout and content. The information I collect includes:
+          </Themed.p>
 
-        <Themed.ul>
-          <li>Who visits the website.</li>
-          <li>How the website is used.</li>
-          <li>Whether visitors return to the website or not.</li>
-          <li>What content, design, and features are engaging and what aren't.</li>
-        </Themed.ul>
+          <Themed.ul>
+            <Themed.li>How visitors find my site.</Themed.li>
+            <Themed.li>How visitors navigate and use my site.</Themed.li>
+            <Themed.li>Whether visitors return to my site.</Themed.li>
+            <Themed.li>What content visitors engage with.</Themed.li>
+          </Themed.ul>
 
-        <Themed.p>
-          Please review{' '}
-          <em>
-            <a href='https://policies.google.com/privacy' title='Google Privacy & Terms'>
-              Google Privacy & Terms
-            </a>
-          </em>{' '}
-          to learn more about the Google Analytics data collection policies and practices.
-        </Themed.p>
+          <Themed.p>
+            Please review <Link href="https://policies.google.com/privacy" title="Google Privacy & Terms">Google Privacy & Terms</Link> for more details on how Google Analytics collects and processes data.
+          </Themed.p>
 
-        <div>
-          <em>Last updated June 29, 2020</em>
-        </div>
-      </Container>
-    </Flex>
-  </Layout>
-)
+          <Themed.h2>Data Usage</Themed.h2>
+
+          <Themed.p>
+            The data collected through Google Analytics is used solely for personal purposes to improve the user experience on my website. I do not share this data with third parties for marketing or advertising purposes.
+          </Themed.p>
+
+          <Themed.p><em>Last updated July 29, 2024</em></Themed.p>
+        </Container>
+      </Flex>
+    </Layout>
+  )
+}
 
 export const Head = () => <Seo title='Privacy Policy' />
 
