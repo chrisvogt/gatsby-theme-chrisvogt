@@ -49,7 +49,7 @@ const HomeHeaderContent = () => {
         I'm Chris Vogt.
       </Themed.h1>
       <Themed.p>
-        I'm a Senior Software Engineer at GoDaddy, working on intelligent customer dashboards and experiences that help people
+        I'm a Principal Software Engineer at GoDaddy, working on intelligent customer dashboards and experiences that help people
         build and grow their small businesses and online presence. Outside of work, I live in San Francisco, and my
         hobbies include practicing piano and recording music, photography, traveling, and meeting and learning more
         about people.
