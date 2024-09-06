@@ -21,7 +21,7 @@ describe('HomeHeaderContent', () => {
     expect(screen.getByText(headlineText)).toBeInTheDocument();
     
     // Check for the paragraphs
-    expect(screen.getByText(/I'm a Senior Software Engineer/i)).toBeInTheDocument();
+    expect(screen.getByText(/I'm a Principal Software Engineer/i)).toBeInTheDocument();
     expect(screen.getByText(/This website is a digital garden/i)).toBeInTheDocument();
   });
 
