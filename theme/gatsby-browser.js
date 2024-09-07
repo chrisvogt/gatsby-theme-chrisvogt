@@ -3,7 +3,7 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 import './src/styles/global.css'
 
-import React from 'react';
+import React from 'react'
 
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
@@ -11,7 +11,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
       key='sidekickai-config'
       dangerouslySetInnerHTML={{
         __html: `
-          window.__sidekickai = { key: '${process.env.GATSBY_SIDEKICK_API_KEY}' };
+          window.__sidekickai = { key: '${process.env.GATSBY_SIDEKICK_API_KEY}' }
         `,
       }}
     />,
