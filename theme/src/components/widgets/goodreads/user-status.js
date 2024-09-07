@@ -9,7 +9,7 @@ import { TextRow } from 'react-placeholder/lib/placeholders'
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const stripHtmlElements = text => text.replace(/<[^>]+>/g, '')
+const removeAllHtmlTags = input => input.replace(/<|>/g, "") 
 
 const renderStarsForRating = count => {
   const repeat = (char, n) => Array(n).fill(char).join('')
@@ -19,7 +19,7 @@ const renderStarsForRating = count => {
 
 const mapStatusToTemplate = {
   review: ({ book, rating }) => `rated ${book.title} ${rating} out of 5 stars: ${renderStarsForRating(rating)}.`,
-  userstatus: ({ actionText }) => stripHtmlElements(actionText)
+  userstatus: ({ actionText }) => removeAllHtmlTags(actionText)
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
