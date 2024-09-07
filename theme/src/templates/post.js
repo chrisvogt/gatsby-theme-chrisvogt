@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react';
 import { Container, jsx } from 'theme-ui'
 import { Script, ScriptStrategy } from 'gatsby';
 import { Themed } from '@theme-ui/mdx'
@@ -18,7 +19,6 @@ const PostTemplate = ({ children, data }) => {
 
   return (
     <>
-      {/* <Script id='setup-sidekick' strategy={ ScriptStrategy.postHydrate }>{`window.__sidekickai = { key: 'bb18f433-45b3-4e24-abf8-ecdd52414528' };`}</Script> */}
       <Script
         crossOrigin='anonymous'
         defer={ true }
