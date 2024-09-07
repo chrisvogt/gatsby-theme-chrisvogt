@@ -1,5 +1,11 @@
 const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 
+console.log(`The NODE env is: ${process.env.NODE_ENV}`)
+
+require("dotenv").config({
+  path: `../.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     avatarURL: '/images/avatar-256px.jpg',

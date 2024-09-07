@@ -9,3 +9,4 @@ public
 yarn-error.log
 www.chrisvogt.me/certs/*
 !www.chrisvogt.me/certs/empty
+.env*
