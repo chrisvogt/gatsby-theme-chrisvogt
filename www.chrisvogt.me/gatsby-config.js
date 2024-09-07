@@ -1,7 +1,5 @@
 const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 
-console.log(`The NODE env is: ${process.env.NODE_ENV}`)
-
 require("dotenv").config({
   path: `../.env.${process.env.NODE_ENV}`,
 })
@@ -47,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.NODE_ENV === 'production' ? 'UA-33558417-1' : 'UA-33558417-14',
+        trackingId: process.env.GA_PROPERTY_ID,
         head: false,
         respectDNT: true
       }
@@ -63,15 +61,14 @@ module.exports = {
             resolve: 'gatsby-plugin-newrelic',
             options: {
               config: {
-                instrumentationType: 'proAndSPA',
-                accountId: '2238420',
-                trustKey: '2238420',
-                agentID: '1120098708',
-                licenseKey: 'b8fd757b93',
-                applicationID: '1120098708',
+                accountId: process.env.NEW_RELIC_ACCOUNT_ID,
+                agentID: process.env.NEW_RELIC_AGENT_ID,
+                applicationID: process.env.NEW_RELIC_APPLICATION_ID,
                 beacon: 'bam.nr-data.net',
-                errorBeacon: 'bam.nr-data.net'
-              }
+                errorBeacon: 'bam.nr-data.net',
+                instrumentationType: 'proAndSPA',
+                licenseKey: process.env.NEW_RELIC_LICENSE_KEY,
+                trustKey: process.env.NEW_RELIC_TRUST_KEY              }
             }
           }
         ]
