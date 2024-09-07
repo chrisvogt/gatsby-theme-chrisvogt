@@ -22,7 +22,9 @@ const PrivacyPolicy = () => {
             Welcome to my personal website, <b>www.chrisvogt.me</b>. This Privacy Policy explains how I collect, use, and share information about you when you visit my website.
           </Themed.p>
 
-          <Themed.h2>Information Collection</Themed.h2>
+          <Themed.h2>Information Collected</Themed.h2>
+
+          <Themed.h2>Google Analytics</Themed.h2>
 
           <Themed.p>
             I use Google Analytics to track page views, impressions, and interactions. This data helps me understand how visitors use my site and improve its layout and content. The information I collect includes:
@@ -37,6 +39,12 @@ const PrivacyPolicy = () => {
 
           <Themed.p>
             Please review <Link href="https://policies.google.com/privacy" title="Google Privacy & Terms">Google Privacy & Terms</Link> for more details on how Google Analytics collects and processes data.
+          </Themed.p>
+
+          <Themed.h2>New Relic</Themed.h2>
+
+          <Themed.p>
+            I use New Relic for both browser tracking and Application Performance Management (APM). This data helps me measure the performance of my site and the services it depends on.
           </Themed.p>
 
           <Themed.h2>Data Usage</Themed.h2>
