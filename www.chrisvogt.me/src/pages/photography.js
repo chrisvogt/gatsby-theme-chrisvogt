@@ -57,7 +57,7 @@ const PhotographyPage = ({ data }) => {
             {posts.map(post => (
               <PostCard
                 banner={post.frontmatter.banner}
-                category={post.fields.category?.replace('photography/', '')}
+                category={post.fields.category}
                 date={post.frontmatter.date}
                 key={post.fields.id}
                 link={post.fields.path}
