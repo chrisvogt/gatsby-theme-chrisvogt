@@ -38,7 +38,7 @@ const MusicPage = ({ data }) => {
           >
             {posts.map(post => (
               <PostCard
-                category={post.fields.category}
+                category={post.fields.category?.replace('music/', '')}
                 date={post.frontmatter.date}
                 key={post.fields.id}
                 link={post.fields.path}
