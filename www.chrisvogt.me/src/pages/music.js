@@ -11,7 +11,7 @@ import PostCard from '../../../theme/src/components/widgets/recent-posts/post-ca
 import Seo from '../../../theme/src/components/seo'
 
 const MusicPage = ({ data }) => {
-  const posts = getPosts(data)?.filter(post => post.fields.category === 'music')
+  const posts = getPosts(data)?.filter(post => post.fields.category?.startsWith('music'))
   return (
     <Layout>
       <Flex
