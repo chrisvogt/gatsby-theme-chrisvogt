@@ -16,7 +16,7 @@
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-newrelic": "^2.6.0",
     "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-theme-chrisvogt": "*",
+    "gatsby-theme-chrisvogt": "workspace:*",
     "prettier": "3.3.3",
     "react": "^18",
     "react-dom": "^18"
