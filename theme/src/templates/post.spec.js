@@ -2,16 +2,18 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { useStaticQuery } from 'gatsby'
 
-import Post from './post'
+import Post, { Head } from './post'
 
 const data = {
   mdx: {
     fields: {
       category: 'Mock Category',
-      title: 'A Mock Blog Post'
     },
     frontmatter: {
       date: 'Mon, 17 Jun 2024 03:30:26 GMT',
+      title: 'A Mock Blog Post',
+      description: 'This is a mock description',
+      banner: 'mock-banner.jpg',
     }
   }
 }
@@ -37,7 +39,26 @@ describe('Blog Post', () => {
   })
 
   it('matches the snapshot', () => {
-    const tree = renderer.create(<Post data={ data } children={ BlogPostContent } />).toJSON()
+    const tree = renderer.create(<Post data={ data }>{ BlogPostContent }</Post>).toJSON()
     expect(tree).toMatchSnapshot()
+  })
+
+  it('does not render category when not provided', () => {
+    const noCategoryData = {
+      ...data,
+      mdx: {
+        ...data.mdx,
+        fields: {
+          category: null
+        }
+      }
+    }
+    const tree = renderer.create(<Post data={ noCategoryData }>{ BlogPostContent }</Post>).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders Seo component with the correct props', () => {
+    const seoTree = renderer.create(<Head data={ data } />).toJSON()
+    expect(seoTree).toMatchSnapshot()
   })
 })
