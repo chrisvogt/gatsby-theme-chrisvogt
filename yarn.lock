@@ -7213,13 +7213,6 @@ gatsby-plugin-mdx@^5.13.1:
     unist-util-visit "^4.1.2"
     vfile "^5.3.7"
 
-gatsby-plugin-newrelic@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-newrelic/-/gatsby-plugin-newrelic-2.6.0.tgz#0d25c3e70e696945d3186a89c7a1e8733a926d4b"
-  integrity sha512-5ToEx5ojxVj4Z3n3tXGsmwygx+Cf3B0keZ3bmYLLi8zF1K1m5r2OIjRbgZvGqikkhFNP+hyYATqPZRFaLumOxQ==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-
 gatsby-plugin-page-creator@^5.13.1:
   version "5.13.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-5.13.1.tgz#41e844a16696e7a27d1909413a1102c314e86220"
