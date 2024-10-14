@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blog Post matches the snapshot 1`] = `
+exports[`Blog Post does not render category when not provided 1`] = `
 <div
   className="layoutMock"
 >
@@ -13,14 +13,11 @@ exports[`Blog Post matches the snapshot 1`] = `
       <article
         className="h-entry c1v0-blog-post"
       >
-        <div
-          className="css-3eizm7"
-        >
-          Mock Category
-        </div>
         <h1
           className="p-name css-1sus4jf"
-        />
+        >
+          A Mock Blog Post
+        </h1>
         <div
           className="css-1pa74su"
         >
@@ -42,4 +39,56 @@ exports[`Blog Post matches the snapshot 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`Blog Post matches the snapshot 1`] = `
+<div
+  className="layoutMock"
+>
+  <div
+    className="css-43plg"
+  >
+    <div
+      className="css-1qfp07i"
+    >
+      <article
+        className="h-entry c1v0-blog-post"
+      >
+        <div
+          className="css-3eizm7"
+        >
+          Mock Category
+        </div>
+        <h1
+          className="p-name css-1sus4jf"
+        >
+          A Mock Blog Post
+        </h1>
+        <div
+          className="css-1pa74su"
+        >
+          <time
+            className="dt-published created"
+          >
+            Published 
+            Mon, 17 Jun 2024 03:30:26 GMT
+          </time>
+        </div>
+        <div
+          className="e-content article-content"
+        >
+          <div>
+            Lorum ipsum dolor sit amet.
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Blog Post renders Seo component with the correct props 1`] = `
+<div
+  className="seoMock"
+/>
 `;
