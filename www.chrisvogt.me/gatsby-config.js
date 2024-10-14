@@ -1,6 +1,6 @@
 const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 
-require("dotenv").config({
+require('dotenv').config({
   path: `../.env.${process.env.NODE_ENV}`,
 })
 
