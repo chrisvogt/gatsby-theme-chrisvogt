@@ -8,11 +8,13 @@ import VisibilitySensor from 'react-visibility-sensor'
 jest.mock('react-visibility-sensor', () => {
   return jest.fn(({ onChange, children }) => {
     const visibilityState = { isVisible: false }
-    // Call the onChange handler with the visibility state
     onChange(visibilityState.isVisible)
     return <div>{children}</div>
   })
 })
+
+// Mock placeholder component
+const MockPlaceholder = () => <div data-testid='placeholder'>Placeholder</div>
 
 describe('LazyLoad', () => {
   afterEach(() => {
@@ -22,7 +24,7 @@ describe('LazyLoad', () => {
   it('renders the placeholder initially', () => {
     render(
       <LazyLoad>
-        <div data-testid="content">Lazy Loaded Content</div>
+        <div data-testid='content'>Lazy Loaded Content</div>
       </LazyLoad>
     )
 
@@ -39,12 +41,30 @@ describe('LazyLoad', () => {
 
     render(
       <LazyLoad>
-        <div data-testid="content">Lazy Loaded Content</div>
+        <div data-testid='content'>Lazy Loaded Content</div>
       </LazyLoad>
     )
 
     // Now the content should be visible
     expect(screen.getByTestId('content')).toBeInTheDocument()
+  })
+
+  it('renders the custom placeholder when provided', () => {
+    // Mock visibility to stay false so the placeholder is rendered
+    VisibilitySensor.mockImplementation(({ onChange, children }) => {
+      onChange(false) // Simulate that the component is not visible
+      return <div>{children}</div>
+    })
+
+    render(
+      <LazyLoad placeholder={<MockPlaceholder />}>
+        <div data-testid='content'>Lazy Loaded Content</div>
+      </LazyLoad>
+    )
+
+    // Expect the custom placeholder to be rendered initially
+    expect(screen.getByTestId('placeholder')).toBeInTheDocument()
+    expect(screen.queryByTestId('content')).not.toBeInTheDocument()
   })
 
   it('does not re-render children if already visible', () => {
@@ -55,7 +75,7 @@ describe('LazyLoad', () => {
 
     const { rerender } = render(
       <LazyLoad>
-        <div data-testid="content">Lazy Loaded Content</div>
+        <div data-testid='content'>Lazy Loaded Content</div>
       </LazyLoad>
     )
 
@@ -70,11 +90,28 @@ describe('LazyLoad', () => {
 
     rerender(
       <LazyLoad>
-        <div data-testid="content">Lazy Loaded Content</div>
+        <div data-testid='content'>Lazy Loaded Content</div>
       </LazyLoad>
     )
 
     // The content should still be visible
     expect(screen.getByTestId('content')).toBeInTheDocument()
+  })
+
+  it('does not render children when visibility remains false', () => {
+    // Mock the visibility sensor to keep content invisible
+    VisibilitySensor.mockImplementation(({ onChange, children }) => {
+      onChange(false) // Simulate that the component is not visible
+      return <div>{children}</div>
+    })
+
+    render(
+      <LazyLoad>
+        <div data-testid='content'>Lazy Loaded Content</div>
+      </LazyLoad>
+    )
+
+    // The content should not be visible
+    expect(screen.queryByTestId('content')).not.toBeInTheDocument()
   })
 })
