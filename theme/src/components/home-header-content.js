@@ -49,14 +49,12 @@ const HomeHeaderContent = () => {
         I'm Chris Vogt.
       </Themed.h1>
       <Themed.p>
-        I'm a Principal Software Engineer at GoDaddy, working on intelligent customer dashboards and experiences that help people
-        build and grow their small businesses and online presence. Outside of work, I live in San Francisco, and my
-        hobbies include practicing piano and recording music, photography, traveling, and meeting and learning more
-        about people.
+        I'm a Software Engineer in San Francisco who enjoys practicing piano and recording music, photography, traveling, and meeting and learning more
+        about people. I work at GoDaddy, building intelligent customer dashboards and experiences that help people grow their small businesses and
+        online presence.
       </Themed.p>
       <Themed.p>
-        This website is a digital garden where I share my passions, projects, and learnings. This site is designed and
-        built by me and is published open source to inspire and help others grow and learn with me.
+        This website is a digital garden where I share my passions, projects, and learnings.
       </Themed.p>
     </div>
   )

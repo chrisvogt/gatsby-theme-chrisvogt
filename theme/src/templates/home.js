@@ -64,9 +64,9 @@ const HomeTemplate = props => {
 
 export const Head = () => (
   <Seo
-    title='Chris Vogt - Principal Software Engineer in San Francisco | Digital Garden of Photography, Piano, and Travel'
-    description="Explore Chris Vogt's digital garden. A Principal Software Engineer at GoDaddy, Chris shares his interest in photography, piano, and travel."
-    keywords='Chris Vogt, Principal Software Engineer, GoDaddy, photography, piano, travel, blog, digital garden'
+    title='Chris Vogt - Software Engineer in San Francisco | Digital Garden of Photography, Piano, and Travel'
+    description="Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
+    keywords='Chris Vogt, Software Engineer in San Francisco, GoDaddy engineer blog, photography blog, piano recordings, travel blog, personal blog, digital garden'
   >
     <meta property="og:url" content="https://www.chrisvogt.me" />
     <meta property="og:type" content="website" />
