@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
 import { Container, jsx } from 'theme-ui'
-import { Script, ScriptStrategy } from 'gatsby';
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
 
@@ -18,44 +17,35 @@ const PostTemplate = ({ children, data }) => {
   const title = mdx.frontmatter.title
 
   return (
-    <>
-      <Script
-        crossOrigin='anonymous'
-        defer={ true }
-        src='https://parrot-shop-ai.fly.dev/trk'
-        strategy={ ScriptStrategy.postHydrate }
-        id='initialize-sidekick'
-      />
-      <Layout>
-        <Themed.div sx={{ py: 3 }}>
-          <Container sx={{ position: 'relative', width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
-            <article className='h-entry c1v0-blog-post'>
-              {category && (
-                <Category type={category} sx={{ mb: 2 }} />
-              )}
+    <Layout>
+      <Themed.div sx={{ py: 3 }}>
+        <Container sx={{ position: 'relative', width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
+          <article className='h-entry c1v0-blog-post'>
+            {category && (
+              <Category type={category} sx={{ mb: 2 }} />
+            )}
 
-              <PageHeader>
-                {title}
-              </PageHeader>
+            <PageHeader>
+              {title}
+            </PageHeader>
 
-              <Themed.div sx={{
-                color: `textMuted`,
-                fontFamily: `sans`,
-                fontSize: 1
-              }}>
-                <time className='dt-published created'>
-                  Published {date}
-                </time>
-              </Themed.div>
+            <Themed.div sx={{
+              color: `textMuted`,
+              fontFamily: `sans`,
+              fontSize: 1
+            }}>
+              <time className='dt-published created'>
+                Published {date}
+              </time>
+            </Themed.div>
 
-              <div className='e-content article-content'>
-                {children}
-              </div>
-            </article>
-          </Container>
-        </Themed.div>
-      </Layout>
-    </>
+            <div className='e-content article-content'>
+              {children}
+            </div>
+          </article>
+        </Container>
+      </Themed.div>
+    </Layout>
   )
 }
 
