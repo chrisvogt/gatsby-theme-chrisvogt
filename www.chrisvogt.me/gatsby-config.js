@@ -4,11 +4,21 @@ require('dotenv').config({
   path: `../.env.${process.env.NODE_ENV}`,
 })
 
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.chrisvogt.me',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     avatarURL: '/images/avatar-256px.jpg',
     baseURL: 'https://www.chrisvogt.me',
-    siteUrl: 'https://www.chrisvogt.me',
+    siteUrl,
     description: 'Software Engineer in San Francisco blogging about code, photography and piano music.',
     headline: 'Chris Vogt',
     imageURL: '/images/og-image.png',
@@ -51,6 +61,28 @@ module.exports = {
       }
     },
     gatsbyPluginFeedConfig,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{userAgent: '*', allow: ['/']}],
+            sitemap: `${siteUrl}/sitemap-index.xml`
+          },
+          'branch-deploy': {
+            policy: [{userAgent: '*', disallow: ['/']}],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{userAgent: '*', disallow: ['/']}],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {}
