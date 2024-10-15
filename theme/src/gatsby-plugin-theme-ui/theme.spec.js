@@ -1,4 +1,4 @@
-import theme from './theme'
+import theme, { floatOnHover } from './theme'
 import { tailwind } from '@theme-ui/presets'
 import { merge } from 'theme-ui'
 
@@ -43,10 +43,28 @@ describe('Theme Configuration', () => {
     expect(theme.buttons.secondary).toHaveProperty('bg')
   })
 
-  it('contains animations like floatOnHover', () => {
-    expect(theme.variants).toHaveProperty('cards')
-    expect(theme.variants.cards).toHaveProperty('dark')
-    expect(theme).toHaveProperty('styles')
-    expect(theme.styles).toHaveProperty('root')
+  // Test floatOnHover directly from the export
+  it('exports floatOnHover animation', () => {
+    expect(floatOnHover).toHaveProperty('transition')
+    expect(floatOnHover['&:hover, &:focus']).toHaveProperty('transform', 'scale(1.015)')
+  })
+
+  // Check if it's used in specific components like PostCard
+  it('applies floatOnHover to PostCard', () => {
+    const postCardStyles = theme.cards.PostCard
+    expect(postCardStyles).toMatchObject(floatOnHover)
+  })
+
+  it('applies floatOnHover to InstagramItem', () => {
+    const instagramItemStyles = theme.styles.InstagramItem
+    expect(instagramItemStyles).toMatchObject(floatOnHover)
+  })
+
+  it('has reduced motion preference for emojis', () => {
+    const reducedMotionStyles = theme.global?.['@media (prefers-reduced-motion: reduce)']
+    
+    expect(reducedMotionStyles).toBeDefined()
+    expect(reducedMotionStyles['.emoji']).toBeDefined()
+    expect(reducedMotionStyles['.emoji']).toHaveProperty('animation', 'none !important')
   })
 })

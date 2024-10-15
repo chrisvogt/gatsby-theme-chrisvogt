@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Badge, jsx } from 'theme-ui'
 
-const ProfileMetricsBadge = ({ isLoading, metrics }) => (
+const ProfileMetricsBadge = ({ isLoading, metrics = [] }) => (
   <div
     sx={{
       fontFamily: 'heading',

@@ -4,7 +4,7 @@ import { faImages } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType, permalink } = {} }) => {
-  const isCarousel = mediaType === 'CAROUSEL_ALBUM"'
+  const isCarousel = mediaType === 'CAROUSEL_ALBUM'
 
   return (
     <button
@@ -18,6 +18,7 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
     >
       {isCarousel && (
         <div
+          data-testid='carousel-icon'
           sx={{
             color: `white`,
             position: `absolute`,
