@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import { useStaticQuery } from 'gatsby'
 
 import Media, { Head } from './media'
@@ -57,9 +57,9 @@ describe('Media Post', () => {
     jest.clearAllMocks()
   })
 
-  // Helper function to wrap components in the ThemeProvider
+  // Helper function to wrap components in the ThemeUIProvider
   const renderWithTheme = (component) =>
-    renderer.create(<ThemeProvider theme={mockTheme}>{component}</ThemeProvider>)
+    renderer.create(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
 
   // Test with no media sources
   it('renders correctly with no media sources', () => {

@@ -2,7 +2,7 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Footer from './footer'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import useSiteMetadata from '../../hooks/use-site-metadata' // Ensure correct import
 import { getFooterText } from '../../selectors/metadata'
 
@@ -28,7 +28,7 @@ const mockTheme = {
 }
 
 // Helper function to render with theme
-const renderWithTheme = component => render(<ThemeProvider theme={mockTheme}>{component}</ThemeProvider>)
+const renderWithTheme = component => render(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
 
 describe('Footer', () => {
   beforeEach(() => {
