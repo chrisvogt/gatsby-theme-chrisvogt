@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import HomeTemplate, { Head } from './home'
 import { useStaticQuery } from 'gatsby'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 
 // Mock components
 jest.mock('../components/footer', () => () => <footer>Footer</footer>)
@@ -46,7 +46,7 @@ const mockTheme = {
 }
 
 // Helper function to render with theme
-const renderWithTheme = component => render(<ThemeProvider theme={mockTheme}>{component}</ThemeProvider>)
+const renderWithTheme = component => render(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
 
 describe('HomeTemplate', () => {
   it('renders correctly with given data', () => {

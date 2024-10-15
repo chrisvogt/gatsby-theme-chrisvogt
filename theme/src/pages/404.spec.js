@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NotFoundPage from './404';
-import { ThemeProvider } from 'theme-ui';
+import { ThemeUIProvider } from 'theme-ui';
 
 // Mock Layout component
 jest.mock('../components/layout', () => ({ children }) => (
@@ -23,7 +23,7 @@ const mockTheme = {
 
 // Helper function to render with theme
 const renderWithTheme = (component) =>
-  render(<ThemeProvider theme={mockTheme}>{component}</ThemeProvider>);
+  render(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>);
 
 describe('404 Page', () => {
   it('renders correctly', () => {

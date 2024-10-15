@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import UserProfile from './user-profile'
 import { useThemeUI } from 'theme-ui'
 import MetricCard from '../metric-card'
@@ -33,8 +33,8 @@ const mockTheme = {
   }
 }
 
-// Helper function to wrap in ThemeProvider
-const renderWithTheme = ui => render(<ThemeProvider theme={mockTheme}>{ui}</ThemeProvider>)
+// Helper function to wrap in ThemeUIProvider
+const renderWithTheme = ui => render(<ThemeUIProvider theme={mockTheme}>{ui}</ThemeUIProvider>)
 
 describe('UserProfile', () => {
   const profileData = {
