@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import { Grid } from '@theme-ui/components'
 
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import useRecentPosts from '../../../hooks/use-recent-posts'
 
