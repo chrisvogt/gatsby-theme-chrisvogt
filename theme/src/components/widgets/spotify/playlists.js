@@ -6,6 +6,11 @@ import { Themed } from '@theme-ui/mdx'
 
 const Playlists = ({ isLoading, playlists = [] }) => {
   const items = playlists.map(item => {
+    if (!item) {
+      // Added 11/28/24 to fix a bug where an empty playlist was being returned
+      return;
+    }
+
     const {
       external_urls: { spotify: spotifyURL } = {},
       id,
