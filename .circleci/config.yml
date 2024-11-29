@@ -17,10 +17,13 @@ jobs:
             - pnpm-store-
 
       - run:
-          name: Install Dependencies
+          name: Install pnpm
           command: |
-            corepack enable
-            pnpm install --frozen-lockfile
+            npm install -g pnpm
+
+      - run:
+          name: Install Dependencies
+          command: pnpm install --frozen-lockfile
 
       - save_cache:
           name: Save pnpm Package Cache
