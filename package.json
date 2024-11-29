@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build": "pnpm --filter=www.chrisvogt.me build",
     "develop": "pnpm --filter=www.chrisvogt.me develop:https",
     "test": "pnpm --filter=gatsby-theme-chrisvogt test",
     "test:watch": "pnpm --filter=gatsby-theme-chrisvogt test:watch",
