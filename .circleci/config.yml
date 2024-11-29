@@ -11,24 +11,26 @@ jobs:
       - checkout
 
       - restore_cache:
-          name: Restore Yarn Package Cache
+          name: Restore pnpm Package Cache
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-            - yarn-packages-
+            - pnpm-store-{{ checksum "pnpm-lock.yaml" }}
+            - pnpm-store-
 
       - run:
           name: Install Dependencies
-          command: yarn install --immutable
+          command: |
+            corepack enable
+            pnpm install --frozen-lockfile
 
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          name: Save pnpm Package Cache
+          key: pnpm-store-{{ checksum "pnpm-lock.yaml" }}
           paths:
-            - ~/.cache/yarn
+            - ~/.pnpm-store
 
       - run:
           name: Unit Tests w/Coverage
-          command: yarn workspace gatsby-theme-chrisvogt test:coverage --maxWorkers=2
+          command: pnpm workspace gatsby-theme-chrisvogt run test:coverage --maxWorkers=2
 
       - store_artifacts:
           path: theme/coverage
