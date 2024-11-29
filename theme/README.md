@@ -8,7 +8,7 @@ This directory contains a custom [GatsbyJS](https://www.gatsbyjs.com/) theme use
 
 ## Installation
 
-This repository is a monorepo that uses [Yarn Workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/) to manage projects. Run `yarn` in the root directory to install dependencies for both workspaces.
+This repository is a monorepo that uses [pnpm](https://pnpm.io/) to manage projects. Run `pnpm install` in the root directory to install dependencies for both workspaces.
 
 ## Configuration
 

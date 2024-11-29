@@ -4,6 +4,8 @@ jobs:
   build:
     docker:
       - image: cimg/node:20.9.0  # Updated to Node 20.9.0
+    resource_class: large
+    parallelism: 1
 
     working_directory: ~/gatsby-theme-chrisvogt
 
@@ -11,28 +13,35 @@ jobs:
       - checkout
 
       - restore_cache:
-          name: Restore Yarn Package Cache
+          name: Restore pnpm Package Cache
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-            - yarn-packages-
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+            - pnpm-packages-
+
+      - run:
+          name: Install pnpm Package Manager
+          command: |
+            corepack enable
+            corepack prepare pnpm@latest-9 --activate
+            pnpm config set store-dir .pnpm-store
 
       - run:
           name: Install Dependencies
-          command: yarn install --immutable
+          command: |
+            pnpm install --frozen-lockfile
 
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          name: Save pnpm Package Cache
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
-            - ~/.cache/yarn
+            - .pnpm-store
 
       - run:
           name: Unit Tests w/Coverage
-          command: yarn workspace gatsby-theme-chrisvogt test:coverage --maxWorkers=2
+          command: pnpm workspace gatsby-theme-chrisvogt run test:coverage --maxWorkers=2
 
       - store_artifacts:
           path: theme/coverage
 
       - run:
-          name: Upload Coverage Report
-          command: bash <(curl -s https://codecov.io/bash)
+  

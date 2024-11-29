@@ -24,18 +24,18 @@ This repository contains my personal website and blog, [www.chrisvogt.me](https:
 
 ## Local development
 
-This repository uses [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to separate the theme code from the content.
+This repository uses [workspaces](https://pnpm.io/workspaces) to separate the theme code from the content.
 
-To install, use Yarn. From the root, do:
+To install, use pnpm. From the root, do:
 
 ```sh
-yarn
+pnpm install
 ```
 
 To work on the theme, open the `/theme` directory in an editor and run the following command to preview the website using `localhost`.
 
 ```sh
-yarn workspace www.chrisvogt.me develop
+pnpm --filter=www.chrisvogt.me develop
 ```
 
 I use HTTPS and SSL in my local development environment. A command is available for that, but you'll need to add SSL certificates to `/www.chrisvogt.me/certs`. I use [mkcert](https://github.com/FiloSottile/mkcert) to generate self-signed certificates.
@@ -43,34 +43,34 @@ I use HTTPS and SSL in my local development environment. A command is available 
 After adding `www.dev-chrisvogt.me-key.pem` and `www.dev-chrisvogt.me.pem` to your certs directory, use the following command to develop on [https://www.dev-chrisvogt.me:8000](https://www.dev-chrisvogt.me:8000).
 
 ```sh
-yarn workspace www.chrisvogt.me develop:https
+pnpm --filter=www.chrisvogt.me develop:https
 
-# Or the shorcut
-yarn develop
+# Or the shorcut, from the project root
+pnpm develop
 ```
 
 The unit tests are in the gatsby-theme-chrisvogt workspace. To run unit tests in watch mode or update snapshot tests, use the test:watch command.
 
 ```sh
-yarn workspace gatsby-theme-chrisvogt test:watch
+pnpm --filter=gatsby-theme-chrisvogt test:watch
 
-# Or the shortcut
-yarn test:watch
+# Or the shortcut, from the project root
+pnpm test:watch
 ```
 
 To run the unit tests once, just use test.
 
 ```sh
-yarn workspace gatsby-theme-chrisvogt test
+pnpm --filter=gatsby-theme-chrisvogt test
 
-# Or the shortcut
-yarn test
+# Or the shortcut, from the project root
+pnpm test
 ```
 
 To build the production website, run the following.
 
 ```sh
-yarn workspace www.chrisvogt.me build
+pnpm --filter=www.chrisvogt.me build
 ```
 
 The website build will be output to `/www.chrisvogt.me/public`.

@@ -36,6 +36,7 @@ module.exports = () => ({
     }
   },
   plugins: [
+    'gatsby-plugin-pnpm',
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

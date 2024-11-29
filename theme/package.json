@@ -23,8 +23,7 @@
     "test:coverage": "jest --coverage --colors"
   },
   "engines": {
-    "node": ">=14.18.1",
-    "yarn": "^1.0.0"
+    "node": ">=14.18.1"
   },
   "os": [
     "darwin",
@@ -43,6 +42,7 @@
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^16.0.0",
     "@testing-library/react-hooks": "^8.0.1",
+    "@types/react": "^18.3.12",
     "babel-jest": "^29.6.2",
     "babel-preset-gatsby": "^3.11.0",
     "identity-obj-proxy": "^3.0.0",
@@ -97,7 +97,7 @@
     "prettier": "3.3.3",
     "prismjs": "^1.29.0",
     "react": "^18",
-    "react-dark-mode-toggle-2": "github:chrisvogt/react-dark-mode-toggle-2#button-attributes-build",
+    "react-dark-mode-toggle-2": "^2.1.1",
     "react-dom": "^18",
     "react-images": "^1.2.0-beta.7",
     "react-photo-gallery": "^8.0.0",
