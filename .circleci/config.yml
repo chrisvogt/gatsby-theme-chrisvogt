@@ -4,6 +4,8 @@ jobs:
   build:
     docker:
       - image: cimg/node:20.9.0  # Updated to Node 20.9.0
+    resource_class: large
+    parallelism: 1
 
     working_directory: ~/gatsby-theme-chrisvogt
 
@@ -13,23 +15,26 @@ jobs:
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
-            - pnpm-store-{{ checksum "pnpm-lock.yaml" }}
-            - pnpm-store-
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+            - pnpm-packages-
 
       - run:
-          name: Install pnpm
+          name: Install pnpm Package Manager
           command: |
-            npm install -g pnpm
+            corepack enable
+            corepack prepare pnpm@latest-9 --activate
+            pnpm config set store-dir .pnpm-store
 
       - run:
           name: Install Dependencies
-          command: pnpm install --frozen-lockfile
+          command: |
+            pnpm install --frozen-lockfile
 
       - save_cache:
           name: Save pnpm Package Cache
-          key: pnpm-store-{{ checksum "pnpm-lock.yaml" }}
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
-            - ~/.pnpm-store
+            - .pnpm-store
 
       - run:
           name: Unit Tests w/Coverage
@@ -39,5 +44,4 @@ jobs:
           path: theme/coverage
 
       - run:
-          name: Upload Coverage Report
-          command: bash <(curl -s https://codecov.io/bash)
+  
