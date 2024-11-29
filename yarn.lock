@@ -4818,7 +4818,7 @@ cjs-module-lexer@^1.0.0:
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.4.0.tgz#677de7ed7efff67cc40c9bf1897fea79d41b5215"
   integrity sha512-N1NGmowPlGBLsOZLPvm48StN04V4YvQRL0i6b7ctrVY3epjP/ct7hFLOItz6pDIvRjwpfPxi52a2UWV2ziir8g==
 
-classnames@^2.3.2, classnames@^2.5.1:
+classnames@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
   integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
@@ -10018,7 +10018,7 @@ lottie-react-web@^2.2.2:
     lottie-api "^1.0.2"
     lottie-web "^5.6.1"
 
-lottie-web@^5.6.1, lottie-web@^5.7.6:
+lottie-web@^5.12.2, lottie-web@^5.6.1:
   version "5.12.2"
   resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.12.2.tgz#579ca9fe6d3fd9e352571edd3c0be162492f68e5"
   integrity sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==
@@ -12766,12 +12766,13 @@ react-clientside-effect@^1.2.6:
   dependencies:
     "@babel/runtime" "^7.12.13"
 
-"react-dark-mode-toggle-2@github:chrisvogt/react-dark-mode-toggle-2#button-attributes-build":
-  version "2.1.0"
-  resolved "https://codeload.github.com/chrisvogt/react-dark-mode-toggle-2/tar.gz/ae739e13a9ff8cd1f69cfef731b185153b6cd501"
+react-dark-mode-toggle-2@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-dark-mode-toggle-2/-/react-dark-mode-toggle-2-2.1.1.tgz#26cbf2f85ff63af6aa2cdfde0217b1714db88d8d"
+  integrity sha512-dUDiURSvTIXjUwaL/ugx0iIcEgfuFzbGgQ1dG1ica3Ohi+WL6VyksaPiBgZKQ3z8qZ2LoxAY3I4RnSPDjNmm/g==
   dependencies:
-    classnames "^2.3.2"
-    react-lottie-player "^1.4.3"
+    classnames "^2.5.1"
+    react-lottie-player "^2.1.0"
 
 react-dev-utils@^12.0.1:
   version "12.0.1"
@@ -12884,13 +12885,13 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-lottie-player@^1.4.3:
-  version "1.5.6"
-  resolved "https://registry.yarnpkg.com/react-lottie-player/-/react-lottie-player-1.5.6.tgz#13d43fb4b4506f25fe647ccde8cc0fcbe788bc1f"
-  integrity sha512-t0GdTYbml0Ihski8ZPx+1WjpjM/EQlTqTcuGm5yeZGJAgFXTmoqrHbSX8bcREIxrHjibWAyIWnLVUK/iHLcqAQ==
+react-lottie-player@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-lottie-player/-/react-lottie-player-2.1.0.tgz#3a3a726d183337197a34c0c0944461ac2469c30c"
+  integrity sha512-rxSNIVVLWYnwzsIow377vZsh7GDbReu70V7IDD9TbbcdcJWons4pSh3nyuEa4QWIZw0ZBIieoZRTsiqnb6MZ3g==
   dependencies:
     fast-deep-equal "^3.1.3"
-    lottie-web "^5.7.6"
+    lottie-web "^5.12.2"
     rfdc "^1.3.0"
 
 react-motion@^0.5.0:

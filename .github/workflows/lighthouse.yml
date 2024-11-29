@@ -11,7 +11,7 @@ jobs:
         id: netlify
         with:
           site_name: 'chrisvogt'
-          max_timeout: 600 // # Timeout if the deploy preview hasn't posted within 10 minutes
+          max_timeout: 600 # Timeout if the deploy preview hasn't posted within 10 minutes
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:
