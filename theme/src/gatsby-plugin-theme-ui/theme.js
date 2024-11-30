@@ -105,7 +105,11 @@ export const PostCard = {
 }
 
 export default merge(tailwind, {
-  useColorSchemeMediaQuery: true,
+  config: {
+    initialColorModeName: 'dark',    // Default to dark mode
+    useLocalStorage: true,           // Persist user preferences
+    useColorSchemeMediaQuery: false, // Disable automatic detection of system preference
+  },
 
   badges: {
     primary: {
