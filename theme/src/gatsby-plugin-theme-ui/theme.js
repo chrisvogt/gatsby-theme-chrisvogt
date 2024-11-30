@@ -182,29 +182,30 @@ export default merge(tailwind, {
   },
 
   colors: {
-    accent: `deeppink`,
-    background: '#fcb8a2',
-    'panel-background': `rgba(255, 229, 224, 0.10)`,
-    'panel-divider': theme => `1px solid rgba(255, 229, 224, 0.17)`,
-    'panel-highlight': theme => theme.colors.gray[1],
+    accent: `#0A66C2`, // LinkedIn blue for accents and CTAs
+    background: `#F3F6FB`, // Soft, neutral light gray with a hint of blue
+    'panel-background': `rgba(243, 246, 251, 0.8)`, // Transparent light gray for panels
+    'panel-divider': theme => `1px solid rgba(0, 0, 0, 0.1)`, // Subtle dark gray divider
+    'panel-highlight': theme => `#E8F0FE`, // Very light blue for highlights
+    primary: `#0A66C2`, // Same as accent, for hyperlinks
+    secondary: `#495057`, // Neutral dark gray for secondary elements
+    secondaryGradient: `linear-gradient(45deg, #0056B3 0%, #0A66C2 100%)`, // Gradient blue for headers or decorative elements
+    tableText: `#333333`, // Dark gray for readability
+    text: `#1C1E21`, // Near-black for primary text
+    textMuted: `#6C757D`, // Muted gray for secondary text
+  
     modes: {
       dark: {
-        background: `#1e1e2f`,
-        'panel-background': `rgba(1, 1, 1, 0.28)`,
-        'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
-        'panel-highlight': theme => theme.colors.gray[8],
-        primary: `#1E90FF`,
-        text: `#fff`,
-        textMuted: '#d8d8d8'
+        background: `#1e1e2f`, // Original dark mode background
+        'panel-background': `rgba(1, 1, 1, 0.28)`, // Restored panel background
+        'panel-divider': theme => `1px solid rgba(255, 255, 255, 0.1)`, // Subtle white divider
+        'panel-highlight': theme => theme.colors.gray[8], // Restored panel highlight
+        primary: `#0A66C2`, // Consistent blue for hyperlinks
+        text: `#E4E6EB`, // Light gray for readability
+        textMuted: `#B0B3B8` // Muted gray for secondary text
       }
-    },
-    primary: `#422EA3`,
-    secondary: `#711E9B`,
-    secondaryGradient: `linear-gradient(45deg, #4527a0 0%, #711e9b 100%)`,
-    tableText: `#111`,
-    text: `#111`,
-    textMuted: `#333`
-  },
+    }
+  },  
 
   fonts: {
     body: fonts.serif,

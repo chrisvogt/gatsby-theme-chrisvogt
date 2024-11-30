@@ -1,3 +1,6 @@
+import { useColorMode } from 'theme-ui'
+import { default as getIsDarkMode } from '../helpers/isDarkMode'
+
 /*!
  * Animated Background
  * (c) 2024 Christopher Vogt
@@ -9,8 +12,13 @@ import React, { useEffect, useRef } from 'react';
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null);
+  const [colorMode] = useColorMode()
+  const isDarkMode = getIsDarkMode(colorMode);
 
   useEffect(() => {
+    if (!isDarkMode) {
+      return;
+    }
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
@@ -119,7 +127,11 @@ const AnimatedBackground = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isDarkMode]);
+
+  if (!isDarkMode) {
+    return null;
+  }
 
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
