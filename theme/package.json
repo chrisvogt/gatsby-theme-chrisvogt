@@ -54,7 +54,6 @@
     "redux-mock-store": "^1.5.4"
   },
   "dependencies": {
-    "@babel/preset-react": "^7.24.7",
     "@emotion/cache": "^11.13.5",
     "@emotion/react": "^11.13.5",
     "@emotion/server": "^11.11.0",
