@@ -9,6 +9,12 @@ describe('Theme Configuration', () => {
     expect(mergedTheme).toBeTruthy()
   })
 
+  it('defaults the color mode to dark', () => {
+    expect(theme.config.useColorSchemeMediaQuery).toBe(false)
+    expect(theme.config.initialColorModeName).toBe('dark')
+    expect(theme.config).toHaveProperty('useLocalStorage')
+  })
+
   it('contains custom fonts', () => {
     expect(theme.fonts).toHaveProperty('sans')
     expect(theme.fonts).toHaveProperty('serif')
