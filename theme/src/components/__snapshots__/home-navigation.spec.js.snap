@@ -36,7 +36,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Home
     </a>
     <a
-      className=" css-16bd68e"
+      className="css-16bd68e"
       href="#posts"
     >
       <svg
@@ -63,7 +63,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Latest Posts
     </a>
     <a
-      className=" css-16bd68e"
+      className="css-16bd68e"
       href="#instagram"
     >
       <svg
@@ -90,7 +90,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Instagram
     </a>
     <a
-      className=" css-16bd68e"
+      className="css-16bd68e"
       href="#github"
     >
       <svg
@@ -117,7 +117,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       GitHub
     </a>
     <a
-      className=" css-16bd68e"
+      className="css-16bd68e"
       href="#goodreads"
     >
       <svg
@@ -144,7 +144,7 @@ exports[`HomeNavigation matches the snapshot 1`] = `
       Goodreads
     </a>
     <a
-      className=" css-16bd68e"
+      className="css-16bd68e"
       href="#spotify"
     >
       <svg
