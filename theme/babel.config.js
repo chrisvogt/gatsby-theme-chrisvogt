@@ -1,9 +1,4 @@
-// babel config, used by jest
+// Babel config, used by Jest
 module.exports = {
-  presets: [
-    ['@babel/preset-react', {
-      runtime: 'classic'
-    }],
-    'babel-preset-gatsby'
-  ]
+  presets: ['babel-preset-gatsby']
 }
