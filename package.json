@@ -6,14 +6,24 @@
   ],
   "scripts": {
     "develop": "yarn workspace www.chrisvogt.me develop:https",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "lint": "eslint --debug",
     "test": "yarn workspace gatsby-theme-chrisvogt test",
     "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
-    "postinstall": "node index.js",
-    "prettier:format": "prettier --write ."
+    "postinstall": "node index.js"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.3",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "husky": "^9.0.11",
-    "prettier": "3.3.2",
+    "prettier": "^3.4.1",
     "pretty-quick": "4.0.0"
   },
   "dependencies": {
