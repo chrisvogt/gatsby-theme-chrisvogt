@@ -9,7 +9,8 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
   const items = tracks.map(track => {
     const { artists = [], albumImages = [], id, name, spotifyURL } = track
 
-    const { url: thumbnailURL } = albumImages.find(image => image.width === 300)
+    const thumbnail = albumImages.find(image => image.width === 300) || {}
+    const { url: thumbnailURL } = thumbnail
 
     return {
       id,
