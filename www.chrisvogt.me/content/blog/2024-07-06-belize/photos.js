@@ -86,7 +86,8 @@ export const whereWeStayed = [
 
 export const exploringSanPedro = [
   {
-    title: 'The entrance to Caramba Restaurant, with fresh-caught red snapper on display. Pick the one you want them to cook.',
+    title:
+      'The entrance to Caramba Restaurant, with fresh-caught red snapper on display. Pick the one you want them to cook.',
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720327679/chrisvogt-me/galleries/belize/20230701-IMG_0992.webp',
     width: 3,
     height: 4
@@ -99,7 +100,8 @@ export const exploringSanPedro = [
   },
   {
     // Should I keep this? – it's a spice product photo
-    title: 'Spices from Caribbean Spice Belize. I have used up all of these since traveling and need to go back and get more.',
+    title:
+      'Spices from Caribbean Spice Belize. I have used up all of these since traveling and need to go back and get more.',
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720336290/chrisvogt-me/galleries/belize/20230707-IMG_1558.webp',
     width: 3,
     height: 4
@@ -210,7 +212,8 @@ export const cayeCaulker = [
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720336287/chrisvogt-me/galleries/belize/20230707-IMG_1601.webp',
     width: 4,
     height: 3
-  }, {
+  },
+  {
     title: 'A boat docked at Caye Caulker, Belize.',
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720344456/chrisvogt-me/galleries/belize/20230707-IMG_1598.webp',
     width: 3,
@@ -247,7 +250,8 @@ export const cayeCaulker = [
     height: 3
   },
   {
-    title: "People swimming and lounging at the Sip n' Dip in Caye Caulker, Belize. Where you sit in chairs on the water and drink cocktails.",
+    title:
+      "People swimming and lounging at the Sip n' Dip in Caye Caulker, Belize. Where you sit in chairs on the water and drink cocktails.",
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720327685/chrisvogt-me/galleries/belize/20230707-IMG_1590.webp',
     width: 4,
     height: 3
@@ -262,7 +266,8 @@ export const cayeCaulkerFood = [
     height: 4
   },
   {
-    title: "Lobster and chicken on the grill at Betty's Go Slow Grill. In island time, the food is ready when it's perfect.",
+    title:
+      "Lobster and chicken on the grill at Betty's Go Slow Grill. In island time, the food is ready when it's perfect.",
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720327700/chrisvogt-me/galleries/belize/20230707-IMG_1574.webp',
     width: 3,
     height: 4
@@ -295,7 +300,8 @@ export const swimmingWithSharks = [
     height: 3
   },
   {
-    title: 'Me getting splashed with water in my face (and eyes) as we ride out to swim with sharks. Which secretly terrifies me.',
+    title:
+      'Me getting splashed with water in my face (and eyes) as we ride out to swim with sharks. Which secretly terrifies me.',
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720327674/chrisvogt-me/galleries/belize/20230704-IMG_1154.webp',
     width: 3,
     height: 4
@@ -335,9 +341,11 @@ export const iguanas = [
   }
 ]
 
-export const flightHome = [{
+export const flightHome = [
+  {
     title: 'Boarding a Cessna 208B Grand Caravan in San Pedro to hop over to Belize City for our flight home.',
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720327680/chrisvogt-me/galleries/belize/20230708-IMG_1619.webp',
     width: 3,
     height: 4
-}]
+  }
+]

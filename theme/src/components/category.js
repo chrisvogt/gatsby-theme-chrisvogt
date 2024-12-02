@@ -8,11 +8,7 @@ const Category = ({ sx = {}, type }) => {
     .replace('photography/events', 'Event Photography')
     .replace('music/piano-covers', 'Piano Covers')
 
-  return (
-    <Themed.div sx={{ variant: `text.title`, fontSize: [1], ...sx }}>
-      {category}
-    </Themed.div>
-  )
+  return <Themed.div sx={{ variant: 'text.title', fontSize: [1], ...sx }}>{category}</Themed.div>
 }
 
 export default Category

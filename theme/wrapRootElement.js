@@ -20,7 +20,7 @@ const components = {
   Emoji,
   pre: ({ children }) => <>{children}</>,
   YouTube,
-  Table: (props) => <Themed.table {...props} sx={{ variant: 'styles.table' }} />
+  Table: props => <Themed.table {...props} sx={{ variant: 'styles.table' }} />
 }
 
 const WrapRootElement = ({ element }) => (

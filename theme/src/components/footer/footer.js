@@ -13,20 +13,22 @@ export default () => {
   const footerText = getFooterText(metadata)
 
   return (
-    <footer role='contentinfo' id='footer' sx={{ position: 'relative', variant: `styles.PageFooter` }}>
-      <Container sx={{ textAlign: `center` }}>
+    <footer role='contentinfo' id='footer' sx={{ position: 'relative', variant: 'styles.PageFooter' }}>
+      <Container sx={{ textAlign: 'center' }}>
         <div sx={{ mb: 3, py: [2, 3] }}>
           <Profiles />
 
           <div sx={{ mt: [4, 5] }}>
             {footerText ? <div>{footerText}</div> : null}
             <span>
-              <ThemedLink href='/rss.xml' sx={{ textDecoration: 'underline' /* synced with Gatsby Link */}}>
+              <ThemedLink href='/rss.xml' sx={{ textDecoration: 'underline' /* synced with Gatsby Link */ }}>
                 Subscribe via RSS
               </ThemedLink>
             </span>
             {' | '}
-            <span><Link to='/privacy'>Privacy Policy</Link></span>
+            <span>
+              <Link to='/privacy'>Privacy Policy</Link>
+            </span>
           </div>
         </div>
       </Container>

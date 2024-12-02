@@ -13,15 +13,15 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
       rel='noopener noreferrer'
       className='instagram-item-button'
       sx={{
-        variant: `styles.InstagramItem`
+        variant: 'styles.InstagramItem'
       }}
     >
       {isCarousel && (
         <div
           data-testid='carousel-icon'
           sx={{
-            color: `white`,
-            position: `absolute`,
+            color: 'white',
+            position: 'absolute',
             top: 2,
             right: 2
           }}
@@ -41,7 +41,7 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
         sx={{
           width: '100%',
           height: '100%',
-          transition: `all 1.5s ease`,
+          transition: 'all 1.5s ease',
           objectFit: 'cover'
         }}
       />

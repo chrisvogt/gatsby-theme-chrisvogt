@@ -28,9 +28,9 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
         <Themed.div
           sx={{
             background: theme => theme.colors['panel-background'],
-            textAlign: `center`,
+            textAlign: 'center',
             paddingY: 3,
-            position: `relative`
+            position: 'relative'
           }}
         >
           <Container>
@@ -42,7 +42,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
 
       <Flex
         sx={{
-          flexDirection: `column`,
+          flexDirection: 'column',
           flexGrow: 1,
           py: 3,
           position: 'relative'
@@ -50,21 +50,13 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
       >
         <Container sx={{ width: ['', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
           <article className='h-entry'>
-            {category && (
-              <Category type={category} sx={{ mb: 2 }} />
-            ) }
+            {category && <Category type={category} sx={{ mb: 2 }} />}
 
-            <PageHeader>
-              {title}
-            </PageHeader>
+            <PageHeader>{title}</PageHeader>
 
-            <time className='dt-published created'>
-              Published {date}
-            </time>
+            <time className='dt-published created'>Published {date}</time>
 
-            <div className='e-content article-content'>
-              {children}
-            </div>
+            <div className='e-content article-content'>{children}</div>
           </article>
         </Container>
       </Flex>
@@ -77,14 +69,7 @@ export const Head = ({ data: { mdx } }) => {
   const description = getDescription(mdx)
   const title = getTitle(mdx)
 
-  return (
-    <Seo
-      article={true}
-      description={description}
-      image={banner}
-      title={title}
-    />
-  )
+  return <Seo article={true} description={description} image={banner} title={title} />
 }
 
 export const pageQuery = graphql`

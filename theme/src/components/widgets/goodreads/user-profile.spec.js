@@ -60,7 +60,7 @@ describe('UserProfile', () => {
 
     // Verify metric cards
     const metricCards = screen.getAllByTestId('metric-card')
-    expect(metricCards.length).toBe(2)
+    expect(metricCards).toHaveLength(2)
     expect(metricCards[0]).toHaveTextContent('Friends: 10')
     expect(metricCards[1]).toHaveTextContent('Read: 25')
   })

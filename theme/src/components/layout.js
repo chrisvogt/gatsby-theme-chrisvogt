@@ -13,14 +13,16 @@ import TopNavigation from './top-navigation'
  * to extend this component and attach additional contexts and providers.
  */
 const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => (
-  <div sx={{
-    backgroundColor: 'background',
-    position: 'relative', // stretch to full height
-    display: 'flex',
-    flexDirection: 'column',
-    flexGrow: 1,
-    color: theme => theme?.colors?.text
-  }}>
+  <div
+    sx={{
+      backgroundColor: 'background',
+      position: 'relative', // stretch to full height
+      display: 'flex',
+      flexDirection: 'column',
+      flexGrow: 1,
+      color: theme => theme?.colors?.text
+    }}
+  >
     <BackgroundPattern />
 
     {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
@@ -30,13 +32,7 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => (
       </header>
     )}
 
-    {
-      disableMainWrapper ? children : (
-        <main role='main'>
-          {children}
-        </main>
-      )
-    }
+    {disableMainWrapper ? children : <main role='main'>{children}</main>}
 
     {!hideFooter && <Footer />}
   </div>

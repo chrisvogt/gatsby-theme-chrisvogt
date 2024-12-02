@@ -8,8 +8,8 @@ const ProfileMetricsBadge = ({ isLoading, metrics = [] }) => (
       mt: 2,
       pb: 4,
       pt: 1,
-      display: `flex`,
-      justifyContent: [`center`, `unset`]
+      display: 'flex',
+      justifyContent: ['center', 'unset']
     }}
   >
     {(isLoading ? [{}, {}] : metrics).map(({ displayName, id, value }, idx) => (

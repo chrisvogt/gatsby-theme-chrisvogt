@@ -545,46 +545,47 @@ export const cruisingAtSea = [
 ]
 
 export const returnToSeattle = [
-    {
-        src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428343/chrisvogt-me/galleries/alaska/20220919-IMG_7299.webp',
-        title: 'Quantum of the Seas docked in Seattle',
-        width: 16,
-        height: 9
-    },
-    {
-        src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428345/chrisvogt-me/galleries/alaska/20220919-IMG_7307.webp',
-        title: 'The TSA line at SEA-TAC airport a few hours after the cruise',
-        width: 4,
-        height: 3
-    }
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428343/chrisvogt-me/galleries/alaska/20220919-IMG_7299.webp',
+    title: 'Quantum of the Seas docked in Seattle',
+    width: 16,
+    height: 9
+  },
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428345/chrisvogt-me/galleries/alaska/20220919-IMG_7307.webp',
+    title: 'The TSA line at SEA-TAC airport a few hours after the cruise',
+    width: 4,
+    height: 3
+  }
 ]
 
 export const familyPhotos = [
-    {
-        src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428342/chrisvogt-me/galleries/alaska/20221110-IMG_7282.webp',
-        title: 'The Vogt family portrait from our September 2022 family vacation to Alaska',
-        width: 5,
-        height: 4
-    },
-    {
-        src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428341/chrisvogt-me/galleries/alaska/20221110-70877859.webp',
-        title: 'Chris and Jordan Vogt with their mom Melodee, from our September 2022 family vacation to Alaska',
-        width: 4,
-        height: 5
-    }
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428342/chrisvogt-me/galleries/alaska/20221110-IMG_7282.webp',
+    title: 'The Vogt family portrait from our September 2022 family vacation to Alaska',
+    width: 5,
+    height: 4
+  },
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428341/chrisvogt-me/galleries/alaska/20221110-70877859.webp',
+    title: 'Chris and Jordan Vogt with their mom Melodee, from our September 2022 family vacation to Alaska',
+    width: 4,
+    height: 5
+  }
 ]
 
 export const goofyShipPhotos = [
-    {
-        src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428339/chrisvogt-me/galleries/alaska/20221001-IMG_7315.webp',
-        title: 'Me (Chris Vogt) mushing with huskies in Alaska... using a green screen on the Quantum of the Seas',
-        width: 5,
-        height: 4
-    },
-    {
-        src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428340/chrisvogt-me/galleries/alaska/20221111-IMG_1203.webp',
-        title: 'Me (Chris Vogt) giving a stern finger pointing to a large grizzly bear in Alaska... using a green screen on the Quantum of the Seas',
-        width: 5,
-        height: 4
-    }
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428339/chrisvogt-me/galleries/alaska/20221001-IMG_7315.webp',
+    title: 'Me (Chris Vogt) mushing with huskies in Alaska... using a green screen on the Quantum of the Seas',
+    width: 5,
+    height: 4
+  },
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1720428340/chrisvogt-me/galleries/alaska/20221111-IMG_1203.webp',
+    title:
+      'Me (Chris Vogt) giving a stern finger pointing to a large grizzly bear in Alaska... using a green screen on the Quantum of the Seas',
+    width: 5,
+    height: 4
+  }
 ]

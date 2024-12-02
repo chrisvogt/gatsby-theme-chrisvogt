@@ -85,7 +85,7 @@ describe('RecentPostsWidget', () => {
 
     // Verify both post cards are rendered
     const postCards = screen.getAllByTestId('post-card')
-    expect(postCards.length).toBe(2)
+    expect(postCards).toHaveLength(2)
     expect(postCards[0]).toHaveTextContent('First Post')
     expect(postCards[1]).toHaveTextContent('Second Post')
   })
@@ -134,7 +134,7 @@ describe('RecentPostsWidget', () => {
 
     // Verify all post cards are rendered
     const postCards = screen.getAllByTestId('post-card')
-    expect(postCards.length).toBe(3)
+    expect(postCards).toHaveLength(3)
     expect(postCards[0]).toHaveTextContent('First Post')
     expect(postCards[1]).toHaveTextContent('Second Post')
     expect(postCards[2]).toHaveTextContent('Third Post')

@@ -18,16 +18,16 @@ const NotFoundPage = () => {
     <Layout>
       <Flex sx={{ position: 'relative', flex: 1 }}>
         <Container>
-          <Grid gap={4} sx={{ gridTemplateColumns: [`auto`, `auto`, `1fr 70%`] }}>
+          <Grid gap={4} sx={{ gridTemplateColumns: ['auto', 'auto', '1fr 70%'] }}>
             <Box>
               <Lottie key='$floatingAstronaut' ref={ref} height='50vh' options={options} />
             </Box>
             <Box
               sx={{
-                display: `flex`,
-                flexDirection: `column`,
-                justifyContent: `center`,
-                textAlign: [`center`, `center`, `left`]
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                textAlign: ['center', 'center', 'left']
               }}
             >
               <Themed.h1 sx={{ my: 0 }}>404</Themed.h1>

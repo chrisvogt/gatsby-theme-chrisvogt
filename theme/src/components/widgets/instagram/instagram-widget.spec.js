@@ -45,7 +45,8 @@ describe('Instagram Widget', () => {
                 }
               ]
             },
-            metrics: [ // Mocking a valid metrics array
+            metrics: [
+              // Mocking a valid metrics array
               { displayName: 'Followers', id: '1', value: 100 },
               { displayName: 'Following', id: '2', value: 50 }
             ]

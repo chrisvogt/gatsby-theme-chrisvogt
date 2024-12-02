@@ -38,20 +38,17 @@ export default () => {
 
   return (
     <Widget id='posts' styleOverrides={{ pt: 0 }}>
-      <WidgetHeader
-        aside={callToAction}
-        icon={faNewspaper}
-      >
+      <WidgetHeader aside={callToAction} icon={faNewspaper}>
         Latest Posts
       </WidgetHeader>
 
-      <div sx={{ width: `100%`, mt: 4 }}>
+      <div sx={{ width: '100%', mt: 4 }}>
         <Grid
           sx={{
-            display: `grid`,
-            gridAutoRows: `1fr`,
+            display: 'grid',
+            gridAutoRows: '1fr',
             gridGap: [3, 3, 4],
-            gridTemplateColumns: [``, ``, `repeat(${getColumnCount(posts.length)}, 1fr)`]
+            gridTemplateColumns: ['', '', `repeat(${getColumnCount(posts.length)}, 1fr)`]
           }}
         >
           {posts.map(post => (

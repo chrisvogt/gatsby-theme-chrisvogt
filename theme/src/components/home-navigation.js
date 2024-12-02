@@ -137,32 +137,32 @@ const HomeNavigation = () => {
 
   useEffect(() => {
     if (!document) {
-      return;
+      return
     }
     const handleScroll = () => {
-      let currentSection = 'home';
-      links.forEach((section) => {
-        const element = document.getElementById(section.id);
+      let currentSection = 'home'
+      links.forEach(section => {
+        const element = document.getElementById(section.id)
         if (element && element.getBoundingClientRect().top <= window.innerHeight / 2) {
-          currentSection = section.id;
+          currentSection = section.id
         }
-      });
-      setActiveSection(currentSection);
-    };
+      })
+      setActiveSection(currentSection)
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [links]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [links])
 
   return (
     <Fragment>
       <div
         sx={{
           display: ['none', '', 'block'],
-          position: `sticky`,
-          top: `1.5em`,
+          position: 'sticky',
+          top: '1.5em'
         }}
       >
         <nav role='navigation' aria-label='On-page navigation' ref={navItemsRef}>
@@ -175,15 +175,17 @@ const HomeNavigation = () => {
                 variant='homeNavigation'
                 className={activeSection === id ? 'active' : ''}
                 sx={{
-                  fontFamily: `sans`,
-                  color: `text`,
+                  fontFamily: 'sans',
+                  color: 'text',
                   paddingX: 2,
                   '&.active': {
-                    color: `primary`,
+                    color: 'primary'
                   }
                 }}
               >
-                {IconComponent ? <FontAwesomeIcon icon={IconComponent} style={{ height: '18px' }} sx={{ mr: 2 }} /> : null}
+                {IconComponent ? (
+                  <FontAwesomeIcon icon={IconComponent} style={{ height: '18px' }} sx={{ mr: 2 }} />
+                ) : null}
                 {text}
               </Link>
             )

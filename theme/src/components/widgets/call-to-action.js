@@ -13,7 +13,7 @@ import { Link } from 'gatsby'
 const CallToAction = ({ children, isLoading = false, title, to, url }) => {
   const LinkComponent = to ? Link : Themed.a
   return isLoading ? (
-    <Bars fill='#1E90FF' width='24' height='24' sx={{ verticalAlign: `middle` }} />
+    <Bars fill='#1E90FF' width='24' height='24' sx={{ verticalAlign: 'middle' }} />
   ) : (
     <LinkComponent
       href={url}
@@ -25,11 +25,11 @@ const CallToAction = ({ children, isLoading = false, title, to, url }) => {
         verticalAlign: 'bottom',
         '.read-more-icon': {
           opacity: 0,
-          transition: `all .3s ease`
+          transition: 'all .3s ease'
         },
         '&:hover, &:focus': {
-          textDecoration: `none`,
-          transform: `translateX(150px)`
+          textDecoration: 'none',
+          transform: 'translateX(150px)'
         },
         '&:hover .read-more-icon, &:focus .read-more-icon': {
           opacity: 1,

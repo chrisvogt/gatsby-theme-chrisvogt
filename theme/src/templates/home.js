@@ -14,7 +14,7 @@ const HomeTemplate = props => {
     <Layout hideFooter disableMainWrapper>
       <div
         sx={{
-          minHeight: `500px`,
+          minHeight: '500px',
           pt: 3,
           px: 0
         }}
@@ -24,8 +24,8 @@ const HomeTemplate = props => {
             columns={[
               null,
               null,
-              `0.375fr 1.625fr`, /* Sidebar 18%, Content 82% */
-              `0.4fr 1.6fr` /* Sidebar 20%, Content 80% */
+              '0.375fr 1.625fr' /* Sidebar 18%, Content 82% */,
+              '0.4fr 1.6fr' /* Sidebar 20%, Content 80% */
             ]}
             gap={[null, 4]}
           >
@@ -39,12 +39,12 @@ const HomeTemplate = props => {
                   borderTopRightRadius: '3em',
                   borderTopLeftRadius: '.5em',
                   px: [3, 4],
-                  pt: [2, 3],
+                  pt: [2, 3]
                 }}
               >
                 <div
                   sx={{
-                    maxWidth: `1200px`,
+                    maxWidth: '1200px'
                   }}
                 >
                   <section>
@@ -68,9 +68,9 @@ export const Head = () => (
     description="Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
     keywords='Chris Vogt, Software Engineer in San Francisco, GoDaddy engineer blog, photography blog, piano recordings, travel blog, personal blog, digital garden'
   >
-    <meta property="og:url" content="https://www.chrisvogt.me" />
-    <meta property="og:type" content="website" />
-    <script type="application/ld+json">
+    <meta property='og:url' content='https://www.chrisvogt.me' />
+    <meta property='og:type' content='website' />
+    <script type='application/ld+json'>
       {`{
         "@context": "https://schema.org",
         "@type": "Person",

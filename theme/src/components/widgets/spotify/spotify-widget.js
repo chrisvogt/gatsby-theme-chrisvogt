@@ -55,11 +55,7 @@ const SpotifyWidget = () => {
 
   return (
     <Widget id='spotify' hasFatalError={hasFatalError}>
-      <WidgetHeader
-        aside={callToAction}
-        icon={faSpotify}
-        isLoading={isLoading}
-      >
+      <WidgetHeader aside={callToAction} icon={faSpotify} isLoading={isLoading}>
         Spotify
       </WidgetHeader>
 

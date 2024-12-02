@@ -5,12 +5,12 @@ import { useId } from 'react'
 const Book = ({ thumbnailURL, title }) => {
   const uniqueId = useId()
   return (
-      <svg
+    <svg
       data-name='Book Preview'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       viewBox='0 0 100 100'
-      sx={{ variant: `styles.Book` }}
+      sx={{ variant: 'styles.Book' }}
     >
       <defs>
         <clipPath id={`clip-${uniqueId}`}>

@@ -113,10 +113,10 @@ export default () => {
                   <RectShape
                     color='#efefef'
                     sx={{
-                      borderRadius: `8px`,
-                      boxShadow: `md`,
-                      width: `100%`,
-                      paddingBottom: `100%`
+                      borderRadius: '8px',
+                      boxShadow: 'md',
+                      width: '100%',
+                      paddingBottom: '100%'
                     }}
                   />
                 </div>

@@ -3,19 +3,21 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import HomeWidgets from './home-widgets'
 import useSiteMetadata from '../hooks/use-site-metadata'
-import { 
-  getGithubWidgetDataSource, 
-  getGoodreadsWidgetDataSource, 
-  getInstagramWidgetDataSource, 
-  getSpotifyWidgetDataSource 
+import {
+  getGithubWidgetDataSource,
+  getGoodreadsWidgetDataSource,
+  getInstagramWidgetDataSource,
+  getSpotifyWidgetDataSource
 } from '../selectors/metadata'
 
 // Mock components
-jest.mock('../components/widgets/github', () => () => <div data-testid="github-widget">GitHub Widget</div>)
-jest.mock('../components/widgets/goodreads', () => () => <div data-testid="goodreads-widget">Goodreads Widget</div>)
-jest.mock('../components/widgets/instagram', () => () => <div data-testid="instagram-widget">Instagram Widget</div>)
-jest.mock('../components/widgets/spotify', () => () => <div data-testid="spotify-widget">Spotify Widget</div>)
-jest.mock('../components/widgets/recent-posts', () => () => <div data-testid="recent-posts-widget">Recent Posts Widget</div>)
+jest.mock('../components/widgets/github', () => () => <div data-testid='github-widget'>GitHub Widget</div>)
+jest.mock('../components/widgets/goodreads', () => () => <div data-testid='goodreads-widget'>Goodreads Widget</div>)
+jest.mock('../components/widgets/instagram', () => () => <div data-testid='instagram-widget'>Instagram Widget</div>)
+jest.mock('../components/widgets/spotify', () => () => <div data-testid='spotify-widget'>Spotify Widget</div>)
+jest.mock('../components/widgets/recent-posts', () => () => (
+  <div data-testid='recent-posts-widget'>Recent Posts Widget</div>
+))
 
 // Mock hooks
 jest.mock('../hooks/use-site-metadata')

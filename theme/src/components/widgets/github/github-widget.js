@@ -81,10 +81,7 @@ const GitHubWidget = () => {
 
   return (
     <Widget id='github' hasFatalError={hasFatalError}>
-      <WidgetHeader
-        aside={callToAction}
-        icon={faGithub}
-      >
+      <WidgetHeader aside={callToAction} icon={faGithub}>
         GitHub
       </WidgetHeader>
 
