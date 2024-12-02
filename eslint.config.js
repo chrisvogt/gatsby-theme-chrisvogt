@@ -6,10 +6,10 @@ const globals = require('globals')
 
 module.exports = [
   {
-    ignores: ['**/node_modules/**', '**/theme/public/**', '**/www.chrisvogt.me/public/**', '**/.cache/**']
+    ignores: ['**/*.json', '**/node_modules/**', '**/theme/public/**', '**/www.chrisvogt.me/public/**', '**/.cache/**']
   },
   {
-    files: ['theme/**/*.{js,json}', 'www.chrisvogt.me/**/*.{js,json}']
+    files: ['theme/**/*.js', 'www.chrisvogt.me/**/*.js']
   },
   {
     languageOptions: {
@@ -61,6 +61,15 @@ module.exports = [
           jsx: true
         }
       }
+    }
+  },
+  {
+    plugins: {
+      json: require('eslint-plugin-json')
+    },
+    files: ['**/*.json'],
+    rules: {
+      'json/*': 'error'
     }
   },
   {
