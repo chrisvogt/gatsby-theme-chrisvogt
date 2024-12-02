@@ -32,7 +32,7 @@ const PhotographyPage = ({ data }) => {
     <Layout>
       <Flex
         sx={{
-          flexDirection: `column`,
+          flexDirection: 'column',
           flexGrow: 1,
           position: 'relative',
           py: 3
@@ -47,10 +47,16 @@ const PhotographyPage = ({ data }) => {
 
           <Themed.div
             sx={{
-              display: `grid`,
-              gridAutoRows: `1fr`,
+              display: 'grid',
+              gridAutoRows: '1fr',
               gridGap: [3, 3, 4],
-              gridTemplateColumns: [``, `1fr 1fr`, `1fr 1fr`, `1fr 1fr`, `repeat(${getColumnCount(posts.length)}, 1fr)`],
+              gridTemplateColumns: [
+                '',
+                '1fr 1fr',
+                '1fr 1fr',
+                '1fr 1fr',
+                `repeat(${getColumnCount(posts.length)}, 1fr)`
+              ],
               mt: 4
             }}
           >
