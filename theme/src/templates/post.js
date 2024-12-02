@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react'
 import { Container, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'

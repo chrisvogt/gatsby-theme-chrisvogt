@@ -1,4 +1,4 @@
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ actions }) => {
   const { createRedirect } = actions
 
   createRedirect({
