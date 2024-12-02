@@ -62,5 +62,25 @@ module.exports = [
         }
       }
     }
+  },
+  {
+    files: ['**/*.spec.js'], // Target Jest spec files
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.jest // Include Jest globals for describe, it, etc.
+      }
+    },
+    plugins: {
+      jest: require('eslint-plugin-jest') // Add Jest plugin
+    },
+    rules: {
+      'jest/no-disabled-tests': 'warn',
+      'jest/no-focused-tests': 'error',
+      'jest/no-identical-title': 'error',
+      'jest/prefer-to-have-length': 'warn',
+      'jest/valid-expect': 'error'
+    }
   }
 ]
