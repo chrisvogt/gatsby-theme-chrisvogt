@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 # Format staged files with Prettier
 npx pretty-quick --staged
 
