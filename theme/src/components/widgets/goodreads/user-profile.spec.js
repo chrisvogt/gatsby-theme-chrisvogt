@@ -4,8 +4,6 @@ import '@testing-library/jest-dom'
 import { ThemeUIProvider } from 'theme-ui'
 import UserProfile from './user-profile'
 import { useThemeUI } from 'theme-ui'
-import MetricCard from '../metric-card'
-import StatusCard from '../status-card'
 import isDarkMode from '../../../helpers/isDarkMode'
 
 // Mock the useThemeUI hook

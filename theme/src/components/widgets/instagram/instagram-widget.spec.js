@@ -8,22 +8,10 @@ import { ThemeUIProvider } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import VanillaTilt from 'vanilla-tilt'
 
-// Mocking the useSiteMetadata hook
-import useSiteMetadata from '../../../hooks/use-site-metadata'
-
 jest.mock('../../../hooks/use-site-metadata')
 jest.mock('vanilla-tilt')
 
 const mockStore = configureStore([])
-
-const mockSiteMetadata = {
-  widgets: {
-    instagram: {
-      username: 'mockusername',
-      widgetDataSource: 'https://fake-api.chrisvogt.me/social/instagram'
-    }
-  }
-}
 
 describe('Instagram Widget', () => {
   let store

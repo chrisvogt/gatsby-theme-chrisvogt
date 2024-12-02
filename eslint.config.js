@@ -73,7 +73,7 @@ module.exports = [
     }
   },
   {
-    files: ['**/*.spec.js'], // Target Jest spec files
+    files: ['**/*.spec.js', 'theme/jest-shim.js'], // Target Jest spec files
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

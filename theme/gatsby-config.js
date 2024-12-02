@@ -71,7 +71,7 @@ module.exports = () => ({
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Crimson Text\:400,400i,600,600i' // specify the weights and styles you need
+          'Crimson Text:400,400i,600,600i' // specify the weights and styles you need
         ],
         display: 'swap'
       }

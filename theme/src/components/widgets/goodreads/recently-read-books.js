@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
-import kebabCase from 'lodash/kebabCase'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { Themed } from '@theme-ui/mdx'
 

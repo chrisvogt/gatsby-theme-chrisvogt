@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import RecentPostsWidget from './recent-posts-widget'
 import useRecentPosts from '../../../hooks/use-recent-posts'
-import PostCard from './post-card'
 
 // Mock the useRecentPosts hook
 jest.mock('../../../hooks/use-recent-posts')
@@ -15,7 +14,7 @@ jest.mock('./post-card', () => ({ title }) => <div data-testid='post-card'>{titl
 jest.mock('../call-to-action', () => ({ title, to }) => <a href={to}>{title}</a>)
 
 jest.mock('../widget', () => ({ children }) => <div>{children}</div>)
-jest.mock('../widget-header', () => ({ aside, icon, children }) => (
+jest.mock('../widget-header', () => ({ aside, children }) => (
   <header>
     <div>{children}</div>
     {aside}

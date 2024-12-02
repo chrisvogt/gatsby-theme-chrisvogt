@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import { faImages } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType, permalink } = {} }) => {
+const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType } = {} }) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM'
 
   return (

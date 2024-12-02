@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import SwoopBottom from './swoops/swoop-bottom'
 
 /**
  * Header
