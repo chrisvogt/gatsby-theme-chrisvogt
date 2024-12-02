@@ -2,18 +2,24 @@ const react = require('eslint-plugin-react')
 const jsxA11Y = require('eslint-plugin-jsx-a11y')
 const prettier = require('eslint-plugin-prettier')
 const js = require('@eslint/js')
+const globals = require('globals')
 
 module.exports = [
   {
-    ignores: [
-      '**/node_modules/**',
-      '**/theme/public/**',
-      '**/www.chrisvogt.me/public/**',
-      '**/.cache/**'
-    ]
+    ignores: ['**/node_modules/**', '**/theme/public/**', '**/www.chrisvogt.me/public/**', '**/.cache/**']
   },
   {
     files: ['theme/**/*.{js,json}', 'www.chrisvogt.me/**/*.{js,json}']
+  },
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    }
   },
   js.configs.recommended,
   {
@@ -38,7 +44,9 @@ module.exports = [
       semi: ['error', 'never'],
       'comma-dangle': ['error', 'never'],
       'jsx-a11y/no-noninteractive-element-interactions': 'warn',
-      'react/prop-types': 'off'
+      'react/prop-types': 'off',
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error'
     },
     settings: {
       react: {
@@ -54,15 +62,5 @@ module.exports = [
         }
       }
     }
-  },
-  // {
-  //   files: ['theme/**/*.{js,json}', 'www.chrisvogt.me/**/*.{js,json}'],
-  //   ignores: [
-  //     '**/node_modules/**',
-  //     '**/theme/public/**',
-  //     '**/www.chrisvogt.me/public/**',
-  //     '**/www.chrisvogt.me/.cache/**',
-  //     '**/.cache/**'
-  //   ]
-  // }
+  }
 ]
