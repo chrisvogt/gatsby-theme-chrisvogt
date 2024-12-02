@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "develop": "yarn workspace www.chrisvogt.me develop:https",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\"",
     "lint": "eslint",
     "postinstall": "node index.js",
     "prepare": "husky install",
