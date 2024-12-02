@@ -5,7 +5,6 @@ import widgets, {
   getSpotifyWidget,
   FETCH_DATASOURCE_SUCCESS,
   FETCH_DATASOURCE_FAILURE,
-  INIT_WIDGET_CONFIG,
   SUCCESS,
   FAILURE,
   INIT

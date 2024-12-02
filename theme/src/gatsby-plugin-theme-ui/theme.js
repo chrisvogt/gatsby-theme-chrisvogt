@@ -190,7 +190,7 @@ export default merge(tailwind, {
     accent: 'deeppink',
     background: '#fcb8a2',
     'panel-background': 'rgba(255, 229, 224, 0.10)',
-    'panel-divider': theme => '1px solid rgba(255, 229, 224, 0.17)',
+    'panel-divider': () => '1px solid rgba(255, 229, 224, 0.17)',
     'panel-highlight': theme => theme.colors.gray[1],
     modes: {
       dark: {

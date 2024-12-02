@@ -17,7 +17,7 @@ export const getSpotifyWidget = state => state.widgets?.spotify || {}
 function widgets(state = {}, action) {
   switch (action.type) {
     case FETCH_DATASOURCE_SUCCESS:
-    case FETCH_DATASOURCE_FAILURE:
+    case FETCH_DATASOURCE_FAILURE: {
       const data = getData(action)
       const error = getError(action)
       const widgetId = getWidgetId(action)
@@ -30,6 +30,7 @@ function widgets(state = {}, action) {
           ...(error ? { error } : {})
         }
       }
+    }
     default:
       return {
         ...state
