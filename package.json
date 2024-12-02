@@ -8,10 +8,12 @@
     "develop": "yarn workspace www.chrisvogt.me develop:https",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "lint": "eslint",
-    "test": "yarn workspace gatsby-theme-chrisvogt test",
-    "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
     "postinstall": "node index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier",
+    "test:coverage": "yarn workspace gatsby-theme-chrisvogt test --coverage",
+    "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
+    "test": "yarn workspace gatsby-theme-chrisvogt test"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.3",
