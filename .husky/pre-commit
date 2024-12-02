@@ -1,1 +1,8 @@
-pretty-quick --staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Format staged files with Prettier
+npx pretty-quick --staged
+
+# Lint staged files with ESLint
+npx eslint --fix $(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|json)$') || exit 1

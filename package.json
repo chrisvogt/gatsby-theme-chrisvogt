@@ -10,7 +10,8 @@
     "lint": "eslint",
     "test": "yarn workspace gatsby-theme-chrisvogt test",
     "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
-    "postinstall": "node index.js"
+    "postinstall": "node index.js",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.3",
@@ -25,8 +26,9 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
-    "pretty-quick": "4.0.0"
+    "pretty-quick": "^4.0.0"
   },
   "dependencies": {
     "boxen": "^5"
