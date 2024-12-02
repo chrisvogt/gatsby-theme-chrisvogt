@@ -10,14 +10,7 @@ import { getLanguageCode, getTitle, getTitleTemplate, getTwitterUsername } from 
  *
  * Updates <head> tags.
  */
-const Seo = ({
-  article,
-  children,
-  description,
-  image: imageURL,
-  keywords,
-  title: pageTitle,
-}) => {
+const Seo = ({ article, children, description, image: imageURL, keywords, title: pageTitle }) => {
   const metadata = useSiteMetadata()
   const { theme } = useThemeUI()
 

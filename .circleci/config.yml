@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:20.9.0  # Updated to Node 20.9.0
+      - image: cimg/node:20.9.0 # Updated to Node 20.9.0
 
     working_directory: ~/gatsby-theme-chrisvogt
 
@@ -25,6 +25,14 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+
+      - run:
+          name: Run Prettier Check
+          command: yarn prettier --check .
+
+      - run:
+          name: Run ESLint Check
+          command: yarn lint
 
       - run:
           name: Unit Tests w/Coverage

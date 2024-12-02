@@ -1,10 +1,10 @@
 const buildFeedItemUrl = (baseUrl, category, slug) => {
-  const parsedCategory = category ? `/${category}/` : `/`;
+  const parsedCategory = category ? `/${category}/` : '/'
   return `${baseUrl}${parsedCategory}${slug}`
 }
 
 module.exports = {
-  resolve: `gatsby-plugin-feed`,
+  resolve: 'gatsby-plugin-feed',
   options: {
     query: `
       {

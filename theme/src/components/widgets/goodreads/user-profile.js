@@ -58,7 +58,7 @@ const UserProfile = ({ isLoading, profile }) => {
         sx={{
           display: 'grid',
           gridGap: 3,
-          gridTemplateColumns: `repeat(auto-fit, minmax(128px, 1fr))`
+          gridTemplateColumns: 'repeat(auto-fit, minmax(128px, 1fr))'
         }}
       >
         {metrics.map(({ id, title, value }) => (

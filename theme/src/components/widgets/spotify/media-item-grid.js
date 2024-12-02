@@ -14,10 +14,10 @@ const placeholders = Array(12)
       <RectShape
         color='#efefef'
         sx={{
-          borderRadius: `6px`,
-          boxShadow: `md`,
-          paddingBottom: `100%`,
-          width: `100%`
+          borderRadius: '6px',
+          boxShadow: 'md',
+          paddingBottom: '100%',
+          width: '100%'
         }}
         showLoadingAnimation
       />
@@ -28,11 +28,11 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
   const [currentMediaId, setCurrentMediaId] = useState(false)
   return (
     <div
-      className={`media-item_grid ${!!currentMediaId ? 'media-item_grid--interacting' : null}`}
+      className={`media-item_grid ${currentMediaId ? 'media-item_grid--interacting' : null}`}
       sx={{
-        display: `grid`,
+        display: 'grid',
         gridGap: [3, 2, 2, 3],
-        gridTemplateColumns: [`repeat(3, 1fr)`, `repeat(4, 1fr)`, `repeat(4, 1fr)`, `repeat(5, 1fr)`, `repeat(6, 1fr)`]
+        gridTemplateColumns: ['repeat(3, 1fr)', 'repeat(4, 1fr)', 'repeat(4, 1fr)', 'repeat(5, 1fr)', 'repeat(6, 1fr)']
       }}
     >
       <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
@@ -41,10 +41,10 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
             <Themed.a
               className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
               href={spotifyURL}
-              key={ id }
+              key={id}
               onMouseEnter={() => setCurrentMediaId(id)}
               onMouseLeave={() => setCurrentMediaId(false)}
-              title={ details }
+              title={details}
             >
               <Themed.img
                 alt='cover artwork'
@@ -53,8 +53,8 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                 src={thumbnailURL}
                 sx={{
                   ...floatOnHover,
-                  boxShadow: `md`,
-                  borderRadius: `8px`,
+                  boxShadow: 'md',
+                  borderRadius: '8px',
                   objectFit: 'cover',
                   width: '100%'
                 }}

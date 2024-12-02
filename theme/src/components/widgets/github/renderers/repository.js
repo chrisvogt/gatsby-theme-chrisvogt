@@ -9,8 +9,8 @@ import ViewExternal from '../../view-external'
 const Repository = ({ description, nameWithOwner, updatedAt }) => (
   <Flex
     sx={{
-      flexDirection: `column`,
-      height: `100%`
+      flexDirection: 'column',
+      height: '100%'
     }}
   >
     <Heading as='h4' sx={{ p: 0, mb: 2 }}>

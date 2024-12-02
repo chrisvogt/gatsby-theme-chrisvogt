@@ -25,14 +25,14 @@ const TopNavigation = ({ hideBrandLink, hideMenuItems }) => {
   return (
     <Themed.div
       sx={{
-        variant: `styles.TopNavigation`,
-        minHeight: `64px`
+        variant: 'styles.TopNavigation',
+        minHeight: '64px'
       }}
     >
       <Container
         sx={{
-          display: `flex`,
-          alignItems: `center`,
+          display: 'flex',
+          alignItems: 'center',
           py: 3
         }}
       >
@@ -43,14 +43,14 @@ const TopNavigation = ({ hideBrandLink, hideMenuItems }) => {
                 to='/'
                 sx={{
                   variant: 'styles.a',
-                  color: `text`,
-                  display: [`block`, ``, `inline`],
-                  fontFamily: `heading`,
+                  color: 'text',
+                  display: ['block', '', 'inline'],
+                  fontFamily: 'heading',
                   fontSize: [2, 3],
-                  fontWeight: `bold`,
+                  fontWeight: 'bold',
                   letterSpacing: '1.1px',
                   marginRight: 3,
-                  textDecoration: `none`
+                  textDecoration: 'none'
                 }}
               >
                 {title}
@@ -61,7 +61,7 @@ const TopNavigation = ({ hideBrandLink, hideMenuItems }) => {
               menuItems.map(({ slug, path, title, text }) => (
                 <Link
                   key={slug}
-                  sx={{ fontSize: 2, variant: 'styles.a', color: `text`, mr: 3 }}
+                  sx={{ fontSize: 2, variant: 'styles.a', color: 'text', mr: 3 }}
                   title={title}
                   to={path}
                 >

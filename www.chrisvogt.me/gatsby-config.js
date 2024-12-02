@@ -1,7 +1,7 @@
 const gatsbyPluginFeedConfig = require('./plugins/gatsby-plugin-feed.config')
 
 require('dotenv').config({
-  path: `../.env.${process.env.NODE_ENV}`,
+  path: `../.env.${process.env.NODE_ENV}`
 })
 
 const {
@@ -9,10 +9,10 @@ const {
   URL: NETLIFY_SITE_URL = 'https://www.chrisvogt.me',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
+} = process.env
 
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
@@ -53,7 +53,7 @@ module.exports = {
       options: {}
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: process.env.GA_PROPERTY_ID,
         head: false,
@@ -67,16 +67,16 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{userAgent: '*', allow: ['/']}],
+            policy: [{ userAgent: '*', allow: ['/'] }],
             sitemap: `${siteUrl}/sitemap-index.xml`
           },
           'branch-deploy': {
-            policy: [{userAgent: '*', disallow: ['/']}],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
             host: null
           },
           'deploy-preview': {
-            policy: [{userAgent: '*', disallow: ['/']}],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
             host: null
           }
@@ -84,7 +84,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: 'gatsby-plugin-sitemap',
       options: {}
     },
     {
@@ -107,7 +107,7 @@ module.exports = {
             },
             ajax: {
               deny_list: ['bam-cell.nr-data.net']
-            },
+            }
           },
           trustKey: process.env.NEW_RELIC_TRUST_KEY
         }

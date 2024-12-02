@@ -4,8 +4,6 @@ import '@testing-library/jest-dom'
 import { ThemeUIProvider } from 'theme-ui'
 import UserProfile from './user-profile'
 import { useThemeUI } from 'theme-ui'
-import MetricCard from '../metric-card'
-import StatusCard from '../status-card'
 import isDarkMode from '../../../helpers/isDarkMode'
 
 // Mock the useThemeUI hook
@@ -60,7 +58,7 @@ describe('UserProfile', () => {
 
     // Verify metric cards
     const metricCards = screen.getAllByTestId('metric-card')
-    expect(metricCards.length).toBe(2)
+    expect(metricCards).toHaveLength(2)
     expect(metricCards[0]).toHaveTextContent('Friends: 10')
     expect(metricCards[1]).toHaveTextContent('Read: 25')
   })

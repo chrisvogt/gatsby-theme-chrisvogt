@@ -4,7 +4,19 @@ title: The Evolution of My Personal Website
 date: '2024-06-18T20:21:00.000Z'
 category: meta
 slug: '2024-evolution-of-this-blog'
-keywords: [journal, software engineering, personal blog, web development, website evolution, GatsbyJS, React, personal website, career growth, tech blog]
+keywords:
+  [
+    journal,
+    software engineering,
+    personal blog,
+    web development,
+    website evolution,
+    GatsbyJS,
+    React,
+    personal website,
+    career growth,
+    tech blog
+  ]
 description: >
   Explore the 12-year evolution of Chris Vogt's personal website, detailing its transformation from a basic PHP site to a sophisticated GatsbyJS and React application.
 excerpt: >
@@ -17,7 +29,7 @@ Building this website has been a personal hobby project of mine for the last 12 
 
 When I first created chrisvogt.me, I was working freelance for a real estate company, building and maintaining Realtor websites with CakePHP and WordPress Multisite. I wanted a hobby project that would allow me to grow my skills, investigate tech I was interested in, and have some place online to call mine.
 
-So I started a 4-page personal site with a dashboard home page that surfaced my GitHub activity, repositories, Twitter posts, and my StumbleUpon feed. *Who else remembers [StumbleUpon](https://en.wikipedia.org/wiki/StumbleUpon)?*
+So I started a 4-page personal site with a dashboard home page that surfaced my GitHub activity, repositories, Twitter posts, and my StumbleUpon feed. _Who else remembers [StumbleUpon](https://en.wikipedia.org/wiki/StumbleUpon)?_
 
 Using the tools I was familiar with at the time—PHP and WordPress—I created [this early version](https://github.com/chrisvogt/cakephp-devsite), a nascent form of what exists today.
 
@@ -43,7 +55,11 @@ So I rewrote my personal website to better match the tech I used at work. I want
 
 To handle API rate limits and server-side calls, I created a [Personal Stats API](https://github.com/chrisvogt/stats) using CakePHP, tracking time spent coding and visualizing the data on my stats subdomain. For a while it was also the backend behind my home page widgets.
 
-<img className='solid-background' alt='Data flow diagram for my personal website v1.x.' src='https://res.cloudinary.com/chrisvogt/image/upload/v1718781949/posts/2019-data-diagram.webp' />
+<img
+  className='solid-background'
+  alt='Data flow diagram for my personal website v1.x.'
+  src='https://res.cloudinary.com/chrisvogt/image/upload/v1718781949/posts/2019-data-diagram.webp'
+/>
 
 I had a front end report published on my stats subdomain visualizing the amount of time I was spending coding on my personal projects and breaking down the file types I was editing. I used [a time-tracking editor extension named WakaTime](https://wakatime.com/) to track my time spent in Sublime, Notepad and VS Code, and it provided the data I used for the visualizations.
 
@@ -59,7 +75,11 @@ This experience led me to rewrite my front end using GatsbyJS + React with the i
 
 After replacing the front end, I replaced my Personal Stats API with [metrics.chrisvogt.me](https://github.com/chrisvogt/metrics), an API and collection of Node.js scripts deployed to Google Cloud Platform with Firebase that run on scheduled jobs and update a Firestore database. The current version of my website still uses these technologies.
 
-<img className='solid-background' alt="My website's architecture as of June 2024." src='https://res.cloudinary.com/chrisvogt/image/upload/v1718782557/posts/2024-data-diagram.webp' />
+<img
+  className='solid-background'
+  alt="My website's architecture as of June 2024."
+  src='https://res.cloudinary.com/chrisvogt/image/upload/v1718782557/posts/2024-data-diagram.webp'
+/>
 
 ## Where I’m At Now
 

@@ -3,14 +3,11 @@ import { jsx } from 'theme-ui'
 import { useState } from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
-const DefaultPlaceholder = ({
-  height = '100%',
-  width = '100%'
-}) => (
+const DefaultPlaceholder = ({ height = '100%', width = '100%' }) => (
   <div
     sx={{
-      minHeight: `1px`,
-      minWidth: `1px`,
+      minHeight: '1px',
+      minWidth: '1px',
       height,
       width
     }}
@@ -24,10 +21,7 @@ const DefaultPlaceholder = ({
  *
  * Hides a component until it's been visible in the viewport.
  */
-const LazyLoad = ({
-  children,
-  placeholder = DefaultPlaceholder
-}) => {
+const LazyLoad = ({ children, placeholder = DefaultPlaceholder }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   const onChange = isVisible => {

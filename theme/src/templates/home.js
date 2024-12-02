@@ -9,58 +9,56 @@ import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-const HomeTemplate = props => {
-  return (
-    <Layout hideFooter disableMainWrapper>
-      <div
-        sx={{
-          minHeight: `500px`,
-          pt: 3,
-          px: 0
-        }}
-      >
-        <Container>
-          <Grid
-            columns={[
-              null,
-              null,
-              `0.375fr 1.625fr`, /* Sidebar 18%, Content 82% */
-              `0.4fr 1.6fr` /* Sidebar 20%, Content 80% */
-            ]}
-            gap={[null, 4]}
-          >
-            <aside sx={{ mb: [4, null] }}>
-              <HomeNavigation />
-            </aside>
-            <main role='main'>
+const HomeTemplate = () => (
+  <Layout hideFooter disableMainWrapper>
+    <div
+      sx={{
+        minHeight: '500px',
+        pt: 3,
+        px: 0
+      }}
+    >
+      <Container>
+        <Grid
+          columns={[
+            null,
+            null,
+            '0.375fr 1.625fr' /* Sidebar 18%, Content 82% */,
+            '0.4fr 1.6fr' /* Sidebar 20%, Content 80% */
+          ]}
+          gap={[null, 4]}
+        >
+          <aside sx={{ mb: [4, null] }}>
+            <HomeNavigation />
+          </aside>
+          <main role='main'>
+            <div
+              sx={{
+                position: 'relative',
+                borderTopRightRadius: '3em',
+                borderTopLeftRadius: '.5em',
+                px: [3, 4],
+                pt: [2, 3]
+              }}
+            >
               <div
                 sx={{
-                  position: 'relative',
-                  borderTopRightRadius: '3em',
-                  borderTopLeftRadius: '.5em',
-                  px: [3, 4],
-                  pt: [2, 3],
+                  maxWidth: '1200px'
                 }}
               >
-                <div
-                  sx={{
-                    maxWidth: `1200px`,
-                  }}
-                >
-                  <section>
-                    <HomeHeaderContent />
-                  </section>
-                  <HomeWidgets />
-                </div>
+                <section>
+                  <HomeHeaderContent />
+                </section>
+                <HomeWidgets />
               </div>
-              <Footer />
-            </main>
-          </Grid>
-        </Container>
-      </div>
-    </Layout>
-  )
-}
+            </div>
+            <Footer />
+          </main>
+        </Grid>
+      </Container>
+    </div>
+  </Layout>
+)
 
 export const Head = () => (
   <Seo
@@ -68,9 +66,9 @@ export const Head = () => (
     description="Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
     keywords='Chris Vogt, Software Engineer in San Francisco, GoDaddy engineer blog, photography blog, piano recordings, travel blog, personal blog, digital garden'
   >
-    <meta property="og:url" content="https://www.chrisvogt.me" />
-    <meta property="og:type" content="website" />
-    <script type="application/ld+json">
+    <meta property='og:url' content='https://www.chrisvogt.me' />
+    <meta property='og:type' content='website' />
+    <script type='application/ld+json'>
       {`{
         "@context": "https://schema.org",
         "@type": "Person",

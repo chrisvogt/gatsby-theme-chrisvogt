@@ -10,9 +10,7 @@ describe('Header', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Header hideTopPadding>
-            {headline}
-          </Header>
+          <Header hideTopPadding>{headline}</Header>
         </TestProvider>
       )
       .toJSON()

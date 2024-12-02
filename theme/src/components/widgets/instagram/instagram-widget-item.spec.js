@@ -32,7 +32,10 @@ describe('InstagramWidgetItem', () => {
 
     const img = screen.getByAltText('Instagram post thumbnail')
     expect(img).toBeInTheDocument()
-    expect(img).toHaveAttribute('src', `${defaultProps.post.cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`)
+    expect(img).toHaveAttribute(
+      'src',
+      `${defaultProps.post.cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`
+    )
   })
 
   it('calls handleClick when the button is clicked', () => {

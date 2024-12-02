@@ -21,7 +21,7 @@ describe('CallToAction', () => {
     it("doesn't a loading indicator by default", () => {
       const testRenderer = renderer.create(<CallToAction title={title}>Test</CallToAction>)
       const testInstance = testRenderer.root
-      expect(testInstance.findAllByType(Bars).length).toBe(0)
+      expect(testInstance.findAllByType(Bars)).toHaveLength(0)
     })
 
     it('renders a loading indicator', () => {
@@ -31,7 +31,7 @@ describe('CallToAction', () => {
         </CallToAction>
       )
       const testInstance = testRenderer.root
-      expect(testInstance.findAllByType(Bars).length).toBe(1)
+      expect(testInstance.findAllByType(Bars)).toHaveLength(1)
     })
   })
 

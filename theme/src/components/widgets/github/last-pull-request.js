@@ -25,17 +25,17 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
       <Themed.a
         href={url}
         sx={{
-          color: `var(--theme-ui-colors-panel-text)`,
-          display: `flex`,
+          color: 'var(--theme-ui-colors-panel-text)',
+          display: 'flex',
           '&:hover, &:focus': {
-            textDecoration: `none`
+            textDecoration: 'none'
           }
         }}
       >
         <Card variant='actionCard'>
           <Placeholder
             color='#efefef'
-            customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `100%` }} />}
+            customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '100%' }} />}
             ready={!isLoading}
             rows={1}
             showLoadingAnimation
@@ -45,10 +45,10 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
             </span>
           </Placeholder>
 
-          <CardFooter customStyles={{ justifyContent: `flex-end` }}>
+          <CardFooter customStyles={{ justifyContent: 'flex-end' }}>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: `15px`, height: `15px` }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '15px', height: '15px' }} />}
               ready={!isLoading}
               showLoadingAnimation
             >

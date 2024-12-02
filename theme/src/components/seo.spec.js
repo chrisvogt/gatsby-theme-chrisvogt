@@ -9,23 +9,23 @@ import { getLanguageCode, getTitle, getTitleTemplate, getTwitterUsername } from 
 // Mocking the necessary hooks and selectors
 jest.mock('../hooks/use-site-metadata')
 jest.mock('theme-ui', () => ({
-  useThemeUI: jest.fn(),
+  useThemeUI: jest.fn()
 }))
 jest.mock('../selectors/metadata', () => ({
   getLanguageCode: jest.fn(),
   getTitle: jest.fn(),
   getTitleTemplate: jest.fn(),
-  getTwitterUsername: jest.fn(),
+  getTwitterUsername: jest.fn()
 }))
 
 describe('Seo Component', () => {
   beforeEach(() => {
     // Mock the default metadata and theme values
     useSiteMetadata.mockReturnValue({
-      title: 'Default Site Title',
+      title: 'Default Site Title'
     })
     useThemeUI.mockReturnValue({
-      theme: { colors: { background: '#ffffff' } },
+      theme: { colors: { background: '#ffffff' } }
     })
     getLanguageCode.mockReturnValue('en')
     getTitle.mockReturnValue('Default Site Title')
@@ -34,39 +34,38 @@ describe('Seo Component', () => {
   })
 
   it('renders default SEO metadata tags', () => {
-    render(<Seo title="Home" description="This is the homepage" keywords="home,seo" />)
-  
+    render(<Seo title='Home' description='This is the homepage' keywords='home,seo' />)
+
     // Check if <title> tag is rendered correctly
     expect(document.title).toBe('Home | My Site')
-  
+
     // Check if description meta tag is present
     const descriptionMeta = document.querySelector('meta[name="description"]')
     expect(descriptionMeta).toHaveAttribute('content', 'This is the homepage')
-  
+
     // Check if keywords meta tag is present
     const keywordsMeta = document.querySelector('meta[name="keywords"]')
     expect(keywordsMeta).toHaveAttribute('content', 'home,seo')
-  
+
     // Check if theme-color meta tag is present
     const themeColorMeta = document.querySelector('meta[name="theme-color"]')
     expect(themeColorMeta).toHaveAttribute('content', '#ffffff')
-  
+
     // Check if og:title meta tag is present
     const ogTitleMeta = document.querySelector('meta[property="og:title"]')
     expect(ogTitleMeta).toHaveAttribute('content', 'Home | My Site')
-  
+
     // Check if twitter:title meta tag is present
     const twitterTitleMeta = document.querySelector('meta[name="twitter:title"]')
     expect(twitterTitleMeta).toHaveAttribute('content', 'Home | My Site')
-  
+
     // Check if twitter:creator meta tag is present
     const twitterCreatorMeta = document.querySelector('meta[name="twitter:creator"]')
     expect(twitterCreatorMeta).toHaveAttribute('content', '@example')
   })
-  
 
   it('renders article-specific meta tags when article prop is true', () => {
-    render(<Seo title="Article Title" article />)
+    render(<Seo title='Article Title' article />)
 
     // Check if og:type meta tag is set to article
     const ogTypeMeta = document.querySelector('meta[property="og:type"]')
@@ -74,7 +73,7 @@ describe('Seo Component', () => {
   })
 
   it('renders image meta tags when image URL is provided', () => {
-    render(<Seo title="Image Post" image="https://example.com/image.jpg" />)
+    render(<Seo title='Image Post' image='https://example.com/image.jpg' />)
 
     // Check if og:image meta tag is present
     const ogImageMeta = document.querySelector('meta[property="og:image"]')

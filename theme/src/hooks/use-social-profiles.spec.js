@@ -39,7 +39,7 @@ describe('useSocialProfiles', () => {
 
   it('returns the expected number of profiles', () => {
     const { result } = renderHook(() => useSocialProfiles())
-    expect(result.current.length).toBe(1)
+    expect(result.current).toHaveLength(1)
   })
 
   it('selects data inside the `node` child', () => {

@@ -9,7 +9,7 @@ import { TextRow } from 'react-placeholder/lib/placeholders'
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const removeAllHtmlTags = input => input.replace(/<|>/g, "") 
+const removeAllHtmlTags = input => input.replace(/<|>/g, '')
 
 const renderStarsForRating = count => {
   const repeat = (char, n) => Array(n).fill(char).join('')
@@ -41,17 +41,17 @@ const UserStatus = ({ isLoading, status, actorName }) => {
       <Themed.a
         href={link}
         sx={{
-          color: `var(--theme-ui-colors-panel-text)`,
-          display: `flex`,
+          color: 'var(--theme-ui-colors-panel-text)',
+          display: 'flex',
           '&:hover, &:focus': {
-            textDecoration: `none`
+            textDecoration: 'none'
           }
         }}
       >
         <Card variant='actionCard'>
           <Placeholder
             color='#efefef'
-            customPlaceholder={<TextRow style={{ marginTop: 0, width: `100%` }} />}
+            customPlaceholder={<TextRow style={{ marginTop: 0, width: '100%' }} />}
             ready={!isLoading}
             showLoadingAnimation
           >
@@ -60,10 +60,10 @@ const UserStatus = ({ isLoading, status, actorName }) => {
               <em>– {ago(new Date(updated))}</em>
             </span>
           </Placeholder>
-          <CardFooter customStyles={{ justifyContent: `flex-end` }}>
+          <CardFooter customStyles={{ justifyContent: 'flex-end' }}>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow style={{ marginTop: 0, width: `140px` }} />}
+              customPlaceholder={<TextRow style={{ marginTop: 0, width: '140px' }} />}
               ready={!isLoading}
               showLoadingAnimation
             >

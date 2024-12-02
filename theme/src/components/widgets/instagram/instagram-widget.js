@@ -7,7 +7,6 @@ import { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
-import { Flex } from '@theme-ui/components'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import ReactPlaceholder from 'react-placeholder'
 import VanillaTilt from 'vanilla-tilt'
@@ -68,7 +67,7 @@ export default () => {
     }
   }, [isLoading, isShowingMore])
 
-  const openLightbox = useCallback((event, { photo, index }) => {
+  const openLightbox = useCallback((event, { index }) => {
     setCurrentImage(index)
     setViewerIsOpen(true)
   }, [])
@@ -113,10 +112,10 @@ export default () => {
                   <RectShape
                     color='#efefef'
                     sx={{
-                      borderRadius: `8px`,
-                      boxShadow: `md`,
-                      width: `100%`,
-                      paddingBottom: `100%`
+                      borderRadius: '8px',
+                      boxShadow: 'md',
+                      width: '100%',
+                      paddingBottom: '100%'
                     }}
                   />
                 </div>

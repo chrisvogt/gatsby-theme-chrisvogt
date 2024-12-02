@@ -22,8 +22,10 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
 
   return (
     <div>
-      <div sx={{ display: `flex`, flex: 1, alignItems: `center` }}>
-        <Heading as='h3' sx={{ fontSize: [3, 4] }}>Top Tracks</Heading>
+      <div sx={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+        <Heading as='h3' sx={{ fontSize: [3, 4] }}>
+          Top Tracks
+        </Heading>
       </div>
 
       <Themed.p>My 12 most-played tracks over the last 4 weeks.</Themed.p>

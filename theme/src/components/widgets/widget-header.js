@@ -4,10 +4,10 @@ import { Heading } from '@theme-ui/components'
 import { jsx } from 'theme-ui'
 
 const headerStyles = {
-  textAlign: [`center`, `left`],
-  display: `flex`,
-  flexDirection: [`column`, `row`],
-  alignItems: [``, `center`]
+  textAlign: ['center', 'left'],
+  display: 'flex',
+  flexDirection: ['column', 'row'],
+  alignItems: ['', 'center']
 }
 
 const asideStyles = {

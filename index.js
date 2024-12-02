@@ -1,7 +1,7 @@
 const boxen = require('boxen')
 const chalk = require('chalk')
 
-const package = require('./theme/package.json')
+const packageData = require('./theme/package.json')
 
 const banner = boxen('www.chrisvogt.me\nMy Personal Website', {
   align: 'center',
@@ -18,4 +18,4 @@ const banner = boxen('www.chrisvogt.me\nMy Personal Website', {
 console.log(banner)
 
 console.log(`✅  Installation succeeded: ${chalk.bold('gatsby-theme-chrisvogt')}`)
-console.log(`⚙  Version: ${chalk.bold(package.version)}`)
+console.log(`⚙  Version: ${chalk.bold(packageData.version)}`)

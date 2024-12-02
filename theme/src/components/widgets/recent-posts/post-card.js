@@ -9,8 +9,8 @@ export default ({ banner, category, date, excerpt, link, title }) => {
   return (
     <Link
       sx={{
-        color: `var(--theme-ui-colors-panel-text)`,
-        textDecoration: `none`
+        color: 'var(--theme-ui-colors-panel-text)',
+        textDecoration: 'none'
       }}
       to={link}
     >
@@ -18,8 +18,8 @@ export default ({ banner, category, date, excerpt, link, title }) => {
         <div
           className='card-content'
           sx={{
-            display: `flex`,
-            flexDirection: `column`
+            display: 'flex',
+            flexDirection: 'column'
           }}
         >
           {banner && (
@@ -27,13 +27,13 @@ export default ({ banner, category, date, excerpt, link, title }) => {
               <div
                 sx={{
                   backgroundImage: `url(${banner})`,
-                  backgroundPosition: `center`,
-                  backgroundSize: `contain`,
-                  backgroundRepeat: `no-repeat`,
-                  borderRadius: `1px`,
+                  backgroundPosition: 'center',
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  borderRadius: '1px',
                   width: '100%',
                   aspectRatio: '1.9 / 1',
-                  transition: `all 2.5s ease`
+                  transition: 'all 2.5s ease'
                 }}
               />
             </div>
@@ -46,8 +46,8 @@ export default ({ banner, category, date, excerpt, link, title }) => {
           <time
             className='created'
             sx={{
-              color: `textMuted`,
-              fontFamily: `sans`,
+              color: 'textMuted',
+              fontFamily: 'sans',
               fontSize: 1
             }}
           >

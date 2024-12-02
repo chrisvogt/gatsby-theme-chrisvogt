@@ -9,7 +9,7 @@ import Media, { Head } from './media'
 const data = {
   mdx: {
     fields: {
-      category: 'Mock Category',
+      category: 'Mock Category'
     },
     frontmatter: {
       title: 'A Mock Blog Post',
@@ -25,17 +25,17 @@ const data = {
 // Mock theme object
 const mockTheme = {
   colors: {
-    'panel-background': '#f0f0f0',
+    'panel-background': '#f0f0f0'
   }
 }
 
 jest.mock('gatsby')
 jest.mock('../components/layout', () => {
-  return ({children}) => <div className='layoutMock'>{children}</div>
+  return ({ children }) => <div className='layoutMock'>{children}</div>
 })
 
 jest.mock('../components/seo', () => {
-  return ({children}) => <div className='seoMock'>{children}</div>
+  return ({ children }) => <div className='seoMock'>{children}</div>
 })
 
 jest.mock('../shortcodes/soundcloud', () => {
@@ -58,8 +58,7 @@ describe('Media Post', () => {
   })
 
   // Helper function to wrap components in the ThemeUIProvider
-  const renderWithTheme = (component) =>
-    renderer.create(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
+  const renderWithTheme = component => renderer.create(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
 
   // Test with no media sources
   it('renders correctly with no media sources', () => {

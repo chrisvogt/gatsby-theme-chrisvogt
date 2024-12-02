@@ -11,28 +11,29 @@ import PostCard from '../../../theme/src/components/widgets/recent-posts/post-ca
 import Seo from '../../../theme/src/components/seo'
 
 const BlogIndexPage = ({ data }) => {
-  const posts = getPosts(data)?.filter(post => !(post.fields.category?.startsWith('photography') || post.fields.category?.startsWith('music')))
+  const posts = getPosts(data)?.filter(
+    post => !(post.fields.category?.startsWith('photography') || post.fields.category?.startsWith('music'))
+  )
+
   return (
     <Layout>
       <Flex
         sx={{
-          flexDirection: `column`,
+          flexDirection: 'column',
           flexGrow: 1,
           position: 'relative',
           py: 3
         }}
       >
         <Container sx={{ flexGrow: 1, width: ['', '', 'max(80ch, 50vw)'] }}>
-          <PageHeader>
-            Blog Posts
-          </PageHeader>
+          <PageHeader>Blog Posts</PageHeader>
 
           <Themed.div
             sx={{
-              display: `grid`,
-              gridAutoRows: `1fr`,
+              display: 'grid',
+              gridAutoRows: '1fr',
               gridGap: 4,
-              gridTemplateColumns: `1fr`,
+              gridTemplateColumns: '1fr',
               mt: 4
             }}
           >

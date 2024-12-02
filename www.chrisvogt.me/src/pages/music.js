@@ -16,23 +16,21 @@ const MusicPage = ({ data }) => {
     <Layout>
       <Flex
         sx={{
-          flexDirection: `column`,
+          flexDirection: 'column',
           flexGrow: 1,
           position: 'relative',
           py: 3
         }}
       >
         <Container sx={{ flexGrow: 1, width: ['', '', 'max(95ch, 50vw)'] }}>
-          <PageHeader>
-            My Music
-          </PageHeader>
+          <PageHeader>My Music</PageHeader>
 
           <Themed.div
             sx={{
-              display: `grid`,
-              gridAutoRows: `1fr`,
+              display: 'grid',
+              gridAutoRows: '1fr',
               gridGap: 4,
-              gridTemplateColumns: `1fr`,
+              gridTemplateColumns: '1fr',
               mt: 4
             }}
           >

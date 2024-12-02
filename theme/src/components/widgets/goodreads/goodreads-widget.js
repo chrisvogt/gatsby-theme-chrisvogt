@@ -108,10 +108,7 @@ export default () => {
 
   return (
     <Widget id='goodreads' hasFatalError={hasFatalError}>
-      <WidgetHeader
-        aside={callToAction}
-        icon={faGoodreads}
-      >
+      <WidgetHeader aside={callToAction} icon={faGoodreads}>
         Goodreads
       </WidgetHeader>
 

@@ -7,7 +7,7 @@ const TrackPreview = ({ link, name, thumbnailURL }) => (
     href={link}
     title={name}
     sx={{
-      variant: `styles.TrackPreview`
+      variant: 'styles.TrackPreview'
     }}
   >
     <img
