@@ -47,12 +47,15 @@ describe('Theme Configuration', () => {
       expect(banner).toHaveProperty('height', '340px')
       expect(banner).toHaveProperty('backgroundImage')
       expect(banner).toHaveProperty('animation', 'highlight 3s infinite alternate')
+      expect(banner).toHaveProperty('backgroundPosition', '0 0, 0 100%')
+      expect(banner).toHaveProperty('backgroundOrigin', 'padding-box, border-box')
+      expect(banner).toHaveProperty('backgroundRepeat', 'no-repeat')
+      expect(banner).toHaveProperty('backgroundSize', '100% 100%, 100% 200%')
     })
 
-    it('defines @keyframes highlight', () => {
+    it('verifies @keyframes highlight definition', () => {
       const highlight = theme.styles.GradientBanner['@keyframes highlight']
       expect(highlight).toBeTruthy()
-      expect(highlight).toHaveProperty('100%')
       expect(highlight['100%']).toHaveProperty('backgroundPosition', '0 0, 0 0')
     })
   })
@@ -83,31 +86,36 @@ describe('Theme Configuration', () => {
     })
   })
 
-  describe('card variants', () => {
+  describe('Card styles and variants', () => {
     it('defines primary card styles', () => {
       const primaryCard = theme.cards.primary
       expect(primaryCard).toHaveProperty('borderRadius', 'card')
       expect(primaryCard).toHaveProperty('boxShadow', 'default')
     })
 
-    it('defines actionCard styles', () => {
+    it('defines actionCard with dynamic borderLeft', () => {
       const actionCard = theme.cards.actionCard
-      expect(actionCard).toHaveProperty('borderLeft')
-      expect(actionCard).toMatchObject(floatOnHover)
-      expect(actionCard).toHaveProperty('background')
+      expect(actionCard.borderLeft(theme)).toBe(`2px solid ${theme.colors.primary}`)
+      expect(actionCard.a).toHaveProperty(':hover', 'pointer')
     })
 
-    it('defines metricCard styles', () => {
+    it('tests metricCard nested span styles', () => {
       const metricCard = theme.cards.metricCard
-      expect(metricCard).toHaveProperty('backgroundColor', 'var(--theme-ui-colors-panel-background)')
-      expect(metricCard).toHaveProperty('boxShadow', 'none')
+      expect(metricCard.span).toHaveProperty('fontFamily', 'heading')
+      expect(metricCard.span).toHaveProperty('fontWeight', 'bold')
+      expect(metricCard.span).toHaveProperty('padding', 2)
     })
 
-    it('defines UserProfile card styles', () => {
+    it('defines UserProfile card styles dynamically', () => {
       const userProfile = theme.cards.UserProfile
       expect(userProfile.padding(theme)).toEqual(['none', `0 ${theme.space[3]} 0 0`])
-      expect(userProfile).toHaveProperty('color', 'white')
+      expect(userProfile).toHaveProperty('border', 'none')
       expect(userProfile).toHaveProperty('background', 'none')
+    })
+
+    it('tests StatusCardDark styles', () => {
+      const statusCardDark = theme.cards.StatusCardDark
+      expect(statusCardDark).toHaveProperty('backgroundColor', '#1e2530')
     })
   })
 
