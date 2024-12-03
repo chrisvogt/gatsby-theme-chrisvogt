@@ -12,7 +12,7 @@ export const getGithubWidgetDataSource = metadata => metadata?.widgets?.github?.
 
 export const getGoodreadsUsername = metadata => metadata?.widgets?.goodreads?.username
 
-export const getGoodreadsWidgetDataSource = metadata => metadata?.widgets.goodreads.widgetDataSource
+export const getGoodreadsWidgetDataSource = metadata => metadata?.widgets?.goodreads?.widgetDataSource
 
 export const getHeadline = metadata => metadata?.headline
 
