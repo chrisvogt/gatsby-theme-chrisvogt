@@ -48,7 +48,7 @@ class Circle {
       this.dy = -this.dy
     }
 
-    this.draw(ctx) // Pass the context
+    this.draw(ctx)
   }
 }
 
@@ -71,7 +71,6 @@ const AnimatedBackground = () => {
 
     setCanvasSize()
 
-    // Updated complex gradient colors with dominant royal purple and sparse gold accents
     const gradients = [
       [
         { position: 0, color: 'rgba(128, 0, 128, 1)' }, // Royal Purple
@@ -93,7 +92,6 @@ const AnimatedBackground = () => {
 
     const circles = []
 
-    // Generate 80 circles
     for (let i = 0; i < 80; i++) {
       const isLarge = i < 4 // Larger size for the first 4 circles
       const radius = isLarge ? Math.random() * 200 + 250 : Math.random() * 35 + 40
@@ -109,7 +107,7 @@ const AnimatedBackground = () => {
       if (!ctx) return
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      circles.forEach(circle => circle.update())
+      circles.forEach(circle => circle.update(canvas, ctx))
 
       requestAnimationFrame(animate)
     }
