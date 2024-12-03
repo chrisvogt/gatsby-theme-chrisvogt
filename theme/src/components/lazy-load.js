@@ -5,6 +5,7 @@ import VisibilitySensor from 'react-visibility-sensor'
 
 const DefaultPlaceholder = ({ height = '100%', width = '100%' }) => (
   <div
+    data-testid='default-placeholder'
     sx={{
       minHeight: '1px',
       minWidth: '1px',
@@ -21,7 +22,7 @@ const DefaultPlaceholder = ({ height = '100%', width = '100%' }) => (
  *
  * Hides a component until it's been visible in the viewport.
  */
-const LazyLoad = ({ children, placeholder = DefaultPlaceholder }) => {
+const LazyLoad = ({ children, placeholder = <DefaultPlaceholder /> }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   const onChange = isVisible => {

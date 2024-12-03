@@ -6,7 +6,6 @@ import { Themed } from '@theme-ui/mdx'
 import ColorToggle from '../components/color-toggle'
 import { getHeaderLeftItems } from '../selectors/navigation'
 import { getTitle } from '../selectors/metadata'
-// import trianglify from './artwork/trianglify.svg'
 import useNavigationData from '../hooks/use-navigation-data'
 import useSiteMetadata from '../hooks/use-site-metadata'
 

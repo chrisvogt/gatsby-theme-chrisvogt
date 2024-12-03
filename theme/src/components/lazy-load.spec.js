@@ -21,14 +21,18 @@ describe('LazyLoad', () => {
     jest.clearAllMocks()
   })
 
-  it('renders the placeholder initially', () => {
+  it('renders the default placeholder initially', () => {
     render(
       <LazyLoad>
         <div data-testid='content'>Lazy Loaded Content</div>
       </LazyLoad>
     )
 
-    // Expect the placeholder to be present initially
+    // Expect the default placeholder to be present
+    const defaultPlaceholder = screen.getByTestId('default-placeholder')
+    expect(defaultPlaceholder).toBeInTheDocument()
+
+    // The content should not yet be visible
     expect(screen.queryByTestId('content')).not.toBeInTheDocument()
   })
 
