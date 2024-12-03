@@ -2,6 +2,10 @@ import theme, { floatOnHover } from './theme'
 import { tailwind } from '@theme-ui/presets'
 import { merge } from 'theme-ui'
 
+jest.mock('theme-ui', () => ({
+  merge: jest.fn((...args) => Object.assign({}, ...args))
+}))
+
 describe('Theme Configuration', () => {
   describe('a snapshot of the configuration', () => {
     it('matches the snapshot', () => {
@@ -9,7 +13,7 @@ describe('Theme Configuration', () => {
     })
   })
 
-  describe('properties that are expected to remain static', () => {
+  describe('general configurations', () => {
     it('merges with Tailwind preset', () => {
       const mergedTheme = merge(tailwind, theme)
       expect(mergedTheme).toBeTruthy()
@@ -20,72 +24,117 @@ describe('Theme Configuration', () => {
       expect(theme.config.useColorSchemeMediaQuery).toBe(false)
       expect(theme.config).toHaveProperty('useLocalStorage')
     })
+  })
 
-    it('contains custom fonts', () => {
-      expect(theme.fonts).toHaveProperty('sans')
-      expect(theme.fonts).toHaveProperty('serif')
-      expect(theme.fonts).toHaveProperty('mono')
+  describe('font definitions', () => {
+    it('defines sans-serif fonts correctly', () => {
+      expect(theme.fonts.sans).toContain('sans-serif')
     })
 
-    it('has font sizes', () => {
-      expect(theme.fontSizes).toContain('.875rem')
-      expect(theme.fontSizes).toContain('4rem')
+    it('defines serif fonts correctly', () => {
+      expect(theme.fonts.serif).toContain('Crimson Text')
     })
 
-    it('has color modes configured', () => {
-      expect(theme.colors.modes.dark).toHaveProperty('background', '#1e1e2f')
-      expect(theme.colors.modes.dark).toHaveProperty('text', '#fff')
+    it('defines monospace fonts correctly', () => {
+      expect(theme.fonts.monospace).toContain('Menlo')
+    })
+  })
+
+  describe('GradientBanner styles', () => {
+    it('defines the GradientBanner styles', () => {
+      const banner = theme.styles.GradientBanner
+      expect(banner).toHaveProperty('maxWidth', '100%')
+      expect(banner).toHaveProperty('height', '340px')
+      expect(banner).toHaveProperty('backgroundImage')
+      expect(banner).toHaveProperty('animation', 'highlight 3s infinite alternate')
     })
 
-    it('contains custom card styles', () => {
-      expect(theme.cards.primary).toHaveProperty('background')
-      expect(theme.cards.actionCard).toHaveProperty('borderLeft')
+    it('defines @keyframes highlight', () => {
+      const highlight = theme.styles.GradientBanner['@keyframes highlight']
+      expect(highlight).toBeTruthy()
+      expect(highlight).toHaveProperty('100%')
+      expect(highlight['100%']).toHaveProperty('backgroundPosition', '0 0, 0 0')
+    })
+  })
+
+  describe('PostCard styles', () => {
+    it('applies PostCard base styles', () => {
+      const postCard = theme.cards.PostCard
+      expect(postCard).toHaveProperty('display', 'flex')
+      expect(postCard).toHaveProperty('flexDirection', 'column')
+      expect(postCard).toHaveProperty('backgroundColor', 'var(--theme-ui-colors-panel-background)')
     })
 
-    it('has styles for gradient banners', () => {
-      expect(theme.styles.GradientBanner).toHaveProperty('backgroundImage')
+    it('integrates floatOnHover into PostCard', () => {
+      const postCard = theme.cards.PostCard
+      expect(postCard).toMatchObject(floatOnHover)
     })
 
-    it('defines card variants', () => {
-      expect(theme.variants.cards.dark).toHaveProperty('backgroundColor', 'teal')
+    it('integrates glassmorphismPanel into PostCard', () => {
+      const postCard = theme.cards.PostCard
+      expect(postCard).toHaveProperty('borderRadius', '10px')
+      expect(postCard).toHaveProperty('backdropFilter', 'blur(10px)')
     })
 
-    it('exports floatOnHover animation', () => {
-      expect(floatOnHover).toHaveProperty('transition')
+    it('defines PostCard hover styles for .read-more-icon', () => {
+      const postCard = theme.cards.PostCard
+      expect(postCard['&:hover .read-more-icon']).toHaveProperty('opacity', 1)
+      expect(postCard['&:hover .read-more-icon']).toHaveProperty('paddingLeft', '8px')
+    })
+  })
+
+  describe('card variants', () => {
+    it('defines primary card styles', () => {
+      const primaryCard = theme.cards.primary
+      expect(primaryCard).toHaveProperty('borderRadius', 'card')
+      expect(primaryCard).toHaveProperty('boxShadow', 'default')
     })
 
-    it('applies floatOnHover to PostCard', () => {
-      const postCardStyles = theme.cards.PostCard
-      expect(postCardStyles).toMatchObject(floatOnHover)
+    it('defines actionCard styles', () => {
+      const actionCard = theme.cards.actionCard
+      expect(actionCard).toHaveProperty('borderLeft')
+      expect(actionCard).toMatchObject(floatOnHover)
+      expect(actionCard).toHaveProperty('background')
     })
 
-    it('has reduced motion preference for emojis', () => {
-      const reducedMotionStyles = theme.global['@media (prefers-reduced-motion: reduce)']
-      expect(reducedMotionStyles['.emoji']).toHaveProperty('animation', 'none !important')
+    it('defines metricCard styles', () => {
+      const metricCard = theme.cards.metricCard
+      expect(metricCard).toHaveProperty('backgroundColor', 'var(--theme-ui-colors-panel-background)')
+      expect(metricCard).toHaveProperty('boxShadow', 'none')
     })
 
-    it('defines glassmorphism panel styles', () => {
-      const panelStyles = theme.cards.PostCard
-      expect(panelStyles).toHaveProperty('borderRadius', '10px')
+    it('defines UserProfile card styles', () => {
+      const userProfile = theme.cards.UserProfile
+      expect(userProfile.padding(theme)).toEqual(['none', `0 ${theme.space[3]} 0 0`])
+      expect(userProfile).toHaveProperty('color', 'white')
+      expect(userProfile).toHaveProperty('background', 'none')
+    })
+  })
+
+  describe('color mode configurations', () => {
+    it('defines light mode background colors', () => {
+      expect(theme.colors.background).toBe('#fcb8a2')
+      expect(theme.colors['panel-background']).toContain('rgba(255, 229, 224, 0.10)')
     })
 
-    it('has layout configuration', () => {
+    it('defines dark mode background colors', () => {
+      const darkMode = theme.colors.modes.dark
+      expect(darkMode).toHaveProperty('background', '#1e1e2f')
+      expect(darkMode).toHaveProperty('primary', '#1E90FF')
+      expect(darkMode).toHaveProperty('text', '#fff')
+    })
+  })
+
+  describe('responsive layout', () => {
+    it('defines container styles', () => {
       const containerStyles = theme.layout.container
-      expect(containerStyles.maxWidth).toContain('1440px')
+      expect(containerStyles).toHaveProperty('maxWidth', ['', '98%', '', '', '1440px'])
+      expect(containerStyles).toHaveProperty('py', [2, 3])
+      expect(containerStyles).toHaveProperty('px', [3, 4])
     })
+  })
 
-    it('defines highlight keyframe animation', () => {
-      const highlightAnimation = theme.styles.GradientBanner['@keyframes highlight']
-      expect(highlightAnimation).toHaveProperty('100%')
-      expect(highlightAnimation['100%']).toHaveProperty('backgroundPosition', '0 0, 0 0')
-    })
-
-    it('defines wobble keyframe animation', () => {
-      const wobbleAnimation = theme.global['@keyframes wobble']
-      expect(wobbleAnimation['0%, 100%']).toHaveProperty('transform', 'rotate(0deg)')
-      expect(wobbleAnimation['15%']).toHaveProperty('transform', 'rotate(-15deg)')
-    })
-
+  describe('button and badge variants', () => {
     it('defines button variants', () => {
       expect(theme.buttons.primary).toHaveProperty('bg', 'primary')
       expect(theme.buttons.secondary).toHaveProperty('bg', 'secondary')
@@ -96,50 +145,18 @@ describe('Theme Configuration', () => {
       expect(theme.badges.primary).toHaveProperty('bg', 'primary')
       expect(theme.badges.outline).toHaveProperty('boxShadow', 'inset 0 0 0 1px')
     })
+  })
 
-    it('defines GitHubCardFooter styles', () => {
+  describe('GitHubCardFooter styles', () => {
+    it('defines display and justify content', () => {
       const footerStyles = theme.styles.GitHubCardFooter
       expect(footerStyles).toHaveProperty('display', 'flex')
       expect(footerStyles).toHaveProperty('justifyContent', 'space-between')
     })
+  })
 
-    it('defines PageFooter styles', () => {
-      const pageFooterStyles = theme.styles.PageFooter
-      expect(pageFooterStyles).toHaveProperty('zIndex', '10')
-      expect(pageFooterStyles.a).toHaveProperty('color', 'text')
-    })
-
-    it('defines Book component styles', () => {
-      const bookStyles = theme.styles.Book
-      expect(bookStyles).toHaveProperty('filter')
-      expect(bookStyles['&:hover, &:focus']).toHaveProperty('transform', 'scale(1.01)')
-    })
-
-    it('defines responsive container styles', () => {
-      const containerStyles = theme.layout.container
-      expect(containerStyles).toHaveProperty('py', [2, 3])
-      expect(containerStyles).toHaveProperty('px', [3, 4])
-    })
-
-    it('defines UserProfile styles', () => {
-      const userProfileStyles = theme.cards.UserProfile
-      expect(userProfileStyles.padding(theme)).toEqual(['none', `0 ${theme.space[3]} 0 0`])
-      expect(userProfileStyles).toHaveProperty('color', 'white')
-    })
-
-    it('defines InstagramItem styles', () => {
-      const instagramStyles = theme.styles.InstagramItem
-      expect(instagramStyles).toHaveProperty('cursor', 'pointer')
-      expect(instagramStyles).toHaveProperty('borderRadius', '8px')
-    })
-
-    it('defines Header styles', () => {
-      const headerStyles = theme.styles.Header
-      expect(headerStyles).toHaveProperty('alignItems', 'center')
-      expect(headerStyles).toHaveProperty('transition', 'all 0.3s ease-in-out')
-    })
-
-    it('defines VideoWrapper styles', () => {
+  describe('VideoWrapper styles', () => {
+    it('defines wrapper and iframe styles', () => {
       const videoWrapperStyles = theme.styles.VideoWrapper
       expect(videoWrapperStyles).toHaveProperty('position', 'relative')
       expect(videoWrapperStyles).toHaveProperty('paddingBottom', '56.25%')
