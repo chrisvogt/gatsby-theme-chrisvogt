@@ -46,7 +46,7 @@ const Playlists = ({ isLoading, playlists = [] }) => {
     .filter(Boolean)
 
   return (
-    <div sx={{ mb: 4 }}>
+    <div>
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center' }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>
           Playlists

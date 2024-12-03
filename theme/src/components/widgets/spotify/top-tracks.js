@@ -22,7 +22,7 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
   })
 
   return (
-    <div>
+    <div sx={{ mb: 4 }}>
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center' }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>
           Top Tracks

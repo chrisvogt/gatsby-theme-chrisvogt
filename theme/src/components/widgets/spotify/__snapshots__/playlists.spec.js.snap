@@ -2,9 +2,7 @@
 
 exports[`Playlists Component matches the snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-16ilj6a"
-  >
+  <div>
     <div
       class="css-ccroti"
     >
