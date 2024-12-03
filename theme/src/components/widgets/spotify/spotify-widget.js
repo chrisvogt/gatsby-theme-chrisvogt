@@ -60,8 +60,9 @@ const SpotifyWidget = () => {
       </WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
-      <Playlists isLoading={isLoading} playlists={playlists} />
+
       <TopTracks isLoading={isLoading} tracks={topTracks} />
+      <Playlists isLoading={isLoading} playlists={playlists} />
     </Widget>
   )
 }

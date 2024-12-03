@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopTracks Component handles tracks without a 300px image gracefully 1`] = `
-<div>
+<div
+  className="css-16ilj6a"
+>
   <div
     className="css-ccroti"
   >
@@ -38,7 +40,9 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
 `;
 
 exports[`TopTracks Component renders correctly when loading 1`] = `
-<div>
+<div
+  className="css-16ilj6a"
+>
   <div
     className="css-ccroti"
   >
@@ -241,7 +245,9 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
 `;
 
 exports[`TopTracks Component renders correctly with no tracks 1`] = `
-<div>
+<div
+  className="css-16ilj6a"
+>
   <div
     className="css-ccroti"
   >
@@ -263,7 +269,9 @@ exports[`TopTracks Component renders correctly with no tracks 1`] = `
 `;
 
 exports[`TopTracks Component renders correctly with tracks 1`] = `
-<div>
+<div
+  className="css-16ilj6a"
+>
   <div
     className="css-ccroti"
   >
