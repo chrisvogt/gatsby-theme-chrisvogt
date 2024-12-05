@@ -20,8 +20,11 @@ const Playlists = ({ isLoading, playlists = [] }) => {
         tracks: { total: totalTracksCount = 0 } = {}
       } = item
 
-      if (!totalTracksCount) {
-        return null // Fixes a bug discovered in Prod when an empty album was returned.
+      // Skip playlist for the following reasons:
+      // undefined totalTracksCount: Fixes a bug discovered in Prod when an empty album was returned.
+      // undefined images: Fixes a bug and since these playlists are image-centric, we don't want to render them without an image.
+      if (!(totalTracksCount && images.length)) {
+        return null
       }
 
       const { url: thumbnailURL } =
@@ -44,6 +47,7 @@ const Playlists = ({ isLoading, playlists = [] }) => {
       }
     })
     .filter(Boolean)
+    .slice(0, 12) // Limit to 12 playlists for now. As of December 2024 the API response includes > 12 playlists.
 
   return (
     <div>
