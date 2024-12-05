@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Playlists Component matches the snapshot 1`] = `
+exports[`Playlists Component matches snapshot with various playlist scenarios 1`] = `
 <DocumentFragment>
   <div>
     <div
