@@ -1,11 +1,14 @@
-/*!
- * Animated Background
- * (c) 2024 Christopher Vogt
- * This code is licensed under the MIT License.
- * Created with the assistance of ChatGPT by OpenAI.
- */
-
 import React, { useEffect, useRef } from 'react'
+import { useColorMode, useThemeUI } from 'theme-ui'
+
+// Helper function to convert hex to rgba
+const hexToRgba = (hex, alpha = 1) => {
+  const [r, g, b] = hex
+    .replace(/^#/, '')
+    .match(/.{2}/g)
+    .map(x => parseInt(x, 16))
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
 
 class Circle {
   constructor(x, y, radius, gradientStops) {
@@ -20,18 +23,18 @@ class Circle {
   draw(ctx) {
     if (!ctx) return
 
-    ctx.globalAlpha = 0.45 // Set transparency to 45%
     const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius)
     this.gradientStops.forEach(stop => {
       gradient.addColorStop(stop.position, stop.color)
     })
 
+    ctx.globalAlpha = 0.5 // Balanced opacity
     ctx.beginPath()
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
     ctx.fillStyle = gradient
     ctx.fill()
     ctx.closePath()
-    ctx.globalAlpha = 1.0 // Reset transparency to 100%
+    ctx.globalAlpha = 1.0 // Reset transparency
   }
 
   update(canvas, ctx) {
@@ -56,6 +59,10 @@ export { Circle }
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null)
+  const [colorMode] = useColorMode()
+  const { theme } = useThemeUI()
+  const backgroundHex = theme.rawColors?.background || '#1e1e2f' // Default to fallback color
+  const backgroundRgba = hexToRgba(backgroundHex, 0.15) // Apply transparency to background color
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -71,7 +78,7 @@ const AnimatedBackground = () => {
 
     setCanvasSize()
 
-    const gradients = [
+    const darkModeGradients = [
       [
         { position: 0, color: 'rgba(128, 0, 128, 1)' }, // Royal Purple
         { position: 0.2, color: 'rgba(128, 0, 128, 0.9)' },
@@ -89,6 +96,21 @@ const AnimatedBackground = () => {
         { position: 1, color: 'rgba(128, 0, 128, 0.5)' }
       ]
     ]
+
+    const lightModeGradients = [
+      [
+        { position: 0, color: 'rgba(66, 46, 163, 1)' }, // Primary Purple
+        { position: 0.4, color: 'rgba(255, 20, 147, 0.8)' }, // Hot Pink
+        { position: 1, color: 'rgba(30, 144, 255, 0.6)' } // Vibrant Blue
+      ],
+      [
+        { position: 0, color: 'rgba(255, 20, 147, 1)' }, // Hot Pink
+        { position: 0.5, color: 'rgba(30, 144, 255, 0.8)' }, // Vibrant Blue
+        { position: 1, color: 'rgba(255, 235, 200, 0.5)' } // Pale Peach
+      ]
+    ]
+
+    const gradients = colorMode === 'dark' ? darkModeGradients : lightModeGradients
 
     const circles = []
 
@@ -123,14 +145,21 @@ const AnimatedBackground = () => {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [colorMode])
 
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
       <canvas
         ref={canvasRef}
-        style={{ display: 'block', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-      ></canvas>
+        style={{
+          display: 'block',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%'
+        }}
+      />
       <div
         style={{
           position: 'absolute',
@@ -138,9 +167,9 @@ const AnimatedBackground = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(75, 0, 130, 0.02)',
-          backdropFilter: 'blur(100px)',
-          WebkitBackdropFilter: 'blur(100px)', // Safari
+          backgroundColor: backgroundRgba, // Unified background color with transparency
+          backdropFilter: 'blur(75px)',
+          WebkitBackdropFilter: 'blur(75px)', // Safari
           pointerEvents: 'none' // Ensure the overlay doesn't block interactions
         }}
       ></div>

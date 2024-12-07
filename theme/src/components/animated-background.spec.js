@@ -2,6 +2,7 @@ import React from 'react'
 import { render, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AnimatedBackground, { Circle } from './animated-background'
+import { ThemeProvider } from 'theme-ui'
 
 // Mock requestAnimationFrame and cancelAnimationFrame
 beforeEach(() => {
@@ -36,23 +37,61 @@ beforeAll(() => {
   })
 })
 
+// Minimal Mock Theme
+const mockTheme = {
+  colors: {
+    background: '#1e1e2f',
+    modes: {
+      dark: {
+        background: '#1e1e2f'
+      }
+    }
+  }
+}
+
+const renderWithTheme = (ui, theme = mockTheme) => render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)
+
 describe('AnimatedBackground', () => {
+  it('renders without crashing', () => {
+    const { container } = renderWithTheme(<AnimatedBackground />)
+    expect(container).toBeInTheDocument()
+  })
+
   it('renders the canvas and overlay div correctly', () => {
-    render(<AnimatedBackground />)
+    // Mock getComputedStyle with necessary methods
+    window.getComputedStyle = jest.fn(() => ({
+      getPropertyValue: property => {
+        if (property === 'backdrop-filter') {
+          return 'blur(75px)'
+        }
+        if (property === 'background-color') {
+          return 'rgba(30, 30, 47, 0.15)'
+        }
+        return ''
+      }
+    }))
+
+    renderWithTheme(<AnimatedBackground />)
 
     const canvasElement = document.querySelector('canvas')
     expect(canvasElement).toBeInTheDocument()
 
     const overlayDiv = canvasElement.nextElementSibling
     expect(overlayDiv).toBeInTheDocument()
-    expect(overlayDiv).toHaveStyle('background-color: rgba(75, 0, 130, 0.02)')
+
+    // Check background color
+    expect(overlayDiv).toHaveStyle('background-color: rgba(30, 30, 47, 0.15)')
+
+    // Assert mocked backdrop-filter
+    const style = window.getComputedStyle(overlayDiv)
+    expect(style.getPropertyValue('backdrop-filter')).toBe('blur(75px)')
   })
 
   it('sets up and tears down window resize event listeners', () => {
     const addEventListenerSpy = jest.spyOn(window, 'addEventListener')
     const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener')
 
-    const { unmount } = render(<AnimatedBackground />)
+    const { unmount } = renderWithTheme(<AnimatedBackground />)
 
     expect(addEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function))
 
@@ -61,7 +100,7 @@ describe('AnimatedBackground', () => {
   })
 
   it('initializes canvas size and gradient drawing', () => {
-    render(<AnimatedBackground />)
+    renderWithTheme(<AnimatedBackground />)
 
     // Manually advance the timers to trigger the animation
     act(() => {
@@ -72,10 +111,11 @@ describe('AnimatedBackground', () => {
 
     // Assert context methods are called
     expect(context.clearRect).toHaveBeenCalled()
+    expect(context.createRadialGradient).toHaveBeenCalled()
   })
 
   it('uses requestAnimationFrame to animate', () => {
-    render(<AnimatedBackground />)
+    renderWithTheme(<AnimatedBackground />)
     act(() => {
       jest.advanceTimersByTime(16)
     })
@@ -88,7 +128,7 @@ describe('AnimatedBackground', () => {
       value: jest.fn(() => null)
     })
 
-    expect(() => render(<AnimatedBackground />)).not.toThrow()
+    expect(() => renderWithTheme(<AnimatedBackground />)).not.toThrow()
 
     // Restore the original getContext
     Object.defineProperty(HTMLCanvasElement.prototype, 'getContext', {
@@ -97,7 +137,7 @@ describe('AnimatedBackground', () => {
   })
 
   it('resizes canvas on window resize', () => {
-    render(<AnimatedBackground />)
+    renderWithTheme(<AnimatedBackground />)
 
     const resizeEvent = new Event('resize')
     act(() => {
@@ -125,7 +165,7 @@ describe('AnimatedBackground', () => {
 
     const testCircle = new Circle(50, 50, 20, [
       { position: 0, color: 'rgba(128, 0, 128, 1)' },
-      { position: 1, color: 'rgba(128, 0, 128, 0.6)' }
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' } // Added vibrant blue
     ])
 
     // Test draw method

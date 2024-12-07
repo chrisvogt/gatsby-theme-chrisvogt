@@ -121,7 +121,7 @@ describe('Theme Configuration', () => {
 
   describe('color mode configurations', () => {
     it('defines light mode background colors', () => {
-      expect(theme.colors.background).toBe('#fcb8a2')
+      expect(theme.colors.background).toBe('#fdf8f5')
       expect(theme.colors['panel-background']).toContain('rgba(255, 229, 224, 0.10)')
     })
 

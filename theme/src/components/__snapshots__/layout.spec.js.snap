@@ -2,7 +2,7 @@
 
 exports[`Layout matches the snapshot 1`] = `
 <div
-  className="css-1m13iln"
+  className="css-9941j0"
 >
   <div
     style={
@@ -30,9 +30,9 @@ exports[`Layout matches the snapshot 1`] = `
     <div
       style={
         {
-          "WebkitBackdropFilter": "blur(100px)",
-          "backdropFilter": "blur(100px)",
-          "backgroundColor": "rgba(75, 0, 130, 0.02)",
+          "WebkitBackdropFilter": "blur(75px)",
+          "backdropFilter": "blur(75px)",
+          "backgroundColor": "rgba(253, 248, 245, 0.15)",
           "height": "100%",
           "left": 0,
           "pointerEvents": "none",
