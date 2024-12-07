@@ -188,7 +188,7 @@ export default merge(tailwind, {
 
   colors: {
     accent: 'deeppink',
-    background: '#fcb8a2',
+    background: '#fdf8f5',
     'panel-background': 'rgba(255, 229, 224, 0.10)',
     'panel-divider': () => '1px solid rgba(255, 229, 224, 0.17)',
     'panel-highlight': theme => theme.colors.gray[1],

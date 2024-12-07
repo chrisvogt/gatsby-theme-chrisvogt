@@ -167,7 +167,7 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
   },
   "colors": {
     "accent": "deeppink",
-    "background": "#fcb8a2",
+    "background": "#fdf8f5",
     "modes": {
       "dark": {
         "background": "#1e1e2f",
