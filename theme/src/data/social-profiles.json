@@ -33,6 +33,17 @@
     }
   },
   {
+    "href": "https://bsky.app/profile/chrisvogt.me",
+    "slug": "bluesky",
+    "displayName": "BlueSky",
+    "icon": {
+      "class": "fab fa-bluesky",
+      "name": "bluesky",
+      "reactIcon": "faBluesky",
+      "set": "fab"
+    }
+  },
+  {
     "href": "https://twitter.com/c1v0",
     "slug": "twitter",
     "displayName": "Twitter",

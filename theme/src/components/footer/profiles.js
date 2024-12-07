@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {
   faBehance,
+  faBluesky,
   faDribbble,
   faFacebook,
   faGithub,
@@ -23,6 +24,7 @@ import useSocialProfiles from '../../hooks/use-social-profiles'
  */
 const icons = {
   faBehance,
+  faBluesky,
   faDribbble,
   faFacebook,
   faGithub,
