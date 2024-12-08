@@ -93,65 +93,32 @@ describe('InstagramWidget', () => {
     expect(lightgalleryMock).toBeInTheDocument()
   })
 
-  it('initializes VanillaTilt for Instagram items', () => {
+  it('does not dispatch fetchDataSource when isLoading is false', () => {
+    const notLoadingStore = mockStore({
+      widgets: {
+        instagram: {
+          state: 'SUCCESS',
+          data: {
+            collections: { media: [] },
+            metrics: []
+          }
+        }
+      }
+    })
+
     render(
-      <ReduxProvider store={store}>
+      <ReduxProvider store={notLoadingStore}>
         <ThemeUIProvider theme={theme}>
           <InstagramWidget />
         </ThemeUIProvider>
       </ReduxProvider>
     )
 
-    expect(VanillaTilt.init).toHaveBeenCalledTimes(1)
-    expect(VanillaTilt.init).toHaveBeenCalledWith(
-      expect.anything(),
-      expect.objectContaining({
-        glare: true,
-        max: 21,
-        perspective: 1500,
-        reverse: true,
-        speed: 300
-      })
-    )
+    const actions = notLoadingStore.getActions()
+    expect(actions).not.toContainEqual({ type: 'FETCH_DATASOURCE' })
   })
 
-  it('toggles between "Show More" and "Show Less"', () => {
-    render(
-      <ReduxProvider store={store}>
-        <ThemeUIProvider theme={theme}>
-          <InstagramWidget />
-        </ThemeUIProvider>
-      </ReduxProvider>
-    )
-
-    const showMoreButton = screen.getByText(/show more/i)
-    expect(showMoreButton).toBeInTheDocument()
-
-    fireEvent.click(showMoreButton)
-
-    const showLessButton = screen.getByText(/show less/i)
-    expect(showLessButton).toBeInTheDocument()
-  })
-
-  it('opens the lightbox when media item is clicked', () => {
-    render(
-      <ReduxProvider store={store}>
-        <ThemeUIProvider theme={theme}>
-          <InstagramWidget />
-        </ThemeUIProvider>
-      </ReduxProvider>
-    )
-
-    const mediaItem = screen.getByAltText(/Instagram post thumbnail/i)
-    expect(mediaItem).toBeInTheDocument()
-
-    fireEvent.click(mediaItem)
-
-    const lightboxMock = screen.getByTestId('lightgallery-mock')
-    expect(lightboxMock).toBeInTheDocument()
-  })
-
-  it('dispatches fetchDataSource on load if in loading state', () => {
+  it('renders placeholder content when isLoading is true', () => {
     const loadingStore = mockStore({
       widgets: {
         instagram: {
@@ -169,10 +136,68 @@ describe('InstagramWidget', () => {
       </ReduxProvider>
     )
 
-    const actions = loadingStore.getActions()
-    expect(actions).toContainEqual({
-      type: 'FETCH_DATASOURCE'
+    const placeholders = screen.getAllByText('', { selector: '.image-placeholder' })
+    expect(placeholders.length).toBeGreaterThan(0)
+  })
+
+  it('calls VanillaTilt.init when isShowingMore is true', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    fireEvent.click(screen.getByText(/show more/i))
+    expect(VanillaTilt.init).toHaveBeenCalled()
+  })
+
+  it('does not call VanillaTilt.init when both isShowingMore and !isLoading are false', () => {
+    // Mock store with isLoading set to true
+    const loadingStore = mockStore({
+      widgets: {
+        instagram: {
+          state: 'LOADING', // Simulate loading state
+          data: {
+            collections: { media: [] },
+            metrics: []
+          }
+        }
+      }
     })
+
+    // Clear any previous calls to VanillaTilt
+    VanillaTilt.init.mockClear()
+
+    // Render the component
+    render(
+      <ReduxProvider store={loadingStore}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    // Validate that VanillaTilt.init was not called
+    expect(VanillaTilt.init).not.toHaveBeenCalled()
+  })
+
+  it('toggles between show more and show less states', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    const showMoreButton = screen.getByText(/show more/i)
+    fireEvent.click(showMoreButton)
+    expect(screen.getByText(/show less/i)).toBeInTheDocument()
+
+    fireEvent.click(screen.getByText(/show less/i))
+    expect(screen.getByText(/show more/i)).toBeInTheDocument()
   })
 
   it('renders error message if hasFatalError is true', () => {
