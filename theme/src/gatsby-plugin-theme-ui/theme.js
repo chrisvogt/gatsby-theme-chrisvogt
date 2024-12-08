@@ -107,9 +107,9 @@ export const PostCard = {
 
 export default merge(tailwind, {
   config: {
-    initialColorModeName: 'dark', // Default to dark mode
     useLocalStorage: true, // Persist user preferences
-    useColorSchemeMediaQuery: false // Disable automatic detection of system preference
+    useColorSchemeMediaQuery: 'system', // Disable automatic detection of system preference
+    printColorModeName: 'default'
   },
 
   badges: {
@@ -189,13 +189,13 @@ export default merge(tailwind, {
   colors: {
     accent: 'deeppink',
     background: '#fdf8f5',
-    'panel-background': 'rgba(255, 229, 224, 0.10)',
+    'panel-background': 'rgba(255, 255, 255, 0.35)',
     'panel-divider': () => '1px solid rgba(255, 229, 224, 0.17)',
     'panel-highlight': theme => theme.colors.gray[1],
     modes: {
       dark: {
         background: '#1e1e2f',
-        'panel-background': 'rgba(1, 1, 1, 0.28)',
+        'panel-background': 'rgba(1, 1, 1, 0.30)',
         'panel-divider': theme => `1px solid ${theme.colors.gray[8]}`,
         'panel-highlight': theme => theme.colors.gray[8],
         primary: '#1E90FF',

@@ -171,7 +171,7 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
     "modes": {
       "dark": {
         "background": "#1e1e2f",
-        "panel-background": "rgba(1, 1, 1, 0.28)",
+        "panel-background": "rgba(1, 1, 1, 0.30)",
         "panel-divider": [Function],
         "panel-highlight": [Function],
         "primary": "#1E90FF",
@@ -179,7 +179,7 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
         "textMuted": "#d8d8d8",
       },
     },
-    "panel-background": "rgba(255, 229, 224, 0.10)",
+    "panel-background": "rgba(255, 255, 255, 0.35)",
     "panel-divider": [Function],
     "panel-highlight": [Function],
     "primary": "#422EA3",
@@ -190,8 +190,8 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
     "textMuted": "#333",
   },
   "config": {
-    "initialColorModeName": "dark",
-    "useColorSchemeMediaQuery": false,
+    "printColorModeName": "default",
+    "useColorSchemeMediaQuery": "system",
     "useLocalStorage": true,
   },
   "fontSizes": [
