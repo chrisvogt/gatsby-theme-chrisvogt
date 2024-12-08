@@ -149,6 +149,7 @@ export default () => {
         }}
         plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
         licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
+        download={false}
         dynamic
         dynamicEl={media.map(post => ({
           thumb: post.cdnMediaURL,
