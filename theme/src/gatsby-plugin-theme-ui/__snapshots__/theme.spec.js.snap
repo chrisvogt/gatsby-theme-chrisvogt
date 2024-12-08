@@ -190,8 +190,8 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
     "textMuted": "#333",
   },
   "config": {
-    "initialColorModeName": "dark",
-    "useColorSchemeMediaQuery": false,
+    "printColorModeName": "default",
+    "useColorSchemeMediaQuery": "system",
     "useLocalStorage": true,
   },
   "fontSizes": [
