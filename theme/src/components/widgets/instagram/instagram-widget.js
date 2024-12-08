@@ -3,11 +3,18 @@ import { jsx } from 'theme-ui'
 
 import { Grid } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import Carousel, { Modal, ModalGateway } from 'react-images'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import LightGallery from 'lightgallery/react'
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgZoom from 'lightgallery/plugins/zoom'
+import lgVideo from 'lightgallery/plugins/video'
+import lgAutoplay from 'lightgallery/plugins/autoplay'
+import 'lightgallery/css/lightgallery.css'
+import 'lightgallery/css/lg-thumbnail.css'
+import 'lightgallery/css/lg-zoom.css'
+import 'lightgallery/css/lg-video.css'
+import 'lightgallery/css/lg-autoplay.css'
 import ReactPlaceholder from 'react-placeholder'
 import VanillaTilt from 'vanilla-tilt'
 
@@ -45,15 +52,14 @@ export default () => {
   const media = useSelector(getMedia)
   const metrics = useSelector(getMetrics)
 
+  const [isShowingMore, setIsShowingMore] = useState(false)
+  const lightGalleryRef = useRef(null)
+
   useEffect(() => {
     if (isLoading) {
       dispatch(fetchDataSource('instagram', instagramDataSource))
     }
   }, [dispatch, instagramDataSource, isLoading])
-
-  const [currentImage, setCurrentImage] = useState(0)
-  const [viewerIsOpen, setViewerIsOpen] = useState(false)
-  const [isShowingMore, setIsShowingMore] = useState(false)
 
   useEffect(() => {
     if (isShowingMore || !isLoading) {
@@ -67,15 +73,18 @@ export default () => {
     }
   }, [isLoading, isShowingMore])
 
-  const openLightbox = useCallback((event, { index }) => {
-    setCurrentImage(index)
-    setViewerIsOpen(true)
-  }, [])
-
-  const closeLightbox = () => {
-    setCurrentImage(0)
-    setViewerIsOpen(false)
-  }
+  const openLightbox = useCallback(
+    index => {
+      const instance = lightGalleryRef.current
+      if (instance) {
+        console.log('Opening LightGallery at index:', index)
+        instance.openGallery(index)
+      } else {
+        console.error('LightGallery instance is not initialized')
+      }
+    },
+    [lightGalleryRef]
+  )
 
   const callToAction = (
     <CallToAction
@@ -90,11 +99,27 @@ export default () => {
 
   const countItemsToRender = isShowingMore ? MAX_IMAGES.showMore : MAX_IMAGES.default
 
+  // Debugging: Log media array
+  // useEffect(() => {
+  //   console.log('Media items:', media)
+  //   if (media.length > 0) {
+  //     console.log(
+  //       'Dynamic elements for LightGallery:',
+  //       media.map(post => ({
+  //         // src: post.mediaURL || post.cdnMediaURL,
+  //         thumb: post.cdnMediaURL,
+  //         subHtml: post.caption || '',
+  //         video: post.mediaType === 'VIDEO'
+  //           ? { src: 'https://www.lightgalleryjs.com//videos/video1.mp4', type: 'video/mp4' }
+  //           : undefined
+  //       }))
+  //     )
+  //   }
+  // }, [media])
+
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction} icon={faInstagram}>
-        Instagram
-      </WidgetHeader>
+      <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
       <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
 
@@ -125,7 +150,7 @@ export default () => {
               showLoadingAnimation
               type='rect'
             >
-              <WidgetItem handleClick={openLightbox} index={idx} post={post} />
+              <WidgetItem handleClick={() => openLightbox(idx)} index={idx} post={post} />
             </ReactPlaceholder>
           ))}
         </Grid>
@@ -137,44 +162,34 @@ export default () => {
         </div>
       )}
 
-      <ModalGateway>
-        {viewerIsOpen && (
-          <Modal onClose={closeLightbox}>
-            {!isLoading && (
-              <Carousel
-                currentIndex={currentImage}
-                styles={{
-                  // NOTE(cvogt): these styles were copy + pasted from craigrich/ruff-guide
-                  // as a temporary fix for the `autoSize` feature not working as intended.
-                  container: base => ({
-                    ...base,
-                    height: '100vh'
-                  }),
-                  view: base => ({
-                    ...base,
-                    alignItems: 'center',
-                    display: 'flex ',
-                    height: 'calc(100vh - 54px)',
-                    justifyContent: 'center',
-                    '& > img': {
-                      maxHeight: 'calc(100vh - 94px)'
+      <LightGallery
+        onInit={ref => {
+          lightGalleryRef.current = ref.instance
+        }}
+        plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
+        licenseKey='your_license_key'
+        dynamic
+        dynamicEl={media.map(post => ({
+          thumb: post.cdnMediaURL,
+          subHtml: post.caption || '',
+          ...(post.mediaType !== 'VIDEO' ? { src: post.cdnMediaURL } : {}),
+          video:
+            post.mediaType === 'VIDEO' && post.mediaURL
+              ? {
+                  source: [
+                    {
+                      src: post.mediaURL,
+                      type: 'video/mp4'
                     }
-                  })
-                }}
-                views={media.map(x => ({
-                  ...x,
-                  source: {
-                    download: `${x.cdnMediaURL}?auto=format`,
-                    fullscreen: `${x.cdnMediaURL}?auto=format`,
-                    regular: `${x.cdnMediaURL}?auto=format`,
-                    thumbnail: `${x.cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`
+                  ],
+                  attributes: {
+                    controls: true // Enable controls for the video
                   }
-                }))}
-              />
-            )}
-          </Modal>
-        )}
-      </ModalGateway>
+                }
+              : undefined
+        }))}
+        speed={500}
+      />
     </Widget>
   )
 }
