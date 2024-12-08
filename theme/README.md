@@ -45,7 +45,7 @@ Widget code is in the [`./src/components/widgets/`](./src/components/widgets/) d
 
 ###### Instagram
 
-**Instagram** renders your total post count and the last 8 photos posted. It also uses [`react-images`](https://www.npmjs.com/package/react-images) to provide a fullscreen carousel when photo thumbnails are interacted with.
+**Instagram** renders your total post count and a collection of your recent posts, which open in a [lightGallery](https://www.lightgalleryjs.com/) component.
 
 ![Screenshot: Instagram](https://raw.githubusercontent.com/chrisvogt/gatsby-theme-chrisvogt/master/theme/assets/widget-instagram.jpg)
 
