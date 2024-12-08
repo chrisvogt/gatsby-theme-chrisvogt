@@ -62,7 +62,7 @@ const AnimatedBackground = () => {
   const [colorMode] = useColorMode()
   const { theme } = useThemeUI()
   const backgroundHex = theme.rawColors?.background || '#1e1e2f' // Default to fallback color
-  const backgroundRgba = hexToRgba(backgroundHex, 0.15) // Apply transparency to background color
+  const backgroundRgba = hexToRgba(backgroundHex, 0.35) // Apply transparency to background color
 
   useEffect(() => {
     const canvas = canvasRef.current
