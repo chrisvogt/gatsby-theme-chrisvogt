@@ -191,7 +191,8 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
   },
   "config": {
     "printColorModeName": "default",
-    "useColorSchemeMediaQuery": "system",
+    "useColorSchemeMediaQuery": "initial",
+    "useCustomProperties": true,
     "useLocalStorage": true,
   },
   "fontSizes": [

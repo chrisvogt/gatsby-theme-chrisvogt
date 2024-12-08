@@ -108,7 +108,8 @@ export const PostCard = {
 export default merge(tailwind, {
   config: {
     useLocalStorage: true, // Persist user preferences
-    useColorSchemeMediaQuery: 'system', // Disable automatic detection of system preference
+    useCustomProperties: true,
+    useColorSchemeMediaQuery: 'initial', // Disable automatic detection of system preference
     printColorModeName: 'default'
   },
 
