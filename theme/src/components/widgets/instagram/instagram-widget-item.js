@@ -19,7 +19,7 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
     >
       {(isCarousel || isVideo) && (
         <div
-          data-testid={faVideo ? 'video-icon' : 'carousel-icon'}
+          data-testid={isVideo ? 'video-icon' : 'carousel-icon'}
           sx={{
             color: 'white',
             position: 'absolute',

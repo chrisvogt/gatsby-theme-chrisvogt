@@ -77,7 +77,6 @@ export default () => {
     index => {
       const instance = lightGalleryRef.current
       if (instance) {
-        console.log('Opening LightGallery at index:', index)
         instance.openGallery(index)
       } else {
         console.error('LightGallery instance is not initialized')
@@ -98,24 +97,6 @@ export default () => {
   )
 
   const countItemsToRender = isShowingMore ? MAX_IMAGES.showMore : MAX_IMAGES.default
-
-  // Debugging: Log media array
-  // useEffect(() => {
-  //   console.log('Media items:', media)
-  //   if (media.length > 0) {
-  //     console.log(
-  //       'Dynamic elements for LightGallery:',
-  //       media.map(post => ({
-  //         // src: post.mediaURL || post.cdnMediaURL,
-  //         thumb: post.cdnMediaURL,
-  //         subHtml: post.caption || '',
-  //         video: post.mediaType === 'VIDEO'
-  //           ? { src: 'https://www.lightgalleryjs.com//videos/video1.mp4', type: 'video/mp4' }
-  //           : undefined
-  //       }))
-  //     )
-  //   }
-  // }, [media])
 
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
@@ -167,7 +148,7 @@ export default () => {
           lightGalleryRef.current = ref.instance
         }}
         plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
-        licenseKey='your_license_key'
+        licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
         dynamic
         dynamicEl={media.map(post => ({
           thumb: post.cdnMediaURL,
@@ -188,6 +169,7 @@ export default () => {
                 }
               : undefined
         }))}
+        autoplayVideoOnSlide={true} // Add this option
         speed={500}
       />
     </Widget>

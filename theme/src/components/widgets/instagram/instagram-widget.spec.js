@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react' // Import fireEvent here
+import { render, fireEvent, screen } from '@testing-library/react'
 import { Provider as ReduxProvider } from 'react-redux'
 import '@testing-library/jest-dom'
 import configureStore from 'redux-mock-store'
@@ -8,19 +8,41 @@ import { ThemeUIProvider } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import VanillaTilt from 'vanilla-tilt'
 
-jest.mock('../../../hooks/use-site-metadata')
+// Mock the useSiteMetadata hook
+jest.mock('../../../hooks/use-site-metadata', () =>
+  jest.fn(() => ({
+    instagramUsername: 'test_username',
+    instagramDataSource: 'test_data_source'
+  }))
+)
+
+// Mock lightgallery/react and its plugins
+jest.mock('lightgallery/react', () => jest.fn(() => <div data-testid='lightgallery-mock' />))
+jest.mock('lightgallery/plugins/thumbnail', () => jest.fn())
+jest.mock('lightgallery/plugins/zoom', () => jest.fn())
+jest.mock('lightgallery/plugins/video', () => jest.fn())
+jest.mock('lightgallery/plugins/autoplay', () => jest.fn())
+
+// Mock VanillaTilt
 jest.mock('vanilla-tilt')
+
+// Mock fetchDataSource
+jest.mock('../../../actions/fetchDataSource', () =>
+  jest.fn(() => ({
+    type: 'FETCH_DATASOURCE'
+  }))
+)
 
 const mockStore = configureStore([])
 
-describe('Instagram Widget', () => {
+describe('InstagramWidget', () => {
   let store
 
   beforeEach(() => {
     store = mockStore({
       widgets: {
         instagram: {
-          state: 'SUCCESS', // Set a successful state to prevent loading
+          state: 'SUCCESS',
           data: {
             collections: {
               media: [
@@ -34,7 +56,6 @@ describe('Instagram Widget', () => {
               ]
             },
             metrics: [
-              // Mocking a valid metrics array
               { displayName: 'Followers', id: '1', value: 100 },
               { displayName: 'Following', id: '2', value: 50 }
             ]
@@ -48,7 +69,7 @@ describe('Instagram Widget', () => {
     jest.clearAllMocks()
   })
 
-  it('matches the loading state snapshot', () => {
+  it('matches the snapshot', () => {
     const { asFragment } = render(
       <ReduxProvider store={store}>
         <ThemeUIProvider theme={theme}>
@@ -57,6 +78,19 @@ describe('Instagram Widget', () => {
       </ReduxProvider>
     )
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders the gallery with mocked lightgallery', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    const lightgalleryMock = screen.getByTestId('lightgallery-mock')
+    expect(lightgalleryMock).toBeInTheDocument()
   })
 
   it('initializes VanillaTilt for Instagram items', () => {
@@ -68,7 +102,6 @@ describe('Instagram Widget', () => {
       </ReduxProvider>
     )
 
-    // Check if VanillaTilt.init has been called (assert initialization)
     expect(VanillaTilt.init).toHaveBeenCalledTimes(1)
     expect(VanillaTilt.init).toHaveBeenCalledWith(
       expect.anything(),
@@ -82,8 +115,8 @@ describe('Instagram Widget', () => {
     )
   })
 
-  it('toggles show more/show less button', () => {
-    const { getByText } = render(
+  it('toggles between "Show More" and "Show Less"', () => {
+    render(
       <ReduxProvider store={store}>
         <ThemeUIProvider theme={theme}>
           <InstagramWidget />
@@ -91,20 +124,17 @@ describe('Instagram Widget', () => {
       </ReduxProvider>
     )
 
-    // Query for the "Show More" button using text
-    const showMoreButton = getByText(/show more/i)
+    const showMoreButton = screen.getByText(/show more/i)
     expect(showMoreButton).toBeInTheDocument()
 
-    // Click the button to toggle
     fireEvent.click(showMoreButton)
 
-    // Query for the "Show Less" button after toggling
-    const showLessButton = getByText(/show less/i)
+    const showLessButton = screen.getByText(/show less/i)
     expect(showLessButton).toBeInTheDocument()
   })
 
-  it('opens lightbox when media item is clicked', () => {
-    const { getByAltText } = render(
+  it('opens the lightbox when media item is clicked', () => {
+    render(
       <ReduxProvider store={store}>
         <ThemeUIProvider theme={theme}>
           <InstagramWidget />
@@ -112,15 +142,57 @@ describe('Instagram Widget', () => {
       </ReduxProvider>
     )
 
-    // Query for the media item by its alt text
-    const mediaItem = getByAltText(/Instagram post thumbnail/i)
+    const mediaItem = screen.getByAltText(/Instagram post thumbnail/i)
     expect(mediaItem).toBeInTheDocument()
 
-    // Simulate clicking the media item
     fireEvent.click(mediaItem)
 
-    // Check if lightbox opened (viewerIsOpen should now be true)
-    const lightboxImage = getByAltText(/Instagram post thumbnail/i)
-    expect(lightboxImage).toBeInTheDocument()
+    const lightboxMock = screen.getByTestId('lightgallery-mock')
+    expect(lightboxMock).toBeInTheDocument()
+  })
+
+  it('dispatches fetchDataSource on load if in loading state', () => {
+    const loadingStore = mockStore({
+      widgets: {
+        instagram: {
+          state: 'LOADING',
+          data: null
+        }
+      }
+    })
+
+    render(
+      <ReduxProvider store={loadingStore}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    const actions = loadingStore.getActions()
+    expect(actions).toContainEqual({
+      type: 'FETCH_DATASOURCE'
+    })
+  })
+
+  it('renders error message if hasFatalError is true', () => {
+    const errorStore = mockStore({
+      widgets: {
+        instagram: {
+          state: 'FAILURE',
+          data: null
+        }
+      }
+    })
+
+    render(
+      <ReduxProvider store={errorStore}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    expect(screen.getByText(/something went wrong/i)).toBeInTheDocument()
   })
 })
