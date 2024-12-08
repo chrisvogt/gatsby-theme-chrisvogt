@@ -118,7 +118,7 @@ describe('InstagramWidget', () => {
     )
 
     const thumbnails = screen.getAllByAltText(/Instagram post thumbnail/i)
-    expect(thumbnails.length).toHaveLength(1)
+    expect(thumbnails).toHaveLength(1)
     expect(thumbnails[0]).toHaveAttribute(
       'src',
       expect.stringContaining('https://cdn.chrisvogt.me/images/fake-instagram-image.jpg')
