@@ -37,11 +37,6 @@ article.c1v0-blog-post img.solid-background {
   padding: 16px;
 }
 
-/* NOTE(cvogt): overrides the default react-photo-gallery footer style */
-.react-images__footer.react-images__footer--isModal {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) !important;
-}
-
 /* See https://webaim.org/techniques/css/invisiblecontent/ */
 .sr-only {
   position: absolute;
