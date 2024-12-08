@@ -60,23 +60,37 @@ describe('InstagramWidgetItem', () => {
       ...defaultProps,
       post: {
         ...defaultProps.post,
-        mediaType: 'CAROUSEL_ALBUM' // Make sure this value is exactly what triggers the isCarousel condition
+        mediaType: 'CAROUSEL_ALBUM'
       }
     }
 
     render(<InstagramWidgetItem {...carouselProps} />)
 
-    // Debugging: log mediaType to verify it's correct
-    console.log('mediaType:', carouselProps.post.mediaType)
-
     const carouselIcon = screen.getByTestId('carousel-icon')
     expect(carouselIcon).toBeInTheDocument()
   })
 
-  it('does not display the carousel icon when mediaType is not CAROUSEL_ALBUM', () => {
+  it('displays the video icon when mediaType is VIDEO', () => {
+    const videoProps = {
+      ...defaultProps,
+      post: {
+        ...defaultProps.post,
+        mediaType: 'VIDEO'
+      }
+    }
+
+    render(<InstagramWidgetItem {...videoProps} />)
+
+    const videoIcon = screen.getByTestId('video-icon')
+    expect(videoIcon).toBeInTheDocument()
+  })
+
+  it('does not display any icon when mediaType is IMAGE', () => {
     render(<InstagramWidgetItem {...defaultProps} />)
 
     const carouselIcon = screen.queryByTestId('carousel-icon')
+    const videoIcon = screen.queryByTestId('video-icon')
     expect(carouselIcon).not.toBeInTheDocument()
+    expect(videoIcon).not.toBeInTheDocument()
   })
 })

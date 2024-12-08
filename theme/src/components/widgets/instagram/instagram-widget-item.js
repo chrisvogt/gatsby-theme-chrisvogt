@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { faImages } from '@fortawesome/free-solid-svg-icons'
+import { faImages, faVideo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType } = {} }) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM'
+  const isVideo = mediaType === 'VIDEO'
 
   return (
     <button
@@ -16,9 +17,9 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
         variant: 'styles.InstagramItem'
       }}
     >
-      {isCarousel && (
+      {(isCarousel || isVideo) && (
         <div
-          data-testid='carousel-icon'
+          data-testid={isVideo ? 'video-icon' : 'carousel-icon'}
           sx={{
             color: 'white',
             position: 'absolute',
@@ -26,7 +27,7 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
             right: 2
           }}
         >
-          <FontAwesomeIcon icon={faImages} />
+          <FontAwesomeIcon icon={isVideo ? faVideo : faImages} />
         </div>
       )}
 
