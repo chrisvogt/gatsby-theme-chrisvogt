@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\"",
     "lint": "eslint",
     "postinstall": "node index.js",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier": "prettier",
     "test:coverage": "yarn workspace gatsby-theme-chrisvogt test --coverage",
     "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
@@ -27,7 +27,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
-    "husky": "^9.0.11",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
     "pretty-quick": "^4.0.0"
