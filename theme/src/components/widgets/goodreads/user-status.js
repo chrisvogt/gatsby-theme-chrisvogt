@@ -9,7 +9,7 @@ import { TextRow } from 'react-placeholder/lib/placeholders'
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const removeAllHtmlTags = input => input.replace(/<|>/g, '')
+const removeAllHtmlTags = input => input.replace(/<a [^>]*>(.*?)<\/a>/g, '$1')
 
 const renderStarsForRating = count => {
   const repeat = (char, n) => Array(n).fill(char).join('')
@@ -35,7 +35,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           mb: 3
         }}
       >
-        Status
+        Last Update
       </Heading>
 
       <Themed.a
@@ -56,8 +56,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
             showLoadingAnimation
           >
             <span>
-              {actorName} {statusText}
-              <em>– {ago(new Date(updated))}</em>
+              {actorName} {statusText} <em>– {ago(new Date(updated))}</em>
             </span>
           </Placeholder>
           <CardFooter customStyles={{ justifyContent: 'flex-end' }}>

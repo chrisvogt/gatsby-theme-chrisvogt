@@ -339,7 +339,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     <h3
       className="css-uyljfj"
     >
-      Status
+      Last Update
     </h3>
     <a
       className="css-1srnkuc"
