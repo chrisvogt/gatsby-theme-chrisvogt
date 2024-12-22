@@ -49,7 +49,7 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
           <CardFooter>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '250px', height: '15px' }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '150px', height: '15px' }} />}
               ready={!isLoading}
               showLoadingAnimation
             >

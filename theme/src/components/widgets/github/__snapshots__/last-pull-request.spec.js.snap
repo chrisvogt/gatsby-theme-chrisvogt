@@ -38,7 +38,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
               "height": "15px",
               "marginTop": 0,
               "maxHeight": undefined,
-              "width": "250px",
+              "width": "150px",
             }
           }
         />

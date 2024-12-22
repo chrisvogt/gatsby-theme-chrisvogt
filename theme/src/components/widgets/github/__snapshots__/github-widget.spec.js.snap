@@ -447,7 +447,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
                 "height": "15px",
                 "marginTop": 0,
                 "maxHeight": undefined,
-                "width": "250px",
+                "width": "150px",
               }
             }
           />
