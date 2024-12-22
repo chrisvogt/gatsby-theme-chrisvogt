@@ -4,12 +4,13 @@ import { Themed } from '@theme-ui/mdx'
 import { Box, Card, Heading } from '@theme-ui/components'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'
+import ago from 's-ago'
 
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
 const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
-  const { number, repository: { name: repositoryName } = {}, title, url } = pullRequest
+  const { closedAt, number, repository: { name: repositoryName } = {}, title, url } = pullRequest
 
   return (
     <Box>
@@ -45,13 +46,14 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
             </span>
           </Placeholder>
 
-          <CardFooter customStyles={{ justifyContent: 'flex-end' }}>
+          <CardFooter>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '15px', height: '15px' }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '250px', height: '15px' }} />}
               ready={!isLoading}
               showLoadingAnimation
             >
+              <span>Merged {ago(new Date(closedAt))}</span>
               <ViewExternal platform='GitHub' />
             </Placeholder>
           </CardFooter>

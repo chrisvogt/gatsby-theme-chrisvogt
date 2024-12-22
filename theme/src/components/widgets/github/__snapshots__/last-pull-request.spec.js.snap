@@ -28,7 +28,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
         }
       />
       <div
-        className="css-1x5vc5t"
+        className="css-1c6hy0j"
       >
         <div
           className="text-row show-loading-animation"
@@ -38,7 +38,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snaps
               "height": "15px",
               "marginTop": 0,
               "maxHeight": undefined,
-              "width": "15px",
+              "width": "250px",
             }
           }
         />
@@ -79,8 +79,12 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
         </em>
       </span>
       <div
-        className="css-1x5vc5t"
+        className="css-1c6hy0j"
       >
+        <span>
+          Merged 
+          NaN years ago
+        </span>
         <span>
           <svg
             aria-hidden="true"

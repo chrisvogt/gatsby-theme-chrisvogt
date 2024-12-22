@@ -437,7 +437,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="css-5cryjx"
+          className="css-b5lvlf"
         >
           <div
             className="text-row show-loading-animation"
@@ -447,7 +447,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
                 "height": "15px",
                 "marginTop": 0,
                 "maxHeight": undefined,
-                "width": "15px",
+                "width": "250px",
               }
             }
           />
