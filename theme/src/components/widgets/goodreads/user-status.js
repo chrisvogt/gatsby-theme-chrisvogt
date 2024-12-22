@@ -23,7 +23,7 @@ const mapStatusToTemplate = {
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
-  const { link, type, updated } = status
+  const { created, link, type } = status
 
   const statusText = mapStatusToTemplate[type] ? mapStatusToTemplate[type](status) : 'Loading...'
 
@@ -56,16 +56,18 @@ const UserStatus = ({ isLoading, status, actorName }) => {
             showLoadingAnimation
           >
             <span>
-              {actorName} {statusText} <em>– {ago(new Date(updated))}</em>
+              {actorName} {statusText}
             </span>
           </Placeholder>
-          <CardFooter customStyles={{ justifyContent: 'flex-end' }}>
+
+          <CardFooter>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow style={{ marginTop: 0, width: '140px' }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '250px', height: '15px' }} />}
               ready={!isLoading}
               showLoadingAnimation
             >
+              <span>Posted {ago(new Date(created))}</span>
               <ViewExternal platform='Goodreads' />
             </Placeholder>
           </CardFooter>

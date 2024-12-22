@@ -10,7 +10,7 @@ import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
 const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
-  const { closedAt, number, repository: { name: repositoryName } = {}, title, url } = pullRequest
+  const { closedAt, repository: { name: repositoryName } = {}, title, url } = pullRequest
 
   return (
     <Box>
@@ -42,7 +42,7 @@ const LastPullRequest = ({ isLoading, pullRequest = {} }) => {
             showLoadingAnimation
           >
             <span>
-              {title} (<span sx={{ fontWeight: 600 }}>#{number}</span>) – in <em>{repositoryName}</em>
+              {title} – in <em>{repositoryName}</em>
             </span>
           </Placeholder>
 

@@ -66,14 +66,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
     >
       <span>
         Add fake information to the fake project's repository
-         (
-        <span
-          className="css-7f3d9a"
-        >
-          #
-          42
-        </span>
-        ) – in 
+         – in 
         <em>
           Fake Project
         </em>
