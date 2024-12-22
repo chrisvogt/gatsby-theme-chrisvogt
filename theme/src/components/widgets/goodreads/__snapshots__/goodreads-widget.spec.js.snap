@@ -360,17 +360,17 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="css-5cryjx"
+          className="css-b5lvlf"
         >
           <div
             className="text-row show-loading-animation"
             style={
               {
-                "backgroundColor": undefined,
-                "height": "1em",
+                "backgroundColor": "#efefef",
+                "height": "15px",
                 "marginTop": 0,
                 "maxHeight": undefined,
-                "width": "140px",
+                "width": "150px",
               }
             }
           />
