@@ -104,7 +104,7 @@
     "react-visibility-sensor": "^5.1.1",
     "redux": "^5.0.1",
     "s-ago": "^2.2.0",
-    "svg-loaders-react": "^2.2.1",
+    "svg-loaders-react": "^3.0.1",
     "theme-ui": "^0.16.2",
     "vanilla-tilt": "^1.8.1"
   }

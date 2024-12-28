@@ -14573,10 +14573,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svg-loaders-react@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/svg-loaders-react/-/svg-loaders-react-2.2.1.tgz#d546cea2a895144cfd652e1bd846166d8a07d2ed"
-  integrity sha512-ATfg5pAMOla2GqPcwGRDrNTLlTQzl2fMvfW290j20qH7qpB61C3SQAnu+T9t8Z+V4IKKN2Bm1d/SaCv5IR1DDA==
+svg-loaders-react@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/svg-loaders-react/-/svg-loaders-react-3.0.1.tgz#4c8d2e8a61a798c349f47a44d10728c57d44ef73"
+  integrity sha512-mScKr+OUSVEW4kO2sT4l7A0ocv5cGffQ6un/4vS97RgIp0/ki5Ohs66TuIw78pqzB4/InVhmt0ue2Eu8nwjttQ==
 
 svgo@^2.7.0:
   version "2.8.0"
