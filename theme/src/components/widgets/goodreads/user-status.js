@@ -23,7 +23,7 @@ const mapStatusToTemplate = {
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
-  const { created, link, type } = status
+  const { created, link, type, updated } = status
 
   const statusText = mapStatusToTemplate[type] ? mapStatusToTemplate[type](status) : 'Loading...'
 
@@ -67,7 +67,7 @@ const UserStatus = ({ isLoading, status, actorName }) => {
               ready={!isLoading}
               showLoadingAnimation
             >
-              <span>Posted {ago(new Date(created))}</span>
+              <span>Posted {ago(new Date(created || updated))}</span>
               <ViewExternal platform='Goodreads' />
             </Placeholder>
           </CardFooter>
