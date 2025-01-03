@@ -5,11 +5,11 @@ exports[`YouTube Shortcode matches the snapshot 1`] = `
   className="css-zezy6m"
 >
   <iframe
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
     allowFullScreen={true}
     className="VideoFrame"
-    frameBorder="0"
     height="315"
+    referrerpolicy="strict-origin-when-cross-origin"
     src="https://www.youtube-nocookie.com/embed/XJashBvI17A"
     title="Here, There And Everywhere (Piano Cover) by Chris Vogt"
     width="560"

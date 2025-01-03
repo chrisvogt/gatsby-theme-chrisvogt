@@ -578,6 +578,7 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
     "VideoWrapper": {
       "height": 0,
       "iframe": {
+        "border": 0,
         "height": "100%",
         "left": 0,
         "position": "absolute",
