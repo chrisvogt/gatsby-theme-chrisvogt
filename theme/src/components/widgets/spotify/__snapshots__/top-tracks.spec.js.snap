@@ -24,8 +24,6 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
     <a
       className="media-item_media css-1avyp1d"
       href="http://spotify.com/track3"
-      onBlur={[Function]}
-      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Three – Artist Four"
@@ -294,8 +292,6 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
     <a
       className="media-item_media css-1avyp1d"
       href="http://spotify.com/track1"
-      onBlur={[Function]}
-      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song One – Artist One, Artist Two"
@@ -311,8 +307,6 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
     <a
       className="media-item_media css-1avyp1d"
       href="http://spotify.com/track2"
-      onBlur={[Function]}
-      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Two – Artist Three"

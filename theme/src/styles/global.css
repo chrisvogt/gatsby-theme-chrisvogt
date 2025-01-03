@@ -49,24 +49,6 @@ article.c1v0-blog-post img.solid-background {
 
 .media-item_grid .media-item_media {
   transition: opacity 300ms ease;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.media-item--focused .media-item_icon {
-  opacity: 0; /* Initial state */
-  animation: fadeIn 0.25s ease-in-out forwards;
 }
 
 .media-item_grid--interacting .media-item_media:not(.media-item--focused) {
