@@ -3,7 +3,7 @@
 exports[`InstagramWidgetItem matches the snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="instagram-item-button css-1u8qly9"
+    class="instagram-item-button media-item_media css-1u8qly9"
     rel="noopener noreferrer"
   >
     <img
