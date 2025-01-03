@@ -7,6 +7,8 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
   <a
     className="media-item_media css-1avyp1d"
     href="https://www.google.com/"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     title="Item #1"
