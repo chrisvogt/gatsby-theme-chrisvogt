@@ -6,7 +6,6 @@ import configureStore from 'redux-mock-store'
 import InstagramWidget from './instagram-widget'
 import { ThemeUIProvider } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
-import VanillaTilt from 'vanilla-tilt'
 
 jest.mock('../../../hooks/use-site-metadata', () =>
   jest.fn(() => ({
@@ -27,7 +26,6 @@ jest.mock('lightgallery/plugins/zoom', () => jest.fn())
 jest.mock('lightgallery/plugins/video', () => jest.fn())
 jest.mock('lightgallery/plugins/autoplay', () => jest.fn())
 
-jest.mock('vanilla-tilt')
 jest.mock('../../../actions/fetchDataSource', () =>
   jest.fn(() => ({
     type: 'FETCH_DATASOURCE'
@@ -156,43 +154,6 @@ describe('InstagramWidget', () => {
     fireEvent.click(thumbnails[0])
 
     expect(mockLightGalleryInstance.openGallery).toHaveBeenCalledWith(0)
-  })
-
-  it('calls VanillaTilt.init when isShowingMore or !isLoading is true', () => {
-    render(
-      <ReduxProvider store={store}>
-        <ThemeUIProvider theme={theme}>
-          <InstagramWidget />
-        </ThemeUIProvider>
-      </ReduxProvider>
-    )
-
-    fireEvent.click(screen.getByText(/Show More/i))
-    expect(VanillaTilt.init).toHaveBeenCalled()
-
-    VanillaTilt.init.mockClear()
-
-    store = mockStore({
-      widgets: {
-        instagram: {
-          state: 'SUCCESS',
-          data: {
-            collections: { media: [] },
-            metrics: []
-          }
-        }
-      }
-    })
-
-    render(
-      <ReduxProvider store={store}>
-        <ThemeUIProvider theme={theme}>
-          <InstagramWidget />
-        </ThemeUIProvider>
-      </ReduxProvider>
-    )
-
-    expect(VanillaTilt.init).toHaveBeenCalled()
   })
 
   it('assigns lightGalleryRef correctly on initialization', () => {

@@ -42,8 +42,10 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
               className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
               href={spotifyURL}
               key={id}
+              onFocus={() => setCurrentMediaId(id)}
+              onBlur={() => setCurrentMediaId(null)}
               onMouseEnter={() => setCurrentMediaId(id)}
-              onMouseLeave={() => setCurrentMediaId(false)}
+              onMouseLeave={() => setCurrentMediaId(null)}
               title={details}
             >
               <Themed.img
