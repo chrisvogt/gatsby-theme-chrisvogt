@@ -175,4 +175,34 @@ describe('InstagramWidget', () => {
 
     expect(mockInstance).toBeDefined()
   })
+
+  it('updates focusedItem state on focus, blur, mouse enter, and mouse leave', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    // Locate the <button> wrapping the media item
+    const mediaItemButton = screen.getByRole('button', { name: /Instagram post thumbnail/i })
+    expect(mediaItemButton).toBeInTheDocument() // Ensure the button is rendered
+
+    // Focus event
+    fireEvent.focus(mediaItemButton)
+    expect(mediaItemButton.className).toContain('media-item--focused')
+
+    // Blur event
+    fireEvent.blur(mediaItemButton)
+    expect(mediaItemButton.className).not.toContain('media-item--focused')
+
+    // Mouse enter event
+    fireEvent.mouseEnter(mediaItemButton)
+    expect(mediaItemButton.className).toContain('media-item--focused')
+
+    // Mouse leave event
+    fireEvent.mouseLeave(mediaItemButton)
+    expect(mediaItemButton.className).not.toContain('media-item--focused')
+  })
 })
