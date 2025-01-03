@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.34.0",
+  "version": "0.33.4",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -105,6 +105,7 @@
     "redux": "^5.0.1",
     "s-ago": "^2.2.0",
     "svg-loaders-react": "^3.0.1",
-    "theme-ui": "^0.16.2"
+    "theme-ui": "^0.16.2",
+    "vanilla-tilt": "^1.8.1"
   }
 }
