@@ -69,4 +69,4 @@ Widget code is in the [`./src/components/widgets/`](./src/components/widgets/) d
 
 ## Copyright & License
 
-Copyright © 2019-2024 [Chris Vogt](https://www.chrisvogt.me). Released under the [MIT license](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/LICENSE).
+Copyright © 2019-2025 [Chris Vogt](https://www.chrisvogt.me). Released under the [MIT license](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/LICENSE).
