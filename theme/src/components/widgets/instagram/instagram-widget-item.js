@@ -11,7 +11,7 @@ const InstagramWidgetItem = ({
   onBlur = () => {},
   onMouseEnter = () => {},
   onMouseLeave = () => {},
-  post: { caption, cdnMediaURL, id, mediaType } = {}
+  post: { caption, cdnMediaURL = '', id, mediaType } = {}
 }) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM'
   const isVideo = mediaType === 'VIDEO'
