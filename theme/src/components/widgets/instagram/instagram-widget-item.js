@@ -3,7 +3,16 @@ import { jsx } from 'theme-ui'
 import { faImages, faVideo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL, id, mediaType } = {} }) => {
+const InstagramWidgetItem = ({
+  isFocusedItem,
+  handleClick,
+  index,
+  onFocus = () => {},
+  onBlur = () => {},
+  onMouseEnter = () => {},
+  onMouseLeave = () => {},
+  post: { caption, cdnMediaURL = '', id, mediaType } = {}
+}) => {
   const isCarousel = mediaType === 'CAROUSEL_ALBUM'
   const isVideo = mediaType === 'VIDEO'
 
@@ -12,19 +21,25 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
       key={id}
       onClick={event => handleClick(event, { index, photo: { caption, id, src: cdnMediaURL } })}
       rel='noopener noreferrer'
-      className='instagram-item-button'
+      className={`instagram-item-button media-item_media${isFocusedItem ? ' media-item--focused' : ''}`}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       sx={{
         variant: 'styles.InstagramItem'
       }}
     >
       {(isCarousel || isVideo) && (
         <div
+          className='media-item_icon'
           data-testid={isVideo ? 'video-icon' : 'carousel-icon'}
           sx={{
             color: 'white',
             position: 'absolute',
             top: 2,
-            right: 2
+            right: 2,
+            opacity: 0
           }}
         >
           <FontAwesomeIcon icon={isVideo ? faVideo : faImages} />

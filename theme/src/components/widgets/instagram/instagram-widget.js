@@ -5,13 +5,13 @@ import { Grid } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useCallback, useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import classnames from 'classnames'
 import lgAutoplay from 'lightgallery/plugins/autoplay'
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import lgVideo from 'lightgallery/plugins/video'
 import lgZoom from 'lightgallery/plugins/zoom'
 import LightGallery from 'lightgallery/react'
 import ReactPlaceholder from 'react-placeholder'
-import VanillaTilt from 'vanilla-tilt'
 
 import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-thumbnail.css'
@@ -53,7 +53,9 @@ export default () => {
   const media = useSelector(getMedia)
   const metrics = useSelector(getMetrics)
 
+  const [focusedItem, setFocusedItem] = useState(null)
   const [isShowingMore, setIsShowingMore] = useState(false)
+
   const lightGalleryRef = useRef(null)
 
   useEffect(() => {
@@ -61,18 +63,6 @@ export default () => {
       dispatch(fetchDataSource('instagram', instagramDataSource))
     }
   }, [dispatch, instagramDataSource, isLoading])
-
-  useEffect(() => {
-    if (isShowingMore || !isLoading) {
-      VanillaTilt.init(document.querySelectorAll('.instagram-item-button'), {
-        glare: true,
-        max: 21,
-        perspective: 1500,
-        reverse: true,
-        speed: 300
-      })
-    }
-  }, [isLoading, isShowingMore])
 
   const openLightbox = useCallback(
     index => {
@@ -107,6 +97,7 @@ export default () => {
 
       <div className='gallery'>
         <Grid
+          className={classnames('media-item_grid', { 'media-item_grid--interacting': Boolean(focusedItem) })}
           sx={{
             gridGap: [3, 3, 3, 4],
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(3, 1fr)', '', 'repeat(4, 1fr)']
@@ -132,7 +123,16 @@ export default () => {
               showLoadingAnimation
               type='rect'
             >
-              <WidgetItem handleClick={() => openLightbox(idx)} index={idx} post={post} />
+              <WidgetItem
+                isFocusedItem={focusedItem === post.id}
+                handleClick={() => openLightbox(idx)}
+                index={idx}
+                post={post}
+                onFocus={() => setFocusedItem(post.id)}
+                onBlur={() => setFocusedItem(null)}
+                onMouseEnter={() => setFocusedItem(post.id)}
+                onMouseLeave={() => setFocusedItem(null)}
+              />
             </ReactPlaceholder>
           ))}
         </Grid>
