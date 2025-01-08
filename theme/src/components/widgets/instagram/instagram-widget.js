@@ -65,11 +65,10 @@ export default () => {
   useEffect(() => {
     if (isShowingMore || !isLoading) {
       VanillaTilt.init(document.querySelectorAll('.instagram-item-button'), {
-        glare: true,
-        max: 21,
         perspective: 1500,
         reverse: true,
-        speed: 300
+        scale: 1.05,
+        speed: 200
       })
     }
   }, [isLoading, isShowingMore])
