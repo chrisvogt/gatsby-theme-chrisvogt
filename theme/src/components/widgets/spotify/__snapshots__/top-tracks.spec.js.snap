@@ -22,15 +22,22 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
     className="media-item_grid null css-4004kc"
   >
     <a
-      className="media-item_media css-1avyp1d"
+      className="media-item_media css-a8fqp2"
       href="http://spotify.com/track3"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Three – Artist Four"
     >
+      <div
+        className="media-item_caption css-18v1ukh"
+      >
+        <span>
+          Song Three
+        </span>
+      </div>
       <img
         alt="cover artwork"
-        className="css-1yymcx5"
+        className="css-1g46s4f"
         crossOrigin="anonymous"
         loading="lazy"
       />
@@ -64,7 +71,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -79,7 +86,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -94,7 +101,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -109,7 +116,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -124,7 +131,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -139,7 +146,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -154,7 +161,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -169,7 +176,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -184,7 +191,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -199,7 +206,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -214,7 +221,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -229,7 +236,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-l29vsk"
+        className="rect-shape css-n8oxh0"
         style={
           {
             "backgroundColor": "#efefef",
@@ -290,30 +297,44 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
     className="media-item_grid null css-4004kc"
   >
     <a
-      className="media-item_media css-1avyp1d"
+      className="media-item_media css-a8fqp2"
       href="http://spotify.com/track1"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song One – Artist One, Artist Two"
     >
+      <div
+        className="media-item_caption css-18v1ukh"
+      >
+        <span>
+          Song One
+        </span>
+      </div>
       <img
         alt="cover artwork"
-        className="css-1yymcx5"
+        className="css-1g46s4f"
         crossOrigin="anonymous"
         loading="lazy"
         src="http://example.com/medium.jpg"
       />
     </a>
     <a
-      className="media-item_media css-1avyp1d"
+      className="media-item_media css-a8fqp2"
       href="http://spotify.com/track2"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Two – Artist Three"
     >
+      <div
+        className="media-item_caption css-18v1ukh"
+      >
+        <span>
+          Song Two
+        </span>
+      </div>
       <img
         alt="cover artwork"
-        className="css-1yymcx5"
+        className="css-1g46s4f"
         crossOrigin="anonymous"
         loading="lazy"
         src="http://example.com/medium2.jpg"
