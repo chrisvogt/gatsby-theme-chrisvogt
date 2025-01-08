@@ -5,7 +5,7 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
   className="media-item_grid null css-4004kc"
 >
   <a
-    className="media-item_media css-1avyp1d"
+    className="media-item_media css-a8fqp2"
     href="https://www.google.com/"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -13,7 +13,7 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
   >
     <img
       alt="cover artwork"
-      className="css-1yymcx5"
+      className="css-1g46s4f"
       crossOrigin="anonymous"
       loading="lazy"
       src="http://placekitten.com/200/200"
@@ -30,7 +30,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -45,7 +45,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -60,7 +60,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -75,7 +75,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -90,7 +90,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -105,7 +105,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -120,7 +120,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -135,7 +135,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -150,7 +150,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -165,7 +165,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -180,7 +180,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",
@@ -195,7 +195,7 @@ exports[`MediaItemGrid matches the ready state snapshot state 1`] = `
     className="show-loading-animation"
   >
     <div
-      className="rect-shape css-l29vsk"
+      className="rect-shape css-n8oxh0"
       style={
         {
           "backgroundColor": "#efefef",

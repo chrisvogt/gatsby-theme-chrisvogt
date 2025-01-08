@@ -47,12 +47,19 @@ article.c1v0-blog-post img.solid-background {
   overflow: hidden;
 }
 
-.media-item_grid .media-item_media {
+.media-item_grid .media-item_media,
+.media-item_media .media-item_caption {
   transition: opacity 300ms ease;
 }
 
 .media-item_grid--interacting .media-item_media:not(.media-item--focused) {
   opacity: 0.4;
+}
+
+.media-item_grid--interacting .media-item_media.media-item--focused {
+  .media-item_caption {
+    opacity: 1;
+  }
 }
 
 .gatsby-highlight-code-line {

@@ -14,7 +14,7 @@ const placeholders = Array(12)
       <RectShape
         color='#efefef'
         sx={{
-          borderRadius: '6px',
+          borderRadius: '8px',
           boxShadow: 'md',
           paddingBottom: '100%',
           width: '100%'
@@ -36,7 +36,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
       }}
     >
       <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-        {items.map(({ id, details, spotifyURL, thumbnailURL }) => {
+        {items.map(({ id, details, name, spotifyURL, thumbnailURL }) => {
           return (
             <Themed.a
               className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
@@ -45,7 +45,42 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
               onMouseEnter={() => setCurrentMediaId(id)}
               onMouseLeave={() => setCurrentMediaId(false)}
               title={details}
+              sx={{
+                display: 'flex',
+                position: 'relative',
+                borderRadius: '8px',
+                boxShadow: 'md',
+                overflow: 'hidden'
+              }}
             >
+              {name && (
+                <Themed.div
+                  className='media-item_caption'
+                  sx={{
+                    color: 'white',
+                    fontSize: [1, 1, 1, 2],
+                    fontWeight: 'bold',
+                    opacity: 0,
+
+                    alignItems: 'center',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    position: 'absolute',
+                    textAlign: 'center',
+
+                    padding: 2,
+
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+
+                    background: 'rgba(0, 0, 0, 0.85)'
+                  }}
+                >
+                  <span>{name}</span>
+                </Themed.div>
+              )}
               <Themed.img
                 alt='cover artwork'
                 crossOrigin='anonymous'
@@ -53,8 +88,6 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                 src={thumbnailURL}
                 sx={{
                   ...floatOnHover,
-                  boxShadow: 'md',
-                  borderRadius: '8px',
                   objectFit: 'cover',
                   width: '100%'
                 }}
