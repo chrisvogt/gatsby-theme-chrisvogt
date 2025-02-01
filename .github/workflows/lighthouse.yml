@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1.4
         id: netlify
@@ -13,7 +13,7 @@ jobs:
           site_name: 'chrisvogt'
           max_timeout: 600 # Timeout if the deploy preview hasn't posted within 10 minutes
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v10
+        uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
             ${{ steps.netlify.outputs.url }}
