@@ -6,6 +6,7 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 import CallToAction from '../call-to-action'
 import Playlists from './playlists'
+import PlaylistsErrorBoundary from './playlists-error-boundary'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import TopTracks from './top-tracks'
 import Widget from '../widget'
@@ -62,7 +63,9 @@ const SpotifyWidget = () => {
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
       <TopTracks isLoading={isLoading} tracks={topTracks} />
-      <Playlists isLoading={isLoading} playlists={playlists} />
+      <PlaylistsErrorBoundary>
+        <Playlists isLoading={isLoading} playlists={playlists} />
+      </PlaylistsErrorBoundary>
     </Widget>
   )
 }
