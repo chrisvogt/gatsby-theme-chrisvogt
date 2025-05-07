@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
@@ -14,35 +15,9 @@ import WidgetHeader from '../widget-header'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getGithubUsername, getGithubWidgetDataSource } from '../../../selectors/metadata'
+import { getMetrics } from '../../../selectors/github'
 import { SUCCESS, FAILURE, getGitHubWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
-
-const getMetrics = state => {
-  const user = getGitHubWidget(state).data?.user || {}
-  const totalFollowersCount = user.followers?.totalCount
-  const totalFollowingCount = user.following?.totalCount
-
-  return [
-    ...(totalFollowersCount
-      ? [
-          {
-            displayName: 'Followers',
-            id: 'followers',
-            value: totalFollowersCount
-          }
-        ]
-      : []),
-    ...(totalFollowingCount
-      ? [
-          {
-            displayName: 'Following',
-            id: 'following',
-            value: totalFollowingCount
-          }
-        ]
-      : [])
-  ]
-}
 
 const getHasFatalError = state => getGitHubWidget(state).state === FAILURE
 const getIsLoading = state => getGitHubWidget(state).state !== SUCCESS
