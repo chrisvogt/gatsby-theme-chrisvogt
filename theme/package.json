@@ -69,7 +69,6 @@
     "@theme-ui/mdx": "^0.16.2",
     "@theme-ui/presets": "^0.16.2",
     "@theme-ui/prism": "^0.16.2",
-    "axios": "^1.7.4",
     "boxen": "^8.0.1",
     "classnames": "^2.5.1",
     "gatsby": "^5.13.7",
