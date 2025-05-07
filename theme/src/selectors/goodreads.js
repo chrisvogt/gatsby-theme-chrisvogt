@@ -1,4 +1,3 @@
-// selectors/goodreads.js
 import { createSelector } from 'reselect'
 import { getGoodreadsWidget } from '../reducers/widgets'
 
