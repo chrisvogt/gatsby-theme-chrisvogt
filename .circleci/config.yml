@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:20.9.0 # Updated to Node 20.9.0
+      - image: cimg/node:22.15.1
 
     working_directory: ~/gatsby-theme-chrisvogt
 

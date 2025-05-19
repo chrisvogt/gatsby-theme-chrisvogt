@@ -1,7 +1,12 @@
 import React from 'react'
-import { DarkModeToggle } from 'react-dark-mode-toggle-2'
 import { useColorMode } from 'theme-ui'
 import isDarkMode from '../helpers/isDarkMode'
+import loadable from '@loadable/component'
+
+const DarkModeToggle = loadable(
+  () => import('react-dark-mode-toggle-2').then(mod => ({ default: mod.DarkModeToggle })),
+  { ssr: false }
+)
 
 export default () => {
   const [colorMode, setColorMode] = useColorMode()

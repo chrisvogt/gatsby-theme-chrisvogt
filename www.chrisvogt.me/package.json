@@ -12,13 +12,13 @@
   },
   "dependencies": {
     "boxen": "^8.0.1",
-    "gatsby": "^5.13.7",
+    "gatsby": "^5.14.3",
     "gatsby-plugin-google-analytics": "^5.13.1",
-    "gatsby-plugin-newrelic": "^2.6.0",
+    "gatsby-plugin-newrelic": "^2.9.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-theme-chrisvogt": "*",
-    "prettier": "3.3.3",
+    "prettier": "3.5.3",
     "react": "^18",
     "react-dom": "^18"
   },

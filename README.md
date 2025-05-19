@@ -20,7 +20,7 @@
   </a>
 </p>
 
-This repository contains my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/www.chrisvogt.me).
+This repository contains the source code behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/www.chrisvogt.me).
 
 ## Local development
 
