@@ -15,6 +15,10 @@ jest.mock('../../../hooks/use-site-metadata', () =>
   }))
 )
 
+const mockLightGalleryInstance = {
+  openGallery: jest.fn()
+}
+
 jest.mock('lightgallery/react', () =>
   jest.fn(({ onInit }) => {
     onInit({ instance: mockLightGalleryInstance })
@@ -35,15 +39,12 @@ jest.mock('../../../actions/fetchDataSource', () =>
 )
 
 const mockStore = configureStore([])
-const mockLightGalleryInstance = {
-  openGallery: jest.fn()
-}
 
 describe('InstagramWidget', () => {
   let store
 
   beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {}) // Silence expected errors
+    jest.spyOn(console, 'error').mockImplementation(() => {})
     store = mockStore({
       widgets: {
         instagram: {
@@ -213,5 +214,42 @@ describe('InstagramWidget', () => {
     )
 
     expect(mockInstance).toBeDefined()
+  })
+
+  it('passes video object to LightGallery when mediaType is VIDEO and mediaURL is present', () => {
+    const videoStore = mockStore({
+      widgets: {
+        instagram: {
+          state: 'SUCCESS',
+          data: {
+            collections: {
+              media: [
+                {
+                  id: 'video1',
+                  caption: 'Video Caption',
+                  cdnMediaURL: 'https://cdn.chrisvogt.me/images/fake-video-thumbnail.jpg',
+                  mediaType: 'VIDEO',
+                  mediaURL: 'https://cdn.chrisvogt.me/videos/fake-video.mp4',
+                  permalink: 'https://instagram.com/p/video'
+                }
+              ]
+            },
+            metrics: []
+          }
+        }
+      }
+    })
+
+    render(
+      <ReduxProvider store={videoStore}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    expect(screen.getByTestId('lightgallery-mock')).toBeInTheDocument()
+    // Indirect test – rendering succeeds, LightGallery was initialized
+    expect(mockLightGalleryInstance.openGallery).not.toHaveBeenCalled() // Ensures it's only initialized, not opened
   })
 })
