@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 
 import Footer from './footer'
 import Layout from './layout'
@@ -31,14 +31,14 @@ describe('Layout', () => {
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={mockTheme}>
+        <ThemeUIProvider theme={mockTheme}>
           <Layout>
             <div className='fake-website'>
               <h1>Fake Website</h1>
               <p>Lorum ipsum dolor sit amet.</p>
             </div>
           </Layout>
-        </ThemeProvider>
+        </ThemeUIProvider>
       )
       .toJSON()
 

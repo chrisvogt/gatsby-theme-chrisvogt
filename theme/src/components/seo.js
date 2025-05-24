@@ -3,7 +3,7 @@ import { useThemeUI } from 'theme-ui'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-import { getLanguageCode, getTitle, getTitleTemplate, getTwitterUsername } from '../selectors/metadata'
+import { getTitle, getTitleTemplate, getTwitterUsername } from '../selectors/metadata'
 
 /**
  * SEO
@@ -14,7 +14,6 @@ const Seo = ({ article, children, description, image: imageURL, keywords, title:
   const metadata = useSiteMetadata()
   const { theme } = useThemeUI()
 
-  const languageCode = getLanguageCode(metadata)
   const siteTitle = getTitle(metadata)
   const titleTemplate = getTitleTemplate(metadata)
   const twitterUsername = getTwitterUsername(metadata)
@@ -23,7 +22,6 @@ const Seo = ({ article, children, description, image: imageURL, keywords, title:
 
   return (
     <>
-      <html lang={languageCode} />
       <title>{title}</title>
       {description && <meta name='description' content={description} />}
       {imageURL && <meta name='image' content={imageURL} />}

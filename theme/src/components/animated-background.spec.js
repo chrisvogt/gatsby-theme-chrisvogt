@@ -2,7 +2,7 @@ import React from 'react'
 import { render, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AnimatedBackground, { Circle } from './animated-background'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 
 // Mock requestAnimationFrame and cancelAnimationFrame
 beforeEach(() => {
@@ -49,7 +49,7 @@ const mockTheme = {
   }
 }
 
-const renderWithTheme = (ui, theme = mockTheme) => render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)
+const renderWithTheme = (ui, theme = mockTheme) => render(<ThemeUIProvider theme={theme}>{ui}</ThemeUIProvider>)
 
 describe('AnimatedBackground', () => {
   it('renders without crashing', () => {
