@@ -1,11 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import '@testing-library/jest-dom' // Import this to use toBeInTheDocument
+import '@testing-library/jest-dom'
 import Playlists from './playlists'
 import MediaItemGrid from './media-item-grid'
 import spotifyResponseFixture from '../../../../__mocks__/spotify.mock.json'
 
-// Mock the MediaItemGrid component
 jest.mock('./media-item-grid', () => jest.fn(() => <div data-testid='media-item-grid' />))
 
 const playlists = spotifyResponseFixture.payload.collections.playlists
@@ -17,22 +16,20 @@ describe('Playlists Component', () => {
         const {
           external_urls: { spotify: spotifyURL } = {},
           id,
-          images = [],
+          cdnImageURL,
           name,
           tracks: { total: totalTracksCount = 0 } = {}
         } = item
 
-        if (!totalTracksCount || images.length === 0) {
+        if (!totalTracksCount || !cdnImageURL) {
           return null
         }
-
-        const { url: thumbnailURL } = images.find(image => image.width === 300) || images.find(image => image.url) || {}
 
         return {
           id,
           name,
           spotifyURL,
-          thumbnailURL,
+          thumbnailURL: cdnImageURL,
           details: `${name} (${totalTracksCount} tracks)`
         }
       })
@@ -41,7 +38,6 @@ describe('Playlists Component', () => {
 
     const { getByTestId } = render(<Playlists isLoading={false} playlists={playlists} />)
 
-    // Check that the MediaItemGrid component was called with the correct props
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
         isLoading: false,
@@ -50,7 +46,6 @@ describe('Playlists Component', () => {
       {}
     )
 
-    // Ensure the MediaItemGrid component is rendered
     expect(getByTestId('media-item-grid')).toBeInTheDocument()
   })
 
@@ -60,7 +55,7 @@ describe('Playlists Component', () => {
       .map((_, index) => ({
         external_urls: { spotify: `https://open.spotify.com/playlist/${index}` },
         id: `playlist-${index}`,
-        images: [{ url: `https://image.url/${index}.jpg`, width: 300 }],
+        cdnImageURL: `https://cdn.images.com/${index}.jpg`,
         name: `Playlist ${index}`,
         tracks: { total: 10 }
       }))
@@ -73,7 +68,7 @@ describe('Playlists Component', () => {
           id: playlist.id,
           name: playlist.name,
           spotifyURL: playlist.external_urls.spotify,
-          thumbnailURL: playlist.images[0].url,
+          thumbnailURL: playlist.cdnImageURL,
           details: `${playlist.name} (10 tracks)`
         }))
       }),
@@ -87,8 +82,8 @@ describe('Playlists Component', () => {
       { id: 'invalid-1' },
       {
         id: 'invalid-2',
-        tracks: { total: 0 },
-        images: []
+        cdnImageURL: '',
+        tracks: { total: 0 }
       }
     ]
 
@@ -96,7 +91,7 @@ describe('Playlists Component', () => {
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
-        items: [] // No valid playlists should be passed to MediaItemGrid
+        items: []
       }),
       {}
     )
@@ -107,10 +102,10 @@ describe('Playlists Component', () => {
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
-        isLoading: true, // We're only asserting for the isLoading prop
-        items: [] // And that the items array is empty as expected
+        isLoading: true,
+        items: []
       }),
-      expect.anything() // Ensures we're not overly specific about other props
+      expect.anything()
     )
   })
 
@@ -119,25 +114,25 @@ describe('Playlists Component', () => {
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
-        items: [] // No playlists should be passed
+        items: []
       }),
       {}
     )
   })
 
-  it('handles playlists with no images or tracks', () => {
+  it('handles playlists with no image or no tracks', () => {
     const playlistsWithMissingData = [
       {
-        id: 'no-images',
-        external_urls: { spotify: 'https://spotify.com/no-images' },
-        images: [],
-        name: 'No Images Playlist',
+        id: 'no-image',
+        external_urls: { spotify: 'https://spotify.com/no-image' },
+        cdnImageURL: '',
+        name: 'No Image Playlist',
         tracks: { total: 5 }
       },
       {
         id: 'no-tracks',
         external_urls: { spotify: 'https://spotify.com/no-tracks' },
-        images: [{ url: 'https://image.url/no-tracks.jpg', width: 300 }],
+        cdnImageURL: 'https://cdn.images.com/no-tracks.jpg',
         name: 'No Tracks Playlist',
         tracks: { total: 0 }
       }
@@ -147,7 +142,7 @@ describe('Playlists Component', () => {
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
-        items: [] // Neither playlist should be passed
+        items: []
       }),
       {}
     )
@@ -158,14 +153,14 @@ describe('Playlists Component', () => {
       {
         id: 'valid',
         external_urls: { spotify: 'https://spotify.com/valid' },
-        images: [{ url: 'https://image.url/valid.jpg', width: 300 }],
+        cdnImageURL: 'https://cdn.images.com/valid.jpg',
         name: 'Valid Playlist',
         tracks: { total: 10 }
       },
       null,
       {
         id: 'invalid',
-        images: [],
+        cdnImageURL: '',
         tracks: { total: 0 }
       }
     ]
