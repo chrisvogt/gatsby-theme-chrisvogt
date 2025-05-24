@@ -40,7 +40,7 @@ const Playlists = ({ isLoading, playlists = [] }) => {
     .map(transformPlaylist)
     // Since this UI is image-centric, we want to skip any playlists that don't have an image, which is an edge
     // case I've noticed before for some select playlists.
-    .filter(playlist => Boolean(playlist.thumbnailURL))
+    .filter(playlist => Boolean(playlist?.thumbnailURL))
     .slice(0, 12) // Limit to 12 playlists for now. As of December 2024 the API response includes > 12 playlists.
 
   return (
