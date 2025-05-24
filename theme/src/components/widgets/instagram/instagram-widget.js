@@ -36,10 +36,10 @@ const MAX_IMAGES = {
   showMore: 16
 }
 
+const getMedia = state => getInstagramWidget(state).data?.collections?.media
 const getHasFatalError = state => getInstagramWidget(state).state === FAILURE
 const getIsLoading = state => getInstagramWidget(state).state !== SUCCESS
-const getMedia = state => getInstagramWidget(state).data?.collections?.media || []
-const getMetrics = state => getInstagramWidget(state).data?.metrics || []
+const getMetrics = state => getInstagramWidget(state).data?.metrics
 
 export default () => {
   const dispatch = useDispatch()
@@ -143,36 +143,38 @@ export default () => {
         </div>
       )}
 
-      <LightGallery
-        onInit={ref => {
-          lightGalleryRef.current = ref.instance
-        }}
-        plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
-        licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
-        download={false}
-        dynamic
-        dynamicEl={media.map(post => ({
-          thumb: post.cdnMediaURL,
-          subHtml: post.caption || '',
-          ...(post.mediaType !== 'VIDEO' ? { src: post.cdnMediaURL } : {}),
-          video:
-            post.mediaType === 'VIDEO' && post.mediaURL
-              ? {
-                  source: [
-                    {
-                      src: post.mediaURL,
-                      type: 'video/mp4'
+      {media?.length && (
+        <LightGallery
+          onInit={ref => {
+            lightGalleryRef.current = ref.instance
+          }}
+          plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
+          licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
+          download={false}
+          dynamic
+          dynamicEl={media.map(post => ({
+            thumb: post.cdnMediaURL,
+            subHtml: post.caption || '',
+            ...(post.mediaType !== 'VIDEO' ? { src: post.cdnMediaURL } : {}),
+            video:
+              post.mediaType === 'VIDEO' && post.mediaURL
+                ? {
+                    source: [
+                      {
+                        src: post.mediaURL,
+                        type: 'video/mp4'
+                      }
+                    ],
+                    attributes: {
+                      controls: true // Enable controls for the video
                     }
-                  ],
-                  attributes: {
-                    controls: true // Enable controls for the video
                   }
-                }
-              : undefined
-        }))}
-        autoplayVideoOnSlide={true} // Add this option
-        speed={500}
-      />
+                : undefined
+          }))}
+          autoplayVideoOnSlide={true} // Add this option
+          speed={500}
+        />
+      )}
     </Widget>
   )
 }
