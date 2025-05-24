@@ -8,7 +8,17 @@ import { ThemeUIProvider } from 'theme-ui'
 jest.mock('../components/layout', () => ({ children }) => <div className='layoutMock'>{children}</div>)
 
 // Mock Lottie
-jest.mock('lottie-react-web', () => () => <div data-testid='lottie-animation'>Lottie Animation</div>)
+jest.mock('lottie-react-web', () => {
+  const React = require('react')
+  return {
+    __esModule: true,
+    default: React.forwardRef((props, ref) => (
+      <div ref={ref} data-testid='lottie-animation'>
+        Lottie Animation
+      </div>
+    ))
+  }
+})
 
 // Mock Theme
 const mockTheme = {
