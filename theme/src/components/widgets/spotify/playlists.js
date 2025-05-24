@@ -14,15 +14,14 @@ const transformPlaylist = playlist => {
     external_urls: { spotify: spotifyURL } = {},
     cdnImageURL,
     id,
-    images = [],
     name,
     tracks: { total: totalTracksCount = 0 } = {}
   } = playlist
 
   // Skip playlist for the following reasons:
-  // undefined totalTracksCount: Fixes a bug discovered in Prod when an empty album was returned.
-  // undefined images: Fixes a bug and since these playlists are image-centric, we don't want to render them without an image.
-  if (!(totalTracksCount && images.length)) {
+  // - undefined totalTracksCount: Fixes a bug discovered in Prod when an empty album was returned.
+  // - undefined cdnImageURL: Fixes a bug and since these playlists are image-centric, we don't want to render them without an image.
+  if (!totalTracksCount || !cdnImageURL) {
     return null
   }
 
