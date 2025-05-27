@@ -35,7 +35,7 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
         crossOrigin='anonymous'
         className='instagram-item-image'
         loading='lazy'
-        src={`${cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`}
+        src={`${cdnMediaURL}?h=234&w=234&fit=crop&crop=faces,focalpoint&auto=compress&auto=enhance&auto=format`}
         height='280'
         width='280'
         alt='Instagram post thumbnail'

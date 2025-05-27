@@ -12,7 +12,7 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
       crossorigin="anonymous"
       height="280"
       loading="lazy"
-      src="https://cdn.chrisvogt.me/images/fake-instagram-image.jpg?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format"
+      src="https://cdn.chrisvogt.me/images/fake-instagram-image.jpg?h=234&w=234&fit=crop&crop=faces,focalpoint&auto=compress&auto=enhance&auto=format"
       width="280"
     />
   </button>

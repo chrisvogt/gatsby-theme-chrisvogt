@@ -155,7 +155,9 @@ export default () => {
           dynamicEl={media.map(post => ({
             thumb: post.cdnMediaURL,
             subHtml: post.caption || '',
-            ...(post.mediaType !== 'VIDEO' ? { src: post.cdnMediaURL } : {}),
+            ...(post.mediaType !== 'VIDEO'
+              ? { src: `${post.cdnMediaURL}?auto=compress&auto=enhance&auto=format` }
+              : {}),
             video:
               post.mediaType === 'VIDEO' && post.mediaURL
                 ? {
