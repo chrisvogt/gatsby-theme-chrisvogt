@@ -153,7 +153,7 @@ export default () => {
           download={false}
           dynamic
           dynamicEl={media.map(post => ({
-            thumb: post.cdnMediaURL,
+            thumb: `${post.cdnMediaURL}?auto=compress&auto=enhance&auto=format&fit=clip&w=100&h=100`,
             subHtml: post.caption || '',
             ...(post.mediaType !== 'VIDEO'
               ? { src: `${post.cdnMediaURL}?auto=compress&auto=enhance&auto=format` }
