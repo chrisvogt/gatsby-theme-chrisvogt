@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint and Format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Run Prettier check
+        run: yarn prettier --check .
+
+      - name: Run ESLint
+        run: yarn lint
+
+  test:
+    name: Unit Tests with Coverage
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Run tests and collect coverage
+        run: yarn workspace gatsby-theme-chrisvogt test:coverage --maxWorkers=2
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: theme/coverage/lcov.info
+          flags: unittests
+          fail_ci_if_error: true
+
+  # Optional: Add this if you have a build step you want to verify
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Load env vars from .env.template
+        run: |
+          echo "⚙️ Loading mock env vars from .env.template"
+          grep -v '^#' .env.template | grep '=' >> $GITHUB_ENV
+          echo "✅ Environment variables loaded from .env.template"
+
+      - name: Build project
+        run: yarn workspace www.chrisvogt.me build
