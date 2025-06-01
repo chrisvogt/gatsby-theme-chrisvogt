@@ -1,4 +1,6 @@
 name: Lighthouse CI for Netlify sites
+permissions:
+  contents: read
 on: pull_request
 jobs:
   build:
