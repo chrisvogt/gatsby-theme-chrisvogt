@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { Box, Container, Flex, Grid, jsx } from 'theme-ui'
-import { useRef } from 'react'
-import Lottie from 'lottie-react-web'
+import { useRef, useEffect, useState } from 'react'
+import loadable from '@loadable/component'
 import { Themed } from '@theme-ui/mdx'
+
+const LottieClientOnly = loadable(() => import('lottie-react-web'), { ssr: false })
 
 import Layout from '../components/layout'
 
@@ -14,13 +16,19 @@ const options = Object.freeze({
 
 const NotFoundPage = () => {
   const ref = useRef()
+
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <Layout>
       <Flex sx={{ position: 'relative', flex: 1 }}>
         <Container>
           <Grid gap={4} sx={{ gridTemplateColumns: ['auto', 'auto', '1fr 70%'] }}>
             <Box>
-              <Lottie key='$floatingAstronaut' ref={ref} height='50vh' options={options} />
+              {isClient && <LottieClientOnly key='$floatingAstronaut' ref={ref} height='50vh' options={options} />}
             </Box>
             <Box
               sx={{
