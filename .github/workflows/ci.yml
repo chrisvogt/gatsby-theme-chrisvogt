@@ -77,5 +77,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Load env vars from .env.template
+        run: |
+          echo "⚙️ Loading mock env vars from .env.template"
+          grep -v '^#' .env.template | grep '=' >> $GITHUB_ENV
+          echo "✅ Environment variables loaded from .env.template"
+
       - name: Build project
         run: yarn workspace www.chrisvogt.me build
