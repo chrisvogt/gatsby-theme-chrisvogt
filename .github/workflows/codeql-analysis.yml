@@ -37,6 +37,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Load env vars from .env.template
+        run: |
+          set -a
+          source .env.template
+          set +a
+          echo "✅ Environment variables loaded from .env.template"
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
