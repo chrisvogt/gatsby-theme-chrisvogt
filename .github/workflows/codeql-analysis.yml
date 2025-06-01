@@ -39,9 +39,8 @@ jobs:
 
       - name: Load env vars from .env.template
         run: |
-          set -a
-          source .env.template
-          set +a
+          echo "⚙️ Loading mock env vars from .env.template"
+          grep -v '^#' .env.template | grep '=' >> $GITHUB_ENV
           echo "✅ Environment variables loaded from .env.template"
 
       - name: Initialize CodeQL
