@@ -42,7 +42,7 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Build workspace
+      - name: Build website
         run: yarn workspace www.chrisvogt.me build
 
       - name: Perform CodeQL Analysis
