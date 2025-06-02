@@ -6,8 +6,11 @@
   <a href='https://app.netlify.com/sites/chrisvogt/deploys'>
     <img src='https://api.netlify.com/api/v1/badges/29f330b8-22bf-4f7f-a0f0-240476512db0/deploy-status' alt='Netlify Status'>
   </a>
-  <a href='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt'>
-    <img src='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt.svg?style=shield' alt='Current CircleCI build status.' />
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml/badge.svg?branch=main' alt='Continuous Integration badge' />
+  </a>
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql.yml/badge.svg?branch=main' alt='CodeQL badge' />
   </a>
   <a href='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt'>
     <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/main/graph/badge.svg?token=YUksu2c99s' alt='Code coverage report badge.' />
