@@ -18,7 +18,7 @@ import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
-const TimeSpent = ({ timeInMs }) => (
+export const TimeSpent = ({ timeInMs }) => (
   <Fragment>
     <b>Time Spent:</b> {humanizeDuration(timeInMs)}
   </Fragment>
