@@ -19,9 +19,22 @@ body,
   flex-direction: column;
 }
 
-/* NOTE(cvogt): overrides the default react-photo-gallery footer style */
-.react-images__footer.react-images__footer--isModal {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) !important;
+/* This is a temporary fix until I get it working through MDX. */
+article.c1v0-blog-post img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  /* Matches the Theme UI default breakpoints. See https://theme-ui.com/theme-spec#breakpoints. */
+  @media (min-width: 56em) and (orientation: landscape) {
+    max-width: 120%;
+    margin-left: -10%;
+  }
+}
+
+article.c1v0-blog-post img.solid-background {
+  /* Hack to give these images a light background color in dark mode. */
+  background-color: #fcfcfc;
+  padding: 16px;
 }
 
 /* See https://webaim.org/techniques/css/invisiblecontent/ */
@@ -34,12 +47,19 @@ body,
   overflow: hidden;
 }
 
-.media-item_grid .media-item_media {
+.media-item_grid .media-item_media,
+.media-item_media .media-item_caption {
   transition: opacity 300ms ease;
 }
 
 .media-item_grid--interacting .media-item_media:not(.media-item--focused) {
   opacity: 0.4;
+}
+
+.media-item_grid--interacting .media-item_media.media-item--focused {
+  .media-item_caption {
+    opacity: 1;
+  }
 }
 
 .gatsby-highlight-code-line {

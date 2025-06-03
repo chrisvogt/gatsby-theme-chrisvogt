@@ -3,14 +3,13 @@ import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { Box, Card, Heading } from '@theme-ui/components'
 import ago from 's-ago'
-import PropTypes from 'prop-types'
 import Placeholder from 'react-placeholder'
 import { TextRow } from 'react-placeholder/lib/placeholders'
 
 import CardFooter from '../card-footer'
 import ViewExternal from '../view-external'
 
-const stripHtmlElements = text => text.replace(/<[^>]+>/g, '')
+const removeAllHtmlTags = input => input.replace(/<a [^>]*>(.*?)<\/a>/g, '$1')
 
 const renderStarsForRating = count => {
   const repeat = (char, n) => Array(n).fill(char).join('')
@@ -20,11 +19,11 @@ const renderStarsForRating = count => {
 
 const mapStatusToTemplate = {
   review: ({ book, rating }) => `rated ${book.title} ${rating} out of 5 stars: ${renderStarsForRating(rating)}.`,
-  userstatus: ({ actionText }) => stripHtmlElements(actionText)
+  userstatus: ({ actionText }) => removeAllHtmlTags(actionText)
 }
 
 const UserStatus = ({ isLoading, status, actorName }) => {
-  const { link, type, updated } = status
+  const { created, link, type, updated } = status
 
   const statusText = mapStatusToTemplate[type] ? mapStatusToTemplate[type](status) : 'Loading...'
 
@@ -36,38 +35,39 @@ const UserStatus = ({ isLoading, status, actorName }) => {
           mb: 3
         }}
       >
-        Status
+        Last Update
       </Heading>
 
       <Themed.a
         href={link}
         sx={{
-          color: `var(--theme-ui-colors-panel-text)`,
-          display: `flex`,
+          color: 'var(--theme-ui-colors-panel-text)',
+          display: 'flex',
           '&:hover, &:focus': {
-            textDecoration: `none`
+            textDecoration: 'none'
           }
         }}
       >
         <Card variant='actionCard'>
           <Placeholder
             color='#efefef'
-            customPlaceholder={<TextRow style={{ marginTop: 0, width: `100%` }} />}
+            customPlaceholder={<TextRow style={{ marginTop: 0, width: '100%' }} />}
             ready={!isLoading}
             showLoadingAnimation
           >
             <span>
               {actorName} {statusText}
-              <em>– {ago(new Date(updated))}</em>
             </span>
           </Placeholder>
-          <CardFooter customStyles={{ justifyContent: `flex-end` }}>
+
+          <CardFooter>
             <Placeholder
               color='#efefef'
-              customPlaceholder={<TextRow style={{ marginTop: 0, width: `140px` }} />}
+              customPlaceholder={<TextRow color='#efefef' style={{ marginTop: 0, width: '150px', height: '15px' }} />}
               ready={!isLoading}
               showLoadingAnimation
             >
+              <span>Posted {ago(new Date(created || updated))}</span>
               <ViewExternal platform='Goodreads' />
             </Placeholder>
           </CardFooter>
@@ -75,19 +75,6 @@ const UserStatus = ({ isLoading, status, actorName }) => {
       </Themed.a>
     </Box>
   )
-}
-
-UserStatus.propTypes = {
-  /** The name of the person the status is about. */
-  actorName: PropTypes.string,
-  /** Widget is in a loading state if true. */
-  isLoading: PropTypes.bool,
-  /** The Goodreads user status object. */
-  status: PropTypes.shape({
-    actionText: PropTypes.string,
-    updated: PropTypes.string,
-    link: PropTypes.string
-  })
 }
 
 export default UserStatus

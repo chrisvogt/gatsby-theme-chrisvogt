@@ -5,10 +5,11 @@ module.exports = () => ({
     avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo',
     baseURL: 'https://www.chrisvogt.me',
     description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
-    footerText: 'Made in San Francisco',
+    footerText: 'Made with ❤️ in the Castro 🌈, San Francisco',
     headline: 'www.chrisvogt.me',
     imageURL: '',
     languageCode: 'en',
+    siteUrl: 'https://www.chrisvogt.me',
     social: {
       twitterUsername: ''
     },
@@ -40,7 +41,7 @@ module.exports = () => ({
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
         gatsbyRemarkPlugins: [
           'gatsby-remark-prismjs',
@@ -66,24 +67,24 @@ module.exports = () => ({
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `content`,
-        name: `content`
+        path: 'content',
+        name: 'content'
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          `Crimson Text\:400,400i,600,600i` // specify the weights and styles you need
+          'Crimson Text:400,400i,600,600i' // specify the weights and styles you need
         ],
         display: 'swap'
-      },
+      }
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-emotion',
     'gatsby-theme-style-guide',
     'gatsby-transformer-json',
-    `gatsby-plugin-theme-ui`
+    'gatsby-plugin-theme-ui'
   ]
 })

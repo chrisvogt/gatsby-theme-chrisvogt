@@ -1,22 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout matches the snapshot 1`] = `
-[
+<div
+  className="css-9941j0"
+>
   <div
-    className="MOCK__TopNavigation"
-  />,
-  <div
-    className="fake-website"
+    style={
+      {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
   >
-    <h1>
-      Fake Website
-    </h1>
-    <p>
-      Lorum ipsum dolor sit amet.
-    </p>
-  </div>,
+    <canvas
+      style={
+        {
+          "display": "block",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      style={
+        {
+          "WebkitBackdropFilter": "blur(75px)",
+          "backdropFilter": "blur(75px)",
+          "backgroundColor": "rgba(253, 248, 245, 0.35)",
+          "height": "100%",
+          "left": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <header
+    className="css-l5xv05"
+    role="banner"
+  >
+    <div
+      className="MOCK__TopNavigation"
+    />
+  </header>
+  <main
+    role="main"
+  >
+    <div
+      className="fake-website"
+    >
+      <h1>
+        Fake Website
+      </h1>
+      <p>
+        Lorum ipsum dolor sit amet.
+      </p>
+    </div>
+  </main>
   <div
     className="MOCK__Footer"
-  />,
-]
+  />
+</div>
 `;

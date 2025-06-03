@@ -2,10 +2,10 @@
 import { Container, Flex, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import { Heading } from '@theme-ui/components'
-import PropTypes from 'prop-types'
 
+import Category from '../components/category'
 import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
 
 import SoundCloud from '../shortcodes/soundcloud'
@@ -27,9 +27,10 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
       {(youtubeSrc || soundcloudId) && (
         <Themed.div
           sx={{
-            backgroundColor: theme => theme.colors['panel-background'],
-            textAlign: `center`,
-            paddingY: 3
+            background: theme => theme.colors['panel-background'],
+            textAlign: 'center',
+            paddingY: 3,
+            position: 'relative'
           }}
         >
           <Container>
@@ -41,40 +42,26 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
 
       <Flex
         sx={{
-          flexDirection: `column`,
+          flexDirection: 'column',
           flexGrow: 1,
-          py: 3
+          py: 3,
+          position: 'relative'
         }}
       >
-        <Container sx={{ height: `100%` }}>
-          {category && (
-            <Themed.div sx={{ fontSize: [3, 4], variant: `text.title` }}>
-              {category}
-            </Themed.div>
-          ) }
+        <Container sx={{ width: ['', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
+          <article className='h-entry'>
+            {category && <Category type={category} sx={{ mb: 2 }} />}
 
-          <time className='created'>
-            {date}
-          </time>
+            <PageHeader>{title}</PageHeader>
 
-          <Themed.h1 as={Heading}>
-            {title}
-          </Themed.h1>
+            <time className='dt-published created'>Published {date}</time>
 
-          <div className='article-content'>
-             {children}
-          </div>
+            <div className='e-content article-content'>{children}</div>
+          </article>
         </Container>
       </Flex>
     </Layout>
   )
-}
-
-MediaTemplate.propTypes = {
-  children: PropTypes.node,
-  data: PropTypes.shape({
-    mdx: PropTypes.object.isRequired
-  }).isRequired
 }
 
 export const Head = ({ data: { mdx } }) => {
@@ -82,14 +69,7 @@ export const Head = ({ data: { mdx } }) => {
   const description = getDescription(mdx)
   const title = getTitle(mdx)
 
-  return (
-    <Seo
-      article={true}
-      description={description}
-      image={banner}
-      title={title}
-    />
-  )
+  return <Seo article={true} description={description} image={banner} title={title} />
 }
 
 export const pageQuery = graphql`

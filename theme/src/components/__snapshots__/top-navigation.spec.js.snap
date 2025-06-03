@@ -2,69 +2,38 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-10qm8bf-TopNavigation"
+  className="css-1pf826z"
 >
   <div
-    className="css-1hhifxi-TopNavigation"
+    className="css-11zjnqz"
   >
     <div
-      className="css-1oho7q7-TopNavigation"
+      className="css-1bqa2tj"
     >
-      <a
-        aria-current="page"
-        className="css-1gew4ue-TopNavigation"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        style={{}}
+      <nav
+        role="navigation"
       >
-        My Personal Blog & Portfolio
-      </a>
-      <a
-        className="css-12sa0kn"
-        href="/about-me"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        title="About Me"
-      >
-        About Me
-      </a>
+        <a
+          aria-current="page"
+          className="css-q43x4o"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={{}}
+        >
+          My Personal Blog & Portfolio
+        </a>
+        <a
+          className="css-v7jqkk"
+          href="/about-me"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          title="About Me"
+        >
+          About Me
+        </a>
+      </nav>
     </div>
-    <button
-      aria-hidden="true"
-      className={null}
-      onClick={[Function]}
-      style={
-        {
-          "MozAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundColor": "transparent",
-          "border": "none",
-          "cursor": "pointer",
-          "height": "37.599999999999994px",
-          "overflow": "hidden",
-          "padding": 0,
-          "width": "80px",
-        }
-      }
-    >
-      <div
-        style={
-          {
-            "alignItems": "center",
-            "display": "flex",
-            "height": "132px",
-            "justifyContent": "center",
-            "marginLeft": "-25.6px",
-            "marginTop": "-46px",
-            "width": "132px",
-          }
-        }
-      >
-        <div />
-      </div>
-    </button>
   </div>
 </div>
 `;

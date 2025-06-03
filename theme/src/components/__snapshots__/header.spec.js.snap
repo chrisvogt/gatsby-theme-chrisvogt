@@ -1,26 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
-<div
-  className="css-13vk5n5-Header"
+<header
+  className="css-5fqyrv"
+  role="banner"
 >
   <div
-    className="css-8hbmgs-Header"
+    className="css-1u8qly9"
   >
     Wow!
   </div>
-  <svg
-    className="css-odb3nj"
-    height="auto"
-    preserveAspectRatio="xMidYMin slice"
-    viewBox="0 0 1366 63"
-    width="100%"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M1366,64V3.6c-.2-2.32-88.53-7-218.38.43C1017.88,10.1,846.62,28.18,683,40.89,519.8,54.69,348.92,58,218.94,44.28,89,32.66-.15,4,0,2.48V64Z"
-      fill="inherit"
-    />
-  </svg>
-</div>
+</header>
 `;

@@ -12,7 +12,7 @@ export const getGithubWidgetDataSource = metadata => metadata?.widgets?.github?.
 
 export const getGoodreadsUsername = metadata => metadata?.widgets?.goodreads?.username
 
-export const getGoodreadsWidgetDataSource = metadata => metadata?.widgets.goodreads.widgetDataSource
+export const getGoodreadsWidgetDataSource = metadata => metadata?.widgets?.goodreads?.widgetDataSource
 
 export const getHeadline = metadata => metadata?.headline
 
@@ -26,7 +26,7 @@ export const getLanguageCode = metadata => metadata?.languageCode
 
 export const getSpotifyWidgetDataSource = metadata => metadata?.widgets?.spotify?.widgetDataSource
 
-export const getSteamWidgetDataSource = metadata => metadata?.widgets?.steam?.widgetDataSource
+export const getSteamWidgetDataSource = metadata => metadata?.widgets?.steam?.widgetDataSource + '?cachebust=true'
 
 export const getSubhead = metadata => metadata?.subhead
 

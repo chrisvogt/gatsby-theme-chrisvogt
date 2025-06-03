@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {
   faBehance,
+  faBluesky,
   faDribbble,
   faFacebook,
   faGithub,
@@ -23,6 +24,7 @@ import useSocialProfiles from '../../hooks/use-social-profiles'
  */
 const icons = {
   faBehance,
+  faBluesky,
   faDribbble,
   faFacebook,
   faGithub,
@@ -52,7 +54,16 @@ export default () => {
           const { displayName, href, slug } = profile
           return (
             <a key={slug} href={href} title={displayName} rel='me' sx={{ mx: [3, 4, 4, 5] }}>
-              <FontAwesomeIcon icon={IconComponent} sx={{ fontSize: [4, 5, 6] }} />
+              <FontAwesomeIcon
+                icon={IconComponent}
+                sx={{
+                  fontSize: [4, 5, 6],
+                  // The following styles are a hack to prevent the icons being too large
+                  // on first render. I imagine there's a better way to do this.
+                  maxHeight: '36px',
+                  maxWidth: '36px'
+                }}
+              />
             </a>
           )
         })}

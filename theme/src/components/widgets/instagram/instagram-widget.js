@@ -1,31 +1,45 @@
 /** @jsx jsx */
-import { Grid } from '@theme-ui/components'
 import { jsx } from 'theme-ui'
+
+import { Grid } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import Carousel, { Modal, ModalGateway } from 'react-images'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import lgAutoplay from 'lightgallery/plugins/autoplay'
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgVideo from 'lightgallery/plugins/video'
+import lgZoom from 'lightgallery/plugins/zoom'
+import LightGallery from 'lightgallery/react'
 import ReactPlaceholder from 'react-placeholder'
+import VanillaTilt from 'vanilla-tilt'
+
+import 'lightgallery/css/lightgallery.css'
+import 'lightgallery/css/lg-thumbnail.css'
+import 'lightgallery/css/lg-zoom.css'
+import 'lightgallery/css/lg-video.css'
+import 'lightgallery/css/lg-autoplay.css'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getInstagramUsername, getInstagramWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE, getInstagramWidget } from '../../../reducers/widgets'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
+import Button from '../../button'
 import CallToAction from '../call-to-action'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 import WidgetItem from './instagram-widget-item'
 
-const MAX_IMAGES = 8
+const MAX_IMAGES = {
+  default: 8,
+  showMore: 16
+}
 
+const getMedia = state => getInstagramWidget(state).data?.collections?.media
 const getHasFatalError = state => getInstagramWidget(state).state === FAILURE
 const getIsLoading = state => getInstagramWidget(state).state !== SUCCESS
-const getMedia = state => getInstagramWidget(state).data?.collections?.media || []
-const getMetrics = state => getInstagramWidget(state).data?.metrics || []
+const getMetrics = state => getInstagramWidget(state).data?.metrics
 
 export default () => {
   const dispatch = useDispatch()
@@ -39,24 +53,37 @@ export default () => {
   const media = useSelector(getMedia)
   const metrics = useSelector(getMetrics)
 
+  const [isShowingMore, setIsShowingMore] = useState(false)
+  const lightGalleryRef = useRef(null)
+
   useEffect(() => {
     if (isLoading) {
       dispatch(fetchDataSource('instagram', instagramDataSource))
     }
   }, [dispatch, instagramDataSource, isLoading])
 
-  const [currentImage, setCurrentImage] = useState(0)
-  const [viewerIsOpen, setViewerIsOpen] = useState(false)
+  useEffect(() => {
+    if (isShowingMore || !isLoading) {
+      VanillaTilt.init(document.querySelectorAll('.instagram-item-button'), {
+        perspective: 1500,
+        reverse: true,
+        scale: 1.05,
+        speed: 200
+      })
+    }
+  }, [isLoading, isShowingMore])
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index)
-    setViewerIsOpen(true)
-  }, [])
-
-  const closeLightbox = () => {
-    setCurrentImage(0)
-    setViewerIsOpen(false)
-  }
+  const openLightbox = useCallback(
+    index => {
+      const instance = lightGalleryRef.current
+      if (instance) {
+        instance.openGallery(index)
+      } else {
+        console.error('LightGallery instance is not initialized')
+      }
+    },
+    [lightGalleryRef]
+  )
 
   const callToAction = (
     <CallToAction
@@ -69,14 +96,11 @@ export default () => {
     </CallToAction>
   )
 
+  const countItemsToRender = isShowingMore ? MAX_IMAGES.showMore : MAX_IMAGES.default
+
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
-      <WidgetHeader
-        aside={callToAction}
-        icon={faInstagram}
-      >
-        Instagram
-      </WidgetHeader>
+      <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
 
       <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
 
@@ -87,17 +111,17 @@ export default () => {
             gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(3, 1fr)', '', 'repeat(4, 1fr)']
           }}
         >
-          {(isLoading ? Array(MAX_IMAGES).fill({}) : media).slice(0, MAX_IMAGES).map((post, idx) => (
+          {(isLoading ? Array(countItemsToRender).fill({}) : media).slice(0, countItemsToRender).map((post, idx) => (
             <ReactPlaceholder
               customPlaceholder={
                 <div className='image-placeholder'>
                   <RectShape
                     color='#efefef'
                     sx={{
-                      borderRadius: `8px`,
-                      boxShadow: `md`,
-                      width: `100%`,
-                      paddingBottom: `100%`
+                      borderRadius: '8px',
+                      boxShadow: 'md',
+                      width: '100%',
+                      paddingBottom: '100%'
                     }}
                   />
                 </div>
@@ -107,50 +131,52 @@ export default () => {
               showLoadingAnimation
               type='rect'
             >
-              <WidgetItem handleClick={openLightbox} index={idx} post={post} />
+              <WidgetItem handleClick={() => openLightbox(idx)} index={idx} post={post} />
             </ReactPlaceholder>
           ))}
         </Grid>
       </div>
 
-      <ModalGateway>
-        {viewerIsOpen && (
-          <Modal onClose={closeLightbox}>
-            {!isLoading && (
-              <Carousel
-                currentIndex={currentImage}
-                styles={{
-                  // NOTE(cvogt): these styles were copy + pasted from craigrich/ruff-guide
-                  // as a temporary fix for the `autoSize` feature not working as intended.
-                  container: base => ({
-                    ...base,
-                    height: '100vh'
-                  }),
-                  view: base => ({
-                    ...base,
-                    alignItems: 'center',
-                    display: 'flex ',
-                    height: 'calc(100vh - 54px)',
-                    justifyContent: 'center',
-                    '& > img': {
-                      maxHeight: 'calc(100vh - 94px)'
+      {!isLoading && (
+        <div sx={{ my: 4, textAlign: 'center' }}>
+          <Button onClick={() => setIsShowingMore(!isShowingMore)}>{isShowingMore ? 'Show Less' : 'Show More'}</Button>
+        </div>
+      )}
+
+      {media?.length && (
+        <LightGallery
+          onInit={ref => {
+            lightGalleryRef.current = ref.instance
+          }}
+          plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
+          licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
+          download={false}
+          dynamic
+          dynamicEl={media.map(post => ({
+            thumb: `${post.cdnMediaURL}?auto=compress&auto=enhance&auto=format&fit=clip&w=100&h=100`,
+            subHtml: post.caption || '',
+            ...(post.mediaType !== 'VIDEO'
+              ? { src: `${post.cdnMediaURL}?auto=compress&auto=enhance&auto=format` }
+              : {}),
+            video:
+              post.mediaType === 'VIDEO' && post.mediaURL
+                ? {
+                    source: [
+                      {
+                        src: post.mediaURL,
+                        type: 'video/mp4'
+                      }
+                    ],
+                    attributes: {
+                      controls: true // Enable controls for the video
                     }
-                  })
-                }}
-                views={media.map(x => ({
-                  ...x,
-                  source: {
-                    download: `${x.cdnMediaURL}?auto=format`,
-                    fullscreen: `${x.cdnMediaURL}?auto=format`,
-                    regular: `${x.cdnMediaURL}?auto=format`,
-                    thumbnail: `${x.cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`
                   }
-                }))}
-              />
-            )}
-          </Modal>
-        )}
-      </ModalGateway>
+                : undefined
+          }))}
+          autoplayVideoOnSlide={true} // Add this option
+          speed={500}
+        />
+      )}
     </Widget>
   )
 }

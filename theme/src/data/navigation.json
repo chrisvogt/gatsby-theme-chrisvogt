@@ -4,10 +4,22 @@
     "header": {
       "left": [
         {
-          "path": "/latest",
-          "slug": "latest",
-          "text": "Latest Posts",
-          "title": "Latest Posts"
+          "path": "/blog",
+          "slug": "blog",
+          "text": "Blog",
+          "title": "Latest posts from the blog"
+        },
+        {
+          "path": "/music",
+          "slug": "music",
+          "text": "Music",
+          "title": "My music"
+        },
+        {
+          "path": "/photography",
+          "slug": "photography",
+          "text": "Photography",
+          "title": "My photo galleries"
         }
       ],
       "home": [

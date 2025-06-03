@@ -1,5 +1,10 @@
+const buildFeedItemUrl = (baseUrl, category, slug) => {
+  const parsedCategory = category ? `/${category}/` : '/'
+  return `${baseUrl}${parsedCategory}${slug}`
+}
+
 module.exports = {
-  resolve: `gatsby-plugin-feed`,
+  resolve: 'gatsby-plugin-feed',
   options: {
     query: `
       {
@@ -22,9 +27,9 @@ module.exports = {
               date: edge.node.frontmatter.date,
               description: edge.node.excerpt,
               feed_url: site.siteMetadata.baseUrl + '/rss.xml',
-              guid: site.siteMetadata.baseURL + edge.node.fields.slug,
+              guid: buildFeedItemUrl(site.siteMetadata.baseURL, edge.node.fields.category, edge.node.fields.slug),
               ...(hasImage ? { image: edge.node.frontmatter.banner } : {}),
-              url: site.siteMetadata.baseURL + edge.node.fields.slug
+              url: buildFeedItemUrl(site.siteMetadata.baseURL, edge.node.fields.category, edge.node.fields.slug)
             })
           })
         },

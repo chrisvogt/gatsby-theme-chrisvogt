@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Post renders correctly with a SoundCloud source 1`] = `
+<div
+  className="layoutMock"
+>
+  <div
+    className="css-rh73xg"
+  >
+    <div
+      className="css-io6end"
+    >
+      <div
+        className="soundcloudMock"
+      >
+        mockSoundCloudId
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1v7u0sc"
+  >
+    <div
+      className="css-1aa5heh"
+    >
+      <article
+        className="h-entry"
+      >
+        <div
+          className="css-3eizm7"
+        >
+          Mock Category
+        </div>
+        <h1
+          className="p-name css-1sus4jf"
+        >
+          A Mock Blog Post
+        </h1>
+        <time
+          className="dt-published created"
+        >
+          Published 
+          Mon, 17 Jun 2024 03:30:26 GMT
+        </time>
+        <div
+          className="e-content article-content"
+        >
+          <div>
+            Lorum ipsum dolor sit amet.
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Media Post renders correctly with a YouTube source 1`] = `
+<div
+  className="layoutMock"
+>
+  <div
+    className="css-rh73xg"
+  >
+    <div
+      className="css-io6end"
+    >
+      <div
+        className="youtubeMock"
+      >
+        mockYoutubeSrc
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1v7u0sc"
+  >
+    <div
+      className="css-1aa5heh"
+    >
+      <article
+        className="h-entry"
+      >
+        <div
+          className="css-3eizm7"
+        >
+          Mock Category
+        </div>
+        <h1
+          className="p-name css-1sus4jf"
+        >
+          A Mock Blog Post
+        </h1>
+        <time
+          className="dt-published created"
+        >
+          Published 
+          Mon, 17 Jun 2024 03:30:26 GMT
+        </time>
+        <div
+          className="e-content article-content"
+        >
+          <div>
+            Lorum ipsum dolor sit amet.
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Media Post renders correctly with no media sources 1`] = `
+<div
+  className="layoutMock"
+>
+  <div
+    className="css-1v7u0sc"
+  >
+    <div
+      className="css-1aa5heh"
+    >
+      <article
+        className="h-entry"
+      >
+        <div
+          className="css-3eizm7"
+        >
+          Mock Category
+        </div>
+        <h1
+          className="p-name css-1sus4jf"
+        >
+          A Mock Blog Post
+        </h1>
+        <time
+          className="dt-published created"
+        >
+          Published 
+          Mon, 17 Jun 2024 03:30:26 GMT
+        </time>
+        <div
+          className="e-content article-content"
+        >
+          <div>
+            Lorum ipsum dolor sit amet.
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Media Post renders the Head component with SEO data 1`] = `
+<div
+  className="seoMock"
+/>
+`;

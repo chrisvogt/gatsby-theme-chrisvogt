@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { Box, Heading } from '@theme-ui/components'
-import PropTypes from 'prop-types'
 
 import PinnedItemCard from './pinned-item-card'
 
@@ -39,10 +38,10 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
             href={item.url}
             key={item.id || index}
             sx={{
-              color: `text`,
-              display: `flex`,
+              color: 'text',
+              display: 'flex',
               '&:hover, &:focus': {
-                textDecoration: `none`
+                textDecoration: 'none'
               }
             }}
           >
@@ -52,15 +51,6 @@ const PinnedItems = ({ isLoading, items = [], placeholderCount = 4 }) => {
       </Themed.div>
     </Box>
   )
-}
-
-PinnedItems.propTypes = {
-  /** Sets the component in a loading state when true. */
-  isLoading: PropTypes.bool,
-  /** The pinned items content to render. */
-  items: PropTypes.arrayOf(PropTypes.object),
-  /** The number of placeholder items to render. */
-  placeholderCount: PropTypes.number
 }
 
 export default PinnedItems

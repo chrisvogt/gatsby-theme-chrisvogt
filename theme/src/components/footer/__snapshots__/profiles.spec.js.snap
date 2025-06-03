@@ -10,7 +10,7 @@ exports[`Profiles matches the snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-github css-4zu0v"
+      className="svg-inline--fa fa-github css-1pinr85"
       data-icon="github"
       data-prefix="fab"
       focusable="false"
@@ -34,7 +34,7 @@ exports[`Profiles matches the snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-instagram css-4zu0v"
+      className="svg-inline--fa fa-instagram css-1pinr85"
       data-icon="instagram"
       data-prefix="fab"
       focusable="false"
@@ -58,7 +58,7 @@ exports[`Profiles matches the snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-linkedin css-4zu0v"
+      className="svg-inline--fa fa-linkedin css-1pinr85"
       data-icon="linkedin"
       data-prefix="fab"
       focusable="false"
@@ -82,7 +82,7 @@ exports[`Profiles matches the snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-x-twitter css-4zu0v"
+      className="svg-inline--fa fa-x-twitter css-1pinr85"
       data-icon="x-twitter"
       data-prefix="fab"
       focusable="false"

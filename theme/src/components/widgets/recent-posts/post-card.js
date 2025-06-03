@@ -3,13 +3,14 @@ import { jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { Card } from '@theme-ui/components'
 import { Link } from 'gatsby'
+import Category from '../../category'
 
-export default ({ banner, category, date, link, title }) => {
+export default ({ banner, category, date, excerpt, link, title }) => {
   return (
     <Link
       sx={{
-        color: `var(--theme-ui-colors-panel-text)`,
-        textDecoration: `none`
+        color: 'var(--theme-ui-colors-panel-text)',
+        textDecoration: 'none'
       }}
       to={link}
     >
@@ -17,8 +18,8 @@ export default ({ banner, category, date, link, title }) => {
         <div
           className='card-content'
           sx={{
-            display: `flex`,
-            flexDirection: `column`
+            display: 'flex',
+            flexDirection: 'column'
           }}
         >
           {banner && (
@@ -26,30 +27,45 @@ export default ({ banner, category, date, link, title }) => {
               <div
                 sx={{
                   backgroundImage: `url(${banner})`,
-                  backgroundPosition: `center`,
-                  backgroundSize: `cover`,
-                  borderRadius: `1px`,
-                  height: `240px`,
-                  transition: `all 2.5s ease`
+                  backgroundPosition: 'center',
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  borderRadius: '1px',
+                  width: '100%',
+                  aspectRatio: '1.9 / 1',
+                  transition: 'all 2.5s ease'
                 }}
               />
             </div>
           )}
 
-          {category && <span sx={{ variant: `text.title`, mt: 1, fontSize: [1] }}>{category}</span>}
+          {category && <Category type={category} sx={{ mt: 1 }} />}
 
-          <Themed.h4 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h4>
+          <Themed.h3 sx={{ mt: 2, fontFamily: 'serif' }}>{title}</Themed.h3>
 
           <time
             className='created'
             sx={{
-              color: `textMuted`,
-              fontFamily: `sans`,
+              color: 'textMuted',
+              fontFamily: 'sans',
               fontSize: 1
             }}
           >
             {date}
           </time>
+
+          {excerpt && (
+            <Themed.p
+              className='description'
+              sx={{
+                mt: 2,
+                mb: 0,
+                fontSize: 1
+              }}
+            >
+              {excerpt}
+            </Themed.p>
+          )}
         </div>
       </Card>
     </Link>

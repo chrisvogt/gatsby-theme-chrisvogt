@@ -1,19 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InstagramWidgetItem matches the snapshot 1`] = `
-<button
-  className="css-sf4r4r-InstagramWidgetItem"
-  onClick={[Function]}
-  rel="noopener noreferrer"
->
-  <img
-    alt="Instagram post thumbnail"
-    className="instagram-item-image css-t0307v-InstagramWidgetItem"
-    crossOrigin="anonymous"
-    height="280"
-    loading="lazy"
-    src="undefined?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format"
-    width="280"
-  />
-</button>
+<DocumentFragment>
+  <button
+    class="instagram-item-button css-1u8qly9"
+    rel="noopener noreferrer"
+  >
+    <img
+      alt="Instagram post thumbnail"
+      class="instagram-item-image css-16gz8ax"
+      crossorigin="anonymous"
+      height="280"
+      loading="lazy"
+      src="https://cdn.chrisvogt.me/images/fake-instagram-image.jpg?h=234&w=234&fit=crop&crop=faces,focalpoint&auto=compress&auto=enhance&auto=format"
+      width="280"
+    />
+  </button>
+</DocumentFragment>
 `;

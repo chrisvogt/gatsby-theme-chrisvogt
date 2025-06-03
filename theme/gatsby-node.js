@@ -23,30 +23,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     path: '/'
   })
 
-  const result = await graphql(
-    `
-      {
-        allMdx {
-          edges {
-            node {
-              id
-              fields {
-                category
-                slug
-                type
-              }
-              frontmatter {
-                slug
-              }
-              internal {
-                contentFilePath
-              }
+  const result = await graphql(`
+    {
+      allMdx {
+        edges {
+          node {
+            id
+            fields {
+              category
+              slug
+              type
+            }
+            frontmatter {
+              slug
+            }
+            internal {
+              contentFilePath
             }
           }
         }
       }
-    `
-  )
+    }
+  `)
 
   if (result.errors) {
     reporter.panic('error loading content', result.errors)
@@ -73,11 +71,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === 'Mdx') {
     const parent = getNode(node.parent)
     const title = node.frontmatter.title || startCase(parent.name)
 
-    const slug = node.frontmatter.slug
+    let slug = node.frontmatter.slug
     if (!slug) {
       reporter.panic(
         `Can not create node with title: ${title} there is no relative path or frontmatter to set the "slug" field`
@@ -92,7 +90,7 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
     const category = node.frontmatter.category
     if (category) {
       createNodeField({
-        name: `category`,
+        name: 'category',
         node,
         value: category
       })
@@ -101,14 +99,14 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
     const type = node.frontmatter.type
     if (type) {
       createNodeField({
-        name: `type`,
+        name: 'type',
         node,
         value: type
       })
     }
 
     createNodeField({
-      name: `slug`,
+      name: 'slug',
       node,
       value: slug
     })
@@ -119,7 +117,7 @@ exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
       value: node.id
     })
 
-    if (node.internal.type === `Mdx`) {
+    if (node.internal.type === 'Mdx') {
       createNodeField({
         name: 'path',
         node,

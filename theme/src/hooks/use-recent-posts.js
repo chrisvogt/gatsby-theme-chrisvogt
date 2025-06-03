@@ -7,32 +7,30 @@ export const getPosts = queryResult => {
 }
 
 const useRecentPosts = () => {
-  const queryResult = useStaticQuery(
-    graphql`
-      query RecentPosts {
-        allMdx(limit: 2, sort: {frontmatter: {date: DESC}}) {
-          edges {
-            node {
-              excerpt(pruneLength: 255)
-              fields {
-                category
-                id
-                slug
-                path
-              }
-              frontmatter {
-                banner
-                date(formatString: "MMMM DD, YYYY")
-                description
-                slug
-                title
-              }
+  const queryResult = useStaticQuery(graphql`
+    query RecentPosts {
+      allMdx(limit: 2, sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            excerpt(pruneLength: 255)
+            fields {
+              category
+              id
+              slug
+              path
+            }
+            frontmatter {
+              banner
+              date(formatString: "MMMM DD, YYYY")
+              description
+              slug
+              title
             }
           }
         }
       }
-    `
-  )
+    }
+  `)
 
   const recentPosts = getPosts(queryResult)
   return recentPosts

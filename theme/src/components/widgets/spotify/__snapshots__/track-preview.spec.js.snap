@@ -2,13 +2,13 @@
 
 exports[`TrackPreview matches the snapshot 1`] = `
 <a
-  className="css-1nj2pz3-TrackPreview"
+  className="css-zezy6m"
   href="https://www.fake-book-website.com/book-example"
   title="Fake Song"
 >
   <img
     alt="album cover"
-    className="css-1ldczm5-TrackPreview"
+    className="css-o32fug"
     crossOrigin="anonymous"
     src="https://placehold.it/400/400"
   />

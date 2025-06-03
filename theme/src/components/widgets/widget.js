@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
-import PropTypes from 'prop-types'
 import isDarkMode from '../../helpers/isDarkMode'
 
 const widgetStyles = {
@@ -20,7 +19,7 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
         ...styleOverrides,
         ...(hasFatalError
           ? {
-              position: `relative`
+              position: 'relative'
             }
           : {})
       }}
@@ -29,23 +28,23 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
       {hasFatalError && (
         <div
           sx={{
-            alignItems: `center`,
+            alignItems: 'center',
             bottom: 0,
-            display: `flex`,
-            justifyContent: `center`,
+            display: 'flex',
+            justifyContent: 'center',
             left: 0,
-            position: `absolute`,
+            position: 'absolute',
             right: 0,
             top: 0
           }}
         >
           <div
             sx={{
-              background: darkMode ? `#252e3c` : `white`,
-              borderLeft: `2px solid red`,
-              borderRight: `2px solid red`,
-              borderRadius: `2px`,
-              boxShadow: `xl`,
+              background: darkMode ? '#252e3c' : 'white',
+              borderLeft: '2px solid red',
+              borderRight: '2px solid red',
+              borderRadius: '2px',
+              boxShadow: 'xl',
               py: 3,
               px: 4,
               zIndex: 480
@@ -61,9 +60,9 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
               bottom: 0,
               left: 0,
               background: darkMode
-                ? `radial-gradient(rgba(14.5,18,23.5,0.4) 20%, transparent 50%);`
-                : `radial-gradient(rgba(255, 255, 255, 0.4) 20%, transparent 50%)`,
-              position: `absolute`,
+                ? 'radial-gradient(rgba(14.5,18,23.5,0.4) 20%, transparent 50%);'
+                : 'radial-gradient(rgba(255, 255, 255, 0.4) 20%, transparent 50%)',
+              position: 'absolute',
               zIndex: 470
             }}
           ></div>
@@ -72,13 +71,6 @@ const Widget = ({ children, hasFatalError, id, styleOverrides = {} }) => {
       {children}
     </section>
   )
-}
-
-Widget.propTypes = {
-  /** The elements to render within the widget. */
-  children: PropTypes.node.isRequired,
-  /** An id added to the widget wrapper element. */
-  id: PropTypes.string
 }
 
 export default Widget

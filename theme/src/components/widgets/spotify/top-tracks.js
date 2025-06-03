@@ -9,7 +9,8 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
   const items = tracks.map(track => {
     const { artists = [], albumImages = [], id, name, spotifyURL } = track
 
-    const { url: thumbnailURL } = albumImages.find(image => image.width === 300)
+    const thumbnail = albumImages.find(image => image.width === 300) || {}
+    const { url: thumbnailURL } = thumbnail
 
     return {
       id,
@@ -21,9 +22,11 @@ const TopTracks = ({ isLoading, tracks = [] }) => {
   })
 
   return (
-    <div>
-      <div sx={{ display: `flex`, flex: 1, alignItems: `center` }}>
-        <Heading as='h3' sx={{ fontSize: [3, 4] }}>Top Tracks</Heading>
+    <div sx={{ mb: 4 }}>
+      <div sx={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+        <Heading as='h3' sx={{ fontSize: [3, 4] }}>
+          Top Tracks
+        </Heading>
       </div>
 
       <Themed.p>My 12 most-played tracks over the last 4 weeks.</Themed.p>

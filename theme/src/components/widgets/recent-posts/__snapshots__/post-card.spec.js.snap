@@ -8,7 +8,7 @@ exports[`PostCard matches the snapshot 1`] = `
   onMouseEnter={[Function]}
 >
   <div
-    className="css-g89m8z-Box"
+    className="css-1yz7e9k"
   >
     <div
       className="card-content css-x4n4mc"
@@ -17,19 +17,19 @@ exports[`PostCard matches the snapshot 1`] = `
         className="card-media"
       >
         <div
-          className="css-10hlus8"
+          className="css-19t4del"
         />
       </div>
-      <span
-        className="css-1mu5vid"
+      <div
+        className="css-3eizm7"
       >
         personal
-      </span>
-      <h4
+      </div>
+      <h3
         className="css-13imqch"
       >
         My Blog Post
-      </h4>
+      </h3>
       <time
         className="created css-1c6hy0j"
       >

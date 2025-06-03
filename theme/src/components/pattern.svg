@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Define the pattern -->
+  <defs>
+    <pattern id="delaunay-pattern" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- Example single tile of the pattern -->
+      <path d="M100,0 L200,100 L100,200 L0,100 Z" fill="url(#grad1)" />
+      <path d="M100,0 L100,200 L0,100 Z" fill="url(#grad2)" />
+      <!-- Add more paths here -->
+    </pattern>
+
+    <!-- Define gradients -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(145,54,167);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(142,55,167);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(143,54,167);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(123,59,167);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Use the pattern -->
+  <rect width="100%" height="100%" fill="url(#delaunay-pattern)" />
+</svg>

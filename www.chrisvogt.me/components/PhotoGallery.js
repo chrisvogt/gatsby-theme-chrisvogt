@@ -1,38 +1,47 @@
-import React, { useState, useCallback } from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { useRef, useCallback } from 'react'
+
+import 'lightgallery/css/lg-thumbnail.css'
+import 'lightgallery/css/lg-zoom.css'
+import 'lightgallery/css/lightgallery.css'
 import Gallery from 'react-photo-gallery'
-import Carousel, { Modal, ModalGateway } from 'react-images'
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgZoom from 'lightgallery/plugins/zoom'
+import LightGallery from 'lightgallery/react'
 
 export const PhotoGallery = ({ photos }) => {
-  const [currentImage, setCurrentImage] = useState(0)
-  const [viewerIsOpen, setViewerIsOpen] = useState(false)
+  const lightGalleryRef = useRef(null)
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index)
-    setViewerIsOpen(true)
+  const openLightbox = useCallback((event, { index }) => {
+    const instance = lightGalleryRef.current
+    if (instance) {
+      instance.openGallery(index)
+    } else {
+      console.error('LightGallery instance is not initialized')
+    }
   }, [])
 
-  const closeLightbox = () => {
-    setCurrentImage(0)
-    setViewerIsOpen(false)
-  }
-
   return (
-    <div>
+    <div sx={{ mb: 4 }}>
+      {/* Render photo gallery */}
       <Gallery photos={photos} onClick={openLightbox} />
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel
-              currentIndex={currentImage}
-              views={photos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title
-              }))}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway>
+
+      {/* Initialize LightGallery */}
+      <LightGallery
+        onInit={ref => {
+          lightGalleryRef.current = ref.instance
+        }}
+        plugins={[lgThumbnail, lgZoom]}
+        download={false}
+        dynamic
+        dynamicEl={photos.map(photo => ({
+          src: photo.src,
+          thumb: photo.src,
+          subHtml: photo.title || ''
+        }))}
+        speed={1000}
+      />
     </div>
   )
 }

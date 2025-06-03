@@ -2,13 +2,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Heading } from '@theme-ui/components'
 import { jsx } from 'theme-ui'
-import PropTypes from 'prop-types'
 
 const headerStyles = {
-  textAlign: [`center`, `left`],
-  display: `flex`,
-  flexDirection: [`column`, `row`],
-  alignItems: [``, `center`]
+  textAlign: ['center', 'left'],
+  display: 'flex',
+  flexDirection: ['column', 'row'],
+  alignItems: ['', 'center']
 }
 
 const asideStyles = {
@@ -24,12 +23,5 @@ const WidgetHeader = ({ aside, children, icon }) => (
     {aside && <div sx={asideStyles}>{aside}</div>}
   </header>
 )
-
-WidgetHeader.propTypes = {
-  /** The content to render in the headline. */
-  children: PropTypes.node.isRequired,
-  /** The icon to render. Usually an SVG. */
-  icon: PropTypes.object
-}
 
 export default WidgetHeader

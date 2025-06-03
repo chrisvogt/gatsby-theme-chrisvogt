@@ -1,27 +1,96 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import InstagramWidgetItem from './instagram-widget-item'
 
 describe('InstagramWidgetItem', () => {
-  const props = {
+  const mockHandleClick = jest.fn()
+
+  const defaultProps = {
+    handleClick: mockHandleClick,
+    index: 0,
     post: {
       id: '0123456789',
-      comments: { count: { commentsCount: 5 } },
-      images: {
-        standard_resolution: {
-          height: 100,
-          width: 100,
-          url: 'https://cdn.chrisvogt.me/images/fake-instagram-image.jpg'
-        }
-      },
-      likes: { count: { likesCount: 12 } },
-      link: 'https://instagram.com/fake-image-link',
-      type: 'IMAGE'
+      caption: 'This is a test caption',
+      cdnMediaURL: 'https://cdn.chrisvogt.me/images/fake-instagram-image.jpg',
+      mediaType: 'IMAGE',
+      permalink: 'https://instagram.com/fake-image-link'
     }
   }
 
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+
   it('matches the snapshot', () => {
-    const tree = renderer.create(<InstagramWidgetItem {...props} />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const { asFragment } = render(<InstagramWidgetItem {...defaultProps} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('renders the image with correct alt text and source', () => {
+    render(<InstagramWidgetItem {...defaultProps} />)
+
+    const img = screen.getByAltText('Instagram post thumbnail')
+    expect(img).toBeInTheDocument()
+    expect(img).toHaveAttribute(
+      'src',
+      `${defaultProps.post.cdnMediaURL}?h=234&w=234&fit=crop&crop=faces,focalpoint&auto=compress&auto=enhance&auto=format`
+    )
+  })
+
+  it('calls handleClick when the button is clicked', () => {
+    render(<InstagramWidgetItem {...defaultProps} />)
+
+    const button = screen.getByRole('button')
+    fireEvent.click(button)
+
+    expect(mockHandleClick).toHaveBeenCalledTimes(1)
+    expect(mockHandleClick).toHaveBeenCalledWith(expect.any(Object), {
+      index: defaultProps.index,
+      photo: {
+        caption: defaultProps.post.caption,
+        id: defaultProps.post.id,
+        src: defaultProps.post.cdnMediaURL
+      }
+    })
+  })
+
+  it('displays the carousel icon when mediaType is CAROUSEL_ALBUM', () => {
+    const carouselProps = {
+      ...defaultProps,
+      post: {
+        ...defaultProps.post,
+        mediaType: 'CAROUSEL_ALBUM'
+      }
+    }
+
+    render(<InstagramWidgetItem {...carouselProps} />)
+
+    const carouselIcon = screen.getByTestId('carousel-icon')
+    expect(carouselIcon).toBeInTheDocument()
+  })
+
+  it('displays the video icon when mediaType is VIDEO', () => {
+    const videoProps = {
+      ...defaultProps,
+      post: {
+        ...defaultProps.post,
+        mediaType: 'VIDEO'
+      }
+    }
+
+    render(<InstagramWidgetItem {...videoProps} />)
+
+    const videoIcon = screen.getByTestId('video-icon')
+    expect(videoIcon).toBeInTheDocument()
+  })
+
+  it('does not display any icon when mediaType is IMAGE', () => {
+    render(<InstagramWidgetItem {...defaultProps} />)
+
+    const carouselIcon = screen.queryByTestId('carousel-icon')
+    const videoIcon = screen.queryByTestId('video-icon')
+    expect(carouselIcon).not.toBeInTheDocument()
+    expect(videoIcon).not.toBeInTheDocument()
   })
 })

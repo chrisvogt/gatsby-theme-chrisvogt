@@ -1,16 +1,21 @@
-# www.chrisvogt.me – My Personal Website
+<h1 align='center'>
+  My Personal Website (<a href='https://www.chrisvogt.me' title='My Website'>www.chrisvogt.me</a>)
+</h1>
 
 <p align='center'>
   <a href='https://app.netlify.com/sites/chrisvogt/deploys'>
     <img src='https://api.netlify.com/api/v1/badges/29f330b8-22bf-4f7f-a0f0-240476512db0/deploy-status' alt='Netlify Status'>
   </a>
-  <a href='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt'>
-    <img src='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt.svg?style=shield' alt='Current CircleCI build status.' />
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml/badge.svg?branch=main' alt='Continuous Integration badge' />
+  </a>
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql.yml/badge.svg?branch=main' alt='CodeQL badge' />
   </a>
   <a href='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt'>
-    <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/master/graph/badge.svg?token=YUksu2c99s' alt='Code coverage report badge.' />
+    <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/main/graph/badge.svg?token=YUksu2c99s' alt='Code coverage report badge.' />
   </a>
-  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/blob/master/LICENSE'>
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/blob/main/LICENSE'>
     <img src='https://img.shields.io/badge/license-MIT-blue.svg' alt='Released under the MIT license.' />
   </a>
   <a href='https://twitter.com/intent/follow?screen_name=c1v0'>
@@ -18,7 +23,7 @@
   </a>
 </p>
 
-This repository contains my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/www.chrisvogt.me).
+This repository contains the source code behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/www.chrisvogt.me).
 
 ## Local development
 
@@ -42,6 +47,27 @@ After adding `www.dev-chrisvogt.me-key.pem` and `www.dev-chrisvogt.me.pem` to yo
 
 ```sh
 yarn workspace www.chrisvogt.me develop:https
+
+# Or the shorcut
+yarn develop
+```
+
+The unit tests are in the gatsby-theme-chrisvogt workspace. To run unit tests in watch mode or update snapshot tests, use the test:watch command.
+
+```sh
+yarn workspace gatsby-theme-chrisvogt test:watch
+
+# Or the shortcut
+yarn test:watch
+```
+
+To run the unit tests once, just use test.
+
+```sh
+yarn workspace gatsby-theme-chrisvogt test
+
+# Or the shortcut
+yarn test
 ```
 
 To build the production website, run the following.
@@ -62,4 +88,4 @@ http-server -o -S -C ../certs/www.chrisvogt.me.pem -K ../certs/www.chrisvogt.me-
 
 ## Copyright & License
 
-Copyright © 2019-2023 [Chris Vogt](https://www.chrisvogt.me) and released under the [MIT license](LICENSE).
+Copyright © 2019-2025 [Chris Vogt](https://www.chrisvogt.me) and released under the [MIT license](LICENSE).

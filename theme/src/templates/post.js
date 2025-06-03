@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { Container, Flex, jsx } from 'theme-ui'
+import { Container, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
-import { Heading } from '@theme-ui/components'
-import PropTypes from 'prop-types'
 
+import Category from '../components/category'
 import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
 
 const PostTemplate = ({ children, data }) => {
@@ -17,43 +17,29 @@ const PostTemplate = ({ children, data }) => {
 
   return (
     <Layout>
-      <Flex
-        sx={{
-          flexDirection: `column`,
-          flexGrow: 1,
-          py: 3
-        }}
-      >
-        <Container sx={{ height: `100%` }}>
-          {category && (
-            <Themed.div sx={{ variant: `text.title` }}>
-              {category}
+      <Themed.div sx={{ py: 3 }}>
+        <Container sx={{ position: 'relative', width: ['', '', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
+          <article className='h-entry c1v0-blog-post'>
+            {category && <Category type={category} sx={{ mb: 2 }} />}
+
+            <PageHeader>{title}</PageHeader>
+
+            <Themed.div
+              sx={{
+                color: 'textMuted',
+                fontFamily: 'sans',
+                fontSize: 1
+              }}
+            >
+              <time className='dt-published created'>Published {date}</time>
             </Themed.div>
-          )}
 
-          <Themed.div sx={{ fontSize: [2, 3] }}>
-            <time className='created'>
-              {date}
-            </time>
-          </Themed.div>
-
-          <Themed.h1 as={Heading}>
-            {title}
-          </Themed.h1>
-
-          <div className='article-content'>
-            {children}
-          </div>
+            <div className='e-content article-content'>{children}</div>
+          </article>
         </Container>
-      </Flex>
+      </Themed.div>
     </Layout>
   )
-}
-
-PostTemplate.propTypes = {
-  data: PropTypes.shape({
-    mdx: PropTypes.object.isRequired
-  }).isRequired
 }
 
 export const Head = ({ data: { mdx } }) => {
@@ -61,14 +47,7 @@ export const Head = ({ data: { mdx } }) => {
   const description = mdx.frontmatter.description
   const title = mdx.frontmatter.title
 
-  return (
-    <Seo
-      article={true}
-      description={description}
-      image={banner}
-      title={title}
-    />
-  )
+  return <Seo article={true} description={description} image={banner} title={title} />
 }
 
 export const pageQuery = graphql`

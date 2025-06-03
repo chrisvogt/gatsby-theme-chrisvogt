@@ -2,18 +2,18 @@
 
 exports[`Goodreads Widget matches the loading state snapshot 1`] = `
 <section
-  className="css-12h1dx4-Widget"
+  className="css-1pk2a5b"
   id="goodreads"
 >
   <header
-    className="css-9v09o4-WidgetHeader"
+    className="css-gzw2dr"
   >
     <h2
-      className="css-1r48a8i-Box"
+      className="css-1rxoh5f"
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-goodreads css-4hvi9p-WidgetHeader"
+        className="svg-inline--fa fa-goodreads css-1ni16ne"
         data-icon="goodreads"
         data-prefix="fab"
         focusable="false"
@@ -35,10 +35,10 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
       Goodreads
     </h2>
     <div
-      className="css-1i3svai-WidgetHeader"
+      className="css-1rgtmy6"
     >
       <svg
-        className="svg-loaders-svg css-zmfjn6-CallToAction"
+        className="svg-loaders-svg css-ao632c"
         fill="#1E90FF"
         height="24"
         viewBox="0 0 135 140"
@@ -166,15 +166,15 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     </div>
   </header>
   <div
-    className="css-o0oe1r-ProfileMetricsBadge"
+    className="css-1hw7zrq"
   >
     <div
-      className="css-1fj08pc-Box"
+      className="css-1giak3r"
     >
        
     </div>
     <div
-      className="css-1wc3ku-Box"
+      className="css-zcaudb"
     >
        
     </div>
@@ -183,10 +183,10 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     className="gallery"
   >
     <div
-      className="css-1kn2er7-RecentlyReadBooks"
+      className="css-sak8bt"
     >
       <h3
-        className="css-1kxv5tg-RecentlyReadBooks"
+        className="css-174rnww"
       >
         Books
       </h3>
@@ -196,10 +196,10 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
         The last 12 books I read and finished.
       </p>
       <div
-        className="css-qnzjfx-RecentlyReadBooks"
+        className="css-6s9lz6"
       >
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -210,7 +210,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -221,7 +221,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -232,7 +232,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -243,7 +243,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -254,7 +254,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -265,7 +265,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -276,7 +276,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -287,7 +287,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -298,7 +298,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -309,7 +309,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -320,7 +320,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="rect-shape css-b3ph2j"
+          className="rect-shape css-1ncz0al"
           style={
             {
               "backgroundColor": "#efefef",
@@ -334,18 +334,18 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     </div>
   </div>
   <div
-    className="css-g89m8z-Box"
+    className="css-1yz7e9k"
   >
     <h3
-      className="css-sd1391-UserStatus"
+      className="css-uyljfj"
     >
-      Status
+      Last Update
     </h3>
     <a
-      className="css-t1qg8r-UserStatus"
+      className="css-1srnkuc"
     >
       <div
-        className="css-15y3qnn-Box"
+        className="css-dqblq9"
       >
         <div
           className="text-row show-loading-animation"
@@ -360,17 +360,17 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
           }
         />
         <div
-          className="css-owjkyv-CardFooter"
+          className="css-b5lvlf"
         >
           <div
             className="text-row show-loading-animation"
             style={
               {
-                "backgroundColor": undefined,
-                "height": "1em",
+                "backgroundColor": "#efefef",
+                "height": "15px",
                 "marginTop": 0,
                 "maxHeight": undefined,
-                "width": "140px",
+                "width": "150px",
               }
             }
           />
