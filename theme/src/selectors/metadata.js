@@ -26,6 +26,8 @@ export const getLanguageCode = metadata => metadata?.languageCode
 
 export const getSpotifyWidgetDataSource = metadata => metadata?.widgets?.spotify?.widgetDataSource
 
+export const getSteamWidgetDataSource = metadata => metadata?.widgets?.steam?.widgetDataSource + '?cachebust=true'
+
 export const getSubhead = metadata => metadata?.subhead
 
 export const getTitle = metadata => metadata?.title

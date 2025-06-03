@@ -44,6 +44,10 @@ module.exports = {
       },
       spotify: {
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/spotify'
+      },
+      steam: {
+        username: 'chrisvogt',
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/steam'
       }
     }
   },

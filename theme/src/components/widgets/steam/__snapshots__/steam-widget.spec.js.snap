@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SteamWidget renders correctly with sample data 1`] = `
+<div
+  data-testid="Widget"
+>
+  <div
+    data-testid="WidgetHeader"
+  >
+    Steam
+  </div>
+  <div
+    data-testid="ProfileMetricsBadge"
+  >
+    [{"label":"Games Played","value":5}]
+  </div>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Recently-Played Games
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    Games I've played in the last two weeks.
+  </p>
+  <div
+    className="css-1bz685e"
+  >
+    <div
+      data-testid="PostCard"
+    >
+      Half-Life
+    </div>
+    <div
+      data-testid="PostCard"
+    >
+      Portal
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SteamWidget renders loading state 1`] = `
+<div
+  data-testid="Widget"
+>
+  <div
+    data-testid="WidgetHeader"
+  >
+    Steam
+  </div>
+  <div
+    data-testid="ProfileMetricsBadge"
+  >
+    []
+  </div>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Recently-Played Games
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    Games I've played in the last two weeks.
+  </p>
+  <div
+    className="css-1bz685e"
+  />
+</div>
+`;
+
+exports[`TimeSpent renders humanized time correctly 1`] = `
+[
+  <b>
+    Time Spent:
+  </b>,
+  " ",
+  "5 minutes",
+]
+`;

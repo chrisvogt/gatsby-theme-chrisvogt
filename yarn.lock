@@ -8707,6 +8707,11 @@ human-signals@^5.0.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-5.0.0.tgz#42665a284f9ae0dade3ba41ebc37eb4b852f3a28"
   integrity sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==
 
+humanize-duration@^3.32.2:
+  version "3.32.2"
+  resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.32.2.tgz#c80287a1b89f1aa7c7fe8fae33417a302b77b427"
+  integrity sha512-jcTwWYeCJf4dN5GJnjBmHd42bNyK94lY49QTkrsAQrMTUoIYLevvDpmQtg5uv8ZrdIRIbzdasmSNZ278HHUPEg==
+
 husky@^9.0.11, husky@^9.1.7:
   version "9.1.7"
   resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.7.tgz#d46a38035d101b46a70456a850ff4201344c0b2d"

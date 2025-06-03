@@ -7,12 +7,13 @@ import {
   getGithubWidgetDataSource,
   getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
-  getSpotifyWidgetDataSource
+  getSpotifyWidgetDataSource,
+  getSteamWidgetDataSource
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGoodreads, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -26,7 +27,8 @@ const icons = {
   faHome,
   faInstagram,
   faNewspaper,
-  faSpotify
+  faSpotify,
+  faSteam
 }
 
 /**
@@ -109,6 +111,18 @@ const linkRegistry = [
       id: 'spotify',
       text: 'Spotify'
     }
+  },
+  {
+    rule: options => !!options.isSteamWidgetEnabled,
+    value: {
+      href: '#steam',
+      icon: {
+        name: 'steam',
+        reactIcon: 'faSteam'
+      },
+      id: 'steam',
+      text: 'Steam'
+    }
   }
 ]
 
@@ -132,7 +146,8 @@ const HomeNavigation = () => {
     isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
     isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
-    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
+    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata),
+    isSteamWidgetEnabled: getSteamWidgetDataSource(metadata)
   })
 
   useEffect(() => {
