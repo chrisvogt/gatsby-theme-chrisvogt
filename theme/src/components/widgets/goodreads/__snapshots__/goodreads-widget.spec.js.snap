@@ -13,7 +13,7 @@ exports[`Goodreads Widget matches the loading state snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-goodreads css-1vy0jp1"
+        className="svg-inline--fa fa-goodreads css-1f4q58s"
         data-icon="goodreads"
         data-prefix="fab"
         focusable="false"

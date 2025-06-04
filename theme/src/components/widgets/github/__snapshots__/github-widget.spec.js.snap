@@ -13,7 +13,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-github css-1vy0jp1"
+        className="svg-inline--fa fa-github css-1f4q58s"
         data-icon="github"
         data-prefix="fab"
         focusable="false"
