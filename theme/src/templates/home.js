@@ -3,6 +3,7 @@ import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
 
 import Footer from '../components/footer'
+import HCard from '../components/h-card.js'
 import HomeHeaderContent from '../components/home-header-content'
 import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
@@ -53,6 +54,7 @@ const HomeTemplate = () => (
               </div>
             </div>
             <Footer />
+            <HCard />
           </main>
         </Grid>
       </Container>
