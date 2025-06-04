@@ -9,8 +9,8 @@
   <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml'>
     <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml/badge.svg?branch=main' alt='Continuous Integration badge' />
   </a>
-  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql.yml'>
-    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql.yml/badge.svg?branch=main' alt='CodeQL badge' />
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml/badge.svg?branch=main' alt='CodeQL badge' />
   </a>
   <a href='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt'>
     <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/main/graph/badge.svg?token=YUksu2c99s' alt='Code coverage report badge.' />
