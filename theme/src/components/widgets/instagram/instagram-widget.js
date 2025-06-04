@@ -30,6 +30,7 @@ import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 import WidgetItem from './instagram-widget-item'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const MAX_IMAGES = {
   default: 8,
@@ -100,7 +101,9 @@ export default () => {
 
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction}>Instagram</WidgetHeader>
+      <WidgetHeader aside={callToAction} icon={faInstagram}>
+        Instagram
+      </WidgetHeader>
 
       <ProfileMetricsBadge metrics={metrics} isLoading={isLoading} />
 
