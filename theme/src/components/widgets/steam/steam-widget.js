@@ -25,6 +25,8 @@ export const TimeSpent = ({ timeInMs }) => (
   </Fragment>
 )
 
+const EMPTY_ARRAY = []
+
 const SteamWidget = () => {
   const dispatch = useDispatch()
   const metadata = useSiteMetadata()
@@ -34,22 +36,13 @@ const SteamWidget = () => {
     dispatch(fetchDataSource('steam', steamDataSource))
   }, [dispatch, steamDataSource])
 
-  const {
-    // hasFatalError,
-    isLoading,
-    metrics,
-    profileDisplayName,
-    profileURL,
-    recentlyPlayedGames
-  } = useSelector(state => ({
-    // hasFatalError: get(state, 'widgets.steam.state') === FAILURE,
-    isLoading: get(state, 'widgets.steam.state') !== SUCCESS,
-    metrics: get(state, 'widgets.steam.data.metrics', []),
-    profile: get(state, 'widgets.steam.data.profile'),
-    profileDisplayName: get(state, 'widgets.steam.data.profile.displayName'),
-    profileURL: get(state, 'widgets.steam.data.profile.profileURL'),
-    recentlyPlayedGames: get(state, 'widgets.steam.data.collections.recentlyPlayedGames', [])
-  }))
+  const isLoading = useSelector(state => get(state, 'widgets.steam.state') !== SUCCESS)
+  const metrics = useSelector(state => get(state, 'widgets.steam.data.metrics') ?? EMPTY_ARRAY)
+  const profileDisplayName = useSelector(state => get(state, 'widgets.steam.data.profile.displayName'))
+  const profileURL = useSelector(state => get(state, 'widgets.steam.data.profile.profileURL'))
+  const recentlyPlayedGames = useSelector(
+    state => get(state, 'widgets.steam.data.collections.recentlyPlayedGames') ?? EMPTY_ARRAY
+  )
 
   const callToAction = (
     <CallToAction title={`${profileDisplayName} on Steam`} url={profileURL} isLoading={isLoading}>

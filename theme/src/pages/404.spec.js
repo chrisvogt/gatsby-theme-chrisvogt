@@ -32,7 +32,7 @@ const renderWithTheme = component => render(<ThemeUIProvider theme={mockTheme}>{
 
 describe('404 Page', () => {
   it('renders correctly', async () => {
-    renderWithTheme(<NotFoundPage />)
+    await waitFor(() => renderWithTheme(<NotFoundPage />))
 
     expect(screen.getByRole('heading', { name: '404' })).toBeInTheDocument()
     expect(screen.getByText(/Lost in space\?/i)).toBeInTheDocument()
@@ -41,19 +41,13 @@ describe('404 Page', () => {
 
   it('renders the Lottie animation after hydration', async () => {
     renderWithTheme(<NotFoundPage />)
-
-    // Wait for the loadable component to render
-    await waitFor(() => {
-      expect(screen.getByTestId('lottie-animation')).toBeInTheDocument()
-    })
+    expect(await screen.findByTestId('lottie-animation')).toBeInTheDocument()
   })
 
   it('renders the Layout component', async () => {
-    renderWithTheme(<NotFoundPage />)
+    await waitFor(() => renderWithTheme(<NotFoundPage />))
 
-    await waitFor(() => {
-      const layoutDiv = screen.getByText('Lottie Animation').closest('.layoutMock')
-      expect(layoutDiv).toBeInTheDocument()
-    })
+    const layoutDiv = screen.getByText('Lottie Animation').closest('.layoutMock')
+    expect(layoutDiv).toBeInTheDocument()
   })
 })
