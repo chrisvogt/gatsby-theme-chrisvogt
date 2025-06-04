@@ -7,7 +7,7 @@ const headerStyles = {
   textAlign: ['center', 'left'],
   display: 'flex',
   flexDirection: ['column', 'row'],
-  alignItems: ['', 'center']
+  alignItems: ['center', 'center']
 }
 
 const asideStyles = {
