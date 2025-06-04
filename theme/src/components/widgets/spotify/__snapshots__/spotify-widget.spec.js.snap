@@ -9,20 +9,16 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
     className="css-gzw2dr"
   >
     <h2
-      className="css-1rxoh5f"
+      className="css-1s4ek1q"
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-spotify css-1ni16ne"
+        className="svg-inline--fa fa-spotify css-1f4q58s"
         data-icon="spotify"
         data-prefix="fab"
         focusable="false"
         role="img"
-        style={
-          {
-            "height": "22px",
-          }
-        }
+        style={{}}
         viewBox="0 0 496 512"
         xmlns="http://www.w3.org/2000/svg"
       >

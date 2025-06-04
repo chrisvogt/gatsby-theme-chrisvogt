@@ -1,10 +1,11 @@
 /** @jsx jsx */
-import { Fragment, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { get } from 'lodash'
 import { jsx } from 'theme-ui'
+import { faSteam } from '@fortawesome/free-brands-svg-icons'
+import { Fragment, useEffect } from 'react'
+import { get } from 'lodash'
 import { Heading } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
+import { useDispatch, useSelector } from 'react-redux'
 import humanizeDuration from 'humanize-duration'
 
 import CallToAction from '../call-to-action'
@@ -59,7 +60,7 @@ const SteamWidget = () => {
 
   return (
     <Widget id='steam'>
-      <WidgetHeader aside={callToAction} isLoading={isLoading}>
+      <WidgetHeader aside={callToAction} icon={faSteam} isLoading={isLoading}>
         Steam
       </WidgetHeader>
 
