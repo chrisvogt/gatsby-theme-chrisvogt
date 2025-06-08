@@ -8,6 +8,7 @@ import { Themed } from '@theme-ui/mdx'
 import { ThemeUIProvider } from 'theme-ui'
 
 import Emoji from './src/shortcodes/emoji'
+import RootWrapper from './src/components/root-wrapper'
 import store from './src/store'
 import theme from './src/gatsby-plugin-theme-ui'
 import YouTube from './src/shortcodes/youtube'
@@ -28,7 +29,9 @@ const WrapRootElement = ({ element }) => (
     <ReduxProvider store={store}>
       <ThemeUIProvider theme={theme}>
         <Global styles={theme.global} />
-        <MDXProvider components={components}>{element}</MDXProvider>
+        <MDXProvider components={components}>
+          <RootWrapper>{element}</RootWrapper>
+        </MDXProvider>
       </ThemeUIProvider>
     </ReduxProvider>
   </CacheProvider>

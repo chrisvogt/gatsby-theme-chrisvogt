@@ -46,7 +46,8 @@ module.exports = [
       'jsx-a11y/no-noninteractive-element-interactions': 'warn',
       'react/prop-types': 'off',
       'react/jsx-uses-react': 'error',
-      'react/jsx-uses-vars': 'error'
+      'react/jsx-uses-vars': 'error',
+      'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }]
     },
     settings: {
       react: {

@@ -2,11 +2,13 @@ import rootReducer from './index'
 import widgetsReducer from './widgets'
 
 jest.mock('./widgets', () => jest.fn((state = { defaultKey: 'defaultValue' }) => state))
+jest.mock('./audioPlayer', () => jest.fn((state = { isVisible: false, soundcloudId: null }) => state))
 
 describe('rootReducer', () => {
   it('returns the initial state when no action is passed', () => {
     const initialState = rootReducer(undefined, {})
     expect(initialState).toEqual({
+      audioPlayer: { isVisible: false, soundcloudId: null },
       widgets: { defaultKey: 'defaultValue' }
     })
   })
@@ -25,7 +27,10 @@ describe('rootReducer', () => {
   })
 
   it('does not modify unrelated reducers', () => {
-    const initialState = { widgets: { exampleKey: 'exampleValue' } }
+    const initialState = {
+      audioPlayer: { isVisible: false, soundcloudId: null },
+      widgets: { exampleKey: 'exampleValue' }
+    }
     const action = { type: 'UNRELATED_ACTION' }
     const newState = rootReducer(initialState, action)
 
