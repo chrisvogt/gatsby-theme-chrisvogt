@@ -1,12 +1,39 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { useState, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import SoundCloud from '../shortcodes/soundcloud'
 
 const AudioPlayer = ({ soundcloudId, isVisible }) => {
-  if (!isVisible || !soundcloudId) return null
+  const containerRef = useRef(null)
+  const widgetRef = useRef(null)
 
-  return (
+  // Create portal container on mount
+  useEffect(() => {
+    if (!containerRef.current) {
+      containerRef.current = document.createElement('div')
+      containerRef.current.id = 'audio-player-portal'
+      document.body.appendChild(containerRef.current)
+    }
+
+    return () => {
+      if (containerRef.current) {
+        document.body.removeChild(containerRef.current)
+        containerRef.current = null
+      }
+    }
+  }, [])
+
+  // Preserve widget instance
+  useEffect(() => {
+    if (soundcloudId && !widgetRef.current) {
+      widgetRef.current = soundcloudId
+    }
+  }, [soundcloudId])
+
+  if (!isVisible || !soundcloudId || !containerRef.current) return null
+
+  return createPortal(
     <div
       sx={{
         position: 'fixed',
@@ -23,9 +50,10 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
       }}
     >
       <div sx={{ maxWidth: '800px', width: '100%' }}>
-        <SoundCloud soundcloudId={soundcloudId} />
+        <SoundCloud soundcloudId={widgetRef.current || soundcloudId} />
       </div>
-    </div>
+    </div>,
+    containerRef.current
   )
 }
 
