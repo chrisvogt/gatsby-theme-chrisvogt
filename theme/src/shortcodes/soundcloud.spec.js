@@ -1,16 +1,71 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { ThemeUIProvider } from 'theme-ui'
 import SoundCloud from './soundcloud'
 
+// Mock theme object
+const mockTheme = {
+  colors: {
+    background: '#fdf8f5',
+    modes: {
+      dark: {
+        background: '#1e1e2f'
+      }
+    }
+  }
+}
+
+// Helper function to render with theme
+const renderWithTheme = (ui, colorMode = 'default') => {
+  return renderer.create(<ThemeUIProvider theme={{ ...mockTheme, initialColorMode: colorMode }}>{ui}</ThemeUIProvider>)
+}
+
+// Mock useColorMode hook
+jest.mock('theme-ui', () => {
+  const original = jest.requireActual('theme-ui')
+  return {
+    ...original,
+    useColorMode: () => ['dark', () => {}]
+  }
+})
+
 describe('SoundCloud Shortcode', () => {
-  it('matches the snapshot', () => {
-    const tree = renderer.create(<SoundCloud soundcloudId='880888540' />).toJSON()
+  it('matches the snapshot in light mode', () => {
+    const tree = renderWithTheme(<SoundCloud soundcloudId='880888540' />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('matches the snapshot in dark mode', () => {
+    const tree = renderWithTheme(<SoundCloud soundcloudId='880888540' />, 'dark').toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders a default title if one is not provided', () => {
-    const testRenderer = renderer.create(<SoundCloud soundcloudId='880888540' />)
+    const testRenderer = renderWithTheme(<SoundCloud soundcloudId='880888540' />)
     const testInstance = testRenderer.root
     expect(testInstance.findByType('iframe').props.title).toEqual('Song on SoundCloud')
+  })
+
+  it('includes the correct background color in light mode', () => {
+    jest.spyOn(require('theme-ui'), 'useColorMode').mockReturnValue(['default', () => {}])
+    const testRenderer = renderWithTheme(<SoundCloud soundcloudId='880888540' />)
+    const testInstance = testRenderer.root
+    const iframeSrc = testInstance.findByType('iframe').props.src
+    expect(iframeSrc).toContain('background_color=%23fdf8f5')
+  })
+
+  it('includes the correct background color in dark mode', () => {
+    jest.spyOn(require('theme-ui'), 'useColorMode').mockReturnValue(['dark', () => {}])
+    const testRenderer = renderWithTheme(<SoundCloud soundcloudId='880888540' />, 'dark')
+    const testInstance = testRenderer.root
+    const iframeSrc = testInstance.findByType('iframe').props.src
+    expect(iframeSrc).toContain('background_color=%231e1e2f')
+  })
+
+  it('includes the correct track ID in the URL', () => {
+    const testRenderer = renderWithTheme(<SoundCloud soundcloudId='880888540' />)
+    const testInstance = testRenderer.root
+    const iframeSrc = testInstance.findByType('iframe').props.src
+    expect(iframeSrc).toContain('tracks/880888540')
   })
 })
