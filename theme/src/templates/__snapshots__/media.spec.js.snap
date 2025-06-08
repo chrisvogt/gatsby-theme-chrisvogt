@@ -5,19 +5,6 @@ exports[`Media Post renders correctly with a SoundCloud source 1`] = `
   className="layoutMock"
 >
   <div
-    className="css-rh73xg"
-  >
-    <div
-      className="css-io6end"
-    >
-      <div
-        className="soundcloudMock"
-      >
-        mockSoundCloudId
-      </div>
-    </div>
-  </div>
-  <div
     className="css-1v7u0sc"
   >
     <div
