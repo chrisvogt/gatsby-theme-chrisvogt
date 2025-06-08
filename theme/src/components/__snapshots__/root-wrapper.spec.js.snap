@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RootWrapper renders children and AudioPlayer 1`] = `
+[
+  <div>
+    Test Child
+  </div>,
+  <div>
+    MockAudioPlayer
+  </div>,
+]
+`;
