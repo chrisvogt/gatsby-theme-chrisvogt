@@ -41,7 +41,11 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
         left: 0,
         right: 0,
         background: 'panel-background',
-        padding: 2,
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)', // for Safari
+        pt: 3,
+        pb: 2,
+        px: 3,
         boxShadow: '0 -2px 10px rgba(0,0,0,0.1)',
         zIndex: 1000,
         display: 'flex',
@@ -49,7 +53,22 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
         alignItems: 'center'
       }}
     >
-      <div sx={{ maxWidth: '800px', width: '100%' }}>
+      <div
+        sx={{
+          width: '100%',
+          maxWidth: [
+            '100%', // mobile: full width
+            '100%', // tablet: full width
+            '1200px', // desktop: max-width
+            '1400px' // large desktop: slightly wider
+          ],
+          '& iframe': {
+            width: '100% !important',
+            height: '100px !important', // fixed compact height
+            maxHeight: '100px !important'
+          }
+        }}
+      >
         <SoundCloud soundcloudId={widgetRef.current || soundcloudId} />
       </div>
     </div>,
