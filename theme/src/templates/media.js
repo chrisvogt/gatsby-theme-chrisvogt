@@ -2,13 +2,15 @@
 import { Container, Flex, jsx } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import { graphql } from 'gatsby'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
 import Category from '../components/category'
 import Layout from '../components/layout'
 import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
+import { setSoundcloudTrack } from '../reducers/audioPlayer'
 
-import SoundCloud from '../shortcodes/soundcloud'
 import YouTube from '../shortcodes/youtube'
 
 const getBanner = mdx => mdx.frontmatter.banner
@@ -16,15 +18,23 @@ const getDescription = mdx => mdx.frontmatter.description
 const getTitle = mdx => mdx.frontmatter.title
 
 const MediaTemplate = ({ data: { mdx }, children }) => {
+  const dispatch = useDispatch()
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
   const soundcloudId = mdx.frontmatter.soundcloudId
   const title = getTitle(mdx)
   const youtubeSrc = mdx.frontmatter.youtubeSrc
 
+  // Set the SoundCloud track in Redux when this component mounts
+  useEffect(() => {
+    if (soundcloudId) {
+      dispatch(setSoundcloudTrack(soundcloudId))
+    }
+  }, [soundcloudId, dispatch])
+
   return (
     <Layout>
-      {(youtubeSrc || soundcloudId) && (
+      {youtubeSrc && (
         <Themed.div
           sx={{
             background: theme => theme.colors['panel-background'],
@@ -34,8 +44,7 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
           }}
         >
           <Container>
-            {youtubeSrc && <YouTube url={youtubeSrc} />}
-            {soundcloudId && <SoundCloud soundcloudId={soundcloudId} />}
+            <YouTube url={youtubeSrc} />
           </Container>
         </Themed.div>
       )}
