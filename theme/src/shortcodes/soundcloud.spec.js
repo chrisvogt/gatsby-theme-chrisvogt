@@ -20,22 +20,28 @@ const renderWithTheme = (ui, colorMode = 'default') => {
   return renderer.create(<ThemeUIProvider theme={{ ...mockTheme, initialColorMode: colorMode }}>{ui}</ThemeUIProvider>)
 }
 
-// Mock useColorMode hook
+// Mock the useColorMode hook
 jest.mock('theme-ui', () => {
   const original = jest.requireActual('theme-ui')
   return {
     ...original,
-    useColorMode: () => ['dark', () => {}]
+    useColorMode: jest.fn().mockReturnValue(['default', () => {}])
   }
 })
 
 describe('SoundCloud Shortcode', () => {
+  beforeEach(() => {
+    // Reset all mocks before each test
+    jest.clearAllMocks()
+  })
+
   it('matches the snapshot in light mode', () => {
     const tree = renderWithTheme(<SoundCloud soundcloudId='880888540' />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('matches the snapshot in dark mode', () => {
+    require('theme-ui').useColorMode.mockReturnValue(['dark', () => {}])
     const tree = renderWithTheme(<SoundCloud soundcloudId='880888540' />, 'dark').toJSON()
     expect(tree).toMatchSnapshot()
   })
@@ -46,20 +52,20 @@ describe('SoundCloud Shortcode', () => {
     expect(testInstance.findByType('iframe').props.title).toEqual('Song on SoundCloud')
   })
 
-  it('includes the correct background color in light mode', () => {
-    jest.spyOn(require('theme-ui'), 'useColorMode').mockReturnValue(['default', () => {}])
+  it('includes the correct accent color in light mode', () => {
+    require('theme-ui').useColorMode.mockReturnValue(['default', () => {}])
     const testRenderer = renderWithTheme(<SoundCloud soundcloudId='880888540' />)
     const testInstance = testRenderer.root
     const iframeSrc = testInstance.findByType('iframe').props.src
-    expect(iframeSrc).toContain('background_color=%23fdf8f5')
+    expect(iframeSrc).toContain('color=%23ff5500') // orange for light mode
   })
 
-  it('includes the correct background color in dark mode', () => {
-    jest.spyOn(require('theme-ui'), 'useColorMode').mockReturnValue(['dark', () => {}])
+  it('includes the correct accent color in dark mode', () => {
+    require('theme-ui').useColorMode.mockReturnValue(['dark', () => {}])
     const testRenderer = renderWithTheme(<SoundCloud soundcloudId='880888540' />, 'dark')
     const testInstance = testRenderer.root
     const iframeSrc = testInstance.findByType('iframe').props.src
-    expect(iframeSrc).toContain('background_color=%231e1e2f')
+    expect(iframeSrc).toContain('color=%23800080') // purple for dark mode
   })
 
   it('includes the correct track ID in the URL', () => {
