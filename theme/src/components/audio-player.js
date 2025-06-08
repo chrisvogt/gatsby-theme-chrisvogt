@@ -27,9 +27,9 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
     }
   }, [])
 
-  // Preserve widget instance
+  // Update widget when soundcloudId changes
   useEffect(() => {
-    if (soundcloudId && !widgetRef.current) {
+    if (soundcloudId) {
       widgetRef.current = soundcloudId
     }
   }, [soundcloudId])
@@ -113,7 +113,7 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
             }
           }}
         >
-          <SoundCloud soundcloudId={widgetRef.current || soundcloudId} />
+          <SoundCloud soundcloudId={soundcloudId} />
         </div>
       </div>
     </div>,
