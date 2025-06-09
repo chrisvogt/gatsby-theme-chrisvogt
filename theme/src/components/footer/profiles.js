@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { Fragment } from 'react'
 import { jsx } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Card } from '@theme-ui/components'
 
 import {
   faBehance,
@@ -48,25 +48,75 @@ export default () => {
   const profilesWithIcons = profiles.map(profilesToIcons)
 
   return (
-    <Fragment>
-      {profilesWithIcons.length &&
-        profilesWithIcons.map(({ IconComponent, profile = {} }) => {
-          const { displayName, href, slug } = profile
-          return (
-            <a key={slug} href={href} title={displayName} rel='me' sx={{ mx: [3, 4, 4, 5] }}>
-              <FontAwesomeIcon
-                icon={IconComponent}
+    <Card
+      variant='PostCard'
+      sx={{
+        p: [3, 4],
+        mb: 4,
+        display: 'flex',
+        flexDirection: ['column', 'row'],
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: [3, 4],
+        maxWidth: '100%',
+        textAlign: 'center',
+        '&:hover': {
+          // boxShadow: 'md',
+          // transform: 'translateY(-2px)'
+        }
+      }}
+    >
+      <div
+        sx={{
+          color: 'text',
+          fontSize: [2, 3],
+          fontWeight: 'heading',
+          whiteSpace: 'nowrap'
+        }}
+      >
+        Connect with me
+      </div>
+      <div
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: [3, 4],
+          alignItems: 'center'
+        }}
+      >
+        {profilesWithIcons.length &&
+          profilesWithIcons.map(({ IconComponent, profile = {} }) => {
+            const { displayName, href, slug } = profile
+            return (
+              <a
+                key={slug}
+                href={href}
+                title={displayName}
+                rel='me'
                 sx={{
-                  fontSize: [4, 5, 6],
-                  // The following styles are a hack to prevent the icons being too large
-                  // on first render. I imagine there's a better way to do this.
-                  maxHeight: '36px',
-                  maxWidth: '36px'
+                  color: 'text',
+                  transition: 'all 0.2s ease-in-out',
+                  display: 'flex',
+                  alignItems: 'center',
+                  '&:hover': {
+                    color: 'primary',
+                    transform: 'scale(1.02)'
+                  }
                 }}
-              />
-            </a>
-          )
-        })}
-    </Fragment>
+              >
+                <FontAwesomeIcon
+                  icon={IconComponent}
+                  sx={{
+                    fontSize: [5, 6],
+                    width: '32px',
+                    height: '32px'
+                  }}
+                />
+              </a>
+            )
+          })}
+      </div>
+    </Card>
   )
 }
