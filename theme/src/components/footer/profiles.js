@@ -49,7 +49,7 @@ export default () => {
 
   return (
     <Card
-      variant='PostCard'
+      // variant='PostCard'
       sx={{
         p: [3, 4],
         mb: 4,
@@ -60,6 +60,7 @@ export default () => {
         gap: [3, 4],
         maxWidth: '100%',
         textAlign: 'center',
+        background: 'linear-gradient(to right, transparent, var(--theme-ui-colors-background), transparent)',
         '&:hover': {
           // boxShadow: 'md',
           // transform: 'translateY(-2px)'
