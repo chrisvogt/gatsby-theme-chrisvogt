@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Card } from '@theme-ui/components'
 
 import {
   faBehance,
@@ -48,10 +47,8 @@ export default () => {
   const profilesWithIcons = profiles.map(profilesToIcons)
 
   return (
-    <Card
-      // variant='PostCard'
+    <div
       sx={{
-        p: [3, 4],
         mb: 4,
         display: 'flex',
         flexDirection: ['column', 'row'],
@@ -59,12 +56,7 @@ export default () => {
         justifyContent: 'center',
         gap: [3, 4],
         maxWidth: '100%',
-        textAlign: 'center',
-        background: 'linear-gradient(to right, transparent, var(--theme-ui-colors-background), transparent)',
-        '&:hover': {
-          // boxShadow: 'md',
-          // transform: 'translateY(-2px)'
-        }
+        textAlign: 'center'
       }}
     >
       <div
@@ -118,6 +110,6 @@ export default () => {
             )
           })}
       </div>
-    </Card>
+    </div>
   )
 }

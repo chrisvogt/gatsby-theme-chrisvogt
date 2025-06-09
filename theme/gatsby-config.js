@@ -5,7 +5,7 @@ module.exports = () => ({
     avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo',
     baseURL: 'https://www.chrisvogt.me',
     description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
-    footerText: 'Made with ❤️ in the Castro 🌈, San Francisco',
+    footerText: 'Made with ❤️ in San Francisco',
     headline: 'www.chrisvogt.me',
     imageURL: '',
     languageCode: 'en',

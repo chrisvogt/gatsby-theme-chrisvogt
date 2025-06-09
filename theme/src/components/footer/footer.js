@@ -18,7 +18,7 @@ export default () => {
         <div sx={{ mb: 3, py: [2, 3] }}>
           <Profiles />
 
-          <div sx={{ mt: [4, 5] }}>
+          <div sx={{ mt: [0, 1] }}>
             {footerText ? <div>{footerText}</div> : null}
             <span>
               <ThemedLink href='/rss.xml' sx={{ textDecoration: 'underline' /* synced with Gatsby Link */ }}>
