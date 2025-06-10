@@ -2,15 +2,28 @@
 import { jsx, useThemeUI } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 
+// Special category mappings for custom formatting
+const categoryMappings = {
+  'photography/travel': 'Travel Photography',
+  'photography/events': 'Event Photography',
+  'music/piano-covers': 'Piano Covers',
+  'videos/bike-rides': 'Cycling Videos'
+}
+
+// Helper function to convert string to title case
+const toTitleCase = str => {
+  return str
+    .split(/[-/]/) // Split by hyphen or forward slash
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
+}
+
 const Category = ({ sx = {}, type }) => {
   const { colorMode } = useThemeUI()
   const isDark = colorMode === 'dark'
 
-  const category = type
-    .replace('photography/travel', 'Travel Photography')
-    .replace('photography/events', 'Event Photography')
-    .replace('music/piano-covers', 'Piano Covers')
-    .replace('personal', 'Personal')
+  // Use mapping if exists, otherwise convert to title case
+  const category = categoryMappings[type] || toTitleCase(type)
 
   return (
     <Themed.div
