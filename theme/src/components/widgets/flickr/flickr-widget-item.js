@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const FlickrWidgetItem = ({ photo: { title = '', thumbnailUrl = '' } = {}, handleClick, index }) => {
+const FlickrWidgetItem = ({ photo = {}, handleClick = () => {}, index }) => {
+  const { title = '', thumbnailUrl = '' } = photo || {}
+
   return (
     <button
       onClick={() => handleClick(index)}
