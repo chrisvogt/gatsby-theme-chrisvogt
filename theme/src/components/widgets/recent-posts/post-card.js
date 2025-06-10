@@ -30,7 +30,7 @@ export default ({ banner, category, date, excerpt, link, title }) => {
                   backgroundPosition: 'center',
                   backgroundSize: 'contain',
                   backgroundRepeat: 'no-repeat',
-                  borderRadius: '1px',
+                  borderRadius: '8px',
                   width: '100%',
                   aspectRatio: '1.9 / 1',
                   transition: 'all 2.5s ease'

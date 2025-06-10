@@ -49,7 +49,7 @@ const GradientBanner = {
   }
 }
 
-const glassmorhismPanel = {
+export const glassmorhismPanel = {
   borderRadius: '10px',
   backdropFilter: 'blur(10px)',
   WebkitBackdropFilter: 'blur(10px)',

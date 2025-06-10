@@ -14,9 +14,9 @@ exports[`Media Post renders correctly with a SoundCloud source 1`] = `
         className="h-entry"
       >
         <div
-          className="css-3eizm7"
+          className="css-1blzwpa"
         >
-          Mock Category
+          Mock category
         </div>
         <h1
           className="p-name css-1sus4jf"
@@ -69,9 +69,9 @@ exports[`Media Post renders correctly with a YouTube source 1`] = `
         className="h-entry"
       >
         <div
-          className="css-3eizm7"
+          className="css-1blzwpa"
         >
-          Mock Category
+          Mock category
         </div>
         <h1
           className="p-name css-1sus4jf"
@@ -111,9 +111,9 @@ exports[`Media Post renders correctly with no media sources 1`] = `
         className="h-entry"
       >
         <div
-          className="css-3eizm7"
+          className="css-1blzwpa"
         >
-          Mock Category
+          Mock category
         </div>
         <h1
           className="p-name css-1sus4jf"
