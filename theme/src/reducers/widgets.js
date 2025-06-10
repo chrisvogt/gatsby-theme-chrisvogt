@@ -13,6 +13,7 @@ export const getGitHubWidget = state => state.widgets?.github || {}
 export const getGoodreadsWidget = state => state.widgets?.goodreads || {}
 export const getInstagramWidget = state => state.widgets?.instagram || {}
 export const getSpotifyWidget = state => state.widgets?.spotify || {}
+export const getFlickrWidget = state => state.widgets?.flickr || {}
 
 function widgets(state = {}, action) {
   switch (action.type) {

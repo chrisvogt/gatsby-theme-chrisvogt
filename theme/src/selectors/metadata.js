@@ -35,3 +35,7 @@ export const getTitle = metadata => metadata?.title
 export const getTitleTemplate = metadata => metadata?.titleTemplate
 
 export const getTwitterUsername = metadata => metadata?.widgets?.twitter?.username
+
+export const getFlickrWidgetDataSource = metadata => metadata?.widgets?.flickr?.widgetDataSource
+
+export const getFlickrUsername = metadata => metadata?.widgets?.flickr?.username

@@ -17,6 +17,10 @@ module.exports = () => ({
     title: 'My Personal Website',
     titleTemplate: '%s · www.chrisvogt.me',
     widgets: {
+      flickr: {
+        username: '',
+        widgetDataSource: ''
+      },
       github: {
         username: '',
         widgetDataSource: ''
