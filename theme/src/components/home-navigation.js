@@ -4,6 +4,7 @@ import { jsx, Link } from 'theme-ui'
 import { useRef } from 'react'
 
 import {
+  getFlickrWidgetDataSource,
   getGithubWidgetDataSource,
   getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
@@ -13,7 +14,7 @@ import {
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFlickr, faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -22,6 +23,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * bundle. See chrisvogt/gatsby-theme-chrisvogt#31 for to learn more.
  */
 const icons = {
+  faFlickr,
   faGithub,
   faGoodreads,
   faHome,
@@ -74,6 +76,18 @@ const linkRegistry = [
       },
       id: 'instagram',
       text: 'Instagram'
+    }
+  },
+  {
+    rule: options => !!options.isFlickrWidgetEnabled,
+    value: {
+      href: '#flickr',
+      icon: {
+        name: 'flickr',
+        reactIcon: 'faFlickr'
+      },
+      id: 'flickr',
+      text: 'Flickr'
     }
   },
   {
@@ -143,6 +157,7 @@ const HomeNavigation = () => {
 
   const metadata = useSiteMetadata()
   const links = determineLinksToRender({
+    isFlickrWidgetEnabled: getFlickrWidgetDataSource(metadata),
     isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
     isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),

@@ -6,6 +6,10 @@ export const getDescription = metadata => metadata?.description
 
 export const getFooterText = metadata => metadata?.footerText
 
+export const getFlickrWidgetDataSource = metadata => metadata?.widgets?.flickr?.widgetDataSource
+
+export const getFlickrUsername = metadata => metadata?.widgets?.flickr?.username
+
 export const getGithubUsername = metadata => metadata?.widgets?.github?.username
 
 export const getGithubWidgetDataSource = metadata => metadata?.widgets?.github?.widgetDataSource
@@ -35,7 +39,3 @@ export const getTitle = metadata => metadata?.title
 export const getTitleTemplate = metadata => metadata?.titleTemplate
 
 export const getTwitterUsername = metadata => metadata?.widgets?.twitter?.username
-
-export const getFlickrWidgetDataSource = metadata => metadata?.widgets?.flickr?.widgetDataSource
-
-export const getFlickrUsername = metadata => metadata?.widgets?.flickr?.username
