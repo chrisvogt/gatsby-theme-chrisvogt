@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlickrWidgetItem matches the snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="flickr-item-button css-1u8qly9"
+  >
+    <img
+      alt="Flickr photo: Test Photo Title"
+      class="flickr-item-image css-16gz8ax"
+      crossorigin="anonymous"
+      height="280"
+      loading="lazy"
+      src="https://cdn.chrisvogt.me/images/fake-flickr-image.jpg"
+      width="280"
+    />
+  </button>
+</DocumentFragment>
+`;

@@ -18,6 +18,10 @@ const useSiteMetadata = () => {
           title
           titleTemplate
           widgets {
+            flickr {
+              username
+              widgetDataSource
+            }
             github {
               username
               widgetDataSource
