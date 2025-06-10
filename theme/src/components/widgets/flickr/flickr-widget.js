@@ -3,21 +3,10 @@ import { jsx } from 'theme-ui'
 
 import { Grid } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
-import { useCallback, useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import lgAutoplay from 'lightgallery/plugins/autoplay'
-import lgThumbnail from 'lightgallery/plugins/thumbnail'
-import lgVideo from 'lightgallery/plugins/video'
-import lgZoom from 'lightgallery/plugins/zoom'
-import LightGallery from 'lightgallery/react'
 import ReactPlaceholder from 'react-placeholder'
 import VanillaTilt from 'vanilla-tilt'
-
-import 'lightgallery/css/lightgallery.css'
-import 'lightgallery/css/lg-thumbnail.css'
-import 'lightgallery/css/lg-zoom.css'
-import 'lightgallery/css/lg-video.css'
-import 'lightgallery/css/lg-autoplay.css'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getFlickrUsername, getFlickrWidgetDataSource } from '../../../selectors/metadata'
@@ -29,8 +18,9 @@ import CallToAction from '../call-to-action'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
-import WidgetItem from './flickr-widget-item'
 import { faFlickr } from '@fortawesome/free-brands-svg-icons'
+
+import FlickrWidgetItem from './flickr-widget-item'
 
 const MAX_IMAGES = {
   default: 8,
@@ -55,7 +45,6 @@ export default () => {
   const metrics = useSelector(getMetrics)
 
   const [isShowingMore, setIsShowingMore] = useState(false)
-  const lightGalleryRef = useRef(null)
 
   useEffect(() => {
     if (isLoading) {
@@ -73,18 +62,6 @@ export default () => {
       })
     }
   }, [isLoading, isShowingMore])
-
-  const openLightbox = useCallback(
-    index => {
-      const instance = lightGalleryRef.current
-      if (instance) {
-        instance.openGallery(index)
-      } else {
-        console.error('LightGallery instance is not initialized')
-      }
-    },
-    [lightGalleryRef]
-  )
 
   const callToAction = (
     <CallToAction
@@ -126,15 +103,14 @@ export default () => {
                       width: '100%',
                       paddingBottom: '100%'
                     }}
+                    showLoadingAnimation
                   />
                 </div>
               }
-              key={isLoading ? idx : photo.id}
+              key={photo.id || idx}
               ready={!isLoading}
-              showLoadingAnimation
-              type='rect'
             >
-              <WidgetItem handleClick={() => openLightbox(idx)} index={idx} photo={photo} />
+              <FlickrWidgetItem photo={photo} index={idx} />
             </ReactPlaceholder>
           ))}
         </Grid>
@@ -145,22 +121,6 @@ export default () => {
           <Button onClick={() => setIsShowingMore(!isShowingMore)}>{isShowingMore ? 'Show Less' : 'Show More'}</Button>
         </div>
       )}
-
-      <LightGallery
-        onInit={instance => {
-          lightGalleryRef.current = instance
-        }}
-        speed={500}
-        plugins={[lgThumbnail, lgZoom, lgAutoplay, lgVideo]}
-        elementClassNames='lightgallery'
-        download={false}
-        counter={false}
-        items={(photos || []).map(photo => ({
-          src: photo.largeUrl,
-          thumb: photo.thumbnailUrl,
-          subHtml: `<h4>${photo.title}</h4><p>${photo.description || ''}</p>`
-        }))}
-      />
     </Widget>
   )
 }

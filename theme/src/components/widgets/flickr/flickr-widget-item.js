@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const FlickrWidgetItem = ({ handleClick, index, photo: { title, thumbnailUrl, id } = {} }) => {
+const FlickrWidgetItem = ({ photo: { title, thumbnailUrl, link } = {} }) => {
   return (
-    <button
-      key={id}
-      onClick={event => handleClick(event, { index, photo: { title, id, src: thumbnailUrl } })}
+    <a
+      href={link}
+      target='_blank'
       rel='noopener noreferrer'
       className='flickr-item-button'
       sx={{
-        variant: 'styles.FlickrItem'
+        variant: 'styles.InstagramItem'
       }}
     >
       <img
@@ -27,7 +27,7 @@ const FlickrWidgetItem = ({ handleClick, index, photo: { title, thumbnailUrl, id
           objectFit: 'cover'
         }}
       />
-    </button>
+    </a>
   )
 }
 
