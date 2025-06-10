@@ -1,12 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const FlickrWidgetItem = ({ photo: { title, thumbnailUrl, link } = {} }) => {
+const FlickrWidgetItem = ({ photo: { title, thumbnailUrl } = {}, handleClick, index }) => {
   return (
-    <a
-      href={link}
-      target='_blank'
-      rel='noopener noreferrer'
+    <button
+      onClick={() => handleClick(index)}
       className='flickr-item-button'
       sx={{
         variant: 'styles.InstagramItem'
@@ -27,7 +25,7 @@ const FlickrWidgetItem = ({ photo: { title, thumbnailUrl, link } = {} }) => {
           objectFit: 'cover'
         }}
       />
-    </a>
+    </button>
   )
 }
 

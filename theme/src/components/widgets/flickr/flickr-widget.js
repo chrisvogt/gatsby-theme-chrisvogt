@@ -3,10 +3,21 @@ import { jsx } from 'theme-ui'
 
 import { Grid } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactPlaceholder from 'react-placeholder'
 import VanillaTilt from 'vanilla-tilt'
+import lgAutoplay from 'lightgallery/plugins/autoplay'
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgVideo from 'lightgallery/plugins/video'
+import lgZoom from 'lightgallery/plugins/zoom'
+import LightGallery from 'lightgallery/react'
+
+import 'lightgallery/css/lightgallery.css'
+import 'lightgallery/css/lg-thumbnail.css'
+import 'lightgallery/css/lg-zoom.css'
+import 'lightgallery/css/lg-video.css'
+import 'lightgallery/css/lg-autoplay.css'
 
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getFlickrUsername, getFlickrWidgetDataSource } from '../../../selectors/metadata'
@@ -34,6 +45,7 @@ const getMetrics = state => getFlickrWidget(state).data?.metrics
 
 export default () => {
   const dispatch = useDispatch()
+  const lightGalleryRef = useRef(null)
 
   const metadata = useSiteMetadata()
   const flickrUsername = getFlickrUsername(metadata)
@@ -45,6 +57,18 @@ export default () => {
   const metrics = useSelector(getMetrics)
 
   const [isShowingMore, setIsShowingMore] = useState(false)
+
+  const openLightbox = useCallback(
+    index => {
+      const instance = lightGalleryRef.current
+      if (instance) {
+        instance.openGallery(index)
+      } else {
+        console.error('LightGallery instance is not initialized')
+      }
+    },
+    [lightGalleryRef]
+  )
 
   useEffect(() => {
     if (isLoading) {
@@ -110,7 +134,7 @@ export default () => {
               key={photo.id || idx}
               ready={!isLoading}
             >
-              <FlickrWidgetItem photo={photo} index={idx} />
+              <FlickrWidgetItem photo={photo} index={idx} handleClick={() => openLightbox(idx)} />
             </ReactPlaceholder>
           ))}
         </Grid>
@@ -120,6 +144,24 @@ export default () => {
         <div sx={{ my: 4, textAlign: 'center' }}>
           <Button onClick={() => setIsShowingMore(!isShowingMore)}>{isShowingMore ? 'Show Less' : 'Show More'}</Button>
         </div>
+      )}
+
+      {photos?.length && (
+        <LightGallery
+          onInit={ref => {
+            lightGalleryRef.current = ref.instance
+          }}
+          plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
+          licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
+          download={false}
+          dynamic
+          dynamicEl={photos.map(photo => ({
+            thumb: photo.thumbnailUrl,
+            subHtml: photo.title || '',
+            src: photo.largeUrl
+          }))}
+          speed={500}
+        />
       )}
     </Widget>
   )
