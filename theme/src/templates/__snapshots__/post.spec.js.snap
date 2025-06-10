@@ -55,7 +55,7 @@ exports[`Blog Post matches the snapshot 1`] = `
         className="h-entry c1v0-blog-post"
       >
         <div
-          className="css-3eizm7"
+          className="css-1blzwpa"
         >
           Mock Category
         </div>
