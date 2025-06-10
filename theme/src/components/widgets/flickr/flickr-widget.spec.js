@@ -225,4 +225,142 @@ describe('FlickrWidget', () => {
     // Indirect test – rendering succeeds, LightGallery was initialized
     expect(mockLightGalleryInstance.openGallery).not.toHaveBeenCalled() // Ensures it's only initialized, not opened
   })
+
+  it('handles fatal error state correctly', () => {
+    const errorStore = mockStore({
+      widgets: {
+        flickr: {
+          state: 'FAILURE',
+          data: null
+        }
+      }
+    })
+
+    render(
+      <ReduxProvider store={errorStore}>
+        <ThemeUIProvider theme={theme}>
+          <FlickrWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    expect(screen.getByText(/Flickr/i)).toBeInTheDocument()
+    // Widget should still render but show error state
+    expect(screen.getByRole('complementary')).toHaveAttribute('data-has-fatal-error', 'true')
+  })
+
+  it('renders metrics correctly', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <FlickrWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    expect(screen.getByText('Photos')).toBeInTheDocument()
+    expect(screen.getByText('100')).toBeInTheDocument()
+    expect(screen.getByText('Views')).toBeInTheDocument()
+    expect(screen.getByText('1,000')).toBeInTheDocument()
+  })
+
+  it('handles missing metrics data gracefully', () => {
+    const storeWithoutMetrics = mockStore({
+      widgets: {
+        flickr: {
+          state: 'SUCCESS',
+          data: {
+            collections: {
+              photos: [
+                {
+                  id: '123',
+                  title: 'Test Photo Title',
+                  thumbnailUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image.jpg',
+                  largeUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image-large.jpg'
+                }
+              ]
+            },
+            metrics: null
+          }
+        }
+      }
+    })
+
+    render(
+      <ReduxProvider store={storeWithoutMetrics}>
+        <ThemeUIProvider theme={theme}>
+          <FlickrWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    // Component should still render without metrics
+    expect(screen.getByText(/Flickr/i)).toBeInTheDocument()
+  })
+
+  it('renders CallToAction with correct Flickr profile URL', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <FlickrWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    const callToAction = screen.getByText('Visit Profile')
+    expect(callToAction).toBeInTheDocument()
+    expect(callToAction.closest('a')).toHaveAttribute('href', 'https://www.flickr.com/photos/test_username')
+  })
+
+  it('handles LightGallery initialization error gracefully', () => {
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {})
+    const mockInstance = null
+
+    jest.mock('lightgallery/react', () =>
+      jest.fn(({ onInit }) => {
+        onInit({ instance: mockInstance })
+        return <div data-testid='lightgallery-mock' />
+      })
+    )
+
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <FlickrWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    const thumbnails = screen.getAllByAltText(/Flickr photo:/i)
+    fireEvent.click(thumbnails[0])
+
+    expect(consoleSpy).toHaveBeenCalledWith('LightGallery instance is not initialized')
+    consoleSpy.mockRestore()
+  })
+
+  it('renders correct number of images based on show more/less state', () => {
+    render(
+      <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <FlickrWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    // Initially should show default number of images
+    const initialPlaceholders = screen.getAllByText('', { selector: '.image-placeholder' })
+    expect(initialPlaceholders.length).toBeLessThanOrEqual(8)
+
+    // Click show more
+    fireEvent.click(screen.getByText(/Show More/i))
+    // Should show more images
+    const expandedPlaceholders = screen.getAllByText('', { selector: '.image-placeholder' })
+    expect(expandedPlaceholders.length).toBeLessThanOrEqual(16)
+
+    // Click show less
+    fireEvent.click(screen.getByText(/Show Less/i))
+    // Should show fewer images again
+    const collapsedPlaceholders = screen.getAllByText('', { selector: '.image-placeholder' })
+    expect(collapsedPlaceholders.length).toBeLessThanOrEqual(8)
+  })
 })

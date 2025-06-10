@@ -57,4 +57,48 @@ describe('FlickrWidgetItem', () => {
     expect(img).toHaveAttribute('alt', 'Flickr photo: ')
     expect(img).toHaveAttribute('src', '')
   })
+
+  it('applies correct styling classes and theme variants', () => {
+    const { container } = render(<FlickrWidgetItem {...defaultProps} />)
+    const button = container.querySelector('.flickr-item-button')
+    expect(button).toHaveClass('css-1u8qly9')
+    const image = container.querySelector('.flickr-item-image')
+    expect(image).toHaveClass('css-16gz8ax')
+  })
+
+  it('handles missing photo prop gracefully', () => {
+    render(<FlickrWidgetItem handleClick={mockHandleClick} index={0} />)
+
+    const img = screen.getByRole('img')
+    expect(img).toBeInTheDocument()
+    expect(img).toHaveAttribute('alt', 'Flickr photo: ')
+    expect(img).toHaveAttribute('src', '')
+  })
+
+  it('handles null photo prop gracefully', () => {
+    render(<FlickrWidgetItem photo={null} handleClick={mockHandleClick} index={0} />)
+
+    const img = screen.getByRole('img')
+    expect(img).toBeInTheDocument()
+    expect(img).toHaveAttribute('alt', 'Flickr photo: ')
+    expect(img).toHaveAttribute('src', '')
+  })
+
+  it('handles missing handleClick prop gracefully', () => {
+    render(<FlickrWidgetItem photo={defaultProps.photo} index={0} />)
+
+    const button = screen.getByRole('button')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    // Should not throw error when clicked
+  })
+
+  it('handles missing index prop gracefully', () => {
+    render(<FlickrWidgetItem photo={defaultProps.photo} handleClick={mockHandleClick} />)
+
+    const button = screen.getByRole('button')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    expect(mockHandleClick).toHaveBeenCalledWith(undefined)
+  })
 })
