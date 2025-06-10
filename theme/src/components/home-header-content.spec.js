@@ -7,20 +7,21 @@ describe('HomeHeaderContent', () => {
   it('renders the header content correctly', () => {
     render(<HomeHeaderContent />)
 
-    // Custom matcher to find the headline text
-    const headlineText = (content, element) => {
-      const hasText = node => node.textContent === "Hi! 👋 I'm Chris Vogt."
-      const nodeHasText = hasText(element)
-      const childrenDontHaveText = Array.from(element.children).every(child => !hasText(child))
-      return nodeHasText && childrenDontHaveText
-    }
-
-    // Check for the main headline using custom text matcher
-    expect(screen.getByText(headlineText)).toBeInTheDocument()
+    // Check for the main headline
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent("Hi! 👋 I'm Chris Vogt.")
 
     // Check for the paragraphs
-    expect(screen.getByText(/I'm a Software Engineer/i)).toBeInTheDocument()
-    expect(screen.getByText(/This website is a digital garden/i)).toBeInTheDocument()
+    expect(screen.getByText(/This is my personal blog and digital garden/i)).toBeInTheDocument()
+    expect(screen.getByText(/I work as a software engineer at GoDaddy/i)).toBeInTheDocument()
+
+    // Use a more flexible text matcher for the piano paragraph
+    const pianoParagraph = screen.getByText(
+      (content, element) =>
+        element.tagName.toLowerCase() === 'p' && content.includes('Most evenings') && content.includes('piano')
+    )
+    expect(pianoParagraph).toBeInTheDocument()
+
+    expect(screen.getByText(/This space is always evolving/i)).toBeInTheDocument()
   })
 
   it('applies wobble animation to emoji on mouse enter', () => {

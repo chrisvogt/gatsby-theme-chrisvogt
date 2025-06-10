@@ -48,12 +48,28 @@ const HomeHeaderContent = () => {
         </span>{' '}
         I'm Chris Vogt.
       </Themed.h1>
+
       <Themed.p>
-        I'm a Software Engineer in San Francisco who enjoys practicing piano and recording music, photography,
-        traveling, and meeting and learning more about people. I work at GoDaddy, building intelligent customer
-        dashboards and experiences that help people grow their small businesses and online presence.
+        This is my personal blog and digital garden: a place where I share what I’m building, exploring, and learning
+        over time.
       </Themed.p>
-      <Themed.p>This website is a digital garden where I share my passions, projects, and learnings.</Themed.p>
+
+      <Themed.p>
+        By day, I work as a software engineer at GoDaddy, creating tools that help small businesses build, grow, and
+        understand their online presence. But this site isn’t about work — it’s where I follow my curiosity, experiment
+        with ideas, and write code just for fun.
+      </Themed.p>
+
+      <Themed.p>
+        Most evenings, you’ll find me at the piano — practicing, recording, or just playing around with sound. I’ve been
+        slowly teaching myself music, and I’m figuring out how to bring what I know from tech into making music. I also
+        spend a lot of time with friends in the city and love connecting with people who are passionate about what they
+        do.
+      </Themed.p>
+
+      <Themed.p>
+        This space is always evolving — part notebook, part playground — and I’m glad you found your way here.
+      </Themed.p>
     </div>
   )
 }
