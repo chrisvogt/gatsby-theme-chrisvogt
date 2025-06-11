@@ -184,7 +184,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
         className="css-nf0qmy"
       >
         <div
-          className="css-dqblq9"
+          className="css-1rkcmha"
         >
           <div
             className="show-loading-animation"
@@ -296,7 +296,7 @@ exports[`GitHub Widget matches the loading state snapshot 1`] = `
         className="css-nf0qmy"
       >
         <div
-          className="css-dqblq9"
+          className="css-1rkcmha"
         >
           <div
             className="show-loading-animation"

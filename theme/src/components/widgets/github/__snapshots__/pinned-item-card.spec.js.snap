@@ -2,7 +2,7 @@
 
 exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot 1`] = `
 <div
-  className="css-1yz7e9k"
+  className="css-139dwiw"
 >
   <div
     className="show-loading-animation"
@@ -113,7 +113,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot
 
 exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant snapshot 1`] = `
 <div
-  className="css-1yz7e9k"
+  className="css-139dwiw"
 >
   <div
     className="css-1kbinjp"

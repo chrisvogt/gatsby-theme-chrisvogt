@@ -14,7 +14,20 @@ const rendererRegistry = {
 }
 
 const PinnedItemCard = ({ item, type = PLACEHOLDER }) => (
-  <Card variant='actionCard'>{rendererRegistry[type] && rendererRegistry[type](item)}</Card>
+  <Card
+    variant='actionCard'
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      transition: 'transform 0.2s ease-in-out',
+      '&:hover': {
+        transform: 'translateY(-4px)'
+      }
+    }}
+  >
+    {rendererRegistry[type] && rendererRegistry[type](item)}
+  </Card>
 )
 
 export default PinnedItemCard

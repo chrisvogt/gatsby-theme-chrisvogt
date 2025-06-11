@@ -5,19 +5,23 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
   className="media-item_grid null css-4004kc"
 >
   <a
-    className="media-item_media css-c3vfik"
+    className="media-item_media css-1bdhn1b"
     href="https://www.google.com/"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     title="Item #1"
   >
-    <img
-      alt="cover artwork"
-      className="css-karewm"
-      crossOrigin="anonymous"
-      loading="lazy"
-      src="http://placekitten.com/200/200"
-    />
+    <div
+      className="css-x4b07x"
+    >
+      <img
+        alt="cover artwork"
+        className="css-karewm"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="http://placekitten.com/200/200"
+      />
+    </div>
   </a>
 </div>
 `;
