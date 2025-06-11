@@ -22,14 +22,14 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
     className="media-item_grid null css-4004kc"
   >
     <a
-      className="media-item_media css-a8fqp2"
+      className="media-item_media css-c3vfik"
       href="http://spotify.com/track3"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Three – Artist Four"
     >
       <div
-        className="media-item_caption css-18v1ukh"
+        className="media-item_caption css-764hy0"
       >
         <span>
           Song Three
@@ -37,7 +37,7 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
       </div>
       <img
         alt="cover artwork"
-        className="css-1g46s4f"
+        className="css-karewm"
         crossOrigin="anonymous"
         loading="lazy"
       />
@@ -297,14 +297,14 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
     className="media-item_grid null css-4004kc"
   >
     <a
-      className="media-item_media css-a8fqp2"
+      className="media-item_media css-c3vfik"
       href="http://spotify.com/track1"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song One – Artist One, Artist Two"
     >
       <div
-        className="media-item_caption css-18v1ukh"
+        className="media-item_caption css-764hy0"
       >
         <span>
           Song One
@@ -312,21 +312,21 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
       </div>
       <img
         alt="cover artwork"
-        className="css-1g46s4f"
+        className="css-karewm"
         crossOrigin="anonymous"
         loading="lazy"
         src="http://example.com/medium.jpg"
       />
     </a>
     <a
-      className="media-item_media css-a8fqp2"
+      className="media-item_media css-c3vfik"
       href="http://spotify.com/track2"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Two – Artist Three"
     >
       <div
-        className="media-item_caption css-18v1ukh"
+        className="media-item_caption css-764hy0"
       >
         <span>
           Song Two
@@ -334,7 +334,7 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
       </div>
       <img
         alt="cover artwork"
-        className="css-1g46s4f"
+        className="css-karewm"
         crossOrigin="anonymous"
         loading="lazy"
         src="http://example.com/medium2.jpg"
