@@ -14,8 +14,10 @@ const renderStarsForRating = count => {
 }
 
 const BookExplorer = ({ book, onClose }) => {
-  const { authors, description, infoLink, rating, thumbnailURL, title } = book
+  const { authors, cdnMediaURL, description, infoLink, rating, title } = book
   const location = useLocation()
+
+  console.log('BookExplorer rendered with book:', book)
 
   return (
     <Card variant='actionCard'>
@@ -37,7 +39,7 @@ const BookExplorer = ({ book, onClose }) => {
           }}
         >
           <div sx={{ width: '100%', maxWidth: '200px' }}>
-            <Book thumbnailURL={thumbnailURL} title={title} />
+            <Book thumbnailURL={`${cdnMediaURL}?fm=webp`} title={title} />
           </div>
           <Link
             to={location.pathname}

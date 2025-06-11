@@ -9,3 +9,20 @@ import 'lightgallery/css/lg-zoom.css'
 import 'prismjs/themes/prism-solarizedlight.css'
 
 export { default as wrapRootElement } from './wrapRootElement'
+
+// Prevent scroll restoration when only query parameters change
+export const shouldUpdateScroll = ({ routerProps }) => {
+  // If routerProps is undefined, we're likely in a development environment
+  // or the router hasn't initialized yet
+  if (!routerProps) {
+    return true
+  }
+
+  const { location, prevLocation } = routerProps
+  // If only the query parameters changed, don't update scroll
+  if (prevLocation && location.pathname === prevLocation.pathname) {
+    return false
+  }
+  // For actual page changes, use default scroll behavior
+  return true
+}
