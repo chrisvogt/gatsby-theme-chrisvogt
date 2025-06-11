@@ -29,6 +29,7 @@ const BookLink = ({ id, thumbnailURL, title }) => {
 
   return (
     <a
+      data-testid='book-link'
       href={`?bookId=${id}`}
       onClick={handleClick}
       title={title}
