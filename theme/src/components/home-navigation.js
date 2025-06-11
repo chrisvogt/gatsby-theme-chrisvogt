@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { Fragment, useEffect, useState } from 'react'
-import { jsx, Link } from 'theme-ui'
-import { useRef } from 'react'
-import { useLocation } from '@reach/router'
+import { jsx } from 'theme-ui'
+import { Fragment } from 'react'
+import { Link } from '@theme-ui/components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useRef, useState, useEffect } from 'react'
 import useSiteMetadata from '../hooks/use-site-metadata'
 import {
   getFlickrWidgetDataSource,
@@ -14,21 +15,15 @@ import {
 } from '../selectors/metadata'
 
 import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import { faFlickr, faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlickr, faGithub, faGoodreads, faInstagram, faSpotify, faSteam } from '@fortawesome/free-brands-svg-icons'
 
-/**
- * icons is a library containing all of the social icons available for this theme.
- * This is to prevent the entire font awesome library from being included in the
- * bundle. See chrisvogt/gatsby-theme-chrisvogt#31 for to learn more.
- */
 const icons = {
+  faHome,
+  faNewspaper,
   faFlickr,
   faGithub,
   faGoodreads,
-  faHome,
   faInstagram,
-  faNewspaper,
   faSpotify,
   faSteam
 }
@@ -154,9 +149,6 @@ const determineLinksToRender = (options = {}) => {
 const HomeNavigation = () => {
   const navItemsRef = useRef()
   const [activeSection, setActiveSection] = useState('home')
-  const location = useLocation()
-  const params = new URLSearchParams(location.search)
-  const isBookSelected = params.has('bookId')
 
   const metadata = useSiteMetadata()
   const links = determineLinksToRender({
@@ -169,17 +161,10 @@ const HomeNavigation = () => {
   })
 
   useEffect(() => {
-    // Don't set up scroll listener if we're in the book explorer view
-    if (!document || isBookSelected) {
+    if (!document) {
       return
     }
-
     const handleScroll = () => {
-      // If we're in the book explorer view, don't update the active section
-      if (isBookSelected) {
-        return
-      }
-
       let currentSection = 'home'
       links.forEach(section => {
         const element = document.getElementById(section.id)
@@ -194,22 +179,7 @@ const HomeNavigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [links, isBookSelected]) // Add isBookSelected to dependencies
-
-  // Reset active section when entering/exiting book explorer view
-  useEffect(() => {
-    if (isBookSelected) {
-      setActiveSection('goodreads') // Highlight the Goodreads section when in book explorer
-    } else {
-      // When exiting book explorer, recalculate the active section
-      const currentSection =
-        links.find(section => {
-          const element = document.getElementById(section.id)
-          return element && element.getBoundingClientRect().top <= window.innerHeight / 2
-        })?.id || 'home'
-      setActiveSection(currentSection)
-    }
-  }, [isBookSelected, links])
+  }, [links])
 
   return (
     <Fragment>
@@ -217,29 +187,10 @@ const HomeNavigation = () => {
         sx={{
           display: ['none', '', 'block'],
           position: 'sticky',
-          top: '1.5em',
-          // Add a subtle transition when entering/exiting book explorer
-          opacity: isBookSelected ? 0.7 : 1,
-          transition: 'opacity 0.2s ease-in-out'
+          top: '1.5em'
         }}
       >
-        <nav
-          role='navigation'
-          aria-label='On-page navigation'
-          ref={navItemsRef}
-          sx={{
-            // Add a visual indicator when in book explorer
-            ...(isBookSelected && {
-              '&::before': {
-                content: '"Viewing Book Details"',
-                display: 'block',
-                fontSize: 0,
-                color: 'muted',
-                mb: 2
-              }
-            })
-          }}
-        >
+        <nav role='navigation' aria-label='On-page navigation' ref={navItemsRef}>
           {links.map(({ href, icon, id, text }) => {
             const IconComponent = icon?.reactIcon && icons[icon.reactIcon] ? icons[icon.reactIcon] : null
             return (
@@ -254,12 +205,7 @@ const HomeNavigation = () => {
                   paddingX: 2,
                   '&.active': {
                     color: 'primary'
-                  },
-                  // Disable hover effects when in book explorer
-                  ...(isBookSelected && {
-                    pointerEvents: 'none',
-                    opacity: id === 'goodreads' ? 1 : 0.5
-                  })
+                  }
                 }}
               >
                 {IconComponent ? (
