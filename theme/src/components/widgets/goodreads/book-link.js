@@ -8,12 +8,12 @@ const BookLink = ({ id, thumbnailURL, title }) => {
   // Ensure we have a valid URL and append webp format if it's a CDN URL
   const imageUrl = (() => {
     try {
-      const url = new URL(thumbnailURL);
-      return url.host === 'chrisvogt.imgix.net' ? `${thumbnailURL}?fm=webp` : thumbnailURL;
-    } catch (e) {
-      return thumbnailURL; // Return the original URL if it's invalid
+      const url = new URL(thumbnailURL)
+      return url.host === 'chrisvogt.imgix.net' ? `${thumbnailURL}?auto=compress&auto=format` : thumbnailURL
+    } catch {
+      return thumbnailURL // Return the original URL if it's invalid
     }
-  })();
+  })()
 
   const handleClick = e => {
     e.preventDefault()

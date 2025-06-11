@@ -61,7 +61,7 @@ describe('Widget/Goodreads/BookExplorer', () => {
   it('renders book image with webp format for CDN URLs', () => {
     renderWithRouter(<BookExplorer book={mockBook} onClose={() => {}} default />)
     const image = screen.getByTestId('book-preview-thumbnail')
-    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?fm=webp')
+    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?auto=compress&auto=format')
   })
 
   it('renders rating stars correctly', () => {

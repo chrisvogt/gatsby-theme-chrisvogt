@@ -37,7 +37,7 @@ describe('Widget/Goodreads/BookLink', () => {
     }
     render(<BookLink {...cdnProps} />)
     const image = screen.getByTestId('book-preview-thumbnail')
-    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?fm=webp')
+    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?auto=compress&auto=format')
   })
 
   it('preserves non-CDN URLs without modification', () => {

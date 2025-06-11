@@ -46,7 +46,7 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       const images = screen.getAllByTestId('book-preview-thumbnail')
       expect(images).toHaveLength(mockBooks.length)
       images.forEach((image, idx) => {
-        expect(image).toHaveAttribute('xlink:href', `${mockBooks[idx].cdnMediaURL}?fm=webp`)
+        expect(image).toHaveAttribute('xlink:href', `${mockBooks[idx].cdnMediaURL}?auto=compress&auto=format`)
       })
     })
   })
@@ -124,7 +124,7 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       ]
       renderWithRouter(<RecentlyReadBooks books={booksWithMixedUrls} isLoading={false} default />)
       const images = screen.getAllByTestId('book-preview-thumbnail')
-      expect(images[0]).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book1.jpg?fm=webp')
+      expect(images[0]).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book1.jpg?auto=compress&auto=format')
       expect(images[1]).toHaveAttribute('xlink:href', 'https://example.com/book2.jpg')
     })
   })

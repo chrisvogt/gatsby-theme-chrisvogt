@@ -83,8 +83,8 @@ const BookExplorer = ({ book, onClose }) => {
               alignItems: 'center'
             }}
           >
-            <div sx={{ width: '100%', maxWidth: '200px' }}>
-              <Book thumbnailURL={`${cdnMediaURL}?fm=webp`} title={title} />
+            <div sx={{ width: '100%', maxWidth: '128px' }}>
+              <Book thumbnailURL={`${cdnMediaURL}?auto=compress&auto=format`} title={title} />
             </div>
             <Link
               to={location.pathname}
