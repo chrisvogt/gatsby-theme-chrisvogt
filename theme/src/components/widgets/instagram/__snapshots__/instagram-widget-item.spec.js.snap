@@ -7,7 +7,7 @@ exports[`InstagramWidgetItem matches the snapshot 1`] = `
     rel="noopener noreferrer"
   >
     <img
-      alt="Instagram post thumbnail"
+      alt="Instagram post: This is a test caption"
       class="instagram-item-image css-16gz8ax"
       crossorigin="anonymous"
       height="280"
