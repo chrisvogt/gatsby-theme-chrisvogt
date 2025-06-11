@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import { Heading } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { Themed } from '@theme-ui/mdx'
-import { useLocation, navigate } from '@reach/router'
+import { useLocation, navigate } from '@gatsbyjs/reach-router'
 import { useEffect } from 'react'
 
 import BookExplorer from './book-explorer'
@@ -30,10 +30,6 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => {
     if (e) {
       e.preventDefault()
     }
-    console.log('Closing book explorer:', {
-      scrollY: window.scrollY,
-      pathname: location.pathname
-    })
     // Use replace to avoid adding to history stack
     navigate(location.pathname, {
       replace: true,

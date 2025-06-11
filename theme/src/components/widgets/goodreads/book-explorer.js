@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import { Card, Heading } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
 import { Link } from 'gatsby'
-import { useLocation } from '@reach/router'
+import { useLocation } from '@gatsbyjs/reach-router'
 
 import Book from '../../artwork/book'
 import ViewExternal from '../view-external'
