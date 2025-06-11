@@ -1,8 +1,10 @@
 /** @jsx jsx */
-import { Fragment, useEffect, useState } from 'react'
-import { jsx, Link } from 'theme-ui'
-import { useRef } from 'react'
-
+import { jsx } from 'theme-ui'
+import { Fragment } from 'react'
+import { Link } from '@theme-ui/components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useRef, useState, useEffect } from 'react'
+import useSiteMetadata from '../hooks/use-site-metadata'
 import {
   getFlickrWidgetDataSource,
   getGithubWidgetDataSource,
@@ -11,24 +13,17 @@ import {
   getSpotifyWidgetDataSource,
   getSteamWidgetDataSource
 } from '../selectors/metadata'
-import useSiteMetadata from '../hooks/use-site-metadata'
 
 import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import { faFlickr, faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlickr, faGithub, faGoodreads, faInstagram, faSpotify, faSteam } from '@fortawesome/free-brands-svg-icons'
 
-/**
- * icons is a library containing all of the social icons available for this theme.
- * This is to prevent the entire font awesome library from being included in the
- * bundle. See chrisvogt/gatsby-theme-chrisvogt#31 for to learn more.
- */
 const icons = {
+  faHome,
+  faNewspaper,
   faFlickr,
   faGithub,
   faGoodreads,
-  faHome,
   faInstagram,
-  faNewspaper,
   faSpotify,
   faSteam
 }

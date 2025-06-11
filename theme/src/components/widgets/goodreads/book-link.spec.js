@@ -1,18 +1,76 @@
 import React from 'react'
-import BookLink from './book-link'
-import renderer from 'react-test-renderer'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import { navigate as gatsbyNavigate } from 'gatsby'
 
-describe('BookLink', () => {
-  it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <BookLink
-          title='The Three-Body Problem'
-          infoLink='https://www.google.com/books/edition/_/ZrNzAwAAQBAJ?hl=en'
-          thumbnailURL='https://placehold.it/400/400'
-        />
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+import BookLink from './book-link'
+
+// Mock gatsby's navigate function
+jest.mock('gatsby', () => ({
+  navigate: jest.fn()
+}))
+
+describe('Widget/Goodreads/BookLink', () => {
+  const mockProps = {
+    id: '123',
+    title: 'Test Book',
+    thumbnailURL: 'https://example.com/book.jpg'
+  }
+
+  beforeEach(() => {
+    jest.clearAllMocks()
+    // Mock console.log to keep test output clean
+    jest.spyOn(console, 'log').mockImplementation(() => {})
+  })
+
+  it('renders a book link with the correct attributes', () => {
+    render(<BookLink {...mockProps} />)
+    const link = screen.getByTestId('book-link')
+    expect(link).toHaveAttribute('href', '?bookId=123')
+    expect(link).toHaveAttribute('title', 'Test Book')
+  })
+
+  it('handles CDN URLs by appending webp format', () => {
+    const cdnProps = {
+      ...mockProps,
+      thumbnailURL: 'https://chrisvogt.imgix.net/book.jpg'
+    }
+    render(<BookLink {...cdnProps} />)
+    const image = screen.getByTestId('book-preview-thumbnail')
+    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?auto=compress&auto=format')
+  })
+
+  it('preserves non-CDN URLs without modification', () => {
+    render(<BookLink {...mockProps} />)
+    const image = screen.getByTestId('book-preview-thumbnail')
+    expect(image).toHaveAttribute('xlink:href', 'https://example.com/book.jpg')
+  })
+
+  it('handles click events with scroll position preservation', () => {
+    // Mock window.scrollY
+    Object.defineProperty(window, 'scrollY', { value: 200 })
+    render(<BookLink {...mockProps} />)
+    const link = screen.getByTestId('book-link')
+    fireEvent.click(link)
+    expect(gatsbyNavigate).toHaveBeenCalledWith('?bookId=123', {
+      replace: true,
+      state: {
+        noScroll: true,
+        scrollPosition: 200
+      }
+    })
+  })
+
+  it('logs click event details for debugging', () => {
+    render(<BookLink {...mockProps} />)
+    const link = screen.getByTestId('book-link')
+    fireEvent.click(link)
+    expect(console.log).toHaveBeenCalledWith('BookLink click:', {
+      id: '123',
+      title: 'Test Book',
+      scrollY: 200,
+      pathname: '/',
+      search: ''
+    })
   })
 })
