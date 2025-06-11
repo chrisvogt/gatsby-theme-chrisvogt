@@ -4,7 +4,7 @@ import { Heading } from '@theme-ui/components'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { Themed } from '@theme-ui/mdx'
 import { useLocation, navigate } from '@reach/router'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 import BookExplorer from './book-explorer'
 import BookLink from './book-link'
@@ -12,39 +12,34 @@ import BookLink from './book-link'
 export const HEADLINE = 'Books'
 export const BODY_TEXT = 'The last 12 books I read and finished.'
 
-const useScrollPreservation = () => {
-  const scrollPosition = useRef(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      scrollPosition.current = window.scrollY
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const preserveScroll = callback => {
-    const currentScroll = scrollPosition.current
-    callback()
-    requestAnimationFrame(() => {
-      window.scrollTo(0, currentScroll)
-    })
-  }
-
-  return preserveScroll
-}
-
 const RecentlyReadBooks = ({ books = [], isLoading }) => {
   const location = useLocation()
   const params = new URLSearchParams(location.search)
   const bookId = params.get('bookId')
   const selectedBook = bookId ? books.find(book => book.id === bookId) : null
-  const preserveScroll = useScrollPreservation()
 
-  const handleClose = () => {
-    preserveScroll(() => {
-      navigate(location.pathname, { replace: true })
+  // Handle scroll position restoration
+  useEffect(() => {
+    if (location.state?.scrollPosition) {
+      console.log('Restoring scroll position:', location.state.scrollPosition)
+      window.scrollTo(0, location.state.scrollPosition)
+    }
+  }, [location.state])
+
+  const handleClose = e => {
+    if (e) {
+      e.preventDefault()
+    }
+    console.log('Closing book explorer:', {
+      scrollY: window.scrollY,
+      pathname: location.pathname
+    })
+    // Use replace to avoid adding to history stack
+    navigate(location.pathname, {
+      replace: true,
+      state: {
+        scrollPosition: window.scrollY
+      }
     })
   }
 

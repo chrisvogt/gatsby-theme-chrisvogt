@@ -2,7 +2,8 @@
 import { Fragment, useEffect, useState } from 'react'
 import { jsx, Link } from 'theme-ui'
 import { useRef } from 'react'
-
+import { useLocation } from '@reach/router'
+import useSiteMetadata from '../hooks/use-site-metadata'
 import {
   getFlickrWidgetDataSource,
   getGithubWidgetDataSource,
@@ -11,7 +12,6 @@ import {
   getSpotifyWidgetDataSource,
   getSteamWidgetDataSource
 } from '../selectors/metadata'
-import useSiteMetadata from '../hooks/use-site-metadata'
 
 import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import { faFlickr, faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -154,6 +154,9 @@ const determineLinksToRender = (options = {}) => {
 const HomeNavigation = () => {
   const navItemsRef = useRef()
   const [activeSection, setActiveSection] = useState('home')
+  const location = useLocation()
+  const params = new URLSearchParams(location.search)
+  const isBookSelected = params.has('bookId')
 
   const metadata = useSiteMetadata()
   const links = determineLinksToRender({
@@ -166,10 +169,17 @@ const HomeNavigation = () => {
   })
 
   useEffect(() => {
-    if (!document) {
+    // Don't set up scroll listener if we're in the book explorer view
+    if (!document || isBookSelected) {
       return
     }
+
     const handleScroll = () => {
+      // If we're in the book explorer view, don't update the active section
+      if (isBookSelected) {
+        return
+      }
+
       let currentSection = 'home'
       links.forEach(section => {
         const element = document.getElementById(section.id)
@@ -184,7 +194,22 @@ const HomeNavigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [links])
+  }, [links, isBookSelected]) // Add isBookSelected to dependencies
+
+  // Reset active section when entering/exiting book explorer view
+  useEffect(() => {
+    if (isBookSelected) {
+      setActiveSection('goodreads') // Highlight the Goodreads section when in book explorer
+    } else {
+      // When exiting book explorer, recalculate the active section
+      const currentSection =
+        links.find(section => {
+          const element = document.getElementById(section.id)
+          return element && element.getBoundingClientRect().top <= window.innerHeight / 2
+        })?.id || 'home'
+      setActiveSection(currentSection)
+    }
+  }, [isBookSelected, links])
 
   return (
     <Fragment>
@@ -192,10 +217,29 @@ const HomeNavigation = () => {
         sx={{
           display: ['none', '', 'block'],
           position: 'sticky',
-          top: '1.5em'
+          top: '1.5em',
+          // Add a subtle transition when entering/exiting book explorer
+          opacity: isBookSelected ? 0.7 : 1,
+          transition: 'opacity 0.2s ease-in-out'
         }}
       >
-        <nav role='navigation' aria-label='On-page navigation' ref={navItemsRef}>
+        <nav
+          role='navigation'
+          aria-label='On-page navigation'
+          ref={navItemsRef}
+          sx={{
+            // Add a visual indicator when in book explorer
+            ...(isBookSelected && {
+              '&::before': {
+                content: '"Viewing Book Details"',
+                display: 'block',
+                fontSize: 0,
+                color: 'muted',
+                mb: 2
+              }
+            })
+          }}
+        >
           {links.map(({ href, icon, id, text }) => {
             const IconComponent = icon?.reactIcon && icons[icon.reactIcon] ? icons[icon.reactIcon] : null
             return (
@@ -210,7 +254,12 @@ const HomeNavigation = () => {
                   paddingX: 2,
                   '&.active': {
                     color: 'primary'
-                  }
+                  },
+                  // Disable hover effects when in book explorer
+                  ...(isBookSelected && {
+                    pointerEvents: 'none',
+                    opacity: id === 'goodreads' ? 1 : 0.5
+                  })
                 }}
               >
                 {IconComponent ? (

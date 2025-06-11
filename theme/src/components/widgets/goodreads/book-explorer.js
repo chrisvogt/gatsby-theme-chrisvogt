@@ -63,22 +63,21 @@ const BookExplorer = ({ book, onClose }) => {
 
         {/* Book Details */}
         <div sx={{ flex: 1 }}>
-          <Heading as='h3' sx={{ mb: 2, fontSize: [3, 4] }}>
+          <Heading as='h3' sx={{ mb: 0, fontSize: [3, 4] }}>
             {title}
           </Heading>
 
-          <Themed.p sx={{ mb: 2, color: 'textMuted' }}>by {authors.join(', ')}</Themed.p>
+          <Themed.p sx={{ mt: 0, mb: 2, color: 'textMuted' }}>by {authors.join(', ')}</Themed.p>
 
-          <div sx={{ mb: 3 }}>
-            <span sx={{ color: 'textMuted', mr: 2 }}>Rating:</span>
+          <div sx={{ mt: 2, mb: 1 }}>
+            <span sx={{ color: 'textMuted', mr: 2 }}>My Rating:</span>
             <span sx={{ color: 'primary' }}>{renderStarsForRating(parseInt(rating, 10))}</span>
           </div>
 
-          <Themed.p sx={{ mb: 3 }}>{description}</Themed.p>
+          <Themed.p sx={{ mt: 2, mb: 3 }}>{description}</Themed.p>
 
           <Themed.a
             href={infoLink}
-            target='_blank'
             rel='noopener noreferrer'
             sx={{
               display: 'inline-flex',
@@ -90,7 +89,7 @@ const BookExplorer = ({ book, onClose }) => {
               }
             }}
           >
-            Learn more on Google Books
+            Learn more on Google Books &nbsp;
             <ViewExternal platform='Google Books' />
           </Themed.a>
         </div>

@@ -1,18 +1,36 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Card } from '@theme-ui/components'
-import { Link } from 'gatsby'
+import { navigate as gatsbyNavigate } from 'gatsby'
 import Book from '../../artwork/book'
 
 const BookLink = ({ id, thumbnailURL, title }) => {
   // Ensure we have a valid URL and append webp format if it's a CDN URL
   const imageUrl = thumbnailURL?.startsWith('https://chrisvogt.imgix.net') ? `${thumbnailURL}?fm=webp` : thumbnailURL
 
+  const handleClick = e => {
+    e.preventDefault()
+    console.log('BookLink click:', {
+      id,
+      title,
+      scrollY: window.scrollY,
+      pathname: window.location.pathname,
+      search: window.location.search
+    })
+    // Use Gatsby's navigate for the initial click
+    gatsbyNavigate(`?bookId=${id}`, {
+      replace: true,
+      state: {
+        noScroll: true,
+        scrollPosition: window.scrollY
+      }
+    })
+  }
+
   return (
-    <Link
-      to={`?bookId=${id}`}
-      replace
-      state={{ noScroll: true }}
+    <a
+      href={`?bookId=${id}`}
+      onClick={handleClick}
       title={title}
       sx={{
         color: 'var(--theme-ui-colors-panel-text)',
@@ -38,7 +56,7 @@ const BookLink = ({ id, thumbnailURL, title }) => {
       >
         <Book thumbnailURL={imageUrl} title={title} />
       </Card>
-    </Link>
+    </a>
   )
 }
 
