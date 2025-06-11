@@ -1,3 +1,4 @@
+import React from 'react'
 export { default as wrapRootElement } from './wrapRootElement'
 
 export const onRenderBody = ({ setHtmlAttributes, setPreBodyComponents }) => {
