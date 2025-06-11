@@ -14,7 +14,18 @@ export default ({ banner, category, date, excerpt, link, title }) => {
       }}
       to={link}
     >
-      <Card variant='PostCard'>
+      <Card
+        variant='PostCard'
+        sx={{
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          transition: 'transform 0.2s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-4px)'
+          }
+        }}
+      >
         <div
           className='card-content'
           sx={{

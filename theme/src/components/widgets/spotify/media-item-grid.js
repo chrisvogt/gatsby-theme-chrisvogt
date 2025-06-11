@@ -5,7 +5,7 @@ import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
 
-import { floatOnHover, glassmorhismPanel } from '../../../gatsby-plugin-theme-ui/theme'
+import { glassmorhismPanel } from '../../../gatsby-plugin-theme-ui/theme'
 
 const placeholders = Array(12)
   .fill()
@@ -46,9 +46,16 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
               onMouseLeave={() => setCurrentMediaId(false)}
               title={details}
               sx={{
-                display: 'flex',
+                display: 'block',
                 position: 'relative',
-                ...floatOnHover,
+                height: '100%',
+                width: '100%',
+                transition: 'all 200ms ease-in-out',
+                transform: 'translateY(0)',
+                '&:hover': {
+                  transform: 'translateY(-2px) scale(1.015)',
+                  boxShadow: 'lg'
+                },
                 ...glassmorhismPanel,
                 overflow: 'hidden',
                 '&:hover .media-item_caption': {
@@ -56,45 +63,54 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                 }
               }}
             >
-              {name && (
-                <Themed.div
-                  className='media-item_caption'
-                  sx={{
-                    color: 'white',
-                    fontSize: [1, 1, 1, 2],
-                    fontWeight: 'bold',
-                    opacity: 0,
-                    transition: 'opacity 0.2s ease-in-out',
-                    alignItems: 'center',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    position: 'absolute',
-                    textAlign: 'center',
-                    padding: 2,
-                    top: 0,
-                    right: 0,
-                    bottom: 0,
-                    left: 0,
-                    background: 'rgba(0, 0, 0, 0.85)',
-                    backdropFilter: 'blur(2px)',
-                    WebkitBackdropFilter: 'blur(2px)'
-                  }}
-                >
-                  <span>{name}</span>
-                </Themed.div>
-              )}
-              <Themed.img
-                alt='cover artwork'
-                crossOrigin='anonymous'
-                loading='lazy'
-                src={thumbnailURL}
+              <div
                 sx={{
-                  objectFit: 'cover',
-                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
                   height: '100%',
-                  aspectRatio: '1/1'
+                  width: '100%'
                 }}
-              />
+              >
+                {name && (
+                  <Themed.div
+                    className='media-item_caption'
+                    sx={{
+                      color: 'white',
+                      fontSize: [1, 1, 1, 2],
+                      fontWeight: 'bold',
+                      opacity: 0,
+                      transition: 'opacity 0.2s ease-in-out',
+                      alignItems: 'center',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      position: 'absolute',
+                      textAlign: 'center',
+                      padding: 2,
+                      top: 0,
+                      right: 0,
+                      bottom: 0,
+                      left: 0,
+                      background: 'rgba(0, 0, 0, 0.85)',
+                      backdropFilter: 'blur(2px)',
+                      WebkitBackdropFilter: 'blur(2px)'
+                    }}
+                  >
+                    <span>{name}</span>
+                  </Themed.div>
+                )}
+                <Themed.img
+                  alt='cover artwork'
+                  crossOrigin='anonymous'
+                  loading='lazy'
+                  src={thumbnailURL}
+                  sx={{
+                    objectFit: 'cover',
+                    width: '100%',
+                    height: '100%',
+                    aspectRatio: '1/1'
+                  }}
+                />
+              </div>
             </Themed.a>
           )
         })}

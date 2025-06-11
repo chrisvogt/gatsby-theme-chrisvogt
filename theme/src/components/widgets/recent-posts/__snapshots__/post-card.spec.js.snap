@@ -8,7 +8,7 @@ exports[`PostCard matches the snapshot 1`] = `
   onMouseEnter={[Function]}
 >
   <div
-    className="css-1yz7e9k"
+    className="css-139dwiw"
   >
     <div
       className="card-content css-x4n4mc"
