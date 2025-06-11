@@ -118,7 +118,7 @@ describe('InstagramWidget', () => {
       </ReduxProvider>
     )
 
-    const thumbnails = screen.getAllByAltText(/Instagram post thumbnail/i)
+    const thumbnails = screen.getAllByAltText(/Instagram post: Test Caption/i)
     expect(thumbnails).toHaveLength(1)
     expect(thumbnails[0]).toHaveAttribute(
       'src',
@@ -153,7 +153,7 @@ describe('InstagramWidget', () => {
       </ReduxProvider>
     )
 
-    const thumbnails = screen.getAllByAltText(/Instagram post thumbnail/i)
+    const thumbnails = screen.getAllByAltText(/Instagram post: Test Caption/i)
     fireEvent.click(thumbnails[0])
 
     expect(mockLightGalleryInstance.openGallery).toHaveBeenCalledWith(0)

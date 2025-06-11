@@ -30,7 +30,7 @@ describe('InstagramWidgetItem', () => {
   it('renders the image with correct alt text and source', () => {
     render(<InstagramWidgetItem {...defaultProps} />)
 
-    const img = screen.getByAltText('Instagram post thumbnail')
+    const img = screen.getByAltText(`Instagram post: ${defaultProps.post.caption}`)
     expect(img).toBeInTheDocument()
     expect(img).toHaveAttribute(
       'src',
