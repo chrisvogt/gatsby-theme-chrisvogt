@@ -5,7 +5,7 @@ import Placeholder from 'react-placeholder'
 import { RectShape } from 'react-placeholder/lib/placeholders'
 import { useState } from 'react'
 
-import { floatOnHover } from '../../../gatsby-plugin-theme-ui/theme'
+import { floatOnHover, glassmorhismPanel } from '../../../gatsby-plugin-theme-ui/theme'
 
 const placeholders = Array(12)
   .fill()
@@ -48,9 +48,12 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
               sx={{
                 display: 'flex',
                 position: 'relative',
-                borderRadius: '8px',
-                boxShadow: 'md',
-                overflow: 'hidden'
+                ...floatOnHover,
+                ...glassmorhismPanel,
+                overflow: 'hidden',
+                '&:hover .media-item_caption': {
+                  opacity: 1
+                }
               }}
             >
               {name && (
@@ -61,21 +64,20 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                     fontSize: [1, 1, 1, 2],
                     fontWeight: 'bold',
                     opacity: 0,
-
+                    transition: 'opacity 0.2s ease-in-out',
                     alignItems: 'center',
                     display: 'flex',
                     justifyContent: 'center',
                     position: 'absolute',
                     textAlign: 'center',
-
                     padding: 2,
-
                     top: 0,
                     right: 0,
                     bottom: 0,
                     left: 0,
-
-                    background: 'rgba(0, 0, 0, 0.85)'
+                    background: 'rgba(0, 0, 0, 0.85)',
+                    backdropFilter: 'blur(2px)',
+                    WebkitBackdropFilter: 'blur(2px)'
                   }}
                 >
                   <span>{name}</span>
@@ -87,9 +89,10 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
                 loading='lazy'
                 src={thumbnailURL}
                 sx={{
-                  ...floatOnHover,
                   objectFit: 'cover',
-                  width: '100%'
+                  width: '100%',
+                  height: '100%',
+                  aspectRatio: '1/1'
                 }}
               />
             </Themed.a>
