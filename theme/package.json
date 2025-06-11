@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-chrisvogt",
   "description": "My personal blog and website.",
-  "version": "0.41.2",
+  "version": "0.41.3",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "test:codecov": "JEST_JUNIT_CLASSNAME=\"{filepath}\" jest --reporters=jest-junit"
   },
   "engines": {
-    "node": ">=14.18.1",
+    "node": ">=20",
     "yarn": "^1.0.0"
   },
   "os": [
