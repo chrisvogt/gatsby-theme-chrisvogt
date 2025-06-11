@@ -3,15 +3,19 @@ import React from 'react'
 import GitHub from '../components/widgets/github'
 import Goodreads from '../components/widgets/goodreads'
 import Instagram from '../components/widgets/instagram'
+import Flickr from '../components/widgets/flickr'
 import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
+import Steam from '../components/widgets/steam'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 import {
   getGithubWidgetDataSource,
   getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
-  getSpotifyWidgetDataSource
+  getFlickrWidgetDataSource,
+  getSpotifyWidgetDataSource,
+  getSteamWidgetDataSource
 } from '../selectors/metadata'
 
 /**
@@ -31,16 +35,20 @@ const HomeWidgets = () => {
   const githubDataSource = getGithubWidgetDataSource(metadata)
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
   const instagramDataSource = getInstagramWidgetDataSource(metadata)
+  const flickrDataSource = getFlickrWidgetDataSource(metadata)
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
+  const steamDataSource = getSteamWidgetDataSource(metadata)
 
   return (
     <>
       <RecentPosts />
 
       {instagramDataSource && <Instagram />}
+      {flickrDataSource && <Flickr />}
       {githubDataSource && <GitHub />}
       {goodreadsDataSource && <Goodreads />}
       {spotifyDataSource && <Spotify />}
+      {steamDataSource && <Steam />}
     </>
   )
 }

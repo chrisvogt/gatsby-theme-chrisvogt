@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import NotFoundPage from './404'
 import { ThemeUIProvider } from 'theme-ui'
@@ -7,8 +7,18 @@ import { ThemeUIProvider } from 'theme-ui'
 // Mock Layout component
 jest.mock('../components/layout', () => ({ children }) => <div className='layoutMock'>{children}</div>)
 
-// Mock Lottie
-jest.mock('lottie-react-web', () => () => <div data-testid='lottie-animation'>Lottie Animation</div>)
+// Mock loadable Lottie component
+jest.mock('lottie-react-web', () => {
+  const React = require('react')
+  return {
+    __esModule: true,
+    default: React.forwardRef((props, ref) => (
+      <div ref={ref} data-testid='lottie-animation'>
+        Lottie Animation
+      </div>
+    ))
+  }
+})
 
 // Mock Theme
 const mockTheme = {
@@ -21,25 +31,22 @@ const mockTheme = {
 const renderWithTheme = component => render(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
 
 describe('404 Page', () => {
-  it('renders correctly', () => {
-    renderWithTheme(<NotFoundPage />)
+  it('renders correctly', async () => {
+    await waitFor(() => renderWithTheme(<NotFoundPage />))
+
     expect(screen.getByRole('heading', { name: '404' })).toBeInTheDocument()
-
-    // Use a regular expression to match partial text
     expect(screen.getByText(/Lost in space\?/i)).toBeInTheDocument()
-
-    // Check the home link separately
     expect(screen.getByRole('link', { name: 'home' })).toHaveAttribute('href', '/')
   })
 
-  it('renders the Lottie animation', () => {
+  it('renders the Lottie animation after hydration', async () => {
     renderWithTheme(<NotFoundPage />)
-    expect(screen.getByTestId('lottie-animation')).toBeInTheDocument()
+    expect(await screen.findByTestId('lottie-animation')).toBeInTheDocument()
   })
 
-  it('renders the Layout component', () => {
-    renderWithTheme(<NotFoundPage />)
-    expect(screen.getByText('Lottie Animation')).toBeInTheDocument()
+  it('renders the Layout component', async () => {
+    await waitFor(() => renderWithTheme(<NotFoundPage />))
+
     const layoutDiv = screen.getByText('Lottie Animation').closest('.layoutMock')
     expect(layoutDiv).toBeInTheDocument()
   })

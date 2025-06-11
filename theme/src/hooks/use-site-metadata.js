@@ -18,6 +18,10 @@ const useSiteMetadata = () => {
           title
           titleTemplate
           widgets {
+            flickr {
+              username
+              widgetDataSource
+            }
             github {
               username
               widgetDataSource
@@ -31,6 +35,10 @@ const useSiteMetadata = () => {
               widgetDataSource
             }
             spotify {
+              username
+              widgetDataSource
+            }
+            steam {
               username
               widgetDataSource
             }

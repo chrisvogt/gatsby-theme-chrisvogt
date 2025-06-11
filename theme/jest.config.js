@@ -42,8 +42,13 @@ module.exports = {
     url: 'http://localhost'
   },
 
-  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
+  // Transform modern JavaScript and JSX using Babel
+  transform: {
+    '^.+\\.[jt]sx?$': 'babel-jest'
+  },
+
+  // Allow specific ESM packages in node_modules to be transformed
+  transformIgnorePatterns: ['node_modules/(?!(gatsby|@mdx-js/react)/)'],
 
   // Indicates whether each individual test should be reported during the run
   verbose: false

@@ -2,6 +2,8 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { ThemeUIProvider } from 'theme-ui'
 import { useStaticQuery } from 'gatsby'
+import { Provider } from 'react-redux'
+import configureStore from 'redux-mock-store'
 
 import Media, { Head } from './media'
 
@@ -28,6 +30,15 @@ const mockTheme = {
     'panel-background': '#f0f0f0'
   }
 }
+
+// Create mock store
+const mockStore = configureStore([])
+const store = mockStore({
+  audioPlayer: {
+    isVisible: false,
+    soundcloudId: null
+  }
+})
 
 jest.mock('gatsby')
 jest.mock('../components/layout', () => {
@@ -57,8 +68,13 @@ describe('Media Post', () => {
     jest.clearAllMocks()
   })
 
-  // Helper function to wrap components in the ThemeUIProvider
-  const renderWithTheme = component => renderer.create(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
+  // Helper function to wrap components in the ThemeUIProvider and Redux Provider
+  const renderWithTheme = component =>
+    renderer.create(
+      <Provider store={store}>
+        <ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>
+      </Provider>
+    )
 
   // Test with no media sources
   it('renders correctly with no media sources', () => {

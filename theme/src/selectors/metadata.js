@@ -6,6 +6,10 @@ export const getDescription = metadata => metadata?.description
 
 export const getFooterText = metadata => metadata?.footerText
 
+export const getFlickrWidgetDataSource = metadata => metadata?.widgets?.flickr?.widgetDataSource
+
+export const getFlickrUsername = metadata => metadata?.widgets?.flickr?.username
+
 export const getGithubUsername = metadata => metadata?.widgets?.github?.username
 
 export const getGithubWidgetDataSource = metadata => metadata?.widgets?.github?.widgetDataSource
@@ -25,6 +29,8 @@ export const getInstagramUsername = metadata => metadata?.widgets?.instagram?.us
 export const getLanguageCode = metadata => metadata?.languageCode
 
 export const getSpotifyWidgetDataSource = metadata => metadata?.widgets?.spotify?.widgetDataSource
+
+export const getSteamWidgetDataSource = metadata => metadata?.widgets?.steam?.widgetDataSource
 
 export const getSubhead = metadata => metadata?.subhead
 

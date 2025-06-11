@@ -6,8 +6,11 @@
   <a href='https://app.netlify.com/sites/chrisvogt/deploys'>
     <img src='https://api.netlify.com/api/v1/badges/29f330b8-22bf-4f7f-a0f0-240476512db0/deploy-status' alt='Netlify Status'>
   </a>
-  <a href='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt'>
-    <img src='https://circleci.com/gh/chrisvogt/gatsby-theme-chrisvogt.svg?style=shield' alt='Current CircleCI build status.' />
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml/badge.svg?branch=main' alt='Continuous Integration badge' />
+  </a>
+  <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml'>
+    <img src='https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml/badge.svg?branch=main' alt='CodeQL badge' />
   </a>
   <a href='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt'>
     <img src='https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/main/graph/badge.svg?token=YUksu2c99s' alt='Code coverage report badge.' />
@@ -20,7 +23,7 @@
   </a>
 </p>
 
-This repository contains my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/www.chrisvogt.me).
+This repository contains the source code behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/www.chrisvogt.me).
 
 ## Local development
 

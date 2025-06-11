@@ -2,890 +2,754 @@
   "ok": true,
   "payload": {
     "collections": {
-      "topTracks": [
-        {
-          "previewURL": "https://p.scdn.co/mp3-preview/85b567e4e72f2f12b990e1f1b0c7644e4a86c30e?cid=7e543c00908f43738ba514c7213a93d8",
-          "id": "3XfO4iKlM7fdoiJ4uz1wku",
-          "albumImages": [
-            {
-              "height": 640,
-              "width": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273930f6a7ee143629902a43c4b"
-            },
-            {
-              "width": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02930f6a7ee143629902a43c4b",
-              "height": 300
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00004851930f6a7ee143629902a43c4b",
-              "width": 64,
-              "height": 64
-            }
-          ],
-          "type": "track",
-          "name": "Love for the Sake of Love",
-          "artists": ["Claudia Barry"],
-          "spotifyURL": "https://open.spotify.com/track/3XfO4iKlM7fdoiJ4uz1wku",
-          "uri": "spotify:track:3XfO4iKlM7fdoiJ4uz1wku"
-        },
-        {
-          "id": "2IFFKj9orAsQOOS0JRhHAW",
-          "uri": "spotify:track:2IFFKj9orAsQOOS0JRhHAW",
-          "type": "track",
-          "albumImages": [
-            {
-              "width": 640,
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273d3af16078e9a78edac2ebed8"
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00001e02d3af16078e9a78edac2ebed8",
-              "height": 300,
-              "width": 300
-            },
-            {
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d00004851d3af16078e9a78edac2ebed8",
-              "width": 64
-            }
-          ],
-          "name": "JEWELZ",
-          "artists": ["Anderson .Paak"],
-          "previewURL": "https://p.scdn.co/mp3-preview/bba91a6b9bd23d9e662ed0361162903975d8c2a5?cid=7e543c00908f43738ba514c7213a93d8",
-          "spotifyURL": "https://open.spotify.com/track/2IFFKj9orAsQOOS0JRhHAW"
-        },
-        {
-          "previewURL": "https://p.scdn.co/mp3-preview/eed0dcbe7a1dfcca41cdf64ac2f82cca8e139a8b?cid=7e543c00908f43738ba514c7213a93d8",
-          "type": "track",
-          "artists": ["Zara Larsson"],
-          "albumImages": [
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000b2730bc295fb742c44064e6abccb",
-              "width": 640,
-              "height": 640
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e020bc295fb742c44064e6abccb",
-              "width": 300
-            },
-            {
-              "width": 64,
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048510bc295fb742c44064e6abccb"
-            }
-          ],
-          "name": "Need Someone",
-          "uri": "spotify:track:0e6HwIMqkDwr80TmH1mdt3",
-          "id": "0e6HwIMqkDwr80TmH1mdt3",
-          "spotifyURL": "https://open.spotify.com/track/0e6HwIMqkDwr80TmH1mdt3"
-        },
-        {
-          "name": "Kumbaya",
-          "type": "track",
-          "uri": "spotify:track:2LiAbVThDjRxRWz8SQaWuw",
-          "id": "2LiAbVThDjRxRWz8SQaWuw",
-          "previewURL": "https://p.scdn.co/mp3-preview/b4bd150ca9dcf5f28bfeb1a4b795c5b2aa5ccb0d?cid=7e543c00908f43738ba514c7213a93d8",
-          "spotifyURL": "https://open.spotify.com/track/2LiAbVThDjRxRWz8SQaWuw",
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b27389934cd399af1ab7e0eb53cd",
-              "width": 640
-            },
-            {
-              "width": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e0289934cd399af1ab7e0eb53cd",
-              "height": 300
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000485189934cd399af1ab7e0eb53cd",
-              "width": 64,
-              "height": 64
-            }
-          ],
-          "artists": ["Nick Dorian", "Shibo"]
-        },
-        {
-          "artists": ["Toro y Moi"],
-          "spotifyURL": "https://open.spotify.com/track/31F0KxmTD4rz3o0tJht5RL",
-          "type": "track",
-          "name": "Ordinary Pleasure",
-          "previewURL": "https://p.scdn.co/mp3-preview/73124eeeb7ffc8998b969bcc31f0ff22d0035a52?cid=7e543c00908f43738ba514c7213a93d8",
-          "uri": "spotify:track:31F0KxmTD4rz3o0tJht5RL",
-          "id": "31F0KxmTD4rz3o0tJht5RL",
-          "albumImages": [
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000b273e6afa3b111faa03806f7d257",
-              "height": 640,
-              "width": 640
-            },
-            {
-              "height": 300,
-              "width": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02e6afa3b111faa03806f7d257"
-            },
-            {
-              "height": 64,
-              "width": 64,
-              "url": "https://i.scdn.co/image/ab67616d00004851e6afa3b111faa03806f7d257"
-            }
-          ]
-        },
-        {
-          "previewURL": "https://p.scdn.co/mp3-preview/cc5e26dc6c10a17e46a493221689d961300aed6a?cid=7e543c00908f43738ba514c7213a93d8",
-          "id": "3KapR70eIR6Zm3kJfG4oB3",
-          "albumImages": [
-            {
-              "width": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b27307557fc5835b32bd8bdcd813",
-              "height": 640
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00001e0207557fc5835b32bd8bdcd813",
-              "height": 300,
-              "width": 300
-            },
-            {
-              "height": 64,
-              "width": 64,
-              "url": "https://i.scdn.co/image/ab67616d0000485107557fc5835b32bd8bdcd813"
-            }
-          ],
-          "uri": "spotify:track:3KapR70eIR6Zm3kJfG4oB3",
-          "artists": ["BJ The Chicago Kid", "Anderson .Paak"],
-          "spotifyURL": "https://open.spotify.com/track/3KapR70eIR6Zm3kJfG4oB3",
-          "type": "track",
-          "name": "Feel The Vibe"
-        },
-        {
-          "id": "2rXH6dk75hFUjg81BMJYFD",
-          "albumImages": [
-            {
-              "width": 640,
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b273503b16348e47bc3c1c823eba"
-            },
-            {
-              "height": 300,
-              "width": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e02503b16348e47bc3c1c823eba"
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00004851503b16348e47bc3c1c823eba",
-              "width": 64,
-              "height": 64
-            }
-          ],
-          "type": "track",
-          "artists": ["Zara Larsson"],
-          "name": "Need Someone",
-          "uri": "spotify:track:2rXH6dk75hFUjg81BMJYFD",
-          "spotifyURL": "https://open.spotify.com/track/2rXH6dk75hFUjg81BMJYFD",
-          "previewURL": "https://p.scdn.co/mp3-preview/eed0dcbe7a1dfcca41cdf64ac2f82cca8e139a8b?cid=7e543c00908f43738ba514c7213a93d8"
-        },
-        {
-          "id": "3B9ieKCdzdULYHSETdNsKR",
-          "name": "Feel Good",
-          "type": "track",
-          "uri": "spotify:track:3B9ieKCdzdULYHSETdNsKR",
-          "albumImages": [
-            {
-              "width": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2734674688688f74bd523616d0f",
-              "height": 640
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00001e024674688688f74bd523616d0f",
-              "height": 300,
-              "width": 300
-            },
-            {
-              "width": 64,
-              "height": 64,
-              "url": "https://i.scdn.co/image/ab67616d000048514674688688f74bd523616d0f"
-            }
-          ],
-          "previewURL": "https://p.scdn.co/mp3-preview/26d66997de3531f20e54fa03dd073e4f27e0ed66?cid=7e543c00908f43738ba514c7213a93d8",
-          "artists": ["Chet Faker"],
-          "spotifyURL": "https://open.spotify.com/track/3B9ieKCdzdULYHSETdNsKR"
-        },
-        {
-          "uri": "spotify:track:7HtNRW16rKIWHaHIoRWUbw",
-          "spotifyURL": "https://open.spotify.com/track/7HtNRW16rKIWHaHIoRWUbw",
-          "previewURL": "https://p.scdn.co/mp3-preview/bf3d23584ba357f0b128d7b521c3001d0cc9d1a7?cid=7e543c00908f43738ba514c7213a93d8",
-          "albumImages": [
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000b2738d54bda9af74a20244570ec0",
-              "height": 640,
-              "width": 640
-            },
-            {
-              "height": 300,
-              "width": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e028d54bda9af74a20244570ec0"
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d000048518d54bda9af74a20244570ec0",
-              "width": 64,
-              "height": 64
-            }
-          ],
-          "artists": ["Anderson .Paak", "JID", "Jay Rock", "Noname"],
-          "name": "Lockdown (feat. JID, Noname & Jay Rock) - Remix",
-          "id": "7HtNRW16rKIWHaHIoRWUbw",
-          "type": "track"
-        },
-        {
-          "previewURL": "https://p.scdn.co/mp3-preview/d346982764e3ce0f39e1d4cff2c8abb9c401743a?cid=7e543c00908f43738ba514c7213a93d8",
-          "uri": "spotify:track:3f9Xt5Bcu1QooplxlTPEtb",
-          "id": "3f9Xt5Bcu1QooplxlTPEtb",
-          "name": "Ur Gonna Wish U Believed Me",
-          "spotifyURL": "https://open.spotify.com/track/3f9Xt5Bcu1QooplxlTPEtb",
-          "artists": ["Cavetown"],
-          "albumImages": [
-            {
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2734e851f5899d7b7c0dd95f9ef",
-              "width": 640
-            },
-            {
-              "width": 300,
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e024e851f5899d7b7c0dd95f9ef"
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d000048514e851f5899d7b7c0dd95f9ef",
-              "width": 64,
-              "height": 64
-            }
-          ],
-          "type": "track"
-        },
-        {
-          "type": "track",
-          "albumImages": [
-            {
-              "width": 640,
-              "height": 640,
-              "url": "https://i.scdn.co/image/ab67616d0000b2736c523e64dffbdad6b28d8be4"
-            },
-            {
-              "height": 300,
-              "url": "https://i.scdn.co/image/ab67616d00001e026c523e64dffbdad6b28d8be4",
-              "width": 300
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d000048516c523e64dffbdad6b28d8be4",
-              "width": 64,
-              "height": 64
-            }
-          ],
-          "artists": ["Euføeni", "Max Green"],
-          "uri": "spotify:track:7LKnHmDpqEiLuSWsb7MACx",
-          "previewURL": "https://p.scdn.co/mp3-preview/aad96a13f128968a2f484444f56e03dcdfc26614?cid=7e543c00908f43738ba514c7213a93d8",
-          "id": "7LKnHmDpqEiLuSWsb7MACx",
-          "spotifyURL": "https://open.spotify.com/track/7LKnHmDpqEiLuSWsb7MACx",
-          "name": "Only on the Weekends"
-        },
-        {
-          "artists": ["Slave"],
-          "spotifyURL": "https://open.spotify.com/track/2frjUX62I8nGF41cSUmNVx",
-          "type": "track",
-          "uri": "spotify:track:2frjUX62I8nGF41cSUmNVx",
-          "id": "2frjUX62I8nGF41cSUmNVx",
-          "name": "Party Lites - Joey Negro Boogiefied Mix",
-          "previewURL": "https://p.scdn.co/mp3-preview/7107718e76bd47dfd16da7709cf4ad929873b710?cid=7e543c00908f43738ba514c7213a93d8",
-          "albumImages": [
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000b273cc73e2badf2bfc17bfa348df",
-              "height": 640,
-              "width": 640
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00001e02cc73e2badf2bfc17bfa348df",
-              "width": 300,
-              "height": 300
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d00004851cc73e2badf2bfc17bfa348df",
-              "width": 64,
-              "height": 64
-            }
-          ]
-        }
-      ],
       "playlists": [
         {
           "collaborative": false,
           "description": "",
-          "owner": {
-            "display_name": "artinreality",
-            "href": "https://api.spotify.com/v1/users/artinreality",
-            "id": "artinreality",
-            "type": "user",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
-            "uri": "spotify:user:artinreality"
-          },
-          "public": true,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/4YPO7LX6bOxrCtYGh3OyeP"
-          },
-          "href": "https://api.spotify.com/v1/playlists/4YPO7LX6bOxrCtYGh3OyeP",
-          "type": "playlist",
-          "tracks": {
-            "total": 395,
-            "href": "https://api.spotify.com/v1/playlists/4YPO7LX6bOxrCtYGh3OyeP/tracks"
-          },
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/1mAu303XPfs83Wno3UyHze" },
+          "href": "https://api.spotify.com/v1/playlists/1mAu303XPfs83Wno3UyHze",
+          "id": "1mAu303XPfs83Wno3UyHze",
           "images": [
             {
               "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169",
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0267103283a4eb57578a428252ab67616d00001e0284d413b195aac8a69cc6e5c6ab67616d00001e028654ac28136b3104b3cc57b2ab67616d00001e02c75a14e746ffe2030e8cd5da",
               "width": 640
             },
             {
-              "width": 300,
               "height": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169"
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0267103283a4eb57578a428252ab67616d00001e0284d413b195aac8a69cc6e5c6ab67616d00001e028654ac28136b3104b3cc57b2ab67616d00001e02c75a14e746ffe2030e8cd5da",
+              "width": 300
             },
             {
-              "width": 60,
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b273275083a05d58f2f6708c93f4ab67616d0000b27383df44cde2ecfd41bfa9d03bab67616d0000b2738f570fac0016076d60777e96ab67616d0000b273f1ae9c707f6ec5e80e5fe169",
-              "height": 60
-            }
-          ],
-          "uri": "spotify:playlist:4YPO7LX6bOxrCtYGh3OyeP",
-          "snapshot_id": "NzM4LDM1MjAyZTNjNWQ1MTY0ODM5MmJkYmMyYzRjZjk2ZDY0MWQwOGQ0YWQ=",
-          "primary_color": null,
-          "name": "Ultimate Indie Pop",
-          "id": "4YPO7LX6bOxrCtYGh3OyeP"
-        },
-        {
-          "snapshot_id": "NjY4LDQ5YWFiYjg1NTliYmEwODM0NGY4MjMwMzFkZWRmYjcxMDkzODBiNWY=",
-          "type": "playlist",
-          "owner": {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
-            "id": "artinreality",
-            "uri": "spotify:user:artinreality",
-            "type": "user",
-            "display_name": "artinreality",
-            "href": "https://api.spotify.com/v1/users/artinreality"
-          },
-          "description": "",
-          "name": "Synth-Pop, Nu-Disco, Dance, House",
-          "uri": "spotify:playlist:53Ry00dOkLb6yp9C2ev6ff",
-          "tracks": {
-            "href": "https://api.spotify.com/v1/playlists/53Ry00dOkLb6yp9C2ev6ff/tracks",
-            "total": 258
-          },
-          "id": "53Ry00dOkLb6yp9C2ev6ff",
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/53Ry00dOkLb6yp9C2ev6ff"
-          },
-          "images": [
-            {
-              "width": 640,
-              "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a"
-            },
-            {
-              "width": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a",
-              "height": 300
-            },
-            {
-              "width": 60,
               "height": 60,
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b2730bc295fb742c44064e6abccbab67616d0000b2732ba46acbe49b6d40d5439b34ab67616d0000b273bf20d7182e5552c97861a5f4ab67616d0000b273cacd7b87c756da21745e516a"
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0267103283a4eb57578a428252ab67616d00001e0284d413b195aac8a69cc6e5c6ab67616d00001e028654ac28136b3104b3cc57b2ab67616d00001e02c75a14e746ffe2030e8cd5da",
+              "width": 60
             }
           ],
-          "primary_color": null,
-          "href": "https://api.spotify.com/v1/playlists/53Ry00dOkLb6yp9C2ev6ff",
-          "public": true,
-          "collaborative": false
-        },
-        {
-          "tracks": {
-            "total": 211,
-            "href": "https://api.spotify.com/v1/playlists/4cWFcKJwGWdus1ybRF0JpH/tracks"
-          },
-          "description": "EDM, Chillout, Trap, etc. MUST HAVE VOCALS.",
+          "name": "Spotify Unwrapped 2024",
           "owner": {
-            "display_name": "artinreality",
-            "id": "artinreality",
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
             "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
             "type": "user",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
             "uri": "spotify:user:artinreality"
           },
-          "collaborative": false,
-          "uri": "spotify:playlist:4cWFcKJwGWdus1ybRF0JpH",
-          "href": "https://api.spotify.com/v1/playlists/4cWFcKJwGWdus1ybRF0JpH",
+          "primary_color": null,
           "public": true,
+          "snapshot_id": "AAAAAjbM3CQkZmAhfOFep5jX88QAtlLr",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/1mAu303XPfs83Wno3UyHze/tracks", "total": 100 },
+          "type": "playlist",
+          "uri": "spotify:playlist:1mAu303XPfs83Wno3UyHze",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0267103283a4eb57578a428252ab67616d00001e0284d413b195aac8a69cc6e5c6ab67616d00001e028654ac28136b3104b3cc57b2ab67616d00001e02c75a14e746ffe2030e8cd5da.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/4YPO7LX6bOxrCtYGh3OyeP" },
+          "href": "https://api.spotify.com/v1/playlists/4YPO7LX6bOxrCtYGh3OyeP",
+          "id": "4YPO7LX6bOxrCtYGh3OyeP",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0239a733e21d19ebb9a21cff0aab67616d00001e027a293e6787c6d200c5077cd0ab67616d00001e02f77d1b4e9c1f1029fef472a4ab67616d00001e02fa0ab3a28b5c52d8a5f97045",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0239a733e21d19ebb9a21cff0aab67616d00001e027a293e6787c6d200c5077cd0ab67616d00001e02f77d1b4e9c1f1029fef472a4ab67616d00001e02fa0ab3a28b5c52d8a5f97045",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0239a733e21d19ebb9a21cff0aab67616d00001e027a293e6787c6d200c5077cd0ab67616d00001e02f77d1b4e9c1f1029fef472a4ab67616d00001e02fa0ab3a28b5c52d8a5f97045",
+              "width": 60
+            }
+          ],
+          "name": "Ultimate Indie Pop",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
+          },
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAC72TT+qEPMb8RqG2sDJnXYvMzxYl/",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/4YPO7LX6bOxrCtYGh3OyeP/tracks", "total": 406 },
+          "type": "playlist",
+          "uri": "spotify:playlist:4YPO7LX6bOxrCtYGh3OyeP",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0239a733e21d19ebb9a21cff0aab67616d00001e027a293e6787c6d200c5077cd0ab67616d00001e02f77d1b4e9c1f1029fef472a4ab67616d00001e02fa0ab3a28b5c52d8a5f97045.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "EDM, Chillout, Trap, etc. MUST HAVE VOCALS.",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/4cWFcKJwGWdus1ybRF0JpH" },
+          "href": "https://api.spotify.com/v1/playlists/4cWFcKJwGWdus1ybRF0JpH",
           "id": "4cWFcKJwGWdus1ybRF0JpH",
           "images": [
             {
               "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7",
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e02487e51b7a7cccd4d03444e9eab67616d00001e02dc0b21709797059be4d6d6f4ab67616d00001e02e6918204c83ab1d93d04df44ab67616d00001e02f014b5a71d5e7b0a9ee64386",
               "width": 640
             },
             {
               "height": 300,
-              "width": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7"
-            },
-            {
-              "width": 60,
-              "height": 60,
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b273795b4776348911921d7b34caab67616d0000b273b2adf664bf57ab1070e642bcab67616d0000b273bd9665c874c92ae24a54164aab67616d0000b273e14f11f796cef9f9a82691a7"
-            }
-          ],
-          "primary_color": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/4cWFcKJwGWdus1ybRF0JpH"
-          },
-          "snapshot_id": "MzU4LDExMDljY2NiYzQyYTgxNzA4ZDY4OTU3Y2FiNWY5YjI3MThlYmQ4M2Y=",
-          "type": "playlist",
-          "name": "Vocal Electronic"
-        },
-        {
-          "tracks": {
-            "total": 141,
-            "href": "https://api.spotify.com/v1/playlists/3h8hEJstYMBLe9HYKWQ3Mi/tracks"
-          },
-          "images": [
-            {
-              "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72",
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e02487e51b7a7cccd4d03444e9eab67616d00001e02dc0b21709797059be4d6d6f4ab67616d00001e02e6918204c83ab1d93d04df44ab67616d00001e02f014b5a71d5e7b0a9ee64386",
               "width": 300
             },
             {
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b2732399c0aa5d07a56921cbae9bab67616d0000b2733960505e249b30cac0ce8d82ab67616d0000b27357c375e481922937e31de2c0ab67616d0000b2739d6bd2afa2987a69b7b55f72",
-              "width": 60,
-              "height": 60
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e02487e51b7a7cccd4d03444e9eab67616d00001e02dc0b21709797059be4d6d6f4ab67616d00001e02e6918204c83ab1d93d04df44ab67616d00001e02f014b5a71d5e7b0a9ee64386",
+              "width": 60
             }
           ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/3h8hEJstYMBLe9HYKWQ3Mi"
-          },
-          "href": "https://api.spotify.com/v1/playlists/3h8hEJstYMBLe9HYKWQ3Mi",
-          "public": true,
-          "description": "",
-          "uri": "spotify:playlist:3h8hEJstYMBLe9HYKWQ3Mi",
-          "collaborative": false,
-          "snapshot_id": "MTk4LDQ3NTEyMTRiNTJkMDEzMDc0N2M3ZGYwZTIwMzQ3ODY4NzdhYzkxYWE=",
-          "id": "3h8hEJstYMBLe9HYKWQ3Mi",
-          "primary_color": null,
+          "name": "Vocal Electronic",
           "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
             "href": "https://api.spotify.com/v1/users/artinreality",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
-            "type": "user",
-            "uri": "spotify:user:artinreality",
             "id": "artinreality",
-            "display_name": "artinreality"
+            "type": "user",
+            "uri": "spotify:user:artinreality"
           },
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAABbVvaOSr5krkSrELA970nUPcKABh2",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/4cWFcKJwGWdus1ybRF0JpH/tracks", "total": 218 },
           "type": "playlist",
-          "name": "Electronic Chillout"
+          "uri": "spotify:playlist:4cWFcKJwGWdus1ybRF0JpH",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e02487e51b7a7cccd4d03444e9eab67616d00001e02dc0b21709797059be4d6d6f4ab67616d00001e02e6918204c83ab1d93d04df44ab67616d00001e02f014b5a71d5e7b0a9ee64386.jpg"
         },
         {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/53Ry00dOkLb6yp9C2ev6ff" },
+          "href": "https://api.spotify.com/v1/playlists/53Ry00dOkLb6yp9C2ev6ff",
+          "id": "53Ry00dOkLb6yp9C2ev6ff",
           "images": [
             {
-              "width": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead",
-              "height": 640
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e022ba46acbe49b6d40d5439b34ab67616d00001e026c51df609829840331925bdcab67616d00001e028d9d93cf95ef819563e021ffab67616d00001e02b872056640e99764373a1654",
+              "width": 640
             },
             {
-              "width": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead",
-              "height": 300
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e022ba46acbe49b6d40d5439b34ab67616d00001e026c51df609829840331925bdcab67616d00001e028d9d93cf95ef819563e021ffab67616d00001e02b872056640e99764373a1654",
+              "width": 300
             },
             {
-              "width": 60,
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b27343c3e9ed6a415659601e3463ab67616d0000b2734e851f5899d7b7c0dd95f9efab67616d0000b2736a4ba4bf22f0c73d0ad24a99ab67616d0000b273b746f162c97d38e8d04d9ead",
-              "height": 60
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e022ba46acbe49b6d40d5439b34ab67616d00001e026c51df609829840331925bdcab67616d00001e028d9d93cf95ef819563e021ffab67616d00001e02b872056640e99764373a1654",
+              "width": 60
+            }
+          ],
+          "name": "Synth-Pop, Nu-Disco, Dance, House",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
+          },
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAACpoU/97BHHlqNP+Swp1eeM0lz7dJg",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/53Ry00dOkLb6yp9C2ev6ff/tracks", "total": 266 },
+          "type": "playlist",
+          "uri": "spotify:playlist:53Ry00dOkLb6yp9C2ev6ff",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e022ba46acbe49b6d40d5439b34ab67616d00001e026c51df609829840331925bdcab67616d00001e028d9d93cf95ef819563e021ffab67616d00001e02b872056640e99764373a1654.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/42a26csbjfu6Jq9Y9CvS5b" },
+          "href": "https://api.spotify.com/v1/playlists/42a26csbjfu6Jq9Y9CvS5b",
+          "id": "42a26csbjfu6Jq9Y9CvS5b",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e02460730b9b1fa8b2f3a4f0a3aab67616d00001e024e851f5899d7b7c0dd95f9efab67616d00001e02a724f0a2c23fdc0ef98201b8ab67616d00001e02ab4975c337dbc4ebf79bc676",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e02460730b9b1fa8b2f3a4f0a3aab67616d00001e024e851f5899d7b7c0dd95f9efab67616d00001e02a724f0a2c23fdc0ef98201b8ab67616d00001e02ab4975c337dbc4ebf79bc676",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e02460730b9b1fa8b2f3a4f0a3aab67616d00001e024e851f5899d7b7c0dd95f9efab67616d00001e02a724f0a2c23fdc0ef98201b8ab67616d00001e02ab4975c337dbc4ebf79bc676",
+              "width": 60
             }
           ],
           "name": "Indie Chillout",
-          "type": "playlist",
-          "primary_color": null,
-          "id": "42a26csbjfu6Jq9Y9CvS5b",
-          "snapshot_id": "MzU0LGM2NDRlNzEzYzc4ZmE2MmViNGM4MzQ5NGIyYjRiOWQ1N2FmMTUwYzQ=",
-          "href": "https://api.spotify.com/v1/playlists/42a26csbjfu6Jq9Y9CvS5b",
-          "tracks": {
-            "total": 228,
-            "href": "https://api.spotify.com/v1/playlists/42a26csbjfu6Jq9Y9CvS5b/tracks"
-          },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/42a26csbjfu6Jq9Y9CvS5b"
-          },
           "owner": {
-            "type": "user",
-            "display_name": "artinreality",
-            "uri": "spotify:user:artinreality",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
             "id": "artinreality",
-            "href": "https://api.spotify.com/v1/users/artinreality"
+            "type": "user",
+            "uri": "spotify:user:artinreality"
           },
-          "collaborative": false,
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAABZA7yXFBDvCs0CxmzTNDwt24VXC4g",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/42a26csbjfu6Jq9Y9CvS5b/tracks", "total": 230 },
+          "type": "playlist",
           "uri": "spotify:playlist:42a26csbjfu6Jq9Y9CvS5b",
-          "description": "",
-          "public": true
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e02460730b9b1fa8b2f3a4f0a3aab67616d00001e024e851f5899d7b7c0dd95f9efab67616d00001e02a724f0a2c23fdc0ef98201b8ab67616d00001e02ab4975c337dbc4ebf79bc676.jpg"
         },
         {
-          "images": [
-            {
-              "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6",
-              "width": 640
-            },
-            {
-              "height": 300,
-              "width": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6"
-            },
-            {
-              "height": 60,
-              "width": 60,
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b2730786798fac9a15f293a62502ab67616d0000b2733b83944662e1c181c2056307ab67616d0000b2735406f784d9a47154dadf8cb7ab67616d0000b273d0927ea5b0dde802e65eb9b6"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/12hPoK5CsB46n2w3gi7GMJ"
-          },
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/12hPoK5CsB46n2w3gi7GMJ" },
           "href": "https://api.spotify.com/v1/playlists/12hPoK5CsB46n2w3gi7GMJ",
-          "snapshot_id": "NzYsMTE4OTBiM2QxMDI4YzczODc5MzFkNmYzYjJkZTE5NzUxNGYyMWE0ZA==",
-          "type": "playlist",
-          "name": "Indie Dance, Vocal & Electronica",
-          "public": true,
-          "primary_color": null,
-          "uri": "spotify:playlist:12hPoK5CsB46n2w3gi7GMJ",
           "id": "12hPoK5CsB46n2w3gi7GMJ",
-          "description": "",
-          "owner": {
-            "type": "user",
-            "id": "artinreality",
-            "uri": "spotify:user:artinreality",
-            "href": "https://api.spotify.com/v1/users/artinreality",
-            "display_name": "artinreality",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            }
-          },
-          "collaborative": false,
-          "tracks": {
-            "href": "https://api.spotify.com/v1/playlists/12hPoK5CsB46n2w3gi7GMJ/tracks",
-            "total": 162
-          }
-        },
-        {
-          "id": "05aRcvpURUQdWgbn5iZ26p",
-          "public": true,
-          "tracks": {
-            "href": "https://api.spotify.com/v1/playlists/05aRcvpURUQdWgbn5iZ26p/tracks",
-            "total": 110
-          },
-          "owner": {
-            "type": "user",
-            "display_name": "artinreality",
-            "id": "artinreality",
-            "href": "https://api.spotify.com/v1/users/artinreality",
-            "uri": "spotify:user:artinreality",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            }
-          },
-          "name": "Eclectic 60s and 70s",
-          "collaborative": false,
-          "href": "https://api.spotify.com/v1/playlists/05aRcvpURUQdWgbn5iZ26p",
           "images": [
             {
               "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b",
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e025406f784d9a47154dadf8cb7ab67616d00001e02c6b577e4c4a6d326354a89f7ab67616d00001e02d0927ea5b0dde802e65eb9b6ab67616d00001e02e6f407c7f3a0ec98845e4431",
               "width": 640
             },
             {
               "height": 300,
-              "width": 300,
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b"
-            },
-            {
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b2735f40be7506754451d1e61e16ab67616d0000b273930f6a7ee143629902a43c4bab67616d0000b2739b08d40d40c8dce75e644604ab67616d0000b273c13acd642ba9f6f5f127aa1b",
-              "width": 60,
-              "height": 60
-            }
-          ],
-          "description": "",
-          "uri": "spotify:playlist:05aRcvpURUQdWgbn5iZ26p",
-          "snapshot_id": "MTg5LDJmZmJiNWQyZGE0NGMxN2RmYjdkODBjNGY3NWZlZGJjMWMyNDVjNmY=",
-          "primary_color": null,
-          "type": "playlist",
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/05aRcvpURUQdWgbn5iZ26p"
-          }
-        },
-        {
-          "type": "playlist",
-          "primary_color": null,
-          "owner": {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
-            "display_name": "artinreality",
-            "type": "user",
-            "href": "https://api.spotify.com/v1/users/artinreality",
-            "uri": "spotify:user:artinreality",
-            "id": "artinreality"
-          },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/37FbCEeNnc5kIMnV2anBUP"
-          },
-          "name": "Soul, Motown, Disco",
-          "collaborative": false,
-          "snapshot_id": "NDQsZDZhMjJkZGU2MzQ4OWQ2N2QwMDAyYzYwYmMwMThjMDdiM2RhMDBkYw==",
-          "images": [
-            {
-              "width": 640,
-              "height": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f"
-            },
-            {
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f",
-              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e025406f784d9a47154dadf8cb7ab67616d00001e02c6b577e4c4a6d326354a89f7ab67616d00001e02d0927ea5b0dde802e65eb9b6ab67616d00001e02e6f407c7f3a0ec98845e4431",
               "width": 300
             },
             {
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b27342076f3afa79624ace2cb9d4ab67616d0000b273c1d7ffae3923f6a965867a10ab67616d0000b273dafd1cd6e9537ec8463ea691ab67616d0000b273ef9c24b433c960deb46ec41f",
               "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e025406f784d9a47154dadf8cb7ab67616d00001e02c6b577e4c4a6d326354a89f7ab67616d00001e02d0927ea5b0dde802e65eb9b6ab67616d00001e02e6f407c7f3a0ec98845e4431",
               "width": 60
             }
           ],
-          "tracks": {
-            "total": 31,
-            "href": "https://api.spotify.com/v1/playlists/37FbCEeNnc5kIMnV2anBUP/tracks"
+          "name": "Indie Dance, Vocal & Electronica",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
           },
-          "description": "",
+          "primary_color": null,
           "public": true,
-          "id": "37FbCEeNnc5kIMnV2anBUP",
-          "href": "https://api.spotify.com/v1/playlists/37FbCEeNnc5kIMnV2anBUP",
-          "uri": "spotify:playlist:37FbCEeNnc5kIMnV2anBUP"
+          "snapshot_id": "AAAAThg0pc2t8zXmfAOpwzgPLPIJZkvo",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/12hPoK5CsB46n2w3gi7GMJ/tracks", "total": 164 },
+          "type": "playlist",
+          "uri": "spotify:playlist:12hPoK5CsB46n2w3gi7GMJ",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e025406f784d9a47154dadf8cb7ab67616d00001e02c6b577e4c4a6d326354a89f7ab67616d00001e02d0927ea5b0dde802e65eb9b6ab67616d00001e02e6f407c7f3a0ec98845e4431.jpg"
         },
         {
-          "id": "6E0nDvsNV4LMwdydcjQNHE",
-          "snapshot_id": "MTQ5LDY0ZjlkNjQyNmQ2MWYxMTQ3YTcwYzQ5NDc5MTA4ODI1MjI1ZTQ4NmM=",
-          "type": "playlist",
-          "href": "https://api.spotify.com/v1/playlists/6E0nDvsNV4LMwdydcjQNHE",
           "collaborative": false,
-          "primary_color": null,
           "description": "",
-          "public": true,
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/05aRcvpURUQdWgbn5iZ26p" },
+          "href": "https://api.spotify.com/v1/playlists/05aRcvpURUQdWgbn5iZ26p",
+          "id": "05aRcvpURUQdWgbn5iZ26p",
           "images": [
             {
-              "width": 640,
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b",
-              "height": 640
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e020aae00a3482d3cd05a92e40fab67616d00001e025f40be7506754451d1e61e16ab67616d00001e029b08d40d40c8dce75e644604ab67616d00001e02c13acd642ba9f6f5f127aa1b",
+              "width": 640
             },
             {
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b",
               "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e020aae00a3482d3cd05a92e40fab67616d00001e025f40be7506754451d1e61e16ab67616d00001e029b08d40d40c8dce75e644604ab67616d00001e02c13acd642ba9f6f5f127aa1b",
               "width": 300
             },
             {
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b27332d6a86ca998e8dba61d0425ab67616d0000b273709c46f2bfe30708aa50f7f2ab67616d0000b27391202d94438fb64ffbb95bfdab67616d0000b273a045e78db2ea4a1e80f4975b",
-              "width": 60,
-              "height": 60
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e020aae00a3482d3cd05a92e40fab67616d00001e025f40be7506754451d1e61e16ab67616d00001e029b08d40d40c8dce75e644604ab67616d00001e02c13acd642ba9f6f5f127aa1b",
+              "width": 60
             }
           ],
-          "uri": "spotify:playlist:6E0nDvsNV4LMwdydcjQNHE",
+          "name": "Eclectic 60s and 70s",
           "owner": {
-            "uri": "spotify:user:artinreality",
-            "display_name": "artinreality",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
             "id": "artinreality",
             "type": "user",
-            "href": "https://api.spotify.com/v1/users/artinreality"
+            "uri": "spotify:user:artinreality"
           },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/6E0nDvsNV4LMwdydcjQNHE"
-          },
-          "name": "Indie Mix",
-          "tracks": {
-            "total": 242,
-            "href": "https://api.spotify.com/v1/playlists/6E0nDvsNV4LMwdydcjQNHE/tracks"
-          }
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAAwIZj5sSDPSCbioj2EBHN/ZT/TQ++",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/05aRcvpURUQdWgbn5iZ26p/tracks", "total": 112 },
+          "type": "playlist",
+          "uri": "spotify:playlist:05aRcvpURUQdWgbn5iZ26p",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e020aae00a3482d3cd05a92e40fab67616d00001e025f40be7506754451d1e61e16ab67616d00001e029b08d40d40c8dce75e644604ab67616d00001e02c13acd642ba9f6f5f127aa1b.jpg"
         },
         {
-          "tracks": {
-            "total": 81,
-            "href": "https://api.spotify.com/v1/playlists/0HYUAiwdrIFBlQmazkNZ0F/tracks"
-          },
-          "description": "",
-          "href": "https://api.spotify.com/v1/playlists/0HYUAiwdrIFBlQmazkNZ0F",
           "collaborative": false,
-          "primary_color": null,
-          "uri": "spotify:playlist:0HYUAiwdrIFBlQmazkNZ0F",
-          "snapshot_id": "MTM0LGVjOGRkYmI4MWQ2ZDM5M2M3Njc3NTEwMTQ3MmJlNTYyNTZlZDVlNDg=",
-          "owner": {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/3h8hEJstYMBLe9HYKWQ3Mi" },
+          "href": "https://api.spotify.com/v1/playlists/3h8hEJstYMBLe9HYKWQ3Mi",
+          "id": "3h8hEJstYMBLe9HYKWQ3Mi",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0257c375e481922937e31de2c0ab67616d00001e029d6bd2afa2987a69b7b55f72ab67616d00001e02b81800d6358067824dd3451cab67616d00001e02cf2575b2fa4cbbdbb03c72d8",
+              "width": 640
             },
-            "uri": "spotify:user:artinreality",
-            "display_name": "artinreality",
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0257c375e481922937e31de2c0ab67616d00001e029d6bd2afa2987a69b7b55f72ab67616d00001e02b81800d6358067824dd3451cab67616d00001e02cf2575b2fa4cbbdbb03c72d8",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0257c375e481922937e31de2c0ab67616d00001e029d6bd2afa2987a69b7b55f72ab67616d00001e02b81800d6358067824dd3451cab67616d00001e02cf2575b2fa4cbbdbb03c72d8",
+              "width": 60
+            }
+          ],
+          "name": "Electronic Chillout",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
             "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
             "type": "user",
-            "id": "artinreality"
+            "uri": "spotify:user:artinreality"
           },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/0HYUAiwdrIFBlQmazkNZ0F"
-          },
-          "name": "Dubstep, Trap, Hardstyle",
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAAyrG0PZgVg81p+ZiIWaivemqJSJD6",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/3h8hEJstYMBLe9HYKWQ3Mi/tracks", "total": 144 },
           "type": "playlist",
+          "uri": "spotify:playlist:3h8hEJstYMBLe9HYKWQ3Mi",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0257c375e481922937e31de2c0ab67616d00001e029d6bd2afa2987a69b7b55f72ab67616d00001e02b81800d6358067824dd3451cab67616d00001e02cf2575b2fa4cbbdbb03c72d8.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/0HYUAiwdrIFBlQmazkNZ0F" },
+          "href": "https://api.spotify.com/v1/playlists/0HYUAiwdrIFBlQmazkNZ0F",
           "id": "0HYUAiwdrIFBlQmazkNZ0F",
           "images": [
             {
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27",
               "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e023b756f5e4dd42e7d8026a3bbab67616d00001e0272a648947195104b090ed0feab67616d00001e027dd8f95320e8ef08aa121dfeab67616d00001e02fba6de0b38b0168d480b1a27",
               "width": 640
             },
             {
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27",
               "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e023b756f5e4dd42e7d8026a3bbab67616d00001e0272a648947195104b090ed0feab67616d00001e027dd8f95320e8ef08aa121dfeab67616d00001e02fba6de0b38b0168d480b1a27",
               "width": 300
             },
             {
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b2733b756f5e4dd42e7d8026a3bbab67616d0000b273531b76efe8a8532da014339eab67616d0000b2737dd8f95320e8ef08aa121dfeab67616d0000b273fba6de0b38b0168d480b1a27",
               "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e023b756f5e4dd42e7d8026a3bbab67616d00001e0272a648947195104b090ed0feab67616d00001e027dd8f95320e8ef08aa121dfeab67616d00001e02fba6de0b38b0168d480b1a27",
               "width": 60
             }
           ],
-          "public": true
-        },
-        {
-          "collaborative": false,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/37i9dQZF1EMdjDTSZSRsOw"
+          "name": "Dubstep, Trap, Hardstyle",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
           },
-          "name": "Your Top Songs 2020",
-          "snapshot_id": "MjY3NzQ1OTgsMDAwMDAwMDA1ZTMwZThhNmExZTk2ZTIwY2QwY2U3YzE4OTc3NDhhNg==",
           "primary_color": null,
           "public": true,
-          "id": "37i9dQZF1EMdjDTSZSRsOw",
-          "uri": "spotify:playlist:37i9dQZF1EMdjDTSZSRsOw",
-          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EMdjDTSZSRsOw",
-          "description": "The songs you loved most this year, all wrapped up.",
-          "images": [
-            {
-              "height": null,
-              "url": "https://lineup-images.scdn.co/wrapped-2020-top100_LARGE-en.jpg",
-              "width": null
-            }
-          ],
+          "snapshot_id": "AAAAh0QPUIauInIDuDXUGGSnl2tLFCQZ",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/0HYUAiwdrIFBlQmazkNZ0F/tracks", "total": 82 },
           "type": "playlist",
-          "owner": {
-            "uri": "spotify:user:spotify",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/spotify"
-            },
-            "href": "https://api.spotify.com/v1/users/spotify",
-            "display_name": "Spotify",
-            "id": "spotify",
-            "type": "user"
-          },
-          "tracks": {
-            "total": 100,
-            "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EMdjDTSZSRsOw/tracks"
-          }
+          "uri": "spotify:playlist:0HYUAiwdrIFBlQmazkNZ0F",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e023b756f5e4dd42e7d8026a3bbab67616d00001e0272a648947195104b090ed0feab67616d00001e027dd8f95320e8ef08aa121dfeab67616d00001e02fba6de0b38b0168d480b1a27.jpg"
         },
         {
-          "type": "playlist",
-          "tracks": {
-            "href": "https://api.spotify.com/v1/playlists/4OSZN85T35doDPWSHWTSYG/tracks",
-            "total": 50
-          },
           "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/3d1VIKeaxFiBLXyJE7SWRP" },
+          "href": "https://api.spotify.com/v1/playlists/3d1VIKeaxFiBLXyJE7SWRP",
+          "id": "3d1VIKeaxFiBLXyJE7SWRP",
           "images": [
             {
-              "url": "https://mosaic.scdn.co/640/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362",
               "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0269ec580ab2b0047ca579c766ab67616d00001e027571e6c18e54208596b9fc62ab67616d00001e029564ed7bdc3de164b59d7a77ab67616d00001e02b91e07317a71feee35984890",
               "width": 640
             },
             {
-              "url": "https://mosaic.scdn.co/300/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362",
               "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0269ec580ab2b0047ca579c766ab67616d00001e027571e6c18e54208596b9fc62ab67616d00001e029564ed7bdc3de164b59d7a77ab67616d00001e02b91e07317a71feee35984890",
               "width": 300
             },
             {
               "height": 60,
-              "width": 60,
-              "url": "https://mosaic.scdn.co/60/ab67616d0000b2730dc777f04e02631c126e16e0ab67616d0000b2732759da8db912a1a5a2aad253ab67616d0000b2732a02859369c5741d21f1a28aab67616d0000b273c541f3de06805ce54ec02362"
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0269ec580ab2b0047ca579c766ab67616d00001e027571e6c18e54208596b9fc62ab67616d00001e029564ed7bdc3de164b59d7a77ab67616d00001e02b91e07317a71feee35984890",
+              "width": 60
             }
           ],
-          "primary_color": null,
-          "description": "",
-          "public": true,
+          "name": "Rock, Modern & Electronic",
           "owner": {
-            "uri": "spotify:user:artinreality",
-            "external_urls": {
-              "spotify": "https://open.spotify.com/user/artinreality"
-            },
-            "display_name": "artinreality",
-            "type": "user",
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
             "href": "https://api.spotify.com/v1/users/artinreality",
-            "id": "artinreality"
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
           },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/playlist/4OSZN85T35doDPWSHWTSYG"
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAAp/tO4eDSnbaDOdRLKAJWr/1nw/PH",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/3d1VIKeaxFiBLXyJE7SWRP/tracks", "total": 68 },
+          "type": "playlist",
+          "uri": "spotify:playlist:3d1VIKeaxFiBLXyJE7SWRP",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0269ec580ab2b0047ca579c766ab67616d00001e027571e6c18e54208596b9fc62ab67616d00001e029564ed7bdc3de164b59d7a77ab67616d00001e02b91e07317a71feee35984890.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/3RnEqwxNUf8iUMZUbRAANr" },
+          "href": "https://api.spotify.com/v1/playlists/3RnEqwxNUf8iUMZUbRAANr",
+          "id": "3RnEqwxNUf8iUMZUbRAANr",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e02413697269620e16f4466f543ab67616d00001e026856f3eba42298567fb92aafab67616d00001e02b0ae68e5a092871296a07cfbab67616d00001e02d4ae40466af932341c229d11",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e02413697269620e16f4466f543ab67616d00001e026856f3eba42298567fb92aafab67616d00001e02b0ae68e5a092871296a07cfbab67616d00001e02d4ae40466af932341c229d11",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e02413697269620e16f4466f543ab67616d00001e026856f3eba42298567fb92aafab67616d00001e02b0ae68e5a092871296a07cfbab67616d00001e02d4ae40466af932341c229d11",
+              "width": 60
+            }
+          ],
+          "name": "Rock, post-hardcore, pop-punk, pop",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
           },
-          "id": "4OSZN85T35doDPWSHWTSYG",
-          "name": "Rock, Ambient & Post-Rock",
-          "snapshot_id": "ODUsN2E1N2QzZjBiNzY2Y2U4MGI0Y2RlMWM2MTllNTg1Y2Y4ODZlMDBjZQ==",
-          "uri": "spotify:playlist:4OSZN85T35doDPWSHWTSYG",
-          "href": "https://api.spotify.com/v1/playlists/4OSZN85T35doDPWSHWTSYG"
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAAEhTL5qQdF6hoCOrKSoYqDLSTSQTv",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/3RnEqwxNUf8iUMZUbRAANr/tracks", "total": 9 },
+          "type": "playlist",
+          "uri": "spotify:playlist:3RnEqwxNUf8iUMZUbRAANr",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e02413697269620e16f4466f543ab67616d00001e026856f3eba42298567fb92aafab67616d00001e02b0ae68e5a092871296a07cfbab67616d00001e02d4ae40466af932341c229d11.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/6E0nDvsNV4LMwdydcjQNHE" },
+          "href": "https://api.spotify.com/v1/playlists/6E0nDvsNV4LMwdydcjQNHE",
+          "id": "6E0nDvsNV4LMwdydcjQNHE",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0232d6a86ca998e8dba61d0425ab67616d00001e0291202d94438fb64ffbb95bfdab67616d00001e02a045e78db2ea4a1e80f4975bab67616d00001e02b81881145f69ce4b92a85ee0",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0232d6a86ca998e8dba61d0425ab67616d00001e0291202d94438fb64ffbb95bfdab67616d00001e02a045e78db2ea4a1e80f4975bab67616d00001e02b81881145f69ce4b92a85ee0",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0232d6a86ca998e8dba61d0425ab67616d00001e0291202d94438fb64ffbb95bfdab67616d00001e02a045e78db2ea4a1e80f4975bab67616d00001e02b81881145f69ce4b92a85ee0",
+              "width": 60
+            }
+          ],
+          "name": "Indie Mix",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
+          },
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAAlWT51kJtYfEUenDElHkQiCUiXkhs",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/6E0nDvsNV4LMwdydcjQNHE/tracks", "total": 242 },
+          "type": "playlist",
+          "uri": "spotify:playlist:6E0nDvsNV4LMwdydcjQNHE",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0232d6a86ca998e8dba61d0425ab67616d00001e0291202d94438fb64ffbb95bfdab67616d00001e02a045e78db2ea4a1e80f4975bab67616d00001e02b81881145f69ce4b92a85ee0.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/6Jw4EW5Eo3yZl8wR2cBjCI" },
+          "href": "https://api.spotify.com/v1/playlists/6Jw4EW5Eo3yZl8wR2cBjCI",
+          "id": "6Jw4EW5Eo3yZl8wR2cBjCI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0225c6e88224b6f36a6e5bc215ab67616d00001e023aab37beee0e9198e3c324e7ab67616d00001e0258d584fcbb932448ccf43ae9ab67616d00001e0290df8195ca2109edf64f9a09",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0225c6e88224b6f36a6e5bc215ab67616d00001e023aab37beee0e9198e3c324e7ab67616d00001e0258d584fcbb932448ccf43ae9ab67616d00001e0290df8195ca2109edf64f9a09",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0225c6e88224b6f36a6e5bc215ab67616d00001e023aab37beee0e9198e3c324e7ab67616d00001e0258d584fcbb932448ccf43ae9ab67616d00001e0290df8195ca2109edf64f9a09",
+              "width": 60
+            }
+          ],
+          "name": "Folk, Blues & Southern Music",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
+          },
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAAEqbmrOrFXaz02dnzUrrxJmX8BhIQ",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/6Jw4EW5Eo3yZl8wR2cBjCI/tracks", "total": 13 },
+          "type": "playlist",
+          "uri": "spotify:playlist:6Jw4EW5Eo3yZl8wR2cBjCI",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0225c6e88224b6f36a6e5bc215ab67616d00001e023aab37beee0e9198e3c324e7ab67616d00001e0258d584fcbb932448ccf43ae9ab67616d00001e0290df8195ca2109edf64f9a09.jpg"
+        },
+        {
+          "collaborative": false,
+          "description": "",
+          "external_urls": { "spotify": "https://open.spotify.com/playlist/37FbCEeNnc5kIMnV2anBUP" },
+          "href": "https://api.spotify.com/v1/playlists/37FbCEeNnc5kIMnV2anBUP",
+          "id": "37FbCEeNnc5kIMnV2anBUP",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://mosaic.scdn.co/640/ab67616d00001e0242076f3afa79624ace2cb9d4ab67616d00001e02c1d7ffae3923f6a965867a10ab67616d00001e02ce6bfbe7a9dd25b12cedc1f8ab67616d00001e02dafd1cd6e9537ec8463ea691",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://mosaic.scdn.co/300/ab67616d00001e0242076f3afa79624ace2cb9d4ab67616d00001e02c1d7ffae3923f6a965867a10ab67616d00001e02ce6bfbe7a9dd25b12cedc1f8ab67616d00001e02dafd1cd6e9537ec8463ea691",
+              "width": 300
+            },
+            {
+              "height": 60,
+              "url": "https://mosaic.scdn.co/60/ab67616d00001e0242076f3afa79624ace2cb9d4ab67616d00001e02c1d7ffae3923f6a965867a10ab67616d00001e02ce6bfbe7a9dd25b12cedc1f8ab67616d00001e02dafd1cd6e9537ec8463ea691",
+              "width": 60
+            }
+          ],
+          "name": "Soul, Motown, Disco",
+          "owner": {
+            "display_name": "Chris Vogt",
+            "external_urls": { "spotify": "https://open.spotify.com/user/artinreality" },
+            "href": "https://api.spotify.com/v1/users/artinreality",
+            "id": "artinreality",
+            "type": "user",
+            "uri": "spotify:user:artinreality"
+          },
+          "primary_color": null,
+          "public": true,
+          "snapshot_id": "AAAALhSfmvMssqsYh5DTlXiWCr0XrSIM",
+          "tracks": { "href": "https://api.spotify.com/v1/playlists/37FbCEeNnc5kIMnV2anBUP/tracks", "total": 33 },
+          "type": "playlist",
+          "uri": "spotify:playlist:37FbCEeNnc5kIMnV2anBUP",
+          "cdnImageURL": "https://chrisvogt.imgix.net/spotify/playlists/ab67616d00001e0242076f3afa79624ace2cb9d4ab67616d00001e02c1d7ffae3923f6a965867a10ab67616d00001e02ce6bfbe7a9dd25b12cedc1f8ab67616d00001e02dafd1cd6e9537ec8463ea691.jpg"
+        }
+      ],
+      "topTracks": [
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273fe3104117e3f9a237c3fc695", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02fe3104117e3f9a237c3fc695", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851fe3104117e3f9a237c3fc695", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "1WNN0BGtw3QouNok5wlUtY",
+          "name": "Black Hole Love",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/1WNN0BGtw3QouNok5wlUtY",
+          "type": "track",
+          "uri": "spotify:track:1WNN0BGtw3QouNok5wlUtY"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273fe3104117e3f9a237c3fc695", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02fe3104117e3f9a237c3fc695", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851fe3104117e3f9a237c3fc695", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "1lWEfxnn3OuPr97qXCb4Wd",
+          "name": "Halfway Love",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/1lWEfxnn3OuPr97qXCb4Wd",
+          "type": "track",
+          "uri": "spotify:track:1lWEfxnn3OuPr97qXCb4Wd"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273fe3104117e3f9a237c3fc695", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02fe3104117e3f9a237c3fc695", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851fe3104117e3f9a237c3fc695", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "3lX591uLhAfz70eBAxgZgr",
+          "name": "Spinach Souffle",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/3lX591uLhAfz70eBAxgZgr",
+          "type": "track",
+          "uri": "spotify:track:3lX591uLhAfz70eBAxgZgr"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273d9cfb488a0c7040a184cf2b8", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02d9cfb488a0c7040a184cf2b8", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851d9cfb488a0c7040a184cf2b8", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "41pg4Jb8eH8RfLxoYgH2oM",
+          "name": "Halfway Love - Acoustic",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/41pg4Jb8eH8RfLxoYgH2oM",
+          "type": "track",
+          "uri": "spotify:track:41pg4Jb8eH8RfLxoYgH2oM"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273fe3104117e3f9a237c3fc695", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02fe3104117e3f9a237c3fc695", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851fe3104117e3f9a237c3fc695", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "5vqXan8ZLk6ErBH19DAEk4",
+          "name": "Creep Back",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/5vqXan8ZLk6ErBH19DAEk4",
+          "type": "track",
+          "uri": "spotify:track:5vqXan8ZLk6ErBH19DAEk4"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273fe3104117e3f9a237c3fc695", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02fe3104117e3f9a237c3fc695", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851fe3104117e3f9a237c3fc695", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "7DxTIPM6Ex4bnpd5CVeTDf",
+          "name": "Cig in the Morning",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/7DxTIPM6Ex4bnpd5CVeTDf",
+          "type": "track",
+          "uri": "spotify:track:7DxTIPM6Ex4bnpd5CVeTDf"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273fe3104117e3f9a237c3fc695", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02fe3104117e3f9a237c3fc695", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851fe3104117e3f9a237c3fc695", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "3yBs2CJPwSPyDXpIU61IJx",
+          "name": "The Ghost",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/3yBs2CJPwSPyDXpIU61IJx",
+          "type": "track",
+          "uri": "spotify:track:3yBs2CJPwSPyDXpIU61IJx"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b27380e80913b1a4f1a69be1996a", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e0280e80913b1a4f1a69be1996a", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d0000485180e80913b1a4f1a69be1996a", "width": 64 }
+          ],
+          "artists": ["Max Frost"],
+          "id": "4ik9poqv8Mtnp7zU5D9k3R",
+          "name": "Head In The Clouds",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/4ik9poqv8Mtnp7zU5D9k3R",
+          "type": "track",
+          "uri": "spotify:track:4ik9poqv8Mtnp7zU5D9k3R"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b27391679e8e06643a9da4ddd651", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e0291679e8e06643a9da4ddd651", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d0000485191679e8e06643a9da4ddd651", "width": 64 }
+          ],
+          "artists": ["Celia Cruz"],
+          "id": "2btnzgT8ARxKjcdOTdqj37",
+          "name": "Yo Viviré - I Will Survive",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/2btnzgT8ARxKjcdOTdqj37",
+          "type": "track",
+          "uri": "spotify:track:2btnzgT8ARxKjcdOTdqj37"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273dc7def527f5796d597bc156c", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02dc7def527f5796d597bc156c", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851dc7def527f5796d597bc156c", "width": 64 }
+          ],
+          "artists": ["Miami Horror"],
+          "id": "03FxBai4eKjHWIoflM9EH9",
+          "name": "AURORA/DEAD FLOWERS",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/03FxBai4eKjHWIoflM9EH9",
+          "type": "track",
+          "uri": "spotify:track:03FxBai4eKjHWIoflM9EH9"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273dc7def527f5796d597bc156c", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02dc7def527f5796d597bc156c", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851dc7def527f5796d597bc156c", "width": 64 }
+          ],
+          "artists": ["Miami Horror", "Tim Ayre"],
+          "id": "2MD2UPPV1KWA4sQwhMI6xd",
+          "name": "DON'T LEAVE ME (IN THE SUNSHINE)",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/2MD2UPPV1KWA4sQwhMI6xd",
+          "type": "track",
+          "uri": "spotify:track:2MD2UPPV1KWA4sQwhMI6xd"
+        },
+        {
+          "albumImages": [
+            { "height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273dc7def527f5796d597bc156c", "width": 640 },
+            { "height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02dc7def527f5796d597bc156c", "width": 300 },
+            { "height": 64, "url": "https://i.scdn.co/image/ab67616d00004851dc7def527f5796d597bc156c", "width": 64 }
+          ],
+          "artists": ["Miami Horror", "RAC"],
+          "id": "2rABFKrjM5lhgSfXGDgQB7",
+          "name": "LOST SEASONS",
+          "previewURL": null,
+          "spotifyURL": "https://open.spotify.com/track/2rABFKrjM5lhgSfXGDgQB7",
+          "type": "track",
+          "uri": "spotify:track:2rABFKrjM5lhgSfXGDgQB7"
         }
       ]
     },
     "metrics": [
-      {
-        "displayName": "Followers",
-        "value": 48,
-        "id": "followers-count"
-      },
-      {
-        "displayName": "Playlists",
-        "id": "playlists-count",
-        "value": 47
-      }
+      { "displayName": "Followers", "id": "followers-count", "value": 50 },
+      { "displayName": "Playlists", "id": "playlists-count", "value": 47 }
     ],
     "profile": {
-      "id": "artinreality",
-      "followersCount": 48,
       "avatarURL": {
-        "width": null,
+        "height": 300,
         "url": "https://i.scdn.co/image/ab6775700000ee854213dddf2a0a9481a2db7e6c",
-        "height": null
+        "width": 300
       },
-      "profileURL": "https://open.spotify.com/user/artinreality",
-      "displayName": "artinreality"
+      "displayName": "Chris Vogt",
+      "followersCount": 50,
+      "id": "artinreality",
+      "profileURL": "https://open.spotify.com/user/artinreality"
     },
-    "meta": {
-      "synced": "2021-06-22T06:51:01.533Z"
-    }
+    "meta": { "synced": "2025-05-24T03:23:57.271Z", "totalUploadedMediaCount": 0 }
   }
 }

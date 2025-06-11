@@ -1,6 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
+import { Provider } from 'react-redux'
+import configureStore from 'redux-mock-store'
 
 import Footer from './footer'
 import Layout from './layout'
@@ -28,17 +30,28 @@ describe('Layout', () => {
     }
   }
 
+  // Create mock store
+  const mockStore = configureStore([])
+  const store = mockStore({
+    audioPlayer: {
+      isVisible: false,
+      soundcloudId: null
+    }
+  })
+
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={mockTheme}>
-          <Layout>
-            <div className='fake-website'>
-              <h1>Fake Website</h1>
-              <p>Lorum ipsum dolor sit amet.</p>
-            </div>
-          </Layout>
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeUIProvider theme={mockTheme}>
+            <Layout>
+              <div className='fake-website'>
+                <h1>Fake Website</h1>
+                <p>Lorum ipsum dolor sit amet.</p>
+              </div>
+            </Layout>
+          </ThemeUIProvider>
+        </Provider>
       )
       .toJSON()
 

@@ -34,30 +34,6 @@ exports[`TopNavigation matches the snapshot 1`] = `
         </a>
       </nav>
     </div>
-    <button
-      aria-label="Set color mode to light"
-      className="_button_2eo6g_1"
-      id="color-mode-toggle"
-      onClick={[Function]}
-      style={
-        {
-          "height": "35px",
-          "width": "70px",
-        }
-      }
-    >
-      <div
-        className="_player_2eo6g_12"
-        style={
-          {
-            "height": "115.5px",
-            "marginLeft": "-22.400000000000002px",
-            "marginTop": "-40.25px",
-            "width": "115.5px",
-          }
-        }
-      />
-    </button>
   </div>
 </div>
 `;

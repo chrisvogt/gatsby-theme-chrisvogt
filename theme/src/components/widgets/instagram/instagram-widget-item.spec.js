@@ -34,7 +34,7 @@ describe('InstagramWidgetItem', () => {
     expect(img).toBeInTheDocument()
     expect(img).toHaveAttribute(
       'src',
-      `${defaultProps.post.cdnMediaURL}?h=280&w=280&fit=crop&crop=faces,focalpoint&auto=format`
+      `${defaultProps.post.cdnMediaURL}?h=234&w=234&fit=crop&crop=faces,focalpoint&auto=compress&auto=enhance&auto=format`
     )
   })
 

@@ -2,10 +2,10 @@
 
 exports[`WidgetHeader matches the snapshot 1`] = `
 <header
-  className="css-rcq65b"
+  className="css-ef6z63"
 >
   <h2
-    className="css-zvxbld"
+    className="css-gifmxh"
   >
     Neat & Interesting Widget
   </h2>

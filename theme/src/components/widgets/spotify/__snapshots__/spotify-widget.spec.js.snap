@@ -6,23 +6,19 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
   id="spotify"
 >
   <header
-    className="css-gzw2dr"
+    className="css-x6ikgs"
   >
     <h2
-      className="css-1rxoh5f"
+      className="css-1s4ek1q"
     >
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-spotify css-1ni16ne"
+        className="svg-inline--fa fa-spotify css-1f4q58s"
         data-icon="spotify"
         data-prefix="fab"
         focusable="false"
         role="img"
-        style={
-          {
-            "height": "22px",
-          }
-        }
+        style={{}}
         viewBox="0 0 496 512"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -195,6 +191,206 @@ exports[`Spotify Widget matches the loading state snapshot 1`] = `
       className="css-1qwovgy"
     >
       My 12 most-played tracks over the last 4 weeks.
+    </p>
+    <div
+      className="media-item_grid null css-5stlgz"
+    >
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-2us3i8"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="css-ccroti"
+    >
+      <h3
+        className="css-9nh3l5"
+      >
+        Playlists
+      </h3>
+    </div>
+    <p
+      className="css-1qwovgy"
+    >
+      My 12 favorite playlists.
     </p>
     <div
       className="media-item_grid null css-5stlgz"

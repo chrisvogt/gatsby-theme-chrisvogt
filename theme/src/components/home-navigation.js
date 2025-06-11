@@ -4,15 +4,17 @@ import { jsx, Link } from 'theme-ui'
 import { useRef } from 'react'
 
 import {
+  getFlickrWidgetDataSource,
   getGithubWidgetDataSource,
   getGoodreadsWidgetDataSource,
   getInstagramWidgetDataSource,
-  getSpotifyWidgetDataSource
+  getSpotifyWidgetDataSource,
+  getSteamWidgetDataSource
 } from '../selectors/metadata'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
 import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGoodreads, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFlickr, faGithub, faGoodreads, faSpotify, faSteam, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -21,12 +23,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * bundle. See chrisvogt/gatsby-theme-chrisvogt#31 for to learn more.
  */
 const icons = {
+  faFlickr,
   faGithub,
   faGoodreads,
   faHome,
   faInstagram,
   faNewspaper,
-  faSpotify
+  faSpotify,
+  faSteam
 }
 
 /**
@@ -75,6 +79,18 @@ const linkRegistry = [
     }
   },
   {
+    rule: options => !!options.isFlickrWidgetEnabled,
+    value: {
+      href: '#flickr',
+      icon: {
+        name: 'flickr',
+        reactIcon: 'faFlickr'
+      },
+      id: 'flickr',
+      text: 'Flickr'
+    }
+  },
+  {
     rule: options => !!options.isGitHubWidgetEnabled,
     value: {
       href: '#github',
@@ -109,6 +125,18 @@ const linkRegistry = [
       id: 'spotify',
       text: 'Spotify'
     }
+  },
+  {
+    rule: options => !!options.isSteamWidgetEnabled,
+    value: {
+      href: '#steam',
+      icon: {
+        name: 'steam',
+        reactIcon: 'faSteam'
+      },
+      id: 'steam',
+      text: 'Steam'
+    }
   }
 ]
 
@@ -129,10 +157,12 @@ const HomeNavigation = () => {
 
   const metadata = useSiteMetadata()
   const links = determineLinksToRender({
+    isFlickrWidgetEnabled: getFlickrWidgetDataSource(metadata),
     isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
     isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
     isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
-    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata)
+    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata),
+    isSteamWidgetEnabled: getSteamWidgetDataSource(metadata)
   })
 
   useEffect(() => {

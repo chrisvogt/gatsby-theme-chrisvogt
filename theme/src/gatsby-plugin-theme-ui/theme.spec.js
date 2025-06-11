@@ -20,7 +20,7 @@ describe('Theme Configuration', () => {
     })
 
     it('defaults the color mode to dark', () => {
-      expect(theme.config.useColorSchemeMediaQuery).toBe('initial')
+      expect(theme.config.useColorSchemeMediaQuery).toBe(true)
       expect(theme.config.useCustomProperties).toBe(true)
       expect(theme.config.useLocalStorage).toBe(true)
     })
