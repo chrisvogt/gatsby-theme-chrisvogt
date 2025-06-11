@@ -58,6 +58,13 @@ jobs:
           flags: unittests
           fail_ci_if_error: true
 
+      - name: Run tests for Codecov analytics
+        run: yarn workspace gatsby-theme-chrisvogt test:codecov
+
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
+
   # Optional: Add this if you have a build step you want to verify
   build:
     name: Build
