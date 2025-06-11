@@ -19,6 +19,11 @@ const BookExplorer = ({ book, onClose }) => {
 
   console.log('BookExplorer rendered with book:', book)
 
+  const handleBackClick = e => {
+    e.preventDefault()
+    onClose()
+  }
+
   return (
     <Card variant='actionCard'>
       <div
@@ -83,10 +88,7 @@ const BookExplorer = ({ book, onClose }) => {
             </div>
             <Link
               to={location.pathname}
-              onClick={e => {
-                e.preventDefault()
-                onClose()
-              }}
+              onClick={handleBackClick}
               sx={{
                 mt: 2,
                 color: 'textMuted',

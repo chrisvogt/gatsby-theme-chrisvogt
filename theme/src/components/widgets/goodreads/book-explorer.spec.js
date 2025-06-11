@@ -80,6 +80,14 @@ describe('Widget/Goodreads/BookExplorer', () => {
     expect(onClose).toHaveBeenCalled()
   })
 
+  it('handles "Back to grid view" link click', () => {
+    const onClose = jest.fn()
+    renderWithRouter(<BookExplorer book={mockBook} onClose={onClose} default />)
+    const backLink = screen.getByText('← Back to grid view')
+    fireEvent.click(backLink)
+    expect(onClose).toHaveBeenCalled()
+  })
+
   it('logs book details for debugging', () => {
     renderWithRouter(<BookExplorer book={mockBook} onClose={() => {}} default />)
     expect(console.log).toHaveBeenCalledWith('BookExplorer rendered with book:', mockBook)
