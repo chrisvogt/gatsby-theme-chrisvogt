@@ -23,8 +23,21 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => {
     // Store the current scroll position when the component mounts
     const scrollPosition = window.scrollY
 
+    // If we have a bookId in the URL on initial render, scroll to the goodreads element
+    if (bookId && !location.state?.scrollPosition && !location.state?.noScroll) {
+      // Use a small delay to ensure the element is ready, especially in Chrome
+      setTimeout(() => {
+        const goodreadsElement = document.getElementById('goodreads')
+        if (goodreadsElement) {
+          // Force a reflow to ensure the element is properly positioned
+          goodreadsElement.offsetHeight
+          // Use the browser's native hash navigation
+          window.location.hash = 'goodreads'
+        }
+      }, 100)
+    }
     // If we have a scroll position in state, restore it
-    if (location.state?.scrollPosition) {
+    else if (location.state?.scrollPosition) {
       console.log('Restoring scroll position:', location.state.scrollPosition)
       // Use requestAnimationFrame to ensure smooth restoration
       requestAnimationFrame(() => {
@@ -53,7 +66,7 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => {
         })
       }
     }
-  }, [location.state, location.search]) // Add location.search to dependencies
+  }, [location.state, location.search, bookId]) // Add bookId to dependencies
 
   const handleClose = e => {
     if (e) {
