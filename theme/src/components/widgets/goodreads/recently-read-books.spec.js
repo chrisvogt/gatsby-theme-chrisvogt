@@ -54,13 +54,21 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
   describe('navigation and scroll behavior', () => {
     const mockNavigate = jest.fn()
     const mockScrollTo = jest.fn()
+    const mockGetElementById = jest.fn()
 
     beforeEach(() => {
       window.scrollTo = mockScrollTo
+      window.document.getElementById = mockGetElementById
       mockNavigate.mockClear()
       mockScrollTo.mockClear()
+      mockGetElementById.mockClear()
       // Mock navigate function
       jest.spyOn(require('@gatsbyjs/reach-router'), 'navigate').mockImplementation(mockNavigate)
+      // Mock window.location.hash
+      Object.defineProperty(window, 'location', {
+        value: { hash: '' },
+        writable: true
+      })
     })
 
     it('restores scroll position when location state contains scrollPosition', async () => {
@@ -129,6 +137,89 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
           noScroll: true // Add the noScroll property to match component behavior
         }
       })
+    })
+
+    it('scrolls to goodreads element when bookId is present and no scroll state', async () => {
+      const mockElement = { offsetHeight: 100 }
+      mockGetElementById.mockReturnValue(mockElement)
+      render(
+        <LocationProvider
+          history={{
+            location: { pathname: '/', search: '?bookId=123' },
+            listen: () => () => {},
+            navigate: () => {},
+            _onTransitionComplete: () => {}
+          }}
+        >
+          <Router>
+            <div id='goodreads' default />
+            <RecentlyReadBooks books={mockBooks} isLoading={false} default />
+          </Router>
+        </LocationProvider>
+      )
+
+      // Wait for setTimeout
+      await new Promise(resolve => setTimeout(resolve, 100))
+      expect(mockGetElementById).toHaveBeenCalledWith('goodreads')
+      expect(window.location.hash).toBe('goodreads')
+    })
+
+    it('handles cleanup on unmount with different scroll position', () => {
+      const initialScroll = 100
+      const newScroll = 500
+      Object.defineProperty(window, 'scrollY', { value: initialScroll })
+      const { unmount } = render(
+        <LocationProvider
+          history={{
+            location: { pathname: '/' },
+            listen: () => () => {},
+            navigate: () => {},
+            _onTransitionComplete: () => {}
+          }}
+        >
+          <Router>
+            <div default>
+              <RecentlyReadBooks books={mockBooks} isLoading={false} default />
+            </div>
+          </Router>
+        </LocationProvider>
+      )
+
+      // Change scroll position
+      Object.defineProperty(window, 'scrollY', { value: newScroll })
+      // Unmount component
+      unmount()
+      // Should restore initial scroll position
+      expect(mockScrollTo).toHaveBeenCalledWith({
+        top: initialScroll,
+        behavior: 'instant'
+      })
+    })
+
+    it('does not restore scroll position on unmount if unchanged', () => {
+      const scrollPosition = 100
+      Object.defineProperty(window, 'scrollY', { value: scrollPosition })
+      const { unmount } = render(
+        <LocationProvider
+          history={{
+            location: { pathname: '/' },
+            listen: () => () => {},
+            navigate: () => {},
+            _onTransitionComplete: () => {}
+          }}
+        >
+          <Router>
+            <div default>
+              <RecentlyReadBooks books={mockBooks} isLoading={false} default />
+            </div>
+          </Router>
+        </LocationProvider>
+      )
+
+      // Unmount component without changing scroll position
+      unmount()
+      // Should not call scrollTo since position hasn't changed
+      expect(mockScrollTo).not.toHaveBeenCalled()
     })
   })
 
