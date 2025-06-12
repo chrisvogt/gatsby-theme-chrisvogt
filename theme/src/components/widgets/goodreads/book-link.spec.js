@@ -46,12 +46,14 @@ describe('Widget/Goodreads/BookLink', () => {
     expect(image).toHaveAttribute('xlink:href', 'https://example.com/book.jpg')
   })
 
-  it('handles click events with scroll position preservation', () => {
+  it('handles click events with scroll position preservation', async () => {
     // Mock window.scrollY
     Object.defineProperty(window, 'scrollY', { value: 200 })
     render(<BookLink {...mockProps} />)
     const link = screen.getByTestId('book-link')
     fireEvent.click(link)
+    // Wait for the setTimeout to complete
+    await new Promise(resolve => setTimeout(resolve, 0))
     expect(gatsbyNavigate).toHaveBeenCalledWith('?bookId=123', {
       replace: true,
       state: {
@@ -61,10 +63,18 @@ describe('Widget/Goodreads/BookLink', () => {
     })
   })
 
-  it('logs click event details for debugging', () => {
+  it('logs click event details for debugging', async () => {
+    // Mock window.scrollY and location
+    Object.defineProperty(window, 'scrollY', { value: 200 })
+    Object.defineProperty(window, 'location', {
+      value: { pathname: '/', search: '' },
+      writable: true
+    })
     render(<BookLink {...mockProps} />)
     const link = screen.getByTestId('book-link')
     fireEvent.click(link)
+    // Wait for the setTimeout to complete
+    await new Promise(resolve => setTimeout(resolve, 0))
     expect(console.log).toHaveBeenCalledWith('BookLink click:', {
       id: '123',
       title: 'Test Book',

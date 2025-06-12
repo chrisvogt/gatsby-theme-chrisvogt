@@ -63,8 +63,14 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       jest.spyOn(require('@gatsbyjs/reach-router'), 'navigate').mockImplementation(mockNavigate)
     })
 
-    it('restores scroll position when location state contains scrollPosition', () => {
+    it('restores scroll position when location state contains scrollPosition', async () => {
       const scrollPosition = 500
+      // Mock requestAnimationFrame
+      const originalRAF = window.requestAnimationFrame
+      window.requestAnimationFrame = callback => {
+        callback()
+        return 1
+      }
       // Render with location state to trigger useEffect
       render(
         <LocationProvider
@@ -82,7 +88,14 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
           </Router>
         </LocationProvider>
       )
-      expect(mockScrollTo).toHaveBeenCalledWith(0, scrollPosition)
+      // Wait for the next tick to ensure useEffect has run
+      await new Promise(resolve => setTimeout(resolve, 0))
+      expect(mockScrollTo).toHaveBeenCalledWith({
+        top: scrollPosition,
+        behavior: 'instant'
+      })
+      // Restore original requestAnimationFrame
+      window.requestAnimationFrame = originalRAF
     })
 
     it('handles close button click with scroll position preservation', () => {
@@ -111,7 +124,10 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       fireEvent.click(closeButton)
       expect(mockNavigate).toHaveBeenCalledWith('/test', {
         replace: true,
-        state: { scrollPosition: 300 }
+        state: {
+          scrollPosition: 300,
+          noScroll: true // Add the noScroll property to match component behavior
+        }
       })
     })
   })
