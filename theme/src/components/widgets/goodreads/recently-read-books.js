@@ -18,23 +18,54 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => {
   const bookId = params.get('bookId')
   const selectedBook = bookId ? books.find(book => book.id === bookId) : null
 
-  // Handle scroll position restoration
+  // Handle scroll position restoration and prevention
   useEffect(() => {
+    // Store the current scroll position when the component mounts
+    const scrollPosition = window.scrollY
+
+    // If we have a scroll position in state, restore it
     if (location.state?.scrollPosition) {
       console.log('Restoring scroll position:', location.state.scrollPosition)
-      window.scrollTo(0, location.state.scrollPosition)
+      // Use requestAnimationFrame to ensure smooth restoration
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: location.state.scrollPosition,
+          behavior: 'instant' // Use instant to prevent animation
+        })
+      })
+    } else if (location.state?.noScroll) {
+      // If noScroll is true, maintain the current position
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'instant'
+        })
+      })
     }
-  }, [location.state])
+
+    // Cleanup function to handle component unmount
+    return () => {
+      // Store the current scroll position when unmounting
+      if (window.scrollY !== scrollPosition) {
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'instant'
+        })
+      }
+    }
+  }, [location.state, location.search]) // Add location.search to dependencies
 
   const handleClose = e => {
     if (e) {
       e.preventDefault()
     }
+    const currentScroll = window.scrollY
     // Use replace to avoid adding to history stack
     navigate(location.pathname, {
       replace: true,
       state: {
-        scrollPosition: window.scrollY
+        scrollPosition: currentScroll,
+        noScroll: true
       }
     })
   }
