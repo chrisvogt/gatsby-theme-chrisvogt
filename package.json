@@ -8,7 +8,7 @@
     "develop": "yarn workspace www.chrisvogt.me develop:https",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\"",
     "lint": "eslint",
-    "postinstall": "node index.js",
+    "postinstall": "node ./scripts/postinstall-banner.js",
     "prepare": "husky",
     "prettier": "prettier",
     "test:coverage": "yarn workspace gatsby-theme-chrisvogt test --coverage",
