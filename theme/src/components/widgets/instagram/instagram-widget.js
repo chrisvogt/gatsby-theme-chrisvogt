@@ -99,6 +99,34 @@ export default () => {
 
   const countItemsToRender = isShowingMore ? MAX_IMAGES.showMore : MAX_IMAGES.default
 
+  const addInstagramButton = (index, media) => {
+    const existingBtn = document.getElementById('lg-view-on-instagram')
+    if (existingBtn) existingBtn.remove()
+
+    // View on Instagram button
+    const btn = document.createElement('button')
+    btn.id = 'lg-view-on-instagram'
+    btn.className = 'lg-view-on-instagram lg-toolbar-icon'
+    btn.title = 'View on Instagram'
+    btn.type = 'button'
+    btn.innerHTML = '<span class="lg-view-on-instagram-text">View on Instagram</span>'
+    btn.style.float = 'right'
+
+    // Set click handler
+    const post = media[index]
+    btn.onclick = e => {
+      e.stopPropagation()
+      if (post && post.permalink) {
+        window.open(post.permalink, '_blank', 'noopener')
+      }
+    }
+    // Insert into toolbar (right side)
+    const toolbar = document.querySelector('.lg-toolbar.lg-group')
+    if (toolbar) {
+      toolbar.appendChild(btn)
+    }
+  }
+
   return (
     <Widget id='instagram' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction} icon={faInstagram}>
@@ -150,6 +178,10 @@ export default () => {
         <LightGallery
           onInit={ref => {
             lightGalleryRef.current = ref.instance
+            addInstagramButton(0, media)
+          }}
+          onAfterSlide={({ index }) => {
+            addInstagramButton(index, media)
           }}
           plugins={[lgThumbnail, lgZoom, lgVideo, lgAutoplay]}
           licenseKey={process.env.GATSBY_LIGHT_GALLERY_LICENSE_KEY}
