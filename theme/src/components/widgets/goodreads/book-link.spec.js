@@ -66,10 +66,9 @@ describe('Widget/Goodreads/BookLink', () => {
   it('logs click event details for debugging', async () => {
     // Mock window.scrollY and location
     Object.defineProperty(window, 'scrollY', { value: 200 })
-    Object.defineProperty(window, 'location', {
-      value: { pathname: '/', search: '' },
-      writable: true
-    })
+    const mockLocation = { pathname: '/', search: '' }
+    delete window.location
+    window.location = mockLocation
     render(<BookLink {...mockProps} />)
     const link = screen.getByTestId('book-link')
     fireEvent.click(link)

@@ -16,7 +16,16 @@ module.exports = [
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
-        ...globals.browser,
+        // Explicitly define browser globals we want to use
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        fetch: 'readonly',
+        // Node.js globals
         ...globals.node
       }
     }

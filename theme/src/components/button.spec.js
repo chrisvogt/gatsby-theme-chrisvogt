@@ -18,30 +18,37 @@ const mockTheme = {
   }
 }
 
-// Helper function to render with theme
-const renderWithTheme = component => render(<ThemeUIProvider theme={mockTheme}>{component}</ThemeUIProvider>)
-
 describe('Button', () => {
   it('renders a button with default variant (primary)', () => {
-    renderWithTheme(<Button>Click me</Button>)
-
+    render(
+      <ThemeUIProvider theme={mockTheme}>
+        <Button>Click me</Button>
+      </ThemeUIProvider>
+    )
     const button = screen.getByRole('button', { name: /click me/i })
     expect(button).toBeInTheDocument()
-    expect(button).toHaveStyle('background-color: blue')
-    expect(button).toHaveStyle('color: white')
+    expect(button).toHaveStyle('background-color: rgb(0, 0, 255)')
+    expect(button).toHaveStyle('color: rgb(255, 255, 255)')
   })
 
   it('renders a button with the secondary variant', () => {
-    renderWithTheme(<Button variant='secondary'>Click me</Button>)
-
+    render(
+      <ThemeUIProvider theme={mockTheme}>
+        <Button variant='secondary'>Click me</Button>
+      </ThemeUIProvider>
+    )
     const button = screen.getByRole('button', { name: /click me/i })
     expect(button).toBeInTheDocument()
-    expect(button).toHaveStyle('background-color: gray')
-    expect(button).toHaveStyle('color: black')
+    expect(button).toHaveStyle('background-color: rgb(128, 128, 128)')
+    expect(button).toHaveStyle('color: rgb(0, 0, 0)')
   })
 
   it('passes additional props to the button element', () => {
-    renderWithTheme(<Button type='submit'>Submit</Button>)
+    render(
+      <ThemeUIProvider theme={mockTheme}>
+        <Button type='submit'>Submit</Button>
+      </ThemeUIProvider>
+    )
 
     const button = screen.getByRole('button', { name: /submit/i })
     expect(button).toBeInTheDocument()
