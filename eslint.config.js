@@ -4,6 +4,8 @@ const prettier = require('eslint-plugin-prettier')
 const js = require('@eslint/js')
 const globals = require('globals')
 
+const browserGlobals = Object.fromEntries(Object.entries(globals.browser).filter(([key]) => key.trim() === key))
+
 module.exports = [
   {
     ignores: ['**/*.json', '**/node_modules/**', '**/theme/public/**', '**/www.chrisvogt.me/public/**', '**/.cache/**']
@@ -25,6 +27,7 @@ module.exports = [
         localStorage: 'readonly',
         sessionStorage: 'readonly',
         fetch: 'readonly',
+        requestAnimationFrame: 'readonly',
         // Node.js globals
         ...globals.node
       }
@@ -88,7 +91,12 @@ module.exports = [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.jest // Include Jest globals for describe, it, etc.
+        ...globals.jest, // Include Jest globals for describe, it, etc.
+        ...browserGlobals, // Filtered browser globals
+        getComputedStyle: 'readonly',
+        Event: 'readonly',
+        HTMLCanvasElement: 'readonly',
+        requestAnimationFrame: 'readonly'
       }
     },
     plugins: {
