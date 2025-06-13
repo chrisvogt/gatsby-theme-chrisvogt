@@ -29,6 +29,10 @@ export default () => {
             <span>
               <Link to='/privacy'>Privacy Policy</Link>
             </span>
+            {' | '}
+            <span>
+              <Link to='https://github.com/chrisvogt/gatsby-theme-chrisvogt'>View Source</Link>
+            </span>
           </div>
         </div>
       </Container>
