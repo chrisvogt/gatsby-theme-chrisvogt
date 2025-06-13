@@ -64,11 +64,10 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       mockGetElementById.mockClear()
       // Mock navigate function
       jest.spyOn(require('@gatsbyjs/reach-router'), 'navigate').mockImplementation(mockNavigate)
-      // Mock window.location.hash
-      Object.defineProperty(window, 'location', {
-        value: { hash: '' },
-        writable: true
-      })
+      // Set window.location properties directly
+      window.location.hash = ''
+      window.location.pathname = '/'
+      window.location.search = ''
     })
 
     it('restores scroll position when location state contains scrollPosition', async () => {
@@ -142,6 +141,10 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
     it('scrolls to goodreads element when bookId is present and no scroll state', async () => {
       const mockElement = { offsetHeight: 100 }
       mockGetElementById.mockReturnValue(mockElement)
+      // Set location for this test
+      window.location.hash = ''
+      window.location.pathname = '/'
+      window.location.search = '?bookId=123'
       render(
         <LocationProvider
           history={{
@@ -161,7 +164,7 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       // Wait for setTimeout
       await new Promise(resolve => setTimeout(resolve, 100))
       expect(mockGetElementById).toHaveBeenCalledWith('goodreads')
-      expect(window.location.hash).toBe('goodreads')
+      expect(window.location.hash).toBe('#goodreads')
     })
 
     it('handles cleanup on unmount with different scroll position', () => {
