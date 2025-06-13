@@ -96,7 +96,6 @@ describe('Widget/Goodreads/BookExplorer', () => {
   it('renders external link without target="_blank"', () => {
     renderWithRouter(<BookExplorer book={mockBook} onClose={() => {}} default />)
     const link = screen.getByText('Learn more on Google Books')
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
     expect(link).not.toHaveAttribute('target')
   })
 })

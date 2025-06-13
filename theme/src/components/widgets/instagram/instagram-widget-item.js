@@ -11,7 +11,6 @@ const InstagramWidgetItem = ({ handleClick, index, post: { caption, cdnMediaURL,
     <button
       key={id}
       onClick={event => handleClick(event, { index, photo: { caption, id, src: cdnMediaURL } })}
-      rel='noopener noreferrer'
       className='instagram-item-button'
       sx={{
         variant: 'styles.InstagramItem'

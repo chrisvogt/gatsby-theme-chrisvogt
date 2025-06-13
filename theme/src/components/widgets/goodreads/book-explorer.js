@@ -120,7 +120,6 @@ const BookExplorer = ({ book, onClose }) => {
 
             <Themed.a
               href={infoLink}
-              rel='noopener noreferrer'
               sx={{
                 display: 'inline-flex',
                 alignItems: 'center',
