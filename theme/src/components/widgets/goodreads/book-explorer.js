@@ -17,8 +17,6 @@ const BookExplorer = ({ book, onClose }) => {
   const { authors, cdnMediaURL, description, infoLink, rating, title } = book
   const location = useLocation()
 
-  console.log('BookExplorer rendered with book:', book)
-
   const handleBackClick = e => {
     e.preventDefault()
     onClose()

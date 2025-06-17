@@ -88,11 +88,6 @@ describe('Widget/Goodreads/BookExplorer', () => {
     expect(onClose).toHaveBeenCalled()
   })
 
-  it('logs book details for debugging', () => {
-    renderWithRouter(<BookExplorer book={mockBook} onClose={() => {}} default />)
-    expect(console.log).toHaveBeenCalledWith('BookExplorer rendered with book:', mockBook)
-  })
-
   it('renders external link without target="_blank"', () => {
     renderWithRouter(<BookExplorer book={mockBook} onClose={() => {}} default />)
     const link = screen.getByText('Learn more on Google Books')
