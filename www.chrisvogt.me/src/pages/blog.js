@@ -41,7 +41,7 @@ const BlogIndexPage = ({ data }) => {
               <PostCard
                 category={post.fields.category}
                 date={post.frontmatter.date}
-                excerpt={post.excerpt}
+                // excerpt={post.excerpt}
                 key={post.fields.id}
                 link={post.fields.path}
                 title={post.frontmatter.title}
