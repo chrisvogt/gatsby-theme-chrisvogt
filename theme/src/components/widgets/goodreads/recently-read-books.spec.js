@@ -64,10 +64,6 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
       mockGetElementById.mockClear()
       // Mock navigate function
       jest.spyOn(require('@gatsbyjs/reach-router'), 'navigate').mockImplementation(mockNavigate)
-      // Set window.location properties directly
-      window.location.hash = ''
-      window.location.pathname = '/'
-      window.location.search = ''
     })
 
     it('restores scroll position when location state contains scrollPosition', async () => {
@@ -141,10 +137,7 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
     it('scrolls to goodreads element when bookId is present and no scroll state', async () => {
       const mockElement = { offsetHeight: 100 }
       mockGetElementById.mockReturnValue(mockElement)
-      // Set location for this test
-      window.location.hash = ''
-      window.location.pathname = '/'
-      window.location.search = '?bookId=123'
+      // No need to mock window.location properties; use JSDOM defaults
       render(
         <LocationProvider
           history={{

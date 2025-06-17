@@ -38,7 +38,6 @@ const RecentlyReadBooks = ({ books = [], isLoading }) => {
     }
     // If we have a scroll position in state, restore it
     else if (location.state?.scrollPosition) {
-      console.log('Restoring scroll position:', location.state.scrollPosition)
       // Use requestAnimationFrame to ensure smooth restoration
       requestAnimationFrame(() => {
         window.scrollTo({
