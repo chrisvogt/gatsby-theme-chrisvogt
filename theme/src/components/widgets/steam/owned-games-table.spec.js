@@ -38,6 +38,56 @@ describe('OwnedGamesTable', () => {
     const tree = renderer.create(<OwnedGamesTable games={null} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('renders empty state when games is undefined', () => {
+    const tree = renderer.create(<OwnedGamesTable games={undefined} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders correctly with more than 10 games and shows remaining games section', () => {
+    const manyGames = Array.from({ length: 15 }, (_, index) => ({
+      id: 100000 + index,
+      displayName: `Game ${index + 1}`,
+      playTimeForever: 1000 + index * 100,
+      playTime2Weeks: index % 2 === 0 ? 50 + index * 10 : null,
+      images: {
+        icon: `https://example.com/game-${index + 1}-icon.jpg`
+      }
+    }))
+
+    const tree = renderer.create(<OwnedGamesTable games={manyGames} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders correctly with exactly 11 games and shows singular "other game"', () => {
+    const elevenGames = Array.from({ length: 11 }, (_, index) => ({
+      id: 100000 + index,
+      displayName: `Game ${index + 1}`,
+      playTimeForever: 1000 + index * 100,
+      playTime2Weeks: index % 2 === 0 ? 50 + index * 10 : null,
+      images: {
+        icon: `https://example.com/game-${index + 1}-icon.jpg`
+      }
+    }))
+
+    const tree = renderer.create(<OwnedGamesTable games={elevenGames} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders correctly with exactly 12 games and shows plural "other games"', () => {
+    const twelveGames = Array.from({ length: 12 }, (_, index) => ({
+      id: 100000 + index,
+      displayName: `Game ${index + 1}`,
+      playTimeForever: 1000 + index * 100,
+      playTime2Weeks: index % 2 === 0 ? 50 + index * 10 : null,
+      images: {
+        icon: `https://example.com/game-${index + 1}-icon.jpg`
+      }
+    }))
+
+    const tree = renderer.create(<OwnedGamesTable games={twelveGames} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })
 
 describe('TimeSpent', () => {
