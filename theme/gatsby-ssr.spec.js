@@ -17,14 +17,13 @@ describe('gatsby-ssr', () => {
     // Assert the HTML lang attribute
     expect(setHtmlAttributes).toHaveBeenCalledWith({ lang: 'en' })
 
-    // Extract the script element
+    // Test the color mode script
     expect(setPreBodyComponents).toHaveBeenCalledTimes(1)
-    const [scriptElement] = setPreBodyComponents.mock.calls[0][0]
+    const scriptComponents = setPreBodyComponents.mock.calls[0][0]
+    expect(scriptComponents).toHaveLength(1)
 
-    // Render the script element using React Testing Library
-    const { container } = render(scriptElement)
-    const scriptTag = container.querySelector('script')
-
+    const { container: scriptContainer } = render(scriptComponents[0])
+    const scriptTag = scriptContainer.querySelector('script')
     expect(scriptTag).toBeInTheDocument()
     expect(scriptTag).toHaveTextContent(/localStorage\.getItem\(['"]theme-ui-color-mode['"]\)/)
     expect(scriptTag).toHaveTextContent(/prefers-color-scheme/)
