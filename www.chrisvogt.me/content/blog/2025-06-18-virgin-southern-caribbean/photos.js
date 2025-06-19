@@ -110,13 +110,13 @@ export const streetPhotographyInSanJuan = [
 export const friendsArrivedInSanJuan = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231679/chrisvogt-me/galleries/2025-vsc/20250331-IMG_2752.jpg',
-    title: 'Group exploring',
+    title: 'Plaza Colón in Viejo San Juan',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231647/chrisvogt-me/galleries/2025-vsc/20250331-IMG_2756.jpg',
-    title: 'Matt sitting',
+    title: 'Matt sitting on a bench in Viejo San Juan',
     width: 3,
     height: 4
   },
@@ -149,7 +149,7 @@ export const settingSail = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231637/chrisvogt-me/galleries/2025-vsc/20250401-IMG_2811.jpg',
-    title: 'Celebrating setting sail',
+    title: 'Nick celebrating setting sail',
     width: 3,
     height: 4
   }
@@ -158,25 +158,25 @@ export const settingSail = [
 export const earlyShipDays = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231645/chrisvogt-me/galleries/2025-vsc/20250403-IMG_2861.jpg',
-    title: 'Group trying on glasses',
+    title: 'The squad trying on different types of sunglasses',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231647/chrisvogt-me/galleries/2025-vsc/20250403-IMG_2835.jpg',
-    title: 'Group at the pool on the ship',
+    title: 'Volleyball on the ship',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231689/chrisvogt-me/galleries/2025-vsc/20250403-IMG_2868.jpg',
-    title: 'Goofy times at the carousel',
+    title: 'Goofy times at the carousel on the ship',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231648/chrisvogt-me/galleries/2025-vsc/20250402-IMG_2828.jpg',
-    title: 'Squad walking down the stairs',
+    title: 'The group walking down the stairs to the pool',
     width: 3,
     height: 4
   }
@@ -218,25 +218,25 @@ export const birdsOfCartagena = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231649/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2912.jpg',
-    title: 'Tucan',
+    title: 'A tucan in the port of Cartagena, Colombia',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231691/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2915.jpg',
-    title: 'Unknown bird',
+    title: 'A golden pheasant (Chrysolophus pictus)',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231673/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2918.jpg',
-    title: 'Baby flamingo',
+    title: 'A juvenile scarlet ibis (Eudocimus ruber)',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231691/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2922.jpg',
-    title: 'A toucan at the port of Cartagena, Colombia',
+    title: 'A pair of Peruvian Thick-knees (Hesperoburhinus superciliaris)',
     width: 3,
     height: 4
   },
@@ -248,7 +248,7 @@ export const birdsOfCartagena = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231691/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2926.jpg',
-    title: 'Fluffy parrot',
+    title: 'A salmon-crested cockatoo (Cacatua moluccensis)',
     width: 3,
     height: 4
   }
