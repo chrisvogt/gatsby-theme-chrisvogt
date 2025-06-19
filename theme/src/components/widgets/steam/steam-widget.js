@@ -13,6 +13,7 @@ import PostCard from '../recent-posts/post-card'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
+import OwnedGamesTable from './owned-games-table'
 
 import { SUCCESS } from '../../../reducers/widgets'
 import fetchDataSource from '../../../actions/fetchDataSource'
@@ -20,9 +21,7 @@ import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 export const TimeSpent = ({ timeInMs }) => (
-  <Fragment>
-    <b>Time Spent:</b> {humanizeDuration(timeInMs)}
-  </Fragment>
+  <Fragment>{humanizeDuration(timeInMs, { units: ['h'], round: true })}</Fragment>
 )
 
 const EMPTY_ARRAY = []
@@ -43,6 +42,7 @@ const SteamWidget = () => {
   const recentlyPlayedGames = useSelector(
     state => get(state, 'widgets.steam.data.collections.recentlyPlayedGames') ?? EMPTY_ARRAY
   )
+  const ownedGames = useSelector(state => get(state, 'widgets.steam.data.collections.ownedGames') ?? EMPTY_ARRAY)
 
   const callToAction = (
     <CallToAction title={`${profileDisplayName} on Steam`} url={profileURL} isLoading={isLoading}>
@@ -59,13 +59,25 @@ const SteamWidget = () => {
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
-      <div sx={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+      {/* My Games Section */}
+      <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
+        <Heading as='h3' sx={{ fontSize: [3, 4] }}>
+          My Games
+        </Heading>
+      </div>
+
+      <Themed.p sx={{ mb: 4 }}>Games I own and their play time statistics.</Themed.p>
+
+      <OwnedGamesTable games={ownedGames.slice(0, 8)} />
+
+      {/* Recently-Played Games Section */}
+      <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mt: 5, mb: 3 }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>
           Recently-Played Games
         </Heading>
       </div>
 
-      <Themed.p>Games I've played in the last two weeks.</Themed.p>
+      <Themed.p sx={{ mb: 4 }}>Games I've played in the last two weeks.</Themed.p>
 
       <div
         sx={{

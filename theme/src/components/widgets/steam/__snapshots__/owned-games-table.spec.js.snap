@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OwnedGamesTable renders correctly with sample data 1`] = `
+<table
+  className="css-zezy6m"
+>
+  <thead>
+    <tr>
+      <th>
+        Game
+      </th>
+      <th>
+        Total Play Time
+      </th>
+      <th>
+        Recent Play Time
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Cities: Skylines icon"
+            className="css-sfnjuk"
+            src="https://example.com/cities-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/255710"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Cities: Skylines
+          </a>
+        </div>
+      </td>
+      <td>
+        <b>
+          Time Spent:
+        </b>
+         
+        1 month, 1 day, 2 hours, 51 minutes
+      </td>
+      <td>
+        <b>
+          Time Spent:
+        </b>
+         
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="ARK: Survival Evolved icon"
+            className="css-sfnjuk"
+            src="https://example.com/ark-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/346110"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ARK: Survival Evolved
+          </a>
+        </div>
+      </td>
+      <td>
+        <b>
+          Time Spent:
+        </b>
+         
+        1 week, 4 days, 13 hours, 50 minutes
+      </td>
+      <td>
+        <span
+          className="css-tv4nyw"
+        >
+          Not played recently
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`OwnedGamesTable renders empty state when games is null 1`] = `
+<p
+  className="css-1mkkd6c"
+>
+  No owned games found.
+</p>
+`;
+
+exports[`OwnedGamesTable renders empty state when no games provided 1`] = `
+<p
+  className="css-1mkkd6c"
+>
+  No owned games found.
+</p>
+`;
+
+exports[`TimeSpent renders humanized time correctly 1`] = `
+[
+  <b>
+    Time Spent:
+  </b>,
+  " ",
+  "5 minutes",
+]
+`;
