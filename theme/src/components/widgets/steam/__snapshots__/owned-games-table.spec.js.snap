@@ -26,6 +26,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 1 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-1-icon.jpg"
           />
           <a
@@ -52,6 +53,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 2 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-2-icon.jpg"
           />
           <a
@@ -82,6 +84,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 3 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-3-icon.jpg"
           />
           <a
@@ -108,6 +111,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 4 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-4-icon.jpg"
           />
           <a
@@ -138,6 +142,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 5 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-5-icon.jpg"
           />
           <a
@@ -164,6 +169,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 6 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-6-icon.jpg"
           />
           <a
@@ -194,6 +200,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 7 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-7-icon.jpg"
           />
           <a
@@ -220,6 +227,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 8 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-8-icon.jpg"
           />
           <a
@@ -250,6 +258,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 9 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-9-icon.jpg"
           />
           <a
@@ -276,6 +285,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
           <img
             alt="Game 10 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-10-icon.jpg"
           />
           <a
@@ -363,6 +373,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 1 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-1-icon.jpg"
           />
           <a
@@ -389,6 +400,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 2 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-2-icon.jpg"
           />
           <a
@@ -419,6 +431,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 3 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-3-icon.jpg"
           />
           <a
@@ -445,6 +458,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 4 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-4-icon.jpg"
           />
           <a
@@ -475,6 +489,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 5 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-5-icon.jpg"
           />
           <a
@@ -501,6 +516,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 6 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-6-icon.jpg"
           />
           <a
@@ -531,6 +547,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 7 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-7-icon.jpg"
           />
           <a
@@ -557,6 +574,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 8 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-8-icon.jpg"
           />
           <a
@@ -587,6 +605,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 9 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-9-icon.jpg"
           />
           <a
@@ -613,6 +632,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
           <img
             alt="Game 10 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-10-icon.jpg"
           />
           <a
@@ -701,6 +721,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 1 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-1-icon.jpg"
           />
           <a
@@ -727,6 +748,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 2 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-2-icon.jpg"
           />
           <a
@@ -757,6 +779,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 3 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-3-icon.jpg"
           />
           <a
@@ -783,6 +806,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 4 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-4-icon.jpg"
           />
           <a
@@ -813,6 +837,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 5 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-5-icon.jpg"
           />
           <a
@@ -839,6 +864,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 6 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-6-icon.jpg"
           />
           <a
@@ -869,6 +895,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 7 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-7-icon.jpg"
           />
           <a
@@ -895,6 +922,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 8 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-8-icon.jpg"
           />
           <a
@@ -925,6 +953,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 9 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-9-icon.jpg"
           />
           <a
@@ -951,6 +980,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
           <img
             alt="Game 10 icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/game-10-icon.jpg"
           />
           <a
@@ -1039,6 +1069,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
           <img
             alt="Cities: Skylines icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/cities-icon.jpg"
           />
           <a
@@ -1065,6 +1096,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
           <img
             alt="ARK: Survival Evolved icon"
             className="css-sfnjuk"
+            loading="lazy"
             src="https://example.com/ark-icon.jpg"
           />
           <a

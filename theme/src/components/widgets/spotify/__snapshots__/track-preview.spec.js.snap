@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`TrackPreview matches the snapshot 1`] = `
 <a
@@ -10,6 +10,7 @@ exports[`TrackPreview matches the snapshot 1`] = `
     alt="album cover"
     className="css-o32fug"
     crossOrigin="anonymous"
+    loading="lazy"
     src="https://placehold.it/400/400"
   />
 </a>
