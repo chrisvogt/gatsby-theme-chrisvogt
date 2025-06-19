@@ -1,19 +1,19 @@
 export const flightToSanJuan = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231637/chrisvogt-me/galleries/2025-vsc/20250419-IMG_3558-2.jpg',
-    title: 'Nick looking out the plane, waiting to depart to San Juan',
+    title: 'Nick watching baggage being loaded onto the plane while we wait to depart from Denver',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231636/chrisvogt-me/galleries/2025-vsc/20250328-IMG_2625.jpg',
-    title: 'Flying over clouds in the Caribbean',
+    title: 'Above the clouds',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231644/chrisvogt-me/galleries/2025-vsc/20250328-IMG_2643.jpg',
-    title: 'Landing in San Juan, Puerto Rico',
+    title: 'Landing at SJU — San Juan, Puerto Rico',
     width: 3,
     height: 4
   }
@@ -22,13 +22,13 @@ export const flightToSanJuan = [
 export const exploringOldSanJuanBefore = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231638/chrisvogt-me/galleries/2025-vsc/20250328-IMG_2680.jpg',
-    title: 'Nick looking out the plane, waiting to depart to San Juan',
+    title: 'Old San Juan from Mar y Rosa',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231670/chrisvogt-me/galleries/2025-vsc/20250328-IMG_2669.jpg',
-    title: 'Old San Juan at night from a rooftop bar',
+    title: 'Another shot of Old San Juan from Mar y Rosa',
     width: 4,
     height: 3
   },
@@ -40,7 +40,7 @@ export const exploringOldSanJuanBefore = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231649/chrisvogt-me/galleries/2025-vsc/20250328-IMG_2655.jpg',
-    title: 'Mofongo at Hotel Rumbao in Old San Juan',
+    title: 'Mofongo at Hotel Rumbao',
     width: 3,
     height: 4
   },
@@ -52,13 +52,13 @@ export const exploringOldSanJuanBefore = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231651/chrisvogt-me/galleries/2025-vsc/20250329-CJV09177.jpg',
-    title: 'A colorful building in Old San Juan',
+    title: 'Looking out over the water from Bastión de San Agustín in Old San Juan',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231640/chrisvogt-me/galleries/2025-vsc/20250329-CJV09169.jpg',
-    title: 'Fort in Old San Juan',
+    title: 'A lookout entrance at Bastión de San Agustín in Old San Juan',
     width: 3,
     height: 4
   }
@@ -67,10 +67,11 @@ export const exploringOldSanJuanBefore = [
 export const architectureInSanJuan = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231677/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2723.jpg',
-    title: 'A colorful door in Old San Juan',
+    title: 'Casa Borinquen on Calle de San Sebastián in Old San Juan',
     width: 3,
     height: 4
   },
+  /* titles edited up to here */
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231640/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2718.jpg',
     title: 'Building',
