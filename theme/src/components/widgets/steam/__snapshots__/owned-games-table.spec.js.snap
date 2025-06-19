@@ -2,7 +2,7 @@
 
 exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singular "other game" 1`] = `
 <table
-  className="css-zezy6m"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -21,7 +21,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 1 icon"
@@ -29,7 +29,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-1-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100000"
             rel="noopener noreferrer"
           >
@@ -47,7 +47,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 2 icon"
@@ -55,7 +55,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-2-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100001"
             rel="noopener noreferrer"
           >
@@ -68,7 +68,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -77,7 +77,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 3 icon"
@@ -85,7 +85,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-3-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100002"
             rel="noopener noreferrer"
           >
@@ -103,7 +103,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 4 icon"
@@ -111,7 +111,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-4-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100003"
             rel="noopener noreferrer"
           >
@@ -124,7 +124,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -133,7 +133,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 5 icon"
@@ -141,7 +141,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-5-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100004"
             rel="noopener noreferrer"
           >
@@ -159,7 +159,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 6 icon"
@@ -167,7 +167,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-6-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100005"
             rel="noopener noreferrer"
           >
@@ -180,7 +180,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -189,7 +189,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 7 icon"
@@ -197,7 +197,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-7-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100006"
             rel="noopener noreferrer"
           >
@@ -215,7 +215,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 8 icon"
@@ -223,7 +223,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-8-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100007"
             rel="noopener noreferrer"
           >
@@ -236,7 +236,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -245,7 +245,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 9 icon"
@@ -253,7 +253,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-9-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100008"
             rel="noopener noreferrer"
           >
@@ -271,7 +271,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 10 icon"
@@ -279,7 +279,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
             src="https://example.com/game-10-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100009"
             rel="noopener noreferrer"
           >
@@ -292,7 +292,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -304,7 +304,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
         colSpan={3}
       >
         <a
-          className="css-1vh3e7c"
+          className="css-1lwlkan"
           href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
           rel="noopener noreferrer"
         >
@@ -339,7 +339,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
 
 exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plural "other games" 1`] = `
 <table
-  className="css-zezy6m"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -358,7 +358,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 1 icon"
@@ -366,7 +366,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-1-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100000"
             rel="noopener noreferrer"
           >
@@ -384,7 +384,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 2 icon"
@@ -392,7 +392,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-2-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100001"
             rel="noopener noreferrer"
           >
@@ -405,7 +405,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -414,7 +414,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 3 icon"
@@ -422,7 +422,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-3-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100002"
             rel="noopener noreferrer"
           >
@@ -440,7 +440,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 4 icon"
@@ -448,7 +448,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-4-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100003"
             rel="noopener noreferrer"
           >
@@ -461,7 +461,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -470,7 +470,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 5 icon"
@@ -478,7 +478,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-5-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100004"
             rel="noopener noreferrer"
           >
@@ -496,7 +496,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 6 icon"
@@ -504,7 +504,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-6-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100005"
             rel="noopener noreferrer"
           >
@@ -517,7 +517,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -526,7 +526,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 7 icon"
@@ -534,7 +534,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-7-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100006"
             rel="noopener noreferrer"
           >
@@ -552,7 +552,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 8 icon"
@@ -560,7 +560,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-8-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100007"
             rel="noopener noreferrer"
           >
@@ -573,7 +573,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -582,7 +582,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 9 icon"
@@ -590,7 +590,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-9-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100008"
             rel="noopener noreferrer"
           >
@@ -608,7 +608,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 10 icon"
@@ -616,7 +616,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
             src="https://example.com/game-10-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100009"
             rel="noopener noreferrer"
           >
@@ -629,7 +629,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -641,7 +641,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
         colSpan={3}
       >
         <a
-          className="css-1vh3e7c"
+          className="css-1lwlkan"
           href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
           rel="noopener noreferrer"
         >
@@ -677,7 +677,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
 
 exports[`OwnedGamesTable renders correctly with more than 10 games and shows remaining games section 1`] = `
 <table
-  className="css-zezy6m"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -696,7 +696,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 1 icon"
@@ -704,7 +704,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-1-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100000"
             rel="noopener noreferrer"
           >
@@ -722,7 +722,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 2 icon"
@@ -730,7 +730,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-2-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100001"
             rel="noopener noreferrer"
           >
@@ -743,7 +743,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -752,7 +752,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 3 icon"
@@ -760,7 +760,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-3-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100002"
             rel="noopener noreferrer"
           >
@@ -778,7 +778,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 4 icon"
@@ -786,7 +786,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-4-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100003"
             rel="noopener noreferrer"
           >
@@ -799,7 +799,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -808,7 +808,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 5 icon"
@@ -816,7 +816,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-5-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100004"
             rel="noopener noreferrer"
           >
@@ -834,7 +834,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 6 icon"
@@ -842,7 +842,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-6-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100005"
             rel="noopener noreferrer"
           >
@@ -855,7 +855,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -864,7 +864,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 7 icon"
@@ -872,7 +872,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-7-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100006"
             rel="noopener noreferrer"
           >
@@ -890,7 +890,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 8 icon"
@@ -898,7 +898,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-8-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100007"
             rel="noopener noreferrer"
           >
@@ -911,7 +911,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -920,7 +920,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 9 icon"
@@ -928,7 +928,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-9-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100008"
             rel="noopener noreferrer"
           >
@@ -946,7 +946,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Game 10 icon"
@@ -954,7 +954,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
             src="https://example.com/game-10-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/100009"
             rel="noopener noreferrer"
           >
@@ -967,7 +967,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -979,7 +979,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
         colSpan={3}
       >
         <a
-          className="css-1vh3e7c"
+          className="css-1lwlkan"
           href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
           rel="noopener noreferrer"
         >
@@ -1015,7 +1015,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
 
 exports[`OwnedGamesTable renders correctly with sample data 1`] = `
 <table
-  className="css-zezy6m"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -1034,7 +1034,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="Cities: Skylines icon"
@@ -1042,7 +1042,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
             src="https://example.com/cities-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/255710"
             rel="noopener noreferrer"
           >
@@ -1060,7 +1060,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
     <tr>
       <td>
         <div
-          className="css-b0fne7"
+          className="css-uoday8"
         >
           <img
             alt="ARK: Survival Evolved icon"
@@ -1068,7 +1068,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
             src="https://example.com/ark-icon.jpg"
           />
           <a
-            className="css-1mawu4u"
+            className="css-rferrc"
             href="https://store.steampowered.com/app/346110"
             rel="noopener noreferrer"
           >
@@ -1081,7 +1081,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
       </td>
       <td>
         <span
-          className="css-1nxn0wh"
+          className="css-1ru781j"
         >
           –
         </span>
@@ -1093,7 +1093,7 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
 
 exports[`OwnedGamesTable renders empty state when games is null 1`] = `
 <p
-  className="css-1mkkd6c"
+  className="css-1fvqmuk"
 >
   No owned games found.
 </p>
@@ -1101,7 +1101,7 @@ exports[`OwnedGamesTable renders empty state when games is null 1`] = `
 
 exports[`OwnedGamesTable renders empty state when games is undefined 1`] = `
 <p
-  className="css-1mkkd6c"
+  className="css-1fvqmuk"
 >
   No owned games found.
 </p>
@@ -1109,7 +1109,7 @@ exports[`OwnedGamesTable renders empty state when games is undefined 1`] = `
 
 exports[`OwnedGamesTable renders empty state when no games provided 1`] = `
 <p
-  className="css-1mkkd6c"
+  className="css-1fvqmuk"
 >
   No owned games found.
 </p>

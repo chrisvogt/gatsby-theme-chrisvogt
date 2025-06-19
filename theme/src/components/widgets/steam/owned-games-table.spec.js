@@ -1,6 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { ThemeUIProvider } from 'theme-ui'
+import theme from '../../../gatsby-plugin-theme-ui'
 import OwnedGamesTable, { TimeSpent } from './owned-games-table'
+
+const renderWithColorMode = component => {
+  return renderer.create(<ThemeUIProvider theme={theme}>{component}</ThemeUIProvider>)
+}
 
 describe('OwnedGamesTable', () => {
   it('renders correctly with sample data', () => {
@@ -25,22 +31,22 @@ describe('OwnedGamesTable', () => {
       }
     ]
 
-    const tree = renderer.create(<OwnedGamesTable games={sampleGames} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={sampleGames} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders empty state when no games provided', () => {
-    const tree = renderer.create(<OwnedGamesTable games={[]} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={[]} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders empty state when games is null', () => {
-    const tree = renderer.create(<OwnedGamesTable games={null} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={null} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders empty state when games is undefined', () => {
-    const tree = renderer.create(<OwnedGamesTable games={undefined} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={undefined} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -55,7 +61,7 @@ describe('OwnedGamesTable', () => {
       }
     }))
 
-    const tree = renderer.create(<OwnedGamesTable games={manyGames} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={manyGames} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -70,7 +76,7 @@ describe('OwnedGamesTable', () => {
       }
     }))
 
-    const tree = renderer.create(<OwnedGamesTable games={elevenGames} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={elevenGames} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -85,7 +91,7 @@ describe('OwnedGamesTable', () => {
       }
     }))
 
-    const tree = renderer.create(<OwnedGamesTable games={twelveGames} />).toJSON()
+    const tree = renderWithColorMode(<OwnedGamesTable games={twelveGames} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
