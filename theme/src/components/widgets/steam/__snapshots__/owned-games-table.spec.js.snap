@@ -2,7 +2,7 @@
 
 exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singular "other game" 1`] = `
 <table
-  className="css-8qs8w"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -339,7 +339,7 @@ exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singu
 
 exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plural "other games" 1`] = `
 <table
-  className="css-8qs8w"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -677,7 +677,7 @@ exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plura
 
 exports[`OwnedGamesTable renders correctly with more than 10 games and shows remaining games section 1`] = `
 <table
-  className="css-8qs8w"
+  className="css-1intvy2"
 >
   <thead>
     <tr>
@@ -1015,7 +1015,7 @@ exports[`OwnedGamesTable renders correctly with more than 10 games and shows rem
 
 exports[`OwnedGamesTable renders correctly with sample data 1`] = `
 <table
-  className="css-8qs8w"
+  className="css-1intvy2"
 >
   <thead>
     <tr>

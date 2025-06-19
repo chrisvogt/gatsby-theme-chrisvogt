@@ -644,15 +644,11 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
       },
       "th": {
         "backgroundColor": "tableHeaderBackground",
-        "borderColor": "tableBorder",
-        "borderTop": "2px solid",
         "fontWeight": "bold",
         "letterSpacing": "0.05em",
         "textTransform": "uppercase",
       },
       "th, td": {
-        "borderBottom": "1px solid",
-        "borderColor": "tableBorder",
         "fontSize": "1.125em",
         "padding": "12px 15px",
         "textAlign": "left",
@@ -679,15 +675,11 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
       },
       "th": {
         "backgroundColor": "tableHeaderBackground",
-        "borderColor": "tableBorder",
-        "borderTop": "2px solid",
         "fontWeight": "bold",
         "letterSpacing": "0.05em",
         "textTransform": "uppercase",
       },
       "th, td": {
-        "borderBottom": "1px solid",
-        "borderColor": "tableBorder",
         "fontSize": "1.125em",
         "padding": "12px 15px",
         "textAlign": "left",
