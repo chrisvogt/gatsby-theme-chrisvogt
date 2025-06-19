@@ -68,9 +68,9 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
       </td>
       <td>
         <span
-          className="css-tv4nyw"
+          className="css-1nxn0wh"
         >
-          Not played recently
+          –
         </span>
       </td>
     </tr>

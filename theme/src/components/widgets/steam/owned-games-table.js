@@ -68,7 +68,7 @@ const OwnedGamesTable = ({ games = [] }) => {
               {game.playTime2Weeks ? (
                 <TimeSpent timeInMs={game.playTime2Weeks * 60 * 1000} />
               ) : (
-                <span sx={{ color: 'textMuted', fontStyle: 'italic' }}>Not played recently</span>
+                <span sx={{ color: 'tableText', fontStyle: 'italic' }}>–</span>
               )}
             </td>
           </tr>
