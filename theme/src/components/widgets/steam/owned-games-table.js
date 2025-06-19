@@ -39,6 +39,7 @@ const OwnedGamesTable = ({ games = [] }) => {
             <td>
               <div sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <img
+                  loading='lazy'
                   src={game.images?.icon}
                   alt={`${game.displayName} icon`}
                   sx={{
