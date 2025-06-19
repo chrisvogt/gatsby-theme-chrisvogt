@@ -1,0 +1,1118 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`OwnedGamesTable renders correctly with exactly 11 games and shows singular "other game" 1`] = `
+<table
+  className="css-zezy6m"
+>
+  <thead>
+    <tr>
+      <th>
+        Game
+      </th>
+      <th>
+        Total Play Time
+      </th>
+      <th>
+        Recent Play Time
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 1 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-1-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100000"
+            rel="noopener noreferrer"
+          >
+            Game 1
+          </a>
+        </div>
+      </td>
+      <td>
+        17 hours
+      </td>
+      <td>
+        1 hour
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 2 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-2-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100001"
+            rel="noopener noreferrer"
+          >
+            Game 2
+          </a>
+        </div>
+      </td>
+      <td>
+        18 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 3 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-3-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100002"
+            rel="noopener noreferrer"
+          >
+            Game 3
+          </a>
+        </div>
+      </td>
+      <td>
+        20 hours
+      </td>
+      <td>
+        1 hour
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 4 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-4-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100003"
+            rel="noopener noreferrer"
+          >
+            Game 4
+          </a>
+        </div>
+      </td>
+      <td>
+        22 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 5 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-5-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100004"
+            rel="noopener noreferrer"
+          >
+            Game 5
+          </a>
+        </div>
+      </td>
+      <td>
+        23 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 6 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-6-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100005"
+            rel="noopener noreferrer"
+          >
+            Game 6
+          </a>
+        </div>
+      </td>
+      <td>
+        25 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 7 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-7-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100006"
+            rel="noopener noreferrer"
+          >
+            Game 7
+          </a>
+        </div>
+      </td>
+      <td>
+        27 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 8 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-8-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100007"
+            rel="noopener noreferrer"
+          >
+            Game 8
+          </a>
+        </div>
+      </td>
+      <td>
+        28 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 9 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-9-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100008"
+            rel="noopener noreferrer"
+          >
+            Game 9
+          </a>
+        </div>
+      </td>
+      <td>
+        30 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 10 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-10-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100009"
+            rel="noopener noreferrer"
+          >
+            Game 10
+          </a>
+        </div>
+      </td>
+      <td>
+        32 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td
+        className="css-1rlzk5p"
+        colSpan={3}
+      >
+        <a
+          className="css-1vh3e7c"
+          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+          rel="noopener noreferrer"
+        >
+          ...and 
+          1
+           other game
+          <span>
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-up-right-from-square fa-xs "
+              data-icon="up-right-from-square"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={{}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+                fill="currentColor"
+                style={{}}
+              />
+            </svg>
+          </span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`OwnedGamesTable renders correctly with exactly 12 games and shows plural "other games" 1`] = `
+<table
+  className="css-zezy6m"
+>
+  <thead>
+    <tr>
+      <th>
+        Game
+      </th>
+      <th>
+        Total Play Time
+      </th>
+      <th>
+        Recent Play Time
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 1 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-1-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100000"
+            rel="noopener noreferrer"
+          >
+            Game 1
+          </a>
+        </div>
+      </td>
+      <td>
+        17 hours
+      </td>
+      <td>
+        1 hour
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 2 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-2-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100001"
+            rel="noopener noreferrer"
+          >
+            Game 2
+          </a>
+        </div>
+      </td>
+      <td>
+        18 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 3 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-3-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100002"
+            rel="noopener noreferrer"
+          >
+            Game 3
+          </a>
+        </div>
+      </td>
+      <td>
+        20 hours
+      </td>
+      <td>
+        1 hour
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 4 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-4-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100003"
+            rel="noopener noreferrer"
+          >
+            Game 4
+          </a>
+        </div>
+      </td>
+      <td>
+        22 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 5 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-5-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100004"
+            rel="noopener noreferrer"
+          >
+            Game 5
+          </a>
+        </div>
+      </td>
+      <td>
+        23 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 6 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-6-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100005"
+            rel="noopener noreferrer"
+          >
+            Game 6
+          </a>
+        </div>
+      </td>
+      <td>
+        25 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 7 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-7-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100006"
+            rel="noopener noreferrer"
+          >
+            Game 7
+          </a>
+        </div>
+      </td>
+      <td>
+        27 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 8 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-8-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100007"
+            rel="noopener noreferrer"
+          >
+            Game 8
+          </a>
+        </div>
+      </td>
+      <td>
+        28 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 9 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-9-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100008"
+            rel="noopener noreferrer"
+          >
+            Game 9
+          </a>
+        </div>
+      </td>
+      <td>
+        30 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 10 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-10-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100009"
+            rel="noopener noreferrer"
+          >
+            Game 10
+          </a>
+        </div>
+      </td>
+      <td>
+        32 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td
+        className="css-1rlzk5p"
+        colSpan={3}
+      >
+        <a
+          className="css-1vh3e7c"
+          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+          rel="noopener noreferrer"
+        >
+          ...and 
+          2
+           other game
+          s
+          <span>
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-up-right-from-square fa-xs "
+              data-icon="up-right-from-square"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={{}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+                fill="currentColor"
+                style={{}}
+              />
+            </svg>
+          </span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`OwnedGamesTable renders correctly with more than 10 games and shows remaining games section 1`] = `
+<table
+  className="css-zezy6m"
+>
+  <thead>
+    <tr>
+      <th>
+        Game
+      </th>
+      <th>
+        Total Play Time
+      </th>
+      <th>
+        Recent Play Time
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 1 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-1-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100000"
+            rel="noopener noreferrer"
+          >
+            Game 1
+          </a>
+        </div>
+      </td>
+      <td>
+        17 hours
+      </td>
+      <td>
+        1 hour
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 2 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-2-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100001"
+            rel="noopener noreferrer"
+          >
+            Game 2
+          </a>
+        </div>
+      </td>
+      <td>
+        18 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 3 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-3-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100002"
+            rel="noopener noreferrer"
+          >
+            Game 3
+          </a>
+        </div>
+      </td>
+      <td>
+        20 hours
+      </td>
+      <td>
+        1 hour
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 4 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-4-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100003"
+            rel="noopener noreferrer"
+          >
+            Game 4
+          </a>
+        </div>
+      </td>
+      <td>
+        22 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 5 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-5-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100004"
+            rel="noopener noreferrer"
+          >
+            Game 5
+          </a>
+        </div>
+      </td>
+      <td>
+        23 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 6 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-6-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100005"
+            rel="noopener noreferrer"
+          >
+            Game 6
+          </a>
+        </div>
+      </td>
+      <td>
+        25 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 7 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-7-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100006"
+            rel="noopener noreferrer"
+          >
+            Game 7
+          </a>
+        </div>
+      </td>
+      <td>
+        27 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 8 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-8-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100007"
+            rel="noopener noreferrer"
+          >
+            Game 8
+          </a>
+        </div>
+      </td>
+      <td>
+        28 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 9 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-9-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100008"
+            rel="noopener noreferrer"
+          >
+            Game 9
+          </a>
+        </div>
+      </td>
+      <td>
+        30 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Game 10 icon"
+            className="css-sfnjuk"
+            src="https://example.com/game-10-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/100009"
+            rel="noopener noreferrer"
+          >
+            Game 10
+          </a>
+        </div>
+      </td>
+      <td>
+        32 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td
+        className="css-1rlzk5p"
+        colSpan={3}
+      >
+        <a
+          className="css-1vh3e7c"
+          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+          rel="noopener noreferrer"
+        >
+          ...and 
+          5
+           other game
+          s
+          <span>
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-up-right-from-square fa-xs "
+              data-icon="up-right-from-square"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={{}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+                fill="currentColor"
+                style={{}}
+              />
+            </svg>
+          </span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`OwnedGamesTable renders correctly with sample data 1`] = `
+<table
+  className="css-zezy6m"
+>
+  <thead>
+    <tr>
+      <th>
+        Game
+      </th>
+      <th>
+        Total Play Time
+      </th>
+      <th>
+        Recent Play Time
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="Cities: Skylines icon"
+            className="css-sfnjuk"
+            src="https://example.com/cities-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/255710"
+            rel="noopener noreferrer"
+          >
+            Cities: Skylines
+          </a>
+        </div>
+      </td>
+      <td>
+        757 hours
+      </td>
+      <td>
+        2 hours
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="css-b0fne7"
+        >
+          <img
+            alt="ARK: Survival Evolved icon"
+            className="css-sfnjuk"
+            src="https://example.com/ark-icon.jpg"
+          />
+          <a
+            className="css-1mawu4u"
+            href="https://store.steampowered.com/app/346110"
+            rel="noopener noreferrer"
+          >
+            ARK: Survival Evolved
+          </a>
+        </div>
+      </td>
+      <td>
+        278 hours
+      </td>
+      <td>
+        <span
+          className="css-1nxn0wh"
+        >
+          –
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`OwnedGamesTable renders empty state when games is null 1`] = `
+<p
+  className="css-1mkkd6c"
+>
+  No owned games found.
+</p>
+`;
+
+exports[`OwnedGamesTable renders empty state when games is undefined 1`] = `
+<p
+  className="css-1mkkd6c"
+>
+  No owned games found.
+</p>
+`;
+
+exports[`OwnedGamesTable renders empty state when no games provided 1`] = `
+<p
+  className="css-1mkkd6c"
+>
+  No owned games found.
+</p>
+`;
+
+exports[`TimeSpent renders humanized time correctly 1`] = `"0 hours"`;
