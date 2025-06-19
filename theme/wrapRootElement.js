@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Global, CacheProvider } from '@emotion/react'
 import createCache from '@emotion/cache'
-import { jsx } from 'theme-ui'
+import { jsx, useColorMode } from 'theme-ui'
 import { MDXProvider } from '@mdx-js/react'
 import { Provider as ReduxProvider } from 'react-redux'
 import { Themed } from '@theme-ui/mdx'
@@ -16,12 +16,20 @@ import YouTube from './src/shortcodes/youtube'
 // Create an Emotion cache
 const cache = createCache({ key: 'css', prepend: true })
 
+// Table component that adapts to color mode
+const Table = props => {
+  const [colorMode] = useColorMode()
+  const tableVariant = colorMode === 'dark' ? 'styles.tableDark' : 'styles.table'
+
+  return <Themed.table {...props} sx={{ variant: tableVariant }} />
+}
+
 // Define MDX components
 const components = {
   Emoji,
   pre: ({ children }) => <>{children}</>,
   YouTube,
-  Table: props => <Themed.table {...props} sx={{ variant: 'styles.table' }} />
+  Table
 }
 
 const WrapRootElement = ({ element }) => (

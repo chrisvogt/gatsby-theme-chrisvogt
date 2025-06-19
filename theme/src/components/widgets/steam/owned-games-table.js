@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, useColorMode } from 'theme-ui'
 import { Fragment } from 'react'
 import { Themed } from '@theme-ui/mdx'
 import humanizeDuration from 'humanize-duration'
@@ -11,6 +11,9 @@ export const TimeSpent = ({ timeInMs }) => (
 )
 
 const OwnedGamesTable = ({ games = [] }) => {
+  const [colorMode] = useColorMode()
+  const tableVariant = colorMode === 'dark' ? 'styles.tableDark' : 'styles.table'
+
   if (!games || games.length === 0) {
     return (
       <Themed.p sx={{ textAlign: 'center', fontStyle: 'italic', color: 'textMuted' }}>No owned games found.</Themed.p>
@@ -22,7 +25,7 @@ const OwnedGamesTable = ({ games = [] }) => {
   const remainingGames = totalGames - displayedGames.length
 
   return (
-    <Themed.table sx={{ variant: 'styles.table' }}>
+    <Themed.table sx={{ variant: tableVariant }}>
       <thead>
         <tr>
           <th>Game</th>

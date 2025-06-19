@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Theme Configuration a snapshot of the configuration matches the snapshot 1`] = `
 {
@@ -175,6 +175,12 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
         "panel-divider": [Function],
         "panel-highlight": [Function],
         "primary": "#1E90FF",
+        "tableBackground": "rgba(1, 1, 1, 0.30)",
+        "tableBorder": "rgba(255, 255, 255, 0.1)",
+        "tableHeaderBackground": "rgba(30, 37, 48, 0.8)",
+        "tableRowAlternateBackground": "rgba(30, 37, 48, 0.4)",
+        "tableRowBackground": "rgba(1, 1, 1, 0.15)",
+        "tableText": "#fff",
         "text": "#fff",
         "textMuted": "#d8d8d8",
       },
@@ -185,6 +191,11 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
     "primary": "#422EA3",
     "secondary": "#711E9B",
     "secondaryGradient": "linear-gradient(45deg, #4527a0 0%, #711e9b 100%)",
+    "tableBackground": "light",
+    "tableBorder": "muted",
+    "tableHeaderBackground": "#f4f4f9",
+    "tableRowAlternateBackground": "#fafafa",
+    "tableRowBackground": "transparent",
     "tableText": "#111",
     "text": "#111",
     "textMuted": "#333",
@@ -617,7 +628,7 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
       "minHeight": "100vh",
     },
     "table": {
-      "backgroundColor": "light",
+      "backgroundColor": "rgba(255, 255, 255, 0.35)",
       "borderCollapse": "collapse",
       "borderRadius": "10px",
       "borderSpacing": 0,
@@ -625,12 +636,15 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
       "color": "tableText",
       "marginBottom": "1.5rem",
       "overflow": "hidden",
+      "tbody tr:nth-of-type(even)": {
+        "backgroundColor": "tableRowBackground",
+      },
       "tbody tr:nth-of-type(odd)": {
-        "backgroundColor": "#fafafa",
+        "backgroundColor": "tableRowAlternateBackground",
       },
       "th": {
-        "backgroundColor": "#f4f4f9",
-        "borderColor": "muted",
+        "backgroundColor": "tableHeaderBackground",
+        "borderColor": "tableBorder",
         "borderTop": "2px solid",
         "fontWeight": "bold",
         "letterSpacing": "0.05em",
@@ -638,7 +652,42 @@ exports[`Theme Configuration a snapshot of the configuration matches the snapsho
       },
       "th, td": {
         "borderBottom": "1px solid",
-        "borderColor": "muted",
+        "borderColor": "tableBorder",
+        "fontSize": "1.125em",
+        "padding": "12px 15px",
+        "textAlign": "left",
+      },
+      "width": "100%",
+    },
+    "tableDark": {
+      "WebkitBackdropFilter": "blur(10px)",
+      "backdropFilter": "blur(10px)",
+      "backgroundColor": "rgba(30, 30, 47, 0.35)",
+      "border": "1px solid rgba(255, 255, 255, 0.15)",
+      "borderCollapse": "collapse",
+      "borderRadius": "10px",
+      "borderSpacing": 0,
+      "boxShadow": "0 0 20px rgba(0, 0, 0, 0.3)",
+      "color": "tableText",
+      "marginBottom": "1.5rem",
+      "overflow": "hidden",
+      "tbody tr:nth-of-type(even)": {
+        "backgroundColor": "tableRowBackground",
+      },
+      "tbody tr:nth-of-type(odd)": {
+        "backgroundColor": "tableRowAlternateBackground",
+      },
+      "th": {
+        "backgroundColor": "tableHeaderBackground",
+        "borderColor": "tableBorder",
+        "borderTop": "2px solid",
+        "fontWeight": "bold",
+        "letterSpacing": "0.05em",
+        "textTransform": "uppercase",
+      },
+      "th, td": {
+        "borderBottom": "1px solid",
+        "borderColor": "tableBorder",
         "fontSize": "1.125em",
         "padding": "12px 15px",
         "textAlign": "left",
