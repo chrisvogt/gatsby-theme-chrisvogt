@@ -212,7 +212,7 @@ export const birdsOfCartagena = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231699/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2907.jpg',
-    title: 'Peacock',
+    title: 'Indian peafowl — a peacock — in the port of Cartagena, Colombia',
     width: 3,
     height: 4
   },
@@ -236,13 +236,13 @@ export const birdsOfCartagena = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231691/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2922.jpg',
-    title: 'Pair of birds',
+    title: 'A toucan at the port of Cartagena, Colombia',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231659/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2924.jpg',
-    title: 'Weird bird',
+    title: 'White peafowl in Cartagena, Colombia',
     width: 3,
     height: 4
   },
