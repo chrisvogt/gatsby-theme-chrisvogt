@@ -201,13 +201,24 @@ export default merge(tailwind, {
         'panel-highlight': theme => theme.colors.gray[8],
         primary: '#1E90FF',
         text: '#fff',
-        textMuted: '#d8d8d8'
+        textMuted: '#d8d8d8',
+        tableText: '#fff',
+        tableBackground: 'rgba(1, 1, 1, 0.30)',
+        tableHeaderBackground: 'rgba(30, 37, 48, 0.8)',
+        tableRowBackground: 'rgba(1, 1, 1, 0.15)',
+        tableRowAlternateBackground: 'rgba(30, 37, 48, 0.4)',
+        tableBorder: 'rgba(255, 255, 255, 0.1)'
       }
     },
     primary: '#422EA3',
     secondary: '#711E9B',
     secondaryGradient: 'linear-gradient(45deg, #4527a0 0%, #711e9b 100%)',
     tableText: '#111',
+    tableBackground: 'light',
+    tableHeaderBackground: '#f4f4f9',
+    tableRowBackground: 'transparent',
+    tableRowAlternateBackground: '#fafafa',
+    tableBorder: 'muted',
     text: '#111',
     textMuted: '#333'
   },
@@ -291,7 +302,7 @@ export default merge(tailwind, {
     },
 
     table: {
-      backgroundColor: 'light',
+      backgroundColor: 'rgba(255, 255, 255, 0.35)',
       color: 'tableText',
       width: '100%',
       borderCollapse: 'collapse',
@@ -303,20 +314,49 @@ export default merge(tailwind, {
       'th, td': {
         fontSize: '1.125em',
         textAlign: 'left',
-        padding: '12px 15px',
-        borderBottom: '1px solid',
-        borderColor: 'muted'
+        padding: '12px 15px'
       },
       th: {
-        backgroundColor: '#f4f4f9',
+        backgroundColor: 'tableHeaderBackground',
         fontWeight: 'bold',
         textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-        borderTop: '2px solid',
-        borderColor: 'muted'
+        letterSpacing: '0.05em'
       },
       'tbody tr:nth-of-type(odd)': {
-        backgroundColor: '#fafafa'
+        backgroundColor: 'tableRowAlternateBackground'
+      },
+      'tbody tr:nth-of-type(even)': {
+        backgroundColor: 'tableRowBackground'
+      }
+    },
+
+    tableDark: {
+      ...glassmorhismPanel,
+      backgroundColor: 'rgba(30, 30, 47, 0.35)',
+      color: 'tableText',
+      width: '100%',
+      borderCollapse: 'collapse',
+      borderSpacing: 0,
+      marginBottom: '1.5rem',
+      overflow: 'hidden',
+      borderRadius: '10px',
+      boxShadow: '0 0 20px rgba(0, 0, 0, 0.3)',
+      'th, td': {
+        fontSize: '1.125em',
+        textAlign: 'left',
+        padding: '12px 15px'
+      },
+      th: {
+        backgroundColor: 'tableHeaderBackground',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em'
+      },
+      'tbody tr:nth-of-type(odd)': {
+        backgroundColor: 'tableRowAlternateBackground'
+      },
+      'tbody tr:nth-of-type(even)': {
+        backgroundColor: 'tableRowBackground'
       }
     },
 

@@ -12,6 +12,7 @@ jest.mock('../profile-metrics-badge', () => props => (
 ))
 jest.mock('../widget', () => props => <div data-testid='Widget'>{props.children}</div>)
 jest.mock('../widget-header', () => props => <div data-testid='WidgetHeader'>{props.children}</div>)
+jest.mock('./owned-games-table', () => props => <div data-testid='OwnedGamesTable'>{JSON.stringify(props.games)}</div>)
 
 // Mock hooks and selectors
 jest.mock('../../../hooks/use-site-metadata', () => () => ({
@@ -49,6 +50,22 @@ describe('SteamWidget', () => {
                   displayName: 'Portal',
                   playTime2Weeks: 45,
                   images: { header: 'https://example.com/portal.jpg' }
+                }
+              ],
+              ownedGames: [
+                {
+                  id: '255710',
+                  displayName: 'Cities: Skylines',
+                  playTimeForever: 45441,
+                  playTime2Weeks: 120,
+                  images: { icon: 'https://example.com/cities-icon.jpg' }
+                },
+                {
+                  id: '346110',
+                  displayName: 'ARK: Survival Evolved',
+                  playTimeForever: 16670,
+                  playTime2Weeks: null,
+                  images: { icon: 'https://example.com/ark-icon.jpg' }
                 }
               ]
             }
