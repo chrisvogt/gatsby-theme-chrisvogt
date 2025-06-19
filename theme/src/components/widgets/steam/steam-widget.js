@@ -68,7 +68,7 @@ const SteamWidget = () => {
 
       <Themed.p sx={{ mb: 4 }}>Games I own and their play time statistics.</Themed.p>
 
-      <OwnedGamesTable games={ownedGames.slice(0, 8)} />
+      <OwnedGamesTable games={ownedGames} />
 
       {/* Recently-Played Games Section */}
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mt: 5, mb: 3 }}>

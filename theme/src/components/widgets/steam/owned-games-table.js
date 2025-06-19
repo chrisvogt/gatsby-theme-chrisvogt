@@ -4,6 +4,8 @@ import { Fragment } from 'react'
 import { Themed } from '@theme-ui/mdx'
 import humanizeDuration from 'humanize-duration'
 
+import ViewExternal from '../view-external'
+
 export const TimeSpent = ({ timeInMs }) => (
   <Fragment>{humanizeDuration(timeInMs, { units: ['h'], round: true })}</Fragment>
 )
@@ -15,6 +17,10 @@ const OwnedGamesTable = ({ games = [] }) => {
     )
   }
 
+  const totalGames = games.length
+  const displayedGames = games.slice(0, 10) // Show first 10 games
+  const remainingGames = totalGames - displayedGames.length
+
   return (
     <Themed.table sx={{ variant: 'styles.table' }}>
       <thead>
@@ -25,7 +31,7 @@ const OwnedGamesTable = ({ games = [] }) => {
         </tr>
       </thead>
       <tbody>
-        {games.map(game => (
+        {displayedGames.map(game => (
           <tr key={game.id}>
             <td>
               <div sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -41,7 +47,6 @@ const OwnedGamesTable = ({ games = [] }) => {
                 />
                 <a
                   href={`https://store.steampowered.com/app/${game.id}`}
-                  target='_blank'
                   rel='noopener noreferrer'
                   sx={{
                     color: 'primary',
@@ -68,6 +73,30 @@ const OwnedGamesTable = ({ games = [] }) => {
             </td>
           </tr>
         ))}
+        {remainingGames > 0 && (
+          <tr>
+            <td colSpan={3} sx={{ textAlign: 'center', padding: '16px' }}>
+              <a
+                href='https://steamcommunity.com/id/chrisvogt/games/?tab=all'
+                rel='noopener noreferrer'
+                sx={{
+                  color: 'primary',
+                  textDecoration: 'none',
+                  fontWeight: 'medium',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  '&:hover': {
+                    textDecoration: 'underline'
+                  }
+                }}
+              >
+                ...and {remainingGames} other game{remainingGames !== 1 ? 's' : ''}
+                <ViewExternal />
+              </a>
+            </td>
+          </tr>
+        )}
       </tbody>
     </Themed.table>
   )
