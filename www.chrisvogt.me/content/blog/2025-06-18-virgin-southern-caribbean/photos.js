@@ -74,7 +74,7 @@ export const architectureInSanJuan = [
   /* titles edited up to here */
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231640/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2718.jpg',
-    title: 'Building',
+    title: 'Iglesia San José in Old San Juan',
     width: 4,
     height: 3
   }
@@ -83,25 +83,25 @@ export const architectureInSanJuan = [
 export const streetPhotographyInSanJuan = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231694/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2745.jpg',
-    title: 'Old San Juan street',
+    title: 'Looking down C. de San Sebastián from El CAFETÍN in Old San Juan',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231674/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2746.jpg',
-    title: 'People in the street',
+    title: 'People in the street outside of El CAFETÍN',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231639/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2741.jpg',
-    title: 'Nick smiling',
+    title: 'Nick at El CAFETÍN, take 1',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231654/chrisvogt-me/galleries/2025-vsc/20250329-IMG_2742.jpg',
-    title: 'Nick tongue',
+    title: 'Nick at El CAFETÍN, take 2',
     width: 4,
     height: 3
   }
@@ -122,13 +122,13 @@ export const friendsArrivedInSanJuan = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231673/chrisvogt-me/galleries/2025-vsc/20250331-IMG_4386.jpg',
-    title: 'Group eating',
+    title: 'The group eating at Puerto Criollo in Old San Juan, Puerto Rico',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231662/chrisvogt-me/galleries/2025-vsc/20250331-IMG_2763.jpg',
-    title: 'Chicken and rice at a restaurant',
+    title: 'Chicken and rice in a mushroom sauce at Puerto Criollo',
     width: 4,
     height: 3
   }
@@ -137,13 +137,13 @@ export const friendsArrivedInSanJuan = [
 export const settingSail = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231667/chrisvogt-me/galleries/2025-vsc/20250401-IMG_2796.jpg',
-    title: 'Disembarking from the port in San Juan',
+    title: 'Celebrity Equinox, MSC Seascape and Resiliant Lady at port in San Juan',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231652/chrisvogt-me/galleries/2025-vsc/20250401-IMG_2799.jpg',
-    title: 'The ship docked in San Juan',
+    title: 'Resiliant Lady at port in San Juan',
     width: 4,
     height: 3
   },
@@ -470,13 +470,13 @@ export const scarletNightAndAtSea = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231694/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3184.jpg',
-    title: 'The octopus on the ship',
+    title: 'The Octopus Garden aboard Resiliant Lady',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231638/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3189.jpg',
-    title: 'The ship at night',
+    title: 'The group has drinks at the bar on Scarlet Night',
     width: 3,
     height: 4
   }
