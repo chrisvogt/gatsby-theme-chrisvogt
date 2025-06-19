@@ -1,0 +1,27 @@
+# Modern browsers that support spread operators and classes natively
+# This reduces the need for @babel/plugin-transform-spread and @babel/plugin-transform-classes
+
+# Chrome/Edge (last 2 versions)
+last 2 Chrome versions
+last 2 Edge versions
+
+# Firefox (last 2 versions)
+last 2 Firefox versions
+
+# Safari (last 2 versions)
+last 2 Safari versions
+
+# iOS Safari (last 2 versions)
+last 2 iOS versions
+
+# Android Chrome (last 2 versions)
+last 2 Android versions
+
+# Don't support IE
+not IE 11
+not IE 10
+not IE 9
+
+# Don't support very old versions
+> 0.5%
+not dead 
