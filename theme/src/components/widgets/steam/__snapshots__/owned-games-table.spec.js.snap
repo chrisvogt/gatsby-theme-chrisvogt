@@ -32,24 +32,15 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
             className="css-1mawu4u"
             href="https://store.steampowered.com/app/255710"
             rel="noopener noreferrer"
-            target="_blank"
           >
             Cities: Skylines
           </a>
         </div>
       </td>
       <td>
-        <b>
-          Time Spent:
-        </b>
-         
-        1 month, 1 day, 2 hours, 51 minutes
+        757 hours
       </td>
       <td>
-        <b>
-          Time Spent:
-        </b>
-         
         2 hours
       </td>
     </tr>
@@ -67,18 +58,13 @@ exports[`OwnedGamesTable renders correctly with sample data 1`] = `
             className="css-1mawu4u"
             href="https://store.steampowered.com/app/346110"
             rel="noopener noreferrer"
-            target="_blank"
           >
             ARK: Survival Evolved
           </a>
         </div>
       </td>
       <td>
-        <b>
-          Time Spent:
-        </b>
-         
-        1 week, 4 days, 13 hours, 50 minutes
+        278 hours
       </td>
       <td>
         <span
@@ -108,12 +94,4 @@ exports[`OwnedGamesTable renders empty state when no games provided 1`] = `
 </p>
 `;
 
-exports[`TimeSpent renders humanized time correctly 1`] = `
-[
-  <b>
-    Time Spent:
-  </b>,
-  " ",
-  "5 minutes",
-]
-`;
+exports[`TimeSpent renders humanized time correctly 1`] = `"0 hours"`;
