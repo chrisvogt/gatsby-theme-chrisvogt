@@ -29,4 +29,16 @@ describe('useSiteMetadata', () => {
     const { result } = renderHook(() => useSiteMetadata())
     expect(result.current).toEqual(data.site.siteMetadata)
   })
+
+  it('handles missing site', () => {
+    useStaticQuery.mockImplementation(() => ({}))
+    const { result } = renderHook(() => useSiteMetadata())
+    expect(result.current).toBeUndefined()
+  })
+
+  it('handles missing siteMetadata', () => {
+    useStaticQuery.mockImplementation(() => ({ site: {} }))
+    const { result } = renderHook(() => useSiteMetadata())
+    expect(result.current).toBeUndefined()
+  })
 })

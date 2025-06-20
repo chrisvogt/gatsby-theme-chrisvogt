@@ -9,11 +9,12 @@ export const getError = action => action?.payload?.error
 export const getData = action => action?.payload?.data?.payload
 export const getWidgetId = action => action?.payload?.widgetId
 
-export const getGitHubWidget = state => state.widgets?.github || {}
-export const getGoodreadsWidget = state => state.widgets?.goodreads || {}
-export const getInstagramWidget = state => state.widgets?.instagram || {}
-export const getSpotifyWidget = state => state.widgets?.spotify || {}
-export const getFlickrWidget = state => state.widgets?.flickr || {}
+export const getGitHubWidget = state => state.widgets?.github || { state: INIT }
+export const getGoodreadsWidget = state => state.widgets?.goodreads || { state: INIT }
+export const getInstagramWidget = state => state.widgets?.instagram || { state: INIT }
+export const getSpotifyWidget = state => state.widgets?.spotify || { state: INIT }
+export const getFlickrWidget = state => state.widgets?.flickr || { state: INIT }
+export const getSteamWidget = state => state.widgets?.steam || { state: INIT }
 
 function widgets(state = {}, action) {
   switch (action.type) {
