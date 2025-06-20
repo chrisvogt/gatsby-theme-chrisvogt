@@ -46,4 +46,22 @@ describe('useSocialProfiles', () => {
     const { result } = renderHook(() => useSocialProfiles())
     expect(result.current[0]).toEqual(data.allSocialProfilesJson.edges[0].node)
   })
+
+  it('handles missing allSocialProfilesJson', () => {
+    useStaticQuery.mockImplementation(() => ({}))
+    const { result } = renderHook(() => useSocialProfiles())
+    expect(result.current).toEqual([])
+  })
+
+  it('handles missing edges', () => {
+    useStaticQuery.mockImplementation(() => ({ allSocialProfilesJson: {} }))
+    const { result } = renderHook(() => useSocialProfiles())
+    expect(result.current).toEqual([])
+  })
+
+  it('handles empty edges array', () => {
+    useStaticQuery.mockImplementation(() => ({ allSocialProfilesJson: { edges: [] } }))
+    const { result } = renderHook(() => useSocialProfiles())
+    expect(result.current).toEqual([])
+  })
 })
