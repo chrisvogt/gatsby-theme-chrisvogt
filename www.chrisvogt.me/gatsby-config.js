@@ -46,6 +46,10 @@ module.exports = {
         username: 'c1v0',
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/instagram'
       },
+      mastodon: {
+        username: 'chrisvogt',
+        url: 'https://hachyderm.io/@chrisvogt'
+      },
       spotify: {
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/spotify'
       },

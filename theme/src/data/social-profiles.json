@@ -44,6 +44,17 @@
     }
   },
   {
+    "href": "https://hachyderm.io/@chrisvogt",
+    "slug": "mastodon",
+    "displayName": "Mastodon",
+    "icon": {
+      "class": "fab fa-x-mastodon",
+      "name": "mastodon",
+      "reactIcon": "faMastodon",
+      "set": "fab"
+    }
+  },
+  {
     "href": "https://twitter.com/c1v0",
     "slug": "twitter",
     "displayName": "Twitter",
