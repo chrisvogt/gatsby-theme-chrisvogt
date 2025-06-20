@@ -7,6 +7,7 @@ import { Heading } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
 import { useDispatch, useSelector } from 'react-redux'
 import humanizeDuration from 'humanize-duration'
+import React from 'react'
 
 import CallToAction from '../call-to-action'
 import PostCard from '../recent-posts/post-card'
@@ -15,7 +16,7 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 import OwnedGamesTable from './owned-games-table'
 
-import { SUCCESS } from '../../../reducers/widgets'
+import { SUCCESS, FAILURE, getSteamWidget } from '../../../reducers/widgets'
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
@@ -26,16 +27,16 @@ export const TimeSpent = ({ timeInMs }) => (
 
 const EMPTY_ARRAY = []
 
-const SteamWidget = () => {
+const getHasFatalError = state => getSteamWidget(state).state === FAILURE
+const getIsLoading = state => getSteamWidget(state).state !== SUCCESS
+
+const SteamWidget = React.memo(() => {
   const dispatch = useDispatch()
   const metadata = useSiteMetadata()
   const steamDataSource = getSteamWidgetDataSource(metadata)
 
-  useEffect(() => {
-    dispatch(fetchDataSource('steam', steamDataSource))
-  }, [dispatch, steamDataSource])
-
-  const isLoading = useSelector(state => get(state, 'widgets.steam.state') !== SUCCESS)
+  const hasFatalError = useSelector(getHasFatalError)
+  const isLoading = useSelector(getIsLoading)
   const metrics = useSelector(state => get(state, 'widgets.steam.data.metrics') ?? EMPTY_ARRAY)
   const profileDisplayName = useSelector(state => get(state, 'widgets.steam.data.profile.displayName'))
   const profileURL = useSelector(state => get(state, 'widgets.steam.data.profile.profileURL'))
@@ -43,6 +44,12 @@ const SteamWidget = () => {
     state => get(state, 'widgets.steam.data.collections.recentlyPlayedGames') ?? EMPTY_ARRAY
   )
   const ownedGames = useSelector(state => get(state, 'widgets.steam.data.collections.ownedGames') ?? EMPTY_ARRAY)
+
+  useEffect(() => {
+    if (isLoading) {
+      dispatch(fetchDataSource('steam', steamDataSource))
+    }
+  }, [dispatch, steamDataSource, isLoading])
 
   const callToAction = (
     <CallToAction title={`${profileDisplayName} on Steam`} url={profileURL} isLoading={isLoading}>
@@ -52,7 +59,7 @@ const SteamWidget = () => {
   )
 
   return (
-    <Widget id='steam'>
+    <Widget id='steam' hasFatalError={hasFatalError}>
       <WidgetHeader aside={callToAction} icon={faSteam} isLoading={isLoading}>
         Steam
       </WidgetHeader>
@@ -98,6 +105,6 @@ const SteamWidget = () => {
       </div>
     </Widget>
   )
-}
+})
 
 export default SteamWidget
