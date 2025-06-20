@@ -10672,13 +10672,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-fonts@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
-  checksum: 10c0/cb3186eaa792cb9b2af4a1d7a7a1664dd61a9865a2b810f73afac5b95d3562e0b3068a627528cb108b02f851bf403e2fe921792a868e5abbc8516d659854ed7c
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-manifest@npm:^5.13.1":
   version: 5.14.0
   resolution: "gatsby-plugin-manifest@npm:5.14.0"
@@ -11043,7 +11036,6 @@ __metadata:
     gatsby: "npm:^5.14.3"
     gatsby-plugin-emotion: "npm:^8.14.0"
     gatsby-plugin-feed: "npm:^5.13.1"
-    gatsby-plugin-google-fonts: "npm:^1.0.1"
     gatsby-plugin-manifest: "npm:^5.13.1"
     gatsby-plugin-mdx: "npm:^5.14.1"
     gatsby-plugin-sharp: "npm:^5.13.1"

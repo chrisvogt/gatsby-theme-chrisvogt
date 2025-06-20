@@ -75,14 +75,6 @@ module.exports = () => ({
         name: 'content'
       }
     },
-    {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        fonts: ['Crimson Text:400,400i,600'],
-        display: 'swap',
-        preconnect: true
-      }
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-emotion',
