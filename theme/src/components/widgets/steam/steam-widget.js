@@ -22,7 +22,7 @@ import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 export const TimeSpent = ({ timeInMs }) => (
-  <Fragment>{humanizeDuration(timeInMs, { units: ['h'], round: true })}</Fragment>
+  <Fragment>{humanizeDuration(timeInMs, { units: ['h', 'm'], round: true })}</Fragment>
 )
 
 const EMPTY_ARRAY = []
