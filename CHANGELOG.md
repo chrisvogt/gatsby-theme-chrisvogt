@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.44.4
+
+- Updates Steam widget "Recently-Played Games" to reflect MINUTES for games played.
+
 ## 0.44.0
 
 - Updates themed <table/> elements to have a light and dark mode.
