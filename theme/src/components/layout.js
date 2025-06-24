@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import { useSelector } from 'react-redux'
 import React from 'react'
+import { SkipNavLink, SkipNavContent } from '@reach/skip-nav'
 
 import BackgroundPattern from './animated-background'
 import Footer from './footer'
@@ -32,6 +33,7 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => {
       }}
     >
       <BackgroundPattern />
+      <SkipNavLink />
 
       {/* NOTE(chrisvogt): hide the top navigation on the home and 404 pages */}
       {!hideHeader && (
@@ -40,7 +42,14 @@ const Layout = ({ children, disableMainWrapper, hideHeader, hideFooter }) => {
         </header>
       )}
 
-      {disableMainWrapper ? children : <main role='main'>{children}</main>}
+      {disableMainWrapper ? (
+        children
+      ) : (
+        <main role='main'>
+          <SkipNavContent />
+          {children}
+        </main>
+      )}
 
       {!hideFooter && <Footer />}
     </div>

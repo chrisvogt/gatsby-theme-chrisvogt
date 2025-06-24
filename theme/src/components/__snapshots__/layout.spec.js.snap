@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Layout matches the snapshot 1`] = `
 <div
@@ -43,6 +43,13 @@ exports[`Layout matches the snapshot 1`] = `
       }
     />
   </div>
+  <a
+    data-reach-skip-link=""
+    data-reach-skip-nav-link=""
+    href="#reach-skip-nav"
+  >
+    Skip to content
+  </a>
   <header
     className="css-l5xv05"
     role="banner"
@@ -54,6 +61,10 @@ exports[`Layout matches the snapshot 1`] = `
   <main
     role="main"
   >
+    <div
+      data-reach-skip-nav-content=""
+      id="reach-skip-nav"
+    />
     <div
       className="fake-website"
     >
