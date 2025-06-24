@@ -7,6 +7,7 @@ import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-thumbnail.css'
 import 'lightgallery/css/lg-zoom.css'
 import 'prismjs/themes/prism-solarizedlight.css'
+import '@reach/skip-nav/styles.css' //this will show/hide the link on focus
 
 export { default as wrapRootElement } from './wrapRootElement'
 
@@ -25,4 +26,14 @@ export const shouldUpdateScroll = ({ routerProps }) => {
   }
   // For actual page changes, use default scroll behavior
   return true
+}
+
+// See https://fossies.org/linux/gatsby/examples/using-reach-skip-nav/README.md
+export const onRouteUpdate = ({ prevLocation }) => {
+  if (prevLocation !== null) {
+    const skipContent = document.querySelector('[data-reach-skip-nav-content]') // Comes with the <SkipNavContent> component.
+    if (skipContent) {
+      skipContent.focus()
+    }
+  }
 }
