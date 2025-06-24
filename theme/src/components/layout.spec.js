@@ -57,4 +57,23 @@ describe('Layout', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  it('renders children without main wrapper when disableMainWrapper is true', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <ThemeUIProvider theme={mockTheme}>
+            <Layout disableMainWrapper={true}>
+              <div className='fake-website'>
+                <h1>Fake Website</h1>
+                <p>Lorum ipsum dolor sit amet.</p>
+              </div>
+            </Layout>
+          </ThemeUIProvider>
+        </Provider>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
