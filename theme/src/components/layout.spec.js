@@ -76,4 +76,23 @@ describe('Layout', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  it('hides header when hideHeader is true', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <ThemeUIProvider theme={mockTheme}>
+            <Layout hideHeader={true}>
+              <div className='fake-website'>
+                <h1>Fake Website</h1>
+                <p>Lorum ipsum dolor sit amet.</p>
+              </div>
+            </Layout>
+          </ThemeUIProvider>
+        </Provider>
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })

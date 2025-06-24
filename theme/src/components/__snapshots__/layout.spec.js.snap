@@ -1,5 +1,79 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`Layout hides header when hideHeader is true 1`] = `
+<div
+  className="css-ez1gh8"
+>
+  <div
+    style={
+      {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <canvas
+      style={
+        {
+          "display": "block",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      style={
+        {
+          "WebkitBackdropFilter": "blur(75px)",
+          "backdropFilter": "blur(75px)",
+          "backgroundColor": "rgba(253, 248, 245, 0.35)",
+          "height": "100%",
+          "left": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <a
+    data-reach-skip-link=""
+    data-reach-skip-nav-link=""
+    href="#reach-skip-nav"
+  >
+    Skip to content
+  </a>
+  <main
+    role="main"
+  >
+    <div
+      data-reach-skip-nav-content=""
+      id="reach-skip-nav"
+    />
+    <div
+      className="fake-website"
+    >
+      <h1>
+        Fake Website
+      </h1>
+      <p>
+        Lorum ipsum dolor sit amet.
+      </p>
+    </div>
+  </main>
+  <div
+    className="MOCK__Footer"
+  />
+</div>
+`;
+
 exports[`Layout matches the snapshot 1`] = `
 <div
   className="css-ez1gh8"
