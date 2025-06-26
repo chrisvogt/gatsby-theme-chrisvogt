@@ -363,12 +363,6 @@ export const cartagenaFriends = [
     height: 4
   },
   {
-    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231639/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3002.jpg',
-    title: 'Roc at a rooftop bar',
-    width: 3,
-    height: 4
-  },
-  {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231636/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3028.jpg',
     title: 'Chris and Nick getting seafood for dinner',
     width: 3,
