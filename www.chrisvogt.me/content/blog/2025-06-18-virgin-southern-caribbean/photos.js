@@ -257,37 +257,37 @@ export const birdsOfCartagena = [
 export const cartagenaStreets = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231668/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2939.jpg',
-    title: 'Street in Cartagena, Colombia',
+    title: 'The streets of Getsemaní, Cartagena, Colombia',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231676/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3007.jpg',
-    title: 'Street with shadows',
+    title: 'Walking around exploring the streets of Cartagena, Colombia',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231685/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2946.jpg',
-    title: 'Old cars in the street',
+    title: 'Classic, vintage cars in Getsemaní, Cartagena, Colombia',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231664/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2949.jpg',
-    title: 'Flag at the port',
+    title: 'Castillo San Felipe de Barajast',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231686/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2979.jpg',
-    title: 'Wine door',
+    title: "It's wine-o-click somewhere",
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231680/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2977.jpg',
-    title: 'Umbrella street',
+    title: 'Calle de Las Sombrillas in the Getsemaní neighborhood',
     width: 3,
     height: 4
   },
@@ -326,13 +326,13 @@ export const cartagenaRooftops = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231666/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2987.jpg',
-    title: 'Looking out',
+    title: 'Another rooftop view from Cartagena, Colombia',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231673/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2965.jpg',
-    title: 'Another rooftop',
+    title: 'Looking inland from Cartagena, Colombia',
     width: 4,
     height: 3
   }
@@ -347,7 +347,7 @@ export const cartagenaFriends = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231647/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2991.jpg',
-    title: 'Matt sitting',
+    title: 'Matt',
     width: 3,
     height: 4
   },
@@ -359,25 +359,25 @@ export const cartagenaFriends = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231659/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2962.jpg',
-    title: 'Blue crab nachos',
+    title: 'Blue crab nachos 🤤',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231639/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3002.jpg',
-    title: 'Eric',
+    title: 'Eric at a rooftop bar',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231636/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3028.jpg',
-    title: 'Chris and Nick',
+    title: 'Chris and Nick getting seafood for dinner',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231652/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3026.jpg',
-    title: 'Food',
+    title: 'A seafood platter in Cartagena, Colombia',
     width: 4,
     height: 3
   }
@@ -386,25 +386,25 @@ export const cartagenaFriends = [
 export const curacaoFriends = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231636/chrisvogt-me/galleries/2025-vsc/20250407-CJV09225.jpg',
-    title: 'Matt',
+    title: 'Matt up close',
     width: 16,
     height: 9
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231638/chrisvogt-me/galleries/2025-vsc/20250407-CJV09220.jpg',
-    title: 'Eric',
+    title: 'Eric up close',
     width: 16,
     height: 9
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231636/chrisvogt-me/galleries/2025-vsc/20250407-CJV09229.jpg',
-    title: 'Nick',
+    title: 'Nick up close',
     width: 16,
     height: 9
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231659/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3130.jpg',
-    title: 'Friends crossing the bridge',
+    title: 'The group walking across Queen Emma Bridge',
     width: 3,
     height: 4
   }
@@ -413,31 +413,31 @@ export const curacaoFriends = [
 export const curacaoStreets = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231642/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3127.jpg',
-    title: 'From the bridge',
+    title: 'Queen Emma Bridge in Curaçao',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231654/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3138.jpg',
-    title: 'Up close',
+    title: 'Looking across Queen Emma Bridge in Curaçao',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231656/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3123.jpg',
-    title: 'Types of curacao',
+    title: 'A variety of different types of Curaçao liqueur',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231696/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3131.jpg',
-    title: 'Mural in the city',
+    title: 'Street murals in Curaçao',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231679/chrisvogt-me/galleries/2025-vsc/20250407-IMG_3132.jpg',
-    title: 'Dutch newspaper stand',
+    title: 'A Dutch newspaper stand in Curaçao',
     width: 3,
     height: 4
   }
@@ -506,25 +506,25 @@ export const atSea = [
 export const antiguaFirstSpot = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231668/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3282.jpg',
-    title: 'Nick looking at a lizard',
+    title: 'Nick looking at a lizard in Antigua',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231653/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3287.jpg',
-    title: 'Lizard up close',
+    title: "Griswold's ameiva (Pholidoscelis griswoldi) in Antigua",
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231641/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3290.jpg',
-    title: 'Docked catamaran',
+    title: 'A catamaran docked in St. John’s, Antigua',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231682/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3292.jpg',
-    title: 'Pirate-themed bar',
+    title: "The Captain's Tavern in St. John's, Antigua",
     width: 3,
     height: 4
   }
@@ -533,19 +533,19 @@ export const antiguaFirstSpot = [
 export const antiguaFloatingBar = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231645/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3295.jpg',
-    title: 'Riding a boat over to the floating bar',
+    title: 'Riding a boat to the floating bar in Dickenson Bay, Antigua',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231680/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3301.jpg',
-    title: 'Floating bar',
+    title: 'Looking into the floating bar',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231657/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3321.jpg',
-    title: 'Kon Tiki, the floating bar',
+    title: 'Kon Tiki, a floating bar',
     width: 3,
     height: 4
   },
@@ -563,7 +563,7 @@ export const antiguaFloatingBar = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231636/chrisvogt-me/galleries/2025-vsc/20250410-IMG_3359.jpg',
-    title: 'Sunset at the floating bar',
+    title: 'Sunset at Kon Tiki, in Dickenson Bay',
     width: 4,
     height: 3
   }
@@ -578,25 +578,25 @@ export const stMaarten = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231641/chrisvogt-me/galleries/2025-vsc/20250411-IMG_3409.jpg',
-    title: 'Nick on the boat in St. Maarten',
+    title: 'Happy Nick on a boat in St. Maarten',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231671/chrisvogt-me/galleries/2025-vsc/20250411-IMG_3426.jpg',
-    title: 'Port of St Maarten',
+    title: 'A small boat in the port of St Maarten',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231664/chrisvogt-me/galleries/2025-vsc/20250411-IMG_3412.jpg',
-    title: 'The cruise ship in St. Maarten',
+    title: 'Resiliant Lady docked in St. Maarten',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231682/chrisvogt-me/galleries/2025-vsc/20250411-IMG_3381.jpg',
-    title: 'Cocktails menu at the bar',
+    title: 'Cocktails menu at a beach bar in St. Maarten',
     width: 3,
     height: 4
   }
@@ -605,25 +605,25 @@ export const stMaarten = [
 export const finalSanJuan = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231642/chrisvogt-me/galleries/2025-vsc/20250418-IMG_3522.jpg',
-    title: 'Ocean Beach in San Juan',
+    title: 'Looking north from Playa Ocean Park',
     width: 4,
     height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231652/chrisvogt-me/galleries/2025-vsc/20250413-IMG_3449.jpg',
-    title: 'Ocean Beach in San Juan',
+    title: 'Playa Ocean Park in San Juan, PR',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231688/chrisvogt-me/galleries/2025-vsc/20250413-IMG_3451.jpg',
-    title: 'Cats in San Juan',
+    title: 'The street cats of San Juan, PR',
     width: 3,
     height: 4
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231662/chrisvogt-me/galleries/2025-vsc/20250412-IMG_3446.jpg',
-    title: 'BBQ in San Juan',
+    title: 'Dinner at Barbacoa Puerto Rico 🤤',
     width: 4,
     height: 3
   }
