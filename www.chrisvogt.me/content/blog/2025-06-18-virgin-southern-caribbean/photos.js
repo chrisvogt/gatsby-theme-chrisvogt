@@ -340,7 +340,7 @@ export const cartagenaRooftops = [
 export const cartagenaFriends = [
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231644/chrisvogt-me/galleries/2025-vsc/20250404-IMG_2992.jpg',
-    title: 'Nick and Eric',
+    title: 'Nick and Roc',
     width: 4,
     height: 3
   },
@@ -364,7 +364,7 @@ export const cartagenaFriends = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231639/chrisvogt-me/galleries/2025-vsc/20250404-IMG_3002.jpg',
-    title: 'Eric at a rooftop bar',
+    title: 'Roc at a rooftop bar',
     width: 3,
     height: 4
   },
@@ -391,7 +391,7 @@ export const curacaoFriends = [
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231638/chrisvogt-me/galleries/2025-vsc/20250407-CJV09220.jpg',
-    title: 'Eric up close',
+    title: 'Roc up close',
     width: 16,
     height: 9
   },
@@ -600,28 +600,28 @@ export const stMaarten = [
 
 export const finalSanJuan = [
   {
-    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231642/chrisvogt-me/galleries/2025-vsc/20250418-IMG_3522.jpg',
-    title: 'Looking north from Playa Ocean Park',
-    width: 4,
-    height: 3
-  },
-  {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231652/chrisvogt-me/galleries/2025-vsc/20250413-IMG_3449.jpg',
     title: 'Playa Ocean Park in San Juan, PR',
     width: 3,
     height: 4
   },
   {
-    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231688/chrisvogt-me/galleries/2025-vsc/20250413-IMG_3451.jpg',
-    title: 'The street cats of San Juan, PR',
-    width: 3,
-    height: 4
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231642/chrisvogt-me/galleries/2025-vsc/20250418-IMG_3522.jpg',
+    title: 'Looking north from Playa Ocean Park at sunset',
+    width: 4,
+    height: 3
   },
   {
     src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231662/chrisvogt-me/galleries/2025-vsc/20250412-IMG_3446.jpg',
     title: 'Dinner at Barbacoa Puerto Rico 🤤',
     width: 4,
     height: 3
+  },
+  {
+    src: 'https://res.cloudinary.com/chrisvogt/image/upload/v1750231688/chrisvogt-me/galleries/2025-vsc/20250413-IMG_3451.jpg',
+    title: 'The street cats of San Juan, PR',
+    width: 3,
+    height: 4
   }
 ]
 
