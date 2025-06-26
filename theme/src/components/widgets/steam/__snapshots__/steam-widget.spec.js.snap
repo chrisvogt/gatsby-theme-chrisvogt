@@ -117,4 +117,4 @@ exports[`SteamWidget renders loading state 1`] = `
 </div>
 `;
 
-exports[`TimeSpent renders humanized time correctly 1`] = `"0 hours"`;
+exports[`TimeSpent renders humanized time correctly 1`] = `"5 minutes"`;

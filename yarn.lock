@@ -3898,6 +3898,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@reach/polymorphic@npm:0.18.0":
+  version: 0.18.0
+  resolution: "@reach/polymorphic@npm:0.18.0"
+  peerDependencies:
+    react: ^16.8.0 || 17.x
+  checksum: 10c0/dfde6dc901005f92e16f0e3601f0c659b70ee14d91e612cd68c9a918744fd94de30e8065d73663b72964225d3476f377c650daf2ac1e256de61df9ee386aabdc
+  languageName: node
+  linkType: hard
+
+"@reach/skip-nav@npm:^0.18.0":
+  version: 0.18.0
+  resolution: "@reach/skip-nav@npm:0.18.0"
+  dependencies:
+    "@reach/polymorphic": "npm:0.18.0"
+  peerDependencies:
+    react: ^16.8.0 || 17.x
+    react-dom: ^16.8.0 || 17.x
+  checksum: 10c0/30e3d4c568093e170b9e80ee42764a080c0a15ab3f9c7edf78dcc6ebd92f156799dba0f544757b84401806765f60fe527c869ef86d5323c0a7a3bdccf1a68f85
+  languageName: node
+  linkType: hard
+
 "@reduxjs/toolkit@npm:^2.8.2":
   version: 2.8.2
   resolution: "@reduxjs/toolkit@npm:2.8.2"
@@ -10672,13 +10693,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-fonts@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
-  checksum: 10c0/cb3186eaa792cb9b2af4a1d7a7a1664dd61a9865a2b810f73afac5b95d3562e0b3068a627528cb108b02f851bf403e2fe921792a868e5abbc8516d659854ed7c
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-manifest@npm:^5.13.1":
   version: 5.14.0
   resolution: "gatsby-plugin-manifest@npm:5.14.0"
@@ -11026,6 +11040,7 @@ __metadata:
     "@mdx-js/loader": "npm:^3.0.1"
     "@mdx-js/mdx": "npm:^3.0.1"
     "@mdx-js/react": "npm:^3.0.1"
+    "@reach/skip-nav": "npm:^0.18.0"
     "@reduxjs/toolkit": "npm:^2.8.2"
     "@testing-library/dom": "npm:^10.1.0"
     "@testing-library/jest-dom": "npm:^6.4.5"
@@ -11043,7 +11058,6 @@ __metadata:
     gatsby: "npm:^5.14.3"
     gatsby-plugin-emotion: "npm:^8.14.0"
     gatsby-plugin-feed: "npm:^5.13.1"
-    gatsby-plugin-google-fonts: "npm:^1.0.1"
     gatsby-plugin-manifest: "npm:^5.13.1"
     gatsby-plugin-mdx: "npm:^5.14.1"
     gatsby-plugin-sharp: "npm:^5.13.1"

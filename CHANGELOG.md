@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.45.0
+
+- Adds a new "Skip to content" link for keyboard-first visitors, allowing them to TAB once on the page and then skip to the <main> content.
+
+## 0.44.4
+
+- Updates Steam widget "Recently-Played Games" to reflect MINUTES for games played.
+
 ## 0.44.0
 
 - Updates themed <table/> elements to have a light and dark mode.

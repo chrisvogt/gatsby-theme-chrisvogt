@@ -42,4 +42,22 @@ describe('useRecentPosts', () => {
       }
     ])
   })
+
+  it('handles missing allMdx', () => {
+    useStaticQuery.mockImplementation(() => ({}))
+    const { result } = renderHook(() => useRecentPosts())
+    expect(result.current).toEqual([])
+  })
+
+  it('handles missing edges', () => {
+    useStaticQuery.mockImplementation(() => ({ allMdx: {} }))
+    const { result } = renderHook(() => useRecentPosts())
+    expect(result.current).toEqual([])
+  })
+
+  it('handles empty edges array', () => {
+    useStaticQuery.mockImplementation(() => ({ allMdx: { edges: [] } }))
+    const { result } = renderHook(() => useRecentPosts())
+    expect(result.current).toEqual([])
+  })
 })

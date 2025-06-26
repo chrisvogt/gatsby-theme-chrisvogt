@@ -32,7 +32,7 @@ describe('Theme Configuration', () => {
     })
 
     it('defines serif fonts correctly', () => {
-      expect(theme.fonts.serif).toContain('Crimson Text')
+      expect(theme.fonts.serif).toContain('Iowan Old Style')
     })
 
     it('defines monospace fonts correctly', () => {

@@ -36,4 +36,34 @@ describe('useNavigationData', () => {
     const { result } = renderHook(() => useNavigationData())
     expect(result.current).toEqual(data.allDataJson.edges[0].node.payload)
   })
+
+  it('handles missing allDataJson', () => {
+    useStaticQuery.mockImplementation(() => ({}))
+    const { result } = renderHook(() => useNavigationData())
+    expect(result.current).toEqual({})
+  })
+
+  it('handles missing edges', () => {
+    useStaticQuery.mockImplementation(() => ({ allDataJson: {} }))
+    const { result } = renderHook(() => useNavigationData())
+    expect(result.current).toEqual({})
+  })
+
+  it('handles empty edges array', () => {
+    useStaticQuery.mockImplementation(() => ({ allDataJson: { edges: [] } }))
+    const { result } = renderHook(() => useNavigationData())
+    expect(result.current).toEqual({})
+  })
+
+  it('handles missing node', () => {
+    useStaticQuery.mockImplementation(() => ({ allDataJson: { edges: [{}] } }))
+    const { result } = renderHook(() => useNavigationData())
+    expect(result.current).toEqual({})
+  })
+
+  it('handles missing payload', () => {
+    useStaticQuery.mockImplementation(() => ({ allDataJson: { edges: [{ node: {} }] } }))
+    const { result } = renderHook(() => useNavigationData())
+    expect(result.current).toEqual({})
+  })
 })

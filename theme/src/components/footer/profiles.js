@@ -10,6 +10,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faMastodon,
   faStackOverflow,
   faXTwitter
 } from '@fortawesome/free-brands-svg-icons'
@@ -29,6 +30,7 @@ const icons = {
   faGithub,
   faInstagram,
   faLinkedin,
+  faMastodon,
   faStackOverflow,
   faXTwitter
 }

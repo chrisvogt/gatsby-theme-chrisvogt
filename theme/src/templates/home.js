@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Grid } from 'theme-ui'
 import { graphql } from 'gatsby'
+import { SkipNavContent } from '@reach/skip-nav'
 
 import Footer from '../components/footer'
 import HCard from '../components/h-card.js'
@@ -33,6 +34,7 @@ const HomeTemplate = () => (
             <HomeNavigation />
           </aside>
           <main role='main'>
+            <SkipNavContent />
             <div
               sx={{
                 position: 'relative',
