@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useCallback } from 'react'
 import { useColorMode, useThemeUI } from 'theme-ui'
 
 // Helper function to convert hex to rgba
@@ -8,6 +8,19 @@ const hexToRgba = (hex, alpha = 1) => {
     .match(/.{2}/g)
     .map(x => parseInt(x, 16))
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
+
+// Debounce function to limit resize event frequency
+const debounce = (func, wait) => {
+  let timeout
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      func(...args)
+    }
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
 }
 
 class Circle {
@@ -53,16 +66,55 @@ class Circle {
 
     this.draw(ctx)
   }
+
+  // Method to reposition circle when canvas resizes
+  reposition(canvas) {
+    if (!canvas) return
+
+    // Keep circles within bounds after resize
+    if (this.x + this.radius > canvas.width) {
+      this.x = canvas.width - this.radius
+    }
+    if (this.x - this.radius < 0) {
+      this.x = this.radius
+    }
+    if (this.y + this.radius > canvas.height) {
+      this.y = canvas.height - this.radius
+    }
+    if (this.y - this.radius < 0) {
+      this.y = this.radius
+    }
+  }
 }
 
 export { Circle }
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null)
+  const animationRef = useRef(null)
+  const circlesRef = useRef([])
   const [colorMode] = useColorMode()
   const { theme } = useThemeUI()
   const backgroundHex = theme.rawColors?.background || '#1e1e2f' // Default to fallback color
   const backgroundRgba = hexToRgba(backgroundHex, 0.35) // Apply transparency to background color
+
+  // Create circles with optimized count
+  const createCircles = useCallback((canvas, gradients) => {
+    const circles = []
+    const circleCount = 40 // Reduced from 80 for better performance
+
+    for (let i = 0; i < circleCount; i++) {
+      const isLarge = i < 3 // Reduced large circles from 4 to 3
+      const radius = isLarge ? Math.random() * 150 + 200 : Math.random() * 30 + 35 // Slightly smaller radii
+      const x = Math.random() * (canvas.width - radius * 2) + radius
+      const y = Math.random() * (canvas.height - radius * 2) + radius
+      const gradient = gradients[i % 2]
+
+      const circle = new Circle(x, y, radius, gradient)
+      circles.push(circle)
+    }
+    return circles
+  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -72,8 +124,17 @@ const AnimatedBackground = () => {
     if (!ctx) return
 
     const setCanvasSize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = document.body.scrollHeight // Set canvas height to the entire page height
+      const newWidth = window.innerWidth
+      const newHeight = window.innerHeight // Use viewport height instead of scroll height
+
+      // Only resize if dimensions actually changed
+      if (canvas.width !== newWidth || canvas.height !== newHeight) {
+        canvas.width = newWidth
+        canvas.height = newHeight
+
+        // Reposition existing circles to stay within new bounds
+        circlesRef.current.forEach(circle => circle.reposition(canvas))
+      }
     }
 
     setCanvasSize()
@@ -112,40 +173,32 @@ const AnimatedBackground = () => {
 
     const gradients = colorMode === 'dark' ? darkModeGradients : lightModeGradients
 
-    const circles = []
-
-    for (let i = 0; i < 80; i++) {
-      const isLarge = i < 4 // Larger size for the first 4 circles
-      const radius = isLarge ? Math.random() * 200 + 250 : Math.random() * 35 + 40
-      const x = Math.random() * (canvas.width - radius * 2) + radius
-      const y = Math.random() * (canvas.height - radius * 2) + radius
-      const gradient = gradients[i % 2]
-
-      const circle = new Circle(x, y, radius, gradient)
-      circles.push(circle)
-    }
+    // Create circles and store reference
+    circlesRef.current = createCircles(canvas, gradients)
 
     const animate = () => {
-      if (!ctx) return
+      if (!ctx || !canvas) return
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      circles.forEach(circle => circle.update(canvas, ctx))
+      circlesRef.current.forEach(circle => circle.update(canvas, ctx))
 
-      requestAnimationFrame(animate)
+      animationRef.current = requestAnimationFrame(animate)
     }
 
     animate()
 
-    const handleResize = () => {
-      setCanvasSize()
-    }
+    // Debounced resize handler
+    const debouncedResize = debounce(setCanvasSize, 100)
 
-    window.addEventListener('resize', handleResize)
+    window.addEventListener('resize', debouncedResize)
 
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', debouncedResize)
+      if (animationRef.current) {
+        window.cancelAnimationFrame(animationRef.current)
+      }
     }
-  }, [colorMode])
+  }, [colorMode, createCircles])
 
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
