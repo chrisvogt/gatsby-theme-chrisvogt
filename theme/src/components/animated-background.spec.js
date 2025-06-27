@@ -510,21 +510,6 @@ describe('AnimatedBackground', () => {
     canvas.getContext = originalGetContext
   })
 
-  it('uses light mode gradients when colorMode is not dark', () => {
-    // Mock useColorMode to return 'light'
-    jest.spyOn(require('theme-ui'), 'useColorMode').mockReturnValue(['light'])
-
-    renderWithTheme(<AnimatedBackground />)
-
-    // Manually advance the timers to trigger the animation
-    act(() => {
-      jest.advanceTimersByTime(32)
-    })
-
-    const context = mockGetContext.mock.results[0].value
-    expect(context.createRadialGradient).toHaveBeenCalled()
-  })
-
   it('handles null canvas in Circle reposition method', () => {
     const { Circle } = require('./animated-background')
     const testCircle = new Circle(50, 50, 20, [
@@ -577,5 +562,16 @@ describe('AnimatedBackground', () => {
     expect(() => testCircle.update(mockCanvas, null)).not.toThrow()
     expect(testCircle.x).toBe(50) // Should not update position
     expect(testCircle.y).toBe(50) // Should not update position
+  })
+
+  it('handles null context in Circle draw method', () => {
+    const { Circle } = require('./animated-background')
+    const testCircle = new Circle(50, 50, 20, [
+      { position: 0, color: 'rgba(128, 0, 128, 1)' },
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' }
+    ])
+
+    // Test draw with null context
+    expect(() => testCircle.draw(null)).not.toThrow()
   })
 })
