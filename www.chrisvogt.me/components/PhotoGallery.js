@@ -36,8 +36,9 @@ export const PhotoGallery = ({ photos }) => {
         download={false}
         dynamic
         dynamicEl={photos.map(photo => ({
+          alt: photo.title,
           src: photo.src,
-          thumb: photo.src,
+          thumb: photo.thumb || photo.src, // fallback to image src if thumb is not provided
           subHtml: photo.title || ''
         }))}
         speed={1000}
