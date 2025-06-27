@@ -87,7 +87,7 @@ class Circle {
   }
 }
 
-export { Circle }
+export { Circle, hexToRgba } // Export hexToRgba for testing
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null)

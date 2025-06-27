@@ -456,4 +456,9 @@ describe('AnimatedBackground', () => {
     // If the cleanup branch is not covered, this will help
     expect(window.cancelAnimationFrame).toHaveBeenCalled()
   })
+
+  it('hexToRgba uses default alpha when not provided', () => {
+    const { hexToRgba } = require('./animated-background')
+    expect(hexToRgba('#ff0000')).toBe('rgba(255, 0, 0, 1)')
+  })
 })
