@@ -461,4 +461,121 @@ describe('AnimatedBackground', () => {
     const { hexToRgba } = require('./animated-background')
     expect(hexToRgba('#ff0000')).toBe('rgba(255, 0, 0, 1)')
   })
+
+  it('handles null canvas in animation loop', () => {
+    const { container } = renderWithTheme(<AnimatedBackground />)
+    const canvas = container.querySelector('canvas')
+
+    // Mock canvas to be null after initial setup
+    const originalRef = canvas.__reactInternalInstance
+    canvas.__reactInternalInstance = null
+
+    // Advance timers to trigger animation loop
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    // Should not throw and should handle gracefully
+    expect(() => {
+      act(() => {
+        jest.advanceTimersByTime(16)
+      })
+    }).not.toThrow()
+
+    // Restore original ref
+    canvas.__reactInternalInstance = originalRef
+  })
+
+  it('handles null context in animation loop', () => {
+    const { container } = renderWithTheme(<AnimatedBackground />)
+    const canvas = container.querySelector('canvas')
+
+    // Mock getContext to return null after initial setup
+    const originalGetContext = canvas.getContext
+    canvas.getContext = jest.fn(() => null)
+
+    // Advance timers to trigger animation loop
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    // Should not throw and should handle gracefully
+    expect(() => {
+      act(() => {
+        jest.advanceTimersByTime(16)
+      })
+    }).not.toThrow()
+
+    // Restore original getContext
+    canvas.getContext = originalGetContext
+  })
+
+  it('uses light mode gradients when colorMode is not dark', () => {
+    // Mock useColorMode to return 'light'
+    jest.spyOn(require('theme-ui'), 'useColorMode').mockReturnValue(['light'])
+
+    renderWithTheme(<AnimatedBackground />)
+
+    // Manually advance the timers to trigger the animation
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    const context = mockGetContext.mock.results[0].value
+    expect(context.createRadialGradient).toHaveBeenCalled()
+  })
+
+  it('handles null canvas in Circle reposition method', () => {
+    const { Circle } = require('./animated-background')
+    const testCircle = new Circle(50, 50, 20, [
+      { position: 0, color: 'rgba(128, 0, 128, 1)' },
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' }
+    ])
+
+    // Test reposition with null canvas
+    expect(() => testCircle.reposition(null)).not.toThrow()
+    expect(testCircle.x).toBe(50) // Should not change
+    expect(testCircle.y).toBe(50) // Should not change
+  })
+
+  it('handles null canvas in Circle update method', () => {
+    const { Circle } = require('./animated-background')
+    const testCircle = new Circle(50, 50, 20, [
+      { position: 0, color: 'rgba(128, 0, 128, 1)' },
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' }
+    ])
+
+    const mockContext = {
+      clearRect: jest.fn(),
+      beginPath: jest.fn(),
+      arc: jest.fn(),
+      fill: jest.fn(),
+      closePath: jest.fn(),
+      createRadialGradient: jest.fn(() => ({
+        addColorStop: jest.fn()
+      })),
+      fillStyle: '',
+      globalAlpha: 1.0
+    }
+
+    // Test update with null canvas
+    expect(() => testCircle.update(null, mockContext)).not.toThrow()
+    expect(testCircle.x).toBe(50) // Should not update position
+    expect(testCircle.y).toBe(50) // Should not update position
+  })
+
+  it('handles null context in Circle update method', () => {
+    const { Circle } = require('./animated-background')
+    const testCircle = new Circle(50, 50, 20, [
+      { position: 0, color: 'rgba(128, 0, 128, 1)' },
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' }
+    ])
+
+    const mockCanvas = { width: 500, height: 500 }
+
+    // Test update with null context
+    expect(() => testCircle.update(mockCanvas, null)).not.toThrow()
+    expect(testCircle.x).toBe(50) // Should not update position
+    expect(testCircle.y).toBe(50) // Should not update position
+  })
 })
