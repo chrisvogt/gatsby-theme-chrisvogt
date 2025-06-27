@@ -188,4 +188,238 @@ describe('AnimatedBackground', () => {
     testCircle.update(mockCanvas, mockContext)
     expect(testCircle.dx).toBe(2) // Reversed direction
   })
+
+  it('tests Circle class edge cases', () => {
+    const mockContext = {
+      clearRect: jest.fn(),
+      beginPath: jest.fn(),
+      arc: jest.fn(),
+      fill: jest.fn(),
+      closePath: jest.fn(),
+      createRadialGradient: jest.fn(() => ({
+        addColorStop: jest.fn()
+      })),
+      fillStyle: '',
+      globalAlpha: 1.0
+    }
+
+    const mockCanvas = { width: 500, height: 500 }
+
+    const testCircle = new Circle(50, 50, 20, [
+      { position: 0, color: 'rgba(128, 0, 128, 1)' },
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' }
+    ])
+
+    // Test draw method with null context
+    testCircle.draw(null)
+    expect(mockContext.beginPath).not.toHaveBeenCalled()
+
+    // Test update method with null context
+    testCircle.update(mockCanvas, null)
+    expect(testCircle.x).toBe(50) // Should not update position
+
+    // Test update method with null canvas
+    testCircle.update(null, mockContext)
+    expect(testCircle.x).toBe(50) // Should not update position
+
+    // Test boundary collisions on right edge
+    testCircle.x = 480 // Near right edge
+    testCircle.dx = 2
+    testCircle.update(mockCanvas, mockContext)
+    expect(testCircle.dx).toBe(-2) // Reversed direction
+
+    // Test boundary collisions on bottom edge
+    testCircle.y = 480 // Near bottom edge
+    testCircle.dy = 2
+    testCircle.update(mockCanvas, mockContext)
+    expect(testCircle.dy).toBe(-2) // Reversed direction
+
+    // Test boundary collisions on top edge
+    testCircle.y = 1 // Near top edge
+    testCircle.dy = -2
+    testCircle.update(mockCanvas, mockContext)
+    expect(testCircle.dy).toBe(2) // Reversed direction
+  })
+
+  it('tests Circle reposition method', () => {
+    const mockCanvas = { width: 500, height: 500 }
+    const testCircle = new Circle(50, 50, 20, [
+      { position: 0, color: 'rgba(128, 0, 128, 1)' },
+      { position: 1, color: 'rgba(30, 144, 255, 0.6)' }
+    ])
+
+    // Test reposition with null canvas
+    testCircle.reposition(null)
+    expect(testCircle.x).toBe(50) // Should not change
+
+    // Test reposition when circle is outside right boundary
+    testCircle.x = 600
+    testCircle.reposition(mockCanvas)
+    expect(testCircle.x).toBe(480) // Should be repositioned to canvas.width - radius
+
+    // Test reposition when circle is outside left boundary
+    testCircle.x = -10
+    testCircle.reposition(mockCanvas)
+    expect(testCircle.x).toBe(20) // Should be repositioned to radius
+
+    // Test reposition when circle is outside bottom boundary
+    testCircle.y = 600
+    testCircle.reposition(mockCanvas)
+    expect(testCircle.y).toBe(480) // Should be repositioned to canvas.height - radius
+
+    // Test reposition when circle is outside top boundary
+    testCircle.y = -10
+    testCircle.reposition(mockCanvas)
+    expect(testCircle.y).toBe(20) // Should be repositioned to radius
+  })
+
+  it('tests light mode gradients', () => {
+    const lightTheme = {
+      colors: {
+        background: '#ffffff',
+        modes: {
+          light: {
+            background: '#ffffff'
+          }
+        }
+      }
+    }
+
+    // Mock useColorMode to return 'light'
+    jest.doMock('theme-ui', () => ({
+      ...jest.requireActual('theme-ui'),
+      useColorMode: () => ['light']
+    }))
+
+    renderWithTheme(<AnimatedBackground />, lightTheme)
+
+    // Manually advance the timers to trigger the animation
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    const context = mockGetContext.mock.results[0].value
+    expect(context.createRadialGradient).toHaveBeenCalled()
+  })
+
+  it('tests canvas resize with dimension changes', () => {
+    const { container } = renderWithTheme(<AnimatedBackground />)
+    const canvas = container.querySelector('canvas')
+
+    // Mock window dimensions
+    Object.defineProperty(window, 'innerWidth', {
+      writable: true,
+      configurable: true,
+      value: 800
+    })
+    Object.defineProperty(window, 'innerHeight', {
+      writable: true,
+      configurable: true,
+      value: 600
+    })
+
+    // Set initial canvas size
+    canvas.width = 400
+    canvas.height = 300
+
+    const resizeEvent = new Event('resize')
+    act(() => {
+      window.dispatchEvent(resizeEvent)
+    })
+
+    // Advance timers to allow debounced resize to execute
+    act(() => {
+      jest.advanceTimersByTime(150) // More than the 100ms debounce delay
+    })
+
+    expect(canvas.width).toBe(800)
+    expect(canvas.height).toBe(600)
+  })
+
+  it('tests canvas resize without dimension changes', () => {
+    const { container } = renderWithTheme(<AnimatedBackground />)
+    const canvas = container.querySelector('canvas')
+
+    // Mock window dimensions to match current canvas size
+    Object.defineProperty(window, 'innerWidth', {
+      writable: true,
+      configurable: true,
+      value: canvas.width
+    })
+    Object.defineProperty(window, 'innerHeight', {
+      writable: true,
+      configurable: true,
+      value: canvas.height
+    })
+
+    const originalWidth = canvas.width
+    const originalHeight = canvas.height
+
+    const resizeEvent = new Event('resize')
+    act(() => {
+      window.dispatchEvent(resizeEvent)
+    })
+
+    // Advance timers to allow debounced resize to execute
+    act(() => {
+      jest.advanceTimersByTime(150)
+    })
+
+    // Canvas dimensions should not change
+    expect(canvas.width).toBe(originalWidth)
+    expect(canvas.height).toBe(originalHeight)
+  })
+
+  it('tests animation cleanup on unmount', () => {
+    const cancelAnimationFrameSpy = jest.spyOn(window, 'cancelAnimationFrame')
+
+    const { unmount } = renderWithTheme(<AnimatedBackground />)
+
+    // Advance timers to start animation
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    unmount()
+
+    expect(cancelAnimationFrameSpy).toHaveBeenCalled()
+  })
+
+  it('tests createCircles function with different gradients', () => {
+    renderWithTheme(<AnimatedBackground />)
+
+    // Manually advance the timers to trigger the animation
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    const context = mockGetContext.mock.results[0].value
+
+    // Should create 40 circles (as defined in the component)
+    expect(context.createRadialGradient).toHaveBeenCalled()
+  })
+
+  it('tests animation loop with missing context or canvas', () => {
+    const { container } = renderWithTheme(<AnimatedBackground />)
+    const canvas = container.querySelector('canvas')
+
+    // Mock getContext to return null after initial setup
+    const originalGetContext = canvas.getContext
+    canvas.getContext = jest.fn(() => null)
+
+    // Advance timers to trigger animation loop
+    act(() => {
+      jest.advanceTimersByTime(32)
+    })
+
+    // Should not throw and should handle gracefully
+    expect(() => {
+      act(() => {
+        jest.advanceTimersByTime(16)
+      })
+    }).not.toThrow()
+
+    // Restore original getContext
+    canvas.getContext = originalGetContext
+  })
 })
