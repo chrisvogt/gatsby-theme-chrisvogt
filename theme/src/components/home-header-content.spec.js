@@ -10,18 +10,13 @@ describe('HomeHeaderContent', () => {
     // Check for the main headline
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent("Hi! 👋 I'm Chris Vogt.")
 
-    // Check for the paragraphs
+    // Check for the first paragraph about the blog and digital garden
     expect(screen.getByText(/This is my personal blog and digital garden/i)).toBeInTheDocument()
-    expect(screen.getByText(/I work as a software engineer at GoDaddy/i)).toBeInTheDocument()
-
-    // Use a more flexible text matcher for the piano paragraph
-    const pianoParagraph = screen.getByText(
-      (content, element) =>
-        element.tagName.toLowerCase() === 'p' && content.includes('Most evenings') && content.includes('piano')
-    )
-    expect(pianoParagraph).toBeInTheDocument()
-
     expect(screen.getByText(/This space is always evolving/i)).toBeInTheDocument()
+
+    // Check for the second paragraph about the dashboard
+    expect(screen.getByText(/This page is a dashboard of my posts and online activity/i)).toBeInTheDocument()
+    expect(screen.getByText(/The social content below is updated automatically every day/i)).toBeInTheDocument()
   })
 
   it('applies wobble animation to emoji on mouse enter', () => {

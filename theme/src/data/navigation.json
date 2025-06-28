@@ -4,6 +4,12 @@
     "header": {
       "left": [
         {
+          "path": "/about",
+          "slug": "about",
+          "text": "About",
+          "title": "About Me — Chris Vogt"
+        },
+        {
           "path": "/blog",
           "slug": "blog",
           "text": "Blog",

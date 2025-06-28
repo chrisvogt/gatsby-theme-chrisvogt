@@ -51,24 +51,13 @@ const HomeHeaderContent = () => {
 
       <Themed.p>
         This is my personal blog and digital garden: a place where I share what I’m building, exploring, and learning
-        over time.
+        over time. This space is always evolving — part notebook, part playground — and I’m glad you found your way
+        here.
       </Themed.p>
 
       <Themed.p>
-        By day, I work as a software engineer at GoDaddy, creating tools that help small businesses build, grow, and
-        understand their online presence. But this site isn’t about work — it’s where I follow my curiosity, experiment
-        with ideas, and write code just for fun.
-      </Themed.p>
-
-      <Themed.p>
-        Most evenings, you’ll find me at the piano — practicing, recording, or just playing around with sound. I’ve been
-        slowly teaching myself music, and I’m figuring out how to bring what I know from tech into making music. I also
-        spend a lot of time with friends in the city and love connecting with people who are passionate about what they
-        do.
-      </Themed.p>
-
-      <Themed.p>
-        This space is always evolving — part notebook, part playground — and I’m glad you found your way here.
+        This page is a dashboard of my posts and online activity. The social content below is updated automatically
+        every day.
       </Themed.p>
     </div>
   )
