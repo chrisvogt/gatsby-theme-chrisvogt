@@ -66,7 +66,7 @@ const HomeTemplate = () => (
 
 export const Head = () => (
   <Seo
-    title='Chris Vogt - Software Engineer in San Francisco | Digital Garden of Photography, Piano, and Travel'
+    title='Chris Vogt - Software Engineer in San Francisco | Photography, Piano, and Travel Blog'
     description="Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
     keywords='Chris Vogt, Software Engineer in San Francisco, GoDaddy engineer blog, photography blog, piano recordings, travel blog, personal blog, digital garden'
   >
