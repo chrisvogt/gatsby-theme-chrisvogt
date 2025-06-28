@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.45.2
+
+— Splits the Home page content out into a new About Me page at /about/.
+
 ## 0.45.1
 
 ### Performance Improvements
