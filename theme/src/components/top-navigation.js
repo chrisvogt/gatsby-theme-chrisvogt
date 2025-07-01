@@ -70,7 +70,9 @@ const TopNavigation = ({ hideBrandLink, hideMenuItems }) => {
           </nav>
         </Themed.div>
 
-        <ColorToggle />
+        <Themed.div sx={{ display: ['none', '', 'block'] }}>
+          <ColorToggle />
+        </Themed.div>
       </Container>
     </Themed.div>
   )
