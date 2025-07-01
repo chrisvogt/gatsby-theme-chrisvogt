@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
@@ -34,6 +34,9 @@ exports[`TopNavigation matches the snapshot 1`] = `
         </a>
       </nav>
     </div>
+    <div
+      className="css-1jffn1t"
+    />
   </div>
 </div>
 `;

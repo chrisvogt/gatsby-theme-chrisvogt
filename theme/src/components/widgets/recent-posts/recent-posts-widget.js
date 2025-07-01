@@ -12,7 +12,7 @@ import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 
 export default () => {
-  const posts = useRecentPosts()
+  const posts = useRecentPosts(2)
 
   const getColumnCount = postsCount => {
     let columnCount

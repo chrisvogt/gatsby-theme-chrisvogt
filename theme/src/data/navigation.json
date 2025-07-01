@@ -10,6 +10,12 @@
           "title": "About Me — Chris Vogt"
         },
         {
+          "path": "/now",
+          "slug": "now",
+          "text": "Now",
+          "title": "What I'm up to"
+        },
+        {
           "path": "/blog",
           "slug": "blog",
           "text": "Blog",
