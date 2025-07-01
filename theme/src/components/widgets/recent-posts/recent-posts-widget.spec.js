@@ -26,6 +26,12 @@ describe('RecentPostsWidget', () => {
     jest.clearAllMocks()
   })
 
+  it('calls useRecentPosts with limit of 2', () => {
+    useRecentPosts.mockReturnValue([])
+    render(<RecentPostsWidget />)
+    expect(useRecentPosts).toHaveBeenCalledWith(2)
+  })
+
   it('renders a grid with one post', () => {
     useRecentPosts.mockReturnValue([
       {
