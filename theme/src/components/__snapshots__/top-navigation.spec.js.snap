@@ -5,26 +5,33 @@ exports[`TopNavigation matches the snapshot 1`] = `
   className="css-1pf826z"
 >
   <div
-    className="css-11zjnqz"
+    className="css-17dzpzi"
   >
     <div
-      className="css-1bqa2tj"
+      className="css-7xu00p"
+    >
+      <a
+        aria-current="page"
+        className="css-1ihyb2e"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={{}}
+      >
+        My Personal Blog & Portfolio
+      </a>
+      <div
+        className="css-aesx5h"
+      />
+    </div>
+    <div
+      className="css-3uks8f"
     >
       <nav
         role="navigation"
       >
         <a
-          aria-current="page"
-          className="css-q43x4o"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={{}}
-        >
-          My Personal Blog & Portfolio
-        </a>
-        <a
-          className="css-v7jqkk"
+          className="css-1hen0m7"
           href="/about-me"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -34,9 +41,6 @@ exports[`TopNavigation matches the snapshot 1`] = `
         </a>
       </nav>
     </div>
-    <div
-      className="css-1jffn1t"
-    />
   </div>
 </div>
 `;
