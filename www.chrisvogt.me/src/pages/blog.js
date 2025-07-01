@@ -12,7 +12,12 @@ import Seo from '../../../theme/src/components/seo'
 
 const BlogIndexPage = ({ data }) => {
   const posts = getPosts(data)?.filter(
-    post => !(post.fields.category?.startsWith('photography') || post.fields.category?.startsWith('music'))
+    post =>
+      !(
+        post.fields.category?.startsWith('photography') ||
+        post.fields.category?.startsWith('music') ||
+        post.frontmatter.slug === 'now'
+      )
   )
 
   return (
