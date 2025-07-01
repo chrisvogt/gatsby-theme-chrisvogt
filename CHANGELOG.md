@@ -2,7 +2,7 @@
 
 ## 0.45.3
 
-– Rearranges the page header layout to accomodate longer menu items.
+– Rearranges the page header layout to accommodate longer menu items.
 
 ## 0.45.2
 
