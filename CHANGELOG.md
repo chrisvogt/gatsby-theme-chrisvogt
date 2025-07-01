@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.45.3
+
+– Rearranges the page header layout to accomodate longer menu items.
+
 ## 0.45.2
 
 — Splits the Home page content out into a new About Me page at /about/.
