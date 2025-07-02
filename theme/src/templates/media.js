@@ -24,6 +24,13 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
   const soundcloudId = mdx.frontmatter.soundcloudId
   const title = getTitle(mdx)
   const youtubeSrc = mdx.frontmatter.youtubeSrc
+  const description = getDescription(mdx)
+  const banner = getBanner(mdx)
+  const keywords = mdx.frontmatter.keywords
+  const path = mdx.fields.path
+
+  // Build canonical URL
+  const canonicalUrl = `https://www.chrisvogt.me${path}`
 
   // Set the SoundCloud track in Redux when this component mounts
   useEffect(() => {
@@ -58,12 +65,27 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
         }}
       >
         <Container sx={{ width: ['', 'max(80ch, 50vw)'], lineHeight: 1.7 }}>
-          <article className='h-entry'>
+          <article className='h-entry' id={mdx.id}>
             {category && <Category type={category} sx={{ mb: 2 }} />}
 
             <PageHeader>{title}</PageHeader>
 
             <time className='dt-published created'>Published {date}</time>
+
+            {/* Hidden microformats data */}
+            <div style={{ display: 'none' }}>
+              <a className='u-url' href={canonicalUrl} />
+              <span className='u-uid'>{mdx.id}</span>
+              {description && <div className='p-summary'>{description}</div>}
+              {banner && <img className='u-photo' src={banner} alt='' />}
+              {category && <span className='p-category'>{category}</span>}
+              {keywords &&
+                keywords.map((keyword, index) => (
+                  <span key={index} className='p-category'>
+                    {keyword}
+                  </span>
+                ))}
+            </div>
 
             <div className='e-content article-content'>{children}</div>
           </article>
@@ -85,13 +107,16 @@ export const pageQuery = graphql`
   query ($id: String!) {
     mdx(fields: { id: { eq: $id } }) {
       body
+      id
       fields {
         category
+        path
       }
       frontmatter {
         banner
         date(formatString: "MMMM DD, YYYY")
         description
+        keywords
         title
         type
         soundcloudId

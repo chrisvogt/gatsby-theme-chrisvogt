@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Blog Post does not render category when not provided 1`] = `
 <div
@@ -12,6 +12,7 @@ exports[`Blog Post does not render category when not provided 1`] = `
     >
       <article
         className="h-entry c1v0-blog-post"
+        id="mock-post-id"
       >
         <h1
           className="p-name css-1sus4jf"
@@ -27,6 +28,48 @@ exports[`Blog Post does not render category when not provided 1`] = `
             Published 
             Mon, 17 Jun 2024 03:30:26 GMT
           </time>
+        </div>
+        <div
+          style={
+            {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            className="u-url"
+            href="https://www.chrisvogt.me/blog/mock-post"
+          />
+          <span
+            className="u-uid"
+          >
+            mock-post-id
+          </span>
+          <div
+            className="p-summary"
+          >
+            This is a mock description
+          </div>
+          <img
+            alt=""
+            className="u-photo"
+            src="mock-banner.jpg"
+          />
+          <span
+            className="p-category"
+          >
+            mock
+          </span>
+          <span
+            className="p-category"
+          >
+            test
+          </span>
+          <span
+            className="p-category"
+          >
+            blog
+          </span>
         </div>
         <div
           className="e-content article-content"
@@ -53,6 +96,7 @@ exports[`Blog Post matches the snapshot 1`] = `
     >
       <article
         className="h-entry c1v0-blog-post"
+        id="mock-post-id"
       >
         <div
           className="css-1blzwpa"
@@ -73,6 +117,53 @@ exports[`Blog Post matches the snapshot 1`] = `
             Published 
             Mon, 17 Jun 2024 03:30:26 GMT
           </time>
+        </div>
+        <div
+          style={
+            {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            className="u-url"
+            href="https://www.chrisvogt.me/blog/mock-post"
+          />
+          <span
+            className="u-uid"
+          >
+            mock-post-id
+          </span>
+          <div
+            className="p-summary"
+          >
+            This is a mock description
+          </div>
+          <img
+            alt=""
+            className="u-photo"
+            src="mock-banner.jpg"
+          />
+          <span
+            className="p-category"
+          >
+            Mock Category
+          </span>
+          <span
+            className="p-category"
+          >
+            mock
+          </span>
+          <span
+            className="p-category"
+          >
+            test
+          </span>
+          <span
+            className="p-category"
+          >
+            blog
+          </span>
         </div>
         <div
           className="e-content article-content"

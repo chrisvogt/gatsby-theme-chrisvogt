@@ -10,8 +10,10 @@ import Media, { Head } from './media'
 // Mocked Data
 const data = {
   mdx: {
+    id: 'mock-media-id',
     fields: {
-      category: 'Mock Category'
+      category: 'Mock Category',
+      path: '/music/mock-media'
     },
     frontmatter: {
       title: 'A Mock Blog Post',
@@ -19,7 +21,8 @@ const data = {
       soundcloudId: null,
       youtubeSrc: null,
       banner: 'mock-banner.jpg',
-      description: 'Mock Description'
+      description: 'Mock Description',
+      keywords: ['mock', 'test', 'music']
     }
   }
 }

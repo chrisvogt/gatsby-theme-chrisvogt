@@ -6,14 +6,17 @@ import Post, { Head } from './post'
 
 const data = {
   mdx: {
+    id: 'mock-post-id',
     fields: {
-      category: 'Mock Category'
+      category: 'Mock Category',
+      path: '/blog/mock-post'
     },
     frontmatter: {
       date: 'Mon, 17 Jun 2024 03:30:26 GMT',
       title: 'A Mock Blog Post',
       description: 'This is a mock description',
-      banner: 'mock-banner.jpg'
+      banner: 'mock-banner.jpg',
+      keywords: ['mock', 'test', 'blog']
     }
   }
 }
@@ -49,6 +52,7 @@ describe('Blog Post', () => {
       mdx: {
         ...data.mdx,
         fields: {
+          ...data.mdx.fields,
           category: null
         }
       }
