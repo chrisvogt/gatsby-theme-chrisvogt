@@ -2,7 +2,7 @@ import React from 'react'
 
 const HCard = () => (
   <div className='h-card' style={{ display: 'none' }}>
-    <a className='p-name' href='https://www.chrisvogt.me'>
+    <a className='p-name u-url u-uid' href='https://www.chrisvogt.me' rel='me'>
       Chris Vogt
     </a>
     <img
@@ -25,6 +25,7 @@ const HCard = () => (
       CA
     </abbr>
     <div className='p-country-name'>U.S.A</div>
+    <div class='p-category'>Software Developer</div>
   </div>
 )
 

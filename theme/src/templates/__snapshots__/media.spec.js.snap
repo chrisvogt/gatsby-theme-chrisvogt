@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Media Post renders correctly with a SoundCloud source 1`] = `
 <div
@@ -12,6 +12,7 @@ exports[`Media Post renders correctly with a SoundCloud source 1`] = `
     >
       <article
         className="h-entry"
+        id="mock-media-id"
       >
         <div
           className="css-1blzwpa"
@@ -29,6 +30,53 @@ exports[`Media Post renders correctly with a SoundCloud source 1`] = `
           Published 
           Mon, 17 Jun 2024 03:30:26 GMT
         </time>
+        <div
+          style={
+            {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            className="u-url"
+            href="https://www.chrisvogt.me/music/mock-media"
+          />
+          <span
+            className="u-uid"
+          >
+            mock-media-id
+          </span>
+          <div
+            className="p-summary"
+          >
+            Mock Description
+          </div>
+          <img
+            alt=""
+            className="u-photo"
+            src="mock-banner.jpg"
+          />
+          <span
+            className="p-category"
+          >
+            Mock Category
+          </span>
+          <span
+            className="p-category"
+          >
+            mock
+          </span>
+          <span
+            className="p-category"
+          >
+            test
+          </span>
+          <span
+            className="p-category"
+          >
+            music
+          </span>
+        </div>
         <div
           className="e-content article-content"
         >
@@ -67,6 +115,7 @@ exports[`Media Post renders correctly with a YouTube source 1`] = `
     >
       <article
         className="h-entry"
+        id="mock-media-id"
       >
         <div
           className="css-1blzwpa"
@@ -84,6 +133,53 @@ exports[`Media Post renders correctly with a YouTube source 1`] = `
           Published 
           Mon, 17 Jun 2024 03:30:26 GMT
         </time>
+        <div
+          style={
+            {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            className="u-url"
+            href="https://www.chrisvogt.me/music/mock-media"
+          />
+          <span
+            className="u-uid"
+          >
+            mock-media-id
+          </span>
+          <div
+            className="p-summary"
+          >
+            Mock Description
+          </div>
+          <img
+            alt=""
+            className="u-photo"
+            src="mock-banner.jpg"
+          />
+          <span
+            className="p-category"
+          >
+            Mock Category
+          </span>
+          <span
+            className="p-category"
+          >
+            mock
+          </span>
+          <span
+            className="p-category"
+          >
+            test
+          </span>
+          <span
+            className="p-category"
+          >
+            music
+          </span>
+        </div>
         <div
           className="e-content article-content"
         >
@@ -109,6 +205,7 @@ exports[`Media Post renders correctly with no media sources 1`] = `
     >
       <article
         className="h-entry"
+        id="mock-media-id"
       >
         <div
           className="css-1blzwpa"
@@ -126,6 +223,53 @@ exports[`Media Post renders correctly with no media sources 1`] = `
           Published 
           Mon, 17 Jun 2024 03:30:26 GMT
         </time>
+        <div
+          style={
+            {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            className="u-url"
+            href="https://www.chrisvogt.me/music/mock-media"
+          />
+          <span
+            className="u-uid"
+          >
+            mock-media-id
+          </span>
+          <div
+            className="p-summary"
+          >
+            Mock Description
+          </div>
+          <img
+            alt=""
+            className="u-photo"
+            src="mock-banner.jpg"
+          />
+          <span
+            className="p-category"
+          >
+            Mock Category
+          </span>
+          <span
+            className="p-category"
+          >
+            mock
+          </span>
+          <span
+            className="p-category"
+          >
+            test
+          </span>
+          <span
+            className="p-category"
+          >
+            music
+          </span>
+        </div>
         <div
           className="e-content article-content"
         >
