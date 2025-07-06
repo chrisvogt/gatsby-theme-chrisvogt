@@ -18,9 +18,6 @@
   <a href='https://github.com/chrisvogt/gatsby-theme-chrisvogt/blob/main/LICENSE'>
     <img src='https://img.shields.io/badge/license-MIT-blue.svg' alt='Released under the MIT license.' />
   </a>
-  <a href='https://twitter.com/intent/follow?screen_name=c1v0'>
-    <img src='https://img.shields.io/twitter/follow/c1v0.svg?label=Follow%20@c1v0' alt='Follow @c1v0' />
-  </a>
 </p>
 
 This repository contains the source code behind my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The front-end code lives within [the theme directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/theme) and the blog articles live within [the website directory](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/main/www.chrisvogt.me).

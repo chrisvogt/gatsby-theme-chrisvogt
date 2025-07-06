@@ -55,17 +55,6 @@
     }
   },
   {
-    "href": "https://twitter.com/c1v0",
-    "slug": "twitter",
-    "displayName": "Twitter",
-    "icon": {
-      "class": "fab fa-x-twitter",
-      "name": "twitter",
-      "reactIcon": "faXTwitter",
-      "set": "fab"
-    }
-  },
-  {
     "href": "https://stackoverflow.com/users/1391826/chris-vogt?tab=profile",
     "slug": "stack-overflow",
     "icon": {

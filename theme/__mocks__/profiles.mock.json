@@ -36,17 +36,6 @@
         "slug": "linkedin"
       },
       {
-        "icon": {
-          "set": "fab",
-          "name": "twitter",
-          "class": "fab fa-twitter",
-          "reactIcon": "twitter"
-        },
-        "slug": "twitter",
-        "href": "https://twitter.com/c1v0",
-        "displayName": "Twitter"
-      },
-      {
         "displayName": "Behance",
         "icon": {
           "name": "behance",
