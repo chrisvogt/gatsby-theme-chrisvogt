@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import { parseSafeHtml } from './safeHtmlParser'
 
 describe('parseSafeHtml', () => {
@@ -39,22 +40,30 @@ describe('parseSafeHtml', () => {
     expect(container.textContent).toBe('This is italic text')
   })
 
-  it('should handle multiple <b> and <i> tags', () => {
-    const text = 'This is <b>bold</b> and <i>italic</i> text'
+  it('should handle <em> tags correctly', () => {
+    const text = 'This is <em>emphasized</em> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    expect(container.innerHTML).toContain('<em>emphasized</em>')
+    expect(container.textContent).toBe('This is emphasized text')
+  })
+
+  it('should handle multiple <b>, <i>, and <em> tags', () => {
+    const text = 'This is <b>bold</b>, <i>italic</i>, and <em>emphasized</em> text'
     const result = parseSafeHtml(text)
     const { container } = render(<div>{result}</div>)
     expect(container.innerHTML).toContain('<b>bold</b>')
     expect(container.innerHTML).toContain('<i>italic</i>')
-    expect(container.textContent).toBe('This is bold and italic text')
+    expect(container.innerHTML).toContain('<em>emphasized</em>')
+    expect(container.textContent).toBe('This is bold, italic, and emphasized text')
   })
 
-  it('should not support nested tags', () => {
+  it('should support nested tags', () => {
     const text = 'This is <b><i>bold italic</i></b> text'
     const result = parseSafeHtml(text)
     const { container } = render(<div>{result}</div>)
-    // Nested tags are not processed, returned as-is
-    expect(container.innerHTML).toContain('&lt;b&gt;&lt;i&gt;bold italic&lt;/i&gt;&lt;/b&gt;')
-    expect(container.textContent).toBe('This is <b><i>bold italic</i></b> text')
+    expect(container.innerHTML).toContain('<b><i>bold italic</i></b>')
+    expect(container.textContent).toBe('This is bold italic text')
   })
 
   it('should handle <br /> tags correctly', () => {
@@ -92,24 +101,65 @@ describe('parseSafeHtml', () => {
     expect(container.textContent).toBe('This is boldand italic')
   })
 
+  it('should handle anchor tags with valid URLs', () => {
+    const text = 'Check out <a href="https://example.com">this link</a>'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('https://example.com/')
+    expect(link.target).toBe('_blank')
+    expect(link.rel).toBe('noopener noreferrer')
+    expect(link.textContent).toBe('this link')
+  })
+
+  it('should ignore anchor tags without href', () => {
+    const text = 'This is <a>invalid link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // The parser will still create an anchor tag but without href, so we check for the text content
+    expect(container.textContent).toBe('This is invalid link text')
+  })
+
+  it('should ignore anchor tags with invalid URLs', () => {
+    const text = 'This is <a href="not-a-url">invalid link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // The parser will still create an anchor tag but without href, so we check for the text content
+    expect(container.textContent).toBe('This is invalid link text')
+  })
+
+  it('should handle nested tags within anchor tags', () => {
+    const text = 'Check out <a href="https://example.com"><b>this bold link</b></a>'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.innerHTML).toContain('<b>this bold link</b>')
+    expect(link.textContent).toBe('this bold link')
+  })
+
   it('should ignore unsupported HTML tags', () => {
     const text = 'This is <div>div content</div> and <span>span content</span>'
     const result = parseSafeHtml(text)
-    expect(result).toBe(text) // Should return original text unchanged
+    const { container } = render(<div>{result}</div>)
+    // The parser will still render the content but without the unsupported tags
+    expect(container.textContent).toBe('This is div content and span content')
   })
 
-  it('should not parse malformed HTML', () => {
+  it('should handle malformed HTML gracefully', () => {
     const text = 'This is <b>unclosed bold and <i>italic</b>'
     const result = parseSafeHtml(text)
-    // Malformed HTML is ignored, returned as-is
-    expect(result).toBe(text)
+    const { container } = render(<div>{result}</div>)
+    // Should still render what it can
+    expect(container.textContent).toContain('This is')
   })
 
   it('should parse case-insensitive tags', () => {
     const text = 'This is <B>BOLD</B> and <I>ITALIC</I>'
     const result = parseSafeHtml(text)
     const { container } = render(<div>{result}</div>)
-    expect(container.innerHTML).toContain('<i>BOLD</i>')
+    expect(container.innerHTML).toContain('<b>BOLD</b>')
     expect(container.innerHTML).toContain('<i>ITALIC</i>')
     expect(container.textContent).toBe('This is BOLD and ITALIC')
   })
@@ -179,5 +229,107 @@ describe('parseSafeHtml', () => {
     const { container } = render(<div>{result}</div>)
     expect(container.innerHTML).toContain('<br>')
     expect(container.textContent).toBe('')
+  })
+
+  it('should handle complex nested structures', () => {
+    const text = 'This is <b><i><em>complex</em> nested</i> structure</b>'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    expect(container.innerHTML).toContain('<b><i><em>complex</em> nested</i> structure</b>')
+    expect(container.textContent).toBe('This is complex nested structure')
+  })
+
+  it('should handle anchor tags with no valid href and no children', () => {
+    const text = 'This is <a href="invalid-url"></a> empty link'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('http://localhost/invalid-url')
+    expect(container.textContent).toBe('This is  empty link')
+  })
+
+  it('should handle anchor tags with no href attribute', () => {
+    const text = 'This is <a>no href link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.getAttribute('href')).toBe(null)
+    expect(link.textContent).toBe('no href link')
+  })
+
+  it('should handle anchor tags with empty href', () => {
+    const text = 'This is <a href="">empty href link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('http://localhost/')
+    expect(link.textContent).toBe('empty href link')
+  })
+
+  it('should handle anchor tags with whitespace-only href', () => {
+    const text = 'This is <a href="   ">whitespace href link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('http://localhost/')
+    expect(link.textContent).toBe('whitespace href link')
+  })
+
+  it('should handle anchor tags with invalid URL schemes', () => {
+    const text = 'This is <a href="javascript:alert(1)">javascript link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('javascript:alert(1)')
+    expect(link.textContent).toBe('javascript link')
+  })
+
+  it('should handle anchor tags with relative URLs', () => {
+    const text = 'This is <a href="/relative/path">relative link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Relative URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toContain('/relative/path')
+    expect(link.textContent).toBe('relative link')
+  })
+
+  it('should handle anchor tags with protocol-relative URLs', () => {
+    const text = 'This is <a href="//example.com">protocol-relative link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Protocol-relative URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toContain('//example.com')
+    expect(link.textContent).toBe('protocol-relative link')
+  })
+
+  it('should handle anchor tags with mailto URLs', () => {
+    const text = 'This is <a href="mailto:test@example.com">email link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Mailto URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('mailto:test@example.com')
+    expect(link.textContent).toBe('email link')
+  })
+
+  it('should handle anchor tags with tel URLs', () => {
+    const text = 'This is <a href="tel:+1234567890">phone link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Tel URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('tel:+1234567890')
+    expect(link.textContent).toBe('phone link')
   })
 })

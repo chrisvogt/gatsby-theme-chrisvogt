@@ -116,7 +116,23 @@ describe('Widget/Goodreads/BookExplorer', () => {
     }
     renderWithRouter(<BookExplorer book={bookWithUnsupportedHtml} onClose={() => {}} default />)
 
-    // Should render the raw HTML as text
-    expect(screen.getByText('This has <div>unsupported</div> and <span>tags</span>')).toBeInTheDocument()
+    // Should render the content without the unsupported tags
+    expect(
+      screen.getByText((content, node) => node.textContent === 'This has unsupported and tags')
+    ).toBeInTheDocument()
+  })
+
+  it('renders em tags and anchor tags in description correctly', () => {
+    const bookWithAdvancedHtml = {
+      ...mockBook,
+      description: 'This is <em>emphasized</em> text with a <a href="https://example.com">link</a>'
+    }
+    renderWithRouter(<BookExplorer book={bookWithAdvancedHtml} onClose={() => {}} default />)
+
+    // Check that the HTML is properly rendered as elements
+    const descriptionElement = screen.getByText(/This is/).closest('p')
+    expect(descriptionElement.innerHTML).toContain('<em>emphasized</em>')
+    expect(descriptionElement.innerHTML).toContain('<a href="https://example.com"')
+    expect(descriptionElement.textContent).toBe('This is emphasized text with a link')
   })
 })
