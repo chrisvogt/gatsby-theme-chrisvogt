@@ -7,6 +7,7 @@ import { useLocation } from '@gatsbyjs/reach-router'
 
 import Book from '../../artwork/book'
 import ViewExternal from '../view-external'
+import { parseSafeHtml } from '../../../helpers/safeHtmlParser'
 
 const renderStarsForRating = count => {
   const repeat = (char, n) => Array(n).fill(char).join('')
@@ -114,7 +115,7 @@ const BookExplorer = ({ book, onClose }) => {
               <span sx={{ color: 'primary' }}>{renderStarsForRating(parseInt(rating, 10))}</span>
             </div>
 
-            <Themed.p sx={{ mt: 2, mb: 3 }}>{description}</Themed.p>
+            <Themed.p sx={{ mt: 2, mb: 3 }}>{parseSafeHtml(description)}</Themed.p>
 
             <Themed.a
               href={infoLink}
