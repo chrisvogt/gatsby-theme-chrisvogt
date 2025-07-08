@@ -40,9 +40,18 @@ export const parseSafeHtml = text => {
 
 /**
  * Process inline tags (<b> and <i>) within a text segment
+ * Uses a simple approach that handles basic cases correctly
  */
 const processInlineTags = text => {
+  // Check if there are valid nested <b> or <i> tags (e.g., <b><i>text</i></b>)
+  const hasNestedTags = /<(b|i)>\s*<(b|i)>.*<\/(b|i)>\s*<\/(b|i)>/i.test(text)
+  if (hasNestedTags) {
+    const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    return <span dangerouslySetInnerHTML={{ __html: escaped }} />
+  }
+
   // Simple regex to match <b>content</b> and <i>content</i>
+  // This handles the basic cases without complex nesting
   const tagRegex = /<(b|i)>([^<]*)<\/\1>/gi
   const parts = []
   let lastIndex = 0
