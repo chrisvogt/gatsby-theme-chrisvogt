@@ -238,4 +238,98 @@ describe('parseSafeHtml', () => {
     expect(container.innerHTML).toContain('<b><i><em>complex</em> nested</i> structure</b>')
     expect(container.textContent).toBe('This is complex nested structure')
   })
+
+  it('should handle anchor tags with no valid href and no children', () => {
+    const text = 'This is <a href="invalid-url"></a> empty link'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('http://localhost/invalid-url')
+    expect(container.textContent).toBe('This is  empty link')
+  })
+
+  it('should handle anchor tags with no href attribute', () => {
+    const text = 'This is <a>no href link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.getAttribute('href')).toBe(null)
+    expect(link.textContent).toBe('no href link')
+  })
+
+  it('should handle anchor tags with empty href', () => {
+    const text = 'This is <a href="">empty href link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('http://localhost/')
+    expect(link.textContent).toBe('empty href link')
+  })
+
+  it('should handle anchor tags with whitespace-only href', () => {
+    const text = 'This is <a href="   ">whitespace href link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('http://localhost/')
+    expect(link.textContent).toBe('whitespace href link')
+  })
+
+  it('should handle anchor tags with invalid URL schemes', () => {
+    const text = 'This is <a href="javascript:alert(1)">javascript link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('javascript:alert(1)')
+    expect(link.textContent).toBe('javascript link')
+  })
+
+  it('should handle anchor tags with relative URLs', () => {
+    const text = 'This is <a href="/relative/path">relative link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Relative URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toContain('/relative/path')
+    expect(link.textContent).toBe('relative link')
+  })
+
+  it('should handle anchor tags with protocol-relative URLs', () => {
+    const text = 'This is <a href="//example.com">protocol-relative link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Protocol-relative URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toContain('//example.com')
+    expect(link.textContent).toBe('protocol-relative link')
+  })
+
+  it('should handle anchor tags with mailto URLs', () => {
+    const text = 'This is <a href="mailto:test@example.com">email link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Mailto URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('mailto:test@example.com')
+    expect(link.textContent).toBe('email link')
+  })
+
+  it('should handle anchor tags with tel URLs', () => {
+    const text = 'This is <a href="tel:+1234567890">phone link</a> text'
+    const result = parseSafeHtml(text)
+    const { container } = render(<div>{result}</div>)
+    // Tel URLs should be valid
+    const link = container.querySelector('a')
+    expect(link).toBeInTheDocument()
+    expect(link.href).toBe('tel:+1234567890')
+    expect(link.textContent).toBe('phone link')
+  })
 })
