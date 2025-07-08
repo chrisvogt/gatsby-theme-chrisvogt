@@ -93,4 +93,30 @@ describe('Widget/Goodreads/BookExplorer', () => {
     const link = screen.getByText('Learn more on Google Books')
     expect(link).not.toHaveAttribute('target')
   })
+
+  it('renders HTML entities in description correctly', () => {
+    const bookWithHtml = {
+      ...mockBook,
+      description: 'This is <b>bold</b> text with a <br /> line break and <i>italic</i> content'
+    }
+    renderWithRouter(<BookExplorer book={bookWithHtml} onClose={() => {}} default />)
+
+    // Check that the HTML is properly rendered as elements
+    const descriptionElement = screen.getByText(/This is/).closest('p')
+    expect(descriptionElement.innerHTML).toContain('<b>bold</b>')
+    expect(descriptionElement.innerHTML).toContain('<br>')
+    expect(descriptionElement.innerHTML).toContain('<i>italic</i>')
+    expect(descriptionElement.textContent).toBe('This is bold text with a  line break and italic content')
+  })
+
+  it('ignores unsupported HTML tags in description', () => {
+    const bookWithUnsupportedHtml = {
+      ...mockBook,
+      description: 'This has <div>unsupported</div> and <span>tags</span>'
+    }
+    renderWithRouter(<BookExplorer book={bookWithUnsupportedHtml} onClose={() => {}} default />)
+
+    // Should render the raw HTML as text
+    expect(screen.getByText('This has <div>unsupported</div> and <span>tags</span>')).toBeInTheDocument()
+  })
 })
