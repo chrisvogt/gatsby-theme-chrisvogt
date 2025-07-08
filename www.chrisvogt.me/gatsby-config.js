@@ -40,7 +40,7 @@ module.exports = {
       },
       goodreads: {
         username: 'chrisvogt',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/goodreads'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/goodreads?forceCacheReload=true'
       },
       instagram: {
         username: 'c1v0',
