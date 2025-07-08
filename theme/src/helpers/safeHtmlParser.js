@@ -1,8 +1,9 @@
 import React from 'react'
+import parse, { domToReact, Element } from 'html-react-parser'
 
 /**
  * Safely converts HTML entities to React elements
- * Only supports: <b>, <i>, <br />
+ * Supports: <b>, <i>, <em>, <br />, <a> (with href attribute)
  *
  * @param {string} text - The text containing HTML entities
  * @returns {React.ReactNode} - React elements or the original string
@@ -12,72 +13,75 @@ export const parseSafeHtml = text => {
     return text
   }
 
-  // Split by <br /> tags first
-  const parts = text.split(/<br\s*\/?>/i)
+  const options = {
+    replace: domNode => {
+      if (domNode instanceof Element && domNode.attribs) {
+        const { name, attribs, children } = domNode
 
-  if (parts.length === 1) {
-    // No <br /> tags, just process <b> and <i>
-    return processInlineTags(parts[0])
+        // Whitelist of allowed tags
+        const allowedTags = ['b', 'i', 'em', 'br', 'a']
+
+        // Check if tag is allowed
+        if (!allowedTags.includes(name)) {
+          // For disallowed tags, return false to skip rendering the tag entirely
+          // but still process its children
+          return false
+        }
+
+        // Handle self-closing tags
+        if (name === 'br') {
+          return <br key={Math.random()} />
+        }
+
+        // Handle anchor tags with href validation
+        if (name === 'a') {
+          const href = attribs.href
+          if (!href || !isValidUrl(href)) {
+            // If no valid href, just return the text content
+            return domNode.children && domNode.children.length > 0 ? domToReact(domNode.children, options) : null
+          }
+
+          return (
+            <a
+              key={Math.random()}
+              href={href}
+              target='_blank'
+              rel='noopener noreferrer'
+              sx={{
+                color: 'primary',
+                textDecoration: 'none',
+                '&:hover': {
+                  textDecoration: 'underline'
+                }
+              }}
+            >
+              {domToReact(children, options)}
+            </a>
+          )
+        }
+
+        // Handle other allowed tags (b, i, em)
+        const Element = name
+        return <Element key={Math.random()}>{domToReact(children, options)}</Element>
+      }
+    }
   }
 
-  // Process each part and join with <br /> elements
-  return parts.map((part, index) => {
-    const processedPart = processInlineTags(part)
-
-    if (index === parts.length - 1) {
-      // Last part doesn't need a <br />
-      return processedPart
-    }
-
-    return (
-      <React.Fragment key={index}>
-        {processedPart}
-        <br />
-      </React.Fragment>
-    )
-  })
+  return parse(text, options)
 }
 
 /**
- * Process inline tags (<b> and <i>) within a text segment
- * Uses a simple approach that handles basic cases correctly
+ * Simple URL validation
+ * @param {string} url - URL to validate
+ * @returns {boolean} - Whether the URL is valid
  */
-const processInlineTags = text => {
-  // Check if there are valid nested <b> or <i> tags (e.g., <b><i>text</i></b>)
-  const hasNestedTags = /<(b|i)>\s*<(b|i)>.*<\/(b|i)>\s*<\/(b|i)>/i.test(text)
-  if (hasNestedTags) {
-    const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    return <span dangerouslySetInnerHTML={{ __html: escaped }} />
+const isValidUrl = url => {
+  try {
+    new URL(url)
+    return true
+  } catch {
+    return false
   }
-
-  // Simple regex to match <b>content</b> and <i>content</i>
-  // This handles the basic cases without complex nesting
-  const tagRegex = /<(b|i)>([^<]*)<\/\1>/gi
-  const parts = []
-  let lastIndex = 0
-  let match
-
-  while ((match = tagRegex.exec(text)) !== null) {
-    const [fullMatch, tag, content] = match
-
-    // Add text before the tag
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index))
-    }
-
-    // Create the element
-    const Element = tag === 'b' ? 'b' : 'i'
-    parts.push(React.createElement(Element, { key: `${tag}-${parts.length}` }, content))
-
-    lastIndex = match.index + fullMatch.length
-  }
-
-  // Add remaining text
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex))
-  }
-
-  return parts.length === 0 ? text : parts.length === 1 ? parts[0] : parts
 }
 
 export default parseSafeHtml
