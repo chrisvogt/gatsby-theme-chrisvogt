@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.46.0
+
+- Replaces Google Books API book descriptions with Goodreads book descriptions.
+- Adds support for `<i>`, `<b>`, and `<br />` elements in widget content response.
+
 ## 0.45.3
 
 – Rearranges the page header layout to accommodate longer menu items.
