@@ -138,6 +138,43 @@ export default merge(tailwind, {
     gray: {
       color: 'background',
       bg: 'gray'
+    },
+    readMore: {
+      color: 'primary',
+      bg: 'transparent',
+      border: theme => `1px solid ${theme.colors.primary}`,
+      borderRadius: 'card',
+      px: 3,
+      py: 2,
+      fontSize: [1, 2],
+      fontWeight: 'medium',
+      cursor: 'pointer',
+      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+      position: 'relative',
+      overflow: 'hidden',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: '-100%',
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(90deg, transparent, rgba(66, 46, 163, 0.1), transparent)',
+        transition: 'left 0.5s ease-in-out'
+      },
+      '&:hover, &:focus': {
+        bg: 'primary',
+        color: 'background',
+        transform: 'translateY(-2px)',
+        boxShadow: '0 4px 12px rgba(66, 46, 163, 0.3)',
+        '&::before': {
+          left: '100%'
+        }
+      },
+      '&:active': {
+        transform: 'translateY(0)',
+        boxShadow: '0 2px 8px rgba(66, 46, 163, 0.2)'
+      }
     }
   },
 
@@ -249,6 +286,28 @@ export default merge(tailwind, {
         },
         '51%, 100%': {
           opacity: 0
+        }
+      },
+      '@keyframes fadeInUp': {
+        '0%': {
+          opacity: 0,
+          transform: 'translateY(20px)'
+        },
+        '100%': {
+          opacity: 1,
+          transform: 'translateY(0)'
+        }
+      },
+      '@keyframes slideDown': {
+        '0%': {
+          opacity: 0,
+          maxHeight: '0px',
+          overflow: 'hidden'
+        },
+        '100%': {
+          opacity: 1,
+          maxHeight: '1000px',
+          overflow: 'visible'
         }
       }
     }

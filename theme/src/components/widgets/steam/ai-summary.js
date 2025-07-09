@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { faRobot } from '@fortawesome/free-solid-svg-icons'
+import { faRobot, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Heading } from '@theme-ui/components'
+import { Heading, Button } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
 import React, { useEffect, useState, useRef } from 'react'
 
@@ -37,11 +37,23 @@ const ProgressiveReveal = ({ children, delay = 0, isInView = false }) => {
 const AiSummary = React.memo(({ aiSummary }) => {
   const [isVisible, setIsVisible] = useState(false)
   const [showContent, setShowContent] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [isInView, setIsInView] = useState(false)
+  const [parsedContent, setParsedContent] = useState({ firstParagraph: '', remainingParagraphs: [] })
   const containerRef = useRef(null)
 
   useEffect(() => {
     if (!aiSummary) return
+
+    // Split content on paragraph tags
+    const paragraphs = aiSummary.split(/<\/?p[^>]*>/).filter(text => text.trim())
+    const firstParagraph = paragraphs[0] || ''
+    const remainingParagraphs = paragraphs.slice(1).filter(text => text.trim())
+
+    setParsedContent({
+      firstParagraph: firstParagraph ? `<p>${firstParagraph}</p>` : '',
+      remainingParagraphs: remainingParagraphs.map(p => `<p>${p}</p>`)
+    })
 
     // Check if IntersectionObserver is supported
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -86,6 +98,10 @@ const AiSummary = React.memo(({ aiSummary }) => {
       return () => clearTimeout(timer)
     }
   }, [aiSummary])
+
+  const handleToggleExpanded = () => {
+    setIsExpanded(!isExpanded)
+  }
 
   if (!aiSummary) {
     return null
@@ -152,10 +168,66 @@ const AiSummary = React.memo(({ aiSummary }) => {
       >
         {showContent && (
           <ProgressiveReveal delay={200} isInView={isInView}>
-            {parseSafeHtml(aiSummary)}
+            {parseSafeHtml(parsedContent.firstParagraph)}
           </ProgressiveReveal>
         )}
       </div>
+
+      {/* Read More Button */}
+      {parsedContent.remainingParagraphs.length > 0 && showContent && (
+        <div
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            mb: 3,
+            opacity: showContent ? 1 : 0,
+            transform: showContent ? 'translateY(0)' : 'translateY(10px)',
+            transition: 'all 0.8s ease-out 0.8s'
+          }}
+        >
+          <Button
+            variant='readMore'
+            onClick={handleToggleExpanded}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2
+            }}
+          >
+            {isExpanded ? 'Show Less' : 'Read More'}
+            <FontAwesomeIcon
+              icon={isExpanded ? faChevronUp : faChevronDown}
+              sx={{
+                fontSize: 1,
+                transition: 'transform 0.3s ease-in-out',
+                transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'
+              }}
+            />
+          </Button>
+        </div>
+      )}
+
+      {/* Expanded Content */}
+      {isExpanded && parsedContent.remainingParagraphs.length > 0 && (
+        <div
+          sx={{
+            animation: 'slideDown 0.6s ease-out forwards',
+            overflow: 'hidden',
+            '& p': {
+              mb: 2,
+              lineHeight: 1.6,
+              animation: 'fadeInUp 0.5s ease-out forwards',
+              '&:nth-of-type(1)': { animationDelay: '0.1s' },
+              '&:nth-of-type(2)': { animationDelay: '0.2s' },
+              '&:nth-of-type(3)': { animationDelay: '0.3s' },
+              '&:nth-of-type(4)': { animationDelay: '0.4s' },
+              '&:nth-of-type(5)': { animationDelay: '0.5s' }
+            }
+          }}
+        >
+          {parseSafeHtml(parsedContent.remainingParagraphs.join(''))}
+        </div>
+      )}
 
       <Themed.p
         sx={{
