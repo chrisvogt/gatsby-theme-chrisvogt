@@ -15,6 +15,7 @@ const renderStarsForRating = count => {
 }
 
 const BookExplorer = ({ book, onClose }) => {
+  console.log('book explorer', book)
   const { authors, cdnMediaURL, description, infoLink, rating, title } = book
   const location = useLocation()
 

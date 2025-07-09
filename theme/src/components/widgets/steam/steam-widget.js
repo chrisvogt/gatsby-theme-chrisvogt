@@ -14,6 +14,7 @@ import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
 import OwnedGamesTable from './owned-games-table'
+import AiSummary from './ai-summary'
 
 import { SUCCESS, FAILURE, getSteamWidget } from '../../../reducers/widgets'
 import fetchDataSource from '../../../actions/fetchDataSource'
@@ -33,6 +34,7 @@ const SteamWidget = React.memo(() => {
 
   const hasFatalError = useSelector(getHasFatalError)
   const isLoading = useSelector(getIsLoading)
+  const aiSummary = useSelector(state => get(state, 'widgets.steam.data.aiSummary'))
   const metrics = useSelector(state => get(state, 'widgets.steam.data.metrics') ?? EMPTY_ARRAY)
   const profileDisplayName = useSelector(state => get(state, 'widgets.steam.data.profile.displayName'))
   const profileURL = useSelector(state => get(state, 'widgets.steam.data.profile.profileURL'))
@@ -62,7 +64,8 @@ const SteamWidget = React.memo(() => {
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
-      {/* My Games Section */}
+      <AiSummary aiSummary={aiSummary} />
+
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>
           My Games

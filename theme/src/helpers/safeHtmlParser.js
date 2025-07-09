@@ -3,7 +3,6 @@ import parse, { domToReact, Element } from 'html-react-parser'
 
 /**
  * Safely converts HTML entities to React elements
- * Supports: <b>, <i>, <em>, <br />, <a> (with href attribute)
  *
  * @param {string} text - The text containing HTML entities
  * @returns {React.ReactNode} - React elements or the original string
@@ -19,7 +18,7 @@ export const parseSafeHtml = text => {
         const { name, attribs, children } = domNode
 
         // Whitelist of allowed tags
-        const allowedTags = ['b', 'i', 'em', 'br', 'a']
+        const allowedTags = ['b', 'i', 'em', 'br', 'a', 'p', 'strong']
 
         // Check if tag is allowed
         if (!allowedTags.includes(name)) {
@@ -28,7 +27,7 @@ export const parseSafeHtml = text => {
           return false
         }
 
-        // Handle self-closing tags
+        // Handle self-closing tags that don't have Themed equivalents
         if (name === 'br') {
           return <br key={Math.random()} />
         }
@@ -42,25 +41,13 @@ export const parseSafeHtml = text => {
           }
 
           return (
-            <a
-              key={Math.random()}
-              href={href}
-              target='_blank'
-              rel='noopener noreferrer'
-              sx={{
-                color: 'primary',
-                textDecoration: 'none',
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }}
-            >
+            <a key={Math.random()} href={href} target='_blank' rel='noopener noreferrer'>
               {domToReact(children, options)}
             </a>
           )
         }
 
-        // Handle other allowed tags (b, i, em)
+        // Handle other allowed tags (b, i, em, p, strong) using regular HTML elements
         const Element = name
         return <Element key={Math.random()}>{domToReact(children, options)}</Element>
       }

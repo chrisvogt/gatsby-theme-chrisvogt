@@ -25,7 +25,7 @@ const HCard = () => (
       CA
     </abbr>
     <div className='p-country-name'>U.S.A</div>
-    <div class='p-category'>Software Developer</div>
+    <div className='p-category'>Software Developer</div>
   </div>
 )
 

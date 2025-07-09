@@ -40,7 +40,7 @@ module.exports = {
       },
       goodreads: {
         username: 'chrisvogt',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/goodreads?cacheBustVersion=3'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/goodreads?cacheBustVersion=1'
       },
       instagram: {
         username: 'c1v0',
@@ -55,7 +55,7 @@ module.exports = {
       },
       steam: {
         username: 'chrisvogt',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/steam'
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/steam?cacheBustVersion=1'
       }
     }
   },
