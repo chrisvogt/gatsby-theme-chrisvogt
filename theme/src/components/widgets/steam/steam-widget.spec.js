@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
-import SteamWidget, { TimeSpent } from './steam-widget'
+import SteamWidget from './steam-widget'
 
 // Mock child components to isolate the test
 jest.mock('../call-to-action', () => props => <div data-testid='CallToAction'>{props.title}</div>)
@@ -102,13 +102,6 @@ describe('SteamWidget', () => {
       )
       .toJSON()
 
-    expect(tree).toMatchSnapshot()
-  })
-})
-
-describe('TimeSpent', () => {
-  it('renders humanized time correctly', () => {
-    const tree = renderer.create(<TimeSpent timeInMs={5 * 60 * 1000} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

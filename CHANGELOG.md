@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.46.1
+
+- Fixes the recently-played Steam games table so that it reports down to the minute, instead of rounding hours up or down (_e.g._, "0 hours" played).
+
 ## 0.46.0
 
 - Replaces Google Books API book descriptions with Goodreads book descriptions.

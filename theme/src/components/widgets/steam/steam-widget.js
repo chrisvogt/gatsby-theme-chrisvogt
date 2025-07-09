@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { faSteam } from '@fortawesome/free-brands-svg-icons'
-import { Fragment, useEffect } from 'react'
+import { useEffect } from 'react'
 import { get } from 'lodash'
 import { Heading } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
 import { useDispatch, useSelector } from 'react-redux'
-import humanizeDuration from 'humanize-duration'
 import React from 'react'
 
 import CallToAction from '../call-to-action'
@@ -19,11 +18,8 @@ import OwnedGamesTable from './owned-games-table'
 import { SUCCESS, FAILURE, getSteamWidget } from '../../../reducers/widgets'
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
+import getTimeSpent from './get-time-spent'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
-
-export const TimeSpent = ({ timeInMs }) => (
-  <Fragment>{humanizeDuration(timeInMs, { units: ['h', 'm'], round: true })}</Fragment>
-)
 
 const EMPTY_ARRAY = []
 
@@ -96,7 +92,7 @@ const SteamWidget = React.memo(() => {
         {recentlyPlayedGames.map(game => (
           <PostCard
             banner={game.images?.header}
-            date={<TimeSpent timeInMs={game.playTime2Weeks * 60 * 1000} />}
+            date={getTimeSpent(game.playTime2Weeks * 60 * 1000)}
             key={game.id}
             link={`https://store.steampowered.com/app/${game.id}`}
             title={game.displayName}
