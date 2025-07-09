@@ -189,20 +189,7 @@ export default merge(tailwind, {
     aiSummary: {
       ...card,
       ...glassmorhismPanel,
-      borderLeft: theme => `4px solid ${theme.colors.primary}`,
-      background: theme =>
-        `linear-gradient(135deg, ${theme.colors['panel-background']} 0%, rgba(255, 255, 255, 0.1) 100%)`,
-      position: 'relative',
-      overflow: 'hidden',
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: '2px',
-        background: theme => `linear-gradient(90deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`
-      },
+      borderLeft: theme => `2px solid ${theme.colors.primary}`,
       '@keyframes pulse': {
         '0%, 100%': {
           opacity: 1
