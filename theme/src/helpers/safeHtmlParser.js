@@ -1,6 +1,5 @@
 import React from 'react'
 import parse, { domToReact, Element } from 'html-react-parser'
-import { Themed } from '@theme-ui/mdx'
 
 /**
  * Safely converts HTML entities to React elements
@@ -42,34 +41,15 @@ export const parseSafeHtml = text => {
           }
 
           return (
-            <Themed.a
-              key={Math.random()}
-              href={href}
-              target='_blank'
-              rel='noopener noreferrer'
-              sx={{
-                color: 'primary',
-                textDecoration: 'none',
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }}
-            >
+            <a key={Math.random()} href={href} target='_blank' rel='noopener noreferrer'>
               {domToReact(children, options)}
-            </Themed.a>
+            </a>
           )
         }
 
-        // Handle other allowed tags (b, i, em, p, strong)
-        // Check if Themed component exists, otherwise fall back to regular HTML element
-        const ThemedElement = Themed[name]
-        if (ThemedElement) {
-          return <ThemedElement key={Math.random()}>{domToReact(children, options)}</ThemedElement>
-        } else {
-          // Fall back to regular HTML element for tags that don't have Themed equivalents
-          const Element = name
-          return <Element key={Math.random()}>{domToReact(children, options)}</Element>
-        }
+        // Handle other allowed tags (b, i, em, p, strong) using regular HTML elements
+        const Element = name
+        return <Element key={Math.random()}>{domToReact(children, options)}</Element>
       }
     }
   }
