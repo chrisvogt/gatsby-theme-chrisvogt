@@ -33,6 +33,7 @@ const SteamWidget = React.memo(() => {
 
   const hasFatalError = useSelector(getHasFatalError)
   const isLoading = useSelector(getIsLoading)
+  const aiSummary = useSelector(state => get(state, 'widgets.steam.data.aiSummary'))
   const metrics = useSelector(state => get(state, 'widgets.steam.data.metrics') ?? EMPTY_ARRAY)
   const profileDisplayName = useSelector(state => get(state, 'widgets.steam.data.profile.displayName'))
   const profileURL = useSelector(state => get(state, 'widgets.steam.data.profile.profileURL'))
@@ -62,7 +63,18 @@ const SteamWidget = React.memo(() => {
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
-      {/* My Games Section */}
+      {aiSummary ? (
+        <>
+          <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
+            <Heading as='h3' sx={{ fontSize: [3, 4] }}>
+              AI Summary
+            </Heading>
+          </div>
+
+          <Themed.p sx={{ mb: 4 }}>{aiSummary}</Themed.p>
+        </>
+      ) : null}
+
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>
           My Games
