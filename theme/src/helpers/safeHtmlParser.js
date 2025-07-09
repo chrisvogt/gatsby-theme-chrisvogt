@@ -1,9 +1,9 @@
 import React from 'react'
 import parse, { domToReact, Element } from 'html-react-parser'
+import { Themed } from '@theme-ui/mdx'
 
 /**
  * Safely converts HTML entities to React elements
- * Supports: <b>, <i>, <em>, <br />, <a> (with href attribute)
  *
  * @param {string} text - The text containing HTML entities
  * @returns {React.ReactNode} - React elements or the original string
@@ -19,7 +19,7 @@ export const parseSafeHtml = text => {
         const { name, attribs, children } = domNode
 
         // Whitelist of allowed tags
-        const allowedTags = ['b', 'i', 'em', 'br', 'a']
+        const allowedTags = ['b', 'i', 'em', 'br', 'a', 'p', 'strong']
 
         // Check if tag is allowed
         if (!allowedTags.includes(name)) {
@@ -28,7 +28,7 @@ export const parseSafeHtml = text => {
           return false
         }
 
-        // Handle self-closing tags
+        // Handle self-closing tags that don't have Themed equivalents
         if (name === 'br') {
           return <br key={Math.random()} />
         }
@@ -42,7 +42,7 @@ export const parseSafeHtml = text => {
           }
 
           return (
-            <a
+            <Themed.a
               key={Math.random()}
               href={href}
               target='_blank'
@@ -56,13 +56,20 @@ export const parseSafeHtml = text => {
               }}
             >
               {domToReact(children, options)}
-            </a>
+            </Themed.a>
           )
         }
 
-        // Handle other allowed tags (b, i, em)
-        const Element = name
-        return <Element key={Math.random()}>{domToReact(children, options)}</Element>
+        // Handle other allowed tags (b, i, em, p, strong)
+        // Check if Themed component exists, otherwise fall back to regular HTML element
+        const ThemedElement = Themed[name]
+        if (ThemedElement) {
+          return <ThemedElement key={Math.random()}>{domToReact(children, options)}</ThemedElement>
+        } else {
+          // Fall back to regular HTML element for tags that don't have Themed equivalents
+          const Element = name
+          return <Element key={Math.random()}>{domToReact(children, options)}</Element>
+        }
       }
     }
   }
