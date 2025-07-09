@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { ThemeUIProvider } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
-import OwnedGamesTable, { TimeSpent } from './owned-games-table'
+import OwnedGamesTable from './owned-games-table'
 
 const renderWithColorMode = component => {
   return renderer.create(<ThemeUIProvider theme={theme}>{component}</ThemeUIProvider>)
@@ -92,13 +92,6 @@ describe('OwnedGamesTable', () => {
     }))
 
     const tree = renderWithColorMode(<OwnedGamesTable games={twelveGames} />).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-})
-
-describe('TimeSpent', () => {
-  it('renders humanized time correctly', () => {
-    const tree = renderer.create(<TimeSpent timeInMs={5 * 60 * 1000} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -1,14 +1,9 @@
 /** @jsx jsx */
 import { jsx, useColorMode } from 'theme-ui'
-import { Fragment } from 'react'
 import { Themed } from '@theme-ui/mdx'
-import humanizeDuration from 'humanize-duration'
 
+import getTimeSpent from './get-time-spent'
 import ViewExternal from '../view-external'
-
-export const TimeSpent = ({ timeInMs }) => (
-  <Fragment>{humanizeDuration(timeInMs, { units: ['h'], round: true })}</Fragment>
-)
 
 const OwnedGamesTable = ({ games = [] }) => {
   const [colorMode] = useColorMode()
@@ -65,12 +60,10 @@ const OwnedGamesTable = ({ games = [] }) => {
                 </a>
               </div>
             </td>
-            <td>
-              <TimeSpent timeInMs={game.playTimeForever * 60 * 1000} />
-            </td>
+            <td>{getTimeSpent(game.playTimeForever * 60 * 1000)}</td>
             <td>
               {game.playTime2Weeks ? (
-                <TimeSpent timeInMs={game.playTime2Weeks * 60 * 1000} />
+                getTimeSpent(game.playTime2Weeks * 60 * 1000)
               ) : (
                 <span sx={{ color: 'tableText', fontStyle: 'italic' }}>–</span>
               )}
