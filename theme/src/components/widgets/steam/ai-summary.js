@@ -4,17 +4,105 @@ import { faRobot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Heading } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import { parseSafeHtml } from '../../../helpers/safeHtmlParser'
 
+const ProgressiveReveal = ({ children, delay = 0, isInView = false }) => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    if (isInView) {
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+      }, delay)
+
+      return () => clearTimeout(timer)
+    }
+  }, [isInView, delay])
+
+  return (
+    <div
+      sx={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
+        transition: 'all 0.8s ease-out'
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
 const AiSummary = React.memo(({ aiSummary }) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const [showContent, setShowContent] = useState(false)
+  const [isInView, setIsInView] = useState(false)
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    if (!aiSummary) return
+
+    // Check if IntersectionObserver is supported
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      const observer = new window.IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsInView(true)
+            setIsVisible(true)
+
+            // Start content animation after entrance
+            const timer = setTimeout(() => {
+              setShowContent(true)
+            }, 600)
+
+            return () => clearTimeout(timer)
+          }
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '50px'
+        }
+      )
+
+      if (containerRef.current) {
+        observer.observe(containerRef.current)
+      }
+
+      return () => {
+        if (containerRef.current) {
+          observer.unobserve(containerRef.current)
+        }
+      }
+    } else {
+      // Fallback for environments without IntersectionObserver
+      setIsInView(true)
+      setIsVisible(true)
+
+      const timer = setTimeout(() => {
+        setShowContent(true)
+      }, 600)
+
+      return () => clearTimeout(timer)
+    }
+  }, [aiSummary])
+
   if (!aiSummary) {
     return null
   }
 
   return (
-    <div sx={{ variant: 'cards.aiSummary', mb: 4 }}>
+    <div
+      ref={containerRef}
+      sx={{
+        variant: 'cards.aiSummary',
+        mb: 4,
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        animation: isVisible ? 'gentleFloat 8s ease-in-out infinite' : 'none'
+      }}
+    >
       <div sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
         <FontAwesomeIcon
           icon={faRobot}
@@ -22,15 +110,52 @@ const AiSummary = React.memo(({ aiSummary }) => {
             color: 'primary',
             fontSize: [2, 3],
             mr: 2,
-            animation: 'pulse 2s infinite'
+            animation: 'pulse 2s infinite, gentleGlow 4s ease-in-out infinite alternate',
+            filter: 'drop-shadow(0 0 12px rgba(66, 46, 163, 0.4))'
           }}
         />
-        <Heading as='h3' sx={{ fontSize: [3, 4], mb: 0 }}>
-          Summary
+        <Heading
+          as='h3'
+          sx={{
+            fontSize: [3, 4],
+            mb: 0,
+            background: 'linear-gradient(45deg, #422EA3, #711E9B)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            animation: isVisible ? 'slideInFromLeft 0.8s ease-out' : 'none',
+            position: 'relative',
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '0%',
+              height: '2px',
+              background: 'linear-gradient(90deg, #422EA3, #711E9B)',
+              animation: isVisible ? 'expandWidth 1.2s ease-out 0.8s forwards' : 'none'
+            }
+          }}
+        >
+          AI Summary
         </Heading>
       </div>
 
-      <div sx={{ mb: 3 }}>{parseSafeHtml(aiSummary)}</div>
+      <div
+        sx={{
+          mb: 3,
+          '& p': {
+            mb: 2,
+            lineHeight: 1.6
+          }
+        }}
+      >
+        {showContent && (
+          <ProgressiveReveal delay={200} isInView={isInView}>
+            {parseSafeHtml(aiSummary)}
+          </ProgressiveReveal>
+        )}
+      </div>
 
       <Themed.p
         sx={{
@@ -39,7 +164,21 @@ const AiSummary = React.memo(({ aiSummary }) => {
           color: 'textMuted',
           fontStyle: 'italic',
           display: 'flex',
-          alignItems: 'center'
+          alignItems: 'center',
+          opacity: showContent ? 1 : 0,
+          transform: showContent ? 'translateY(0)' : 'translateY(10px)',
+          transition: 'all 0.8s ease-out 0.5s',
+          position: 'relative',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '0%',
+            height: '1px',
+            background: 'linear-gradient(90deg, #422EA3, #711E9B)',
+            animation: showContent ? 'expandWidth 1s ease-out 1.5s forwards' : 'none'
+          }
         }}
       >
         <FontAwesomeIcon
@@ -47,10 +186,11 @@ const AiSummary = React.memo(({ aiSummary }) => {
           sx={{
             fontSize: 1,
             mr: 1,
-            opacity: 0.7
+            opacity: 0.7,
+            animation: 'gentleBounce 3s infinite 2s'
           }}
         />
-        Generated by AI—Gemini 2.5
+        Generated by Gemini (AI)
       </Themed.p>
     </div>
   )

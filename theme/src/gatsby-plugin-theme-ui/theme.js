@@ -197,6 +197,59 @@ export default merge(tailwind, {
         '50%': {
           opacity: 0.7
         }
+      },
+      '@keyframes gentleGlow': {
+        '0%': {
+          filter: 'drop-shadow(0 0 12px rgba(66, 46, 163, 0.4))'
+        },
+        '100%': {
+          filter: 'drop-shadow(0 0 20px rgba(66, 46, 163, 0.7))'
+        }
+      },
+      '@keyframes gentleFloat': {
+        '0%, 100%': {
+          transform: 'translateY(0px)'
+        },
+        '50%': {
+          transform: 'translateY(-4px)'
+        }
+      },
+      '@keyframes slideInFromLeft': {
+        '0%': {
+          opacity: 0,
+          transform: 'translateX(-30px)'
+        },
+        '100%': {
+          opacity: 1,
+          transform: 'translateX(0)'
+        }
+      },
+      '@keyframes expandWidth': {
+        '0%': {
+          width: '0%'
+        },
+        '100%': {
+          width: '100%'
+        }
+      },
+      '@keyframes gentleBounce': {
+        '0%, 20%, 50%, 80%, 100%': {
+          transform: 'translateY(0)'
+        },
+        '40%': {
+          transform: 'translateY(-4px)'
+        },
+        '60%': {
+          transform: 'translateY(-2px)'
+        }
+      },
+      '@keyframes blink': {
+        '0%, 50%': {
+          opacity: 1
+        },
+        '51%, 100%': {
+          opacity: 0
+        }
       }
     }
   },
