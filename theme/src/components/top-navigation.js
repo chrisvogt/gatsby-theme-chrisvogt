@@ -63,7 +63,7 @@ const TopNavigation = () => {
             {title}
           </Link>
 
-          <Themed.div sx={{ display: 'block', position: 'relative', top: '5px' }}>
+          <Themed.div sx={{ display: 'flex', alignItems: 'center' }}>
             <ColorToggle />
           </Themed.div>
         </Themed.div>
