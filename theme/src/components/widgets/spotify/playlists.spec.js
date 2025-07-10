@@ -173,4 +173,47 @@ describe('Playlists Component', () => {
     const { asFragment } = renderWithProvider(<Playlists isLoading={false} playlists={variedPlaylists} />)
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('filters out playlists without thumbnailURL', () => {
+    const playlistsWithMissingThumbnail = [
+      {
+        id: 'valid',
+        external_urls: { spotify: 'https://spotify.com/valid' },
+        cdnImageURL: 'https://cdn.images.com/valid.jpg',
+        name: 'Valid Playlist',
+        tracks: { total: 10 }
+      },
+      {
+        id: 'no-thumbnail',
+        external_urls: { spotify: 'https://spotify.com/no-thumbnail' },
+        cdnImageURL: null,
+        name: 'No Thumbnail Playlist',
+        tracks: { total: 5 }
+      },
+      {
+        id: 'empty-thumbnail',
+        external_urls: { spotify: 'https://spotify.com/empty-thumbnail' },
+        cdnImageURL: '',
+        name: 'Empty Thumbnail Playlist',
+        tracks: { total: 5 }
+      }
+    ]
+
+    renderWithProvider(<Playlists isLoading={false} playlists={playlistsWithMissingThumbnail} />)
+
+    expect(MediaItemGrid).toHaveBeenCalledWith(
+      expect.objectContaining({
+        items: [
+          {
+            id: 'valid',
+            name: 'Valid Playlist',
+            spotifyURL: 'https://spotify.com/valid',
+            thumbnailURL: 'https://cdn.images.com/valid.jpg',
+            details: 'Valid Playlist (10 tracks)'
+          }
+        ]
+      }),
+      {}
+    )
+  })
 })

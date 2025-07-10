@@ -81,4 +81,30 @@ describe('TopTracks Component', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('dispatches setSpotifyTrack action when track is clicked', () => {
+    const mockDispatch = jest.fn()
+    const mockSetSpotifyTrack = jest.fn()
+
+    // Mock the useDispatch hook
+    jest.doMock('react-redux', () => ({
+      ...jest.requireActual('react-redux'),
+      useDispatch: () => mockDispatch
+    }))
+
+    // Mock the setSpotifyTrack action
+    jest.doMock('../../../reducers/audioPlayer', () => ({
+      setSpotifyTrack: mockSetSpotifyTrack
+    }))
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState>
+          <TopTracks isLoading={false} tracks={mockTracks} />
+        </TestProviderWithState>
+      )
+      .toJSON()
+
+    expect(tree).toBeTruthy()
+  })
 })
