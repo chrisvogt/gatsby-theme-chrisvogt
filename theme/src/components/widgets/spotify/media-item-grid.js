@@ -24,8 +24,16 @@ const placeholders = Array(12)
     </div>
   ))
 
-const MediaItemGrid = ({ isLoading, items = [] }) => {
+const MediaItemGrid = ({ isLoading, items = [], onTrackClick }) => {
   const [currentMediaId, setCurrentMediaId] = useState(false)
+
+  const handleClick = (e, spotifyURL) => {
+    e.preventDefault()
+    if (onTrackClick) {
+      onTrackClick(spotifyURL)
+    }
+  }
+
   return (
     <div
       className={`media-item_grid ${currentMediaId ? 'media-item_grid--interacting' : null}`}
@@ -42,6 +50,7 @@ const MediaItemGrid = ({ isLoading, items = [] }) => {
               className={`media-item_media${currentMediaId === id ? ' media-item--focused' : ''}`}
               href={spotifyURL}
               key={id}
+              onClick={e => handleClick(e, spotifyURL)}
               onMouseEnter={() => setCurrentMediaId(id)}
               onMouseLeave={() => setCurrentMediaId(false)}
               title={details}

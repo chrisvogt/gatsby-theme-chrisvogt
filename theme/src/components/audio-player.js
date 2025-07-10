@@ -5,8 +5,9 @@ import { createPortal } from 'react-dom'
 import { useDispatch } from 'react-redux'
 import { hidePlayer } from '../reducers/audioPlayer'
 import SoundCloud from '../shortcodes/soundcloud'
+import Spotify from '../shortcodes/spotify'
 
-const AudioPlayer = ({ soundcloudId, isVisible }) => {
+const AudioPlayer = ({ soundcloudId, spotifyURL, isVisible, provider }) => {
   const containerRef = useRef(null)
   const widgetRef = useRef(null)
   const dispatch = useDispatch()
@@ -34,7 +35,17 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
     }
   }, [soundcloudId])
 
-  if (!isVisible || !soundcloudId || !containerRef.current) return null
+  const renderEmbed = () => {
+    if (provider === 'soundcloud' && soundcloudId) {
+      return <SoundCloud soundcloudId={soundcloudId} />
+    }
+    if (provider === 'spotify' && spotifyURL) {
+      return <Spotify spotifyURL={spotifyURL} />
+    }
+    return null
+  }
+
+  if (!isVisible || !provider || !containerRef.current) return null
 
   return createPortal(
     <div
@@ -113,7 +124,7 @@ const AudioPlayer = ({ soundcloudId, isVisible }) => {
             }
           }}
         >
-          <SoundCloud soundcloudId={soundcloudId} />
+          {renderEmbed()}
         </div>
       </div>
     </div>,

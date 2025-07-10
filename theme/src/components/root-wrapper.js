@@ -6,12 +6,12 @@ import React from 'react'
 import AudioPlayer from './audio-player'
 
 const RootWrapper = ({ children }) => {
-  const { soundcloudId, isVisible } = useSelector(state => state.audioPlayer)
+  const { soundcloudId, spotifyURL, isVisible, provider } = useSelector(state => state.audioPlayer)
 
   return (
     <>
       {children}
-      <AudioPlayer soundcloudId={soundcloudId} isVisible={isVisible} />
+      <AudioPlayer soundcloudId={soundcloudId} spotifyURL={spotifyURL} isVisible={isVisible} provider={provider} />
     </>
   )
 }
