@@ -5,6 +5,10 @@ import Playlists from './playlists'
 import MediaItemGrid from './media-item-grid'
 import spotifyResponseFixture from '../../../../__mocks__/spotify.mock.json'
 import { TestProviderWithState } from '../../../testUtils'
+import { setSpotifyTrack } from '../../../reducers/audioPlayer'
+import { Provider as ReduxProvider } from 'react-redux'
+import { ThemeUIProvider } from 'theme-ui'
+import theme from '../../../gatsby-plugin-theme-ui/theme'
 
 jest.mock('./media-item-grid', () => jest.fn(() => <div data-testid='media-item-grid' />))
 
@@ -215,5 +219,44 @@ describe('Playlists Component', () => {
       }),
       {}
     )
+  })
+
+  it('dispatches setSpotifyTrack action when playlist is clicked', () => {
+    const mockDispatch = jest.fn()
+    const mockStore = {
+      getState: () => ({}),
+      subscribe: jest.fn(),
+      dispatch: mockDispatch
+    }
+
+    // Mock the store in TestProviderWithState
+    const TestProviderWithMockStore = ({ children }) => (
+      <ReduxProvider store={mockStore}>
+        <ThemeUIProvider theme={theme}>{children}</ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    const validPlaylist = {
+      id: 'test-playlist',
+      external_urls: { spotify: 'https://open.spotify.com/playlist/test' },
+      cdnImageURL: 'https://cdn.images.com/test.jpg',
+      name: 'Test Playlist',
+      tracks: { total: 5 }
+    }
+
+    render(
+      <TestProviderWithMockStore>
+        <Playlists isLoading={false} playlists={[validPlaylist]} />
+      </TestProviderWithMockStore>
+    )
+
+    // Get the onTrackClick function that was passed to MediaItemGrid
+    const onTrackClick = MediaItemGrid.mock.calls[0][0].onTrackClick
+
+    // Call the click handler with a Spotify URL
+    onTrackClick('https://open.spotify.com/playlist/test')
+
+    // Verify that dispatch was called with the correct action
+    expect(mockDispatch).toHaveBeenCalledWith(setSpotifyTrack('https://open.spotify.com/playlist/test'))
   })
 })

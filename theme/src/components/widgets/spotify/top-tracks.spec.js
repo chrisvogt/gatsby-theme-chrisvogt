@@ -3,6 +3,13 @@ import renderer from 'react-test-renderer'
 import { jsx } from 'theme-ui'
 import TopTracks from './top-tracks'
 import { TestProviderWithState } from '../../../testUtils'
+import { setSpotifyTrack } from '../../../reducers/audioPlayer'
+import { Provider as ReduxProvider } from 'react-redux'
+import { ThemeUIProvider } from 'theme-ui'
+import theme from '../../../gatsby-plugin-theme-ui/theme'
+
+jest.mock('./media-item-grid', () => jest.fn(() => <div data-testid='media-item-grid' />))
+import MediaItemGrid from './media-item-grid'
 
 describe('TopTracks Component', () => {
   const mockTracks = [
@@ -84,27 +91,32 @@ describe('TopTracks Component', () => {
 
   it('dispatches setSpotifyTrack action when track is clicked', () => {
     const mockDispatch = jest.fn()
-    const mockSetSpotifyTrack = jest.fn()
+    const mockStore = {
+      getState: () => ({}),
+      subscribe: jest.fn(),
+      dispatch: mockDispatch
+    }
 
-    // Mock the useDispatch hook
-    jest.doMock('react-redux', () => ({
-      ...jest.requireActual('react-redux'),
-      useDispatch: () => mockDispatch
-    }))
+    const TestProviderWithMockStore = ({ children }) => (
+      <ReduxProvider store={mockStore}>
+        <ThemeUIProvider theme={theme}>{children}</ThemeUIProvider>
+      </ReduxProvider>
+    )
 
-    // Mock the setSpotifyTrack action
-    jest.doMock('../../../reducers/audioPlayer', () => ({
-      setSpotifyTrack: mockSetSpotifyTrack
-    }))
+    // Render the component
+    renderer.create(
+      <TestProviderWithMockStore>
+        <TopTracks isLoading={false} tracks={mockTracks} />
+      </TestProviderWithMockStore>
+    )
 
-    const tree = renderer
-      .create(
-        <TestProviderWithState>
-          <TopTracks isLoading={false} tracks={mockTracks} />
-        </TestProviderWithState>
-      )
-      .toJSON()
+    // Get the onTrackClick function that was passed to MediaItemGrid
+    const onTrackClick = MediaItemGrid.mock.calls[0][0].onTrackClick
 
-    expect(tree).toBeTruthy()
+    // Call the click handler with a Spotify URL
+    onTrackClick('http://spotify.com/track1')
+
+    // Verify that dispatch was called with the correct action
+    expect(mockDispatch).toHaveBeenCalledWith(setSpotifyTrack('http://spotify.com/track1'))
   })
 })
