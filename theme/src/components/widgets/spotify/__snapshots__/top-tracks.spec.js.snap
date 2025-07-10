@@ -1,29 +1,30 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`TopTracks Component handles tracks without a 300px image gracefully 1`] = `
 <div
-  className="css-16ilj6a"
+  className="css-sak8bt"
 >
   <div
     className="css-ccroti"
   >
     <h3
-      className="css-1pgqsji"
+      className="css-9nh3l5"
     >
       Top Tracks
     </h3>
   </div>
   <p
-    className="css-1avyp1d"
+    className="css-1qwovgy"
   >
     My 12 most-played tracks over the last 4 weeks.
   </p>
   <div
-    className="media-item_grid null css-4004kc"
+    className="media-item_grid null css-5stlgz"
   >
     <a
-      className="media-item_media css-1bdhn1b"
+      className="media-item_media css-13fusor"
       href="http://spotify.com/track3"
+      onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Three – Artist Four"
@@ -32,7 +33,7 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
         className="css-x4b07x"
       >
         <div
-          className="media-item_caption css-764hy0"
+          className="media-item_caption css-e7oldi"
         >
           <span>
             Song Three
@@ -52,30 +53,30 @@ exports[`TopTracks Component handles tracks without a 300px image gracefully 1`]
 
 exports[`TopTracks Component renders correctly when loading 1`] = `
 <div
-  className="css-16ilj6a"
+  className="css-sak8bt"
 >
   <div
     className="css-ccroti"
   >
     <h3
-      className="css-1pgqsji"
+      className="css-9nh3l5"
     >
       Top Tracks
     </h3>
   </div>
   <p
-    className="css-1avyp1d"
+    className="css-1qwovgy"
   >
     My 12 most-played tracks over the last 4 weeks.
   </p>
   <div
-    className="media-item_grid null css-4004kc"
+    className="media-item_grid null css-5stlgz"
   >
     <div
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -90,7 +91,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -105,7 +106,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -120,7 +121,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -135,7 +136,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -150,7 +151,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -165,7 +166,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -180,7 +181,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -195,7 +196,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -210,7 +211,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -225,7 +226,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -240,7 +241,7 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
       className="show-loading-animation"
     >
       <div
-        className="rect-shape css-n8oxh0"
+        className="rect-shape css-2us3i8"
         style={
           {
             "backgroundColor": "#efefef",
@@ -257,52 +258,53 @@ exports[`TopTracks Component renders correctly when loading 1`] = `
 
 exports[`TopTracks Component renders correctly with no tracks 1`] = `
 <div
-  className="css-16ilj6a"
+  className="css-sak8bt"
 >
   <div
     className="css-ccroti"
   >
     <h3
-      className="css-1pgqsji"
+      className="css-9nh3l5"
     >
       Top Tracks
     </h3>
   </div>
   <p
-    className="css-1avyp1d"
+    className="css-1qwovgy"
   >
     My 12 most-played tracks over the last 4 weeks.
   </p>
   <div
-    className="media-item_grid null css-4004kc"
+    className="media-item_grid null css-5stlgz"
   />
 </div>
 `;
 
 exports[`TopTracks Component renders correctly with tracks 1`] = `
 <div
-  className="css-16ilj6a"
+  className="css-sak8bt"
 >
   <div
     className="css-ccroti"
   >
     <h3
-      className="css-1pgqsji"
+      className="css-9nh3l5"
     >
       Top Tracks
     </h3>
   </div>
   <p
-    className="css-1avyp1d"
+    className="css-1qwovgy"
   >
     My 12 most-played tracks over the last 4 weeks.
   </p>
   <div
-    className="media-item_grid null css-4004kc"
+    className="media-item_grid null css-5stlgz"
   >
     <a
-      className="media-item_media css-1bdhn1b"
+      className="media-item_media css-13fusor"
       href="http://spotify.com/track1"
+      onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song One – Artist One, Artist Two"
@@ -311,7 +313,7 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
         className="css-x4b07x"
       >
         <div
-          className="media-item_caption css-764hy0"
+          className="media-item_caption css-e7oldi"
         >
           <span>
             Song One
@@ -327,8 +329,9 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
       </div>
     </a>
     <a
-      className="media-item_media css-1bdhn1b"
+      className="media-item_media css-13fusor"
       href="http://spotify.com/track2"
+      onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       title="Song Two – Artist Three"
@@ -337,7 +340,7 @@ exports[`TopTracks Component renders correctly with tracks 1`] = `
         className="css-x4b07x"
       >
         <div
-          className="media-item_caption css-764hy0"
+          className="media-item_caption css-e7oldi"
         >
           <span>
             Song Two

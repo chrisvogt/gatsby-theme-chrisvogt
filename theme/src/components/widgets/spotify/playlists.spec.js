@@ -4,10 +4,15 @@ import '@testing-library/jest-dom'
 import Playlists from './playlists'
 import MediaItemGrid from './media-item-grid'
 import spotifyResponseFixture from '../../../../__mocks__/spotify.mock.json'
+import { TestProviderWithState } from '../../../testUtils'
 
 jest.mock('./media-item-grid', () => jest.fn(() => <div data-testid='media-item-grid' />))
 
 const playlists = spotifyResponseFixture.payload.collections.playlists
+
+const renderWithProvider = component => {
+  return render(<TestProviderWithState>{component}</TestProviderWithState>)
+}
 
 describe('Playlists Component', () => {
   it('renders playlists correctly when not loading', () => {
@@ -36,7 +41,7 @@ describe('Playlists Component', () => {
       .filter(Boolean)
       .slice(0, 12)
 
-    const { getByTestId } = render(<Playlists isLoading={false} playlists={playlists} />)
+    const { getByTestId } = renderWithProvider(<Playlists isLoading={false} playlists={playlists} />)
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -60,7 +65,7 @@ describe('Playlists Component', () => {
         tracks: { total: 10 }
       }))
 
-    render(<Playlists isLoading={false} playlists={playlistsWithMoreThan12Items} />)
+    renderWithProvider(<Playlists isLoading={false} playlists={playlistsWithMoreThan12Items} />)
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -87,7 +92,7 @@ describe('Playlists Component', () => {
       }
     ]
 
-    render(<Playlists isLoading={false} playlists={invalidPlaylists} />)
+    renderWithProvider(<Playlists isLoading={false} playlists={invalidPlaylists} />)
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -98,7 +103,7 @@ describe('Playlists Component', () => {
   })
 
   it('passes isLoading prop to MediaItemGrid', () => {
-    render(<Playlists isLoading={true} playlists={[]} />)
+    renderWithProvider(<Playlists isLoading={true} playlists={[]} />)
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -110,7 +115,7 @@ describe('Playlists Component', () => {
   })
 
   it('handles an empty playlists array', () => {
-    render(<Playlists isLoading={false} playlists={[]} />)
+    renderWithProvider(<Playlists isLoading={false} playlists={[]} />)
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -138,7 +143,7 @@ describe('Playlists Component', () => {
       }
     ]
 
-    render(<Playlists isLoading={false} playlists={playlistsWithMissingData} />)
+    renderWithProvider(<Playlists isLoading={false} playlists={playlistsWithMissingData} />)
 
     expect(MediaItemGrid).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -165,7 +170,7 @@ describe('Playlists Component', () => {
       }
     ]
 
-    const { asFragment } = render(<Playlists isLoading={false} playlists={variedPlaylists} />)
+    const { asFragment } = renderWithProvider(<Playlists isLoading={false} playlists={variedPlaylists} />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

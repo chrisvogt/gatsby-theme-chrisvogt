@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MediaItemGrid matches loading state snapshot 1`] = `
 <div
@@ -7,6 +7,7 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
   <a
     className="media-item_media css-1bdhn1b"
     href="https://www.google.com/"
+    onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     title="Item #1"
