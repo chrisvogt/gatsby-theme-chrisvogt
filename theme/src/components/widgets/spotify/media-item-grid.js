@@ -28,10 +28,11 @@ const MediaItemGrid = ({ isLoading, items = [], onTrackClick }) => {
   const [currentMediaId, setCurrentMediaId] = useState(false)
 
   const handleClick = (e, spotifyURL) => {
-    e.preventDefault()
-    if (onTrackClick) {
-      onTrackClick(spotifyURL)
+    if (!onTrackClick) {
+      return
     }
+    e.preventDefault()
+    onTrackClick(spotifyURL)
   }
 
   return (

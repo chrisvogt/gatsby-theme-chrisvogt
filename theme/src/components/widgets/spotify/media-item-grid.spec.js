@@ -65,6 +65,19 @@ describe('MediaItemGrid', () => {
     expect(firstItem).toBeInTheDocument()
   })
 
+  it('exits early and does not prevent default when onTrackClick is not provided', () => {
+    const { getByTitle } = render(<MediaItemGrid isLoading={false} items={mockItems} />)
+
+    const firstItem = getByTitle('Item #1')
+    const mockEvent = { preventDefault: jest.fn() }
+
+    // Simulate the click event
+    fireEvent.click(firstItem, mockEvent)
+
+    // Should not call preventDefault when onTrackClick is not provided
+    expect(mockEvent.preventDefault).not.toHaveBeenCalled()
+  })
+
   it('handles mouse enter and leave events', () => {
     const { getByTitle } = render(<MediaItemGrid isLoading={false} items={mockItems} />)
 
