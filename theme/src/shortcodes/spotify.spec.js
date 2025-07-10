@@ -29,6 +29,23 @@ describe('Spotify', () => {
     expect(component.toJSON()).toMatchSnapshot()
   })
 
+  it('renders error state when HTTP response is not ok', async () => {
+    fetch.mockResolvedValueOnce({
+      ok: false,
+      status: 404
+    })
+
+    let component
+    await renderer.act(async () => {
+      component = renderer.create(<Spotify spotifyURL='https://open.spotify.com/track/123' />)
+    })
+
+    // Wait for the async operation to complete
+    await new Promise(resolve => setTimeout(resolve, 0))
+
+    expect(component.toJSON()).toMatchSnapshot()
+  })
+
   it('renders embed when fetch succeeds', async () => {
     const mockResponse = {
       html: '<iframe src="https://open.spotify.com/embed/track/123"></iframe>'

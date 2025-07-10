@@ -11,6 +11,14 @@ exports[`Spotify renders embed when fetch succeeds 1`] = `
 />
 `;
 
+exports[`Spotify renders error state when HTTP response is not ok 1`] = `
+<div
+  className="css-12dtzxe"
+>
+  Failed to load Spotify embed
+</div>
+`;
+
 exports[`Spotify renders error state when fetch fails 1`] = `
 <div
   className="css-12dtzxe"

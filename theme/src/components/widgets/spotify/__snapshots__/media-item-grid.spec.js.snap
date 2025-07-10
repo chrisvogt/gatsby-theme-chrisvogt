@@ -15,12 +15,46 @@ exports[`MediaItemGrid matches loading state snapshot 1`] = `
     <div
       className="css-x4b07x"
     >
+      <div
+        className="media-item_caption css-764hy0"
+      >
+        <span>
+          Test Item 1
+        </span>
+      </div>
       <img
         alt="cover artwork"
         className="css-karewm"
         crossOrigin="anonymous"
         loading="lazy"
         src="http://placekitten.com/200/200"
+      />
+    </div>
+  </a>
+  <a
+    className="media-item_media css-1bdhn1b"
+    href="https://www.example.com/"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    title="Item #2"
+  >
+    <div
+      className="css-x4b07x"
+    >
+      <div
+        className="media-item_caption css-764hy0"
+      >
+        <span>
+          Test Item 2
+        </span>
+      </div>
+      <img
+        alt="cover artwork"
+        className="css-karewm"
+        crossOrigin="anonymous"
+        loading="lazy"
+        src="http://placekitten.com/300/300"
       />
     </div>
   </a>
