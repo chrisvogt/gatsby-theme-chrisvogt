@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.47.0
+
+- Adds support for Spotify to the audio player component that renders at the bottom of the page.
+
 ## 0.46.1
 
 - Fixes the recently-played Steam games table so that it reports down to the minute, instead of rounding hours up or down (_e.g._, "0 hours" played).
