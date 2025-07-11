@@ -10,13 +10,34 @@ This is a Gatsby theme monorepo that powers www.chrisvogt.me - a personal websit
 - **`theme/`**: The Gatsby theme package (`gatsby-theme-chrisvogt`)
 - **`www.chrisvogt.me/`**: The actual website content and configuration
 
+## Back-end API
+
+- **`metrics.chrisvogt.me/`**: Backend API for widgets, uses Firebase, Firestore and scheduled Firebase Functions to sync and cache third-party data
+- Code is at https://github.com/chrisvogt/metrics
+
 ## Key Technologies
 - **Gatsby 5.x**: Static site generator
 - **React 18.x**: UI framework
-- **Theme UI**: Design system and styling
+- **Theme UI**: Design system and styling (CSS-in-JS)
 - **Redux Toolkit**: State management
 - **Jest**: Testing framework with comprehensive setup
 - **Yarn v4 Workspaces**: Monorepo management
+- **MDX**: Content authoring with React components
+- **FontAwesome**: Icon library
+
+## Development Setup
+- **Node.js**: >=20 (see `.node_version` and `.nvmrc`)
+- **Yarn**: >=4.0.0 (see `packageManager` in package.json)
+- **HTTPS**: Local development requires HTTPS (see `develop:https` script)
+- **Workspace Commands**: Use `yarn workspace [package] [command]` for package-specific operations
+
+## Available Scripts
+- `yarn develop` - Start development server with HTTPS
+- `yarn test` - Run all tests
+- `yarn test:watch` - Run tests in watch mode
+- `yarn test:coverage` - Run tests with coverage report
+- `yarn format` - Format code with Prettier
+- `yarn lint` - Lint code with ESLint
 
 ## Widget System
 The theme includes a sophisticated widget system for the home page dashboard:
@@ -35,6 +56,15 @@ The theme includes a sophisticated widget system for the home page dashboard:
 4. **Selectors**: Transform data for components
 5. **Components**: Display data with loading states and error handling
 
+## Environment Variables
+The following environment variables may be required for full functionality:
+- `GATSBY_METRICS_API_URL` - Metrics API endpoint (defaults to metrics.chrisvogt.me)
+- `GATSBY_GITHUB_TOKEN` - GitHub API token for enhanced rate limits
+- `GATSBY_SPOTIFY_CLIENT_ID` - Spotify API client ID
+- `GATSBY_INSTAGRAM_ACCESS_TOKEN` - Instagram API access token
+- `GATSBY_GOODREADS_API_KEY` - Goodreads API key
+- `GATSBY_STEAM_API_KEY` - Steam API key
+
 ## Personal Information to Decouple
 The following files contain hardcoded personal information that needs to be made configurable:
 
@@ -47,8 +77,8 @@ The following files contain hardcoded personal information that needs to be made
 ### Medium Priority (Configuration)
 - `theme/src/templates/home.js` - SEO metadata with personal details
 - `theme/src/components/footer/footer.js` - GitHub source link
-- `scripts/postinstall-banner.js` - Personal branding
-- `index.js` - Personal branding
+- `scripts/postinstall-banner.js` - Personal branding (root level)
+- `index.js` - Personal branding (root level)
 
 ### Low Priority (Content)
 - `www.chrisvogt.me/` directory - All content should remain as-is
@@ -72,17 +102,22 @@ The following files contain hardcoded personal information that needs to be made
 - Redux actions for API calls
 - Error handling and retry logic
 - Theme UI components with dark/light mode support
+- MDX for content with React component integration
+- Lazy loading for performance optimization
 
 ## External Dependencies
 - **Backing Service**: Metrics API at metrics.chrisvogt.me
 - **Image Hosting**: Cloudinary and Imagix for external CDNs
 - **Static Assets**: Local images in `static/` directory
+- **Font Loading**: Google Fonts and FontAwesome
+- **Analytics**: (Configured in site-specific gatsby-config.js)
 
 ## Code Quality
-- **ESLint**: Code linting
-- **Prettier**: Code formatting
-- **Husky**: Git hooks
+- **ESLint**: Code linting with React and accessibility rules
+- **Prettier**: Code formatting with consistent configuration
+- **Husky**: Git hooks for pre-commit linting and formatting
 - **TypeScript-like**: JSDoc comments for type safety
+- **EditorConfig**: Consistent editor settings
 
 ## Recent Development Priorities (Based on Git History)
 - **Performance**: Lazy loading, font optimization, bundle size reduction
@@ -115,6 +150,14 @@ The theme should support configuration through:
 - **Social Profiles**: Configurable social media links
 - **Personal Information**: Name, location, bio, etc.
 - **Theme Options**: Customizable styling and behavior
+- **Gatsby Plugins**: Configurable plugin options for content sources
+
+## Build and Deployment
+- **Static Generation**: Gatsby builds static files for deployment
+- **Image Optimization**: Sharp plugin for responsive images
+- **SEO**: Structured data and meta tags
+- **Performance**: Code splitting and lazy loading
+- **CDN Ready**: Optimized for CDN deployment
 
 ## Important Notes
 - Follow existing patterns and maintain backward compatibility
@@ -126,4 +169,6 @@ The theme should support configuration through:
 - Prioritize accessibility in all new features
 - Maintain comprehensive test coverage
 - Use semantic HTML and ARIA attributes
-- Follow responsive design principles 
+- Follow responsive design principles
+- Test with multiple browsers and devices
+- Consider bundle size impact when adding dependencies 
