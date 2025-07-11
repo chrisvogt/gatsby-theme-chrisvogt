@@ -1,10 +1,9 @@
-# chrisvogt.me – a GatsbyJS theme
+# Gatsby Theme Chronogrove
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/29f330b8-22bf-4f7f-a0f0-240476512db0/deploy-status)](https://app.netlify.com/sites/chrisvogt/deploys)
-[![CI](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml)
-[![Code Coverage](https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/main/graph/badge.svg?token=YUksu2c99s)](https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chrisvogt/gatsby-theme-chrisvogt/blob/main/LICENSE)
+[![CI](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/codeql-analysis.yml)
+[![Code Coverage](https://codecov.io/gh/chrisvogt/gatsby-theme-chronogrove/branch/main/graph/badge.svg?token=YUksu2c99s)](https://codecov.io/gh/chrisvogt/gatsby-theme-chronogrove)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chrisvogt/gatsby-theme-chronogrove/blob/main/LICENSE)
 
 This directory contains a custom [GatsbyJS](https://www.gatsbyjs.com/) theme used to build my personal website and blog, [www.chrisvogt.me](https://www.chrisvogt.me). The home page of my blog is a social dashboard that showcases recent activity from my accounts. My site content lives in the [../www.chrisvogt.me](../www.chrisvogt.me) workspace.
 
@@ -26,7 +25,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-theme-chrisvogt',
+      resolve: 'gatsby-theme-chronogrove',
       options: {
         /* custom theme options – see /www.chrisvogt.me */
       }
@@ -35,7 +34,7 @@ module.exports = {
 }
 ```
 
-Review the [website site configuration](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/www.chrisvogt.me/gatsby-config.js) for an example of available site metadata fields.
+Review the [website site configuration](https://github.com/chrisvogt/gatsby-theme-chronogrove/tree/master/www.chrisvogt.me/gatsby-config.js) for an example of available site metadata fields.
 
 ## Widgets
 
@@ -129,4 +128,4 @@ The theme includes comprehensive testing:
 
 ## Copyright & License
 
-Copyright © 2019-2025 [Chris Vogt](https://www.chrisvogt.me). Released under the [MIT license](https://github.com/chrisvogt/gatsby-theme-chrisvogt/tree/master/LICENSE).
+Copyright © 2019-2025 [Chris Vogt](https://www.chrisvogt.me). Released under the [MIT license](https://github.com/chrisvogt/gatsby-theme-chronogrove/tree/master/LICENSE).

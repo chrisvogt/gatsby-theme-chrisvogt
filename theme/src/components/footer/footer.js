@@ -31,7 +31,7 @@ export default () => {
             </span>
             {' | '}
             <span>
-              <Link to='https://github.com/chrisvogt/gatsby-theme-chrisvogt'>View Source</Link>
+              <Link to='https://github.com/chrisvogt/gatsby-theme-chronogrove'>View Source</Link>
             </span>
           </div>
         </div>

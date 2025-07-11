@@ -11,9 +11,9 @@
     "postinstall": "node ./scripts/postinstall-banner.js",
     "prepare": "husky",
     "prettier": "prettier",
-    "test:coverage": "yarn workspace gatsby-theme-chrisvogt test --coverage",
-    "test:watch": "yarn workspace gatsby-theme-chrisvogt test:watch",
-    "test": "yarn workspace gatsby-theme-chrisvogt test"
+    "test:coverage": "yarn workspace gatsby-theme-chronogrove test --coverage",
+    "test:watch": "yarn workspace gatsby-theme-chronogrove test:watch",
+    "test": "yarn workspace gatsby-theme-chronogrove test"
   },
   "devDependencies": {
     "@eslint/compat": "^1.3.1",

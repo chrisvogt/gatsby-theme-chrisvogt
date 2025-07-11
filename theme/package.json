@@ -1,12 +1,11 @@
 {
-  "name": "gatsby-theme-chrisvogt",
+  "name": "gatsby-theme-chronogrove",
   "description": "My personal blog and website.",
-  "version": "0.47.0",
+  "version": "0.50.0",
   "author": "Chris Vogt <mail@chrisvogt.me> (https://www.chrisvogt.me)",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
-  "bugs": "https://github.com/chrisvogt/gatsby-theme-chrisvogt/issues",
+  "bugs": "https://github.com/chrisvogt/gatsby-theme-chronogrove/issues",
   "keywords": [
     "personal-website",
     "gatsby-website",

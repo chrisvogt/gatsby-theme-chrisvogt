@@ -1,10 +1,10 @@
-# Gatsby Theme Chrisvogt
+# Gatsby Theme Chronogrove
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/29f330b8-22bf-4f7f-a0f0-240476512db0/deploy-status)](https://app.netlify.com/sites/chrisvogt/deploys)
-[![CI](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chrisvogt/actions/workflows/codeql-analysis.yml)
-[![Code Coverage](https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt/branch/main/graph/badge.svg?token=YUksu2c99s)](https://codecov.io/gh/chrisvogt/gatsby-theme-chrisvogt)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chrisvogt/gatsby-theme-chrisvogt/blob/main/LICENSE)
+[![CI](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/codeql-analysis.yml)
+[![Code Coverage](https://codecov.io/gh/chrisvogt/gatsby-theme-chronogrove/branch/main/graph/badge.svg?token=YUksu2c99s)](https://codecov.io/gh/chrisvogt/gatsby-theme-chronogrove)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chrisvogt/gatsby-theme-chronogrove/blob/main/LICENSE)
 [![BlueSky](https://img.shields.io/badge/BlueSky-@chrisvogt.me-blue?logo=bluesky&logoColor=white)](https://bsky.app/profile/chrisvogt.me)
 
 A modern, feature-rich Gatsby theme for personal websites and blogs with social media integration. This theme powers [www.chrisvogt.me](https://www.chrisvogt.me) and provides a comprehensive solution for developers looking to build their own personal website.
@@ -30,7 +30,7 @@ A modern, feature-rich Gatsby theme for personal websites and blogs with social 
 This is a monorepo using Yarn workspaces:
 
 ```
-gatsby-theme-chrisvogt/
+gatsby-theme-chronogrove/
 ├── theme/                    # Gatsby theme package
 │   ├── src/
 │   │   ├── components/       # React components
@@ -50,8 +50,8 @@ gatsby-theme-chrisvogt/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/chrisvogt/gatsby-theme-chrisvogt.git
-   cd gatsby-theme-chrisvogt
+   git clone https://github.com/chrisvogt/gatsby-theme-chronogrove.git
+   cd gatsby-theme-chronogrove
    ```
 
 2. **Install dependencies**
@@ -155,7 +155,7 @@ Widgets require data sources. Configure them in your `gatsby-config.js`:
 module.exports = {
   plugins: [
     {
-      resolve: 'gatsby-theme-chrisvogt',
+      resolve: 'gatsby-theme-chronogrove',
       options: {
         widgets: {
           github: {
@@ -273,4 +273,4 @@ Copyright © 2019-2025 [Chris Vogt](https://www.chrisvogt.me). Released under th
 
 ---
 
-**Questions?** Open an [issue](https://github.com/chrisvogt/gatsby-theme-chrisvogt/issues) or reach out on [Bluesky](https://bsky.app/profile/chrisvogt.me).
+**Questions?** Open an [issue](https://github.com/chrisvogt/gatsby-theme-chronogrove/issues) or reach out on [Bluesky](https://bsky.app/profile/chrisvogt.me).

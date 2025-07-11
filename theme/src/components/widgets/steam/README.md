@@ -94,7 +94,7 @@ To configure the Steam widget, add the following to your `gatsby-config.js`:
 module.exports = {
   plugins: [
     {
-      resolve: 'gatsby-theme-chrisvogt',
+      resolve: 'gatsby-theme-chronogrove',
       options: {
         widgets: {
           steam: {
