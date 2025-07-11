@@ -35,6 +35,24 @@ The theme includes a sophisticated widget system for the home page dashboard:
 4. **Selectors**: Transform data for components
 5. **Components**: Display data with loading states and error handling
 
+## Personal Information to Decouple
+The following files contain hardcoded personal information that needs to be made configurable:
+
+### High Priority (Core Theme Files)
+- `theme/src/components/h-card.js` - Personal details, email, location
+- `theme/src/components/home-header-content.js` - Name, personal description
+- `theme/src/data/social-profiles.json` - Social media links and usernames
+- `theme/gatsby-config.js` - Default site metadata with personal info
+
+### Medium Priority (Configuration)
+- `theme/src/templates/home.js` - SEO metadata with personal details
+- `theme/src/components/footer/footer.js` - GitHub source link
+- `scripts/postinstall-banner.js` - Personal branding
+- `index.js` - Personal branding
+
+### Low Priority (Content)
+- `www.chrisvogt.me/` directory - All content should remain as-is
+
 ## Testing Strategy
 - **Jest**: Unit testing framework with comprehensive configuration
 - **React Testing Library**: Component testing with DOM queries and user interactions
@@ -66,6 +84,13 @@ The theme includes a sophisticated widget system for the home page dashboard:
 - **Husky**: Git hooks
 - **TypeScript-like**: JSDoc comments for type safety
 
+## Recent Development Priorities (Based on Git History)
+- **Performance**: Lazy loading, font optimization, bundle size reduction
+- **Accessibility**: Skip links, contrast improvements, keyboard navigation
+- **Widget Features**: New Steam AI summary, Spotify iframe support
+- **Testing**: Jest upgrades, improved test coverage, warning resolution
+- **Content Management**: Better SEO, structured data, content organization
+
 ## Common Development Tasks
 When adding new widgets:
 1. Create widget component in `src/components/widgets/[name]/`
@@ -75,10 +100,30 @@ When adding new widgets:
 5. Write comprehensive tests
 6. Update documentation
 
+When decoupling personal information:
+1. Move hardcoded values to site metadata configuration
+2. Create selectors for accessing personal data
+3. Update components to use selectors instead of hardcoded values
+4. Provide sensible defaults in theme configuration
+5. Update tests to use mock data
+6. Document configuration options
+
+## Configuration Strategy
+The theme should support configuration through:
+- **Site Metadata**: Core site information (title, description, etc.)
+- **Widget Configuration**: API endpoints and usernames for each widget
+- **Social Profiles**: Configurable social media links
+- **Personal Information**: Name, location, bio, etc.
+- **Theme Options**: Customizable styling and behavior
+
 ## Important Notes
 - Follow existing patterns and maintain backward compatibility
 - Update tests and mocks when modifying existing widgets
 - Consider performance implications
 - Use HTTPS for local development
 - Store API keys in environment variables
-- Regular security updates for dependencies 
+- Regular security updates for dependencies
+- Prioritize accessibility in all new features
+- Maintain comprehensive test coverage
+- Use semantic HTML and ARIA attributes
+- Follow responsive design principles 
