@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to Gatsby Theme Chris Vogt! This document provides guidelines and information for contributors.
 
-> [!INFO]
+> [!NOTE]
 > The current name is to let people know _this is my personal blog and website_, but I am totally open to others reusing this theme for other projects. Want to reuse my theme? Help me make it easier to reuse and contribute to the code. Let's build something great together. And yes, we can change the name. Have any suggestions?
 
 ## 🤝 How to Contribute
