@@ -12,17 +12,17 @@
   },
   "dependencies": {
     "boxen": "^8.0.1",
-    "gatsby": "^5.14.3",
-    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby": "^5.14.5",
+    "gatsby-plugin-google-analytics": "^5.14.0",
     "gatsby-plugin-newrelic": "^2.9.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-plugin-sitemap": "^6.14.0",
     "gatsby-theme-chrisvogt": "*",
-    "prettier": "3.5.3",
-    "react": "^18",
-    "react-dom": "^18"
+    "prettier": "3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27"
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.32"
   }
 }
