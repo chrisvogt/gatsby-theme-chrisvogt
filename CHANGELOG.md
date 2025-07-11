@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.50.0 🌗
+
+- Renamed the project from gatsby-theme-chrisvogt to gatsby-theme-chronogrove.
+- This is a ½ marker towards a full release.
+
 ## 0.47.0
 
 - Adds support for Spotify to the audio player component that renders at the bottom of the page.

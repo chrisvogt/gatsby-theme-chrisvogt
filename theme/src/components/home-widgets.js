@@ -25,9 +25,9 @@ import {
  * shadowing to add or remove widgets onto the home page.
  *
  * For example, if you are using this as a parent theme, create a new file at
- * /src/gatsby-theme-chrisvogt/components/home-widgets.js to use GatsbyJS
+ * /src/gatsby-theme-chronogrove/components/home-widgets.js to use GatsbyJS
  * theme shadowing to override this file. The import path for theme widgets
- * is: 'gatsby-theme-chrisvogt/src/components/widgets/recent-posts'
+ * is: 'gatsby-theme-chronogrove/src/components/widgets/recent-posts'
  */
 const HomeWidgets = () => {
   const metadata = useSiteMetadata()

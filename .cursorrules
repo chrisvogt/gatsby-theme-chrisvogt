@@ -1,4 +1,4 @@
-# Cursor Rules for gatsby-theme-chrisvogt
+# Cursor Rules for gatsby-theme-chronogrove
 
 ## Project Overview
 This is a Gatsby theme monorepo that powers www.chrisvogt.me - a personal website and blog with a social dashboard home page. The project uses Yarn workspaces to separate the theme code from the content.
@@ -7,7 +7,7 @@ This is a Gatsby theme monorepo that powers www.chrisvogt.me - a personal websit
 
 ## Architecture
 - **Root**: Contains workspace configuration and shared tooling
-- **`theme/`**: The Gatsby theme package (`gatsby-theme-chrisvogt`)
+- **`theme/`**: The Gatsby theme package (`gatsby-theme-chronogrove`)
 - **`www.chrisvogt.me/`**: The actual website content and configuration
 
 ## Back-end API

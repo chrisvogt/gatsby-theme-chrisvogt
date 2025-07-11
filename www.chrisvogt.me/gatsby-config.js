@@ -61,7 +61,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-theme-chrisvogt',
+      resolve: 'gatsby-theme-chronogrove',
       options: {}
     },
     {

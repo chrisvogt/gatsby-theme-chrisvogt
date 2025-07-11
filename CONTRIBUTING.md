@@ -33,8 +33,8 @@ We welcome contributions of all kinds:
 
    ```bash
    # Fork on GitHub, then clone your fork
-   git clone https://github.com/YOUR_USERNAME/gatsby-theme-chrisvogt.git
-   cd gatsby-theme-chrisvogt
+   git clone https://github.com/YOUR_USERNAME/gatsby-theme-chronogrove.git
+   cd gatsby-theme-chronogrove
    ```
 
 2. **Install dependencies**
