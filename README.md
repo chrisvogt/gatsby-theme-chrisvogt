@@ -16,7 +16,6 @@ A modern, feature-rich Gatsby theme for personal websites and blogs with social 
 - **Widget System**: Pre-built widgets for GitHub, Instagram, Spotify, Goodreads, and Steam
 - **Responsive Design**: Mobile-first design with dark/light mode support
 - **Performance Optimized**: Built with Gatsby for fast loading and SEO
-- **TypeScript Ready**: Full TypeScript support
 - **Testing**: Comprehensive test suite with Jest and React Testing Library
 
 ## 📋 Prerequisites
