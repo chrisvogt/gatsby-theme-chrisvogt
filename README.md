@@ -59,13 +59,52 @@ gatsby-theme-chronogrove/
    yarn
    ```
 
-3. **Start development server**
+3. **HTTPS Development Setup**
+
+   **For local HTTPS development, you'll need SSL certificates:**
+
+   - Install mkcert (if not already installed):
+
+      ```bash
+      # macOS
+      brew install mkcert
+
+      # Linux
+      sudo apt install mkcert
+      ```
+
+   - Generate certificates:
+
+      ```bash
+      mkcert www.dev-chrisvogt.me
+      ```
+
+   - Move certificates to the certs directory:
+
+      ```bash
+      mkdir -p www.chrisvogt.me/certs
+      mv www.dev-chrisvogt.me-key.pem www.chrisvogt.me/certs/
+      mv www.dev-chrisvogt.me.pem www.chrisvogt.me/certs/
+      ```
+
+4. **If you don’t have a Google Analytics tracking ID or don’t plan to use it, remove or comment out these lines in `gatsby-config.js`:**
+   ```
+   {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GA_PROPERTY_ID,
+        head: false,
+        respectDNT: true
+      }
+    },
+
+5. **Start development server**
 
    ```bash
    yarn develop
    ```
 
-4. **Open your browser**
+6. **Open your browser**
    Navigate to [https://www.dev-chrisvogt.me:8000](https://www.dev-chrisvogt.me:8000)
 
 ## 🛠️ Development
@@ -99,34 +138,6 @@ Content is managed in the `/www.chrisvogt.me` directory:
 - **Blog posts**: `www.chrisvogt.me/content/blog/`
 - **Custom pages**: `www.chrisvogt.me/src/pages/`
 - **Site configuration**: `www.chrisvogt.me/gatsby-config.js`
-
-### HTTPS Development Setup
-
-For local HTTPS development, you'll need SSL certificates:
-
-1. **Install mkcert** (if not already installed):
-
-   ```bash
-   # macOS
-   brew install mkcert
-
-   # Linux
-   sudo apt install mkcert
-   ```
-
-2. **Generate certificates**:
-
-   ```bash
-   mkcert www.dev-chrisvogt.me
-   ```
-
-3. **Move certificates** to the certs directory:
-
-   ```bash
-   mkdir -p www.chrisvogt.me/certs
-   mv www.dev-chrisvogt.me-key.pem www.chrisvogt.me/certs/
-   mv www.dev-chrisvogt.me.pem www.chrisvogt.me/certs/
-   ```
 
 4. **Start HTTPS development**:
    ```bash
