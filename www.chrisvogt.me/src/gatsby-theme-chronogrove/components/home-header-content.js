@@ -42,22 +42,22 @@ const HomeHeaderContent = () => {
           }
         }}
       >
-        Welcome!{' '}
+        Hi!{' '}
         <span className='emoji' ref={emojiRef} onAnimationEnd={handleAnimationEnd}>
           👋
         </span>{' '}
-        I'm Your Name.
+        I'm Chris Vogt.
       </Themed.h1>
 
       <Themed.p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
+        This is my personal blog and digital garden: a place where I share what I'm building, exploring, and learning
+        over time. This space is always evolving — part notebook, part playground — and I'm glad you found your way
+        here.
       </Themed.p>
 
       <Themed.p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        This page is a dashboard of my posts and online activity. The social content below is updated automatically
+        every day.
       </Themed.p>
     </div>
   )
