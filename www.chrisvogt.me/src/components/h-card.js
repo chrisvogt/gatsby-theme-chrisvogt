@@ -1,5 +1,5 @@
 import React from 'react'
-import useSiteMetadata from '../hooks/use-site-metadata.js'
+import useSiteMetadata from '../../theme/src/hooks/use-site-metadata.js'
 
 const HCard = () => {
   const { headline, baseURL, description, hCard } = useSiteMetadata()

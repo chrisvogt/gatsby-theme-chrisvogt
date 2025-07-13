@@ -9,6 +9,16 @@ const useSiteMetadata = () => {
           description
           footerText
           headline
+          hCard {
+            email
+            givenName
+            familyName
+            locality
+            region
+            countryName
+            category
+            photoURL
+          }
           imageURL
           languageCode
           social {
