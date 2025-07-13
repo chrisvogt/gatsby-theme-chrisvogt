@@ -8,7 +8,14 @@ const browserGlobals = Object.fromEntries(Object.entries(globals.browser).filter
 
 module.exports = [
   {
-    ignores: ['**/*.json', '**/node_modules/**', '**/theme/public/**', '**/www.chrisvogt.me/public/**', '**/.cache/**']
+    ignores: [
+      '**/*.json',
+      '**/node_modules/**',
+      '**/theme/public/**',
+      '**/www.chrisvogt.me/public/**',
+      '**/www.chronogrove.com/public/**',
+      '**/.cache/**'
+    ]
   },
   {
     files: ['theme/**/*.js', 'www.chrisvogt.me/**/*.js']
