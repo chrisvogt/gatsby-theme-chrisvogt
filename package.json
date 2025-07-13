@@ -2,10 +2,13 @@
   "private": true,
   "workspaces": [
     "theme",
-    "www.chrisvogt.me"
+    "www.chrisvogt.me",
+    "www.chronogrove.com"
   ],
   "scripts": {
-    "develop": "yarn workspace www.chrisvogt.me develop:https",
+    "develop": "yarn develop:website",
+    "develop:theme": "yarn workspace www.chronogrove.com develop",
+    "develop:website": "yarn workspace www.chrisvogt.me develop:https",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\"",
     "lint": "eslint",
     "postinstall": "node ./scripts/postinstall-banner.js",
