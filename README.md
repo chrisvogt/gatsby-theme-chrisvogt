@@ -76,16 +76,16 @@ gatsby-theme-chronogrove/
 
 ### Available Scripts
 
-| Command              | Description                         |
-| -------------------- | ----------------------------------- |
+| Command              | Description                            |
+| -------------------- | -------------------------------------- |
 | `yarn develop`       | Start personal site (www.chrisvogt.me) |
-| `yarn develop:theme` | Start demo site (www.chronogrove.com) |
-| `yarn test`          | Run test suite                      |
-| `yarn test:watch`    | Run tests in watch mode             |
-| `yarn test:coverage` | Generate coverage report            |
-| `yarn build`         | Build for production                |
-| `yarn format`        | Format code with Prettier           |
-| `yarn lint`          | Run ESLint                          |
+| `yarn develop:theme` | Start demo site (www.chronogrove.com)  |
+| `yarn test`          | Run test suite                         |
+| `yarn test:watch`    | Run tests in watch mode                |
+| `yarn test:coverage` | Generate coverage report               |
+| `yarn build`         | Build for production                   |
+| `yarn format`        | Format code with Prettier              |
+| `yarn lint`          | Run ESLint                             |
 
 ### Development Workflow
 
@@ -100,11 +100,13 @@ The theme code is located in the `/theme` directory. To work on theme components
 #### Working on Content
 
 **Demo Site Content** (`/www.chronogrove.com`):
+
 - **Blog posts**: `www.chronogrove.com/content/blog/`
 - **Music posts**: `www.chronogrove.com/content/music/`
 - **Site configuration**: `www.chronogrove.com/gatsby-config.js`
 
 **Personal Site Content** (`/www.chrisvogt.me`):
+
 - **Blog posts**: `www.chrisvogt.me/content/blog/`
 - **Custom pages**: `www.chrisvogt.me/src/pages/`
 - **Site configuration**: `www.chrisvogt.me/gatsby-config.js`
@@ -219,11 +221,13 @@ yarn test:coverage
 ### Building for Production
 
 **Personal Site:**
+
 ```bash
 yarn workspace www.chrisvogt.me build
 ```
 
 **Demo Site:**
+
 ```bash
 yarn workspace www.chronogrove.com build
 ```

@@ -5,6 +5,7 @@ This is the official demo site for `gatsby-theme-chronogrove`, showcasing the th
 ## Purpose
 
 This demo site serves multiple purposes:
+
 - **Live Demo**: Showcases the theme's features and design
 - **Development Environment**: Test theme functionality and new features
 - **Documentation**: Provides real examples of theme usage
@@ -49,4 +50,4 @@ The site includes demo widget configurations that point to mock endpoints. You c
 3. Once satisfied, test with your actual site (`www.chrisvogt.me`)
 4. Commit and push changes
 
-This setup ensures your theme remains generic and reusable while providing a proper development environment. 
+This setup ensures your theme remains generic and reusable while providing a proper development environment.
