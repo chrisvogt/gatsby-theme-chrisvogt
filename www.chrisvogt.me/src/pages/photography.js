@@ -79,7 +79,7 @@ const PhotographyPage = ({ data }) => {
 
 export const Head = () => (
   <Seo
-    title="Chris Vogt's Photo Galleries - Street & Travel Photography"
+    title='Photo Galleries - Street & Travel Photography'
     description="Explore Chris Vogt's photo galleries featuring street and travel photography. Each gallery showcases unique perspectives and moments captured with a Sony Alpha camera on chrisvogt.me."
   >
     <meta property='og:url' content='https://www.chrisvogt.me/photography/' />

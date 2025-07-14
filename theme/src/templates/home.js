@@ -10,6 +10,9 @@ import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import useSiteMetadata from '../hooks/use-site-metadata'
+import useSocialProfiles from '../hooks/use-social-profiles'
+import { getDescription, getHeadline, getSiteUrl, getTitle } from '../selectors/metadata'
 
 const HomeTemplate = () => (
   <Layout hideFooter disableMainWrapper>
@@ -64,37 +67,48 @@ const HomeTemplate = () => (
   </Layout>
 )
 
-export const Head = () => (
-  <Seo
-    title='Chris Vogt - Software Engineer in San Francisco | Photography, Piano, and Travel Blog'
-    description="Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
-    keywords='Chris Vogt, Software Engineer in San Francisco, GoDaddy engineer blog, photography blog, piano recordings, travel blog, personal blog, digital garden'
-  >
-    <meta property='og:url' content='https://www.chrisvogt.me' />
-    <meta property='og:type' content='website' />
-    <script type='application/ld+json'>
-      {`{
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chris Vogt",
-        "url": "https://www.chrisvogt.me",
-        "sameAs": [
-          "https://linkedin.com/in/cjvogt",
-          "https://github.com/chrisvogt",
-          "https://x.com/c1v0",
-          "https://twitter.com/c1v0",
-          "https://www.instagram.com/c1v0",
-          "https://stackoverflow.com/users/1391826/chris-vogt"
-        ],
-        "jobTitle": "Principal Software Engineer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "GoDaddy"
-        }
-      }`}
-    </script>
-  </Seo>
-)
+export const Head = () => {
+  const metadata = useSiteMetadata()
+  const socialProfiles = useSocialProfiles()
+
+  const siteTitle = getTitle(metadata)
+  const siteDescription = getDescription(metadata)
+  const siteHeadline = getHeadline(metadata)
+  const siteUrl = getSiteUrl(metadata)
+
+  // Use "Home" as the page title for SEO
+  const seoTitle = 'Home'
+
+  // Construct SEO description from site metadata
+  const seoDescription = siteDescription || `Welcome to ${siteTitle}. ${siteHeadline || 'A personal website and blog.'}`
+
+  // Construct keywords from site metadata
+  const seoKeywords = `${siteHeadline || 'Personal'}, ${siteTitle}, blog, website, portfolio`
+
+  // Extract social profile URLs for JSON-LD
+  const sameAs = socialProfiles.map(profile => profile.href)
+
+  return (
+    <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords}>
+      <meta property='og:url' content={siteUrl} />
+      <meta property='og:type' content='website' />
+      <script type='application/ld+json'>
+        {`{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "${siteHeadline || siteTitle}",
+          "url": "${siteUrl}",
+          "sameAs": ${JSON.stringify(sameAs)},
+          "jobTitle": "Professional",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Professional"
+          }
+        }`}
+      </script>
+    </Seo>
+  )
+}
 
 export const pageQuery = graphql`
   query {
@@ -106,6 +120,7 @@ export const pageQuery = graphql`
         subhead
         title
         titleTemplate
+        siteUrl
       }
     }
   }

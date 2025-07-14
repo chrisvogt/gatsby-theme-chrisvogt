@@ -52,7 +52,7 @@ const MusicPage = ({ data }) => {
 
 export const Head = () => (
   <Seo
-    title="Chris Vogt's Music - Original and Cover Songs"
+    title='Music - Original and Cover Songs'
     description="Explore Chris Vogt's collection of original songs and covers. Listen to unique tracks and discover the stories behind the music on chrisvogt.me."
   >
     <meta property='og:url' content='https://www.chrisvogt.me/music/' />

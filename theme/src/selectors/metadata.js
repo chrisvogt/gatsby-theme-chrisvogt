@@ -28,6 +28,8 @@ export const getInstagramUsername = metadata => metadata?.widgets?.instagram?.us
 
 export const getLanguageCode = metadata => metadata?.languageCode
 
+export const getSiteUrl = metadata => metadata?.siteUrl
+
 export const getSpotifyWidgetDataSource = metadata => metadata?.widgets?.spotify?.widgetDataSource
 
 export const getSteamWidgetDataSource = metadata => metadata?.widgets?.steam?.widgetDataSource
