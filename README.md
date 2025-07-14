@@ -62,32 +62,32 @@ gatsby-theme-chronogrove/
 3. **HTTPS Development Setup**
 
    **For local HTTPS development, you'll need SSL certificates:**
-
    - Install mkcert (if not already installed):
 
-      ```bash
-      # macOS
-      brew install mkcert
+     ```bash
+     # macOS
+     brew install mkcert
 
-      # Linux
-      sudo apt install mkcert
-      ```
+     # Linux
+     sudo apt install mkcert
+     ```
 
    - Generate certificates:
 
-      ```bash
-      mkcert www.dev-chrisvogt.me
-      ```
+     ```bash
+     mkcert www.dev-chrisvogt.me
+     ```
 
    - Move certificates to the certs directory:
 
-      ```bash
-      mkdir -p www.chrisvogt.me/certs
-      mv www.dev-chrisvogt.me-key.pem www.chrisvogt.me/certs/
-      mv www.dev-chrisvogt.me.pem www.chrisvogt.me/certs/
-      ```
+     ```bash
+     mkdir -p www.chrisvogt.me/certs
+     mv www.dev-chrisvogt.me-key.pem www.chrisvogt.me/certs/
+     mv www.dev-chrisvogt.me.pem www.chrisvogt.me/certs/
+     ```
 
 4. **If you don’t have a Google Analytics tracking ID or don’t plan to use it, remove or comment out these lines in `gatsby-config.js`:**
+
    ```
    {
       resolve: 'gatsby-plugin-google-analytics',
@@ -97,6 +97,8 @@ gatsby-theme-chronogrove/
         respectDNT: true
       }
     },
+
+   ```
 
 5. **Start development server**
 
