@@ -2,11 +2,12 @@ const path = require('path')
 
 module.exports = () => ({
   siteMetadata: {
-    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo',
-    baseURL: 'https://www.chrisvogt.me',
-    description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
-    footerText: 'Made with ❤️ in San Francisco',
-    headline: 'www.chrisvogt.me',
+    avatarURL: 'https://via.placeholder.com/150',
+    baseURL: 'https://example.com',
+    description:
+      'A personal website built with GatsbyJS. Features a social dashboard with widgets for various platforms.',
+    footerText: 'Made with ❤️ using gatsby-theme-chronogrove',
+    headline: 'My Personal Website',
     hCard: {
       email: 'mail@example.com',
       givenName: 'Given',
@@ -15,17 +16,17 @@ module.exports = () => ({
       region: 'ST',
       countryName: 'Country',
       category: 'Professional Title',
-      photoURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo'
+      photoURL: 'https://via.placeholder.com/150'
     },
     imageURL: '',
     languageCode: 'en',
-    siteUrl: 'https://www.chrisvogt.me',
+    siteUrl: 'https://example.com',
     social: {
       twitterUsername: ''
     },
     subhead: 'My personal blog and website',
     title: 'My Personal Website',
-    titleTemplate: '%s · www.chrisvogt.me',
+    titleTemplate: '%s · My Personal Website',
     widgets: {
       flickr: {
         username: '',

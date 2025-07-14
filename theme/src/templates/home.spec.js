@@ -22,7 +22,8 @@ const mockData = {
       headline: 'Test Headline',
       subhead: 'Test Subhead',
       title: 'Test Title',
-      titleTemplate: '%s · Test Site'
+      titleTemplate: '%s · Test Site',
+      siteUrl: 'https://example.com'
     }
   }
 }
@@ -81,11 +82,9 @@ describe('HomeTemplate', () => {
 describe('Head', () => {
   it('renders SEO component with correct metadata', () => {
     const { container } = renderWithTheme(<Head />)
-    expect(container.querySelector('title').textContent).toContain('Chris Vogt')
-    expect(container.querySelector('meta[name="description"]').content).toBe(
-      "Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
-    )
-    expect(container.querySelector('meta[property="og:url"]').content).toBe('https://www.chrisvogt.me')
+    expect(container.querySelector('title').textContent).toContain('Home')
+    expect(container.querySelector('meta[name="description"]').content).toBe('Test Description')
+    expect(container.querySelector('meta[property="og:url"]').content).toBe('https://example.com')
     expect(container.querySelector('meta[property="og:type"]').content).toBe('website')
   })
 
@@ -95,6 +94,6 @@ describe('Head', () => {
     expect(script).toBeInTheDocument()
     const jsonData = JSON.parse(script.textContent)
     expect(jsonData['@type']).toBe('Person')
-    expect(jsonData.name).toBe('Chris Vogt')
+    expect(jsonData.name).toBe('Test Headline')
   })
 })

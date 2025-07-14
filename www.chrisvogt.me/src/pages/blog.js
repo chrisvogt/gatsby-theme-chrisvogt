@@ -61,7 +61,7 @@ const BlogIndexPage = ({ data }) => {
 
 export const Head = () => (
   <Seo
-    title="Chris Vogt's Blog - Latest Posts and Insights"
+    title='Blog - Latest Posts and Insights'
     description='Read the latest blog posts and insights from Chris Vogt. Explore articles on technology, photography, music, and personal growth on chrisvogt.me.'
   >
     <meta property='og:url' content='https://www.chrisvogt.me/blog/' />
