@@ -42,22 +42,21 @@ const HomeHeaderContent = () => {
           }
         }}
       >
-        Welcome!{' '}
+        Welcome to{' '}
         <span className='emoji' ref={emojiRef} onAnimationEnd={handleAnimationEnd}>
-          👋
+          🎨
         </span>{' '}
-        I'm Your Name.
+        Chronogrove
       </Themed.h1>
 
       <Themed.p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
+        A GatsbyJS theme for personal websites, blogs and digital gardens. Built with modern web technologies and
+        designed for developers who want a sophisticated, feature-rich foundation for their digital presence.
       </Themed.p>
 
       <Themed.p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        This demo showcases the theme's capabilities including social media widgets, blog functionality, and a
+        responsive design that works beautifully on all devices.
       </Themed.p>
     </div>
   )

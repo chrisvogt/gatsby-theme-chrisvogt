@@ -8,15 +8,15 @@ describe('HomeHeaderContent', () => {
     render(<HomeHeaderContent />)
 
     // Check for the main headline
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent("Hi! 👋 I'm Chris Vogt.")
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent("Welcome! 👋 I'm Your Name.")
 
-    // Check for the first paragraph about the blog and digital garden
-    expect(screen.getByText(/This is my personal blog and digital garden/i)).toBeInTheDocument()
-    expect(screen.getByText(/This space is always evolving/i)).toBeInTheDocument()
+    // Check for the first paragraph with Lorem Ipsum content
+    expect(screen.getByText(/Lorem ipsum dolor sit amet/i)).toBeInTheDocument()
+    expect(screen.getByText(/consectetur adipiscing elit/i)).toBeInTheDocument()
 
-    // Check for the second paragraph about the dashboard
-    expect(screen.getByText(/This page is a dashboard of my posts and online activity/i)).toBeInTheDocument()
-    expect(screen.getByText(/The social content below is updated automatically every day/i)).toBeInTheDocument()
+    // Check for the second paragraph with Lorem Ipsum content
+    expect(screen.getByText(/Duis aute irure dolor in reprehenderit/i)).toBeInTheDocument()
+    expect(screen.getByText(/Excepteur sint occaecat cupidatat non proident/i)).toBeInTheDocument()
   })
 
   it('applies wobble animation to emoji on mouse enter', () => {

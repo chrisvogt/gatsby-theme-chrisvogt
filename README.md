@@ -37,7 +37,11 @@ gatsby-theme-chronogrove/
 │   │   ├── templates/        # Page templates
 │   │   └── ...
 │   └── package.json
-├── www.chrisvogt.me/         # Example website implementation
+├── www.chronogrove.com/      # Official demo site
+│   ├── content/              # Demo blog posts and content
+│   ├── gatsby-config.js      # Demo site configuration
+│   └── package.json
+├── www.chrisvogt.me/         # Personal website implementation
 │   ├── content/              # Blog posts and content
 │   ├── src/pages/            # Custom pages
 │   └── gatsby-config.js      # Site configuration
@@ -113,15 +117,16 @@ gatsby-theme-chronogrove/
 
 ### Available Scripts
 
-| Command              | Description                         |
-| -------------------- | ----------------------------------- |
-| `yarn develop`       | Start development server with HTTPS |
-| `yarn test`          | Run test suite                      |
-| `yarn test:watch`    | Run tests in watch mode             |
-| `yarn test:coverage` | Generate coverage report            |
-| `yarn build`         | Build for production                |
-| `yarn format`        | Format code with Prettier           |
-| `yarn lint`          | Run ESLint                          |
+| Command              | Description                            |
+| -------------------- | -------------------------------------- |
+| `yarn develop`       | Start personal site (www.chrisvogt.me) |
+| `yarn develop:theme` | Start demo site (www.chronogrove.com)  |
+| `yarn test`          | Run test suite                         |
+| `yarn test:watch`    | Run tests in watch mode                |
+| `yarn test:coverage` | Generate coverage report               |
+| `yarn build`         | Build for production                   |
+| `yarn format`        | Format code with Prettier              |
+| `yarn lint`          | Run ESLint                             |
 
 ### Development Workflow
 
@@ -129,13 +134,19 @@ gatsby-theme-chronogrove/
 
 The theme code is located in the `/theme` directory. To work on theme components:
 
-1. Navigate to the theme directory: `cd theme`
-2. Make your changes to components in `src/components/`
-3. The changes will be reflected in the development server
+1. Start the demo site: `yarn develop:theme`
+2. Make your changes to components in `theme/src/components/`
+3. The changes will be reflected in the demo site at `http://localhost:8000`
 
 #### Working on Content
 
-Content is managed in the `/www.chrisvogt.me` directory:
+**Demo Site Content** (`/www.chronogrove.com`):
+
+- **Blog posts**: `www.chronogrove.com/content/blog/`
+- **Music posts**: `www.chronogrove.com/content/music/`
+- **Site configuration**: `www.chronogrove.com/gatsby-config.js`
+
+**Personal Site Content** (`/www.chrisvogt.me`):
 
 - **Blog posts**: `www.chrisvogt.me/content/blog/`
 - **Custom pages**: `www.chrisvogt.me/src/pages/`
@@ -145,6 +156,17 @@ Content is managed in the `/www.chrisvogt.me` directory:
    ```bash
    yarn develop
    ```
+
+### Demo Site Development
+
+For theme development and testing, use the demo site:
+
+```bash
+# Start the demo site
+yarn develop:theme
+
+# Open your browser to http://localhost:8000
+```
 
 ## 🎨 Widgets
 
@@ -211,11 +233,19 @@ yarn test:coverage
 
 ### Building for Production
 
+**Personal Site:**
+
 ```bash
 yarn workspace www.chrisvogt.me build
 ```
 
-The build output will be in `/www.chrisvogt.me/public`.
+**Demo Site:**
+
+```bash
+yarn workspace www.chronogrove.com build
+```
+
+The build outputs will be in `/www.chrisvogt.me/public` and `/www.chronogrove.com/public` respectively.
 
 ### Testing Production Build
 
@@ -246,6 +276,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 ## 📚 Documentation
 
 - **[Theme Documentation](theme/README.md)**: Detailed theme configuration and customization
+- **[Demo Site Documentation](www.chronogrove.com/README.md)**: Demo site setup and usage
 - **[Widget Documentation](theme/src/components/widgets/)**: Individual widget documentation
 - **[API Examples](theme/__mocks__/)**: Mock data examples for widget APIs
 
@@ -259,6 +290,12 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 # Kill the process using port 8000
 lsof -ti:8000 | xargs kill -9
 ```
+
+**Demo site not loading**
+
+- Ensure you're using `yarn develop:theme` for the demo site
+- Check that the workspace is properly configured
+- Verify all dependencies are installed: `yarn install`
 
 **SSL certificate errors**
 

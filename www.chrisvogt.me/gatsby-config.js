@@ -21,6 +21,16 @@ module.exports = {
     siteUrl,
     description: 'Software Engineer in San Francisco blogging about code, photography and piano music.',
     headline: 'Chris Vogt',
+    hCard: {
+      email: 'mail@chrisvogt.me',
+      givenName: 'Chris',
+      familyName: 'Vogt',
+      locality: 'San Francisco',
+      region: 'CA',
+      countryName: 'U.S.A',
+      category: 'Software Developer',
+      photoURL: 'https://chrisvogt.imgix.net/ig/17948822426064646.jpg'
+    },
     imageURL: '/images/og-image.png',
     languageCode: 'en',
     social: {

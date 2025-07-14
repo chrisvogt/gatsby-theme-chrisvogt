@@ -7,6 +7,16 @@ module.exports = () => ({
     description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
     footerText: 'Made with ❤️ in San Francisco',
     headline: 'www.chrisvogt.me',
+    hCard: {
+      email: 'mail@example.com',
+      givenName: 'Given',
+      familyName: 'Name',
+      locality: 'City',
+      region: 'ST',
+      countryName: 'Country',
+      category: 'Professional Title',
+      photoURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo'
+    },
     imageURL: '',
     languageCode: 'en',
     siteUrl: 'https://www.chrisvogt.me',
