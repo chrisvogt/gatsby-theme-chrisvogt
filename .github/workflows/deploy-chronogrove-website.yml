@@ -6,6 +6,13 @@ on:
     paths:
       - 'www.chronogrove.com/**'
       - 'theme/**'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
+        type: string
 
 jobs:
   build-and-deploy:
