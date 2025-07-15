@@ -6,11 +6,6 @@ on:
     paths:
       - 'www.chronogrove.com/**'
       - 'theme/**'
-  pull_request:
-    branches: [main]
-    paths:
-      - 'www.chronogrove.com/**'
-      - 'theme/**'
   workflow_dispatch:
     inputs:
       branch:
