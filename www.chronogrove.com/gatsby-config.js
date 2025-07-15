@@ -27,29 +27,13 @@ module.exports = {
     title: 'Chronogrove',
     titleTemplate: '%s · A GatsbyJS Theme for Personal Websites',
     widgets: {
-      flickr: {
-        username: 'chronogrove',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/flickr/chronogrove'
-      },
       github: {
-        username: 'chronogrove',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/github/chronogrove'
-      },
-      goodreads: {
-        username: 'chronogrove',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/goodreads/chronogrove'
+        username: 'chrisvogt',
+        widgetDataSource: 'https://api.chronogrove.com/api/widgets/github?timestamp=1752542186'
       },
       instagram: {
         username: 'chronogrove',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/instagram/chronogrove'
-      },
-      spotify: {
-        username: 'chronogrove',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/spotify/chronogrove'
-      },
-      steam: {
-        username: 'chronogrove',
-        widgetDataSource: 'https://metrics.chrisvogt.me/api/steam/chronogrove'
+        widgetDataSource: 'https://api.chronogrove.com/api/widgets/instagram?timestamp=1752542186'
       }
     }
   },
