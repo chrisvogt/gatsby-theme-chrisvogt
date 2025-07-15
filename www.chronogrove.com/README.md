@@ -39,9 +39,6 @@ The site uses demo data that showcases the theme's capabilities while remaining 
 The site includes demo widget configurations that point to mock endpoints. You can:
 
 1. Set up real API endpoints for live demos
-2. Use mock data for development and testing
-3. Test widget error states and loading states
-4. Showcase widget functionality to potential users
 
 ## Development Workflow
 

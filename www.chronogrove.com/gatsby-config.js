@@ -29,11 +29,11 @@ module.exports = {
     widgets: {
       github: {
         username: 'chrisvogt',
-        widgetDataSource: 'https://api.chronogrove.com/api/widgets/github?timestamp=1752542186'
+        widgetDataSource: 'https://api.chronogrove.com/api/widgets/github?timestamp=1752551337'
       },
       instagram: {
         username: 'chronogrove',
-        widgetDataSource: 'https://api.chronogrove.com/api/widgets/instagram?timestamp=1752542186'
+        widgetDataSource: 'https://api.chronogrove.com/api/widgets/instagram?timestamp=1752551337'
       }
     }
   },

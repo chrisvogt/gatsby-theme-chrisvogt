@@ -6,6 +6,13 @@ on:
     paths:
       - 'www.chronogrove.com/**'
       - 'theme/**'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
+        type: string
 
 jobs:
   build-and-deploy:
@@ -19,6 +26,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.inputs.branch || github.ref }}
           submodules: true
 
       - name: Setup Node.js
@@ -40,5 +48,5 @@ jobs:
           port: 22
           user: ${{ secrets.CPANEL_USER }}
           pass: ${{ secrets.CPANEL_PASSWORD }}
-          localDir: public
+          localDir: www.chronogrove.com/public/
           remoteDir: public_html/
