@@ -53,5 +53,5 @@ jobs:
           port: 22
           user: ${{ secrets.CPANEL_USER }}
           pass: ${{ secrets.CPANEL_PASSWORD }}
-          localDir: public
+          localDir: www.chronogrove.com/public/
           remoteDir: public_html/
