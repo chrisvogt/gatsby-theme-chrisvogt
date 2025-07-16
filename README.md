@@ -16,7 +16,9 @@ A modern, feature-rich Gatsby theme for personal websites and blogs with social 
 - **Widget System**: Pre-built widgets for GitHub, Instagram, Spotify, Goodreads, and Steam
 - **Responsive Design**: Mobile-first design with dark/light mode support
 - **Performance Optimized**: Built with Gatsby for fast loading and SEO
-- **Testing**: Comprehensive test suite with Jest and React Testing Library
+- **Testing**: Comprehensive test suite with 459 passing tests
+- **Navigation System**: Configurable navigation with proper GraphQL integration
+- **Error Handling**: Robust error handling and fallbacks throughout the theme
 
 ## 📋 Prerequisites
 
@@ -210,11 +212,13 @@ See the [mock data examples](theme/__mocks__/) for expected API response formats
 
 ## 🧪 Testing
 
-The project includes comprehensive testing:
+The project includes comprehensive testing with **459 passing tests**:
 
 - **Unit Tests**: Jest + React Testing Library
-- **Snapshot Tests**: Component regression testing
+- **Snapshot Tests**: Component regression testing (69 snapshots)
 - **Coverage Reports**: Code coverage tracking
+- **GraphQL Mocking**: Proper mocking for Gatsby's `useStaticQuery` and `graphql`
+- **Navigation Testing**: Comprehensive tests for navigation components and hooks
 
 ### Running Tests
 
@@ -228,6 +232,14 @@ yarn test:watch
 # Generate coverage report
 yarn test:coverage
 ```
+
+### Test Reliability
+
+Recent improvements in version 0.51.0:
+- ✅ Fixed GraphQL errors in test environment
+- ✅ Improved navigation data handling
+- ✅ Enhanced test mocking for Gatsby components
+- ✅ Better error handling in navigation hooks
 
 ## 🚀 Production Build
 

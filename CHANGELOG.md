@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.51.0
+
+### Bug Fixes
+
+- **Fixed failing unit tests**: Resolved GraphQL errors in test environment by properly mocking `useNavigationData` hook
+- **Fixed navigation data handling**: Updated `useNavigationData` hook to return empty object when navigation data is missing, matching test expectations
+- **Improved test reliability**: Added proper mocking for Gatsby's `useStaticQuery` and `graphql` in component tests
+
+### Technical Improvements
+
+- Enhanced test coverage for navigation components
+- Improved error handling in navigation data hooks
+- Better separation of concerns between theme and site-specific configuration
+
 ## 0.50.0 🌗
 
 - Renamed the project from gatsby-theme-chrisvogt to gatsby-theme-chronogrove.
