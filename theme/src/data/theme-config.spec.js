@@ -244,4 +244,4 @@ describe('theme-config', () => {
       expect(result.siteMetadata.hCard.familyName).toBe('Name') // Should keep default
     })
   })
-}) 
+})

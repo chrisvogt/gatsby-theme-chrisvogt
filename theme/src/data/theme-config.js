@@ -3,7 +3,7 @@
  * This can be overridden by theme options in gatsby-config.js
  */
 
-const merge = require('lodash.merge')
+const mergeWith = require('lodash.mergeWith')
 
 const defaultConfig = {
   // Core site metadata
@@ -113,8 +113,15 @@ const defaultConfig = {
  * @returns {Object} Merged configuration
  */
 const mergeConfig = (themeOptions = {}) => {
-  // lodash.merge mutates the first argument, so use an empty object as the base
-  return merge({}, defaultConfig, themeOptions)
+  // Use mergeWith with customizer to replace arrays instead of merging by index
+  return mergeWith({}, defaultConfig, themeOptions, (objValue, srcValue) => {
+    // If both values are arrays, replace the target array with the source array
+    if (Array.isArray(objValue) && Array.isArray(srcValue)) {
+      return srcValue
+    }
+    // For all other cases, use the default merge behavior
+    return undefined
+  })
 }
 
 module.exports = {

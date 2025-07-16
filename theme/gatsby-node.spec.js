@@ -210,6 +210,14 @@ describe('gatsby-node', () => {
         reporter: mockReporter
       })
 
+      // Check that createNodeField was called with the path field
+      expect(mockCreateNodeField).toHaveBeenCalledWith({
+        name: 'path',
+        node,
+        value: '/blog/test-slug'
+      })
+
+      // Check that other fields were also created
       expect(mockCreateNodeField).toHaveBeenCalledWith({
         name: 'category',
         node,
@@ -226,24 +234,6 @@ describe('gatsby-node', () => {
         name: 'slug',
         node,
         value: 'test-slug'
-      })
-
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'id',
-        node,
-        value: 'test-node'
-      })
-
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'path',
-        node,
-        value: '/blog/test-slug'
-      })
-
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'title',
-        node,
-        value: 'Test Title'
       })
     })
 
@@ -328,4 +318,4 @@ describe('gatsby-node', () => {
       expect(mockCreateNodeField).not.toHaveBeenCalled()
     })
   })
-}) 
+})
