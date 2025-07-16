@@ -3,6 +3,8 @@
  * This can be overridden by theme options in gatsby-config.js
  */
 
+const merge = require('lodash.merge')
+
 const defaultConfig = {
   // Core site metadata
   siteMetadata: {
@@ -111,22 +113,8 @@ const defaultConfig = {
  * @returns {Object} Merged configuration
  */
 const mergeConfig = (themeOptions = {}) => {
-  const merged = {
-    siteMetadata: {
-      ...defaultConfig.siteMetadata,
-      ...themeOptions.siteMetadata
-    },
-    navigation: {
-      ...defaultConfig.navigation,
-      ...themeOptions.navigation
-    },
-    widgets: {
-      ...defaultConfig.widgets,
-      ...themeOptions.widgets
-    }
-  }
-
-  return merged
+  // lodash.merge mutates the first argument, so use an empty object as the base
+  return merge({}, defaultConfig, themeOptions)
 }
 
 module.exports = {
