@@ -129,22 +129,40 @@ module.exports = {
             ],
             home: [
               {
-                path: '#github',
-                slug: 'github',
-                text: 'GitHub',
-                title: 'GitHub'
-              },
-              {
                 path: '#instagram',
                 slug: 'instagram',
                 text: 'Instagram',
                 title: 'Instagram'
               },
               {
+                path: '#flickr',
+                slug: 'flickr',
+                text: 'Flickr',
+                title: 'Flickr'
+              },
+              {
+                path: '#github',
+                slug: 'github',
+                text: 'GitHub',
+                title: 'GitHub'
+              },
+              {
                 path: '#goodreads',
                 slug: 'goodreads',
                 text: 'Goodreads',
                 title: 'Goodreads'
+              },
+              {
+                path: '#spotify',
+                slug: 'spotify',
+                text: 'Spotify',
+                title: 'Spotify'
+              },
+              {
+                path: '#steam',
+                slug: 'steam',
+                text: 'Steam',
+                title: 'Steam'
               }
             ]
           }

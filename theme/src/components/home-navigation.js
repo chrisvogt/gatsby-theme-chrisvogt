@@ -5,9 +5,7 @@ import { Link } from '@theme-ui/components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useRef, useState, useEffect } from 'react'
 import useNavigationData from '../hooks/use-navigation-data'
-import {
-  faHome, faNewspaper, faUser, faMusic, faCamera
-} from '@fortawesome/free-solid-svg-icons'
+import { faHome, faNewspaper, faUser, faMusic, faCamera } from '@fortawesome/free-solid-svg-icons'
 import { faFlickr, faGithub, faGoodreads, faInstagram, faSpotify, faSteam } from '@fortawesome/free-brands-svg-icons'
 
 const icons = {

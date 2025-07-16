@@ -33,7 +33,8 @@ module.exports = {
       options: {
         siteMetadata: {
           title: 'Chronogrove',
-          description: 'Official demo site for gatsby-theme-chronogrove - A beautiful Gatsby theme for personal websites and blogs',
+          description:
+            'Official demo site for gatsby-theme-chronogrove - A beautiful Gatsby theme for personal websites and blogs',
           headline: 'Chronogrove',
           subhead: 'Official demo site for gatsby-theme-chronogrove',
           avatarURL: 'https://via.placeholder.com/150',
@@ -70,22 +71,16 @@ module.exports = {
             ],
             home: [
               {
-                path: '#github',
-                slug: 'github',
-                text: 'GitHub',
-                title: 'GitHub'
-              },
-              {
                 path: '#instagram',
                 slug: 'instagram',
                 text: 'Instagram',
                 title: 'Instagram'
               },
               {
-                path: '#goodreads',
-                slug: 'goodreads',
-                text: 'Goodreads',
-                title: 'Goodreads'
+                path: '#github',
+                slug: 'github',
+                text: 'GitHub',
+                title: 'GitHub'
               }
             ]
           }
