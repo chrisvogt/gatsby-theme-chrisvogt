@@ -4,22 +4,18 @@ import { Fragment } from 'react'
 import { Link } from '@theme-ui/components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useRef, useState, useEffect } from 'react'
-import useSiteMetadata from '../hooks/use-site-metadata'
+import useNavigationData from '../hooks/use-navigation-data'
 import {
-  getFlickrWidgetDataSource,
-  getGithubWidgetDataSource,
-  getGoodreadsWidgetDataSource,
-  getInstagramWidgetDataSource,
-  getSpotifyWidgetDataSource,
-  getSteamWidgetDataSource
-} from '../selectors/metadata'
-
-import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons'
+  faHome, faNewspaper, faUser, faMusic, faCamera
+} from '@fortawesome/free-solid-svg-icons'
 import { faFlickr, faGithub, faGoodreads, faInstagram, faSpotify, faSteam } from '@fortawesome/free-brands-svg-icons'
 
 const icons = {
   faHome,
   faNewspaper,
+  faUser,
+  faMusic,
+  faCamera,
   faFlickr,
   faGithub,
   faGoodreads,
@@ -28,18 +24,16 @@ const icons = {
   faSteam
 }
 
-/**
- * Link Registry
- *
- * The items in this array follow the following schema:
- *
- * * rule {function} – validator function
- * * value {object} – props for the link item
- */
-const linkRegistry = [
-  {
-    rule: () => true, // Everyone sees this.
-    value: {
+const HomeNavigation = () => {
+  const navItemsRef = useRef()
+  const [activeSection, setActiveSection] = useState('home')
+
+  const navigation = useNavigationData()
+  const homeItems = navigation?.header?.home || []
+
+  // Create navigation items from the configuration
+  const links = [
+    {
       href: '#top',
       icon: {
         name: 'home',
@@ -47,11 +41,8 @@ const linkRegistry = [
       },
       id: 'home',
       text: 'Home'
-    }
-  },
-  {
-    rule: () => true, // Everyone sees this.
-    value: {
+    },
+    {
       href: '#posts',
       icon: {
         name: 'newspaper',
@@ -59,106 +50,17 @@ const linkRegistry = [
       },
       id: 'posts',
       text: 'Latest Posts'
-    }
-  },
-  {
-    rule: options => !!options.isInstagramWidgetEnabled,
-    value: {
-      href: '#instagram',
+    },
+    ...homeItems.map(item => ({
+      href: item.path,
       icon: {
-        name: 'instagram',
-        reactIcon: 'faInstagram'
+        name: item.slug,
+        reactIcon: `fa${item.slug.charAt(0).toUpperCase() + item.slug.slice(1)}`
       },
-      id: 'instagram',
-      text: 'Instagram'
-    }
-  },
-  {
-    rule: options => !!options.isFlickrWidgetEnabled,
-    value: {
-      href: '#flickr',
-      icon: {
-        name: 'flickr',
-        reactIcon: 'faFlickr'
-      },
-      id: 'flickr',
-      text: 'Flickr'
-    }
-  },
-  {
-    rule: options => !!options.isGitHubWidgetEnabled,
-    value: {
-      href: '#github',
-      icon: {
-        name: 'github',
-        reactIcon: 'faGithub'
-      },
-      id: 'github',
-      text: 'GitHub'
-    }
-  },
-  {
-    rule: options => !!options.isGoodreadsWidgetEnabled,
-    value: {
-      href: '#goodreads',
-      icon: {
-        name: 'goodreads',
-        reactIcon: 'faGoodreads'
-      },
-      id: 'goodreads',
-      text: 'Goodreads'
-    }
-  },
-  {
-    rule: options => !!options.isSpotifyWidgetEnabled,
-    value: {
-      href: '#spotify',
-      icon: {
-        name: 'spotify',
-        reactIcon: 'faSpotify'
-      },
-      id: 'spotify',
-      text: 'Spotify'
-    }
-  },
-  {
-    rule: options => !!options.isSteamWidgetEnabled,
-    value: {
-      href: '#steam',
-      icon: {
-        name: 'steam',
-        reactIcon: 'faSteam'
-      },
-      id: 'steam',
-      text: 'Steam'
-    }
-  }
-]
-
-const determineLinksToRender = (options = {}) => {
-  const links = linkRegistry.reduce((linksToRender, { rule, value }) => {
-    if (rule(options)) {
-      linksToRender.push(value)
-    }
-    return linksToRender
-  }, [])
-
-  return links
-}
-
-const HomeNavigation = () => {
-  const navItemsRef = useRef()
-  const [activeSection, setActiveSection] = useState('home')
-
-  const metadata = useSiteMetadata()
-  const links = determineLinksToRender({
-    isFlickrWidgetEnabled: getFlickrWidgetDataSource(metadata),
-    isGitHubWidgetEnabled: getGithubWidgetDataSource(metadata),
-    isGoodreadsWidgetEnabled: getGoodreadsWidgetDataSource(metadata),
-    isInstagramWidgetEnabled: getInstagramWidgetDataSource(metadata),
-    isSpotifyWidgetEnabled: getSpotifyWidgetDataSource(metadata),
-    isSteamWidgetEnabled: getSteamWidgetDataSource(metadata)
-  })
+      id: item.slug,
+      text: item.text
+    }))
+  ]
 
   useEffect(() => {
     if (!document) {

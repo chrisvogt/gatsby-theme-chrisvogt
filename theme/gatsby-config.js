@@ -1,95 +1,53 @@
 const path = require('path')
+const { mergeConfig } = require('./src/data/theme-config')
 
-module.exports = () => ({
-  siteMetadata: {
-    avatarURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo',
-    baseURL: 'https://www.chrisvogt.me',
-    description: 'My personal website. A GatsbyJS blog with built-in Instagram, Goodreads, GitHub and Spotify widgets.',
-    footerText: 'Made with ❤️ in San Francisco',
-    headline: 'www.chrisvogt.me',
-    hCard: {
-      email: 'mail@example.com',
-      givenName: 'Given',
-      familyName: 'Name',
-      locality: 'City',
-      region: 'ST',
-      countryName: 'Country',
-      category: 'Professional Title',
-      photoURL: 'https://res.cloudinary.com/chrisvogt/image/upload/f_auto/v1573025803/avatar_2x_srlojo'
+module.exports = (themeOptions = {}) => {
+  const config = mergeConfig(themeOptions)
+
+  return {
+    siteMetadata: {
+      ...config.siteMetadata,
+      navigation: config.navigation,
+      widgets: config.widgets
     },
-    imageURL: '',
-    languageCode: 'en',
-    siteUrl: 'https://www.chrisvogt.me',
-    social: {
-      twitterUsername: ''
-    },
-    subhead: 'My personal blog and website',
-    title: 'My Personal Website',
-    titleTemplate: '%s · www.chrisvogt.me',
-    widgets: {
-      flickr: {
-        username: '',
-        widgetDataSource: ''
+    plugins: [
+      {
+        resolve: 'gatsby-plugin-mdx',
+        options: {
+          gatsbyRemarkPlugins: [
+            'gatsby-remark-prismjs',
+            'gatsby-remark-images',
+            'gatsby-remark-embed-video',
+            'gatsby-remark-copy-linked-files',
+            'gatsby-remark-autolink-headers'
+          ]
+        }
       },
-      github: {
-        username: '',
-        widgetDataSource: ''
+      {
+        resolve: 'gatsby-plugin-page-creator',
+        options: {
+          path: path.join(__dirname, 'src/pages')
+        }
       },
-      goodreads: {
-        username: '',
-        widgetDataSource: ''
+      {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          path: path.join(__dirname, 'src/data')
+        }
       },
-      instagram: {
-        username: '',
-        widgetDataSource: ''
+      {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          path: 'content',
+          name: 'content'
+        }
       },
-      spotify: {
-        username: '',
-        widgetDataSource: ''
-      },
-      steam: {
-        username: '',
-        widgetDataSource: ''
-      }
-    }
-  },
-  plugins: [
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        gatsbyRemarkPlugins: [
-          'gatsby-remark-prismjs',
-          'gatsby-remark-images',
-          'gatsby-remark-embed-video',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-autolink-headers'
-        ]
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-page-creator',
-      options: {
-        path: path.join(__dirname, 'src/pages')
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: path.join(__dirname, 'src/data')
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: 'content',
-        name: 'content'
-      }
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-emotion',
-    'gatsby-theme-style-guide',
-    'gatsby-transformer-json',
-    'gatsby-plugin-theme-ui'
-  ]
-})
+      'gatsby-plugin-sharp',
+      'gatsby-transformer-sharp',
+      'gatsby-plugin-emotion',
+      'gatsby-theme-style-guide',
+      'gatsby-transformer-json',
+      'gatsby-plugin-theme-ui'
+    ]
+  }
+}
