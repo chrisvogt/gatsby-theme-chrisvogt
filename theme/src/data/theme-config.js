@@ -3,7 +3,7 @@
  * This can be overridden by theme options in gatsby-config.js
  */
 
-const mergeWith = require('lodash.mergeWith')
+const { mergeWith } = require('lodash')
 
 const defaultConfig = {
   // Core site metadata
