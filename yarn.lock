@@ -20476,7 +20476,6 @@ __metadata:
     husky: "npm:^9.1.7"
     lint-staged: "npm:^16.1.2"
     lodash: "npm:^4.17.21"
-    lodash.merge: "npm:^4.6.2"
     prettier: "npm:^3.6.2"
     pretty-quick: "npm:^4.2.2"
   languageName: unknown
