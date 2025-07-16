@@ -236,6 +236,7 @@ yarn test:coverage
 ### Test Reliability
 
 Recent improvements in version 0.51.0:
+
 - ✅ Fixed GraphQL errors in test environment
 - ✅ Improved navigation data handling
 - ✅ Enhanced test mocking for Gatsby components

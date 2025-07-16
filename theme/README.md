@@ -68,13 +68,13 @@ The theme uses a modular configuration system that allows you to customize every
       siteUrl: 'https://example.com',
       baseURL: 'https://example.com',
       languageCode: 'en',
-      
+
       // Personal branding
       headline: 'My Name',
       subhead: 'Personal blog and portfolio',
       avatarURL: '/images/avatar.jpg',
       imageURL: '/images/og-image.png',
-      
+
       // Contact information (hCard microformat)
       hCard: {
         email: 'mail@example.com',
@@ -86,15 +86,15 @@ The theme uses a modular configuration system that allows you to customize every
         category: 'Professional Title',
         photoURL: '/images/avatar.jpg'
       },
-      
+
       // Social media
       social: {
         twitterUsername: '@username'
       },
-      
+
       // Footer
       footerText: 'Made with ❤️',
-      
+
       // SEO
       titleTemplate: '%s · My Website'
     }
@@ -206,10 +206,10 @@ Create blog posts using MDX in your `content/blog/` directory:
 
 ```mdx
 ---
-title: "My First Blog Post"
-date: "2024-01-01"
-category: "blog"
-slug: "my-first-post"
+title: 'My First Blog Post'
+date: '2024-01-01'
+category: 'blog'
+slug: 'my-first-post'
 ---
 
 # My First Blog Post
@@ -230,17 +230,17 @@ Create music posts in your `content/music/` directory:
 
 ```mdx
 ---
-title: "My New Song"
-date: "2024-01-01"
-category: "music"
-slug: "my-new-song"
+title: 'My New Song'
+date: '2024-01-01'
+category: 'music'
+slug: 'my-new-song'
 ---
 
 # My New Song
 
 Listen to my latest track!
 
-<Spotify trackId="4iV5W9uYEdYUVa79Axb7Rh" />
+<Spotify trackId='4iV5W9uYEdYUVa79Axb7Rh' />
 ```
 
 ## 🎨 Customization
@@ -313,6 +313,7 @@ yarn test:coverage
 ```
 
 **Test Coverage:**
+
 - ✅ 79 test suites passing
 - ✅ 459 individual tests passing
 - ✅ 69 snapshot tests
@@ -323,36 +324,42 @@ yarn test:coverage
 ## 📦 Available Widgets
 
 ### GitHub Widget
+
 - Profile statistics
 - Pinned repositories
 - Recent pull requests
 - Activity timeline
 
 ### Instagram Widget
+
 - Recent photos
 - Lightbox gallery
 - Engagement metrics
 - Profile information
 
 ### Goodreads Widget
+
 - Currently reading
 - Recently read books
 - Reading progress
 - Book recommendations
 
 ### Spotify Widget
+
 - Top tracks
 - Playlists
 - Recently played
 - Audio previews
 
 ### Steam Widget
+
 - Recently played games
 - Game statistics
 - AI-generated summaries
 - Time tracking
 
 ### Flickr Widget
+
 - Photo galleries
 - Image collections
 - Photo metadata
@@ -361,11 +368,13 @@ yarn test:coverage
 ## 🔧 Recent Improvements (v0.51.0)
 
 ### Bug Fixes
+
 - **Fixed failing unit tests**: Resolved GraphQL errors in test environment
 - **Fixed navigation data handling**: Updated `useNavigationData` hook to return empty object when navigation data is missing
 - **Improved test reliability**: Added proper mocking for Gatsby's `useStaticQuery` and `graphql` in component tests
 
 ### Technical Improvements
+
 - Enhanced test coverage for navigation components
 - Improved error handling in navigation data hooks
 - Better separation of concerns between theme and site-specific configuration
