@@ -26,11 +26,16 @@ const useNavigationData = () => {
     }
   `)
 
+  // Return empty object if no navigation data exists
+  if (!navigation || !navigation.header) {
+    return {}
+  }
+
   // Defensive: always return arrays for header.left and header.home
   const result = {
     header: {
-      left: navigation?.header?.left || [],
-      home: navigation?.header?.home || []
+      left: navigation.header.left || [],
+      home: navigation.header.home || []
     }
   }
   console.log('useNavigationData result:', result)
