@@ -36,7 +36,8 @@
     "pretty-quick": "^4.2.2"
   },
   "dependencies": {
-    "boxen": "^8.0.1"
+    "boxen": "^8.0.1",
+    "lodash": "^4.17.21"
   },
   "packageManager": "yarn@4.9.2"
 }

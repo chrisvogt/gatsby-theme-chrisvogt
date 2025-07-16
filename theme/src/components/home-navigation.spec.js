@@ -3,8 +3,10 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import HomeNavigation from './home-navigation'
 import useSiteMetadata from '../hooks/use-site-metadata'
+import useNavigationData from '../hooks/use-navigation-data'
 
 jest.mock('../hooks/use-site-metadata')
+jest.mock('../hooks/use-navigation-data')
 
 const mockSiteMetadata = {
   widgets: {
@@ -15,9 +17,41 @@ const mockSiteMetadata = {
   }
 }
 
+const mockNavigationData = {
+  header: {
+    home: [
+      {
+        path: '#instagram',
+        slug: 'instagram',
+        text: 'Instagram',
+        title: 'Instagram'
+      },
+      {
+        path: '#github',
+        slug: 'github',
+        text: 'GitHub',
+        title: 'GitHub'
+      },
+      {
+        path: '#goodreads',
+        slug: 'goodreads',
+        text: 'Goodreads',
+        title: 'Goodreads'
+      },
+      {
+        path: '#spotify',
+        slug: 'spotify',
+        text: 'Spotify',
+        title: 'Spotify'
+      }
+    ]
+  }
+}
+
 describe('HomeNavigation', () => {
   beforeEach(() => {
     useSiteMetadata.mockImplementation(() => mockSiteMetadata)
+    useNavigationData.mockImplementation(() => mockNavigationData)
   })
 
   it('renders all links when all widgets are enabled', () => {
@@ -32,6 +66,7 @@ describe('HomeNavigation', () => {
 
   it('renders only mandatory links when no widgets are enabled', () => {
     useSiteMetadata.mockImplementation(() => ({ widgets: {} }))
+    useNavigationData.mockImplementation(() => ({ header: { home: [] } }))
     render(<HomeNavigation />)
     expect(screen.getByText('Home')).toBeInTheDocument()
     expect(screen.getByText('Latest Posts')).toBeInTheDocument()
@@ -57,6 +92,7 @@ describe('HomeNavigation', () => {
 
   it('does not break when an invalid icon is provided', () => {
     useSiteMetadata.mockImplementation(() => ({ widgets: {} }))
+    useNavigationData.mockImplementation(() => ({ header: { home: [] } }))
     render(<HomeNavigation />)
     expect(screen.queryByRole('img')).not.toBeInTheDocument() // No icons should render
   })

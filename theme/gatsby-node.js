@@ -68,6 +68,61 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  // Define custom types for siteMetadata
+  const typeDefs = `
+    type SiteSiteMetadata implements Node {
+      navigation: SiteSiteMetadataNavigation
+      widgets: SiteSiteMetadataWidgets
+    }
+
+    type SiteSiteMetadataNavigation {
+      header: SiteSiteMetadataNavigationHeader
+    }
+
+    type SiteSiteMetadataNavigationHeader {
+      left: [SiteSiteMetadataNavigationItem]
+      home: [SiteSiteMetadataNavigationItem]
+    }
+
+    type SiteSiteMetadataNavigationItem {
+      path: String!
+      slug: String!
+      text: String!
+      title: String!
+    }
+
+    type SiteSiteMetadataWidgets {
+      github: SiteSiteMetadataWidgetConfig
+      instagram: SiteSiteMetadataWidgetConfig
+      goodreads: SiteSiteMetadataWidgetConfig
+      spotify: SiteSiteMetadataWidgetConfig
+      steam: SiteSiteMetadataWidgetConfig
+      flickr: SiteSiteMetadataWidgetConfig
+    }
+
+    type SiteSiteMetadataWidgetConfig {
+      username: String
+      widgetDataSource: String
+    }
+
+    type SiteSiteMetadataHCard {
+      email: String
+      givenName: String
+      familyName: String
+      locality: String
+      region: String
+      countryName: String
+      category: String
+      photoURL: String
+    }
+  `
+
+  createTypes(typeDefs)
+}
+
 exports.onCreateNode = ({ node, getNode, actions, reporter }) => {
   const { createNodeField } = actions
 
