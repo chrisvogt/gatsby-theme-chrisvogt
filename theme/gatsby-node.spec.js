@@ -210,31 +210,15 @@ describe('gatsby-node', () => {
         reporter: mockReporter
       })
 
-      // Check that createNodeField was called with the path field
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'path',
-        node,
-        value: '/blog/test-slug'
-      })
-
-      // Check that other fields were also created
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'category',
-        node,
-        value: 'blog'
-      })
-
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'type',
-        node,
-        value: 'post'
-      })
-
-      expect(mockCreateNodeField).toHaveBeenCalledWith({
-        name: 'slug',
-        node,
-        value: 'test-slug'
-      })
+      const expectedCalls = [
+        { name: 'category', node, value: 'blog' },
+        { name: 'type', node, value: 'post' },
+        { name: 'slug', node, value: 'test-slug' },
+        { name: 'id', node, value: 'test-node' },
+        { name: 'title', node, value: 'Test Title' },
+        { name: 'path', node, value: '/test-slug' }
+      ]
+      expect(mockCreateNodeField.mock.calls.map(args => args[0])).toEqual(expect.arrayContaining(expectedCalls))
     })
 
     it('should handle missing slug with panic', () => {

@@ -15625,6 +15625,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.mergewith@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "lodash.mergewith@npm:4.6.2"
+  checksum: 10c0/4adbed65ff96fd65b0b3861f6899f98304f90fd71e7f1eb36c1270e05d500ee7f5ec44c02ef979b5ddbf75c0a0b9b99c35f0ad58f4011934c4d4e99e5200b3b5
+  languageName: node
+  linkType: hard
+
 "lodash.truncate@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
@@ -20476,6 +20483,7 @@ __metadata:
     husky: "npm:^9.1.7"
     lint-staged: "npm:^16.1.2"
     lodash.merge: "npm:^4.6.2"
+    lodash.mergewith: "npm:^4.6.2"
     prettier: "npm:^3.6.2"
     pretty-quick: "npm:^4.2.2"
   languageName: unknown
