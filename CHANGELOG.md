@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.54.0
+
+### ✨ Features
+
+- **About Page Decoupling**: Added generic about pages to both theme and Chronogrove site
+  - **Theme Version** (`theme/src/pages/about.js`): Generic placeholder content for theme users to customize
+  - **Chronogrove Version** (`www.chronogrove.com/src/pages/about.js`): Theme-focused documentation highlighting features and capabilities
+  - Both versions follow established component patterns with Layout, SEO, and Theme UI integration
+  - Eliminates dependency on personal site (`www.chrisvogt.me`) for basic page structure
+
+### 🎯 Strategic Impact
+
+- **Theme Reusability**: Provides ready-to-use about page template for theme adopters
+- **Documentation**: Creates dedicated space for Chronogrove theme marketing and feature documentation
+- **Decoupling Progress**: Continues initiative to separate personal content from reusable theme components
+
+### 🧪 Testing
+
+- **100% Code Coverage**: Both about pages achieve complete test coverage (statements, branches, functions, lines)
+- **Comprehensive Test Suites**: 10 total tests covering component rendering, content verification, SEO integration, and accessibility
+- **Architecture Compliance**: Tests follow established project patterns with proper mocking and ThemeUI integration
+- All 499 tests continue to pass
+
 ## 0.53.0
 
 ### ✨ Features
