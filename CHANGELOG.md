@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.52.0
+
+### ✨ Features
+
+- **Blog Page Template in Theme**: Moved blog page template from personal site to theme for reusability
+  - Relocated `blog.js` and `blog.spec.js` from `www.chrisvogt.me/src/pages/` to `theme/src/pages/`
+  - Updated import paths to be relative to theme directory
+  - All sites using the theme now get a consistent blog page implementation
+
+- **Shadowable Blog Page SEO**: Implemented shadowable Head export pattern for blog page SEO customization
+  - Blog page Head export moved to separate `blog-head.js` file for independent shadowing
+  - Theme provides generic SEO using site metadata with sensible fallbacks
+  - Sites can now customize blog SEO without duplicating entire page implementation
+  - Added shadow examples for both `www.chrisvogt.me` and `www.chronogrove.com`
+
+### 🔧 Technical Improvements
+
+- **Better Theme Architecture**: Improved separation of concerns between page logic and SEO metadata
+- **Enhanced Reusability**: Sites inherit page updates automatically while maintaining custom SEO
+- **Future-Proof Pattern**: Establishes pattern for shadowable components across other pages
+
+### 🧪 Testing
+
+- Fixed blog.spec.js import paths to use relative theme paths
+- Added blog-head component mock for proper test coverage
+- All existing blog page tests continue to pass
+
+### 📚 Breaking Changes
+
+None. This change is fully backward compatible - existing sites will automatically use the generic SEO from the theme.
+
 ## 0.51.0
 
 ### Bug Fixes

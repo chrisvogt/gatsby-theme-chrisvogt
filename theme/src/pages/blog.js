@@ -4,11 +4,10 @@ import { Themed } from '@theme-ui/mdx'
 import { Flex } from '@theme-ui/components'
 import { graphql } from 'gatsby'
 
-import { getPosts } from '../../../theme/src/hooks/use-recent-posts'
-import Layout from '../../../theme/src/components/layout'
-import PageHeader from '../../../theme/src/components/blog/page-header'
-import PostCard from '../../../theme/src/components/widgets/recent-posts/post-card'
-import Seo from '../../../theme/src/components/seo'
+import { getPosts } from '../hooks/use-recent-posts'
+import Layout from '../components/layout'
+import PageHeader from '../components/blog/page-header'
+import PostCard from '../components/widgets/recent-posts/post-card'
 
 const BlogIndexPage = ({ data }) => {
   const posts = getPosts(data)?.filter(
@@ -59,15 +58,7 @@ const BlogIndexPage = ({ data }) => {
   )
 }
 
-export const Head = () => (
-  <Seo
-    title="Chris Vogt's Blog - Latest Posts and Insights"
-    description='Read the latest blog posts and insights from Chris Vogt. Explore articles on technology, photography, music, and personal growth on chrisvogt.me.'
-  >
-    <meta property='og:url' content='https://www.chrisvogt.me/blog/' />
-    <meta property='og:type' content='website' />
-  </Seo>
-)
+export { default as Head } from './blog-head'
 
 export const pageQuery = graphql`
   query QueryRecentPosts {
