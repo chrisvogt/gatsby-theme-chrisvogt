@@ -49,4 +49,4 @@ describe('BlogHead (chrisvogt.me shadow)', () => {
     expect(description).toContain('chrisvogt.me')
     expect(description).toContain('technology, photography, music, and personal growth')
   })
-}) 
+})

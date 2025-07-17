@@ -54,4 +54,4 @@ describe('BlogHead', () => {
     // Verify that the description is passed through
     expect(seoElement.getAttribute('data-description')).toBe('Test site description')
   })
-}) 
+})

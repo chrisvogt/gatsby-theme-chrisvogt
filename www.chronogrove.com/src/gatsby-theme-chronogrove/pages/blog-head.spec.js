@@ -49,4 +49,4 @@ describe('BlogHead (chronogrove.com shadow)', () => {
     expect(description).toContain('Chronogrove')
     expect(description).toContain('technology, development')
   })
-}) 
+})
