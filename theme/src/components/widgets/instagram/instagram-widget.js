@@ -140,7 +140,7 @@ export default () => {
         </Grid>
       </div>
 
-      {!isLoading && (
+      {!isLoading && media?.length > MAX_IMAGES.default && (
         <div sx={{ my: 4, textAlign: 'center' }}>
           <Button onClick={() => setIsShowingMore(!isShowingMore)}>{isShowingMore ? 'Show Less' : 'Show More'}</Button>
         </div>
