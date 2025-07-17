@@ -51,7 +51,42 @@ module.exports = {
             twitterUsername: 'chronogrove'
           },
           footerText: 'Made with ❤️ using gatsby-theme-chronogrove',
-          titleTemplate: '%s · A GatsbyJS Theme for Personal Websites'
+          titleTemplate: '%s · A GatsbyJS Theme for Personal Websites',
+          socialProfiles: [
+            {
+              displayName: 'Twitter',
+              slug: 'twitter',
+              href: 'https://twitter.com/chronogrove',
+              icon: {
+                class: 'fab fa-x-twitter',
+                name: 'twitter',
+                reactIcon: 'faXTwitter',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'Instagram',
+              slug: 'instagram',
+              href: 'https://instagram.com/chronogrove',
+              icon: {
+                class: 'fab fa-instagram',
+                name: 'instagram',
+                reactIcon: 'faInstagram',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'LinkedIn',
+              slug: 'linkedin',
+              href: 'https://linkedin.com/in/cjvogt',
+              icon: {
+                class: 'fab fa-linkedin',
+                name: 'linkedin',
+                reactIcon: 'faLinkedin',
+                set: 'fab'
+              }
+            }
+          ]
         },
         navigation: {
           header: {

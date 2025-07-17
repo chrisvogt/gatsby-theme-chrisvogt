@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.53.0
+
+### ✨ Features
+
+- **Configurable Social Profiles**: Decoupled social profiles from theme to site metadata for better reusability
+  - Removed hardcoded `social-profiles.json` containing personal information
+  - Added configurable `socialProfiles` array to theme configuration with sensible defaults
+  - Updated GraphQL schema to support social profiles in site metadata
+  - Modified `use-social-profiles` hook to read from site metadata instead of JSON file
+  - Each site can now configure its own social media profiles independently
+
+### 🔄 Configuration Changes
+
+- **Theme Configuration**: Added default social profiles (GitHub, Twitter, Instagram, LinkedIn) to theme-config.js
+- **Site Configurations**: 
+  - **chrisvogt.me**: Configured with full social profile set (7 platforms)
+  - **chronogrove.com**: Configured with minimal profiles (Twitter, Instagram, LinkedIn)
+
+### ⚠️ Breaking Changes
+
+- **Social Profiles**: Sites using this theme must now configure social profiles in their `gatsby-config.js`
+  - Add `socialProfiles` array to theme options' `siteMetadata`
+  - See migration guide in PR for configuration examples
+  - Theme provides sensible defaults to prevent complete breakage
+
+### 🧪 Testing
+
+- Updated all tests to work with new social profiles implementation
+- Maintained 100% code coverage on all changed files
+- All 494 tests continue to pass
+
 ## 0.52.1
 
 ### 🐛 Bug Fixes
