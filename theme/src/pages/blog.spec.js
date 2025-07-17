@@ -4,21 +4,22 @@ import '@testing-library/jest-dom'
 import BlogIndexPage from './blog'
 
 // Mock the components
-jest.mock('../../../theme/src/components/layout', () => ({ children }) => <div data-testid='layout'>{children}</div>)
-jest.mock('../../../theme/src/components/blog/page-header', () => ({ children }) => <h1>{children}</h1>)
-jest.mock('../../../theme/src/components/widgets/recent-posts/post-card', () => ({ title, category }) => (
+jest.mock('../components/layout', () => ({ children }) => <div data-testid='layout'>{children}</div>)
+jest.mock('../components/blog/page-header', () => ({ children }) => <h1>{children}</h1>)
+jest.mock('../components/widgets/recent-posts/post-card', () => ({ title, category }) => (
   <div data-testid='post-card' data-category={category}>
     {title}
   </div>
 ))
-jest.mock('../../../theme/src/components/seo', () => () => <div data-testid='seo' />)
+jest.mock('../components/seo', () => () => <div data-testid='seo' />)
+jest.mock('./blog-head', () => () => <div data-testid='blog-head' />)
 
 // Mock the getPosts function
-jest.mock('../../../theme/src/hooks/use-recent-posts', () => ({
+jest.mock('../hooks/use-recent-posts', () => ({
   getPosts: jest.fn()
 }))
 
-import { getPosts } from '../../../theme/src/hooks/use-recent-posts'
+import { getPosts } from '../hooks/use-recent-posts'
 
 describe('BlogIndexPage', () => {
   const mockPosts = [
