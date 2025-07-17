@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.52.1
+
+### 🐛 Bug Fixes
+
+- **Instagram Widget**: Fixed "Show More" button to only appear when there are actually more images to display
+  - Button now only renders when there are more than 8 images available
+  - Prevents confusing UX for users with small image collections (≤8 images)
+  - "Show Less" functionality continues to work correctly when expanded
+
+### 🧪 Testing
+
+- Added test coverage for button visibility logic with different image counts
+- Updated existing tests to work with new conditional button rendering
+- All 180 widget tests continue to pass
+
 ## 0.52.0
 
 ### ✨ Features

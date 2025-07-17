@@ -126,9 +126,44 @@ describe('InstagramWidget', () => {
     )
   })
 
-  it('toggles between "Show More" and "Show Less"', () => {
+  it('does not show "Show More" button when there are 8 or fewer images', () => {
     render(
       <ReduxProvider store={store}>
+        <ThemeUIProvider theme={theme}>
+          <InstagramWidget />
+        </ThemeUIProvider>
+      </ReduxProvider>
+    )
+
+    expect(screen.queryByText(/Show More/i)).not.toBeInTheDocument()
+  })
+
+  it('shows and toggles "Show More"/"Show Less" button when there are more than 8 images', () => {
+    const storeWithManyImages = mockStore({
+      widgets: {
+        instagram: {
+          state: 'SUCCESS',
+          data: {
+            collections: {
+              media: Array.from({ length: 10 }, (_, i) => ({
+                id: `image-${i}`,
+                caption: `Test Caption ${i}`,
+                cdnMediaURL: `https://cdn.chrisvogt.me/images/fake-instagram-image-${i}.jpg`,
+                mediaType: 'IMAGE',
+                permalink: `https://instagram.com/p/test${i}`
+              }))
+            },
+            metrics: [
+              { displayName: 'Followers', id: '1', value: 100 },
+              { displayName: 'Following', id: '2', value: 50 }
+            ]
+          }
+        }
+      }
+    })
+
+    render(
+      <ReduxProvider store={storeWithManyImages}>
         <ThemeUIProvider theme={theme}>
           <InstagramWidget />
         </ThemeUIProvider>
@@ -160,8 +195,28 @@ describe('InstagramWidget', () => {
   })
 
   it('calls VanillaTilt.init when isShowingMore or !isLoading is true', () => {
+    const storeWithManyImages = mockStore({
+      widgets: {
+        instagram: {
+          state: 'SUCCESS',
+          data: {
+            collections: {
+              media: Array.from({ length: 10 }, (_, i) => ({
+                id: `image-${i}`,
+                caption: `Test Caption ${i}`,
+                cdnMediaURL: `https://cdn.chrisvogt.me/images/fake-instagram-image-${i}.jpg`,
+                mediaType: 'IMAGE',
+                permalink: `https://instagram.com/p/test${i}`
+              }))
+            },
+            metrics: []
+          }
+        }
+      }
+    })
+
     render(
-      <ReduxProvider store={store}>
+      <ReduxProvider store={storeWithManyImages}>
         <ThemeUIProvider theme={theme}>
           <InstagramWidget />
         </ThemeUIProvider>
@@ -173,7 +228,7 @@ describe('InstagramWidget', () => {
 
     VanillaTilt.init.mockClear()
 
-    store = mockStore({
+    const storeWithNoImages = mockStore({
       widgets: {
         instagram: {
           state: 'SUCCESS',
@@ -186,7 +241,7 @@ describe('InstagramWidget', () => {
     })
 
     render(
-      <ReduxProvider store={store}>
+      <ReduxProvider store={storeWithNoImages}>
         <ThemeUIProvider theme={theme}>
           <InstagramWidget />
         </ThemeUIProvider>
