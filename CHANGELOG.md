@@ -14,7 +14,7 @@
 ### 🔄 Configuration Changes
 
 - **Theme Configuration**: Added default social profiles (GitHub, Twitter, Instagram, LinkedIn) to theme-config.js
-- **Site Configurations**: 
+- **Site Configurations**:
   - **chrisvogt.me**: Configured with full social profile set (7 platforms)
   - **chronogrove.com**: Configured with minimal profiles (Twitter, Instagram, LinkedIn)
 
