@@ -24,6 +24,17 @@ const useSiteMetadata = () => {
           social {
             twitterUsername
           }
+          socialProfiles {
+            displayName
+            href
+            slug
+            icon {
+              class
+              name
+              reactIcon
+              set
+            }
+          }
           subhead
           title
           titleTemplate

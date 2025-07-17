@@ -76,6 +76,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type SiteSiteMetadata implements Node {
       navigation: SiteSiteMetadataNavigation
       widgets: SiteSiteMetadataWidgets
+      socialProfiles: [SiteSiteMetadataSocialProfile]
     }
 
     type SiteSiteMetadataNavigation {
@@ -117,6 +118,20 @@ exports.createSchemaCustomization = ({ actions }) => {
       countryName: String
       category: String
       photoURL: String
+    }
+
+    type SiteSiteMetadataSocialProfile {
+      displayName: String!
+      slug: String!
+      href: String!
+      icon: SiteSiteMetadataSocialProfileIcon!
+    }
+
+    type SiteSiteMetadataSocialProfileIcon {
+      class: String!
+      name: String!
+      reactIcon: String!
+      set: String!
     }
   `
 

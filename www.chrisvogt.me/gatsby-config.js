@@ -91,7 +91,86 @@ module.exports = {
             twitterUsername: '@c1v0'
           },
           footerText: 'Made with ❤️ in San Francisco',
-          titleTemplate: '%s — Chris Vogt, Software Engineer in San Francisco'
+          titleTemplate: '%s — Chris Vogt, Software Engineer in San Francisco',
+          socialProfiles: [
+            {
+              displayName: 'GitHub',
+              slug: 'github',
+              href: 'https://github.com/chrisvogt',
+              icon: {
+                class: 'fab fa-github',
+                name: 'github',
+                reactIcon: 'faGithub',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'Instagram',
+              slug: 'instagram',
+              href: 'https://instagram.com/c1v0',
+              icon: {
+                class: 'fab fa-instagram',
+                name: 'instagram',
+                reactIcon: 'faInstagram',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'LinkedIn',
+              slug: 'linkedin',
+              href: 'https://www.linkedin.com/in/cjvogt',
+              icon: {
+                class: 'fab fa-linkedin',
+                name: 'linkedin',
+                reactIcon: 'faLinkedin',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'Twitter',
+              slug: 'twitter',
+              href: 'https://twitter.com/c1v0',
+              icon: {
+                class: 'fab fa-x-twitter',
+                name: 'twitter',
+                reactIcon: 'faXTwitter',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'BlueSky',
+              slug: 'bluesky',
+              href: 'https://bsky.app/profile/chrisvogt.me',
+              icon: {
+                class: 'fab fa-bluesky',
+                name: 'bluesky',
+                reactIcon: 'faBluesky',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'Mastodon',
+              slug: 'mastodon',
+              href: 'https://hachyderm.io/@chrisvogt',
+              icon: {
+                class: 'fab fa-x-mastodon',
+                name: 'mastodon',
+                reactIcon: 'faMastodon',
+                set: 'fab'
+              }
+            },
+            {
+              displayName: 'StackOverflow',
+              slug: 'stack-overflow',
+              href: 'https://stackoverflow.com/users/1391826/chris-vogt?tab=profile',
+              icon: {
+                class: 'fab fa-stack-overflow',
+                name: 'stack-overflow',
+                reactIcon: 'faStackOverflow',
+                set: 'fab'
+              }
+            }
+          ]
         },
         navigation: {
           header: {

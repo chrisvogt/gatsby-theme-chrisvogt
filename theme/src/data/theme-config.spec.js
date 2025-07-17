@@ -32,6 +32,52 @@ describe('theme-config', () => {
         social: {
           twitterUsername: ''
         },
+        socialProfiles: [
+          {
+            displayName: 'GitHub',
+            slug: 'github',
+            href: 'https://github.com/username',
+            icon: {
+              class: 'fab fa-github',
+              name: 'github',
+              reactIcon: 'faGithub',
+              set: 'fab'
+            }
+          },
+          {
+            displayName: 'Twitter',
+            slug: 'twitter',
+            href: 'https://twitter.com/username',
+            icon: {
+              class: 'fab fa-x-twitter',
+              name: 'twitter',
+              reactIcon: 'faXTwitter',
+              set: 'fab'
+            }
+          },
+          {
+            displayName: 'Instagram',
+            slug: 'instagram',
+            href: 'https://instagram.com/username',
+            icon: {
+              class: 'fab fa-instagram',
+              name: 'instagram',
+              reactIcon: 'faInstagram',
+              set: 'fab'
+            }
+          },
+          {
+            displayName: 'LinkedIn',
+            slug: 'linkedin',
+            href: 'https://linkedin.com/in/username',
+            icon: {
+              class: 'fab fa-linkedin',
+              name: 'linkedin',
+              reactIcon: 'faLinkedin',
+              set: 'fab'
+            }
+          }
+        ],
         footerText: 'Made with ❤️',
         titleTemplate: '%s · My Website'
       })
