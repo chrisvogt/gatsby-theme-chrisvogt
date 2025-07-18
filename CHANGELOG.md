@@ -6,7 +6,7 @@
 
 - **Home Page Head Decoupling**: Extracted hardcoded personal SEO content from home template for better theme reusability
   - **Generic Theme Component** (`theme/src/templates/home-head.js`): Uses site metadata with fallback defaults for title, description, and structured data
-  - **Site-Specific Shadow Components**: 
+  - **Site-Specific Shadow Components**:
     - `www.chrisvogt.me/src/gatsby-theme-chronogrove/templates/home-head.js`: Personal SEO content with detailed structured data
     - `www.chronogrove.com/src/gatsby-theme-chronogrove/templates/home-head.js`: Theme-focused SEO content with SoftwareApplication schema
   - **Title Template Integration**: Fixed title duplication by properly utilizing site-specific `titleTemplate` configuration
