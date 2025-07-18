@@ -9,7 +9,7 @@ import HomeHeaderContent from '../components/home-header-content'
 import HomeNavigation from '../components/home-navigation.js'
 import HomeWidgets from '../components/home-widgets'
 import Layout from '../components/layout'
-import Seo from '../components/seo'
+import HomeHead from './home-head'
 
 const HomeTemplate = () => (
   <Layout hideFooter disableMainWrapper>
@@ -64,37 +64,7 @@ const HomeTemplate = () => (
   </Layout>
 )
 
-export const Head = () => (
-  <Seo
-    title='Chris Vogt - Software Engineer in San Francisco | Photography, Piano, and Travel Blog'
-    description="Explore Chris Vogt's digital garden. A Software Engineer in San Francisco, Chris shares his interest in photography, piano, and travel."
-    keywords='Chris Vogt, Software Engineer in San Francisco, GoDaddy engineer blog, photography blog, piano recordings, travel blog, personal blog, digital garden'
-  >
-    <meta property='og:url' content='https://www.chrisvogt.me' />
-    <meta property='og:type' content='website' />
-    <script type='application/ld+json'>
-      {`{
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chris Vogt",
-        "url": "https://www.chrisvogt.me",
-        "sameAs": [
-          "https://linkedin.com/in/cjvogt",
-          "https://github.com/chrisvogt",
-          "https://x.com/c1v0",
-          "https://twitter.com/c1v0",
-          "https://www.instagram.com/c1v0",
-          "https://stackoverflow.com/users/1391826/chris-vogt"
-        ],
-        "jobTitle": "Principal Software Engineer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "GoDaddy"
-        }
-      }`}
-    </script>
-  </Seo>
-)
+export const Head = () => <HomeHead />
 
 export const pageQuery = graphql`
   query {

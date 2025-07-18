@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.55.0
+
+### ✨ Features
+
+- **Home Page Head Decoupling**: Extracted hardcoded personal SEO content from home template for better theme reusability
+  - **Generic Theme Component** (`theme/src/templates/home-head.js`): Uses site metadata with fallback defaults for title, description, and structured data
+  - **Site-Specific Shadow Components**:
+    - `www.chrisvogt.me/src/gatsby-theme-chronogrove/templates/home-head.js`: Personal SEO content with detailed structured data
+    - `www.chronogrove.com/src/gatsby-theme-chronogrove/templates/home-head.js`: Theme-focused SEO content with SoftwareApplication schema
+  - **Title Template Integration**: Fixed title duplication by properly utilizing site-specific `titleTemplate` configuration
+  - Follows established shadow component pattern used for blog-head.js components
+
+### 🐛 Bug Fixes
+
+- **Title Duplication**: Resolved home page title showing duplicate site information (e.g., "Chris Vogt... — Chris Vogt...")
+  - Home pages now correctly display "Home — [Site Name]" format consistent with other pages
+  - Properly respects each site's `titleTemplate` configuration from gatsby-config.js
+
+### 🎯 Strategic Impact
+
+- **Theme Genericization**: Removes final hardcoded personal SEO content from home template
+- **Consistency**: Home page titles now follow same pattern as About, Blog, and other pages
+- **Reusability**: Theme users get sensible SEO defaults while maintaining full customization control
+- **Decoupling Progress**: Continues systematic separation of personal content from reusable theme components
+
+### 🧪 Testing
+
+- **Comprehensive Test Coverage**: All three home-head components achieve complete test coverage
+  - **Generic Component**: Tests site metadata integration, fallback values, and structured data generation
+  - **Site-Specific Components**: Verify proper SEO metadata, structured data schemas, and Open Graph tags
+- **Updated Home Template Tests**: Reflects new generic behavior while maintaining compatibility
+- All existing tests continue passing with updated expectations
+
 ## 0.54.0
 
 ### ✨ Features
