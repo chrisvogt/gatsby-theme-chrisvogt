@@ -10,7 +10,7 @@ const mockSiteMetadata = {
   widgets: {
     spotify: {
       username: 'mockusername',
-      widgetDataSource: 'https://fake-api.chrisvogt.me/social/spotify'
+      widgetDataSource: 'https://fake-api.example.com/social/spotify'
     }
   }
 }

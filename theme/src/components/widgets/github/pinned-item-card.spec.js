@@ -13,7 +13,7 @@ describe('Widget/GitHub/PinnedItemCard', () => {
     it('matches the repository variant snapshot', () => {
       const mockRepositoryItem = {
         description: 'A fake NodeJS project.',
-        nameWithOwner: 'chrisvogt/null',
+        nameWithOwner: 'themeuser/sample-repo',
         openGraphImageUrl: './fake-image-path.png',
         updatedAt: '1592808981'
       }

@@ -63,7 +63,7 @@ describe('HomeHead (chronogrove.com shadow)', () => {
 
     expect(structuredData.author).toEqual({
       '@type': 'Person',
-      name: 'Chris Vogt'
+      name: 'Theme User'
     })
   })
 

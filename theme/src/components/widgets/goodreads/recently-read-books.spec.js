@@ -222,12 +222,12 @@ describe('Widget/Goodreads/RecentlyReadBooks', () => {
   describe('book rendering', () => {
     it('handles both cdnMediaURL and thumbnail fallback', () => {
       const booksWithMixedUrls = [
-        { id: 'cdn', title: 'CDN Book', cdnMediaURL: 'https://chrisvogt.imgix.net/book1.jpg' },
+        { id: 'cdn', title: 'CDN Book', cdnMediaURL: 'https://images.imgix.net/book1.jpg' },
         { id: 'plain', title: 'Plain Book', thumbnail: 'https://example.com/book2.jpg' } // no cdnMediaURL
       ]
       renderWithRouter(<RecentlyReadBooks books={booksWithMixedUrls} isLoading={false} default />)
       const images = screen.getAllByTestId('book-preview-thumbnail')
-      expect(images[0]).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book1.jpg?auto=compress&auto=format')
+      expect(images[0]).toHaveAttribute('xlink:href', 'https://images.imgix.net/book1.jpg?auto=compress&auto=format')
       expect(images[1]).toHaveAttribute('xlink:href', 'https://example.com/book2.jpg')
     })
   })

@@ -7,7 +7,7 @@ exports[`GitHub Repository Renderer matches the snapshot 1`] = `
   <h4
     className="css-cpvk2h"
   >
-    chrisvogt/gatsby-theme-chronogrove
+    themeuser/gatsby-theme-chronogrove
   </h4>
   <span
     className="css-gulexy"

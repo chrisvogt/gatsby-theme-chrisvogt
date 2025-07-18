@@ -16,7 +16,7 @@ describe('Widget/GitHub/LastPullRequest', () => {
           name: 'Fake Project'
         },
         title: "Add fake information to the fake project's repository",
-        url: 'https://www.github.com/chrisvogt/null/pulls/42'
+        url: 'https://www.github.com/themeuser/sample-repo/pulls/42'
       }
       const tree = renderer.create(<LastPullRequest pullRequest={mockPullRequest} />).toJSON()
       expect(tree).toMatchSnapshot()

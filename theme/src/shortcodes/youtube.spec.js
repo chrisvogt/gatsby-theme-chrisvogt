@@ -7,7 +7,7 @@ describe('YouTube Shortcode', () => {
     const tree = renderer
       .create(
         <YouTube
-          title='Here, There And Everywhere (Piano Cover) by Chris Vogt'
+          title='Here, There And Everywhere (Piano Cover) by Theme User'
           url='https://www.youtube-nocookie.com/embed/XJashBvI17A'
         />
       )

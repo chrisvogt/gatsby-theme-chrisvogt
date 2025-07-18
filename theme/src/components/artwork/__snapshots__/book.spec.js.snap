@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Book matches the snapshot 1`] = `
 <svg
@@ -68,7 +68,7 @@ exports[`Book matches the snapshot 1`] = `
       height="190"
       transform="translate(14.53 -3.68) scale(0.5)"
       width="128"
-      xlinkHref="https://cdn.chrisvogt.me/images/fake-book-cover.jpg"
+      xlinkHref="https://cdn.example.com/images/fake-book-cover.jpg"
     />
   </g>
 </svg>

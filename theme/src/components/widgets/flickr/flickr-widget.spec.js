@@ -59,8 +59,8 @@ describe('FlickrWidget', () => {
                 {
                   id: '123',
                   title: 'Test Photo Title',
-                  thumbnailUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image.jpg',
-                  largeUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image-large.jpg'
+                  thumbnailUrl: 'https://cdn.example.com/images/fake-flickr-image.jpg',
+                  largeUrl: 'https://cdn.example.com/images/fake-flickr-image-large.jpg'
                 }
               ]
             },
@@ -123,7 +123,7 @@ describe('FlickrWidget', () => {
 
     const thumbnails = screen.getAllByAltText(/Flickr photo:/i)
     expect(thumbnails).toHaveLength(1)
-    expect(thumbnails[0]).toHaveAttribute('src', 'https://cdn.chrisvogt.me/images/fake-flickr-image.jpg')
+    expect(thumbnails[0]).toHaveAttribute('src', 'https://cdn.example.com/images/fake-flickr-image.jpg')
   })
 
   it('toggles between "Show More" and "Show Less"', () => {
@@ -270,8 +270,8 @@ describe('FlickrWidget', () => {
                 {
                   id: '123',
                   title: 'Test Photo Title',
-                  thumbnailUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image.jpg',
-                  largeUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image-large.jpg'
+                  thumbnailUrl: 'https://cdn.example.com/images/fake-flickr-image.jpg',
+                  largeUrl: 'https://cdn.example.com/images/fake-flickr-image-large.jpg'
                 }
               ]
             },
@@ -317,8 +317,8 @@ describe('FlickrWidget', () => {
               photos: Array(20).fill({
                 id: '123',
                 title: 'Test Photo Title',
-                thumbnailUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image.jpg',
-                largeUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image-large.jpg'
+                thumbnailUrl: 'https://cdn.example.com/images/fake-flickr-image.jpg',
+                largeUrl: 'https://cdn.example.com/images/fake-flickr-image-large.jpg'
               })
             },
             metrics: []

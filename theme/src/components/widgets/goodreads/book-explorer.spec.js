@@ -34,7 +34,7 @@ const renderWithRouter = ui =>
 describe('Widget/Goodreads/BookExplorer', () => {
   const mockBook = {
     authors: ['Test Author'],
-    cdnMediaURL: 'https://chrisvogt.imgix.net/book.jpg',
+    cdnMediaURL: 'https://images.imgix.net/book.jpg',
     description: 'Test description',
     infoLink: 'https://books.google.com/test',
     rating: '4',
@@ -61,7 +61,7 @@ describe('Widget/Goodreads/BookExplorer', () => {
   it('renders book image with webp format for CDN URLs', () => {
     renderWithRouter(<BookExplorer book={mockBook} onClose={() => {}} default />)
     const image = screen.getByTestId('book-preview-thumbnail')
-    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?auto=compress&auto=format')
+    expect(image).toHaveAttribute('xlink:href', 'https://images.imgix.net/book.jpg?auto=compress&auto=format')
   })
 
   it('renders rating stars correctly', () => {

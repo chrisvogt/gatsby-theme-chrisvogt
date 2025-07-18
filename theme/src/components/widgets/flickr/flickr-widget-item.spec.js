@@ -12,7 +12,7 @@ describe('FlickrWidgetItem', () => {
     photo: {
       id: '0123456789',
       title: 'Test Photo Title',
-      thumbnailUrl: 'https://cdn.chrisvogt.me/images/fake-flickr-image.jpg'
+      thumbnailUrl: 'https://cdn.example.com/images/fake-flickr-image.jpg'
     }
   }
 

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Widget/GitHub/PinnedItemCard snapshots matches the placeholder snapshot 1`] = `
 <div
@@ -121,7 +121,7 @@ exports[`Widget/GitHub/PinnedItemCard snapshots matches the repository variant s
     <h4
       className="css-cpvk2h"
     >
-      chrisvogt/null
+      themeuser/sample-repo
     </h4>
     <span
       className="css-gulexy"

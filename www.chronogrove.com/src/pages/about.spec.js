@@ -43,7 +43,7 @@ describe('AboutPage', () => {
   it('includes GitHub repository link', () => {
     renderWithTheme(<AboutPage />)
     const link = screen.getByRole('link', { name: /GitHub repository/i })
-    expect(link).toHaveAttribute('href', 'https://github.com/chrisvogt/gatsby-theme-chronogrove')
+    expect(link).toHaveAttribute('href', 'https://github.com/themeuser/gatsby-theme-chronogrove')
   })
 
   it('includes all key feature sections', () => {

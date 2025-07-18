@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Widget/GitHub/LastPullRequest snapshots matches the loading state snapshot 1`] = `
 <div
@@ -59,7 +59,7 @@ exports[`Widget/GitHub/LastPullRequest snapshots matches the repository variant 
   </h3>
   <a
     className="css-1ovdgfi"
-    href="https://www.github.com/chrisvogt/null/pulls/42"
+    href="https://www.github.com/themeuser/sample-repo/pulls/42"
   >
     <div
       className="css-1yz7e9k"

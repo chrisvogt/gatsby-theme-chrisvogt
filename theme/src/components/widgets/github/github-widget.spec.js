@@ -10,7 +10,7 @@ const mockSiteMetadata = {
   widgets: {
     github: {
       username: 'mockusername',
-      widgetDataSource: 'https://fake-api.chrisvogt.me/social/github'
+      widgetDataSource: 'https://fake-api.example.com/social/github'
     }
   }
 }
