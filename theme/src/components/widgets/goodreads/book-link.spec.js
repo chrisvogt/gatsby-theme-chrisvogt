@@ -33,11 +33,11 @@ describe('Widget/Goodreads/BookLink', () => {
   it('handles CDN URLs by appending webp format', () => {
     const cdnProps = {
       ...mockProps,
-      thumbnailURL: 'https://chrisvogt.imgix.net/book.jpg'
+      thumbnailURL: 'https://images.imgix.net/book.jpg'
     }
     render(<BookLink {...cdnProps} />)
     const image = screen.getByTestId('book-preview-thumbnail')
-    expect(image).toHaveAttribute('xlink:href', 'https://chrisvogt.imgix.net/book.jpg?auto=compress&auto=format')
+    expect(image).toHaveAttribute('xlink:href', 'https://images.imgix.net/book.jpg?auto=compress&auto=format')
   })
 
   it('preserves non-CDN URLs without modification', () => {

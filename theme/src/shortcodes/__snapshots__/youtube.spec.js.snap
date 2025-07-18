@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`YouTube Shortcode matches the snapshot 1`] = `
 <div
@@ -11,7 +11,7 @@ exports[`YouTube Shortcode matches the snapshot 1`] = `
     height="315"
     referrerpolicy="strict-origin-when-cross-origin"
     src="https://www.youtube-nocookie.com/embed/XJashBvI17A"
-    title="Here, There And Everywhere (Piano Cover) by Chris Vogt"
+    title="Here, There And Everywhere (Piano Cover) by Theme User"
     width="560"
   />
 </div>

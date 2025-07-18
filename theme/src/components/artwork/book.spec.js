@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import Book from './book'
 
 describe('Book', () => {
-  const thumbnailURL = 'https://cdn.chrisvogt.me/images/fake-book-cover.jpg'
+  const thumbnailURL = 'https://cdn.example.com/images/fake-book-cover.jpg'
   const title = 'Fake Book'
 
   it('matches the snapshot', () => {

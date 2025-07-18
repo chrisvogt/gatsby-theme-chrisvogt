@@ -10,10 +10,10 @@ jest.mock('../hooks/use-navigation-data')
 
 const mockSiteMetadata = {
   widgets: {
-    github: { widgetDataSource: 'https://fake-api.chrisvogt.me/social/github' },
-    goodreads: { widgetDataSource: 'https://fake-api.chrisvogt.me/social/goodreads' },
-    instagram: { widgetDataSource: 'https://fake-api.chrisvogt.me/social/instagram' },
-    spotify: { widgetDataSource: 'https://fake-api.chrisvogt.me/social/spotify' }
+    github: { widgetDataSource: 'https://fake-api.example.com/social/github' },
+    goodreads: { widgetDataSource: 'https://fake-api.example.com/social/goodreads' },
+    instagram: { widgetDataSource: 'https://fake-api.example.com/social/instagram' },
+    spotify: { widgetDataSource: 'https://fake-api.example.com/social/spotify' }
   }
 }
 

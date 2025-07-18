@@ -17,7 +17,7 @@ exports[`PostCard does not render excerpt when explicitly null 1`] = `
         className="card-media"
       >
         <div
-          className="css-1hpd2dn"
+          className="css-1ywf2dg"
         />
       </div>
       <div
@@ -57,7 +57,7 @@ exports[`PostCard does not render excerpt when explicitly undefined 1`] = `
         className="card-media"
       >
         <div
-          className="css-1hpd2dn"
+          className="css-1ywf2dg"
         />
       </div>
       <div
@@ -97,7 +97,7 @@ exports[`PostCard matches the snapshot without excerpt 1`] = `
         className="card-media"
       >
         <div
-          className="css-1hpd2dn"
+          className="css-1ywf2dg"
         />
       </div>
       <div
@@ -137,7 +137,7 @@ exports[`PostCard renders excerpt when provided 1`] = `
         className="card-media"
       >
         <div
-          className="css-1hpd2dn"
+          className="css-1ywf2dg"
         />
       </div>
       <div
@@ -215,7 +215,7 @@ exports[`PostCard renders without category when not provided 1`] = `
         className="card-media"
       >
         <div
-          className="css-1hpd2dn"
+          className="css-1ywf2dg"
         />
       </div>
       <h3

@@ -11,7 +11,7 @@ const mockSiteMetadata = {
   widgets: {
     goodreads: {
       username: 'mockusername',
-      widgetDataSource: 'https://fake-api.chrisvogt.me/social/goodreads'
+      widgetDataSource: 'https://fake-api.example.com/social/goodreads'
     }
   }
 }

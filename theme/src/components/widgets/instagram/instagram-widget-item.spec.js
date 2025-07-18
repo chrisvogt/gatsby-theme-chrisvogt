@@ -12,7 +12,7 @@ describe('InstagramWidgetItem', () => {
     post: {
       id: '0123456789',
       caption: 'This is a test caption',
-      cdnMediaURL: 'https://cdn.chrisvogt.me/images/fake-instagram-image.jpg',
+      cdnMediaURL: 'https://cdn.example.com/images/fake-instagram-image.jpg',
       mediaType: 'IMAGE',
       permalink: 'https://instagram.com/fake-image-link'
     }

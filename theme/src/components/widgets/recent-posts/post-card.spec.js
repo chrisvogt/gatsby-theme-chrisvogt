@@ -4,7 +4,7 @@ import PostCard from './post-card'
 
 describe('PostCard', () => {
   const baseProps = {
-    banner: 'https://cdn.chrisvogt.me/images/article-og-banner.jpg',
+    banner: 'https://cdn.example.com/images/article-og-banner.jpg',
     category: 'personal',
     date: '1592202624',
     link: '/blog/article',
@@ -56,7 +56,7 @@ describe('PostCard', () => {
 
   it('renders without category when not provided', () => {
     const propsWithoutCategory = {
-      banner: 'https://cdn.chrisvogt.me/images/article-og-banner.jpg',
+      banner: 'https://cdn.example.com/images/article-og-banner.jpg',
       date: '1592202624',
       link: '/blog/article',
       title: 'My Blog Post'

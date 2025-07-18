@@ -35,7 +35,7 @@ describe('SteamWidget', () => {
             metrics: [{ label: 'Games Played', value: 5 }],
             profile: {
               displayName: 'Chris',
-              profileURL: 'https://steamcommunity.com/id/chrisvogt'
+              profileURL: 'https://steamcommunity.com/id/themeuser'
             },
             collections: {
               recentlyPlayedGames: [

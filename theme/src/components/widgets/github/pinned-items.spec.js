@@ -7,7 +7,7 @@ const mockPinnedItems = [
   {
     __typename: 'Repository',
     id: 'null-js',
-    url: 'https://www.github.com/chrisvogt/null/'
+    url: 'https://www.github.com/themeuser/sample-repo/'
   }
 ]
 

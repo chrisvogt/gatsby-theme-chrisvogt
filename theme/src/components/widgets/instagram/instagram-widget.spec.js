@@ -55,7 +55,7 @@ describe('InstagramWidget', () => {
                 {
                   id: '123',
                   caption: 'Test Caption',
-                  cdnMediaURL: 'https://cdn.chrisvogt.me/images/fake-instagram-image.jpg',
+                  cdnMediaURL: 'https://cdn.example.com/images/fake-instagram-image.jpg',
                   mediaType: 'IMAGE',
                   permalink: 'https://instagram.com/p/test'
                 }
@@ -122,7 +122,7 @@ describe('InstagramWidget', () => {
     expect(thumbnails).toHaveLength(1)
     expect(thumbnails[0]).toHaveAttribute(
       'src',
-      expect.stringContaining('https://cdn.chrisvogt.me/images/fake-instagram-image.jpg')
+      expect.stringContaining('https://cdn.example.com/images/fake-instagram-image.jpg')
     )
   })
 
@@ -148,7 +148,7 @@ describe('InstagramWidget', () => {
               media: Array.from({ length: 10 }, (_, i) => ({
                 id: `image-${i}`,
                 caption: `Test Caption ${i}`,
-                cdnMediaURL: `https://cdn.chrisvogt.me/images/fake-instagram-image-${i}.jpg`,
+                cdnMediaURL: `https://cdn.example.com/images/fake-instagram-image-${i}.jpg`,
                 mediaType: 'IMAGE',
                 permalink: `https://instagram.com/p/test${i}`
               }))
@@ -204,7 +204,7 @@ describe('InstagramWidget', () => {
               media: Array.from({ length: 10 }, (_, i) => ({
                 id: `image-${i}`,
                 caption: `Test Caption ${i}`,
-                cdnMediaURL: `https://cdn.chrisvogt.me/images/fake-instagram-image-${i}.jpg`,
+                cdnMediaURL: `https://cdn.example.com/images/fake-instagram-image-${i}.jpg`,
                 mediaType: 'IMAGE',
                 permalink: `https://instagram.com/p/test${i}`
               }))
@@ -282,9 +282,9 @@ describe('InstagramWidget', () => {
                 {
                   id: 'video1',
                   caption: 'Video Caption',
-                  cdnMediaURL: 'https://cdn.chrisvogt.me/images/fake-video-thumbnail.jpg',
+                  cdnMediaURL: 'https://cdn.example.com/images/fake-video-thumbnail.jpg',
                   mediaType: 'VIDEO',
-                  mediaURL: 'https://cdn.chrisvogt.me/videos/fake-video.mp4',
+                  mediaURL: 'https://cdn.example.com/videos/fake-video.mp4',
                   permalink: 'https://instagram.com/p/video'
                 }
               ]
