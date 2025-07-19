@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui'
 import { faSteam } from '@fortawesome/free-brands-svg-icons'
 import { useEffect } from 'react'
-import { get } from 'lodash'
 import { Heading } from '@theme-ui/components'
 import { Themed } from '@theme-ui/mdx'
 import { useDispatch, useSelector } from 'react-redux'
@@ -16,32 +15,34 @@ import WidgetHeader from '../widget-header'
 import OwnedGamesTable from './owned-games-table'
 import AiSummary from './ai-summary'
 
-import { SUCCESS, FAILURE, getSteamWidget } from '../../../reducers/widgets'
+import {
+  getAiSummary,
+  getHasFatalError,
+  getIsLoading,
+  getMetrics,
+  getOwnedGames,
+  getProfileDisplayName,
+  getProfileURL,
+  getRecentlyPlayedGames
+} from '../../../selectors/steam'
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getSteamWidgetDataSource } from '../../../selectors/metadata'
 import getTimeSpent from './get-time-spent'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
-
-const EMPTY_ARRAY = []
-
-const getHasFatalError = state => getSteamWidget(state).state === FAILURE
-const getIsLoading = state => getSteamWidget(state).state !== SUCCESS
 
 const SteamWidget = React.memo(() => {
   const dispatch = useDispatch()
   const metadata = useSiteMetadata()
   const steamDataSource = getSteamWidgetDataSource(metadata)
 
+  const aiSummary = useSelector(getAiSummary)
   const hasFatalError = useSelector(getHasFatalError)
   const isLoading = useSelector(getIsLoading)
-  const aiSummary = useSelector(state => get(state, 'widgets.steam.data.aiSummary'))
-  const metrics = useSelector(state => get(state, 'widgets.steam.data.metrics') ?? EMPTY_ARRAY)
-  const profileDisplayName = useSelector(state => get(state, 'widgets.steam.data.profile.displayName'))
-  const profileURL = useSelector(state => get(state, 'widgets.steam.data.profile.profileURL'))
-  const recentlyPlayedGames = useSelector(
-    state => get(state, 'widgets.steam.data.collections.recentlyPlayedGames') ?? EMPTY_ARRAY
-  )
-  const ownedGames = useSelector(state => get(state, 'widgets.steam.data.collections.ownedGames') ?? EMPTY_ARRAY)
+  const metrics = useSelector(getMetrics)
+  const ownedGames = useSelector(getOwnedGames)
+  const profileDisplayName = useSelector(getProfileDisplayName)
+  const profileURL = useSelector(getProfileURL)
+  const recentlyPlayedGames = useSelector(getRecentlyPlayedGames)
 
   useEffect(() => {
     if (isLoading) {
@@ -64,7 +65,7 @@ const SteamWidget = React.memo(() => {
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
 
-      <AiSummary aiSummary={aiSummary} />
+      {aiSummary && <AiSummary aiSummary={aiSummary} />}
 
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>

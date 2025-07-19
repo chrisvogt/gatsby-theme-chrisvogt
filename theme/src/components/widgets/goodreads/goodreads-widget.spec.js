@@ -44,4 +44,55 @@ describe('Goodreads Widget', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('renders with data and AI summary', () => {
+    const mockState = {
+      widgets: {
+        goodreads: {
+          state: 'SUCCESS',
+          data: {
+            aiSummary: 'Test AI summary content',
+            collections: {
+              recentlyReadBooks: [{ id: 1, title: 'Book 1', thumbnail: 'thumb1.jpg' }]
+            },
+            profile: { name: 'Test User' }
+          }
+        }
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={mockState}>
+          {renderWithRouter(<GoodreadsWidget default />)}
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders without AI summary when not available', () => {
+    const mockState = {
+      widgets: {
+        goodreads: {
+          state: 'SUCCESS',
+          data: {
+            collections: {
+              recentlyReadBooks: [{ id: 1, title: 'Book 1', thumbnail: 'thumb1.jpg' }]
+            },
+            profile: { name: 'Test User' }
+          }
+        }
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={mockState}>
+          {renderWithRouter(<GoodreadsWidget default />)}
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })
