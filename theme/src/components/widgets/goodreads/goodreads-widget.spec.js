@@ -51,10 +51,10 @@ describe('Goodreads Widget', () => {
         goodreads: {
           state: 'SUCCESS',
           data: {
-                      aiSummary: 'Test AI summary content',
-          collections: {
-            recentlyReadBooks: [{ id: 1, title: 'Book 1', thumbnail: 'thumb1.jpg' }]
-          },
+            aiSummary: 'Test AI summary content',
+            collections: {
+              recentlyReadBooks: [{ id: 1, title: 'Book 1', thumbnail: 'thumb1.jpg' }]
+            },
             profile: { name: 'Test User' }
           }
         }
@@ -76,10 +76,10 @@ describe('Goodreads Widget', () => {
       widgets: {
         goodreads: {
           state: 'SUCCESS',
-                  data: {
-          collections: {
-            recentlyReadBooks: [{ id: 1, title: 'Book 1', thumbnail: 'thumb1.jpg' }]
-          },
+          data: {
+            collections: {
+              recentlyReadBooks: [{ id: 1, title: 'Book 1', thumbnail: 'thumb1.jpg' }]
+            },
             profile: { name: 'Test User' }
           }
         }

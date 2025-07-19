@@ -5,4 +5,4 @@ describe('Steam Widget Index', () => {
   it('exports the SteamWidget component', () => {
     expect(SteamWidget).toBe(ActualSteamWidget)
   })
-}) 
+})

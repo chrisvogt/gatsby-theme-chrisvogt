@@ -142,4 +142,4 @@ describe('steam selectors', () => {
       expect(getIsLoading(emptyState)).toBe(true)
     })
   })
-}) 
+})

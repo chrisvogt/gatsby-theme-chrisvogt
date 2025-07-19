@@ -105,4 +105,4 @@ describe('UserStatus', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
-}) 
+})
