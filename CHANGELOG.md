@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.56.0
+
+### ✨ Features
+
+- **AI-Generated Content Summaries**: Added intelligent content summaries powered by Gemini AI
+  - **Goodreads Widget**: Displays AI-generated reading activity summaries when available from the metrics API
+  - **Steam Widget**: Shows AI-generated gaming activity summaries for a more engaging user experience
+  - **Graceful Degradation**: Both widgets gracefully handle missing AI summaries, maintaining full functionality when Gemini API calls fail
+  - **Conditional Rendering**: AI summaries only appear when data is available, ensuring clean widget appearance
+
+### 🔧 Architecture Improvements
+
+- **Enhanced Selectors**: Created comprehensive selector patterns for improved data access
+  - **Steam Selectors** (`src/selectors/steam.js`): New dedicated selectors for `getAiSummary`, `getMetrics`, `getProfileDisplayName`, `getProfileURL`, `getRecentlyPlayedGames`, `getOwnedGames`, and loading states
+  - **Goodreads Selector**: Added `getAiSummary` selector following established patterns for consistent data access
+  - **Code Organization**: Moved Steam widget selectors from inline `useSelector` calls to dedicated selector file for better maintainability
+
+### 🧹 Code Quality
+
+- **Dependency Cleanup**: Removed lodash `get` function dependency from Steam widget in favor of native selectors
+- **Consistent Patterns**: Both widgets now follow identical patterns for AI summary integration
+- **Type Safety**: Added proper fallbacks and default values throughout selector implementations
+
+### 🧪 Testing
+
+- **Comprehensive Test Coverage**: Achieved 98.06% line coverage (+0.75% improvement)
+  - **New Test Files**: `user-status.spec.js` (8 tests), `steam/index.spec.js`, `reducers/index.spec.js`  
+  - **Enhanced Widget Tests**: Added scenarios for AI summary presence/absence in both Goodreads and Steam widgets
+  - **Selector Testing**: Complete test coverage for all new Steam selectors and updated Goodreads selectors
+  - **Edge Case Coverage**: Tests for star ratings, HTML tag removal, date handling, and loading states
+
+### 🎯 Strategic Impact
+
+- **API Integration Ready**: Widgets seamlessly integrate with updated metrics API that includes optional `aiSummary` fields
+- **User Experience**: Provides richer, more engaging content when AI summaries are available
+- **Reliability**: Robust error handling ensures widgets remain functional regardless of AI service availability
+- **Performance**: Memoized selectors optimize re-rendering and data access patterns
+
 ## 0.55.0
 
 ### ✨ Features
