@@ -26,7 +26,7 @@
 ### 🧪 Testing
 
 - **Comprehensive Test Coverage**: Achieved 98.06% line coverage (+0.75% improvement)
-  - **New Test Files**: `user-status.spec.js` (8 tests), `steam/index.spec.js`, `reducers/index.spec.js`  
+  - **New Test Files**: `user-status.spec.js` (8 tests), `steam/index.spec.js`, `reducers/index.spec.js`
   - **Enhanced Widget Tests**: Added scenarios for AI summary presence/absence in both Goodreads and Steam widgets
   - **Selector Testing**: Complete test coverage for all new Steam selectors and updated Goodreads selectors
   - **Edge Case Coverage**: Tests for star ratings, HTML tag removal, date handling, and loading states
