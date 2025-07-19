@@ -37,5 +37,7 @@ export const getUserStatus = createSelector([selectGoodreadsData], data => {
 
 export const getProfileDisplayName = createSelector([selectGoodreadsData], data => data.profile?.name)
 
+export const getAiSummary = createSelector([selectGoodreadsData], data => data.aiSummary)
+
 export const getHasFatalError = state => getGoodreadsWidget(state).state === 'FAILURE'
 export const getIsLoading = state => getGoodreadsWidget(state).state !== 'SUCCESS'

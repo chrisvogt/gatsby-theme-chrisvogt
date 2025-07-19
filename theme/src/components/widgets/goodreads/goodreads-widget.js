@@ -6,6 +6,7 @@ import { faGoodreads } from '@fortawesome/free-brands-svg-icons'
 
 import { getGoodreadsUsername, getGoodreadsWidgetDataSource } from '../../../selectors/metadata'
 import {
+  getAiSummary,
   getBooks,
   getHasFatalError,
   getIsLoading,
@@ -17,6 +18,7 @@ import {
 import fetchDataSource from '../../../actions/fetchDataSource'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
+import AiSummary from '../steam/ai-summary'
 import CallToAction from '../call-to-action'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import RecentlyReadBooks from './recently-read-books'
@@ -31,6 +33,7 @@ export default () => {
   const goodreadsUsername = getGoodreadsUsername(metadata)
   const goodreadsDataSource = getGoodreadsWidgetDataSource(metadata)
 
+  const aiSummary = useSelector(getAiSummary)
   const books = useSelector(getBooks)
   const hasFatalError = useSelector(getHasFatalError)
   const isLoading = useSelector(getIsLoading)
@@ -62,6 +65,8 @@ export default () => {
       </WidgetHeader>
 
       <ProfileMetricsBadge isLoading={isLoading} metrics={metrics} />
+
+      {aiSummary && <AiSummary aiSummary={aiSummary} />}
 
       <RecentlyReadBooks isLoading={isLoading} books={books} />
 

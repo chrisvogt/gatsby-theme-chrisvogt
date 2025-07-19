@@ -1,4 +1,12 @@
-import { getBooks, getMetrics, getUserStatus, getProfileDisplayName, getHasFatalError, getIsLoading } from './goodreads'
+import {
+  getAiSummary,
+  getBooks,
+  getMetrics,
+  getUserStatus,
+  getProfileDisplayName,
+  getHasFatalError,
+  getIsLoading
+} from './goodreads'
 
 describe('goodreads selectors', () => {
   const baseState = {
@@ -6,10 +14,11 @@ describe('goodreads selectors', () => {
       goodreads: {
         state: 'SUCCESS',
         data: {
+          aiSummary: 'Test AI summary for reading activity',
           collections: {
             recentlyReadBooks: [
               { id: 1, title: 'Book One', thumbnail: 'thumb1.jpg' },
-              { id: 2, title: 'Book Two' }, // no thumbnail, should be filtered out
+              { id: 2, title: 'Book Two' }, // no thumbnail, filtered out for testing
               { id: 3, title: 'Book Three', thumbnail: 'thumb3.jpg' }
             ],
             updates: [
@@ -73,6 +82,17 @@ describe('goodreads selectors', () => {
 
   it('returns profile display name', () => {
     expect(getProfileDisplayName(baseState)).toBe('Chris')
+  })
+
+  it('returns aiSummary when available', () => {
+    expect(getAiSummary(baseState)).toBe('Test AI summary for reading activity')
+  })
+
+  it('returns undefined when aiSummary is not available', () => {
+    const state = {
+      widgets: { goodreads: { state: 'SUCCESS', data: {} } }
+    }
+    expect(getAiSummary(state)).toBeUndefined()
   })
 
   it('returns hasFatalError true when state is FAILURE', () => {
