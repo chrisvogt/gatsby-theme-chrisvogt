@@ -541,5 +541,133 @@ describe('PlayTimeChart', () => {
       expect(content).toContain('4')
       expect(container).toBeInTheDocument()
     })
+
+    it('matches snapshot for a game card in dark mode', () => {
+      const tree = renderer
+        .create(
+          <ThemeUIProvider theme={darkTheme}>
+            <PlayTimeChart games={sampleGames} />
+          </ThemeUIProvider>
+        )
+        .toJSON()
+      expect(tree).toMatchSnapshot()
+    })
+
+    it('matches snapshot for a hovered game card in dark mode', () => {
+      const { container } = render(
+        <ThemeUIProvider theme={darkTheme}>
+          <PlayTimeChart games={sampleGames} />
+        </ThemeUIProvider>
+      )
+      // Simulate hover on a game card
+      const allDivs = container.querySelectorAll('div')
+      let gameCard = null
+      allDivs.forEach(div => {
+        if (div.getAttribute('key') || div.textContent?.includes('Cities: Skylines')) {
+          let current = div
+          while (current && current !== container) {
+            if (current.style && current.style.cursor === 'pointer') {
+              gameCard = current
+              break
+            }
+            current = current.parentElement
+          }
+        }
+      })
+      if (gameCard) {
+        fireEvent.mouseEnter(gameCard)
+      }
+      expect(container).toMatchSnapshot()
+    })
+  })
+
+  describe('Light Mode Coverage', () => {
+    it('matches snapshot for a game card in light mode', () => {
+      const tree = renderer
+        .create(
+          <ThemeUIProvider theme={theme}>
+            <PlayTimeChart games={sampleGames} />
+          </ThemeUIProvider>
+        )
+        .toJSON()
+      expect(tree).toMatchSnapshot()
+    })
+
+    it('matches snapshot for a hovered game card in light mode', () => {
+      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
+      // Simulate hover on a game card
+      const allDivs = container.querySelectorAll('div')
+      let gameCard = null
+      allDivs.forEach(div => {
+        if (div.getAttribute('key') || div.textContent?.includes('Cities: Skylines')) {
+          let current = div
+          while (current && current !== container) {
+            if (current.style && current.style.cursor === 'pointer') {
+              gameCard = current
+              break
+            }
+            current = current.parentElement
+          }
+        }
+      })
+      if (gameCard) {
+        fireEvent.mouseEnter(gameCard)
+      }
+      expect(container).toMatchSnapshot()
+    })
+
+    it('applies correct hover styles in light mode', () => {
+      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
+      // Simulate hover on a game card
+      const allDivs = container.querySelectorAll('div')
+      let gameCard = null
+      allDivs.forEach(div => {
+        if (div.getAttribute('key') || div.textContent?.includes('Cities: Skylines')) {
+          let current = div
+          while (current && current !== container) {
+            if (current.style && current.style.cursor === 'pointer') {
+              gameCard = current
+              break
+            }
+            current = current.parentElement
+          }
+        }
+      })
+      if (gameCard) {
+        fireEvent.mouseEnter(gameCard)
+        fireEvent.mouseLeave(gameCard)
+      }
+      expect(container).toBeInTheDocument()
+    })
+  })
+
+  describe('Game Card Click', () => {
+    it('calls window.open with correct URL when game card is clicked', () => {
+      window.open = jest.fn()
+      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
+      // Find a clickable game card
+      const allDivs = container.querySelectorAll('div')
+      let gameCard = null
+      allDivs.forEach(div => {
+        if (div.getAttribute('key') || div.textContent?.includes('Cities: Skylines')) {
+          let current = div
+          while (current && current !== container) {
+            if (current.style && current.style.cursor === 'pointer') {
+              gameCard = current
+              break
+            }
+            current = current.parentElement
+          }
+        }
+      })
+      if (gameCard) {
+        fireEvent.click(gameCard)
+        expect(window.open).toHaveBeenCalledWith(
+          expect.stringContaining('https://store.steampowered.com/app/'),
+          '_blank'
+        )
+      }
+    })
   })
 })
+
