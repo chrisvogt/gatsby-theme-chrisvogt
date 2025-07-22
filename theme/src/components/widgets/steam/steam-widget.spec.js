@@ -248,7 +248,7 @@ describe('SteamWidget', () => {
       }
     }
     // Minimal reducer to support the selectors
-    function widgets(state = initialState.widgets, action) {
+    function widgets(state = initialState.widgets) {
       return state
     }
     const store = configureRealStore({ reducer: { widgets } })
