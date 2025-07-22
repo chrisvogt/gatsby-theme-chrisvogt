@@ -134,11 +134,13 @@ describe('SteamWidget', () => {
         }
       }
     })
-    const tree = renderer.create(
-      <Provider store={store}>
-        <SteamWidget />
-      </Provider>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -162,11 +164,13 @@ describe('SteamWidget', () => {
         }
       }
     })
-    const tree = renderer.create(
-      <Provider store={store}>
-        <SteamWidget />
-      </Provider>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -189,11 +193,13 @@ describe('SteamWidget', () => {
         }
       }
     })
-    const tree = renderer.create(
-      <Provider store={store}>
-        <SteamWidget />
-      </Provider>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -216,11 +222,13 @@ describe('SteamWidget', () => {
         }
       }
     })
-    const tree = renderer.create(
-      <Provider store={store}>
-        <SteamWidget />
-      </Provider>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
