@@ -186,11 +186,11 @@ describe('PlayTimeChart', () => {
 
     it('opens Steam store page when game card is clicked', () => {
       const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
-      
+
       // Find game cards by looking for elements with onclick handlers
       const allDivs = container.querySelectorAll('div')
       let gameCard = null
-      
+
       // Look for div elements that have the game card structure
       allDivs.forEach(div => {
         if (div.getAttribute('key') || div.textContent?.includes('Cities: Skylines')) {
@@ -216,14 +216,11 @@ describe('PlayTimeChart', () => {
         // Fallback: simulate click on first game (Cities: Skylines with id 255710)
         const mockClickHandler = jest.fn()
         window.open = jest.fn()
-        
+
         // Simulate the onClick behavior directly
         window.open('https://store.steampowered.com/app/255710', '_blank')
-        
-        expect(window.open).toHaveBeenCalledWith(
-          'https://store.steampowered.com/app/255710',
-          '_blank'
-        )
+
+        expect(window.open).toHaveBeenCalledWith('https://store.steampowered.com/app/255710', '_blank')
       }
     })
   })
