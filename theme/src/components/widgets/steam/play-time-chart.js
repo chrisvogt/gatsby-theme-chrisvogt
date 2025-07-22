@@ -46,9 +46,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             borderRadius: '16px',
             padding: 4,
             border: containerBorder,
-            boxShadow: darkModeActive 
-              ? '0 8px 32px rgba(0,0,0,0.3)' 
-              : '0 8px 32px rgba(0,0,0,0.1)'
+            boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)'
           }}
         >
           <div
@@ -100,9 +98,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             borderRadius: '16px',
             padding: 4,
             border: containerBorder,
-            boxShadow: darkModeActive 
-              ? '0 8px 32px rgba(0,0,0,0.3)' 
-              : '0 8px 32px rgba(0,0,0,0.1)',
+            boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)',
             textAlign: 'center',
             py: 5
           }}
@@ -126,12 +122,10 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
       <div
         sx={{
           background: containerBackground,
-          borderRadius: '16px',
-          padding: 4,
+          borderRadius: ['12px', '16px'],
+          padding: [2, 3, 4],
           border: containerBorder,
-          boxShadow: darkModeActive 
-            ? '0 8px 32px rgba(0,0,0,0.3)' 
-            : '0 8px 32px rgba(0,0,0,0.1)'
+          boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)'
         }}
       >
         {/* Header */}
@@ -179,7 +173,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
         </div>
 
         {/* Game Cards */}
-        <div sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <div sx={{ display: 'flex', flexDirection: 'column', gap: [2, 3] }}>
           {topGames.map((game, index) => {
             const progressPercent = (game.hoursPlayed / maxHours) * 100
             const isHovered = hoveredGame?.id === game.id
@@ -192,7 +186,8 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                 onClick={() => window.open(`https://store.steampowered.com/app/${game.id}`, '_blank')}
                 sx={{
                   display: 'flex',
-                  alignItems: 'center',
+                  flexDirection: ['column', 'row'],
+                  alignItems: ['stretch', 'center'],
                   background: isHovered
                     ? darkModeActive
                       ? 'linear-gradient(90deg, rgba(74, 158, 255, 0.15) 0%, rgba(113, 30, 155, 0.15) 100%)'
@@ -201,8 +196,8 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                       ? 'rgba(255, 255, 255, 0.05)'
                       : 'rgba(255, 255, 255, 0.8)',
                   borderRadius: '12px',
-                  padding: 3,
-                  border: isHovered 
+                  padding: [2, 3],
+                  border: isHovered
                     ? darkModeActive
                       ? '2px solid rgba(74, 158, 255, 0.5)'
                       : '2px solid rgba(66, 46, 163, 0.5)'
@@ -217,98 +212,124 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                   animation: `slideIn 0.6s ease-out ${index * 0.1}s both`
                 }}
               >
-                {/* Rank Badge */}
+                {/* Mobile: Header row with rank, image, and title */}
                 <div
                   sx={{
-                    background:
-                      index < 3
-                        ? `linear-gradient(45deg, ${
-                            index === 0 ? '#ffd700, #ffed4e' : index === 1 ? '#c0c0c0, #e5e5e5' : '#cd7f32, #ffa500'
-                          })`
-                        : darkModeActive
-                          ? 'rgba(255, 255, 255, 0.1)'
-                          : 'rgba(0, 0, 0, 0.1)',
-                    color: index < 3 ? '#000' : darkModeActive ? '#fff' : '#333',
-                    width: '32px',
-                    height: '32px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontWeight: 'bold',
-                    fontSize: '14px',
-                    mr: 3,
-                    minWidth: '32px'
+                    display: ['flex', 'contents'],
+                    alignItems: ['center', 'initial'],
+                    mb: [2, 0],
+                    gap: [1, 0],
+                    flexWrap: ['wrap', 'nowrap']
                   }}
                 >
-                  {game.rank}
-                </div>
-
-                {/* Game Banner */}
-                <div
-                  sx={{
-                    position: 'relative',
-                    width: '120px',
-                    height: '56px',
-                    borderRadius: '8px',
-                    overflow: 'hidden',
-                    mr: 3,
-                    minWidth: '120px',
-                    border: darkModeActive
-                      ? '2px solid rgba(74, 158, 255, 0.2)'
-                      : '2px solid rgba(66, 46, 163, 0.2)'
-                  }}
-                >
-                  <img
-                    src={game.images?.header || game.images?.icon || ''}
-                    alt={`${game.displayName} header`}
+                  {/* Rank Badge */}
+                  <div
                     sx={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      transition: 'transform 0.3s ease',
-                      transform: isHovered ? 'scale(1.1)' : 'scale(1)'
+                      background:
+                        index < 3
+                          ? `linear-gradient(45deg, ${
+                              index === 0 ? '#ffd700, #ffed4e' : index === 1 ? '#c0c0c0, #e5e5e5' : '#cd7f32, #ffa500'
+                            })`
+                          : darkModeActive
+                            ? 'rgba(255, 255, 255, 0.1)'
+                            : 'rgba(0, 0, 0, 0.1)',
+                      color: index < 3 ? '#000' : darkModeActive ? '#fff' : '#333',
+                      width: ['24px', '28px', '32px'],
+                      height: ['24px', '28px', '32px'],
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontWeight: 'bold',
+                      fontSize: ['10px', '12px', '14px'],
+                      mr: [0, 0, 3],
+                      minWidth: ['24px', '28px', '32px'],
+                      flexShrink: 0
                     }}
-                  />
-                  {isHovered && (
-                    <div
+                  >
+                    {game.rank}
+                  </div>
+
+                  {/* Game Banner */}
+                  <div
+                    sx={{
+                      position: 'relative',
+                      width: ['60px', '80px', '120px'],
+                      height: ['30px', '40px', '56px'],
+                      borderRadius: ['6px', '8px'],
+                      overflow: 'hidden',
+                      mr: [0, 0, 3],
+                      minWidth: ['60px', '80px', '120px'],
+                      flexShrink: 0,
+                      border: darkModeActive ? '2px solid rgba(74, 158, 255, 0.2)' : '2px solid rgba(66, 46, 163, 0.2)'
+                    }}
+                  >
+                    <img
+                      src={game.images?.header || game.images?.icon || ''}
+                      alt={`${game.displayName} header`}
                       sx={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        background: darkModeActive
-                          ? 'rgba(74, 158, 255, 0.2)'
-                          : 'rgba(66, 46, 163, 0.2)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        transition: 'transform 0.3s ease',
+                        transform: isHovered ? 'scale(1.1)' : 'scale(1)'
                       }}
-                    >
+                    />
+                    {isHovered && (
                       <div
                         sx={{
-                          background: darkModeActive
-                            ? 'rgba(0, 0, 0, 0.8)'
-                            : 'rgba(255, 255, 255, 0.9)',
-                          color: primaryColor,
-                          padding: '4px 8px',
-                          borderRadius: '4px',
-                          fontSize: '10px',
-                          fontWeight: 'bold'
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          background: darkModeActive ? 'rgba(74, 158, 255, 0.2)' : 'rgba(66, 46, 163, 0.2)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
                         }}
                       >
-                        CLICK TO VIEW
+                        <div
+                          sx={{
+                            background: darkModeActive ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.9)',
+                            color: primaryColor,
+                            padding: '4px 8px',
+                            borderRadius: '4px',
+                            fontSize: '10px',
+                            fontWeight: 'bold'
+                          }}
+                        >
+                          CLICK TO VIEW
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
+
+                  {/* Mobile: Game Title */}
+                  <div
+                    sx={{
+                      display: ['block', 'none'],
+                      color: 'text',
+                      fontSize: ['12px', '14px'],
+                      fontWeight: 'bold',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                      flex: 1,
+                      minWidth: 0,
+                      ml: [1, 0]
+                    }}
+                  >
+                    {game.displayName}
+                  </div>
                 </div>
 
                 {/* Game Info */}
                 <div sx={{ flex: 1, minWidth: 0 }}>
-                  {/* Game Name */}
+                  {/* Desktop Game Name */}
                   <div
                     sx={{
+                      display: ['none', 'block'],
                       color: 'text',
                       fontSize: '16px',
                       fontWeight: 'bold',
@@ -325,17 +346,35 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                   <div
                     sx={{
                       display: 'flex',
-                      alignItems: 'center',
-                      gap: 3
+                      flexDirection: ['column', 'row'],
+                      alignItems: ['stretch', 'center'],
+                      gap: [2, 3]
                     }}
                   >
+                    {/* Mobile: Hours Text (above progress bar) */}
+                    <div
+                      sx={{
+                        display: ['flex', 'none'],
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        color: primaryColor,
+                        fontSize: ['12px', '14px'],
+                        fontWeight: 'bold',
+                        flexWrap: ['wrap', 'nowrap'],
+                        gap: [1, 0]
+                      }}
+                    >
+                      <span>{game.hoursPlayed}h total</span>
+                      <span sx={{ fontSize: ['10px', '12px'], color: lightMutedTextColor }}>
+                        #{game.rank} most played
+                      </span>
+                    </div>
+
                     {/* Progress Bar */}
                     <div
                       sx={{
                         flex: 1,
-                        background: darkModeActive
-                          ? 'rgba(255, 255, 255, 0.1)'
-                          : 'rgba(0, 0, 0, 0.1)',
+                        background: darkModeActive ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
                         borderRadius: '8px',
                         height: '12px',
                         overflow: 'hidden',
@@ -360,9 +399,10 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                       />
                     </div>
 
-                    {/* Hours Text */}
+                    {/* Desktop Hours Text */}
                     <div
                       sx={{
+                        display: ['none', 'block'],
                         color: primaryColor,
                         fontSize: '14px',
                         fontWeight: 'bold',
@@ -378,13 +418,13 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                   <div
                     sx={{
                       color: lightMutedTextColor,
-                      fontSize: '12px',
+                      fontSize: ['11px', '12px'],
                       mt: 1
                     }}
                   >
                     {getTimeSpent(game.playTimeForever * 60 * 1000)}
                     {game.playTime2Weeks && (
-                      <span sx={{ ml: 2, color: mutedTextColor }}>
+                      <span sx={{ ml: [1, 2], color: mutedTextColor }}>
                         • {getTimeSpent(game.playTime2Weeks * 60 * 1000)} recently
                       </span>
                     )}
@@ -400,9 +440,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
           sx={{
             mt: 4,
             pt: 3,
-            borderTop: darkModeActive
-              ? '1px solid rgba(255, 255, 255, 0.1)'
-              : '1px solid rgba(0, 0, 0, 0.1)',
+            borderTop: darkModeActive ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
