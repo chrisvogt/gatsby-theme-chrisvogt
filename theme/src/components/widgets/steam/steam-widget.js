@@ -12,8 +12,8 @@ import PostCard from '../recent-posts/post-card'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
-import OwnedGamesTable from './owned-games-table'
 import AiSummary from './ai-summary'
+import PlayTimeChart from './play-time-chart'
 
 import {
   getAiSummary,
@@ -67,17 +67,6 @@ const SteamWidget = React.memo(() => {
 
       {aiSummary && <AiSummary aiSummary={aiSummary} />}
 
-      <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
-        <Heading as='h3' sx={{ fontSize: [3, 4] }}>
-          My Games
-        </Heading>
-      </div>
-
-      <Themed.p sx={{ mb: 4 }}>Games I own and their play time statistics.</Themed.p>
-
-      <OwnedGamesTable games={ownedGames} />
-
-      {/* Recently-Played Games Section */}
       <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mt: 5, mb: 3 }}>
         <Heading as='h3' sx={{ fontSize: [3, 4] }}>
           Recently-Played Games
@@ -90,7 +79,8 @@ const SteamWidget = React.memo(() => {
         sx={{
           display: 'grid',
           gridGap: [3, 2, 2, 3],
-          gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(3, 1fr)']
+          gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(3, 1fr)'],
+          mb: 4
         }}
       >
         {recentlyPlayedGames.map(game => (
@@ -103,6 +93,16 @@ const SteamWidget = React.memo(() => {
           />
         ))}
       </div>
+
+      <div sx={{ display: 'flex', flex: 1, alignItems: 'center', mb: 3 }}>
+        <Heading as='h3' sx={{ fontSize: [3, 4] }}>
+          My Games
+        </Heading>
+      </div>
+
+      <Themed.p sx={{ mb: 4 }}>Games I own and their play time statistics.</Themed.p>
+
+      <PlayTimeChart games={ownedGames} isLoading={isLoading} />
     </Widget>
   )
 })
