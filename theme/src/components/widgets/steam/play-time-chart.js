@@ -165,6 +165,50 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             >
               Top {topGames.length} Most Played Games
             </Themed.p>
+            <div
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 3,
+                mt: 2,
+                fontSize: '11px',
+                color: lightMutedTextColor
+              }}
+            >
+              <div sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <div
+                  sx={{
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(45deg, #ffd700, #ffed4e)'
+                  }}
+                />
+                <span>1st</span>
+              </div>
+              <div sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <div
+                  sx={{
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(45deg, #c0c0c0, #e5e5e5)'
+                  }}
+                />
+                <span>2nd</span>
+              </div>
+              <div sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <div
+                  sx={{
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(45deg, #cd7f32, #ffa500)'
+                  }}
+                />
+                <span>3rd</span>
+              </div>
+            </div>
           </div>
         </div>
 
