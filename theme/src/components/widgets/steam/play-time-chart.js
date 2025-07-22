@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Themed } from '@theme-ui/mdx'
 import getTimeSpent from './get-time-spent'
 import isDarkMode from '../../../helpers/isDarkMode'
+import ViewExternal from '../view-external'
 
 const PlayTimeChart = ({ games = [], isLoading = false }) => {
   const [hoveredGame, setHoveredGame] = useState(null)
@@ -455,6 +456,42 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
               {(topGames.reduce((sum, game) => sum + game.hoursPlayed, 0) / topGames.length).toFixed(1)}h per game
             </span>
           </div>
+        </div>
+
+        {/* View All Games Link */}
+        <div
+          sx={{
+            mt: 3,
+            textAlign: 'center'
+          }}
+        >
+          <a
+            href='https://steamcommunity.com/id/chrisvogt/games/?tab=all'
+            target='_blank'
+            rel='noopener noreferrer'
+            sx={{
+              color: primaryColor,
+              textDecoration: 'none',
+              fontWeight: 'medium',
+              fontSize: ['12px', '13px'],
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 1,
+              padding: '8px 12px',
+              borderRadius: '6px',
+              background: darkModeActive ? 'rgba(74, 158, 255, 0.1)' : 'rgba(66, 46, 163, 0.1)',
+              border: darkModeActive ? '1px solid rgba(74, 158, 255, 0.2)' : '1px solid rgba(66, 46, 163, 0.2)',
+              transition: 'all 0.2s ease',
+              '&:hover': {
+                background: darkModeActive ? 'rgba(74, 158, 255, 0.2)' : 'rgba(66, 46, 163, 0.2)',
+                textDecoration: 'none',
+                transform: 'scale(1.02)'
+              }
+            }}
+          >
+            View complete gaming library
+            <ViewExternal />
+          </a>
         </div>
       </div>
     </div>
