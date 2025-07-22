@@ -12,7 +12,6 @@ import PostCard from '../recent-posts/post-card'
 import ProfileMetricsBadge from '../profile-metrics-badge'
 import Widget from '../widget'
 import WidgetHeader from '../widget-header'
-import OwnedGamesTable from './owned-games-table'
 import AiSummary from './ai-summary'
 import PlayTimeChart from './play-time-chart'
 

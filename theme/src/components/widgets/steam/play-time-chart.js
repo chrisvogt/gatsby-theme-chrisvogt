@@ -12,7 +12,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
   const darkModeActive = isDarkMode(colorMode)
 
   // Prepare data - top 10 games by playtime
-  const topGames = games
+  const topGames = (games || [])
     .filter(game => game.playTimeForever > 0)
     .sort((a, b) => b.playTimeForever - a.playTimeForever)
     .slice(0, 10)

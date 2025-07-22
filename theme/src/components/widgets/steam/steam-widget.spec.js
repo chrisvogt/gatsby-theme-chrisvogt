@@ -12,7 +12,6 @@ jest.mock('../profile-metrics-badge', () => props => (
 ))
 jest.mock('../widget', () => props => <div data-testid='Widget'>{props.children}</div>)
 jest.mock('../widget-header', () => props => <div data-testid='WidgetHeader'>{props.children}</div>)
-jest.mock('./owned-games-table', () => props => <div data-testid='OwnedGamesTable'>{JSON.stringify(props.games)}</div>)
 
 // Mock hooks and selectors
 jest.mock('../../../hooks/use-site-metadata', () => () => ({

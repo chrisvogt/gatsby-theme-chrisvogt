@@ -28,6 +28,9 @@ module.exports = {
   // The paths to modules that run some code to configure or set up the testing environment before each test
   setupFiles: ['<rootDir>/jest-shim.js', 'jest-canvas-mock'],
 
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
 
