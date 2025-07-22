@@ -23,12 +23,15 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
 
   const maxHours = Math.max(...topGames.map(g => g.hoursPlayed))
 
-  // Theme-aware styles
-  const containerBackground = darkModeActive
-    ? 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-    : 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%)'
-
-  const containerBorder = darkModeActive ? '1px solid rgba(74, 158, 255, 0.2)' : '1px solid rgba(66, 46, 163, 0.2)'
+  // Theme-aware styles using glassmorphism panel
+  const containerStyles = {
+    background: 'panel-background',
+    borderRadius: '10px',
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)',
+    boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)',
+    border: '1px solid rgba(255, 255, 255, 0.15)'
+  }
 
   const headerBorder = darkModeActive ? '2px solid rgba(74, 158, 255, 0.3)' : '2px solid rgba(66, 46, 163, 0.3)'
 
@@ -42,11 +45,8 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
       <div sx={{ mb: 4 }}>
         <div
           sx={{
-            background: containerBackground,
-            borderRadius: '16px',
-            padding: 4,
-            border: containerBorder,
-            boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)'
+            ...containerStyles,
+            padding: 4
           }}
         >
           <div
@@ -94,11 +94,8 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
       <div sx={{ mb: 4 }}>
         <div
           sx={{
-            background: containerBackground,
-            borderRadius: '16px',
+            ...containerStyles,
             padding: 4,
-            border: containerBorder,
-            boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)',
             textAlign: 'center',
             py: 5
           }}
@@ -121,11 +118,9 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
     <div sx={{ mb: 4 }}>
       <div
         sx={{
-          background: containerBackground,
+          ...containerStyles,
           borderRadius: ['12px', '16px'],
-          padding: [2, 3, 4],
-          border: containerBorder,
-          boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)'
+          padding: [2, 3, 4]
         }}
       >
         {/* Header */}
