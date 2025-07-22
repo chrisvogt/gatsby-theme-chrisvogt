@@ -214,7 +214,6 @@ describe('PlayTimeChart', () => {
         )
       } else {
         // Fallback: simulate click on first game (Cities: Skylines with id 255710)
-        const mockClickHandler = jest.fn()
         window.open = jest.fn()
 
         // Simulate the onClick behavior directly
