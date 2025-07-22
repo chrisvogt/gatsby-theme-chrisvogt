@@ -1,11 +1,14 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { useState } from 'react'
 import { Themed } from '@theme-ui/mdx'
 import getTimeSpent from './get-time-spent'
+import isDarkMode from '../../../helpers/isDarkMode'
 
 const PlayTimeChart = ({ games = [], isLoading = false }) => {
   const [hoveredGame, setHoveredGame] = useState(null)
+  const { colorMode } = useThemeUI()
+  const darkModeActive = isDarkMode(colorMode)
 
   // Prepare data - top 10 games by playtime
   const topGames = games
@@ -20,16 +23,32 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
 
   const maxHours = Math.max(...topGames.map(g => g.hoursPlayed))
 
+  // Theme-aware styles
+  const containerBackground = darkModeActive
+    ? 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
+    : 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%)'
+
+  const containerBorder = darkModeActive ? '1px solid rgba(74, 158, 255, 0.2)' : '1px solid rgba(66, 46, 163, 0.2)'
+
+  const headerBorder = darkModeActive ? '2px solid rgba(74, 158, 255, 0.3)' : '2px solid rgba(66, 46, 163, 0.3)'
+
+  const primaryColor = darkModeActive ? '#4a9eff' : '#422EA3'
+  const mutedTextColor = darkModeActive ? '#888' : '#666'
+  const lightMutedTextColor = darkModeActive ? '#aaa' : '#777'
+
   // Loading state
   if (isLoading) {
     return (
       <div sx={{ mb: 4 }}>
         <div
           sx={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)',
+            background: containerBackground,
             borderRadius: '16px',
             padding: 4,
-            border: '1px solid rgba(74, 158, 255, 0.2)'
+            border: containerBorder,
+            boxShadow: darkModeActive 
+              ? '0 8px 32px rgba(0,0,0,0.3)' 
+              : '0 8px 32px rgba(0,0,0,0.1)'
           }}
         >
           <div
@@ -45,7 +64,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
               sx={{
                 width: '60px',
                 height: '60px',
-                border: '3px solid #4a9eff',
+                border: `3px solid ${primaryColor}`,
                 borderTop: '3px solid transparent',
                 borderRadius: '50%',
                 '@keyframes spin': {
@@ -57,7 +76,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             />
             <Themed.p
               sx={{
-                color: '#4a9eff',
+                color: primaryColor,
                 fontSize: '18px',
                 fontWeight: 'bold',
                 textAlign: 'center'
@@ -77,10 +96,13 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
       <div sx={{ mb: 4 }}>
         <div
           sx={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)',
+            background: containerBackground,
             borderRadius: '16px',
             padding: 4,
-            border: '1px solid rgba(74, 158, 255, 0.2)',
+            border: containerBorder,
+            boxShadow: darkModeActive 
+              ? '0 8px 32px rgba(0,0,0,0.3)' 
+              : '0 8px 32px rgba(0,0,0,0.1)',
             textAlign: 'center',
             py: 5
           }}
@@ -103,11 +125,13 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
     <div sx={{ mb: 4 }}>
       <div
         sx={{
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)',
+          background: containerBackground,
           borderRadius: '16px',
           padding: 4,
-          border: '1px solid rgba(74, 158, 255, 0.2)',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+          border: containerBorder,
+          boxShadow: darkModeActive 
+            ? '0 8px 32px rgba(0,0,0,0.3)' 
+            : '0 8px 32px rgba(0,0,0,0.1)'
         }}
       >
         {/* Header */}
@@ -117,12 +141,14 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             alignItems: 'center',
             mb: 4,
             pb: 3,
-            borderBottom: '2px solid rgba(74, 158, 255, 0.3)'
+            borderBottom: headerBorder
           }}
         >
           <div
             sx={{
-              background: 'linear-gradient(45deg, #4a9eff, #711e9b)',
+              background: darkModeActive
+                ? 'linear-gradient(45deg, #4a9eff, #711e9b)'
+                : 'linear-gradient(45deg, #422EA3, #711E9B)',
               width: '6px',
               height: '32px',
               borderRadius: '3px',
@@ -132,7 +158,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
           <div>
             <Themed.h3
               sx={{
-                color: '#4a9eff',
+                color: primaryColor,
                 fontSize: '20px',
                 fontWeight: 'bold',
                 mb: 1
@@ -142,7 +168,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             </Themed.h3>
             <Themed.p
               sx={{
-                color: '#888',
+                color: mutedTextColor,
                 fontSize: '14px',
                 mb: 0
               }}
@@ -168,11 +194,19 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                   display: 'flex',
                   alignItems: 'center',
                   background: isHovered
-                    ? 'linear-gradient(90deg, rgba(74, 158, 255, 0.15) 0%, rgba(113, 30, 155, 0.15) 100%)'
-                    : 'rgba(255, 255, 255, 0.05)',
+                    ? darkModeActive
+                      ? 'linear-gradient(90deg, rgba(74, 158, 255, 0.15) 0%, rgba(113, 30, 155, 0.15) 100%)'
+                      : 'linear-gradient(90deg, rgba(66, 46, 163, 0.15) 0%, rgba(113, 30, 155, 0.15) 100%)'
+                    : darkModeActive
+                      ? 'rgba(255, 255, 255, 0.05)'
+                      : 'rgba(255, 255, 255, 0.8)',
                   borderRadius: '12px',
                   padding: 3,
-                  border: isHovered ? '2px solid rgba(74, 158, 255, 0.5)' : '2px solid transparent',
+                  border: isHovered 
+                    ? darkModeActive
+                      ? '2px solid rgba(74, 158, 255, 0.5)'
+                      : '2px solid rgba(66, 46, 163, 0.5)'
+                    : '2px solid transparent',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
                   transform: isHovered ? 'scale(1.02)' : 'scale(1)',
@@ -191,8 +225,10 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                         ? `linear-gradient(45deg, ${
                             index === 0 ? '#ffd700, #ffed4e' : index === 1 ? '#c0c0c0, #e5e5e5' : '#cd7f32, #ffa500'
                           })`
-                        : 'rgba(255, 255, 255, 0.1)',
-                    color: index < 3 ? '#000' : '#fff',
+                        : darkModeActive
+                          ? 'rgba(255, 255, 255, 0.1)'
+                          : 'rgba(0, 0, 0, 0.1)',
+                    color: index < 3 ? '#000' : darkModeActive ? '#fff' : '#333',
                     width: '32px',
                     height: '32px',
                     borderRadius: '50%',
@@ -218,7 +254,9 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                     overflow: 'hidden',
                     mr: 3,
                     minWidth: '120px',
-                    border: '2px solid rgba(74, 158, 255, 0.2)'
+                    border: darkModeActive
+                      ? '2px solid rgba(74, 158, 255, 0.2)'
+                      : '2px solid rgba(66, 46, 163, 0.2)'
                   }}
                 >
                   <img
@@ -240,7 +278,9 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        background: 'rgba(74, 158, 255, 0.2)',
+                        background: darkModeActive
+                          ? 'rgba(74, 158, 255, 0.2)'
+                          : 'rgba(66, 46, 163, 0.2)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -248,8 +288,10 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                     >
                       <div
                         sx={{
-                          background: 'rgba(0, 0, 0, 0.8)',
-                          color: '#4a9eff',
+                          background: darkModeActive
+                            ? 'rgba(0, 0, 0, 0.8)'
+                            : 'rgba(255, 255, 255, 0.9)',
+                          color: primaryColor,
                           padding: '4px 8px',
                           borderRadius: '4px',
                           fontSize: '10px',
@@ -267,7 +309,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                   {/* Game Name */}
                   <div
                     sx={{
-                      color: '#fff',
+                      color: 'text',
                       fontSize: '16px',
                       fontWeight: 'bold',
                       mb: 1,
@@ -291,7 +333,9 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                     <div
                       sx={{
                         flex: 1,
-                        background: 'rgba(255, 255, 255, 0.1)',
+                        background: darkModeActive
+                          ? 'rgba(255, 255, 255, 0.1)'
+                          : 'rgba(0, 0, 0, 0.1)',
                         borderRadius: '8px',
                         height: '12px',
                         overflow: 'hidden',
@@ -300,7 +344,9 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                     >
                       <div
                         sx={{
-                          background: 'linear-gradient(90deg, #4a9eff, #711e9b)',
+                          background: darkModeActive
+                            ? 'linear-gradient(90deg, #4a9eff, #711e9b)'
+                            : 'linear-gradient(90deg, #422EA3, #711E9B)',
                           height: '100%',
                           borderRadius: '8px',
                           width: `${progressPercent}%`,
@@ -317,7 +363,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                     {/* Hours Text */}
                     <div
                       sx={{
-                        color: '#4a9eff',
+                        color: primaryColor,
                         fontSize: '14px',
                         fontWeight: 'bold',
                         minWidth: '80px',
@@ -331,14 +377,14 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
                   {/* Detailed Time */}
                   <div
                     sx={{
-                      color: '#aaa',
+                      color: lightMutedTextColor,
                       fontSize: '12px',
                       mt: 1
                     }}
                   >
                     {getTimeSpent(game.playTimeForever * 60 * 1000)}
                     {game.playTime2Weeks && (
-                      <span sx={{ ml: 2, color: '#888' }}>
+                      <span sx={{ ml: 2, color: mutedTextColor }}>
                         • {getTimeSpent(game.playTime2Weeks * 60 * 1000)} recently
                       </span>
                     )}
@@ -354,7 +400,9 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
           sx={{
             mt: 4,
             pt: 3,
-            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+            borderTop: darkModeActive
+              ? '1px solid rgba(255, 255, 255, 0.1)'
+              : '1px solid rgba(0, 0, 0, 0.1)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -362,15 +410,15 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
             gap: 3
           }}
         >
-          <div sx={{ color: '#888', fontSize: '12px' }}>
+          <div sx={{ color: mutedTextColor, fontSize: '12px' }}>
             Total Hours:{' '}
-            <span sx={{ color: '#4a9eff', fontWeight: 'bold' }}>
+            <span sx={{ color: primaryColor, fontWeight: 'bold' }}>
               {topGames.reduce((sum, game) => sum + game.hoursPlayed, 0).toFixed(1)}h
             </span>
           </div>
-          <div sx={{ color: '#888', fontSize: '12px' }}>
+          <div sx={{ color: mutedTextColor, fontSize: '12px' }}>
             Average:{' '}
-            <span sx={{ color: '#4a9eff', fontWeight: 'bold' }}>
+            <span sx={{ color: primaryColor, fontWeight: 'bold' }}>
               {(topGames.reduce((sum, game) => sum + game.hoursPlayed, 0) / topGames.length).toFixed(1)}h per game
             </span>
           </div>
