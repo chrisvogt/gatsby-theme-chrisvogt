@@ -670,4 +670,3 @@ describe('PlayTimeChart', () => {
     })
   })
 })
-
