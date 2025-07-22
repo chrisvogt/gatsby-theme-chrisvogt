@@ -75,6 +75,7 @@
     "@theme-ui/prism": "^0.17.2",
     "boxen": "^8.0.1",
     "classnames": "^2.5.1",
+    "d3": "^7.9.0",
     "gatsby": "^5.14.5",
     "gatsby-plugin-emotion": "^8.14.0",
     "gatsby-plugin-feed": "^5.14.0",
