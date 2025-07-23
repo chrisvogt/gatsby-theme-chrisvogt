@@ -90,6 +90,7 @@ const defaultConfig = {
 
     // SEO
     titleTemplate: '%s · My Website',
+
     // Webmention endpoint
     webmentionUrl: ''
   },
