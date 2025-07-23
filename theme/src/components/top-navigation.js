@@ -18,7 +18,6 @@ const TopNavigation = () => {
   const metadata = useSiteMetadata()
 
   const navigation = useNavigationData()
-  console.log('TopNavigation navigation:', navigation)
   const menuItems = getHeaderLeftItems(navigation)
   const title = getTitle(metadata)
 

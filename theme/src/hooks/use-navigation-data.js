@@ -38,7 +38,7 @@ const useNavigationData = () => {
       home: navigation.header.home || []
     }
   }
-  console.log('useNavigationData result:', result)
+
   return result
 }
 

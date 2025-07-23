@@ -62,21 +62,4 @@ describe('Widget/Goodreads/BookLink', () => {
       }
     })
   })
-
-  it('logs click event details for debugging', async () => {
-    // Mock window.scrollY
-    Object.defineProperty(window, 'scrollY', { value: 200 })
-    render(<BookLink {...mockProps} />)
-    const link = screen.getByTestId('book-link')
-    fireEvent.click(link)
-    // Wait for the setTimeout to complete
-    await new Promise(resolve => setTimeout(resolve, 0))
-    expect(console.log).toHaveBeenCalledWith('BookLink click:', {
-      id: '123',
-      title: 'Test Book',
-      scrollY: 200,
-      pathname: '/',
-      search: ''
-    })
-  })
 })
