@@ -79,7 +79,8 @@ describe('theme-config', () => {
           }
         ],
         footerText: 'Made with ❤️',
-        titleTemplate: '%s · My Website'
+        titleTemplate: '%s · My Website',
+        webmentionUrl: ''
       })
     })
 

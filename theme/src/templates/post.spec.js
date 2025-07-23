@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer'
 import { useStaticQuery } from 'gatsby'
 
 import Post, { Head } from './post'
+import * as useSiteMetadataModule from '../hooks/use-site-metadata'
 
 const data = {
   mdx: {
@@ -35,10 +36,14 @@ const BlogPostContent = <div>Lorum ipsum dolor sit amet.</div>
 describe('Blog Post', () => {
   beforeEach(() => {
     useStaticQuery.mockImplementation(() => data)
+    jest
+      .spyOn(useSiteMetadataModule, 'default')
+      .mockReturnValue({ siteUrl: 'https://example.com', baseURL: 'https://example.com' })
   })
 
   afterEach(() => {
     jest.clearAllMocks()
+    jest.restoreAllMocks()
   })
 
   it('matches the snapshot', () => {

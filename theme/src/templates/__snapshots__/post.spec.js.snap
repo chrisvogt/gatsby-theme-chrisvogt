@@ -38,7 +38,7 @@ exports[`Blog Post does not render category when not provided 1`] = `
         >
           <a
             className="u-url"
-            href="https://www.chrisvogt.me/blog/mock-post"
+            href="https://example.com/blog/mock-post"
           />
           <span
             className="u-uid"
@@ -127,7 +127,7 @@ exports[`Blog Post matches the snapshot 1`] = `
         >
           <a
             className="u-url"
-            href="https://www.chrisvogt.me/blog/mock-post"
+            href="https://example.com/blog/mock-post"
           />
           <span
             className="u-uid"
