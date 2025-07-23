@@ -64,7 +64,8 @@ module.exports = {
         username: 'chrisvogt',
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/steam'
       }
-    }
+    },
+    webmentionUrl: 'https://webmention.io/www.chrisvogt.me/webmention'
   },
   plugins: [
     {

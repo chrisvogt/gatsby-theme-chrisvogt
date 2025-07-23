@@ -19,6 +19,7 @@ const Seo = ({ article, children, description, image: imageURL, keywords, title:
   const twitterUsername = getTwitterUsername(metadata)
 
   const title = titleTemplate.replace(/%s/g, pageTitle) || siteTitle
+  const webmentionUrl = metadata.webmentionUrl
 
   return (
     <>
@@ -36,7 +37,7 @@ const Seo = ({ article, children, description, image: imageURL, keywords, title:
       <meta name='twitter:title' content={title} />
       {imageURL && <meta name='twitter:image' content={imageURL} />}
       {description && <meta name='twitter:description' content={description} />}
-      <link rel='webmention' href='https://webmention.io/www.chrisvogt.me/webmention' />
+      {webmentionUrl && <link rel='webmention' href={webmentionUrl} />}
       {children}
     </>
   )
