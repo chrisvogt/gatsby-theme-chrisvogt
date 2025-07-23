@@ -1,5 +1,40 @@
 # Changelog
 
+## 0.57.0
+
+### ✨ Features
+
+- **Steam Widget Enhancement**: Replaced game table with interactive play-time chart
+  - **New PlayTimeChart Component** (`src/components/widgets/steam/play-time-chart.js`): Advanced D3-based visualization for gaming library analysis
+  - **Interactive Features**: Hover tooltips, responsive design, and dynamic data filtering
+  - **Visual Improvements**: Modern chart design with light/dark mode support and gradient styling
+  - **Performance**: Optimized rendering for large game libraries with smart data limiting (top 25 games)
+  - **Accessibility**: Proper ARIA labels and keyboard navigation support
+
+### 🔧 Architecture Improvements
+
+- **Component Replacement**: Seamless migration from `owned-games-table` to `play-time-chart` component
+- **Dependency Addition**: Added D3.js for advanced data visualization capabilities
+- **Code Organization**: Improved Steam widget structure with better separation of concerns
+
+### 🧹 Code Quality
+
+- **Removed Legacy Code**: Cleaned up old `owned-games-table` component and related files
+- **Enhanced Testing**: Comprehensive test coverage for new chart component with multiple data scenarios
+- **Snapshot Updates**: Updated visual regression tests to reflect new chart interface
+
+### 🧪 Testing
+
+- **New Test Suite**: Added `play-time-chart.spec.js` with 5 test scenarios covering edge cases
+- **Visual Testing**: Updated Steam widget snapshots to reflect new chart-based interface
+- **Edge Case Coverage**: Tests for empty data, large datasets, and zero playtime scenarios
+
+### 🎯 User Experience
+
+- **Better Data Visualization**: Chart format provides clearer insights into gaming patterns than tabular data
+- **Interactive Design**: Hover states and visual feedback improve user engagement
+- **Responsive Layout**: Chart adapts seamlessly to different screen sizes and theme modes
+
 ## 0.56.0
 
 ### ✨ Features

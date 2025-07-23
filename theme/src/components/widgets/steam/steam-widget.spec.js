@@ -1,8 +1,9 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import renderer, { act } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import configureStore from 'redux-mock-store'
-import SteamWidget from './steam-widget'
+import configureMockStore from 'redux-mock-store'
+import { configureStore as configureRealStore } from '@reduxjs/toolkit'
+// import SteamWidget from './steam-widget' // REMOVE THIS LINE
 
 // Mock child components to isolate the test
 jest.mock('../call-to-action', () => props => <div data-testid='CallToAction'>{props.title}</div>)
@@ -12,7 +13,6 @@ jest.mock('../profile-metrics-badge', () => props => (
 ))
 jest.mock('../widget', () => props => <div data-testid='Widget'>{props.children}</div>)
 jest.mock('../widget-header', () => props => <div data-testid='WidgetHeader'>{props.children}</div>)
-jest.mock('./owned-games-table', () => props => <div data-testid='OwnedGamesTable'>{JSON.stringify(props.games)}</div>)
 
 // Mock hooks and selectors
 jest.mock('../../../hooks/use-site-metadata', () => () => ({
@@ -21,9 +21,18 @@ jest.mock('../../../hooks/use-site-metadata', () => () => ({
 jest.mock('../../../selectors/metadata', () => ({
   getSteamWidgetDataSource: () => 'https://example.com/steam-feed'
 }))
-jest.mock('../../../actions/fetchDataSource', () => jest.fn(() => ({ type: 'MOCK_ACTION' })))
 
-const mockStore = configureStore([]) // no middleware
+// Move fetchDataSource mock before importing the component
+let mockFetchDataSource
+jest.mock('../../../actions/fetchDataSource', () => {
+  mockFetchDataSource = jest.fn(() => ({ type: 'MOCK_ACTION' }))
+  return mockFetchDataSource
+})
+
+const mockStore = configureMockStore([]) // no middleware
+
+// Re-import after mocks
+const SteamWidget = require('./steam-widget').default
 
 describe('SteamWidget', () => {
   it('renders correctly with sample data', () => {
@@ -103,5 +112,153 @@ describe('SteamWidget', () => {
       .toJSON()
 
     expect(tree).toMatchSnapshot()
+  })
+
+  it('renders error state (hasFatalError)', () => {
+    const store = mockStore({
+      widgets: {
+        steam: {
+          state: 'SUCCESS',
+          data: {
+            metrics: [{ label: 'Games Played', value: 5 }],
+            profile: {
+              displayName: 'Chris',
+              profileURL: 'https://steamcommunity.com/id/themeuser'
+            },
+            collections: {
+              recentlyPlayedGames: [],
+              ownedGames: []
+            }
+          },
+          hasFatalError: true
+        }
+      }
+    })
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders AI summary if present', () => {
+    const store = mockStore({
+      widgets: {
+        steam: {
+          state: 'SUCCESS',
+          data: {
+            aiSummary: 'This is an AI summary',
+            metrics: [{ label: 'Games Played', value: 5 }],
+            profile: {
+              displayName: 'Chris',
+              profileURL: 'https://steamcommunity.com/id/themeuser'
+            },
+            collections: {
+              recentlyPlayedGames: [],
+              ownedGames: []
+            }
+          }
+        }
+      }
+    })
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders with empty metrics', () => {
+    const store = mockStore({
+      widgets: {
+        steam: {
+          state: 'SUCCESS',
+          data: {
+            metrics: [],
+            profile: {
+              displayName: 'Chris',
+              profileURL: 'https://steamcommunity.com/id/themeuser'
+            },
+            collections: {
+              recentlyPlayedGames: [],
+              ownedGames: []
+            }
+          }
+        }
+      }
+    })
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders with empty recentlyPlayedGames and ownedGames', () => {
+    const store = mockStore({
+      widgets: {
+        steam: {
+          state: 'SUCCESS',
+          data: {
+            metrics: [{ label: 'Games Played', value: 5 }],
+            profile: {
+              displayName: 'Chris',
+              profileURL: 'https://steamcommunity.com/id/themeuser'
+            },
+            collections: {
+              recentlyPlayedGames: [],
+              ownedGames: []
+            }
+          }
+        }
+      }
+    })
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('calls fetchDataSource when isLoading is true', async () => {
+    mockFetchDataSource.mockClear()
+    // Use a real Redux store for this test
+    const initialState = {
+      widgets: {
+        steam: {
+          state: 'INIT',
+          data: {
+            metrics: [],
+            profile: {},
+            collections: { recentlyPlayedGames: [], ownedGames: [] }
+          }
+        }
+      }
+    }
+    // Minimal reducer to support the selectors
+    function widgets(state = initialState.widgets) {
+      return state
+    }
+    const store = configureRealStore({ reducer: { widgets } })
+    await act(async () => {
+      renderer.create(
+        <Provider store={store}>
+          <SteamWidget />
+        </Provider>
+      )
+    })
+    expect(mockFetchDataSource).toHaveBeenCalled()
   })
 })
