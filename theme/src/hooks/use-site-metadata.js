@@ -64,6 +64,7 @@ const useSiteMetadata = () => {
               widgetDataSource
             }
           }
+          webmentionUrl
         }
       }
     }

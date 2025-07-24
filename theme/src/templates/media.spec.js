@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
 
 import Media, { Head } from './media'
+import * as useSiteMetadataModule from '../hooks/use-site-metadata'
 
 // Mocked Data
 const data = {
@@ -65,10 +66,14 @@ const MediaPostContent = <div>Lorum ipsum dolor sit amet.</div>
 describe('Media Post', () => {
   beforeEach(() => {
     useStaticQuery.mockImplementation(() => data)
+    jest
+      .spyOn(useSiteMetadataModule, 'default')
+      .mockReturnValue({ siteUrl: 'https://example.com', baseURL: 'https://example.com' })
   })
 
   afterEach(() => {
     jest.clearAllMocks()
+    jest.restoreAllMocks()
   })
 
   // Helper function to wrap components in the ThemeUIProvider and Redux Provider

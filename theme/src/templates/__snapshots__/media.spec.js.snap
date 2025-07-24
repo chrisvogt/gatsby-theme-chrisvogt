@@ -39,7 +39,7 @@ exports[`Media Post renders correctly with a SoundCloud source 1`] = `
         >
           <a
             className="u-url"
-            href="https://www.chrisvogt.me/music/mock-media"
+            href="https://example.com/music/mock-media"
           />
           <span
             className="u-uid"
@@ -142,7 +142,7 @@ exports[`Media Post renders correctly with a YouTube source 1`] = `
         >
           <a
             className="u-url"
-            href="https://www.chrisvogt.me/music/mock-media"
+            href="https://example.com/music/mock-media"
           />
           <span
             className="u-uid"
@@ -232,7 +232,7 @@ exports[`Media Post renders correctly with no media sources 1`] = `
         >
           <a
             className="u-url"
-            href="https://www.chrisvogt.me/music/mock-media"
+            href="https://example.com/music/mock-media"
           />
           <span
             className="u-uid"

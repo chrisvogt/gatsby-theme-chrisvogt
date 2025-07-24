@@ -23,13 +23,6 @@ const BookLink = ({ id, thumbnailURL, title }) => {
     const currentScroll = window.scrollY
     // Use a small timeout to ensure the scroll position is preserved
     setTimeout(() => {
-      console.log('BookLink click:', {
-        id,
-        title,
-        scrollY: currentScroll,
-        pathname: window.location.pathname,
-        search: window.location.search
-      })
       // Use Gatsby's navigate for the initial click
       gatsbyNavigate(`?bookId=${id}`, {
         replace: true,

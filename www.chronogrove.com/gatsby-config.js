@@ -25,7 +25,8 @@ module.exports = {
     },
     subhead: 'Official demo site for gatsby-theme-chronogrove',
     title: 'Chronogrove',
-    titleTemplate: '%s · Chronogrove, a GatsbyJS blog theme for digital gardens and creators'
+    titleTemplate: '%s · Chronogrove, a GatsbyJS blog theme for digital gardens and creators',
+    webmentionUrl: 'https://webmention.io/www.chronogrove.com/webmention'
   },
   plugins: [
     {

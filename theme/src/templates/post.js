@@ -7,9 +7,11 @@ import Category from '../components/category'
 import Layout from '../components/layout'
 import PageHeader from '../components/blog/page-header'
 import Seo from '../components/seo'
+import useSiteMetadata from '../hooks/use-site-metadata'
 
 const PostTemplate = ({ children, data }) => {
   const { mdx } = data
+  const { siteUrl = '', baseURL = '' } = useSiteMetadata()
 
   const category = mdx.fields.category
   const date = mdx.frontmatter.date
@@ -19,8 +21,8 @@ const PostTemplate = ({ children, data }) => {
   const keywords = mdx.frontmatter.keywords
   const path = mdx.fields.path
 
-  // Build canonical URL
-  const canonicalUrl = `https://www.chrisvogt.me${path}`
+  // Build canonical URL from site metadata
+  const canonicalUrl = `${baseURL || siteUrl || ''}${path}`
 
   return (
     <Layout>

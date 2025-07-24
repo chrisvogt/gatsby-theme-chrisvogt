@@ -12,6 +12,7 @@ import Seo from '../components/seo'
 import { setSoundcloudTrack } from '../reducers/audioPlayer'
 
 import YouTube from '../shortcodes/youtube'
+import useSiteMetadata from '../hooks/use-site-metadata'
 
 const getBanner = mdx => mdx.frontmatter.banner
 const getDescription = mdx => mdx.frontmatter.description
@@ -28,9 +29,10 @@ const MediaTemplate = ({ data: { mdx }, children }) => {
   const banner = getBanner(mdx)
   const keywords = mdx.frontmatter.keywords
   const path = mdx.fields.path
+  const { siteUrl = '', baseURL = '' } = useSiteMetadata()
 
-  // Build canonical URL
-  const canonicalUrl = `https://www.chrisvogt.me${path}`
+  // Build canonical URL from site metadata
+  const canonicalUrl = `${baseURL || siteUrl || ''}${path}`
 
   // Set the SoundCloud track in Redux when this component mounts
   useEffect(() => {

@@ -89,7 +89,10 @@ const defaultConfig = {
     footerText: 'Made with ❤️',
 
     // SEO
-    titleTemplate: '%s · My Website'
+    titleTemplate: '%s · My Website',
+
+    // Webmention endpoint
+    webmentionUrl: ''
   },
 
   // Navigation configuration
