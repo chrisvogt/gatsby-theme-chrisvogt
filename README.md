@@ -1,4 +1,4 @@
-# Gatsby Theme Chronogrove 
+# Gatsby Theme Chronogrove
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/29f330b8-22bf-4f7f-a0f0-240476512db0/deploy-status)](https://app.netlify.com/sites/chrisvogt/deploys)
 [![CI](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/chrisvogt/gatsby-theme-chronogrove/actions/workflows/ci.yml)
