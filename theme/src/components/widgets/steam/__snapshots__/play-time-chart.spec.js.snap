@@ -336,21 +336,6 @@ exports[`PlayTimeChart Dark Mode Coverage matches snapshot for a game card in da
         </span>
       </div>
     </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
-    </div>
   </div>
 </div>
 `;
@@ -682,21 +667,6 @@ exports[`PlayTimeChart Dark Mode Coverage matches snapshot for a hovered game ca
             h per game
           </span>
         </div>
-      </div>
-      <div
-        class="css-1gnkw3u"
-      >
-        <a
-          class="css-ve6dld"
-          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          View complete gaming library
-          <span>
-            ViewExternal
-          </span>
-        </a>
       </div>
     </div>
   </div>
@@ -1039,21 +1009,6 @@ exports[`PlayTimeChart Data Processing filters out games with zero playtime 1`] 
         </span>
       </div>
     </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
-    </div>
   </div>
 </div>
 `;
@@ -1394,21 +1349,6 @@ exports[`PlayTimeChart Data Processing renders correctly with sample data 1`] = 
         </span>
       </div>
     </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
-    </div>
   </div>
 </div>
 `;
@@ -1589,21 +1529,6 @@ exports[`PlayTimeChart Edge Cases handles single game scenario 1`] = `
           h per game
         </span>
       </div>
-    </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
     </div>
   </div>
 </div>
@@ -1993,21 +1918,6 @@ exports[`PlayTimeChart Light Mode Coverage matches snapshot for a game card in l
         </span>
       </div>
     </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
-    </div>
   </div>
 </div>
 `;
@@ -2339,21 +2249,6 @@ exports[`PlayTimeChart Light Mode Coverage matches snapshot for a hovered game c
             h per game
           </span>
         </div>
-      </div>
-      <div
-        class="css-1gnkw3u"
-      >
-        <a
-          class="css-ve6dld"
-          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          View complete gaming library
-          <span>
-            ViewExternal
-          </span>
-        </a>
       </div>
     </div>
   </div>
@@ -2719,21 +2614,6 @@ exports[`PlayTimeChart Theme Integration adapts to dark mode styling 1`] = `
         </span>
       </div>
     </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
-    </div>
   </div>
 </div>
 `;
@@ -3073,21 +2953,6 @@ exports[`PlayTimeChart Theme Integration renders correctly in light mode 1`] = `
           h per game
         </span>
       </div>
-    </div>
-    <div
-      className="css-1gnkw3u"
-    >
-      <a
-        className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View complete gaming library
-        <span>
-          ViewExternal
-        </span>
-      </a>
     </div>
   </div>
 </div>

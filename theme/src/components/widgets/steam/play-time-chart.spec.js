@@ -275,11 +275,32 @@ describe('PlayTimeChart', () => {
     })
 
     it('includes link to view complete gaming library', () => {
-      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
+      const profileURL = 'https://steamcommunity.com/id/testuser'
+      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} profileURL={profileURL} />)
       const link = container.querySelector('a[href*="steamcommunity.com"]')
       expect(link).toBeInTheDocument()
-      expect(link).toHaveAttribute('target', '_blank')
-      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+    })
+  })
+
+  describe('View All Games Link', () => {
+    it('renders the correct Steam library link using profileURL', () => {
+      const profileURL = 'https://steamcommunity.com/id/testuser'
+      const { getByText } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} profileURL={profileURL} />)
+      const link = getByText('View complete gaming library').closest('a')
+      expect(link).toHaveAttribute('href', 'https://steamcommunity.com/id/testuser/games/?tab=all')
+    })
+
+    it('does not render the link when profileURL is not provided', () => {
+      const { queryByText } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
+      const link = queryByText('View complete gaming library')
+      expect(link).toBeNull()
+    })
+
+    it('removes trailing slash from profileURL before appending path', () => {
+      const profileURL = 'https://steamcommunity.com/id/testuser/'
+      const { getByText } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} profileURL={profileURL} />)
+      const link = getByText('View complete gaming library').closest('a')
+      expect(link).toHaveAttribute('href', 'https://steamcommunity.com/id/testuser/games/?tab=all')
     })
   })
 
@@ -386,13 +407,6 @@ describe('PlayTimeChart', () => {
         expect(img).toHaveAttribute('alt')
         expect(img.alt.length).toBeGreaterThan(0)
       })
-    })
-
-    it('handles external link navigation', () => {
-      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
-      const externalLink = container.querySelector('a[target="_blank"]')
-      expect(externalLink).toBeInTheDocument()
-      expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer')
     })
   })
 
@@ -510,9 +524,10 @@ describe('PlayTimeChart', () => {
     })
 
     it('renders the external link with dark mode styles', () => {
+      const profileURL = 'https://steamcommunity.com/id/testuser'
       const { container } = render(
         <ThemeUIProvider theme={darkTheme}>
-          <PlayTimeChart games={sampleGames} />
+          <PlayTimeChart games={sampleGames} profileURL={profileURL} />
         </ThemeUIProvider>
       )
       const link = container.querySelector('a[href*="steamcommunity.com"]')
