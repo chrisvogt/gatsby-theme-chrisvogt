@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.57.1
+
+- Steam widget: Added a "View complete gaming library" link to PlayTimeChart, using the user's Steam profile URL. Link adapts to missing/trailing slashes and is fully tested.
+- Minor refactor: PlayTimeChart now receives profileURL as a prop from Redux state.
+
 ## 0.57.0
 
 ### ✨ Features

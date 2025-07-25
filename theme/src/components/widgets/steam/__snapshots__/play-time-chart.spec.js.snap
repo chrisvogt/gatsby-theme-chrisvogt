@@ -341,9 +341,8 @@ exports[`PlayTimeChart Dark Mode Coverage matches snapshot for a game card in da
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>
@@ -688,9 +687,8 @@ exports[`PlayTimeChart Dark Mode Coverage matches snapshot for a hovered game ca
       >
         <a
           class="css-ve6dld"
-          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+          href="#"
           rel="noopener noreferrer"
-          target="_blank"
         >
           View complete gaming library
           <span>
@@ -1044,9 +1042,8 @@ exports[`PlayTimeChart Data Processing filters out games with zero playtime 1`] 
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>
@@ -1399,9 +1396,8 @@ exports[`PlayTimeChart Data Processing renders correctly with sample data 1`] = 
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>
@@ -1595,9 +1591,8 @@ exports[`PlayTimeChart Edge Cases handles single game scenario 1`] = `
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>
@@ -1998,9 +1993,8 @@ exports[`PlayTimeChart Light Mode Coverage matches snapshot for a game card in l
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>
@@ -2345,9 +2339,8 @@ exports[`PlayTimeChart Light Mode Coverage matches snapshot for a hovered game c
       >
         <a
           class="css-ve6dld"
-          href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+          href="#"
           rel="noopener noreferrer"
-          target="_blank"
         >
           View complete gaming library
           <span>
@@ -2724,9 +2717,8 @@ exports[`PlayTimeChart Theme Integration adapts to dark mode styling 1`] = `
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>
@@ -3079,9 +3071,8 @@ exports[`PlayTimeChart Theme Integration renders correctly in light mode 1`] = `
     >
       <a
         className="css-ve6dld"
-        href="https://steamcommunity.com/id/chrisvogt/games/?tab=all"
+        href="#"
         rel="noopener noreferrer"
-        target="_blank"
       >
         View complete gaming library
         <span>

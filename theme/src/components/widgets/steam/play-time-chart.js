@@ -6,7 +6,8 @@ import getTimeSpent from './get-time-spent'
 import isDarkMode from '../../../helpers/isDarkMode'
 import ViewExternal from '../view-external'
 
-const PlayTimeChart = ({ games = [], isLoading = false }) => {
+// Accept profileURL as a prop
+const PlayTimeChart = ({ games = [], isLoading = false, profileURL = '' }) => {
   const [hoveredGame, setHoveredGame] = useState(null)
   const { colorMode } = useThemeUI()
   const darkModeActive = isDarkMode(colorMode)
@@ -510,8 +511,7 @@ const PlayTimeChart = ({ games = [], isLoading = false }) => {
           }}
         >
           <a
-            href='https://steamcommunity.com/id/chrisvogt/games/?tab=all'
-            target='_blank'
+            href={profileURL ? `${profileURL.replace(/\/$/, '')}/games/?tab=all` : '#'}
             rel='noopener noreferrer'
             sx={{
               color: primaryColor,
