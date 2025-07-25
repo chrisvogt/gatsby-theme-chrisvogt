@@ -25,4 +25,4 @@ export function Expand(props) {
       Mock Expand
     </button>
   )
-} 
+}
