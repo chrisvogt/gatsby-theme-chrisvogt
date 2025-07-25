@@ -23689,7 +23689,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "www.chrisvogt.me@workspace:www.chrisvogt.me"
   dependencies:
-    "@theme-toggles/react": "npm:^4.1.0"
     boxen: "npm:^8.0.1"
     gatsby: "npm:^5.14.5"
     gatsby-plugin-google-analytics: "npm:^5.14.0"

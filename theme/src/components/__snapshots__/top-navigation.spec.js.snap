@@ -2,7 +2,7 @@
 
 exports[`TopNavigation matches the snapshot 1`] = `
 <div
-  className="css-1pf826z"
+  className="css-1916vvp"
 >
   <div
     className="css-17dzpzi"
@@ -12,7 +12,7 @@ exports[`TopNavigation matches the snapshot 1`] = `
     >
       <a
         aria-current="page"
-        className="css-1ihyb2e"
+        className="css-1wdhl9p"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -22,7 +22,18 @@ exports[`TopNavigation matches the snapshot 1`] = `
       </a>
       <div
         className="css-9cpsy"
-      />
+      >
+        <button
+          aria-pressed={false}
+          className="theme-toggle"
+          data-testid="dark-mode-toggle"
+          duration={750}
+          onClick={[Function]}
+          type="button"
+        >
+          Mock Expand
+        </button>
+      </div>
     </div>
     <div
       className="css-3uks8f"
