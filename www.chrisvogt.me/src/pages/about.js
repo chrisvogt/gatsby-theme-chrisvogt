@@ -21,13 +21,13 @@ const AboutPage = () => {
 
           <Themed.p>
             By day, I work as a software engineer at GoDaddy, creating tools that help small businesses build, grow, and
-            understand their online presence. But this site isn’t about work — it’s where I follow my curiosity,
+            understand their online presence. But this site isn't about work — it's where I follow my curiosity,
             experiment with ideas, and write code just for fun.
           </Themed.p>
 
           <Themed.p>
-            Most evenings, you’ll find me at the piano — practicing, recording, or just playing around with sound. I’ve
-            been slowly teaching myself music, and I’m figuring out how to bring what I know from tech into making
+            Most evenings, you'll find me at the piano — practicing, recording, or just playing around with sound. I've
+            been slowly teaching myself music, and I'm figuring out how to bring what I know from tech into making
             music. I also spend a lot of time with friends in the city and love connecting with people who are
             passionate about what they do.
           </Themed.p>
@@ -35,12 +35,17 @@ const AboutPage = () => {
           <Themed.h2 sx={{ mt: 5 }}>Career Journey</Themed.h2>
 
           <Themed.p>
-            My career has evolved through three main paths: starting in IT, exploring design, and ultimately growing
-            into software engineering. Click on any node below to learn more about that role or transition.
+            My career has evolved through three main paths: starting in print and design, contract and then full-time
+            jobs in IT, and ultimately growing into software engineering.
           </Themed.p>
 
-          <CareerPathVisualization />
+          <Themed.p sx={{ fontSize: 1, color: 'textMuted', fontStyle: 'italic', mb: 4 }}>
+            Click on any node below to learn more about that role or transition.
+          </Themed.p>
         </Container>
+
+        {/* Career visualization outside container for full width */}
+        <CareerPathVisualization />
       </Flex>
     </Layout>
   )

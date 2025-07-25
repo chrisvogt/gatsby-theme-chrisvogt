@@ -1,6 +1,6 @@
 {
   "name": "Career Journey",
-  "startYear": 2005,
+  "startYear": 2003,
   "children": [
     {
       "name": "IT Path",
@@ -11,12 +11,12 @@
       "children": [
         {
           "name": "Robert Half & TEKsystems",
-          "title": "Contract IT Technician (1099)",
-          "dates": "2005 – Feb 2007",
-          "startYear": 2005,
+          "title": "Contract Desktop Support & IT Technician (1099)",
+          "dates": "July 2006 – Feb 2007",
+          "startYear": 2006,
           "endYear": 2007,
           "type": "job",
-          "description": "Started career in IT support and systems administration"
+          "description": "Started career in IT support and systems administration doing short-term contract work"
         },
         {
           "name": "Apogee Physicians",
@@ -42,9 +42,27 @@
       "name": "Design Path",
       "type": "path",
       "color": "#ed8936",
-      "startYear": 2007,
+      "startYear": 2003,
       "description": "Explored creative design and visual communication",
       "children": [
+        {
+          "name": "OfficeMax Print & Document Services",
+          "title": "Desktop Publisher",
+          "dates": "May 2003 – May 2005",
+          "startYear": 2003,
+          "endYear": 2005,
+          "type": "job",
+          "description": "Print media design for laser, oversize, and outsourced custom media"
+        },
+        {
+          "name": "FedEx Kinko's",
+          "title": "Signs & Banners Specialist",
+          "dates": "May 2005 – May 2006",
+          "startYear": 2005,
+          "endYear": 2006,
+          "type": "job",
+          "description": "Oversaw files from preparation to print and frequently contributed to design"
+        },
         {
           "name": "Apogee Physicians",
           "title": "Creative Director",
@@ -127,7 +145,7 @@
               "startYear": 2025,
               "endYear": 2025,
               "type": "role",
-              "description": "Current senior engineering leadership position"
+              "description": "Principal Engineer working on the logged-in customer experience including navigation and dashboards."
             }
           ]
         }

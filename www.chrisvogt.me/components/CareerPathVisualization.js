@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Box, useThemeUI } from 'theme-ui'
 import * as d3 from 'd3'
 import careerData from '../src/data/career-path.json'
@@ -11,7 +11,29 @@ const CareerPathVisualization = () => {
   const { colorMode } = useThemeUI()
   const darkModeActive = isDarkMode(colorMode)
 
-  const createVisualization = () => {
+  // Helper function to truncate text based on screen size
+  const getTruncatedText = (text, maxLength) => {
+    if (!text) return ''
+    if (text.length <= maxLength) return text
+    return text.substring(0, maxLength - 3) + '...'
+  }
+
+  // Helper function to get abbreviated company names
+  const getAbbreviatedName = (name, isSmallScreen = false) => {
+    const abbreviations = {
+      'OfficeMax Print & Document Services': isSmallScreen ? 'OfficeMax' : 'OfficeMax Print & Doc',
+      "FedEx Kinko's": "FedEx Kinko's",
+      'Robert Half & TEKsystems': isSmallScreen ? 'Robert Half/TEK' : 'Robert Half & TEK',
+      'Apogee Physicians': 'Apogee',
+      'Encore Discovery Solutions': isSmallScreen ? 'Encore' : 'Encore Discovery',
+      'Pan Am Education': 'Pan Am',
+      'Salucro Healthcare Solutions': isSmallScreen ? 'Salucro' : 'Salucro Healthcare',
+      'Art In Reality, LLC': isSmallScreen ? 'Art In Reality' : 'Art In Reality'
+    }
+    return abbreviations[name] || name
+  }
+
+  const createVisualization = useCallback(() => {
     if (!svgRef.current || !containerRef.current) return
 
     // Clear previous visualization
@@ -19,9 +41,18 @@ const CareerPathVisualization = () => {
 
     const container = containerRef.current
     const containerWidth = container.offsetWidth || 800
-    const margin = { top: 40, right: 60, bottom: 40, left: 60 }
-    const width = Math.max(400, containerWidth - 40) - margin.left - margin.right
-    const height = Math.min(700, Math.max(400, window.innerHeight * 0.5)) - margin.top - margin.bottom
+    const isMobile = containerWidth < 768
+    const margin = {
+      top: isMobile ? 40 : 50,
+      right: isMobile ? 20 : 30, // Reduced from 60 to 30
+      bottom: isMobile ? 40 : 50,
+      left: isMobile ? 20 : 40 // Reduced from 60 to 40 for timeline space
+    }
+
+    // Better responsive width calculation with increased height (13% taller)
+    const width = Math.max(isMobile ? 300 : 500, containerWidth - (isMobile ? 20 : 40)) - margin.left - margin.right
+    const height = Math.min(isMobile ? 565 : 735, Math.max(452, window.innerHeight * 0.5)) - margin.top - margin.bottom
+    const isSmallScreen = width < 600
 
     const svg = d3
       .select(svgRef.current)
@@ -30,13 +61,23 @@ const CareerPathVisualization = () => {
 
     const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`)
 
-    // Create hierarchical layout
+    // Create hierarchical layout with more spacing
     const root = d3.hierarchy(careerData)
-    const treeLayout = d3.tree().size([width, height])
+    const treeLayout = d3
+      .tree()
+      .size([width, height])
+      .separation((a, b) => {
+        // Increase separation between nodes
+        if (a.parent === b.parent) {
+          return isSmallScreen ? 1.5 : 2
+        }
+        return isSmallScreen ? 2 : 3
+      })
+
     treeLayout(root)
 
-    // Create time scale - INVERTED (latest years at top)
-    const timeScale = d3.scaleLinear().domain([2005, 2025]).range([height, 0])
+    // Create time scale - INVERTED (latest years at top) with extended range
+    const timeScale = d3.scaleLinear().domain([2003, 2025]).range([height, 0])
 
     // Adjust node positions based on time
     root.descendants().forEach(node => {
@@ -170,14 +211,14 @@ const CareerPathVisualization = () => {
         d3.select(this).select('circle').style('stroke-width', 2)
       })
 
-    // Add circles for nodes - larger sizes
+    // Add circles for nodes - adjusted sizes
     nodes
       .append('circle')
       .attr('r', d => {
-        if (d.data.type === 'path') return 8
-        if (d.data.name === 'GoDaddy') return 15
-        if (d.data.name === 'Career Journey') return 8
-        return 8
+        if (d.data.type === 'path') return isSmallScreen ? 6 : 8
+        if (d.data.name === 'GoDaddy') return isSmallScreen ? 12 : 15
+        if (d.data.name === 'Career Journey') return isSmallScreen ? 6 : 8
+        return isSmallScreen ? 6 : 8
       })
       .style('fill', d => {
         if (d.data.type === 'path') return d.data.color
@@ -202,84 +243,158 @@ const CareerPathVisualization = () => {
     nodes
       .filter(d => d.data.type === 'path')
       .append('polygon')
-      .attr('points', '0,-6 6,0 0,6 -6,0')
+      .attr('points', () => {
+        const size = isSmallScreen ? 4 : 6
+        return `0,-${size} ${size},0 0,${size} -${size},0`
+      })
       .style('fill', d => d.data.color)
       .style('stroke', '#fff')
       .style('stroke-width', 2)
       .style('opacity', 0.9)
 
-    // Add labels with responsive positioning
-    nodes
-      .append('text')
-      .attr('dy', '0.35em')
-      .attr('x', d => {
-        // Responsive text positioning
-        if (width < 600) {
-          // Mobile: position text above/below nodes
-          return 0
-        } else {
-          // Desktop: position text left/right based on node position
-          if (d.x > width * 0.7) return -12
-          if (d.x < width * 0.3) return 12
-          return d.children ? -12 : 12
-        }
-      })
-      .attr('dy', d => {
-        // Mobile: position text above/below
-        if (width < 600) {
-          return d.children ? '-1.2em' : '1.8em'
-        }
-        return '0.35em'
-      })
-      .style('text-anchor', d => {
-        if (width < 600) return 'middle'
-        if (d.x > width * 0.7) return 'end'
-        if (d.x < width * 0.3) return 'start'
-        return d.children ? 'end' : 'start'
-      })
-      .style('font-size', d => {
-        const baseSize = width < 600 ? 10 : 12
-        if (d.data.type === 'path') return `${baseSize + 2}px`
-        if (d.data.name === 'GoDaddy') return `${baseSize + 1}px`
-        return `${baseSize}px`
-      })
-      .style('font-weight', d => {
-        if (d.data.type === 'path' || d.data.name === 'GoDaddy') return 'bold'
-        return 'normal'
-      })
-      .style('fill', darkModeActive ? '#e2e8f0' : '#2d3748')
-      .text(d => {
-        if (d.data.name === 'Career Journey') return ''
-        if (d.data.type === 'path') return d.data.name
-        if (d.data.name === 'GoDaddy') return d.data.name
-        return d.data.title || d.data.name
-      })
+    // Collect text elements for collision detection
+    const textElements = []
 
-    // Add year labels - responsive positioning
-    const years = d3.range(2005, 2026, 5)
+    // Add labels with improved positioning and collision detection
+    nodes.each(function (d) {
+      if (d.data.name === 'Career Journey') return
+
+      const node = d3.select(this)
+      let displayText = ''
+
+      if (d.data.type === 'path') {
+        displayText = d.data.name
+      } else if (d.data.name === 'GoDaddy') {
+        displayText = d.data.name
+      } else {
+        // Use abbreviated names for companies and truncate titles
+        const companyName = getAbbreviatedName(d.data.name, isSmallScreen)
+        const title = d.data.title || d.data.name
+        const maxTitleLength = isSmallScreen ? 15 : 25
+        const truncatedTitle = getTruncatedText(title, maxTitleLength)
+        displayText = companyName === title ? companyName : truncatedTitle
+      }
+
+      // Smart text positioning with collision avoidance
+      let textX = 0
+      let textY = 0
+      let textAnchor = 'middle'
+
+      // Determine initial position based on node location and type
+      if (d.data.type === 'path') {
+        // Path nodes: center the text
+        textX = 0
+        textY = isSmallScreen ? -12 : -15
+        textAnchor = 'middle'
+      } else {
+        // Job nodes: position based on screen size and location
+        if (isSmallScreen) {
+          // On small screens, stack text vertically
+          textX = 0
+          textY = d.children ? -20 : 20
+          textAnchor = 'middle'
+        } else {
+          // On larger screens, use horizontal positioning
+          if (d.x < width * 0.25) {
+            textX = 15
+            textAnchor = 'start'
+          } else if (d.x > width * 0.75) {
+            textX = -15
+            textAnchor = 'end'
+          } else {
+            textX = d.children ? -15 : 15
+            textAnchor = d.children ? 'end' : 'start'
+          }
+          textY = 0
+        }
+      }
+
+      const textElement = node
+        .append('text')
+        .attr('x', textX)
+        .attr('y', textY)
+        .attr('dy', '0.35em')
+        .style('text-anchor', textAnchor)
+        .style('font-size', d => {
+          const baseSize = isSmallScreen ? 9 : 11
+          if (d.data.type === 'path') return `${baseSize + 2}px`
+          if (d.data.name === 'GoDaddy') return `${baseSize + 1}px`
+          return `${baseSize}px`
+        })
+        .style('font-weight', d => {
+          if (d.data.type === 'path' || d.data.name === 'GoDaddy') return 'bold'
+          return 'normal'
+        })
+        .style('fill', darkModeActive ? '#e2e8f0' : '#2d3748')
+        .style('pointer-events', 'none')
+        .text(displayText)
+
+      // Store text element info for collision detection
+      textElements.push({
+        element: textElement,
+        node: d,
+        x: d.x + textX,
+        y: d.y + textY,
+        width: displayText.length * (isSmallScreen ? 5 : 6), // Approximate text width
+        height: isSmallScreen ? 12 : 14
+      })
+    })
+
+    // Improved collision detection and adjustment
+    textElements.forEach((text, i) => {
+      for (let j = i + 1; j < textElements.length; j++) {
+        const other = textElements[j]
+
+        // Check for overlap with some padding
+        const xOverlap = Math.abs(text.x - other.x) < (text.width + other.width) / 2 + 4
+        const yOverlap = Math.abs(text.y - other.y) < Math.max(text.height, other.height) + 2
+
+        if (xOverlap && yOverlap) {
+          // More intelligent adjustment based on node positions
+          const adjustment = Math.max(text.height, other.height) + 4
+
+          // Prefer vertical adjustment to maintain readability
+          if (other.y > text.y) {
+            other.y += adjustment
+          } else {
+            other.y -= adjustment
+          }
+
+          // Update the actual text element position
+          const relativeY = other.y - other.node.y
+          other.element.attr('y', relativeY)
+        }
+      }
+    })
+
+    // Add year labels with better visibility and coverage (positioned inside container)
+    const years = [2003, 2007, 2011, 2015, 2019, 2023] // Key career milestone years
+    const timelineX = isMobile ? 35 : 45 // Position timeline inside the container
+    const yearLabelX = timelineX - 8 // Position year labels just left of timeline
+
     g.selectAll('.year-label')
       .data(years)
       .enter()
       .append('text')
       .attr('class', 'year-label')
-      .attr('x', -20)
+      .attr('x', yearLabelX)
       .attr('y', d => timeScale(d))
       .attr('dy', '0.35em')
       .style('text-anchor', 'end')
-      .style('font-size', width < 600 ? '10px' : '11px')
-      .style('fill', darkModeActive ? '#a0aec0' : '#718096')
+      .style('font-size', isSmallScreen ? '11px' : '12px') // Increased size for better readability
+      .style('fill', darkModeActive ? '#e2e8f0' : '#4a5568') // Much stronger contrast
       .style('font-weight', 'bold')
       .text(d => d)
 
-    // Add timeline line
+    // Add timeline line positioned inside the visible area
     g.append('line')
-      .attr('x1', -10)
+      .attr('x1', timelineX)
       .attr('y1', 0)
-      .attr('x2', -10)
+      .attr('x2', timelineX)
       .attr('y2', height)
       .style('stroke', darkModeActive ? '#4a5568' : '#cbd5e0')
       .style('stroke-width', 2)
-  }
+  }, [darkModeActive])
 
   useEffect(() => {
     createVisualization()
@@ -291,7 +406,15 @@ const CareerPathVisualization = () => {
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [darkModeActive])
+  }, [createVisualization])
+
+  // Trigger visualization re-render when selectedNode changes (affects container width)
+  useEffect(() => {
+    if (containerRef.current) {
+      // Small delay to ensure container has resized
+      setTimeout(createVisualization, 50)
+    }
+  }, [selectedNode, createVisualization])
 
   // Glassmorphism container styles
   const containerStyles = {
@@ -300,7 +423,42 @@ const CareerPathVisualization = () => {
     backdropFilter: 'blur(10px)',
     WebkitBackdropFilter: 'blur(10px)',
     boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)',
-    border: '1px solid rgba(255, 255, 255, 0.15)'
+    border: '1px solid rgba(255, 255, 255, 0.15)',
+    // Reduced width by ~20% with better responsive margins
+    maxWidth: ['95%', '85%', '80%'], // Narrower container
+    marginX: 'auto', // Center the container
+    display: 'flex',
+    flexDirection: ['column', 'column', selectedNode ? 'row' : 'column'], // Side-by-side on large screens when info panel is shown
+    alignItems: ['center', 'center', selectedNode ? 'flex-start' : 'center'],
+    gap: [0, 0, 4] // Space between visualization and info panel on large screens
+  }
+
+  // Info panel styles with slide-up and fade animation
+  const infoPanelStyles = {
+    background: 'panel-background',
+    borderRadius: ['12px', '16px'],
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)',
+    boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)',
+    border: '1px solid rgba(255, 255, 255, 0.15)',
+    padding: [3, 4],
+    // Responsive sizing and positioning
+    mt: [4, 4, 0], // Margin top only on small screens
+    width: ['100%', '100%', '300px'], // Fixed width on large screens, full width on small
+    flexShrink: 0, // Don't shrink on large screens
+    // Smooth entrance animation
+    '@keyframes slideUpFadeIn': {
+      '0%': {
+        opacity: 0,
+        transform: 'translateY(20px)'
+      },
+      '100%': {
+        opacity: 1,
+        transform: 'translateY(0)'
+      }
+    },
+    animation: 'slideUpFadeIn 0.4s ease-out',
+    transition: 'all 0.3s ease'
   }
 
   return (
@@ -311,85 +469,112 @@ const CareerPathVisualization = () => {
           padding: [2, 3, 4]
         }}
       >
+        {/* Visualization container */}
         <Box
-          ref={containerRef}
           sx={{
-            width: '100%',
-            overflow: 'auto',
-            display: 'flex',
-            justifyContent: 'center'
+            width: ['100%', '100%', selectedNode ? 'calc(100% - 300px - 32px)' : '100%'], // Leave space for info panel on large screens
+            minWidth: 0 // Allow shrinking
           }}
         >
-          <svg
-            ref={svgRef}
-            sx={{
-              maxWidth: '100%',
-              height: 'auto',
-              display: 'block'
-            }}
-          />
-        </Box>
-
-        {selectedNode && (
           <Box
+            ref={containerRef}
             sx={{
-              mt: 4,
-              background: 'panel-background',
-              borderRadius: ['12px', '16px'],
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              boxShadow: darkModeActive ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
-              padding: [3, 4],
-              transition: 'all 0.3s ease'
+              width: '100%',
+              overflow: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
           >
-            {/* Header with gradient accent */}
+            <svg
+              ref={svgRef}
+              sx={{
+                maxWidth: '100%',
+                height: 'auto',
+                display: 'block',
+                margin: '0 auto' // Ensure perfect centering
+              }}
+            />
+          </Box>
+        </Box>
+
+        {/* Job information panel */}
+        {selectedNode && (
+          <Box sx={infoPanelStyles}>
+            {/* Header with gradient accent and close button */}
             <Box
               sx={{
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'space-between',
                 mb: 3,
                 pb: 3,
                 borderBottom: darkModeActive ? '2px solid rgba(74, 158, 255, 0.3)' : '2px solid rgba(66, 46, 163, 0.3)'
               }}
             >
-              <Box
-                sx={{
-                  background: darkModeActive
-                    ? 'linear-gradient(45deg, #4a9eff, #711e9b)'
-                    : 'linear-gradient(45deg, #422EA3, #711E9B)',
-                  width: '6px',
-                  height: '32px',
-                  borderRadius: '3px',
-                  mr: 3
-                }}
-              />
-              <Box>
-                {/* Company Name */}
-                {selectedNode.title && selectedNode.name && (
-                  <Box
-                    sx={{
-                      fontSize: '14px',
-                      color: darkModeActive ? '#888' : '#666',
-                      fontWeight: 'medium',
-                      mb: 1
-                    }}
-                  >
-                    {selectedNode.name}
-                  </Box>
-                )}
-                {/* Job Title / Role */}
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box
                   sx={{
-                    fontSize: '20px',
-                    fontWeight: 'bold',
-                    color: darkModeActive ? '#4a9eff' : '#422EA3',
-                    lineHeight: 'tight'
+                    background: darkModeActive
+                      ? 'linear-gradient(45deg, #4a9eff, #711e9b)'
+                      : 'linear-gradient(45deg, #422EA3, #711E9B)',
+                    width: '6px',
+                    height: '32px',
+                    borderRadius: '3px',
+                    mr: 3
                   }}
-                >
-                  {selectedNode.title || selectedNode.name}
+                />
+                <Box>
+                  {/* Company Name */}
+                  {selectedNode.title && selectedNode.name && (
+                    <Box
+                      sx={{
+                        fontSize: '14px',
+                        color: darkModeActive ? '#888' : '#666',
+                        fontWeight: 'medium',
+                        mb: 1
+                      }}
+                    >
+                      {selectedNode.name}
+                    </Box>
+                  )}
+                  {/* Job Title / Role */}
+                  <Box
+                    sx={{
+                      fontSize: '20px',
+                      fontWeight: 'bold',
+                      color: darkModeActive ? '#4a9eff' : '#422EA3',
+                      lineHeight: 'tight'
+                    }}
+                  >
+                    {selectedNode.title || selectedNode.name}
+                  </Box>
                 </Box>
+              </Box>
+
+              {/* Close button */}
+              <Box
+                onClick={() => setSelectedNode(null)}
+                sx={{
+                  cursor: 'pointer',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: darkModeActive ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+                  color: darkModeActive ? '#e2e8f0' : '#4a5568',
+                  fontSize: '18px',
+                  fontWeight: 'bold',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    backgroundColor: darkModeActive ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                    transform: 'scale(1.1)'
+                  }
+                }}
+              >
+                ×
               </Box>
             </Box>
 
