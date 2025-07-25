@@ -430,7 +430,6 @@ exports[`SteamWidget renders correctly with sample data 1`] = `
         <a
           className="css-drd097"
           href="https://steamcommunity.com/id/themeuser/games/?tab=all"
-          rel="noopener noreferrer"
         >
           View complete gaming library
           <span>

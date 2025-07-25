@@ -512,7 +512,6 @@ const PlayTimeChart = ({ games = [], isLoading = false, profileURL = '' }) => {
         >
           <a
             href={profileURL ? `${profileURL.replace(/\/$/, '')}/games/?tab=all` : '#'}
-            rel='noopener noreferrer'
             sx={{
               color: primaryColor,
               textDecoration: 'none',

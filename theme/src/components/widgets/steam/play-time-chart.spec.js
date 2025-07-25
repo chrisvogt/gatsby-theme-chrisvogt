@@ -279,7 +279,6 @@ describe('PlayTimeChart', () => {
       const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} profileURL={profileURL} />)
       const link = container.querySelector('a[href*="steamcommunity.com"]')
       expect(link).toBeInTheDocument()
-      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
     })
   })
 
@@ -408,13 +407,6 @@ describe('PlayTimeChart', () => {
         expect(img).toHaveAttribute('alt')
         expect(img.alt.length).toBeGreaterThan(0)
       })
-    })
-
-    it('handles external link navigation', () => {
-      const profileURL = 'https://steamcommunity.com/id/testuser'
-      const { container } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} profileURL={profileURL} />)
-      const externalLink = container.querySelector('a[rel="noopener noreferrer"]')
-      expect(externalLink).toBeInTheDocument()
     })
   })
 
