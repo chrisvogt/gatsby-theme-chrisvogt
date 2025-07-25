@@ -24,10 +24,12 @@ exports[`TopNavigation matches the snapshot 1`] = `
         className="css-9cpsy"
       >
         <button
+          aria-label="Toggle color mode"
           aria-pressed={false}
           className="theme-toggle"
           data-testid="dark-mode-toggle"
           duration={750}
+          id="theme-toggle"
           onClick={[Function]}
           type="button"
         >
