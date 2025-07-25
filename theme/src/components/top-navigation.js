@@ -25,7 +25,8 @@ const TopNavigation = () => {
     <Themed.div
       sx={{
         variant: 'styles.TopNavigation',
-        minHeight: '64px'
+        minHeight: '64px',
+        color: 'text'
       }}
     >
       <Container
@@ -56,7 +57,7 @@ const TopNavigation = () => {
               fontSize: [2, 3],
               fontWeight: 'bold',
               letterSpacing: '1.1px',
-              marginRight: 3,
+              marginRight: 2,
               textDecoration: 'none'
             }}
           >
