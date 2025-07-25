@@ -290,10 +290,10 @@ describe('PlayTimeChart', () => {
       expect(link).toHaveAttribute('href', 'https://steamcommunity.com/id/testuser/games/?tab=all')
     })
 
-    it('renders fallback link when profileURL is not provided', () => {
-      const { getByText } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
-      const link = getByText('View complete gaming library').closest('a')
-      expect(link).toHaveAttribute('href', '#')
+    it('does not render the link when profileURL is not provided', () => {
+      const { queryByText } = renderWithThemeForTesting(<PlayTimeChart games={sampleGames} />)
+      const link = queryByText('View complete gaming library')
+      expect(link).toBeNull()
     })
 
     it('removes trailing slash from profileURL before appending path', () => {

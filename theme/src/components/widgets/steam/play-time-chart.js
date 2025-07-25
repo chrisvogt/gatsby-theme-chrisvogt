@@ -504,38 +504,40 @@ const PlayTimeChart = ({ games = [], isLoading = false, profileURL = '' }) => {
         </div>
 
         {/* View All Games Link */}
-        <div
-          sx={{
-            mt: 3,
-            textAlign: 'center'
-          }}
-        >
-          <a
-            href={profileURL ? `${profileURL.replace(/\/$/, '')}/games/?tab=all` : '#'}
+        {profileURL && (
+          <div
             sx={{
-              color: primaryColor,
-              textDecoration: 'none',
-              fontWeight: 'medium',
-              fontSize: ['12px', '13px'],
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 1,
-              padding: '8px 12px',
-              borderRadius: '6px',
-              background: darkModeActive ? 'rgba(74, 158, 255, 0.1)' : 'rgba(66, 46, 163, 0.1)',
-              border: darkModeActive ? '1px solid rgba(74, 158, 255, 0.2)' : '1px solid rgba(66, 46, 163, 0.2)',
-              transition: 'all 0.2s ease',
-              '&:hover': {
-                background: darkModeActive ? 'rgba(74, 158, 255, 0.2)' : 'rgba(66, 46, 163, 0.2)',
-                textDecoration: 'none',
-                transform: 'scale(1.02)'
-              }
+              mt: 3,
+              textAlign: 'center'
             }}
           >
-            View complete gaming library
-            <ViewExternal />
-          </a>
-        </div>
+            <a
+              href={`${profileURL.replace(/\/$/, '')}/games/?tab=all`}
+              sx={{
+                color: primaryColor,
+                textDecoration: 'none',
+                fontWeight: 'medium',
+                fontSize: ['12px', '13px'],
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 1,
+                padding: '8px 12px',
+                borderRadius: '6px',
+                background: darkModeActive ? 'rgba(74, 158, 255, 0.1)' : 'rgba(66, 46, 163, 0.1)',
+                border: darkModeActive ? '1px solid rgba(74, 158, 255, 0.2)' : '1px solid rgba(66, 46, 163, 0.2)',
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  background: darkModeActive ? 'rgba(74, 158, 255, 0.2)' : 'rgba(66, 46, 163, 0.2)',
+                  textDecoration: 'none',
+                  transform: 'scale(1.02)'
+                }
+              }}
+            >
+              View complete gaming library
+              <ViewExternal />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   )
