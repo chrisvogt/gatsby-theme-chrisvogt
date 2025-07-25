@@ -104,3 +104,13 @@ article.c1v0-blog-post img.solid-background {
 .gatsby-highlight pre[class*='language-'].line-numbers {
   padding-left: 2.8em;
 }
+
+@import '@theme-toggles/react/css/Expand.css';
+
+.theme-toggle,
+.theme-toggle svg {
+  color: inherit;
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+}

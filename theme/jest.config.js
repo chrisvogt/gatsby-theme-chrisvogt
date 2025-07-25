@@ -22,7 +22,8 @@ module.exports = {
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/__mocks__/file-mock.js'
+      '<rootDir>/__mocks__/file-mock.js',
+    '^@theme-toggles/react$': '<rootDir>/__mocks__/theme-toggles-react-mock.js'
   },
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
