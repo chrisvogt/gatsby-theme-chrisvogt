@@ -138,31 +138,31 @@ describe('CareerPathVisualization', () => {
 
   it('renders the visualization container', () => {
     renderWithTheme(<CareerPathVisualization />)
-    
+
     const svg = screen.getByRole('img', { hidden: true }) // SVG elements have img role
     expect(svg).toBeInTheDocument()
   })
 
   it('handles window resize events', () => {
     renderWithTheme(<CareerPathVisualization />)
-    
+
     expect(window.addEventListener).toHaveBeenCalledWith('resize', expect.any(Function))
   })
 
   it('cleans up event listeners on unmount', () => {
     const { unmount } = renderWithTheme(<CareerPathVisualization />)
-    
+
     unmount()
-    
+
     expect(window.removeEventListener).toHaveBeenCalledWith('resize', expect.any(Function))
   })
 
   it('displays info panel when node is selected', () => {
     renderWithTheme(<CareerPathVisualization />)
-    
+
     // Simulate clicking on a node by setting state
     const component = screen.getByRole('img', { hidden: true }).closest('div').closest('div')
-    
+
     // Since we can't easily simulate D3 click events, we'll test the panel rendering directly
     // by checking if the component structure supports showing selected nodes
     expect(component).toBeInTheDocument()
@@ -171,9 +171,9 @@ describe('CareerPathVisualization', () => {
   it('applies dark mode styles correctly', () => {
     const isDarkMode = require('gatsby-theme-chronogrove/src/helpers/isDarkMode')
     isDarkMode.mockReturnValue(true)
-    
+
     renderWithTheme(<CareerPathVisualization />)
-    
+
     // The component should render without errors in dark mode
     const container = screen.getByRole('img', { hidden: true }).closest('div').closest('div')
     expect(container).toBeInTheDocument()
@@ -186,13 +186,13 @@ describe('CareerPathVisualization', () => {
       startYear: 2005,
       children: []
     }))
-    
+
     expect(() => renderWithTheme(<CareerPathVisualization />)).not.toThrow()
   })
 
   it('uses theme colors for styling', () => {
     renderWithTheme(<CareerPathVisualization />)
-    
+
     // Check that the component structure exists and would use theme colors
     const container = screen.getByRole('img', { hidden: true }).closest('div').closest('div')
     expect(container).toHaveStyle({ padding: '16px' }) // Based on theme space[3]
@@ -204,9 +204,9 @@ describe('CareerPathVisualization', () => {
       configurable: true,
       value: 400
     })
-    
+
     renderWithTheme(<CareerPathVisualization />)
-    
+
     const container = screen.getByRole('img', { hidden: true }).closest('div')
     expect(container).toBeInTheDocument()
   })
@@ -214,7 +214,7 @@ describe('CareerPathVisualization', () => {
   it('handles career path data structure correctly', () => {
     // Test that the component can handle the expected data structure
     renderWithTheme(<CareerPathVisualization />)
-    
+
     // Component should render without throwing errors
     const svg = screen.getByRole('img', { hidden: true })
     expect(svg).toBeInTheDocument()
@@ -222,9 +222,9 @@ describe('CareerPathVisualization', () => {
 
   it('applies glassmorphism styling', () => {
     renderWithTheme(<CareerPathVisualization />)
-    
+
     const container = screen.getByRole('img', { hidden: true }).closest('div').closest('div')
-    
+
     // Check for glassmorphism properties in the container
     expect(container).toHaveStyle({
       borderRadius: '16px',
@@ -237,14 +237,14 @@ describe('CareerPathVisualization', () => {
       ...mockTheme,
       useColorSchemeMediaQuery: true
     }
-    
+
     render(
       <ThemeUIProvider theme={mockThemeContext}>
         <CareerPathVisualization />
       </ThemeUIProvider>
     )
-    
+
     const container = screen.getByRole('img', { hidden: true }).closest('div').closest('div')
     expect(container).toBeInTheDocument()
   })
-}) 
+})
