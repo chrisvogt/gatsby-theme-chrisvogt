@@ -44,9 +44,9 @@ const CareerPathVisualization = () => {
     const isMobile = containerWidth < 768
     const margin = {
       top: isMobile ? 40 : 50,
-      right: isMobile ? 20 : 60,
+      right: isMobile ? 20 : 30, // Reduced from 60 to 30
       bottom: isMobile ? 40 : 50,
-      left: isMobile ? 20 : 60
+      left: isMobile ? 20 : 40 // Reduced from 60 to 40 for timeline space
     }
 
     // Better responsive width calculation with increased height
@@ -340,18 +340,20 @@ const CareerPathVisualization = () => {
       })
     })
 
-    // Simple collision detection and adjustment
+    // Improved collision detection and adjustment
     textElements.forEach((text, i) => {
       for (let j = i + 1; j < textElements.length; j++) {
         const other = textElements[j]
 
-        // Check for overlap
-        const xOverlap = Math.abs(text.x - other.x) < (text.width + other.width) / 2
-        const yOverlap = Math.abs(text.y - other.y) < text.height
+        // Check for overlap with some padding
+        const xOverlap = Math.abs(text.x - other.x) < (text.width + other.width) / 2 + 4
+        const yOverlap = Math.abs(text.y - other.y) < Math.max(text.height, other.height) + 2
 
         if (xOverlap && yOverlap) {
-          // Adjust the second text element
-          const adjustment = text.height + 5
+          // More intelligent adjustment based on node positions
+          const adjustment = Math.max(text.height, other.height) + 4
+
+          // Prefer vertical adjustment to maintain readability
           if (other.y > text.y) {
             other.y += adjustment
           } else {
@@ -359,34 +361,36 @@ const CareerPathVisualization = () => {
           }
 
           // Update the actual text element position
-          other.element.attr('y', other.y - other.node.y)
+          const relativeY = other.y - other.node.y
+          other.element.attr('y', relativeY)
         }
       }
     })
 
-    // Add year labels with responsive spacing
-    const years = d3.range(2005, 2026, 5)
-    const timelineOffset = isMobile ? -15 : -25
+    // Add year labels with better visibility and coverage (positioned inside container)
+    const years = [2003, 2007, 2011, 2015, 2019, 2023] // Key career milestone years
+    const timelineX = isMobile ? 35 : 45 // Position timeline inside the container
+    const yearLabelX = timelineX - 8 // Position year labels just left of timeline
 
     g.selectAll('.year-label')
       .data(years)
       .enter()
       .append('text')
       .attr('class', 'year-label')
-      .attr('x', timelineOffset - 5)
+      .attr('x', yearLabelX)
       .attr('y', d => timeScale(d))
       .attr('dy', '0.35em')
       .style('text-anchor', 'end')
-      .style('font-size', isSmallScreen ? '9px' : '10px')
-      .style('fill', darkModeActive ? '#a0aec0' : '#718096')
+      .style('font-size', isSmallScreen ? '11px' : '12px') // Increased size for better readability
+      .style('fill', darkModeActive ? '#e2e8f0' : '#4a5568') // Much stronger contrast
       .style('font-weight', 'bold')
       .text(d => d)
 
-    // Add timeline line with responsive positioning
+    // Add timeline line positioned inside the visible area
     g.append('line')
-      .attr('x1', timelineOffset)
+      .attr('x1', timelineX)
       .attr('y1', 0)
-      .attr('x2', timelineOffset)
+      .attr('x2', timelineX)
       .attr('y2', height)
       .style('stroke', darkModeActive ? '#4a5568' : '#cbd5e0')
       .style('stroke-width', 2)
