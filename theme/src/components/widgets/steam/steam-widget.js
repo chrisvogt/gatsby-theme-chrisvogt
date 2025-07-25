@@ -102,7 +102,7 @@ const SteamWidget = React.memo(() => {
 
       <Themed.p sx={{ mb: 4 }}>Games I own and their play time statistics.</Themed.p>
 
-      <PlayTimeChart games={ownedGames} isLoading={isLoading} />
+      <PlayTimeChart games={ownedGames} isLoading={isLoading} profileURL={profileURL} />
     </Widget>
   )
 })
