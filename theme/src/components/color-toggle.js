@@ -12,6 +12,8 @@ export default () => {
       toggled={isDarkMode(colorMode)}
       toggle={() => setColorMode(colorMode === 'default' ? 'dark' : 'default')}
       duration={750}
+      aria-label='Toggle color mode'
+      id='theme-toggle'
     />
   )
 }

@@ -10,7 +10,7 @@
 
 ### 🛠 Dependency Updates
 
-- Updated `@theme-toggles/react` to version `^0.58.0` in `theme/package.json`.
+- Installed `@theme-toggles/react` at version `4.1.0` in `theme/package.json`.
 
 ### 🧪 Testing/CI Unblock
 
