@@ -3,6 +3,7 @@ import { Container, Flex } from 'theme-ui'
 import { Themed } from '@theme-ui/mdx'
 import Layout from 'gatsby-theme-chronogrove/src/components/layout'
 import Seo from 'gatsby-theme-chronogrove/src/components/seo'
+import CareerPathVisualization from '../../components/CareerPathVisualization'
 
 const AboutPage = () => {
   return (
@@ -30,6 +31,15 @@ const AboutPage = () => {
             music. I also spend a lot of time with friends in the city and love connecting with people who are
             passionate about what they do.
           </Themed.p>
+
+          <Themed.h2 sx={{ mt: 5 }}>Career Journey</Themed.h2>
+
+          <Themed.p>
+            My career has evolved through three main paths: starting in IT, exploring design, and ultimately growing
+            into software engineering. Click on any node below to learn more about that role or transition.
+          </Themed.p>
+
+          <CareerPathVisualization />
         </Container>
       </Flex>
     </Layout>

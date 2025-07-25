@@ -1,0 +1,137 @@
+{
+  "name": "Career Journey",
+  "startYear": 2005,
+  "children": [
+    {
+      "name": "IT Path",
+      "type": "path",
+      "color": "#4299e1",
+      "startYear": 2005,
+      "description": "Started career in IT support and systems",
+      "children": [
+        {
+          "name": "Robert Half & TEKsystems",
+          "title": "Contract IT Technician (1099)",
+          "dates": "2005 – Feb 2007",
+          "startYear": 2005,
+          "endYear": 2007,
+          "type": "job",
+          "description": "Started career in IT support and systems administration"
+        },
+        {
+          "name": "Apogee Physicians",
+          "title": "Systems Administrator",
+          "dates": "Feb 2007 – Aug 2007",
+          "startYear": 2007,
+          "endYear": 2007,
+          "type": "job",
+          "description": "Started in systems administration and IT infrastructure"
+        },
+        {
+          "name": "Encore Discovery Solutions",
+          "title": "IT Engineer",
+          "dates": "May 2008 – December 2008",
+          "startYear": 2008,
+          "endYear": 2008,
+          "type": "job",
+          "description": "Infrastructure and engineering role"
+        }
+      ]
+    },
+    {
+      "name": "Design Path",
+      "type": "path",
+      "color": "#ed8936",
+      "startYear": 2007,
+      "description": "Explored creative design and visual communication",
+      "children": [
+        {
+          "name": "Apogee Physicians",
+          "title": "Creative Director",
+          "dates": "Aug 2007 – April 2008",
+          "startYear": 2007,
+          "endYear": 2008,
+          "type": "job",
+          "description": "Promoted to creative leadership role, transitioning from systems administration"
+        },
+        {
+          "name": "Art In Reality, LLC",
+          "title": "Freelance Designer & Developer",
+          "dates": "Jan 2011 – Feb 2012",
+          "startYear": 2011,
+          "endYear": 2012,
+          "type": "job",
+          "description": "Combined design skills with early development work"
+        }
+      ]
+    },
+    {
+      "name": "Engineering Path",
+      "type": "path",
+      "color": "#48bb78",
+      "startYear": 2008,
+      "description": "Transitioned into software development and engineering",
+      "children": [
+        {
+          "name": "Encore Discovery Solutions",
+          "title": "Web Developer",
+          "dates": "December 2008 – December 2010",
+          "startYear": 2008,
+          "endYear": 2010,
+          "type": "job",
+          "description": "First transition into software development, promoted from IT Engineer role"
+        },
+        {
+          "name": "Pan Am Education",
+          "title": "PHP Engineer",
+          "dates": "Nov 2012 – May 2013",
+          "startYear": 2012,
+          "endYear": 2013,
+          "type": "job",
+          "description": "Deepened backend development skills"
+        },
+        {
+          "name": "Salucro Healthcare Solutions",
+          "title": "Front End Developer",
+          "dates": "Feb 2016 – Aug 2017",
+          "startYear": 2016,
+          "endYear": 2017,
+          "type": "job",
+          "description": "Specialized in modern frontend technologies"
+        },
+        {
+          "name": "GoDaddy",
+          "type": "job",
+          "startYear": 2017,
+          "endYear": 2025,
+          "children": [
+            {
+              "title": "Software Engineer III",
+              "dates": "Aug 2017 – June 2021",
+              "startYear": 2017,
+              "endYear": 2021,
+              "type": "role",
+              "description": "Joined as a senior individual contributor"
+            },
+            {
+              "title": "Software Engineer IV",
+              "dates": "June 2021 – Feb 2025",
+              "startYear": 2021,
+              "endYear": 2025,
+              "type": "role",
+              "description": "Advanced to technical leadership role"
+            },
+            {
+              "title": "Software Engineer V",
+              "dates": "Feb 2025 – Present",
+              "startYear": 2025,
+              "endYear": 2025,
+              "type": "role",
+              "description": "Current senior engineering leadership position"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 
