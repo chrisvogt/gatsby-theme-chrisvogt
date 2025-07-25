@@ -49,9 +49,9 @@ const CareerPathVisualization = () => {
       left: isMobile ? 20 : 40 // Reduced from 60 to 40 for timeline space
     }
 
-    // Better responsive width calculation with increased height
+    // Better responsive width calculation with increased height (13% taller)
     const width = Math.max(isMobile ? 300 : 500, containerWidth - (isMobile ? 20 : 40)) - margin.left - margin.right
-    const height = Math.min(isMobile ? 500 : 650, Math.max(400, window.innerHeight * 0.5)) - margin.top - margin.bottom
+    const height = Math.min(isMobile ? 565 : 735, Math.max(452, window.innerHeight * 0.5)) - margin.top - margin.bottom
     const isSmallScreen = width < 600
 
     const svg = d3
@@ -501,52 +501,80 @@ const CareerPathVisualization = () => {
         {/* Job information panel */}
         {selectedNode && (
           <Box sx={infoPanelStyles}>
-            {/* Header with gradient accent */}
+            {/* Header with gradient accent and close button */}
             <Box
               sx={{
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'space-between',
                 mb: 3,
                 pb: 3,
                 borderBottom: darkModeActive ? '2px solid rgba(74, 158, 255, 0.3)' : '2px solid rgba(66, 46, 163, 0.3)'
               }}
             >
-              <Box
-                sx={{
-                  background: darkModeActive
-                    ? 'linear-gradient(45deg, #4a9eff, #711e9b)'
-                    : 'linear-gradient(45deg, #422EA3, #711E9B)',
-                  width: '6px',
-                  height: '32px',
-                  borderRadius: '3px',
-                  mr: 3
-                }}
-              />
-              <Box>
-                {/* Company Name */}
-                {selectedNode.title && selectedNode.name && (
-                  <Box
-                    sx={{
-                      fontSize: '14px',
-                      color: darkModeActive ? '#888' : '#666',
-                      fontWeight: 'medium',
-                      mb: 1
-                    }}
-                  >
-                    {selectedNode.name}
-                  </Box>
-                )}
-                {/* Job Title / Role */}
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box
                   sx={{
-                    fontSize: '20px',
-                    fontWeight: 'bold',
-                    color: darkModeActive ? '#4a9eff' : '#422EA3',
-                    lineHeight: 'tight'
+                    background: darkModeActive
+                      ? 'linear-gradient(45deg, #4a9eff, #711e9b)'
+                      : 'linear-gradient(45deg, #422EA3, #711E9B)',
+                    width: '6px',
+                    height: '32px',
+                    borderRadius: '3px',
+                    mr: 3
                   }}
-                >
-                  {selectedNode.title || selectedNode.name}
+                />
+                <Box>
+                  {/* Company Name */}
+                  {selectedNode.title && selectedNode.name && (
+                    <Box
+                      sx={{
+                        fontSize: '14px',
+                        color: darkModeActive ? '#888' : '#666',
+                        fontWeight: 'medium',
+                        mb: 1
+                      }}
+                    >
+                      {selectedNode.name}
+                    </Box>
+                  )}
+                  {/* Job Title / Role */}
+                  <Box
+                    sx={{
+                      fontSize: '20px',
+                      fontWeight: 'bold',
+                      color: darkModeActive ? '#4a9eff' : '#422EA3',
+                      lineHeight: 'tight'
+                    }}
+                  >
+                    {selectedNode.title || selectedNode.name}
+                  </Box>
                 </Box>
+              </Box>
+
+              {/* Close button */}
+              <Box
+                onClick={() => setSelectedNode(null)}
+                sx={{
+                  cursor: 'pointer',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: darkModeActive ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+                  color: darkModeActive ? '#e2e8f0' : '#4a5568',
+                  fontSize: '18px',
+                  fontWeight: 'bold',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    backgroundColor: darkModeActive ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                    transform: 'scale(1.1)'
+                  }
+                }}
+              >
+                ×
               </Box>
             </Box>
 
