@@ -100,7 +100,7 @@ const CareerPathVisualization = () => {
     // Find and draw cross-path connections
     const allNodes = root.descendants()
     const jobNodes = allNodes.filter(d => d.data.type === 'job')
-    
+
     // Group job nodes by company name
     const companiesByName = {}
     jobNodes.forEach(node => {
@@ -110,7 +110,7 @@ const CareerPathVisualization = () => {
       }
       companiesByName[companyName].push(node)
     })
-    
+
     // Create cross-path connections for companies that appear in multiple paths
     Object.entries(companiesByName).forEach(([, nodes]) => {
       if (nodes.length > 1) {
@@ -446,4 +446,4 @@ const CareerPathVisualization = () => {
   )
 }
 
-export default CareerPathVisualization 
+export default CareerPathVisualization
