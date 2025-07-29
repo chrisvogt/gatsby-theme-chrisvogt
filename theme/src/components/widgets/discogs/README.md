@@ -10,6 +10,9 @@ A widget that displays a user's vinyl record collection from Discogs as circular
 - Rotation animation on hover for a realistic vinyl effect
 - Clicking opens the Discogs release page in a new tab
 - Uses CDN-optimized images for fast loading
+- **Pagination**: Shows 3 rows (18 records) per page for better performance
+- **Swipe/Drag Support**: Mobile users can swipe left/right, desktop users can drag with mouse
+- **Theme-Consistent Controls**: Pagination buttons match your site's design system
 - Responsive grid layout that adapts to different screen sizes
 
 ## Configuration
@@ -61,7 +64,8 @@ The widget expects data from the `/api/widgets/discogs` endpoint with this struc
 ## Components
 
 - `discogs-widget.js` - Main widget component with data fetching and layout
-- `vinyl-collection.js` - Renders the vinyl records in a grid with visual effects
+- `vinyl-collection.js` - Renders the vinyl records in a grid with visual effects and pagination
+- `vinyl-pagination.js` - Pagination component with swipe/drag support and theme-consistent controls
 - `index.js` - Export file for the widget
 
 ## Styling

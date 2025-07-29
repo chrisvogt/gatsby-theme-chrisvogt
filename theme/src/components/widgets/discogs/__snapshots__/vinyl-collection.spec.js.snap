@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`VinylCollection renders empty state when no releases 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-1izqeoq"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`VinylCollection renders loading state 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-1izqeoq"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`VinylCollection renders with vinyl releases 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <a
+              className="vinyl-record css-4gxhk2"
+              href="https://discogs.com/release/123"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="The Rise & Fall Of A Midwest Princess (2023) - Chappell Roan"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="The Rise & Fall Of A Midwest Princess album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb1.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    The Rise & Fall Of A Midwest Princess
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Chappell Roan
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <a
+              className="vinyl-record css-4gxhk2"
+              href="https://discogs.com/release/456"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Brat And It's Completely Different (2025) - Charli XCX"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Brat And It's Completely Different album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb2.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Brat And It's Completely Different
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Charli XCX
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2025
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
