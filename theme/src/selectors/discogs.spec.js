@@ -17,7 +17,7 @@ const mockState = {
           ]
         },
         metrics: {
-          'LPs Owned': 37,
+          'Vinyls Owned': 37,
           'Total Value': 1250,
           'Wishlist Items': 15
         },
@@ -43,7 +43,7 @@ describe('Discogs Selectors', () => {
       const result = getMetrics(mockState)
 
       expect(result).toEqual([
-        { displayName: 'LPs Owned', id: 'lps-owned', value: 37 },
+        { displayName: 'Vinyls Owned', id: 'vinyls-owned', value: 37 },
         { displayName: 'Total Value', id: 'total-value', value: 1250 },
         { displayName: 'Wishlist Items', id: 'wishlist-items', value: 15 }
       ])

@@ -58,7 +58,7 @@ describe('Discogs Widget', () => {
               ]
             },
             metrics: {
-              'LPs Owned': 37
+              'Vinyls Owned': 37
             },
             profile: {
               profileURL: 'https://www.discogs.com/user/chrisvogt/collection'

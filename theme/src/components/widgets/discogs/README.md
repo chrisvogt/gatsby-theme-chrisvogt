@@ -53,7 +53,7 @@ The widget expects data from the `/api/widgets/discogs` endpoint with this struc
     ]
   },
   "metrics": {
-    "LPs Owned": 37
+    "Vinyls Owned": 37
   },
   "profile": {
     "profileURL": "https://www.discogs.com/user/username/collection"
