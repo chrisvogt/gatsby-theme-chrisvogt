@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.59.0
+
+### ✨ Features
+
+- **Discogs Widget**: Added a new widget to display vinyl record collections from Discogs
+  - **Vinyl Collection Display**: Shows vinyl records as circular, rotating elements with realistic vinyl appearance
+  - **Interactive Features**: Hover effects reveal album details (title, artist, year) with rotation animations
+  - **Pagination**: Displays 3 rows (18 records) per page with swipe/drag support for mobile and desktop
+  - **Responsive Design**: Adaptive grid layout that works across different screen sizes
+  - **CDN Integration**: Uses optimized images for fast loading performance
+  - **Theme Consistency**: Pagination controls match the site's design system
+  - **External Links**: Clicking records opens the Discogs release page in a new tab
+
+### 🔧 Architecture Improvements
+
+- **New Selectors**: Added comprehensive Discogs selectors (`src/selectors/discogs.js`) for data access patterns
+  - `getMetrics()`: Transforms raw metrics data into display-ready format
+  - `getReleases()`: Provides access to vinyl collection releases
+  - `getProfileURL()`: Returns user's Discogs profile URL with fallback
+- **Component Structure**: Well-organized widget components with clear separation of concerns
+  - `discogs-widget.js`: Main widget component with data fetching
+  - `vinyl-collection.js`: Core vinyl display with visual effects and pagination
+  - `vinyl-pagination.js`: Pagination component with touch/mouse interaction support
+
+### 🧪 Testing
+
+- **Comprehensive Test Coverage**: Full test suite for all Discogs widget components
+  - `discogs-widget.spec.js`: Main widget functionality and data handling
+  - `vinyl-collection.spec.js`: Extensive testing of vinyl display, pagination, and interactions
+  - `vinyl-pagination.spec.js`: Pagination controls and swipe/drag functionality
+  - `discogs.spec.js`: Selector testing with various data scenarios
+- **Visual Regression Testing**: Updated snapshots to include new Discogs widget interface
+
+### 🎯 User Experience
+
+- **Visual Appeal**: Realistic vinyl record appearance with grooves and center labels
+- **Performance**: Efficient pagination and CDN-optimized images for smooth loading
+- **Accessibility**: Proper hover states and keyboard navigation support
+- **Mobile-Friendly**: Touch gestures and responsive design for all devices
+
 ## 0.58.0
 
 ### ✨ Features
