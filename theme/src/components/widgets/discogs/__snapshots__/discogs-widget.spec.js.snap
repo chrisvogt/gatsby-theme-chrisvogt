@@ -214,6 +214,7 @@ exports[`Discogs Widget matches the error state snapshot 1`] = `
     >
       <div
         className="css-ngfim1"
+        data-testid="vinyl-carousel"
         onMouseDown={[Function]}
         onMouseLeave={[Function]}
         onMouseMove={[Function]}
@@ -441,6 +442,7 @@ exports[`Discogs Widget matches the loaded state snapshot 1`] = `
     >
       <div
         className="css-ngfim1"
+        data-testid="vinyl-carousel"
         onMouseDown={[Function]}
         onMouseLeave={[Function]}
         onMouseMove={[Function]}
@@ -651,6 +653,7 @@ exports[`Discogs Widget matches the loading state snapshot 1`] = `
     >
       <div
         className="css-ngfim1"
+        data-testid="vinyl-carousel"
         onMouseDown={[Function]}
         onMouseLeave={[Function]}
         onMouseMove={[Function]}
