@@ -22,7 +22,7 @@ exports[`VinylCollection renders empty state when no releases 1`] = `
     className="css-1alnzao"
   >
     <div
-      className="css-1izqeoq"
+      className="css-ngfim1"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -57,7 +57,7 @@ exports[`VinylCollection renders loading state 1`] = `
     className="css-1alnzao"
   >
     <div
-      className="css-1izqeoq"
+      className="css-ngfim1"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}

@@ -148,8 +148,9 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
 
   // Calculate transform for carousel
   const getTransform = () => {
-    const baseTransform = -((currentPage - 1) * 100)
-    const dragOffset = isDragging ? (dragDistance / window.innerWidth) * 100 : 0
+    const pageWidth = 100 / totalPages
+    const baseTransform = -((currentPage - 1) * pageWidth)
+    const dragOffset = isDragging ? (dragDistance / window.innerWidth) * pageWidth : 0
     return `translateX(${baseTransform + dragOffset}%)`
   }
 
