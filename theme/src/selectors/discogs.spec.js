@@ -102,4 +102,4 @@ describe('Discogs Selectors', () => {
       expect(result).toBe('https://www.discogs.com')
     })
   })
-}) 
+})
