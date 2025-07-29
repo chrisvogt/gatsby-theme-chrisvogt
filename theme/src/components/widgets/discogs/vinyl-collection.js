@@ -34,13 +34,6 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const carouselRef = useRef(null)
 
-  const handleClick = (e, discogsURL) => {
-    e.preventDefault()
-    if (!isDragging) {
-      window.open(discogsURL, '_blank', 'noopener,noreferrer')
-    }
-  }
-
   // Calculate items per page and pagination
   const itemsPerPage = 18 // 3 rows × 6 columns on desktop
   const totalPages = Math.ceil(releases.length / itemsPerPage)
@@ -213,7 +206,7 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
                 }}
               >
                 <Placeholder ready={!isLoading} customPlaceholder={placeholders}>
-                  {pageItems.map(({ id, title, year, artistName, cdnThumbUrl, resourceUrl, details }) => {
+                  {pageItems.map(({ id, title, year, artistName, cdnThumbUrl, details }) => {
                     return (
                       <Card
                         key={id}
@@ -228,10 +221,8 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
                           }
                         }}
                       >
-                        <Themed.a
+                        <Themed.div
                           className={`vinyl-record${currentVinylId === id ? ' vinyl-record--focused' : ''}`}
-                          href={resourceUrl}
-                          onClick={e => handleClick(e, resourceUrl)}
                           onMouseEnter={() => !isDragging && setCurrentVinylId(id)}
                           onMouseLeave={() => setCurrentVinylId(false)}
                           title={details}
@@ -367,7 +358,7 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
                               <span sx={{ fontSize: [0, 0, 0], opacity: 0.6, mt: 1 }}>{year}</span>
                             </Themed.div>
                           </div>
-                        </Themed.a>
+                        </Themed.div>
                       </Card>
                     )
                   })}

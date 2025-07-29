@@ -110,10 +110,8 @@ exports[`VinylCollection renders with vinyl releases 1`] = `
           <div
             className="css-139dwiw"
           >
-            <a
+            <div
               className="vinyl-record css-4gxhk2"
-              href="https://discogs.com/release/123"
-              onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               title="The Rise & Fall Of A Midwest Princess (2023) - Chappell Roan"
@@ -152,15 +150,13 @@ exports[`VinylCollection renders with vinyl releases 1`] = `
                   </span>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
           <div
             className="css-139dwiw"
           >
-            <a
+            <div
               className="vinyl-record css-4gxhk2"
-              href="https://discogs.com/release/456"
-              onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               title="Brat And It's Completely Different (2025) - Charli XCX"
@@ -199,7 +195,7 @@ exports[`VinylCollection renders with vinyl releases 1`] = `
                   </span>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
