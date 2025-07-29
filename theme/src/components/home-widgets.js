@@ -7,6 +7,7 @@ import Flickr from '../components/widgets/flickr'
 import RecentPosts from '../components/widgets/recent-posts'
 import Spotify from '../components/widgets/spotify'
 import Steam from '../components/widgets/steam'
+import Discogs from '../components/widgets/discogs'
 
 import useSiteMetadata from '../hooks/use-site-metadata'
 import {
@@ -15,7 +16,8 @@ import {
   getInstagramWidgetDataSource,
   getFlickrWidgetDataSource,
   getSpotifyWidgetDataSource,
-  getSteamWidgetDataSource
+  getSteamWidgetDataSource,
+  getDiscogsWidgetDataSource
 } from '../selectors/metadata'
 
 /**
@@ -38,6 +40,15 @@ const HomeWidgets = () => {
   const flickrDataSource = getFlickrWidgetDataSource(metadata)
   const spotifyDataSource = getSpotifyWidgetDataSource(metadata)
   const steamDataSource = getSteamWidgetDataSource(metadata)
+  const discogsDataSource = getDiscogsWidgetDataSource(metadata)
+
+  console.log('githubDataSource', githubDataSource)
+  console.log('goodreadsDataSource', goodreadsDataSource)
+  console.log('instagramDataSource', instagramDataSource)
+  console.log('flickrDataSource', flickrDataSource)
+  console.log('spotifyDataSource', spotifyDataSource)
+  console.log('steamDataSource', steamDataSource)
+  console.log('discogsDataSource', discogsDataSource)
 
   return (
     <>
@@ -49,6 +60,7 @@ const HomeWidgets = () => {
       {goodreadsDataSource && <Goodreads />}
       {spotifyDataSource && <Spotify />}
       {steamDataSource && <Steam />}
+      {discogsDataSource && <Discogs />}
     </>
   )
 }

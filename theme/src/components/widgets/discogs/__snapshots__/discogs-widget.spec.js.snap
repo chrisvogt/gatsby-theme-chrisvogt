@@ -1,0 +1,778 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Discogs Widget matches the loaded state snapshot 1`] = `
+<section
+  className="css-1k28k4o"
+  id="discogs"
+>
+  <div
+    className="css-rmw57n"
+  >
+    <div
+      className="css-59lkxq"
+    >
+      <h4>
+        Something went wrong
+      </h4>
+      <p>
+        Failed to load this widget.
+      </p>
+    </div>
+    <div
+      className="css-bgces8"
+    />
+  </div>
+  <header
+    className="css-x6ikgs"
+  >
+    <h2
+      className="css-1s4ek1q"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-compact-disc css-1f4q58s"
+        data-icon="compact-disc"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+      Discogs
+    </h2>
+    <div
+      className="css-1rgtmy6"
+    >
+      <svg
+        className="svg-loaders-svg css-ao632c"
+        fill="#1E90FF"
+        height="24"
+        viewBox="0 0 135 140"
+        width="24"
+      >
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={30}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={140}
+          rx={6}
+          width={15}
+          x={60}
+        >
+          <animate
+            attributeName="height"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={90}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={120}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+      </svg>
+    </div>
+  </header>
+  <div
+    className="css-1hw7zrq"
+  >
+    <div
+      className="css-1giak3r"
+    >
+       
+    </div>
+    <div
+      className="css-zcaudb"
+    >
+       
+    </div>
+  </div>
+  <div
+    className="css-sak8bt"
+  >
+    <div
+      className="css-ccroti"
+    >
+      <h3
+        className="css-9nh3l5"
+      >
+        Vinyl Collection
+      </h3>
+    </div>
+    <p
+      className="css-1qwovgy"
+    >
+      My owned vinyl records from Discogs.
+    </p>
+    <div
+      className="vinyl-collection_grid null css-5stlgz"
+    >
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Discogs Widget matches the loading state snapshot 1`] = `
+<section
+  className="css-1pk2a5b"
+  id="discogs"
+>
+  <header
+    className="css-x6ikgs"
+  >
+    <h2
+      className="css-1s4ek1q"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-compact-disc css-1f4q58s"
+        data-icon="compact-disc"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+      Discogs
+    </h2>
+    <div
+      className="css-1rgtmy6"
+    >
+      <svg
+        className="svg-loaders-svg css-ao632c"
+        fill="#1E90FF"
+        height="24"
+        viewBox="0 0 135 140"
+        width="24"
+      >
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={30}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={140}
+          rx={6}
+          width={15}
+          x={60}
+        >
+          <animate
+            attributeName="height"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={90}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.25s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+        <rect
+          height={120}
+          rx={6}
+          width={15}
+          x={120}
+          y={10}
+        >
+          <animate
+            attributeName="height"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="120;110;100;90;80;70;60;50;40;140;120"
+          />
+          <animate
+            attributeName="y"
+            begin="0.5s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="10;15;20;25;30;35;40;45;50;0;10"
+          />
+        </rect>
+      </svg>
+    </div>
+  </header>
+  <div
+    className="css-1hw7zrq"
+  >
+    <div
+      className="css-1giak3r"
+    >
+       
+    </div>
+    <div
+      className="css-zcaudb"
+    >
+       
+    </div>
+  </div>
+  <div
+    className="css-sak8bt"
+  >
+    <div
+      className="css-ccroti"
+    >
+      <h3
+        className="css-9nh3l5"
+      >
+        Vinyl Collection
+      </h3>
+    </div>
+    <p
+      className="css-1qwovgy"
+    >
+      My owned vinyl records from Discogs.
+    </p>
+    <div
+      className="vinyl-collection_grid null css-5stlgz"
+    >
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="show-loading-animation"
+      >
+        <div
+          className="rect-shape css-6bf581"
+          style={
+            {
+              "backgroundColor": "#efefef",
+              "height": "100%",
+              "marginRight": 10,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;

@@ -21,6 +21,7 @@
  *           // ... other metadata
  *         },
  *         widgets: {
+ *           discogs: { widgetDataSource: 'https://api.example.com/discogs' },
  *           github: { widgetDataSource: 'https://api.example.com/github' },
  *           // ... other widgets
  *         }
