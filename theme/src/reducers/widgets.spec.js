@@ -5,6 +5,7 @@ import widgets, {
   getSpotifyWidget,
   getFlickrWidget,
   getSteamWidget,
+  getDiscogsWidget,
   FETCH_DATASOURCE_SUCCESS,
   FETCH_DATASOURCE_FAILURE,
   SUCCESS,
@@ -18,7 +19,8 @@ const initialState = {
   instagram: { state: INIT },
   spotify: { state: INIT },
   flickr: { state: INIT },
-  steam: { state: INIT }
+  steam: { state: INIT },
+  discogs: { state: INIT }
 }
 
 describe('Reducers/Widgets', () => {
@@ -51,6 +53,11 @@ describe('Reducers/Widgets', () => {
     it('selects the Steam widget from state', () => {
       const widget = getSteamWidget({ widgets: initialState })
       expect(widget).toEqual(initialState.steam)
+    })
+
+    it('selects the Discogs widget from state', () => {
+      const widget = getDiscogsWidget({ widgets: initialState })
+      expect(widget).toEqual(initialState.discogs)
     })
 
     it('returns default state when widget is not in state', () => {

@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`VinylPagination disables next button on last page 1`] = `
+<div
+  className="css-9vd5ud"
+>
+  <div
+    className="css-gxwhxe"
+  >
+    <button
+      aria-label="Previous page"
+      className="css-17hitjp"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+    <div
+      className="css-3umnwr"
+    >
+      <button
+        aria-label="Go to page 1"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        aria-label="Go to page 2"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        aria-current="page"
+        aria-label="Go to page 3"
+        className="css-11fvmam"
+        onClick={[Function]}
+      >
+        3
+      </button>
+    </div>
+    <button
+      aria-label="Next page"
+      className="css-177ffeg"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="css-154xsx4"
+  >
+    Page 
+    3
+     of 
+    3
+  </div>
+</div>
+`;
+
+exports[`VinylPagination disables previous button on first page 1`] = `
+<div
+  className="css-9vd5ud"
+>
+  <div
+    className="css-gxwhxe"
+  >
+    <button
+      aria-label="Previous page"
+      className="css-177ffeg"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+    <div
+      className="css-3umnwr"
+    >
+      <button
+        aria-current="page"
+        aria-label="Go to page 1"
+        className="css-11fvmam"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        aria-label="Go to page 2"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        aria-label="Go to page 3"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        3
+      </button>
+    </div>
+    <button
+      aria-label="Next page"
+      className="css-17hitjp"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="css-154xsx4"
+  >
+    Page 
+    1
+     of 
+    3
+  </div>
+</div>
+`;
+
+exports[`VinylPagination does not render pagination controls when totalPages <= 1 1`] = `
+<div
+  className="css-9vd5ud"
+/>
+`;
+
+exports[`VinylPagination renders pagination controls when totalPages > 1 1`] = `
+<div
+  className="css-9vd5ud"
+>
+  <div
+    className="css-gxwhxe"
+  >
+    <button
+      aria-label="Previous page"
+      className="css-177ffeg"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+    <div
+      className="css-3umnwr"
+    >
+      <button
+        aria-current="page"
+        aria-label="Go to page 1"
+        className="css-11fvmam"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        aria-label="Go to page 2"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        aria-label="Go to page 3"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        3
+      </button>
+    </div>
+    <button
+      aria-label="Next page"
+      className="css-17hitjp"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="css-154xsx4"
+  >
+    Page 
+    1
+     of 
+    3
+  </div>
+</div>
+`;
+
+exports[`VinylPagination shows correct page info 1`] = `
+<div
+  className="css-9vd5ud"
+>
+  <div
+    className="css-gxwhxe"
+  >
+    <button
+      aria-label="Previous page"
+      className="css-17hitjp"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+    <div
+      className="css-3umnwr"
+    >
+      <button
+        aria-label="Go to page 1"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        aria-current="page"
+        aria-label="Go to page 2"
+        className="css-11fvmam"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        aria-label="Go to page 3"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        3
+      </button>
+      <button
+        aria-label="Go to page 4"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        4
+      </button>
+      <button
+        aria-label="Go to page 5"
+        className="css-t3hwd7"
+        onClick={[Function]}
+      >
+        5
+      </button>
+    </div>
+    <button
+      aria-label="Next page"
+      className="css-17hitjp"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={{}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+          fill="currentColor"
+          style={{}}
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="css-154xsx4"
+  >
+    Page 
+    2
+     of 
+    5
+  </div>
+</div>
+`;

@@ -40,6 +40,10 @@ module.exports = {
     title: 'chrisvogt.me',
     titleTemplate: '%s — Chris Vogt, Software Engineer in San Francisco',
     widgets: {
+      discogs: {
+        username: 'chrisvogt',
+        widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/discogs'
+      },
       flickr: {
         username: 'chrisvogt',
         widgetDataSource: 'https://metrics.chrisvogt.me/api/widgets/flickr'
@@ -237,6 +241,12 @@ module.exports = {
                 slug: 'spotify',
                 text: 'Spotify',
                 title: 'Spotify'
+              },
+              {
+                path: '#discogs',
+                slug: 'discogs',
+                text: 'Discogs',
+                title: 'Discogs'
               },
               {
                 path: '#steam',

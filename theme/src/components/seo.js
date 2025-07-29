@@ -18,7 +18,7 @@ const Seo = ({ article, children, description, image: imageURL, keywords, title:
   const titleTemplate = getTitleTemplate(metadata)
   const twitterUsername = getTwitterUsername(metadata)
 
-  const title = titleTemplate.replace(/%s/g, pageTitle) || siteTitle
+  const title = titleTemplate ? titleTemplate.replace(/%s/g, pageTitle) : siteTitle
   const webmentionUrl = metadata.webmentionUrl
 
   return (

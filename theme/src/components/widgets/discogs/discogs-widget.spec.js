@@ -1,21 +1,21 @@
 import React from 'react'
-import SpotifyWidget from './spotify-widget'
 import renderer from 'react-test-renderer'
+
 import { TestProviderWithState } from '../../../testUtils'
+import DiscogsWidget from './discogs-widget'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 jest.mock('../../../hooks/use-site-metadata')
 
 const mockSiteMetadata = {
   widgets: {
-    spotify: {
-      username: 'mockusername',
-      widgetDataSource: 'https://fake-api.example.com/social/spotify'
+    discogs: {
+      widgetDataSource: 'https://fake-api.example.com/widgets/discogs'
     }
   }
 }
 
-describe('Spotify Widget', () => {
+describe('Discogs Widget', () => {
   beforeEach(() => {
     useSiteMetadata.mockImplementation(() => mockSiteMetadata)
   })
@@ -28,7 +28,7 @@ describe('Spotify Widget', () => {
     const tree = renderer
       .create(
         <TestProviderWithState>
-          <SpotifyWidget />
+          <DiscogsWidget />
         </TestProviderWithState>
       )
       .toJSON()
@@ -38,39 +38,30 @@ describe('Spotify Widget', () => {
   it('matches the loaded state snapshot', () => {
     const initialState = {
       widgets: {
-        spotify: {
+        discogs: {
           state: 'SUCCESS',
           data: {
             collections: {
-              playlists: [
+              releases: [
                 {
-                  id: 'playlist1',
-                  name: 'Test Playlist',
-                  description: 'Test description',
-                  images: [{ url: 'https://example.com/image.jpg' }],
-                  external_urls: { spotify: 'https://spotify.com/playlist1' }
-                }
-              ],
-              topTracks: [
-                {
-                  id: 'track1',
-                  name: 'Test Track',
-                  artists: [{ name: 'Test Artist' }],
-                  album: { name: 'Test Album' },
-                  external_urls: { spotify: 'https://spotify.com/track1' }
+                  id: 28461454,
+                  instanceId: 2045415075,
+                  basicInformation: {
+                    id: 28461454,
+                    title: 'The Rise & Fall Of A Midwest Princess',
+                    year: 2023,
+                    artists: [{ name: 'Chappell Roan' }],
+                    cdnThumbUrl: 'https://example.com/thumb.jpg',
+                    resourceUrl: 'https://discogs.com/release/123'
+                  }
                 }
               ]
             },
             metrics: {
-              Playlists: 10,
-              'Top Tracks': 20
+              'Vinyls Owned': 37
             },
             profile: {
-              displayName: 'Test User',
-              profileURL: 'https://spotify.com/user/test'
-            },
-            provider: {
-              displayName: 'Spotify'
+              profileURL: 'https://www.discogs.com/user/chrisvogt/collection'
             }
           }
         }
@@ -80,7 +71,7 @@ describe('Spotify Widget', () => {
     const tree = renderer
       .create(
         <TestProviderWithState initialState={initialState}>
-          <SpotifyWidget />
+          <DiscogsWidget />
         </TestProviderWithState>
       )
       .toJSON()
@@ -90,7 +81,7 @@ describe('Spotify Widget', () => {
   it('matches the error state snapshot', () => {
     const initialState = {
       widgets: {
-        spotify: {
+        discogs: {
           state: 'FAILURE',
           data: null
         }
@@ -100,7 +91,7 @@ describe('Spotify Widget', () => {
     const tree = renderer
       .create(
         <TestProviderWithState initialState={initialState}>
-          <SpotifyWidget />
+          <DiscogsWidget />
         </TestProviderWithState>
       )
       .toJSON()

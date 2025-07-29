@@ -63,6 +63,10 @@ const useSiteMetadata = () => {
               username
               widgetDataSource
             }
+            discogs {
+              username
+              widgetDataSource
+            }
           }
           webmentionUrl
         }

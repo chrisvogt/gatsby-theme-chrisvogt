@@ -15,6 +15,7 @@ export const getInstagramWidget = state => state.widgets?.instagram || { state: 
 export const getSpotifyWidget = state => state.widgets?.spotify || { state: INIT }
 export const getFlickrWidget = state => state.widgets?.flickr || { state: INIT }
 export const getSteamWidget = state => state.widgets?.steam || { state: INIT }
+export const getDiscogsWidget = state => state.widgets?.discogs || { state: INIT }
 
 function widgets(state = {}, action) {
   switch (action.type) {
