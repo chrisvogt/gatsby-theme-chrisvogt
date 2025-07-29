@@ -27,7 +27,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" description="Test description" />
+          <Seo title='Test Page' description='Test description' />
         </TestProvider>
       )
       .toJSON()
@@ -39,10 +39,10 @@ describe('Seo', () => {
       .create(
         <TestProvider>
           <Seo
-            title="Test Page"
-            description="Test description"
-            image="https://example.com/image.jpg"
-            keywords="test, keywords"
+            title='Test Page'
+            description='Test description'
+            image='https://example.com/image.jpg'
+            keywords='test, keywords'
             article={true}
           />
         </TestProvider>
@@ -55,7 +55,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" />
+          <Seo title='Test Page' />
         </TestProvider>
       )
       .toJSON()
@@ -66,7 +66,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" description="Test description" />
+          <Seo title='Test Page' description='Test description' />
         </TestProvider>
       )
       .toJSON()
@@ -77,7 +77,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" description="Test description" />
+          <Seo title='Test Page' description='Test description' />
         </TestProvider>
       )
       .toJSON()
@@ -88,7 +88,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" description="Test description" />
+          <Seo title='Test Page' description='Test description' />
         </TestProvider>
       )
       .toJSON()
@@ -104,7 +104,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" description="Test description" />
+          <Seo title='Test Page' description='Test description' />
         </TestProvider>
       )
       .toJSON()
@@ -120,7 +120,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page" description="Test description" />
+          <Seo title='Test Page' description='Test description' />
         </TestProvider>
       )
       .toJSON()
@@ -131,8 +131,8 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Test Page">
-            <meta name="custom" content="value" />
+          <Seo title='Test Page'>
+            <meta name='custom' content='value' />
           </Seo>
         </TestProvider>
       )
@@ -149,7 +149,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Page Title" />
+          <Seo title='Page Title' />
         </TestProvider>
       )
       .toJSON()
@@ -165,7 +165,7 @@ describe('Seo', () => {
     const tree = renderer
       .create(
         <TestProvider>
-          <Seo title="Page Title" />
+          <Seo title='Page Title' />
         </TestProvider>
       )
       .toJSON()
