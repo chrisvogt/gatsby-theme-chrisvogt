@@ -1,5 +1,358 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`VinylCollection handles releases with missing artist information 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album Without Artists (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album Without Artists
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection handles releases with missing basicInformation 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Unknown (Unknown) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  />
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Valid Album (2023) - Valid Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Valid Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Valid Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection handles releases with multiple artists 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Collaboration Album (2023) - Artist 1, Artist 2, Artist 3"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Collaboration Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 1, Artist 2, Artist 3
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection handles releases without CDN thumb URL 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album Without Thumb (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album Without Thumb
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`VinylCollection renders empty state when no releases 1`] = `
 <div
   className="css-16ilj6a"
@@ -66,6 +419,1266 @@ exports[`VinylCollection renders loading state 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
     />
+  </div>
+</div>
+`;
+
+exports[`VinylCollection renders with many releases for pagination testing 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-1wkhxkl"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-ymqdh6"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 1 (2020) - Artist 1"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 1 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb1.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 1
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 1
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2020
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 2 (2021) - Artist 2"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 2 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb2.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 2
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 2
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2021
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 3 (2022) - Artist 3"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 3 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb3.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 3
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 3
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2022
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 4 (2023) - Artist 4"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 4 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb4.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 4
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 4
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 5 (2024) - Artist 5"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 5 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb5.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 5
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 5
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2024
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 6 (2020) - Artist 6"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 6 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb6.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 6
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 6
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2020
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 7 (2021) - Artist 7"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 7 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb7.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 7
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 7
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2021
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 8 (2022) - Artist 8"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 8 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb8.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 8
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 8
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2022
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 9 (2023) - Artist 9"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 9 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb9.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 9
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 9
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 10 (2024) - Artist 10"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 10 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb10.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 10
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 10
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2024
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 11 (2020) - Artist 11"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 11 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb11.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 11
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 11
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2020
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 12 (2021) - Artist 12"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 12 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb12.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 12
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 12
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2021
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 13 (2022) - Artist 13"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 13 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb13.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 13
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 13
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2022
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 14 (2023) - Artist 14"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 14 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb14.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 14
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 14
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 15 (2024) - Artist 15"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 15 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb15.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 15
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 15
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2024
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 16 (2020) - Artist 16"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 16 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb16.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 16
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 16
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2020
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 17 (2021) - Artist 17"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 17 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb17.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 17
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 17
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2021
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 18 (2022) - Artist 18"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 18 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb18.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 18
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 18
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2022
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-ymqdh6"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 19 (2023) - Artist 19"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 19 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb19.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 19
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 19
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 20 (2024) - Artist 20"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 20 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb20.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 20
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 20
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2024
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 21 (2020) - Artist 21"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 21 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb21.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 21
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 21
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2020
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 22 (2021) - Artist 22"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 22 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb22.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 22
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 22
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2021
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 23 (2022) - Artist 23"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 23 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb23.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 23
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 23
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2022
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 24 (2023) - Artist 24"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 24 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb24.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 24
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 24
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album 25 (2024) - Artist 25"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album 25 album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb25.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album 25
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist 25
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2024
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9vd5ud"
+  >
+    <div
+      className="css-gxwhxe"
+    >
+      <button
+        aria-label="Previous page"
+        className="css-177ffeg"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-chevron-left "
+          data-icon="chevron-left"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={{}}
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+            fill="currentColor"
+            style={{}}
+          />
+        </svg>
+      </button>
+      <div
+        className="css-3umnwr"
+      >
+        <button
+          aria-current="page"
+          aria-label="Go to page 1"
+          className="css-11fvmam"
+          onClick={[Function]}
+        >
+          1
+        </button>
+        <button
+          aria-label="Go to page 2"
+          className="css-t3hwd7"
+          onClick={[Function]}
+        >
+          2
+        </button>
+      </div>
+      <button
+        aria-label="Next page"
+        className="css-17hitjp"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-chevron-right "
+          data-icon="chevron-right"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={{}}
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            fill="currentColor"
+            style={{}}
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="css-154xsx4"
+    >
+      Page 
+      1
+       of 
+      2
+    </div>
   </div>
 </div>
 `;

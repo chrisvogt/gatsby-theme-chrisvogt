@@ -118,9 +118,9 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
   // Create all vinyl items
   const vinylItems = releases.map(release => {
     const { id, basicInformation = {} } = release
-    const { title, year, artists = [], cdnThumbUrl, resourceUrl } = basicInformation
-    const artistName = artists.map(artist => artist.name).join(', ')
-    const details = `${title} (${year}) - ${artistName}`
+    const { title, year, artists = [], cdnThumbUrl, resourceUrl } = basicInformation || {}
+    const artistName = (artists || []).map(artist => artist.name).join(', ')
+    const details = `${title || 'Unknown'} (${year || 'Unknown'}) - ${artistName || 'Unknown Artist'}`
 
     return {
       id,

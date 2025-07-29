@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const VinylPagination = ({ currentPage, totalPages, onPageChange }) => {
   const goToPage = page => {
-    if (page >= 1 && page <= totalPages) {
+    if (page >= 1 && page <= totalPages && page !== currentPage) {
       onPageChange(page)
     }
   }

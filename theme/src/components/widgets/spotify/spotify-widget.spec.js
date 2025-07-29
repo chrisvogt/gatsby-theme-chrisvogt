@@ -34,4 +34,76 @@ describe('Spotify Widget', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('matches the loaded state snapshot', () => {
+    const initialState = {
+      widgets: {
+        spotify: {
+          state: 'SUCCESS',
+          data: {
+            collections: {
+              playlists: [
+                {
+                  id: 'playlist1',
+                  name: 'Test Playlist',
+                  description: 'Test description',
+                  images: [{ url: 'https://example.com/image.jpg' }],
+                  external_urls: { spotify: 'https://spotify.com/playlist1' }
+                }
+              ],
+              topTracks: [
+                {
+                  id: 'track1',
+                  name: 'Test Track',
+                  artists: [{ name: 'Test Artist' }],
+                  album: { name: 'Test Album' },
+                  external_urls: { spotify: 'https://spotify.com/track1' }
+                }
+              ]
+            },
+            metrics: {
+              Playlists: 10,
+              'Top Tracks': 20
+            },
+            profile: {
+              displayName: 'Test User',
+              profileURL: 'https://spotify.com/user/test'
+            },
+            provider: {
+              displayName: 'Spotify'
+            }
+          }
+        }
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={initialState}>
+          <SpotifyWidget />
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('matches the error state snapshot', () => {
+    const initialState = {
+      widgets: {
+        spotify: {
+          state: 'FAILURE',
+          data: null
+        }
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={initialState}>
+          <SpotifyWidget />
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

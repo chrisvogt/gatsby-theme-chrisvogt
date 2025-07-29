@@ -1,98 +1,145 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ThemeUIProvider } from 'theme-ui'
-import { Provider } from 'react-redux'
-import configureStore from 'redux-mock-store'
 
-import Footer from './footer'
+import { TestProviderWithState } from '../testUtils'
 import Layout from './layout'
-import TopNavigation from './top-navigation'
+import useSiteMetadata from '../hooks/use-site-metadata'
+import useNavigationData from '../hooks/use-navigation-data'
+import useSocialProfiles from '../hooks/use-social-profiles'
 
-// Mock Footer and TopNavigation components
-jest.mock('./footer')
-jest.mock('./top-navigation')
+jest.mock('../hooks/use-site-metadata')
+jest.mock('../hooks/use-navigation-data')
+jest.mock('../hooks/use-social-profiles')
+
+const mockSiteMetadata = {
+  title: 'Test Site',
+  description: 'Test description',
+  author: 'Test Author'
+}
+
+const mockNavigationData = {
+  header: {
+    home: [
+      {
+        path: '/about',
+        slug: 'about',
+        text: 'About'
+      }
+    ]
+  }
+}
+
+const mockSocialProfiles = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/test'
+  }
+]
 
 describe('Layout', () => {
-  TopNavigation.mockImplementation(() => <div className='MOCK__TopNavigation'></div>)
-  Footer.mockImplementation(() => <div className='MOCK__Footer'></div>)
+  beforeEach(() => {
+    useSiteMetadata.mockImplementation(() => mockSiteMetadata)
+    useNavigationData.mockImplementation(() => mockNavigationData)
+    useSocialProfiles.mockImplementation(() => mockSocialProfiles)
+  })
 
-  // Mock theme
-  const mockTheme = {
-    colors: {
-      background: '#fdf8f5',
-      text: '#111',
-      modes: {
-        dark: {
-          background: '#1e1e2f',
-          text: '#fff'
-        }
-      }
-    }
-  }
-
-  // Create mock store
-  const mockStore = configureStore([])
-  const store = mockStore({
-    audioPlayer: {
-      isVisible: false,
-      soundcloudId: null
-    }
+  afterEach(() => {
+    jest.clearAllMocks()
   })
 
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
-        <Provider store={store}>
-          <ThemeUIProvider theme={mockTheme}>
-            <Layout>
-              <div className='fake-website'>
-                <h1>Fake Website</h1>
-                <p>Lorum ipsum dolor sit amet.</p>
-              </div>
-            </Layout>
-          </ThemeUIProvider>
-        </Provider>
+        <TestProviderWithState>
+          <Layout>
+            <div>Test content</div>
+          </Layout>
+        </TestProviderWithState>
       )
       .toJSON()
-
     expect(tree).toMatchSnapshot()
   })
 
-  it('renders children without main wrapper when disableMainWrapper is true', () => {
+  it('renders with hideHeader prop', () => {
     const tree = renderer
       .create(
-        <Provider store={store}>
-          <ThemeUIProvider theme={mockTheme}>
-            <Layout disableMainWrapper={true}>
-              <div className='fake-website'>
-                <h1>Fake Website</h1>
-                <p>Lorum ipsum dolor sit amet.</p>
-              </div>
-            </Layout>
-          </ThemeUIProvider>
-        </Provider>
+        <TestProviderWithState>
+          <Layout hideHeader>
+            <div>Test content without header</div>
+          </Layout>
+        </TestProviderWithState>
       )
       .toJSON()
-
     expect(tree).toMatchSnapshot()
   })
 
-  it('hides header when hideHeader is true', () => {
+  it('renders with hideFooter prop', () => {
     const tree = renderer
       .create(
-        <Provider store={store}>
-          <ThemeUIProvider theme={mockTheme}>
-            <Layout hideHeader={true}>
-              <div className='fake-website'>
-                <h1>Fake Website</h1>
-                <p>Lorum ipsum dolor sit amet.</p>
-              </div>
-            </Layout>
-          </ThemeUIProvider>
-        </Provider>
+        <TestProviderWithState>
+          <Layout hideFooter>
+            <div>Test content without footer</div>
+          </Layout>
+        </TestProviderWithState>
       )
       .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
+  it('renders with disableMainWrapper prop', () => {
+    const tree = renderer
+      .create(
+        <TestProviderWithState>
+          <Layout disableMainWrapper>
+            <div>Test content without main wrapper</div>
+          </Layout>
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders with audio player visible state', () => {
+    const initialState = {
+      audioPlayer: {
+        isVisible: true,
+        currentTrack: {
+          title: 'Test Track',
+          artist: 'Test Artist',
+          url: 'https://example.com/track.mp3'
+        }
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={initialState}>
+          <Layout>
+            <div>Test content with audio player</div>
+          </Layout>
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders with audio player hidden state', () => {
+    const initialState = {
+      audioPlayer: {
+        isVisible: false,
+        currentTrack: null
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={initialState}>
+          <Layout>
+            <div>Test content without audio player</div>
+          </Layout>
+        </TestProviderWithState>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

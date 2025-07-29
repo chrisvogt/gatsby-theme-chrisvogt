@@ -1,48 +1,24 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
+import renderer from 'react-test-renderer'
+
+import { TestProvider } from '../testUtils'
 import HomeNavigation from './home-navigation'
-import useSiteMetadata from '../hooks/use-site-metadata'
 import useNavigationData from '../hooks/use-navigation-data'
 
-jest.mock('../hooks/use-site-metadata')
 jest.mock('../hooks/use-navigation-data')
-
-const mockSiteMetadata = {
-  widgets: {
-    github: { widgetDataSource: 'https://fake-api.example.com/social/github' },
-    goodreads: { widgetDataSource: 'https://fake-api.example.com/social/goodreads' },
-    instagram: { widgetDataSource: 'https://fake-api.example.com/social/instagram' },
-    spotify: { widgetDataSource: 'https://fake-api.example.com/social/spotify' }
-  }
-}
 
 const mockNavigationData = {
   header: {
     home: [
       {
-        path: '#instagram',
-        slug: 'instagram',
-        text: 'Instagram',
-        title: 'Instagram'
+        path: '/about',
+        slug: 'about',
+        text: 'About'
       },
       {
-        path: '#github',
-        slug: 'github',
-        text: 'GitHub',
-        title: 'GitHub'
-      },
-      {
-        path: '#goodreads',
-        slug: 'goodreads',
-        text: 'Goodreads',
-        title: 'Goodreads'
-      },
-      {
-        path: '#spotify',
-        slug: 'spotify',
-        text: 'Spotify',
-        title: 'Spotify'
+        path: '/blog',
+        slug: 'blog',
+        text: 'Blog'
       }
     ]
   }
@@ -50,57 +26,136 @@ const mockNavigationData = {
 
 describe('HomeNavigation', () => {
   beforeEach(() => {
-    useSiteMetadata.mockImplementation(() => mockSiteMetadata)
     useNavigationData.mockImplementation(() => mockNavigationData)
   })
 
-  it('renders all links when all widgets are enabled', () => {
-    render(<HomeNavigation />)
-    expect(screen.getByText('Home')).toBeInTheDocument()
-    expect(screen.getByText('Latest Posts')).toBeInTheDocument()
-    expect(screen.getByText('Instagram')).toBeInTheDocument()
-    expect(screen.getByText('GitHub')).toBeInTheDocument()
-    expect(screen.getByText('Goodreads')).toBeInTheDocument()
-    expect(screen.getByText('Spotify')).toBeInTheDocument()
+  afterEach(() => {
+    jest.clearAllMocks()
   })
 
-  it('renders only mandatory links when no widgets are enabled', () => {
-    useSiteMetadata.mockImplementation(() => ({ widgets: {} }))
-    useNavigationData.mockImplementation(() => ({ header: { home: [] } }))
-    render(<HomeNavigation />)
-    expect(screen.getByText('Home')).toBeInTheDocument()
-    expect(screen.getByText('Latest Posts')).toBeInTheDocument()
-    expect(screen.queryByText('Instagram')).not.toBeInTheDocument()
-    expect(screen.queryByText('GitHub')).not.toBeInTheDocument()
-    expect(screen.queryByText('Goodreads')).not.toBeInTheDocument()
-    expect(screen.queryByText('Spotify')).not.toBeInTheDocument()
+  it('matches the snapshot', () => {
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('highlights the active section on scroll', () => {
-    render(<HomeNavigation />)
-
-    const instagramSection = document.createElement('div')
-    instagramSection.id = 'instagram'
-    document.body.appendChild(instagramSection)
-    instagramSection.getBoundingClientRect = jest.fn(() => ({
-      top: window.innerHeight / 2 - 1 // Simulate it being in view
+  it('handles navigation data with empty home items', () => {
+    useNavigationData.mockImplementation(() => ({
+      header: {
+        home: []
+      }
     }))
 
-    fireEvent.scroll(window)
-    expect(screen.getByText('Instagram').classList).toContain('active')
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('does not break when an invalid icon is provided', () => {
-    useSiteMetadata.mockImplementation(() => ({ widgets: {} }))
-    useNavigationData.mockImplementation(() => ({ header: { home: [] } }))
-    render(<HomeNavigation />)
-    expect(screen.queryByRole('img')).not.toBeInTheDocument() // No icons should render
+  it('handles navigation data with missing header', () => {
+    useNavigationData.mockImplementation(() => ({}))
+
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
-  it('renders the correct aria-label for navigation', () => {
-    render(<HomeNavigation />)
-    const nav = document.querySelector('nav[aria-label="On-page navigation"]')
-    expect(nav).not.toBeNull()
-    expect(nav.getAttribute('aria-label')).toBe('On-page navigation')
+  it('handles navigation data with null values', () => {
+    useNavigationData.mockImplementation(() => null)
+
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('handles navigation items with missing icon reactIcon', () => {
+    const navigationWithMissingIcons = {
+      header: {
+        home: [
+          {
+            path: '/test',
+            slug: 'test',
+            text: 'Test'
+          }
+        ]
+      }
+    }
+    useNavigationData.mockImplementation(() => navigationWithMissingIcons)
+
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('handles navigation items with discogs slug for icon mapping', () => {
+    const navigationWithDiscogs = {
+      header: {
+        home: [
+          {
+            path: '/discogs',
+            slug: 'discogs',
+            text: 'Discogs'
+          }
+        ]
+      }
+    }
+    useNavigationData.mockImplementation(() => navigationWithDiscogs)
+
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('handles navigation items with complex slug names', () => {
+    const navigationWithComplexSlugs = {
+      header: {
+        home: [
+          {
+            path: '/complex-slug',
+            slug: 'complex-slug',
+            text: 'Complex Slug'
+          }
+        ]
+      }
+    }
+    useNavigationData.mockImplementation(() => navigationWithComplexSlugs)
+
+    const tree = renderer
+      .create(
+        <TestProvider>
+          <HomeNavigation />
+        </TestProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })

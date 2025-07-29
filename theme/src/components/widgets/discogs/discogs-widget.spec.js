@@ -77,4 +77,24 @@ describe('Discogs Widget', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('matches the error state snapshot', () => {
+    const initialState = {
+      widgets: {
+        discogs: {
+          state: 'FAILURE',
+          data: null
+        }
+      }
+    }
+
+    const tree = renderer
+      .create(
+        <TestProviderWithState initialState={initialState}>
+          <DiscogsWidget />
+        </TestProviderWithState>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })
