@@ -167,6 +167,7 @@ const VinylCollection = ({ isLoading, releases = [] }) => {
       >
         <div
           ref={carouselRef}
+          data-testid='vinyl-carousel'
           sx={{
             display: 'flex',
             width: `${totalPages * 100}%`,

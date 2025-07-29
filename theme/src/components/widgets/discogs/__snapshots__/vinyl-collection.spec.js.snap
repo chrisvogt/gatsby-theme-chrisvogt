@@ -23,6 +23,7 @@ exports[`VinylCollection Edge cases handles releases with empty artist name 1`] 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -102,6 +103,7 @@ exports[`VinylCollection Edge cases handles releases with empty artists array 1`
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -181,6 +183,7 @@ exports[`VinylCollection Edge cases handles releases with empty cdnThumbUrl 1`] 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -262,6 +265,7 @@ exports[`VinylCollection Edge cases handles releases with empty resourceUrl 1`] 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -351,6 +355,7 @@ exports[`VinylCollection Edge cases handles releases with missing artist name 1`
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -430,6 +435,7 @@ exports[`VinylCollection Edge cases handles releases with missing basicInformati
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -507,6 +513,7 @@ exports[`VinylCollection Edge cases handles releases with missing cdnThumbUrl pr
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -588,6 +595,7 @@ exports[`VinylCollection Edge cases handles releases with missing resourceUrl 1`
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -677,6 +685,7 @@ exports[`VinylCollection Edge cases handles releases with missing resourceUrl pr
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -766,6 +775,7 @@ exports[`VinylCollection Edge cases handles releases with missing title 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -845,6 +855,7 @@ exports[`VinylCollection Edge cases handles releases with missing year 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -924,6 +935,7 @@ exports[`VinylCollection Edge cases handles releases with null artists 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1003,6 +1015,7 @@ exports[`VinylCollection Edge cases handles releases with undefined artist name 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1082,6 +1095,7 @@ exports[`VinylCollection Edge cases handles releases with undefined artists 1`] 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1161,6 +1175,7 @@ exports[`VinylCollection Edge cases handles releases with undefined cdnThumbUrl 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1242,6 +1257,7 @@ exports[`VinylCollection Edge cases handles releases with undefined resourceUrl 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1331,6 +1347,7 @@ exports[`VinylCollection handles releases with missing artist information 1`] = 
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1410,6 +1427,7 @@ exports[`VinylCollection handles releases with missing basicInformation 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1522,6 +1540,7 @@ exports[`VinylCollection handles releases with multiple artists 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1603,6 +1622,7 @@ exports[`VinylCollection handles releases without CDN thumb URL 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1684,6 +1704,7 @@ exports[`VinylCollection renders empty state when no releases 1`] = `
   >
     <div
       className="css-ngfim1"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1719,6 +1740,7 @@ exports[`VinylCollection renders loading state 1`] = `
   >
     <div
       className="css-ngfim1"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -1754,6 +1776,7 @@ exports[`VinylCollection renders with many releases for pagination testing 1`] =
   >
     <div
       className="css-1wkhxkl"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
@@ -3014,6 +3037,7 @@ exports[`VinylCollection renders with vinyl releases 1`] = `
   >
     <div
       className="css-itz9zd"
+      data-testid="vinyl-carousel"
       onMouseDown={[Function]}
       onMouseLeave={[Function]}
       onMouseMove={[Function]}
