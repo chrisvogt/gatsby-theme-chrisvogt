@@ -1,5 +1,1313 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`VinylCollection Edge cases handles releases with empty artist name 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with empty artists array 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with empty cdnThumbUrl 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with empty resourceUrl 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing artist name 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing basicInformation properties 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (Unknown) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing cdnThumbUrl property 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing resourceUrl 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing resourceUrl property 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing title 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Unknown (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  />
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with missing year 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (Unknown) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with null artists 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with undefined artist name 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with undefined artists 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Unknown Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  />
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with undefined cdnThumbUrl 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                />
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VinylCollection Edge cases handles releases with undefined resourceUrl 1`] = `
+<div
+  className="css-16ilj6a"
+>
+  <div
+    className="css-ccroti"
+  >
+    <h3
+      className="css-1pgqsji"
+    >
+      Vinyl Collection
+    </h3>
+  </div>
+  <p
+    className="css-1avyp1d"
+  >
+    My owned vinyl records from Discogs.
+  </p>
+  <div
+    className="css-1alnzao"
+  >
+    <div
+      className="css-itz9zd"
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="css-gjogkf"
+      >
+        <div
+          className="vinyl-collection_grid null css-4004kc"
+        >
+          <div
+            className="css-139dwiw"
+          >
+            <div
+              className="vinyl-record css-4gxhk2"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              title="Album (2023) - Artist"
+            >
+              <div
+                className="css-wioo5x"
+              >
+                <div
+                  className="vinyl-record_image css-18n965x"
+                >
+                  <img
+                    alt="Album album cover"
+                    className="css-1ybonlr"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    src="https://example.com/thumb.jpg"
+                  />
+                </div>
+                <div
+                  className="vinyl-record_caption css-11wixuo"
+                >
+                  <span
+                    className="css-kazeaq"
+                  >
+                    Album
+                  </span>
+                  <span
+                    className="css-53gxr7"
+                  >
+                    Artist
+                  </span>
+                  <span
+                    className="css-yztu9z"
+                  >
+                    2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`VinylCollection handles releases with missing artist information 1`] = `
 <div
   className="css-16ilj6a"
