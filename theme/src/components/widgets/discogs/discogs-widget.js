@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { faCompactDisc } from '@fortawesome/free-solid-svg-icons'
+import { faRecordVinyl } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
@@ -67,7 +67,7 @@ const DiscogsWidget = () => {
 
   return (
     <Widget id='discogs' hasFatalError={hasFatalError}>
-      <WidgetHeader aside={callToAction} icon={faCompactDisc} isLoading={isLoading}>
+      <WidgetHeader aside={callToAction} icon={faRecordVinyl} isLoading={isLoading}>
         Discogs
       </WidgetHeader>
 

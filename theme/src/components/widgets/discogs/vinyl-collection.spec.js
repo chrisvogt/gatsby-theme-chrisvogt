@@ -19,7 +19,7 @@ const mockReleases = [
     id: 33129744,
     basicInformation: {
       id: 33129744,
-      title: 'Brat And It\'s Completely Different',
+      title: "Brat And It's Completely Different",
       year: 2025,
       artists: [{ name: 'Charli XCX' }],
       cdnThumbUrl: 'https://example.com/thumb2.jpg',
@@ -30,23 +30,17 @@ const mockReleases = [
 
 describe('VinylCollection', () => {
   it('renders loading state', () => {
-    const tree = renderer
-      .create(<VinylCollection isLoading={true} releases={[]} />)
-      .toJSON()
+    const tree = renderer.create(<VinylCollection isLoading={true} releases={[]} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders with vinyl releases', () => {
-    const tree = renderer
-      .create(<VinylCollection isLoading={false} releases={mockReleases} />)
-      .toJSON()
+    const tree = renderer.create(<VinylCollection isLoading={false} releases={mockReleases} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders empty state when no releases', () => {
-    const tree = renderer
-      .create(<VinylCollection isLoading={false} releases={[]} />)
-      .toJSON()
+    const tree = renderer.create(<VinylCollection isLoading={false} releases={[]} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
-}) 
+})

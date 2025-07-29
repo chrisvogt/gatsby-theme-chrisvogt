@@ -243,16 +243,16 @@ module.exports = {
                 title: 'Spotify'
               },
               {
-                path: '#steam',
-                slug: 'steam',
-                text: 'Steam',
-                title: 'Steam'
-              },
-              {
                 path: '#discogs',
                 slug: 'discogs',
                 text: 'Discogs',
                 title: 'Discogs'
+              },
+              {
+                path: '#steam',
+                slug: 'steam',
+                text: 'Steam',
+                title: 'Steam'
               }
             ]
           }

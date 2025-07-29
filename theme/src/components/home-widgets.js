@@ -59,8 +59,8 @@ const HomeWidgets = () => {
       {githubDataSource && <GitHub />}
       {goodreadsDataSource && <Goodreads />}
       {spotifyDataSource && <Spotify />}
-      {steamDataSource && <Steam />}
       {discogsDataSource && <Discogs />}
+      {steamDataSource && <Steam />}
     </>
   )
 }

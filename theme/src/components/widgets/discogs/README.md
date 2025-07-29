@@ -67,7 +67,8 @@ The widget expects data from the `/api/widgets/discogs` endpoint with this struc
 ## Styling
 
 The vinyl records use CSS transformations and pseudo-elements to create:
+
 - Circular vinyl record appearance with grooves
 - Center label effect
 - Hover animations (scaling, lifting, rotation)
-- Responsive grid that shows different numbers of records per row based on screen size 
+- Responsive grid that shows different numbers of records per row based on screen size

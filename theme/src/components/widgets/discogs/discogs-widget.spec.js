@@ -77,4 +77,4 @@ describe('Discogs Widget', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
-}) 
+})
