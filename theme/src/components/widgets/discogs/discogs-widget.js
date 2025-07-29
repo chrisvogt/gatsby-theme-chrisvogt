@@ -13,6 +13,7 @@ import WidgetHeader from '../widget-header'
 import fetchDataSource from '../../../actions/fetchDataSource'
 import { getDiscogsWidgetDataSource } from '../../../selectors/metadata'
 import { SUCCESS, FAILURE, getDiscogsWidget } from '../../../reducers/widgets'
+import { getMetrics, getReleases, getProfileURL } from '../../../selectors/discogs'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 
 const getHasFatalError = state => getDiscogsWidget(state).state === FAILURE
@@ -22,22 +23,7 @@ const getIsLoading = state => {
   return !widget.data || widget.state !== SUCCESS
 }
 
-const getMetrics = state => {
-  const widget = getDiscogsWidget(state)
-  return widget.data?.metrics || []
-}
-
-const getProfileURL = state => {
-  const widget = getDiscogsWidget(state)
-  return widget.data?.profile?.profileURL || 'https://www.discogs.com'
-}
-
 const getProviderDisplayName = () => 'Discogs'
-
-const getReleases = state => {
-  const widget = getDiscogsWidget(state)
-  return widget.data?.collections?.releases || []
-}
 
 const DiscogsWidget = () => {
   const dispatch = useDispatch()

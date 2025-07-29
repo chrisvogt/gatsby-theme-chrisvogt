@@ -213,7 +213,7 @@ exports[`Discogs Widget matches the loaded state snapshot 1`] = `
       className="css-1alnzao"
     >
       <div
-        className="css-1izqeoq"
+        className="css-ngfim1"
         onMouseDown={[Function]}
         onMouseLeave={[Function]}
         onMouseMove={[Function]}
@@ -423,7 +423,7 @@ exports[`Discogs Widget matches the loading state snapshot 1`] = `
       className="css-1alnzao"
     >
       <div
-        className="css-1izqeoq"
+        className="css-ngfim1"
         onMouseDown={[Function]}
         onMouseLeave={[Function]}
         onMouseMove={[Function]}
